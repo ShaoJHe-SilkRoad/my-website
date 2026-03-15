@@ -1659,16 +1659,39 @@
       }
 
       html[data-view-mode="phone"] .site-header {
-        --header-height-expanded: 8.2rem;
-        --header-height-compact: 6.25rem;
+        --header-height-expanded: 6.7rem;
+        --header-height-compact: 5.6rem;
+        --phone-nav-gap: 0.34rem;
+        --phone-control-height: 2.78rem;
       }
 
       html[data-view-mode="phone"] .header-row {
-        gap: 0.8rem;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        align-items: start;
+        column-gap: var(--phone-nav-gap);
+        row-gap: 0.62rem;
+        padding: 0.72rem 0 0.94rem;
+      }
+
+      html[data-view-mode="phone"] .site-name {
+        grid-column: 1 / span 3;
+        align-self: start;
+        min-height: var(--phone-control-height);
       }
 
       html[data-view-mode="phone"] .brand-lockup {
-        gap: 0.62rem;
+        justify-content: flex-start;
+        gap: 0;
+        height: var(--phone-control-height);
+      }
+
+      html[data-view-mode="phone"] .brand-mark {
+        height: var(--phone-control-height);
+        max-width: 100%;
+      }
+
+      html[data-view-mode="phone"] .brand-logo {
+        max-width: 100%;
       }
 
       html[data-view-mode="phone"] .brand-wordmark {
@@ -1676,53 +1699,91 @@
       }
 
       html[data-view-mode="phone"] .header-actions-shell {
-        gap: 0.85rem;
+        display: contents;
       }
 
       html[data-view-mode="phone"] .header-tools {
-        gap: 0.45rem;
+        grid-column: 4;
+        justify-self: stretch;
+        align-self: start;
       }
 
       html[data-view-mode="phone"] .control-group {
-        gap: 0.3rem;
+        width: 100%;
+        gap: 0;
+        min-width: 0;
       }
 
       html[data-view-mode="phone"] .control-label {
-        font-size: 0.58rem;
+        display: none;
       }
 
       html[data-view-mode="phone"] .segmented-control {
+        width: 100%;
         padding: 0.18rem;
       }
 
       html[data-view-mode="phone"] .control-button {
-        min-height: 3rem;
-        padding: 0.56rem 0.84rem;
-        font-size: 0.78rem;
+        flex: 1 1 0;
+        min-height: var(--phone-control-height);
+        padding: 0.42rem 0;
+        font-size: 0.72rem;
+      }
+
+      html[data-view-mode="phone"] .site-nav {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: var(--phone-nav-gap);
+        overflow: visible;
+        padding-bottom: 0;
+      }
+
+      html[data-view-mode="phone"] .site-nav a {
+        min-height: var(--phone-control-height);
+        padding: 0.58rem 0.2rem;
+        border: 1px solid rgba(23, 61, 71, 0.12);
+        background: rgba(255, 255, 255, 0.74);
+        font-size: 0.72rem;
+        line-height: 1.14;
+        text-align: center;
       }
 
       html[data-view-mode="phone"] .section-grid,
       html[data-view-mode="phone"] .contact-grid {
-        gap: 1.45rem;
+        gap: 1.1rem;
       }
 
       html[data-view-mode="phone"] .hero-stage {
+        grid-template-areas:
+          "aside"
+          "main";
         min-height: auto;
-        gap: 1.05rem;
-        padding: 1.18rem;
+        gap: 0.95rem;
+        padding: 0.98rem;
       }
 
       html[data-view-mode="phone"] .hero-main {
-        gap: 0.85rem;
+        grid-area: main;
+        gap: 0.88rem;
+      }
+
+      html[data-view-mode="phone"] .hero-aside {
+        grid-area: aside;
+        grid-template-columns: minmax(8.6rem, 38vw) minmax(0, 1fr);
+        gap: 0.82rem;
+        align-items: stretch;
       }
 
       html[data-view-mode="phone"] .hero-main h1 {
-        font-size: clamp(2.6rem, 9vw, 3.7rem);
+        max-width: none;
+        font-size: clamp(2.7rem, 10.4vw, 4rem);
       }
 
       html[data-view-mode="phone"] .hero-role {
-        font-size: 1.04rem;
-        line-height: 1.52;
+        max-width: none;
+        font-size: 1rem;
+        line-height: 1.5;
       }
 
       html[data-view-mode="phone"] .hero-intro p,
@@ -1735,12 +1796,12 @@
       }
 
       html[data-view-mode="phone"] .signal-list {
-        grid-template-columns: 1fr;
-        gap: 0.6rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.55rem;
       }
 
       html[data-view-mode="phone"] .signal-item--wide {
-        grid-column: auto;
+        grid-column: 1 / -1;
       }
 
       html[data-view-mode="phone"] .signal-item,
@@ -1750,16 +1811,67 @@
         padding: 1rem;
       }
 
+      html[data-view-mode="phone"] .signal-item {
+        gap: 0.32rem;
+        padding: 0.84rem 0.88rem;
+      }
+
+      html[data-view-mode="phone"] .signal-label {
+        font-size: 0.64rem;
+      }
+
+      html[data-view-mode="phone"] .signal-text {
+        font-size: 0.9rem;
+        line-height: 1.52;
+      }
+
       html[data-view-mode="phone"] .hero-aside {
-        max-width: min(15.5rem, 78vw);
+        max-width: none;
       }
 
       html[data-view-mode="phone"] .headshot-shell {
-        width: min(100%, 15.5rem);
+        width: 100%;
+        padding: 0.42rem;
+        align-self: start;
       }
 
       html[data-view-mode="phone"] .headshot-stage {
         width: 100%;
+        aspect-ratio: 4 / 5.9;
+        max-height: 19rem;
+        background-position: center, 78% 16%;
+      }
+
+      html[data-view-mode="phone"] .hero-profile {
+        height: 100%;
+        padding: 0.92rem 0.96rem;
+      }
+
+      html[data-view-mode="phone"] .hero-profile .detail-list {
+        gap: 0.58rem;
+      }
+
+      html[data-view-mode="phone"] .hero-profile .detail-item {
+        gap: 0.3rem;
+        padding-top: 0.6rem;
+      }
+
+      html[data-view-mode="phone"] .hero-profile .detail-item p {
+        font-size: 0.88rem;
+        line-height: 1.48;
+      }
+
+      html[data-view-mode="phone"] .hero-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.62rem;
+      }
+
+      html[data-view-mode="phone"] .hero-actions .button,
+      html[data-view-mode="phone"] .hero-actions .text-link {
+        width: 100%;
+        min-height: 3.05rem;
+        padding: 0.82rem 0.9rem;
       }
 
       html[data-view-mode="phone"] .section-heading h2 {
@@ -1786,13 +1898,12 @@
       }
 
       html[data-view-mode="phone"] .current-layout {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-areas:
-          "intro"
-          "pursuits"
-          "presence"
-          "learning";
-        gap: 1rem;
+          "intro intro"
+          "pursuits pursuits"
+          "presence learning";
+        gap: 0.82rem;
       }
 
       html[data-view-mode="phone"] .panel {
@@ -1805,12 +1916,78 @@
       }
 
       html[data-view-mode="phone"] .super-link {
+        width: 100%;
         min-height: 3rem;
-        padding: 0.66rem 0.94rem;
+        justify-content: space-between;
+        padding: 0.7rem 0.94rem;
       }
 
-      html[data-view-mode="phone"] .site-nav a {
-        min-height: 3rem;
+      html[data-view-mode="phone"] .current-card {
+        gap: 0.72rem;
+      }
+
+      html[data-view-mode="phone"] .current-card h3 {
+        font-size: 1.2rem;
+      }
+
+      html[data-view-mode="phone"] .current-card-text {
+        font-size: 0.92rem;
+        line-height: 1.52;
+      }
+
+      html[data-view-mode="phone"] .stacked-links {
+        gap: 0.58rem;
+      }
+
+      html[data-view-mode="phone"] .stack-link {
+        min-height: 2.95rem;
+        padding: 0.76rem 0.9rem;
+        font-size: 0.88rem;
+      }
+
+      html[data-view-mode="phone"] .current-list-item {
+        padding: 0.6rem 0;
+        font-size: 0.86rem;
+        line-height: 1.46;
+      }
+
+      html[data-view-mode="phone"] .work-layout,
+      html[data-view-mode="phone"] .subpage-layout {
+        gap: 0.88rem;
+      }
+
+      html[data-view-mode="phone"] .work-body {
+        gap: 0.82rem;
+      }
+
+      html[data-view-mode="phone"] .work-body-block h3 {
+        font-size: 0.84rem;
+      }
+
+      html[data-view-mode="phone"] .work-details .detail-list {
+        gap: 0.72rem;
+      }
+
+      html[data-view-mode="phone"] .contact-card {
+        max-width: none;
+      }
+
+      html[data-view-mode="phone"] .contact-actions {
+        gap: 0.8rem;
+      }
+
+      html[data-view-mode="phone"] .contact-mail {
+        width: 100%;
+        justify-content: center;
+      }
+
+      html[data-view-mode="phone"] .closing-links {
+        display: grid;
+        gap: 0.62rem;
+      }
+
+      html[data-view-mode="phone"] main section {
+        scroll-margin-top: 11.2rem;
       }
 
       html[data-view-mode="phone"] .footer-row {
@@ -1852,6 +2029,25 @@
         }
       }
 
+      @media (max-width: 389px) {
+        html[data-view-mode="phone"] .hero-aside {
+          grid-template-columns: 1fr;
+        }
+
+        html[data-view-mode="phone"] .hero-actions {
+          grid-template-columns: 1fr;
+        }
+
+        html[data-view-mode="phone"] .current-layout {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "intro"
+            "pursuits"
+            "presence"
+            "learning";
+        }
+      }
+
       @media (max-aspect-ratio: 10 / 16) {
         .hero {
           padding-top: 1.2rem;
@@ -1886,15 +2082,12 @@
         "use strict";
 
         var STORAGE_KEYS = {
-          viewMode: "site:viewMode",
           language: "site:language"
         };
-        var VIEW_MODES = ["auto", "desktop", "phone"];
         var LANGUAGES = ["en", "zh-Hans"];
         var appRoot = document.getElementById("app");
         var state = {
           language: getInitialLanguage(),
-          viewPreference: getInitialViewPreference(),
           effectiveViewMode: "desktop",
           page: getCurrentPage()
         };
@@ -1927,7 +2120,7 @@
             },
             ui: {
               skipLink: "Skip to content",
-              controlsLabel: "View and language controls",
+              controlsLabel: "Language controls",
               viewLabel: "View",
               languageLabel: "Language",
               viewModes: {
@@ -1944,6 +2137,12 @@
                 current: "What He Is Doing?",
                 icu: "ICU",
                 ltc: "Senior Health",
+                contact: "Contact"
+              },
+              navCompact: {
+                current: "Current",
+                icu: "ICU",
+                ltc: "Senior",
                 contact: "Contact"
               },
               openPage: "Open page",
@@ -2159,7 +2358,7 @@
             },
             ui: {
               skipLink: "跳至主要内容",
-              controlsLabel: "视图与语言控制",
+              controlsLabel: "语言控制",
               viewLabel: "视图",
               languageLabel: "语言",
               viewModes: {
@@ -2176,6 +2375,12 @@
                 current: "他现做何事？",
                 icu: "重症监护",
                 ltc: "老年健康",
+                contact: "联系"
+              },
+              navCompact: {
+                current: "当前",
+                icu: "重症",
+                ltc: "老年",
                 contact: "联系"
               },
               openPage: "查看页面",
@@ -2405,16 +2610,6 @@
           return /^zh/i.test(window.navigator.language || "") ? "zh-Hans" : "en";
         }
 
-        function getInitialViewPreference() {
-          var stored = readStorage(STORAGE_KEYS.viewMode);
-
-          if (stored && VIEW_MODES.indexOf(stored) !== -1) {
-            return stored;
-          }
-
-          return "auto";
-        }
-
         function getCurrentPage() {
           return "home";
         }
@@ -2440,7 +2635,7 @@
 
         function updateRootState() {
           document.documentElement.dataset.viewMode = state.effectiveViewMode;
-          document.documentElement.dataset.viewPreference = state.viewPreference;
+          document.documentElement.dataset.viewPreference = "auto";
           document.documentElement.dataset.lang = state.language;
           document.documentElement.lang = state.language === "zh-Hans" ? "zh-Hans" : "en";
         }
@@ -2481,7 +2676,7 @@
           return section.body || [];
         }
 
-        function renderControlButtons(type, label, options, activeValue) {
+        function renderLanguageButtons(label, options, activeValue) {
           return (
             '<div class="control-group"><span class="control-label">' +
             escapeHtml(label) +
@@ -2490,14 +2685,13 @@
             '">' +
             options
               .map(function (option) {
-                var key = type === "view" ? "data-set-view" : "data-set-lang";
                 var isActive = option.value === activeValue;
 
                 return (
                   '<button class="control-button' +
                   (isActive ? " is-active" : "") +
                   '" type="button" ' +
-                  key +
+                  'data-set-lang' +
                   '="' +
                   escapeHtml(option.value) +
                   '" aria-pressed="' +
@@ -2790,15 +2984,13 @@
         }
 
         function renderHeader(content) {
-          var viewOptions = [
-            { value: "auto", label: content.ui.viewModes.auto },
-            { value: "desktop", label: content.ui.viewModes.desktop },
-            { value: "phone", label: content.ui.viewModes.phone }
-          ];
           var languageOptions = [
             { value: "en", label: content.ui.languages.en },
             { value: "zh-Hans", label: content.ui.languages["zh-Hans"] }
           ];
+          var navLabels = state.effectiveViewMode === "phone" && content.ui.navCompact
+            ? content.ui.navCompact
+            : content.ui.nav;
           var currentActive = state.page !== "home" ? ' aria-current="page"' : "";
 
           return (
@@ -2811,8 +3003,7 @@
             '<\/a><div class="header-actions-shell"><div class="header-tools" aria-label="' +
             escapeHtml(content.ui.controlsLabel) +
             '">' +
-            renderControlButtons("view", content.ui.viewLabel, viewOptions, state.viewPreference) +
-            renderControlButtons("lang", content.ui.languageLabel, languageOptions, state.language) +
+            renderLanguageButtons(content.ui.languageLabel, languageOptions, state.language) +
             '<\/div><nav class="site-nav" aria-label="' +
             escapeHtml(content.ui.primaryNavLabel) +
             '"><a href="' +
@@ -2820,19 +3011,19 @@
             '" data-nav-link="current"' +
             currentActive +
             ">" +
-            escapeHtml(content.ui.nav.current) +
+            escapeHtml(navLabels.current) +
             '<\/a><a href="' +
             getHomeHref("#icu") +
             '" data-nav-link="icu">' +
-            escapeHtml(content.ui.nav.icu) +
+            escapeHtml(navLabels.icu) +
             '<\/a><a href="' +
             getHomeHref("#ltc") +
             '" data-nav-link="ltc">' +
-            escapeHtml(content.ui.nav.ltc) +
+            escapeHtml(navLabels.ltc) +
             '<\/a><a href="' +
             getHomeHref("#contact") +
             '" data-nav-link="contact">' +
-            escapeHtml(content.ui.nav.contact) +
+            escapeHtml(navLabels.contact) +
             '<\/a><\/nav><\/div><\/div><\/header>'
           );
         }
@@ -3025,7 +3216,7 @@
 
         function renderApp() {
           var content = getContent();
-          state.effectiveViewMode = state.viewPreference === "auto" ? resolveAutoViewMode() : state.viewPreference;
+          state.effectiveViewMode = resolveAutoViewMode();
           state.page = getCurrentPage();
 
           updateRootState();
@@ -3207,6 +3398,33 @@
               return;
             }
 
+            if (state.effectiveViewMode === "phone") {
+              setCompact(currentY > 24);
+
+              if (Math.abs(delta) < 3) {
+                return;
+              }
+
+              if (delta > 0) {
+                downwardTravel += delta;
+                upwardTravel = 0;
+              } else {
+                upwardTravel += Math.abs(delta);
+                downwardTravel = 0;
+              }
+
+              if (!hidden && delta > 0 && currentY > 72 && downwardTravel > 22) {
+                setHidden(true);
+                return;
+              }
+
+              if (hidden && delta < 0 && upwardTravel > 10) {
+                setHidden(false);
+              }
+
+              return;
+            }
+
             setCompact(currentY > 40);
 
             if (Math.abs(delta) < 4) {
@@ -3271,15 +3489,10 @@
 
         function bindEvents() {
           document.addEventListener("click", function (event) {
-            var button = event.target.closest("[data-set-view], [data-set-lang]");
+            var button = event.target.closest("[data-set-lang]");
 
             if (!button) {
               return;
-            }
-
-            if (button.hasAttribute("data-set-view")) {
-              state.viewPreference = button.getAttribute("data-set-view");
-              writeStorage(STORAGE_KEYS.viewMode, state.viewPreference);
             }
 
             if (button.hasAttribute("data-set-lang")) {
@@ -3291,10 +3504,6 @@
           });
 
           window.addEventListener("resize", function () {
-            if (state.viewPreference !== "auto") {
-              return;
-            }
-
             window.requestAnimationFrame(function () {
               renderApp();
             });
