@@ -18,6 +18,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Shaoting He (Julius)" />
+    <link rel="icon" type="image/png" href="logo.png?v=20260314" />
     <meta name="theme-color" content="#173D47" />
     <meta name="color-scheme" content="light" />
     <meta name="robots" content="index, follow" />
@@ -77,7 +78,7 @@
         --contact-line: rgba(234, 243, 240, 0.14);
         --contact-text: #eef4f2;
         --contact-chip: #c7af7a;
-        --portrait-image: url("portrait-side-profile.jpg");
+        --portrait-image: url("portrait-side-profile.png");
         --hero-photo: none;
         --icu-photo: none;
         --ltc-photo: none;
@@ -192,6 +193,10 @@
       }
 
       .site-header {
+        --header-height-expanded: 10.5rem;
+        --header-height-compact: 6.75rem;
+        --header-current-height: var(--header-height-expanded);
+        --logo-height-ratio: 0.66;
         position: sticky;
         top: 0;
         z-index: 20;
@@ -206,6 +211,10 @@
           border-color 180ms ease;
       }
 
+      .site-header.is-compact {
+        --header-current-height: var(--header-height-compact);
+      }
+
       .site-header.is-hidden {
         transform: translateY(calc(-100% - 0.24rem));
       }
@@ -213,14 +222,21 @@
       .header-row {
         display: grid;
         gap: 0.7rem;
-        align-items: center;
-        padding: 0.9rem 0;
+        align-items: stretch;
+        min-height: var(--header-current-height);
+        padding: 0.78rem 0;
+        transition:
+          min-height 180ms ease,
+          padding 180ms ease,
+          gap 180ms ease;
       }
 
       .header-actions-shell {
         display: grid;
         gap: 0.7rem;
         min-width: 0;
+        align-self: center;
+        transition: gap 180ms ease;
       }
 
       .header-tools {
@@ -279,37 +295,44 @@
       }
 
       .site-name {
-        display: inline-flex;
+        display: flex;
+        align-self: stretch;
         align-items: center;
-        min-height: 3rem;
+        min-height: 0;
         color: var(--accent-strong);
+        line-height: 1;
       }
 
       .brand-lockup {
-        display: inline-flex;
+        display: flex;
         align-items: center;
         gap: 0.8rem;
+        height: 100%;
+        min-height: 0;
         min-width: 0;
       }
 
       .brand-mark {
-        display: grid;
-        place-items: center;
-        width: 2.6rem;
-        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: calc(var(--header-current-height) * var(--logo-height-ratio));
         flex: 0 0 auto;
-        border: 1px solid rgba(16, 42, 51, 0.14);
-        border-radius: 0.85rem;
-        background: rgba(255, 255, 255, 0.76);
-        color: var(--accent-strong);
-        font-family: var(--font-display);
-        font-size: 1.12rem;
-        font-weight: 600;
-        letter-spacing: -0.03em;
+        overflow: visible;
+        transition: height 180ms ease;
+      }
+
+      .brand-logo {
+        display: block;
+        width: auto;
+        height: 100%;
+        max-height: none;
+        object-fit: contain;
       }
 
       .brand-wordmark {
         display: grid;
+        align-content: center;
         gap: 0.08rem;
         min-width: 0;
       }
@@ -371,6 +394,15 @@
       .site-nav a[aria-current="page"] {
         color: var(--heading);
         background: rgba(23, 61, 71, 0.08);
+      }
+
+      .site-header.is-compact .header-row {
+        gap: 0.56rem;
+        padding: 0.52rem 0;
+      }
+
+      .site-header.is-compact .header-actions-shell {
+        gap: 0.52rem;
       }
 
       main section {
@@ -522,6 +554,11 @@
       .signal-text {
         display: grid;
         gap: 0.18rem;
+      }
+
+      .signal-text strong {
+        font-weight: 700;
+        color: inherit;
       }
 
       .signal-line {
@@ -715,146 +752,140 @@
         line-height: 0.92;
       }
 
-      .endeavor-overview {
+      .current-layout {
         display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "intro"
+          "pursuits"
+          "presence"
+          "learning";
         gap: 1rem;
       }
 
-      .endeavor-shell {
-        border: 1px solid rgba(74, 112, 132, 0.16);
-        border-radius: var(--radius);
-        background: rgba(255, 255, 255, 0.82);
-        box-shadow: 0 6px 12px rgba(32, 70, 90, 0.02);
-        overflow: clip;
+      .current-heading {
+        display: grid;
+        gap: 0.85rem;
+        align-content: start;
+        grid-area: intro;
       }
 
-      .endeavor-grid {
+      .current-heading h2 {
+        max-width: 10ch;
+        font-size: clamp(2.6rem, 5vw, 4.5rem);
+        line-height: 0.95;
+      }
+
+      .current-heading p {
+        max-width: 24rem;
+      }
+
+      .current-card {
+        display: grid;
+        gap: 0.85rem;
+        padding: clamp(1.2rem, 2.8vw, 1.45rem);
+      }
+
+      .current-card--pursuits {
+        grid-area: pursuits;
+      }
+
+      .current-card--presence {
+        grid-area: presence;
+      }
+
+      .current-card--learning {
+        grid-area: learning;
+      }
+
+      .current-card h3 {
+        font-size: clamp(1.34rem, 2.2vw, 1.62rem);
+        line-height: 1.08;
+      }
+
+      .current-card-text {
+        color: var(--heading);
+        font-size: 0.98rem;
+        line-height: 1.58;
+      }
+
+      .stacked-links {
+        display: grid;
+        gap: 0.75rem;
+        margin-top: 0.15rem;
+      }
+
+      .stack-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.8rem;
+        min-height: 3.15rem;
+        padding: 0.82rem 1rem;
+        border: 1px solid rgba(74, 112, 132, 0.18);
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.66);
+        color: var(--heading);
+        font-size: 0.94rem;
+        font-weight: 600;
+        line-height: 1.3;
+        transition:
+          transform 180ms ease,
+          border-color 180ms ease,
+          background-color 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .stack-link::after {
+        content: "↗";
+        color: rgba(74, 112, 132, 0.72);
+        font-size: 0.8rem;
+      }
+
+      .stack-link:hover,
+      .stack-link:focus-visible {
+        transform: translateY(-1px);
+        border-color: rgba(74, 112, 132, 0.3);
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 12px 24px rgba(32, 70, 90, 0.06);
+      }
+
+      .stack-link--quest-primary {
+        border-color: rgba(199, 175, 122, 0.34);
+        background: linear-gradient(180deg, rgba(199, 175, 122, 0.16), rgba(199, 175, 122, 0.08));
+        color: #5f4b22;
+      }
+
+      .stack-link--quest-primary::after {
+        color: rgba(95, 75, 34, 0.7);
+      }
+
+      .stack-link--quest-primary:hover,
+      .stack-link--quest-primary:focus-visible {
+        border-color: rgba(199, 175, 122, 0.5);
+        background: linear-gradient(180deg, rgba(199, 175, 122, 0.22), rgba(199, 175, 122, 0.12));
+      }
+
+      .stack-link--quest-secondary {
+        background: linear-gradient(180deg, rgba(74, 112, 132, 0.08), rgba(74, 112, 132, 0.03));
+      }
+
+      .current-list {
         display: grid;
         gap: 0;
       }
 
-      .endeavor-pillar {
-        display: grid;
-        gap: 0.68rem;
-        min-height: 100%;
-        padding: clamp(1.15rem, 2.4vw, 1.35rem) 1.15rem;
-        background: transparent;
-        border: 0;
-        box-shadow: none;
-        transition:
-          background-color 180ms ease,
-          border-color 180ms ease,
-          transform 180ms ease,
-          box-shadow 180ms ease;
-      }
-
-      .endeavor-pillar + .endeavor-pillar {
-        border-left: 1px solid rgba(74, 112, 132, 0.16);
-      }
-
-      .endeavor-pillar:hover,
-      .endeavor-pillar:focus-visible {
-        transform: translateY(-1px);
-        background: rgba(255, 255, 255, 0.16);
-        box-shadow: inset 0 0 0 1px rgba(74, 112, 132, 0.22);
-      }
-
-      .endeavor-pillar h3 {
-        font-size: clamp(1.28rem, 2.25vw, 1.56rem);
-        line-height: 1.06;
-        transition: color 180ms ease;
-      }
-
-      .endeavor-pillar:hover h3,
-      .endeavor-pillar:focus-visible h3 {
-        color: #4a7084;
-      }
-
-      .endeavor-lead {
-        color: var(--heading);
-        font-size: 0.95rem;
-        line-height: 1.54;
-      }
-
-      .endeavor-notes {
-        display: grid;
-        gap: 0.34rem;
-      }
-
-      .endeavor-note {
-        color: var(--muted);
-        font-size: 0.88rem;
-        line-height: 1.54;
-      }
-
-      .endeavor-note strong {
-        color: var(--heading);
-        font-weight: 700;
-      }
-
-      .presence-preview {
-        display: grid;
-        gap: 0.22rem;
-      }
-
-      .presence-row {
-        display: grid;
-        grid-template-columns: auto minmax(0, 1fr);
-        gap: 0.72rem;
-        align-items: baseline;
-        padding: 0.5rem 0;
+      .current-list-item {
+        padding: 0.68rem 0;
         border-top: 1px solid rgba(74, 112, 132, 0.14);
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.5;
       }
 
-      .presence-row:first-child {
+      .current-list-item:first-child {
         padding-top: 0;
         border-top: 0;
-      }
-
-      .presence-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 1.25rem;
-        color: #4a7084;
-        font-size: 0.6rem;
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        line-height: 1;
-      }
-
-      .presence-text {
-        display: grid;
-        gap: 0.08rem;
-        min-width: 0;
-      }
-
-      .presence-platform {
-        color: var(--heading);
-        font-size: 0.9rem;
-        font-weight: 600;
-        line-height: 1.4;
-      }
-
-      .presence-status {
-        color: var(--muted);
-        font-size: 0.8rem;
-        line-height: 1.42;
-      }
-
-      .endeavor-link {
-        width: max-content;
-        margin-top: auto;
-        color: #4a7084;
-        font-size: 0.88rem;
-        font-weight: 700;
-        border-bottom: 1px solid rgba(74, 112, 132, 0.18);
-        transition: border-color 180ms ease, color 180ms ease;
-      }
-
-      .endeavor-pillar:hover .endeavor-link,
-      .endeavor-pillar:focus-visible .endeavor-link {
-        border-color: #4a7084;
       }
 
       .subpage-view {
@@ -973,80 +1004,10 @@
         line-height: 1.62;
       }
 
-      /* Experience */
-      .experience-list {
-        border-top: 1px solid var(--line);
-      }
-
-      .resume-entry {
-        display: grid;
-        gap: 1rem;
-        padding: 1.6rem 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .entry-meta {
-        display: grid;
-        gap: 0.35rem;
-        align-content: start;
-      }
-
-      .entry-kicker {
-        color: var(--accent);
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-      }
-
-      .entry-meta h3,
       .proof-item h3,
       .approach-item h3 {
         font-size: clamp(1.45rem, 2.8vw, 1.9rem);
         line-height: 1.02;
-      }
-
-      .entry-org,
-      .entry-date {
-        font-size: 0.95rem;
-      }
-
-      .entry-date {
-        color: var(--accent-soft);
-        font-weight: 700;
-      }
-
-      .entry-body {
-        display: grid;
-        gap: 0.9rem;
-        max-width: var(--measure);
-      }
-
-      .entry-body p:first-child {
-        color: var(--heading);
-      }
-
-      .entry-bullets {
-        display: grid;
-        gap: 0.7rem;
-      }
-
-      .entry-bullets li {
-        position: relative;
-        padding-left: 1rem;
-        color: var(--muted);
-        line-height: 1.72;
-      }
-
-      .entry-bullets li::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0.76rem;
-        width: 0.36rem;
-        height: 0.36rem;
-        border-radius: 999px;
-        background: var(--accent-soft);
       }
 
       .photo-backed > .container {
@@ -1129,8 +1090,8 @@
       #contact .section-heading .eyebrow,
       #contact .contact-card p,
       #contact .detail-label,
-      #contact .footer-mark,
-      #contact .footer p {
+      #contact .footer-summary,
+      #contact .footer-note {
         color: var(--contact-text);
       }
 
@@ -1327,6 +1288,37 @@
         gap: 1rem;
       }
 
+      .contact-mail {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+        max-width: 100%;
+        min-height: 3rem;
+        padding: 0.82rem 1.1rem;
+        border: 1px solid rgba(234, 243, 240, 0.22);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--contact-text);
+        font-size: 0.94rem;
+        font-weight: 600;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        transition:
+          transform 180ms ease,
+          background-color 180ms ease,
+          border-color 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .contact-mail:hover,
+      .contact-mail:focus-visible {
+        transform: translateY(-1px);
+        border-color: rgba(234, 243, 240, 0.38);
+        background: rgba(255, 255, 255, 0.12);
+        box-shadow: 0 16px 28px rgba(8, 21, 26, 0.14);
+      }
+
       .contact-links {
         display: flex;
         flex-wrap: wrap;
@@ -1347,28 +1339,53 @@
       }
 
       .footer {
-        padding: 1.7rem 0 2.8rem;
+        padding: 1.5rem 0 2.35rem;
         border-top: 1px solid var(--line);
       }
 
       .footer-row {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-rows: minmax(3.45rem, 1fr) auto;
+        grid-template-areas:
+          "summary logo"
+          "note note";
+        column-gap: 1.05rem;
+        row-gap: 0.38rem;
+        min-height: 7.4rem;
         align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
       }
 
-      .footer p {
-        font-size: 0.9rem;
+      .footer-logo {
+        grid-area: logo;
+        display: block;
+        width: clamp(5.1rem, 10vw, 6.6rem);
+        height: auto;
+        justify-self: end;
+        align-self: center;
+        flex: 0 0 auto;
+        object-fit: contain;
       }
 
-      .footer-mark {
-        color: var(--accent);
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
+      .footer-summary {
+        grid-area: summary;
+        align-self: center;
+        max-width: min(42rem, calc(100% - 7.5rem));
+        font-size: 0.98rem;
+        font-weight: 600;
+        line-height: 1.55;
+      }
+
+      .footer-note {
+        grid-area: note;
+        justify-self: center;
+        align-self: end;
+        max-width: min(28rem, 84vw);
+        font-size: clamp(0.3rem, 0.5vw, 0.38rem);
+        line-height: 1.45;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--muted);
       }
 
       /* Motion */
@@ -1422,8 +1439,16 @@
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        .endeavor-grid {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
+        .signal-item--wide {
+          grid-column: span 2;
+        }
+
+        .current-layout {
+          grid-template-columns: minmax(15rem, 0.82fr) minmax(0, 1.18fr);
+          grid-template-areas:
+            "intro pursuits"
+            "presence learning";
+          gap: 1.15rem;
         }
 
         .hero-aside {
@@ -1461,11 +1486,6 @@
 
         .work-details .detail-list {
           grid-template-columns: 1fr;
-        }
-
-        .resume-entry {
-          grid-template-columns: minmax(14rem, 0.72fr) minmax(0, 1.28fr);
-          gap: 2rem;
         }
 
         .proof-grid {
@@ -1548,20 +1568,9 @@
           display: none;
         }
 
-        .brand-mark {
-          width: 2.24rem;
-          border-radius: 0.75rem;
-          font-size: 1rem;
-        }
-
-        .endeavor-pillar,
+        .current-card,
         .subpage-note {
           padding: 1rem;
-        }
-
-        .endeavor-pillar + .endeavor-pillar {
-          border-left: 0;
-          border-top: 1px solid rgba(74, 112, 132, 0.16);
         }
 
         .work-details .detail-list {
@@ -1600,8 +1609,16 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      html[data-view-mode="desktop"] .endeavor-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+      html[data-view-mode="desktop"] .signal-item--wide {
+        grid-column: span 2;
+      }
+
+      html[data-view-mode="desktop"] .current-layout {
+        grid-template-columns: minmax(15rem, 0.82fr) minmax(0, 1.18fr);
+        grid-template-areas:
+          "intro pursuits"
+          "presence learning";
+        gap: 1.15rem;
       }
 
       html[data-view-mode="desktop"] .hero-aside {
@@ -1641,6 +1658,11 @@
         --section-space: clamp(3rem, 9vw, 4.2rem);
       }
 
+      html[data-view-mode="phone"] .site-header {
+        --header-height-expanded: 8.2rem;
+        --header-height-compact: 6.25rem;
+      }
+
       html[data-view-mode="phone"] .header-row {
         gap: 0.8rem;
       }
@@ -1651,12 +1673,6 @@
 
       html[data-view-mode="phone"] .brand-wordmark {
         display: none;
-      }
-
-      html[data-view-mode="phone"] .brand-mark {
-        width: 2.24rem;
-        border-radius: 0.75rem;
-        font-size: 1rem;
       }
 
       html[data-view-mode="phone"] .header-actions-shell {
@@ -1723,6 +1739,10 @@
         gap: 0.6rem;
       }
 
+      html[data-view-mode="phone"] .signal-item--wide {
+        grid-column: auto;
+      }
+
       html[data-view-mode="phone"] .signal-item,
       html[data-view-mode="phone"] .work-body,
       html[data-view-mode="phone"] .work-details,
@@ -1765,6 +1785,16 @@
         grid-template-columns: 1fr;
       }
 
+      html[data-view-mode="phone"] .current-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "intro"
+          "pursuits"
+          "presence"
+          "learning";
+        gap: 1rem;
+      }
+
       html[data-view-mode="phone"] .panel {
         box-shadow: 0 10px 20px rgba(16, 42, 51, 0.04);
         backdrop-filter: blur(10px) saturate(1.02);
@@ -1783,14 +1813,27 @@
         min-height: 3rem;
       }
 
-      html[data-view-mode="phone"] .endeavor-pillar,
-      html[data-view-mode="phone"] .subpage-note {
-        padding: 1rem;
+      html[data-view-mode="phone"] .footer-row {
+        min-height: 6.25rem;
+        column-gap: 0.82rem;
+        row-gap: 0.42rem;
       }
 
-      html[data-view-mode="phone"] .endeavor-pillar + .endeavor-pillar {
-        border-left: 0;
-        border-top: 1px solid rgba(74, 112, 132, 0.16);
+      html[data-view-mode="phone"] .footer-summary {
+        max-width: min(18rem, calc(100% - 5.3rem));
+      }
+
+      html[data-view-mode="phone"] .footer-note {
+        max-width: min(14rem, 50vw);
+      }
+
+      html[data-view-mode="phone"] .footer-logo {
+        width: clamp(4.5rem, 24vw, 5.4rem);
+      }
+
+      html[data-view-mode="phone"] .current-card,
+      html[data-view-mode="phone"] .subpage-note {
+        padding: 1rem;
       }
 
       html[data-view-mode="phone"] .work-details .detail-list {
@@ -1910,32 +1953,40 @@
               eyebrow: "Registered Nurse | Toronto",
               title: "Shaoting He (Julius)",
               role: "Registered Nurse with experience across intensive care, senior health, community care, and internal medicine.",
-              intro:
-                "Licensed with the College of Nurses of Ontario and holding nursing practice registration in the People’s Republic of China. Educated through Toronto Metropolitan University’s collaborative nursing program with a BScN and Minor in Psychology, with additional intensive care training through Centennial College.",
-              mobileIntro:
-                "Licensed with the College of Nurses of Ontario and holding nursing practice registration in the People’s Republic of China, with a BScN and Minor in Psychology from Toronto Metropolitan University and additional intensive care training through Centennial College.",
+              intro: "",
+              mobileIntro: "",
               portraitAriaLabel: "Professional headshot of Shaoting He (Julius)",
               profileAriaLabel: "Professional details",
               signals: [
                 {
                   label: "Licensure",
-                  text: "Registered Nurse licensed with the College of Nurses of Ontario, with nursing practice registration in the People’s Republic of China."
+                  size: "wide",
+                  lines: [
+                    [
+                      { strong: true, text: "Registered Nurse" },
+                      { text: " - College of Nurses of Ontario" }
+                    ],
+                    [
+                      { strong: true, text: "Nursing Registration" },
+                      { text: " in People’s Republic of China" }
+                    ]
+                  ]
                 },
                 { label: "Education", text: "TMU BScN, Minor in Psychology" },
                 { label: "Training", text: "Centennial College Intensive Care Training" },
-                { label: "Experience", text: "ICU, senior health, and community-care experience" },
                 {
                   label: "Multilingual",
+                  size: "wide",
                   lines: [
-                    "English — Professional proficiency",
-                    "Mandarin — Native proficiency",
-                    "French — A2, actively learning for immigration",
-                    "Spanish — A1, leisure learning"
+                    "English — Professional",
+                    "Mandarin — Native",
+                    "French — A2",
+                    "Spanish — A1"
                   ]
                 }
               ],
               actions: [
-                { label: "View Experience", href: "#icu" },
+                { label: "Intensive Care", href: "#icu" },
                 { label: "Contact", href: "#contact" }
               ],
               profileDetails: [
@@ -1947,88 +1998,48 @@
             current: {
               eyebrow: "NOW",
               title: "What He Is Doing?",
-              summary: "Current clinical work, public presence in development, and active learning priorities.",
-              pillars: [
-                {
-                  slug: "pursuits",
-                  title: "The Pursuits",
-                  lead: "Current work across nursing practice, healthcare operations, and venture development.",
-                  notes: [
-                    "Pursuits: Nursing practice, clinically grounded systems thinking, and practical healthcare improvement."
-                  ],
-                  cue: "View page"
-                },
-                {
-                  slug: "presence",
-                  title: "My Presence",
-                  lead: "Public channels will be added over time as selected work is ready to share.",
-                  channels: [
-                    { icon: "IG", label: "Instagram", status: "Coming later" },
-                    { icon: "YT", label: "YouTube", status: "Coming later" },
-                    { icon: "in", label: "LinkedIn", status: "Coming later" }
-                  ],
-                  cue: "Open notes"
-                },
-                {
-                  slug: "learning",
-                  title: "Forever Learning",
-                  lead: "Current learning priorities in intensive care, senior assessment, change recognition, and care coordination across settings.",
-                  notes: [
-                    "Learning: Intensive care, senior assessment, change recognition, and care coordination across settings."
-                  ],
-                  cue: "See more"
-                }
-              ],
-              pages: {
-                pursuits: {
-                  eyebrow: "NOW",
-                  title: "The Pursuits",
-                  summary: "This page outlines the work currently receiving the most attention, including the main build and the supporting lines of effort around it.",
-                  body: [
-                    "My central working direction is to keep nursing practice primary while strengthening ICU-ready judgment, escalation discipline, and documentation quality in environments where unstable conditions require close attention and reliable follow-through.",
-                    "Alongside that, I am staying close to gerontology and older-adult care. That means keeping continuity, risk recognition, functional decline, and the slower patterns of observation that shape safer care in view rather than treating them as secondary topics."
-                  ],
-                  detailsAriaLabel: "Current pursuits details",
-                  details: [
-                    { label: "Primary focus", text: "ICU-ready bedside judgment, escalation, and high-acuity charting discipline." },
-                    { label: "Secondary focus", text: "Gerontology, continuity-minded documentation, and older-adult safety patterns." },
-                    { label: "Secondary focus", text: "Practical coordination habits useful in cross-cultural healthcare and small-team work." }
-                  ],
-                  note: "This page is a concise working note, not a separate publishing platform."
-                },
-                presence: {
-                  eyebrow: "NOW",
-                  title: "My Presence",
-                  summary: "This page will gather Shaoting He (Julius)’s public-facing channels over time, including writing, interviews, talks, and other selected appearances.",
-                  body: [
-                    "Public presence is being built with restraint. The aim is to make useful professional information available without turning the site into a feed, a sales page, or a directory of unfinished profiles.",
-                    "Public channels are being organized and will be added here in due course."
-                  ],
-                  detailsAriaLabel: "Presence details",
-                  details: [
-                    { label: "Instagram", text: "Coming later." },
-                    { label: "YouTube", text: "Coming later." },
-                    { label: "LinkedIn", text: "Coming later." }
-                  ],
-                  note: "Real public links can replace these states later without changing the structure of the page."
-                },
-                learning: {
-                  eyebrow: "NOW",
-                  title: "Forever Learning",
-                  summary: "This page captures the fields and questions Shaoting He (Julius) is actively studying to deepen judgment, domain understanding, and long-term work.",
-                  body: [
-                    "The learning posture here is intentionally practical. It is less about collecting titles and more about improving the specific forms of judgment, communication, and follow-through that matter in real care settings.",
-                    "That includes closer work on hemodynamic interpretation, older-adult risk patterns, documentation quality, handoff logic, and the quieter systems habits that help care stay reliable across people and settings."
-                  ],
-                  detailsAriaLabel: "Learning details",
-                  details: [
-                    { label: "Clinical", text: "Hemodynamic interpretation and closer reading of acute-care monitoring patterns." },
-                    { label: "Older-adult care", text: "Gerontology, risk patterns, and continuity thinking around function and decline." },
-                    { label: "Systems", text: "Documentation, handoff logic, care planning, and interprofessional follow-through." }
-                  ],
-                  note: "The focus here remains practical and current rather than certification-heavy."
-                }
-              }
+              summary: "A concise view of current focus, public links, and ongoing study.",
+              pursuits: {
+                title: "The Pursuits",
+                lead: "Two active tracks: the full-time RN search and a smaller run of tool-building experiments.",
+                buttons: [
+                  {
+                    label: "Main Quest",
+                    href: "main-quest.html",
+                    toneClass: "stack-link--quest-primary"
+                  },
+                  {
+                    label: "Side Quest",
+                    href: "side-quest.html",
+                    toneClass: "stack-link--quest-secondary"
+                  }
+                ]
+              },
+              presence: {
+                title: "My Presence",
+                lead: "A small public footprint, kept useful.",
+                links: [
+                  {
+                    label: "Instagram",
+                    href: "https://www.instagram.com/juljulio_he?igsh=Mm4zcWVrMXU4ZHlo&utm_source=qr"
+                  },
+                  {
+                    label: "LinkedIn",
+                    href: "https://www.linkedin.com/in/shaoting-he-10a141179/"
+                  }
+                ]
+              },
+              learning: {
+                title: "Forever Learning",
+                lead: "Hemodynamics, older-adult risk patterns, and documentation discipline remain central.",
+                items: [
+                  "InterRAI-CHA on CIHI",
+                  "NURS-8963: Transition to Nursing Practice",
+                  "ECG course on Coursera"
+                ]
+              },
+              pillars: [],
+              pages: {}
             },
             icu: {
               eyebrow: "Fast-Paced Critical Care",
@@ -2107,20 +2118,21 @@
               ]
             },
             contact: {
-              eyebrow: "Contact",
-              title: "Contact / Resume",
-              summary: "A direct closing section for professional contact and future resume access.",
-              cardText: "Based in Toronto, Ontario. For relevant nursing opportunities or professional contact, details can be shared directly through trusted professional channels.",
+              eyebrow: "",
+              title: "Professional Contact",
+              summary: "Always looking for new opportunities, and new friends",
+              cardText: "Based in Toronto. For relevant nursing opportunities, introductions, or professional correspondence, email is the clearest way to reach me.",
               location: "Toronto, Ontario",
-              chipsAriaLabel: "Resume and contact status",
+              email: "shaotinghe2037@gmail.com",
+              chipsAriaLabel: "Professional contact notes",
               chips: [
-                { label: "Resume available on request" },
-                { label: "Professional contact shared directly" }
+                { label: "Resume available on request" }
               ]
             },
             footer: {
               text: "Registered Nurse focused on clinically reliable, calm, and useful work.",
-              mark: "Professional Headquarters"
+              copyright:
+                "Copyright © 2026 Shaoting He. All rights reserved. Content and design may not be reproduced without permission."
             }
           },
           "zh-Hans": {
@@ -2173,32 +2185,40 @@
               eyebrow: "注册护士 | 多伦多",
               title: "何少霆",
               role: "具有重症监护、老年健康、社区照护及内科经验的注册护士。",
-              intro:
-                "持有安大略省护士学院注册护士执照，并在中华人民共和国具备护士执业注册。毕业于多伦多都会大学协作护理项目，取得护理学学士并辅修心理学，另于 Centennial College 完成重症护理培训。",
-              mobileIntro:
-                "持有安大略省护士学院注册护士执照，并在中华人民共和国具备护士执业注册，完成多伦多都会大学护理学学士与心理学辅修，并于 Centennial College 接受重症护理培训。",
+              intro: "",
+              mobileIntro: "",
               portraitAriaLabel: "何少霆的职业头像",
               profileAriaLabel: "专业信息",
               signals: [
                 {
                   label: "执照与注册",
-                  text: "持有安大略省护士学院注册护士执照，并在中华人民共和国具备护士执业注册。"
+                  size: "wide",
+                  lines: [
+                    [
+                      { strong: true, text: "注册护士" },
+                      { text: " - 安大略省护士学院" }
+                    ],
+                    [
+                      { strong: true, text: "护士执业注册" },
+                      { text: " - 中华人民共和国" }
+                    ]
+                  ]
                 },
                 { label: "教育背景", text: "多伦多都会大学护理学学士，辅修心理学" },
                 { label: "重症培训", text: "Centennial College 重症护理培训" },
-                { label: "实践经历", text: "具备重症、老年健康与社区照护经验" },
                 {
                   label: "多语能力",
+                  size: "wide",
                   lines: [
                     "英语：专业熟练",
-                    "普通话：母语水平",
-                    "法语：A2，正为移民持续学习",
-                    "西班牙语：A1，闲暇自学"
+                    "普通话：母语",
+                    "法语：A2",
+                    "西班牙语：A1"
                   ]
                 }
               ],
               actions: [
-                { label: "查看经历", href: "#icu" },
+                { label: "重症护理", href: "#icu" },
                 { label: "联系", href: "#contact" }
               ],
               profileDetails: [
@@ -2210,88 +2230,48 @@
             current: {
               eyebrow: "当前",
               title: "他现做何事？",
-              summary: "当前临床工作、筹备中的公开呈现，以及持续学习重点。",
-              pillars: [
-                {
-                  slug: "pursuits",
-                  title: "当前重点",
-                  lead: "当前工作涵盖护理实践、临床基础上的系统思考，以及务实的医疗改进。",
-                  notes: [
-                    "当前重点：护理实践、临床基础上的系统思考，以及务实的医疗改进。"
-                  ],
-                  cue: "查看页面"
-                },
-                {
-                  slug: "presence",
-                  title: "公开动态",
-                  lead: "公开渠道将随可分享的内容逐步补充上线。",
-                  channels: [
-                    { icon: "IG", label: "Instagram", status: "稍后补充" },
-                    { icon: "YT", label: "YouTube", status: "稍后补充" },
-                    { icon: "in", label: "LinkedIn", status: "稍后补充" }
-                  ],
-                  cue: "查看说明"
-                },
-                {
-                  slug: "learning",
-                  title: "持续学习",
-                  lead: "当前学习重点包括重症护理、老年评估、变化识别，以及跨场景照护协调。",
-                  notes: [
-                    "学习方向：重症护理、老年评估、变化识别，以及跨场景照护协调。"
-                  ],
-                  cue: "继续阅读"
-                }
-              ],
-              pages: {
-                pursuits: {
-                  eyebrow: "当前",
-                  title: "当前重点",
-                  summary: "此页概述何少霆当前最主要投入的工作，包括核心项目，以及围绕其展开的相关方向。",
-                  body: [
-                    "目前最核心的方向仍是让护理实践保持中心位置，同时继续强化在高急性场景中的判断、升级处置与记录质量。这部分能力必须依靠持续、稳定、可重复的床旁工作来打磨，而不是停留在抽象表述上。",
-                    "与此同时，我也在持续靠近老年学与老年照护。这里的重点不是把它当作附属方向，而是把连续性、风险识别、功能衰退以及更慢节奏的观察模式真正放进长期专业能力里。"
-                  ],
-                  detailsAriaLabel: "当前重点详情",
-                  details: [
-                    { label: "主要方向", text: "ICU 场景下的床旁判断、升级处置与高急性记录执行。" },
-                    { label: "相关方向", text: "老年学、连续性记录与老年照护中的安全模式。" },
-                    { label: "相关方向", text: "适用于跨文化医疗与小团队环境的务实协调能力。" }
-                  ],
-                  note: "这是一页简洁的工作说明，不是单独的内容平台。"
-                },
-                presence: {
-                  eyebrow: "当前",
-                  title: "公开动态",
-                  summary: "此页将逐步汇集何少霆对外公开的渠道，包括写作、访谈、演讲及其他精选公开内容。",
-                  body: [
-                    "公开层面的专业形象正在克制地整理中。目标是让真正有用的专业信息可以被查阅，而不是把网站做成信息流、营销页或堆满未完成链接的名片墙。",
-                    "公开渠道仍在整理中，后续将陆续补充于此。"
-                  ],
-                  detailsAriaLabel: "公开呈现详情",
-                  details: [
-                    { label: "Instagram", text: "稍后补充。" },
-                    { label: "YouTube", text: "稍后补充。" },
-                    { label: "LinkedIn", text: "稍后补充。" }
-                  ],
-                  note: "真实公开链接未来可以直接替换这些状态，而无需改动整体结构。"
-                },
-                learning: {
-                  eyebrow: "当前",
-                  title: "持续学习",
-                  summary: "此页记录何少霆当前持续深入的学习方向与问题意识，以深化判断力、领域理解及长期工作能力。",
-                  body: [
-                    "这里的学习姿态是务实的。重点不是收集头衔，而是继续提升那些真正影响护理质量的判断、沟通与跟进能力。",
-                    "这包括对血流动力学的更细致理解、对老年照护风险模式的更稳判断、以及记录质量、交接逻辑与护理计划这些更安静但非常关键的系统能力。"
-                  ],
-                  detailsAriaLabel: "学习方向详情",
-                  details: [
-                    { label: "临床", text: "继续提升对血流动力学与急性监测模式的判断。" },
-                    { label: "老年照护", text: "围绕老年学、风险模式以及功能变化建立更稳的理解。" },
-                    { label: "系统", text: "持续打磨记录、交接、护理计划与跨专业跟进质量。" }
-                  ],
-                  note: "这里强调的是当前有效的学习方向，而不是冗长的证书清单。"
-                }
-              }
+              summary: "当前重点、公开链接，以及持续学习方向的简要说明。",
+              pursuits: {
+                title: "当前重点",
+                lead: "目前有两条并行主线：寻找全职 RN 岗位，以及继续做一些小型工具实验。",
+                buttons: [
+                  {
+                    label: "Main Quest",
+                    href: "main-quest.html",
+                    toneClass: "stack-link--quest-primary"
+                  },
+                  {
+                    label: "Side Quest",
+                    href: "side-quest.html",
+                    toneClass: "stack-link--quest-secondary"
+                  }
+                ]
+              },
+              presence: {
+                title: "公开动态",
+                lead: "公开呈现保持克制，只保留真正有用的入口。",
+                links: [
+                  {
+                    label: "Instagram",
+                    href: "https://www.instagram.com/juljulio_he?igsh=Mm4zcWVrMXU4ZHlo&utm_source=qr"
+                  },
+                  {
+                    label: "LinkedIn",
+                    href: "https://www.linkedin.com/in/shaoting-he-10a141179/"
+                  }
+                ]
+              },
+              learning: {
+                title: "持续学习",
+                lead: "血流动力学、老年照护风险模式与记录纪律，仍是当前学习重点。",
+                items: [
+                  "InterRAI-CHA on CIHI",
+                  "NURS-8963: Transition to Nursing Practice",
+                  "ECG course on Coursera"
+                ]
+              },
+              pillars: [],
+              pages: {}
             },
             icu: {
               eyebrow: "快节奏重症照护",
@@ -2369,20 +2349,21 @@
               ]
             },
             contact: {
-              eyebrow: "联系",
-              title: "联系 / 简历",
-              summary: "用于专业联系与后续简历访问的收束区域。",
-              cardText: "现居加拿大安大略省多伦多。如有相关护理机会或专业沟通需要，可通过可信的专业渠道直接联系。",
+              eyebrow: "",
+              title: "专业联系",
+              summary: "一直在寻找新的机会，也在认识新的朋友。",
+              cardText: "现居加拿大安大略省多伦多。如有相关护理机会、引荐或专业交流，电子邮件是最直接的联系方式。",
               location: "加拿大安大略省多伦多",
-              chipsAriaLabel: "简历与联系状态",
+              email: "shaotinghe2037@gmail.com",
+              chipsAriaLabel: "联系说明",
               chips: [
-                { label: "简历可按需提供" },
-                { label: "联系方式可直接共享" }
+                { label: "简历可按需提供" }
               ]
             },
             footer: {
               text: "专注于临床可靠、沉着且有实际价值的护理工作。",
-              mark: "专业主页"
+              copyright:
+                "Copyright © 2026 何少霆。保留所有权利。未经许可，不得复制本站内容与设计。"
             }
           }
         };
@@ -2435,8 +2416,7 @@
         }
 
         function getCurrentPage() {
-          var page = new URLSearchParams(window.location.search).get("page") || "home";
-          return ["home", "pursuits", "presence", "learning"].indexOf(page) !== -1 ? page : "home";
+          return "home";
         }
 
         function resolveAutoViewMode() {
@@ -2546,6 +2526,28 @@
             .join("");
         }
 
+        function renderInlineSegments(segments) {
+          return (segments || [])
+            .map(function (segment) {
+              var text = escapeHtml(segment && segment.text ? segment.text : "");
+
+              if (segment && segment.strong) {
+                return "<strong>" + text + "<\/strong>";
+              }
+
+              return text;
+            })
+            .join("");
+        }
+
+        function renderSignalLine(line) {
+          if (Array.isArray(line)) {
+            return renderInlineSegments(line);
+          }
+
+          return escapeHtml(line);
+        }
+
         function renderSignals(items) {
           return (
             '<div class="signal-list">' +
@@ -2555,14 +2557,16 @@
                   ? '<p class="signal-text">' +
                     item.lines
                       .map(function (line) {
-                        return '<span class="signal-line">' + escapeHtml(line) + "<\/span>";
+                        return '<span class="signal-line">' + renderSignalLine(line) + "<\/span>";
                       })
                       .join("") +
                     "<\/p>"
                   : '<p class="signal-text">' + escapeHtml(item.text) + "<\/p>";
 
                 return (
-                  '<div class="signal-item"><span class="signal-label">' +
+                  '<div class="signal-item' +
+                  (item.size === "wide" ? " signal-item--wide" : "") +
+                  '"><span class="signal-label">' +
                   escapeHtml(item.label) +
                   '<\/span>' +
                   signalValue +
@@ -2641,16 +2645,49 @@
             .join("");
         }
 
+        function renderStackedLinks(items) {
+          return (
+            '<div class="stacked-links">' +
+            (items || [])
+              .map(function (item) {
+                var href = String(item.href || "#");
+                var isExternal = /^https?:\/\//i.test(href);
+
+                return (
+                  '<a class="stack-link' +
+                  (item.toneClass ? " " + item.toneClass : "") +
+                  '" href="' +
+                  escapeHtml(href) +
+                  '"' +
+                  (isExternal ? ' target="_blank" rel="noopener noreferrer"' : "") +
+                  ">" +
+                  escapeHtml(item.label) +
+                  "<\/a>"
+                );
+              })
+              .join("") +
+            "<\/div>"
+          );
+        }
+
+        function renderCurrentList(items) {
+          return (
+            '<div class="current-list">' +
+            (items || [])
+              .map(function (item) {
+                return '<p class="current-list-item">' + escapeHtml(item) + "<\/p>";
+              })
+              .join("") +
+            "<\/div>"
+          );
+        }
+
         function getHomeHref(anchor) {
           return state.page === "home" ? anchor : "?page=home" + anchor;
         }
 
         function getPageHref(slug) {
           return "?page=" + encodeURIComponent(slug);
-        }
-
-        function getBrandMarkText() {
-          return state.language === "zh-Hans" ? "何" : "H";
         }
 
         function getBrandSupportText() {
@@ -2691,8 +2728,7 @@
 
         function renderBrandLockup(content) {
           return (
-            '<span class="brand-lockup"><span class="brand-mark" aria-hidden="true">' +
-            escapeHtml(getBrandMarkText()) +
+            '<span class="brand-lockup"><span class="brand-mark" aria-hidden="true"><img class="brand-logo" src="logo.png?v=20260314" alt="" />' +
             '<\/span><span class="brand-wordmark"><span class="brand-name brand-name--full">' +
             renderSelectiveAccent(content.meta.siteName) +
             '<\/span><span class="brand-name brand-name--short">' +
@@ -2802,6 +2838,8 @@
         }
 
         function renderHero(content) {
+          var intro = getHeroIntro(content);
+
           return (
             '<section class="hero photo-backed" id="top"><div class="container"><div class="hero-stage reveal"><div class="hero-main"><span class="eyebrow">' +
             escapeHtml(content.hero.eyebrow) +
@@ -2809,9 +2847,9 @@
             renderSelectiveAccent(content.hero.title) +
             '<\/h1><p class="hero-role">' +
             escapeHtml(content.hero.role) +
-            '<\/p><div class="hero-intro"><p>' +
-            escapeHtml(getHeroIntro(content)) +
-            '<\/p><\/div><div class="hero-evidence">' +
+            '<\/p>' +
+            (intro ? '<div class="hero-intro"><p>' + escapeHtml(intro) + '<\/p><\/div>' : "") +
+            '<div class="hero-evidence">' +
             renderSignals(content.hero.signals) +
             '<\/div><div class="hero-actions"><a class="button" href="' +
             escapeHtml(content.hero.actions[0].href) +
@@ -2835,15 +2873,31 @@
 
         function renderCurrentSection(content) {
           return (
-            '<section id="current"><div class="container section-grid"><div class="section-heading reveal"><span class="eyebrow">' +
+            '<section id="current"><div class="container current-layout"><div class="current-heading reveal"><span class="eyebrow">' +
             escapeHtml(content.current.eyebrow) +
             '<\/span><h2>' +
             renderSelectiveAccent(content.current.title) +
             '<\/h2><p>' +
             escapeHtml(content.current.summary) +
-            '<\/p><\/div><div class="section-content endeavor-overview"><div class="endeavor-shell panel reveal"><div class="endeavor-grid">' +
-            renderCurrentPillars(content) +
-            '<\/div><\/div><\/div><\/div><\/section>'
+            '<\/p><\/div><article class="current-card current-card--pursuits panel reveal"><h3>' +
+            escapeHtml(content.current.pursuits.title) +
+            '<\/h3><p class="current-card-text">' +
+            escapeHtml(content.current.pursuits.lead) +
+            '<\/p>' +
+            renderStackedLinks(content.current.pursuits.buttons) +
+            '<\/article><article class="current-card current-card--presence panel reveal"><h3>' +
+            escapeHtml(content.current.presence.title) +
+            '<\/h3><p class="current-card-text">' +
+            escapeHtml(content.current.presence.lead) +
+            '<\/p>' +
+            renderStackedLinks(content.current.presence.links) +
+            '<\/article><article class="current-card current-card--learning panel reveal"><h3>' +
+            escapeHtml(content.current.learning.title) +
+            '<\/h3><p class="current-card-text">' +
+            escapeHtml(content.current.learning.lead) +
+            '<\/p>' +
+            renderCurrentList(content.current.learning.items) +
+            '<\/article><\/div><\/section>'
           );
         }
 
@@ -2892,10 +2946,14 @@
         }
 
         function renderContactSection(content) {
+          var contactEyebrow = content.contact.eyebrow
+            ? '<span class="eyebrow">' + escapeHtml(content.contact.eyebrow) + '<\/span>'
+            : "";
+
           return (
-            '<section id="contact" class="photo-backed"><div class="container contact-grid"><div class="section-heading reveal"><span class="eyebrow">' +
-            escapeHtml(content.contact.eyebrow) +
-            '<\/span><h2>' +
+            '<section id="contact" class="photo-backed"><div class="container contact-grid"><div class="section-heading reveal">' +
+            contactEyebrow +
+            '<h2>' +
             escapeHtml(content.contact.title) +
             '<\/h2><p>' +
             escapeHtml(content.contact.summary) +
@@ -2903,11 +2961,15 @@
             escapeHtml(content.contact.location) +
             '<\/p><p>' +
             escapeHtml(content.contact.cardText) +
-            '<\/p><div class="closing-links" aria-label="' +
+            '<\/p><div class="contact-actions"><a class="contact-mail" href="mailto:' +
+            escapeHtml(content.contact.email) +
+            '">' +
+            escapeHtml(content.contact.email) +
+            '<\/a><div class="closing-links" aria-label="' +
             escapeHtml(content.contact.chipsAriaLabel) +
             '">' +
             renderClosingLinks(content.contact.chips) +
-            '<\/div><\/div><\/div><\/section>'
+            '<\/div><\/div><\/div><\/div><\/section>'
           );
         }
 
@@ -2939,11 +3001,11 @@
 
         function renderFooter(content) {
           return (
-            '<footer class="footer"><div class="container footer-row"><p>' +
+            '<footer class="footer"><div class="container footer-row"><p class="footer-summary">' +
             escapeHtml(content.footer.text) +
-            '<\/p><span class="footer-mark">' +
-            escapeHtml(content.footer.mark) +
-            '<\/span><\/div><\/footer>'
+            '<\/p><p class="footer-note">' +
+            escapeHtml(content.footer.copyright) +
+            '<\/p><img class="footer-logo" src="logoB.png?v=20260314" alt="" /><\/div><\/footer>'
           );
         }
 
@@ -3098,14 +3160,26 @@
           var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
           var lastScrollY = window.scrollY;
           var hidden = false;
+          var compact = false;
           var focusWithin = false;
           var ticking = false;
           var upwardTravel = 0;
           var downwardTravel = 0;
 
           header.classList.remove("is-hidden");
+          header.classList.remove("is-compact");
+
+          function setCompact(nextCompact) {
+            if (compact === nextCompact) {
+              return;
+            }
+
+            compact = nextCompact;
+            header.classList.toggle("is-compact", compact);
+          }
 
           if (reducedMotion.matches) {
+            setCompact(window.scrollY > 40);
             return;
           }
 
@@ -3128,9 +3202,12 @@
             lastScrollY = currentY;
 
             if (focusWithin || currentY <= 6) {
+              setCompact(false);
               setHidden(false);
               return;
             }
+
+            setCompact(currentY > 40);
 
             if (Math.abs(delta) < 4) {
               return;
@@ -3165,6 +3242,7 @@
 
           function onFocusIn() {
             focusWithin = true;
+            setCompact(false);
             setHidden(false);
           }
 
@@ -3187,6 +3265,7 @@
             header.removeEventListener("focusin", onFocusIn);
             header.removeEventListener("focusout", onFocusOut);
             header.classList.remove("is-hidden");
+            header.classList.remove("is-compact");
           };
         }
 
