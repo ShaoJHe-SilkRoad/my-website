@@ -674,22 +674,26 @@
         pointer-events: none;
       }
 
-      .hero-profile {
+      .hero-profile,
+      .hero-practice {
         padding: 1.15rem 1.3rem;
         background: rgba(255, 255, 255, 0.9);
       }
 
-      .hero-profile .detail-item {
+      .hero-profile .detail-item,
+      .hero-practice .detail-item {
         padding-top: 0.85rem;
         border-top: 1px solid var(--line);
       }
 
-      .hero-profile .detail-item:first-child {
+      .hero-profile .detail-item:first-child,
+      .hero-practice .detail-item:first-child {
         padding-top: 0;
         border-top: 0;
       }
 
-      .hero-profile .detail-item p {
+      .hero-profile .detail-item p,
+      .hero-practice .detail-item p {
         max-width: 25rem;
         font-size: 0.98rem;
       }
@@ -1771,6 +1775,9 @@
       html[data-view-mode="phone"] .hero-aside {
         grid-area: aside;
         grid-template-columns: minmax(8.6rem, 38vw) minmax(0, 1fr);
+        grid-template-areas:
+          "photo profile"
+          "practice practice";
         gap: 0.82rem;
         align-items: stretch;
       }
@@ -1830,6 +1837,7 @@
       }
 
       html[data-view-mode="phone"] .headshot-shell {
+        grid-area: photo;
         width: 100%;
         padding: 0.42rem;
         align-self: start;
@@ -1843,7 +1851,7 @@
       }
 
       html[data-view-mode="phone"] .hero-profile {
-        height: 100%;
+        grid-area: profile;
         padding: 0.92rem 0.96rem;
       }
 
@@ -1859,6 +1867,25 @@
       html[data-view-mode="phone"] .hero-profile .detail-item p {
         font-size: 0.88rem;
         line-height: 1.48;
+      }
+
+      html[data-view-mode="phone"] .hero-practice {
+        grid-area: practice;
+        padding: 0.92rem 0.96rem;
+      }
+
+      html[data-view-mode="phone"] .hero-practice .detail-list {
+        gap: 0;
+      }
+
+      html[data-view-mode="phone"] .hero-practice .detail-item {
+        gap: 0.3rem;
+      }
+
+      html[data-view-mode="phone"] .hero-practice .detail-item p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        max-width: none;
       }
 
       html[data-view-mode="phone"] .hero-actions {
@@ -2032,6 +2059,10 @@
       @media (max-width: 389px) {
         html[data-view-mode="phone"] .hero-aside {
           grid-template-columns: 1fr;
+          grid-template-areas:
+            "photo"
+            "profile"
+            "practice";
         }
 
         html[data-view-mode="phone"] .hero-actions {
@@ -2092,6 +2123,7 @@
           page: getCurrentPage()
         };
         var teardownHeaderAutoHide = null;
+        var teardownCurrentSectionObserver = null;
 
         var CONTENT = {
           en: {
@@ -2706,6 +2738,30 @@
           );
         }
 
+        function renderHeroProfilePanels(content) {
+          var details = content.hero.profileDetails || [];
+          var isPhoneSplit = state.effectiveViewMode === "phone" && details.length > 2;
+          var primaryDetails = isPhoneSplit ? details.slice(0, 2) : details;
+          var practiceDetails = isPhoneSplit ? details.slice(2) : [];
+          var profileHtml =
+            '<div class="hero-profile panel" aria-label="' +
+            escapeHtml(content.hero.profileAriaLabel) +
+            '"><div class="detail-list">' +
+            renderDetailList(primaryDetails) +
+            '<\/div><\/div>';
+
+          if (!practiceDetails.length) {
+            return profileHtml;
+          }
+
+          return (
+            profileHtml +
+            '<div class="hero-practice panel"><div class="detail-list">' +
+            renderDetailList(practiceDetails) +
+            '<\/div><\/div>'
+          );
+        }
+
         function renderDetailList(items) {
           return (items || [])
             .map(function (item) {
@@ -3054,11 +3110,9 @@
             escapeHtml(content.hero.portraitAriaLabel) +
             '"><div class="headshot-shell panel"><div class="headshot-stage" role="img" aria-label="' +
             escapeHtml(content.hero.portraitAriaLabel) +
-            '"><\/div><\/div><div class="hero-profile panel" aria-label="' +
-            escapeHtml(content.hero.profileAriaLabel) +
-            '"><div class="detail-list">' +
-            renderDetailList(content.hero.profileDetails) +
-            '<\/div><\/div><\/aside><\/div><\/div><\/section>'
+            '"><\/div><\/div>' +
+            renderHeroProfilePanels(content) +
+            '<\/aside><\/div><\/div><\/section>'
           );
         }
 
@@ -3214,8 +3268,9 @@
           return renderSubpage(content, state.page) + renderContactSection(content);
         }
 
-        function renderApp() {
+        function renderApp(options) {
           var content = getContent();
+          var shouldSyncHash = options && options.syncHash;
           state.effectiveViewMode = resolveAutoViewMode();
           state.page = getCurrentPage();
 
@@ -3235,8 +3290,12 @@
 
           initHeaderAutoHide();
           initRevealObserver();
+
+          if (shouldSyncHash) {
+            syncHash();
+          }
+
           initCurrentSectionObserver();
-          syncHash();
         }
 
         function initRevealObserver() {
@@ -3270,6 +3329,11 @@
         }
 
         function initCurrentSectionObserver() {
+          if (typeof teardownCurrentSectionObserver === "function") {
+            teardownCurrentSectionObserver();
+            teardownCurrentSectionObserver = null;
+          }
+
           var links = Array.prototype.slice.call(document.querySelectorAll("[data-nav-link]"));
 
           if (state.page !== "home") {
@@ -3283,41 +3347,80 @@
             return;
           }
 
+          var header = document.querySelector(".site-header");
+          var hero = document.getElementById("top");
           var sections = ["current", "icu", "ltc", "contact"]
             .map(function (id) {
               return document.getElementById(id);
             })
             .filter(Boolean);
 
-          if (!("IntersectionObserver" in window) || !sections.length) {
+          if (!hero || !sections.length) {
             return;
           }
 
-          var observer = new IntersectionObserver(
-            function (entries) {
-              entries.forEach(function (entry) {
-                if (!entry.isIntersecting) {
-                  return;
-                }
+          var activeId = null;
+          var ticking = false;
 
-                links.forEach(function (link) {
-                  if (link.getAttribute("data-nav-link") === entry.target.id) {
-                    link.setAttribute("aria-current", "page");
-                  } else {
-                    link.removeAttribute("aria-current");
-                  }
-                });
-              });
-            },
-            {
-              threshold: 0.35,
-              rootMargin: "-20% 0px -45% 0px"
+          function setActiveLink(nextId) {
+            links.forEach(function (link) {
+              if (nextId !== "top" && link.getAttribute("data-nav-link") === nextId) {
+                link.setAttribute("aria-current", "page");
+              } else {
+                link.removeAttribute("aria-current");
+              }
+            });
+          }
+
+          function setActiveHash(nextId) {
+            var nextHash = "#" + nextId;
+
+            if (window.location.hash === nextHash) {
+              return;
             }
-          );
 
-          sections.forEach(function (section) {
-            observer.observe(section);
-          });
+            window.history.replaceState(null, "", nextHash);
+          }
+
+          function updateActiveSection() {
+            ticking = false;
+
+            var headerBottom = header ? Math.max(header.getBoundingClientRect().bottom, 0) : 0;
+            var focusY = headerBottom + Math.min(window.innerHeight * 0.18, 120);
+            var nextId = "top";
+
+            sections.forEach(function (section) {
+              if (section.getBoundingClientRect().top <= focusY) {
+                nextId = section.id;
+              }
+            });
+
+            if (activeId === nextId) {
+              return;
+            }
+
+            activeId = nextId;
+            setActiveLink(nextId);
+            setActiveHash(nextId);
+          }
+
+          function requestUpdate() {
+            if (ticking) {
+              return;
+            }
+
+            ticking = true;
+            window.requestAnimationFrame(updateActiveSection);
+          }
+
+          window.addEventListener("scroll", requestUpdate, { passive: true });
+          window.addEventListener("resize", requestUpdate);
+          requestUpdate();
+
+          teardownCurrentSectionObserver = function () {
+            window.removeEventListener("scroll", requestUpdate);
+            window.removeEventListener("resize", requestUpdate);
+          };
         }
 
         function syncHash() {
@@ -3504,6 +3607,10 @@
           });
 
           window.addEventListener("resize", function () {
+            if (resolveAutoViewMode() === state.effectiveViewMode) {
+              return;
+            }
+
             window.requestAnimationFrame(function () {
               renderApp();
             });
@@ -3515,7 +3622,7 @@
         }
 
         bindEvents();
-        renderApp();
+        renderApp({ syncHash: true });
       })();
     </script>
   </body>
