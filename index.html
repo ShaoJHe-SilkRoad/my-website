@@ -6,7 +6,7 @@
     <title>Shaoting He (Julius) | Registered Nurse</title>
     <meta
       name="description"
-      content="Professional headquarters for Shaoting He (Julius), a Registered Nurse based in Toronto with ICU, internal medicine, geriatric care, and bilingual clinical experience."
+      content="Clinical background, current focus, senior-health perspective, and professional contact for Shaoting He (Julius), a Registered Nurse based in Toronto."
     />
     <meta
       property="og:title"
@@ -14,12 +14,30 @@
     />
     <meta
       property="og:description"
-      content="ICU, internal medicine, geriatric care, selected credentials, and contact for Shaoting He (Julius), Registered Nurse."
+      content="Clinical background, current focus, senior-health perspective, and professional contact for Shaoting He (Julius), Registered Nurse."
     />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Shaoting He (Julius)" />
-    <link rel="icon" type="image/png" href="logo.png?v=20260314" />
-    <meta name="theme-color" content="#173D47" />
+    <meta property="og:url" content="https://shaotinghe.com/" />
+    <meta property="og:image" content="https://shaotinghe.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Shaoting He brand preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Shaoting He (Julius) | Registered Nurse"
+    />
+    <meta
+      name="twitter:description"
+      content="Clinical background, current focus, senior-health perspective, and professional contact for Shaoting He (Julius), Registered Nurse."
+    />
+    <meta name="twitter:image" content="https://shaotinghe.com/og-image.png" />
+    <link rel="canonical" href="https://shaotinghe.com/" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta name="theme-color" content="#17262e" />
     <meta name="color-scheme" content="light" />
     <meta name="robots" content="index, follow" />
 
@@ -38,47 +56,60 @@
     <style>
       /* Design Tokens */
       :root {
-        --bg: #f7fbf9;
-        --bg-soft: #e7f0ed;
-        --bg-support: #f4f1ea;
-        --surface: rgba(255, 255, 255, 0.84);
-        --surface-strong: rgba(255, 255, 255, 0.94);
-        --text: #102127;
-        --heading: #102a33;
-        --muted: #345158;
-        --accent: #173d47;
-        --accent-strong: #102a33;
-        --accent-soft: #2c5a63;
-        --sage: #8fafa6;
-        --line: rgba(16, 42, 51, 0.12);
-        --line-strong: rgba(16, 42, 51, 0.22);
-        --shadow: 0 24px 60px rgba(16, 42, 51, 0.08);
-        --shadow-soft: 0 16px 34px rgba(16, 42, 51, 0.05);
+        --bg: #eef1ef;
+        --bg-cool: #e4ebe9;
+        --bg-soft: var(--bg-cool);
+        --bg-support: #d9e1df;
+        --surface: #f9faf7;
+        --surface-muted: #dce2df;
+        --surface-strong: #fffefa;
+        --ink: #101820;
+        --ink-soft: #22323b;
+        --text: var(--ink);
+        --heading: var(--ink);
+        --muted: #5b6c73;
+        --muted-2: #7a8588;
+        --accent: #2c4853;
+        --accent-strong: #111f27;
+        --accent-soft: #42696b;
+        --blue-black: #111f27;
+        --slate-blue: #2c4853;
+        --quiet-teal: #42696b;
+        --champagne: #b7a16d;
+        --champagne-soft: rgba(183, 161, 109, 0.12);
+        --sage: #738b84;
+        --line: rgba(16, 24, 32, 0.13);
+        --line-strong: rgba(16, 24, 32, 0.24);
+        --shadow: 0 24px 70px rgba(16, 24, 32, 0.12);
+        --shadow-soft: 0 14px 36px rgba(16, 24, 32, 0.075);
+        --shadow-tight: 0 8px 18px rgba(16, 24, 32, 0.08);
         --container: 1180px;
         --measure: 44rem;
-        --radius: 1.15rem;
+        --radius: 0.5rem;
+        --radius-large: 0.92rem;
         --font-body: "Manrope", "Helvetica Neue", Arial, sans-serif;
         --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
-        --section-space: clamp(4rem, 8vw, 7rem);
-        --hero-surface: rgba(255, 255, 255, 0.92);
-        --hero-line: rgba(16, 42, 51, 0.12);
-        --hero-accent: #173d47;
-        --icu-bg: #f5f1eb;
-        --icu-surface: rgba(255, 250, 244, 0.88);
-        --icu-surface-soft: rgba(255, 248, 242, 0.72);
-        --icu-line: rgba(122, 91, 73, 0.16);
-        --icu-accent: #7a5b49;
-        --ltc-bg: #f0f7f2;
-        --ltc-surface: rgba(249, 252, 250, 0.88);
-        --ltc-surface-soft: rgba(249, 252, 250, 0.74);
-        --ltc-line: rgba(94, 128, 109, 0.16);
-        --ltc-accent: #5e806d;
-        --contact-bg: #122f38;
-        --contact-surface: rgba(255, 255, 255, 0.05);
-        --contact-line: rgba(234, 243, 240, 0.14);
-        --contact-text: #eef4f2;
-        --contact-chip: #c7af7a;
-        --portrait-image: url("portrait-side-profile.png");
+        --section-space: clamp(4.6rem, 8vw, 7.6rem);
+        --site-header-offset: 4.75rem;
+        --hero-surface: var(--surface);
+        --hero-line: var(--line);
+        --hero-accent: var(--slate-blue);
+        --icu-bg: #e8ecea;
+        --icu-surface: #f8faf7;
+        --icu-surface-soft: #edf2f0;
+        --icu-line: rgba(47, 75, 85, 0.18);
+        --icu-accent: #354f5a;
+        --ltc-bg: #eef2f1;
+        --ltc-surface: #fbfaf7;
+        --ltc-surface-soft: #eef2f1;
+        --ltc-line: rgba(73, 108, 112, 0.18);
+        --ltc-accent: var(--quiet-teal);
+        --contact-bg: #17262e;
+        --contact-surface: rgba(251, 250, 247, 0.06);
+        --contact-line: rgba(251, 250, 247, 0.16);
+        --contact-text: #f3f1ec;
+        --contact-chip: #d2c390;
+        --portrait-image: url("portrait-side-profile-web.jpg");
         --hero-photo: none;
         --icu-photo: none;
         --ltc-photo: none;
@@ -95,14 +126,16 @@
       }
 
       html {
+        overflow-x: hidden;
         scroll-behavior: smooth;
       }
 
       body {
         margin: 0;
+        overflow-x: hidden;
         background:
-          radial-gradient(circle at top left, rgba(143, 175, 166, 0.12), transparent 24%),
-          linear-gradient(180deg, var(--bg) 0%, #f2f8f6 42%, var(--bg-soft) 100%);
+          linear-gradient(180deg, rgba(222, 232, 230, 0.82) 0%, rgba(238, 241, 239, 0) 22rem),
+          linear-gradient(180deg, var(--bg) 0%, #e8ecea 52%, var(--bg-cool) 100%);
         color: var(--text);
         font-family: var(--font-body);
         text-rendering: optimizeLegibility;
@@ -138,11 +171,11 @@
         color: var(--heading);
         font-family: var(--font-display);
         font-weight: 600;
-        letter-spacing: -0.035em;
+        letter-spacing: 0;
       }
 
       .name-accent {
-        color: #4a7084;
+        color: var(--slate-blue);
       }
 
       ul {
@@ -183,6 +216,7 @@
       /* Layout */
       .page-shell {
         min-height: 100vh;
+        padding-top: var(--site-header-offset);
         position: relative;
         isolation: isolate;
       }
@@ -192,39 +226,45 @@
         margin: 0 auto;
       }
 
+      .header-row,
+      .site-name,
+      .brand-lockup,
+      .header-actions-shell,
+      .site-nav,
+      .hero-stage,
+      .hero-main,
+      .hero-aside,
+      .hero-evidence,
+      .current-board,
+      .current-secondary,
+      .work-layout,
+      .contact-card {
+        min-width: 0;
+      }
+
       .site-header {
-        --header-height-expanded: 10.5rem;
-        --header-height-compact: 6.75rem;
+        --header-height-expanded: 4.75rem;
         --header-current-height: var(--header-height-expanded);
-        --logo-height-ratio: 0.66;
-        position: sticky;
+        --logo-height-ratio: 0.72;
+        position: fixed;
         top: 0;
+        left: 0;
+        right: 0;
         z-index: 20;
-        will-change: transform;
-        backdrop-filter: blur(16px);
-        background: rgba(231, 240, 237, 0.9);
+        background: rgba(238, 241, 239, 0.96);
         border-bottom: 1px solid var(--line);
+        box-shadow: 0 12px 32px rgba(16, 24, 32, 0.045);
         transition:
-          transform 220ms ease,
-          opacity 220ms ease,
           background-color 180ms ease,
           border-color 180ms ease;
       }
 
-      .site-header.is-compact {
-        --header-current-height: var(--header-height-compact);
-      }
-
-      .site-header.is-hidden {
-        transform: translateY(calc(-100% - 0.24rem));
-      }
-
       .header-row {
         display: grid;
-        gap: 0.7rem;
-        align-items: stretch;
+        gap: 0.62rem;
+        align-items: center;
         min-height: var(--header-current-height);
-        padding: 0.78rem 0;
+        padding: 0.48rem 0;
         transition:
           min-height 180ms ease,
           padding 180ms ease,
@@ -232,18 +272,20 @@
       }
 
       .header-actions-shell {
-        display: grid;
-        gap: 0.7rem;
-        min-width: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.72rem;
+        align-items: center;
+        justify-content: flex-end;
         align-self: center;
         transition: gap 180ms ease;
       }
 
       .header-tools {
         display: flex;
-        flex-wrap: wrap;
-        gap: 0.55rem;
-        align-items: flex-start;
+        flex-wrap: nowrap;
+        gap: 0.4rem;
+        align-items: center;
       }
 
       .control-group {
@@ -252,27 +294,27 @@
       }
 
       .control-label {
+        display: none;
         color: var(--accent);
-        font-size: 0.62rem;
+        font-size: 0.58rem;
         font-weight: 700;
-        letter-spacing: 0.16em;
+        letter-spacing: 0;
         text-transform: uppercase;
       }
 
       .segmented-control {
         display: inline-flex;
         align-items: center;
-        gap: 0.3rem;
-        padding: 0.22rem;
+        gap: 0.24rem;
+        padding: 0.18rem;
         border: 1px solid var(--line);
         border-radius: 999px;
-        background: rgba(255, 255, 255, 0.72);
-        backdrop-filter: blur(12px);
+        background: rgba(251, 250, 247, 0.72);
       }
 
       .control-button {
-        min-height: 2.4rem;
-        padding: 0.55rem 0.78rem;
+        min-height: 2.08rem;
+        padding: 0.4rem 0.66rem;
         border: 0;
         border-radius: 999px;
         background: transparent;
@@ -291,7 +333,7 @@
       .control-button:focus-visible,
       .control-button.is-active {
         color: var(--heading);
-        background: rgba(23, 61, 71, 0.12);
+        background: rgba(47, 75, 85, 0.1);
       }
 
       .site-name {
@@ -306,7 +348,7 @@
       .brand-lockup {
         display: flex;
         align-items: center;
-        gap: 0.8rem;
+        gap: 0.82rem;
         height: 100%;
         min-height: 0;
         min-width: 0;
@@ -339,9 +381,9 @@
 
       .brand-name {
         color: var(--accent-strong);
-        font-size: 0.88rem;
+        font-size: 1rem;
         font-weight: 700;
-        letter-spacing: 0.06em;
+        letter-spacing: 0;
         line-height: 1.1;
         white-space: nowrap;
       }
@@ -351,10 +393,10 @@
       }
 
       .brand-support {
-        color: var(--muted);
-        font-size: 0.64rem;
+        color: var(--slate-blue);
+        font-size: 0.62rem;
         font-weight: 700;
-        letter-spacing: 0.16em;
+        letter-spacing: 0;
         line-height: 1.1;
         text-transform: uppercase;
         white-space: nowrap;
@@ -362,7 +404,7 @@
 
       .site-nav {
         display: flex;
-        gap: 0.6rem;
+        gap: 0.48rem;
         overflow-x: auto;
         padding-bottom: 0.1rem;
         scrollbar-width: none;
@@ -376,12 +418,12 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-height: 3rem;
+        min-height: 2.24rem;
         border-radius: 999px;
-        padding: 0.5rem 0.8rem;
-        color: var(--muted);
-        font-size: 0.92rem;
-        font-weight: 600;
+        padding: 0.4rem 0.68rem;
+        color: var(--ink-soft);
+        font-size: 0.86rem;
+        font-weight: 700;
         white-space: nowrap;
         transition:
           color 180ms ease,
@@ -393,16 +435,7 @@
       .site-nav a:focus-visible,
       .site-nav a[aria-current="page"] {
         color: var(--heading);
-        background: rgba(23, 61, 71, 0.08);
-      }
-
-      .site-header.is-compact .header-row {
-        gap: 0.56rem;
-        padding: 0.52rem 0;
-      }
-
-      .site-header.is-compact .header-actions-shell {
-        gap: 0.52rem;
+        background: rgba(44, 72, 83, 0.1);
       }
 
       main section {
@@ -411,7 +444,7 @@
         position: relative;
         overflow: clip;
         isolation: isolate;
-        scroll-margin-top: 7rem;
+        scroll-margin-top: calc(var(--site-header-offset) + 1.25rem);
       }
 
       main section:first-child {
@@ -421,7 +454,7 @@
       .section-grid,
       .contact-grid {
         display: grid;
-        gap: 2rem;
+        gap: 2.2rem;
       }
 
       .section-heading {
@@ -431,9 +464,9 @@
       }
 
       .section-heading h2 {
-        max-width: 10ch;
-        font-size: clamp(2.4rem, 5vw, 4.5rem);
-        line-height: 0.95;
+        max-width: 11ch;
+        font-size: clamp(2.55rem, 5vw, 4.8rem);
+        line-height: 0.92;
       }
 
       .section-heading p {
@@ -452,16 +485,16 @@
         display: inline-flex;
         align-items: center;
         gap: 0.65rem;
-        color: var(--accent);
+        color: var(--slate-blue);
         font-size: 0.74rem;
         font-weight: 700;
-        letter-spacing: 0.16em;
+        letter-spacing: 0;
         text-transform: uppercase;
       }
 
       .eyebrow::before {
         content: "";
-        width: 2.5rem;
+        width: 2.75rem;
         height: 1px;
         background: currentColor;
         opacity: 0.42;
@@ -471,12 +504,8 @@
       .panel {
         border: 1px solid var(--panel-line, var(--line));
         border-radius: var(--radius);
-        background: var(
-          --panel-surface,
-          linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.82))
-        );
-        box-shadow: var(--panel-shadow, var(--shadow));
-        backdrop-filter: blur(18px) saturate(1.04);
+        background: var(--panel-surface, var(--surface));
+        box-shadow: var(--panel-shadow, var(--shadow-soft));
       }
 
       .button,
@@ -499,28 +528,28 @@
       }
 
       .button {
-        background: var(--accent);
-        border-color: var(--accent);
-        color: #eaf3f0;
+        background: var(--blue-black);
+        border-color: var(--blue-black);
+        color: var(--surface);
       }
 
       .button:hover,
       .button:focus-visible {
-        transform: translateY(-2px);
-        background: var(--accent-strong);
-        box-shadow: 0 18px 34px rgba(23, 61, 71, 0.18);
+        transform: translateY(-1px);
+        background: var(--ink-soft);
+        box-shadow: 0 10px 20px rgba(18, 26, 32, 0.12);
       }
 
       .text-link {
-        background: rgba(23, 61, 71, 0.04);
+        background: transparent;
         color: var(--heading);
       }
 
       .text-link:hover,
       .text-link:focus-visible {
-        transform: translateY(-2px);
-        border-color: rgba(23, 61, 71, 0.28);
-        background: rgba(23, 61, 71, 0.08);
+        transform: translateY(-1px);
+        border-color: var(--line-strong);
+        background: rgba(18, 26, 32, 0.04);
       }
 
       .detail-list {
@@ -537,10 +566,10 @@
       .status-label,
       .proof-label,
       .signal-label {
-        color: var(--accent);
+        color: var(--slate-blue);
         font-size: 0.72rem;
         font-weight: 700;
-        letter-spacing: 0.16em;
+        letter-spacing: 0;
         text-transform: uppercase;
       }
 
@@ -567,43 +596,88 @@
 
       /* Hero */
       .hero {
-        padding-top: clamp(1.4rem, 3vw, 2.3rem);
+        padding: clamp(1rem, 2.4vw, 2.1rem) 0 clamp(4rem, 7vw, 6.4rem);
+        background:
+          linear-gradient(180deg, rgba(222, 232, 230, 0.9) 0%, rgba(238, 241, 239, 0) 76%),
+          var(--bg);
       }
 
       .hero-stage {
+        position: relative;
         display: grid;
-        gap: 1.5rem;
-        align-items: start;
-        min-height: clamp(28rem, 68vh, 35rem);
-        padding: clamp(1.4rem, 3.2vw, 2.4rem);
-        border: 1px solid var(--line);
-        border-radius: calc(var(--radius) + 0.15rem);
+        grid-template-areas:
+          "main"
+          "portrait"
+          "credentials";
+        gap: clamp(0.82rem, 1.8vw, 1.25rem);
+        align-items: stretch;
+        min-height: clamp(32rem, 64vh, 42rem);
+        padding: clamp(0.88rem, 2.4vw, 1.85rem);
+        border: 1px solid rgba(16, 24, 32, 0.16);
+        border-radius: var(--radius-large);
         background:
-          linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 249, 247, 0.92)),
-          linear-gradient(135deg, rgba(143, 175, 166, 0.06), transparent);
-        box-shadow: 0 22px 48px rgba(16, 42, 51, 0.08);
-        backdrop-filter: blur(22px) saturate(1.04);
+          linear-gradient(135deg, rgba(250, 251, 248, 0.98) 0%, rgba(240, 244, 242, 0.96) 48%, rgba(226, 235, 233, 0.92) 100%);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .hero-stage::before {
+        content: "";
+        position: absolute;
+        inset: clamp(0.55rem, 1vw, 0.8rem);
+        border: 1px solid rgba(16, 24, 32, 0.08);
+        border-radius: calc(var(--radius-large) - 0.32rem);
+        pointer-events: none;
       }
 
       .hero-main {
+        grid-area: main;
         display: grid;
-        gap: 1rem;
-        align-content: start;
+        gap: clamp(0.9rem, 1.7vw, 1.18rem);
+        align-content: center;
         max-width: 100%;
+        padding: clamp(0.18rem, 1vw, 0.82rem);
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-identity {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        width: max-content;
+        max-width: 100%;
+        padding: 0.2rem 0 0.85rem;
+        border-bottom: 1px solid rgba(16, 24, 32, 0.16);
+      }
+
+      .hero-identity img {
+        width: clamp(5rem, 8vw, 6.8rem);
+        height: auto;
+        object-fit: contain;
+      }
+
+      .hero-identity span {
+        color: var(--slate-blue);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.3;
+        text-transform: uppercase;
       }
 
       .hero-main h1 {
-        max-width: 8.6ch;
-        font-size: clamp(3.1rem, 8.4vw, 5.1rem);
-        line-height: 0.92;
+        max-width: 9.8ch;
+        font-size: clamp(3.55rem, 7.7vw, 6.35rem);
+        line-height: 0.88;
       }
 
       .hero-role {
-        max-width: 36rem;
+        max-width: 37rem;
         color: var(--heading);
-        font-size: clamp(1.16rem, 2.1vw, 1.5rem);
+        font-size: clamp(1.12rem, 1.8vw, 1.42rem);
         font-weight: 600;
-        line-height: 1.45;
+        line-height: 1.42;
       }
 
       .hero-intro {
@@ -615,22 +689,38 @@
       }
 
       .hero-evidence {
-        margin-top: 0.2rem;
+        grid-area: credentials;
+        position: relative;
+        z-index: 1;
+        align-self: end;
+        padding-top: 0.5rem;
+        border-top: 1px solid rgba(16, 24, 32, 0.14);
       }
 
       .signal-list {
         display: grid;
-        gap: 0.75rem;
+        gap: 0;
       }
 
       .signal-item {
         display: grid;
-        gap: 0.4rem;
-        padding: 0.95rem 1rem;
-        border: 1px solid rgba(23, 61, 71, 0.12);
-        border-radius: 1rem;
-        background: rgba(255, 255, 255, 0.8);
-        box-shadow: var(--shadow-soft);
+        gap: 0.32rem;
+        min-height: 0;
+        padding: 0.72rem 0;
+        border: 0;
+        border-bottom: 1px solid rgba(16, 24, 32, 0.1);
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        align-content: start;
+      }
+
+      .signal-item:first-child {
+        border-top: 0;
+      }
+
+      .signal-item:last-child {
+        border-bottom: 0;
       }
 
       .hero-actions {
@@ -641,28 +731,40 @@
       }
 
       .hero-aside {
+        grid-area: portrait;
+        position: relative;
+        z-index: 1;
         display: grid;
-        gap: 1rem;
+        gap: 0.68rem;
         align-content: start;
+        padding: 0.62rem;
+        border: 1px solid rgba(16, 31, 39, 0.5);
+        border-radius: calc(var(--radius-large) - 0.18rem);
+        background:
+          linear-gradient(180deg, rgba(17, 31, 39, 0.98), rgba(25, 45, 55, 0.96));
+        box-shadow: 0 24px 52px rgba(16, 24, 32, 0.18);
       }
 
       .headshot-shell {
-        padding: 0.8rem;
-        background: linear-gradient(180deg, rgba(16, 42, 51, 0.04), rgba(16, 42, 51, 0.02)), var(--surface-strong);
+        padding: 0;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
       }
 
       .headshot-stage {
         position: relative;
-        aspect-ratio: 4 / 5;
+        aspect-ratio: 4 / 5.08;
         width: 100%;
         overflow: hidden;
-        border-radius: calc(var(--radius) - 0.2rem);
-        background-color: #c6d8d4;
+        border-radius: calc(var(--radius-large) - 0.32rem);
+        background-color: #bdc7c4;
         background-image:
-          linear-gradient(180deg, rgba(16, 42, 51, 0.08), rgba(16, 42, 51, 0.2)),
+          linear-gradient(180deg, rgba(17, 31, 39, 0.02), rgba(17, 31, 39, 0.26)),
           var(--portrait-image);
         background-size: cover, cover;
-        background-position: center, center 20%;
+        background-position: center, center 18%;
+        box-shadow: inset 0 0 0 1px rgba(251, 250, 246, 0.18);
       }
 
       .headshot-stage::after {
@@ -670,19 +772,26 @@
         position: absolute;
         inset: 0.75rem;
         border: 1px solid rgba(234, 243, 240, 0.26);
-        border-radius: calc(var(--radius) - 0.32rem);
+        border-radius: calc(var(--radius-large) - 0.48rem);
         pointer-events: none;
+      }
+
+      .hero-detail-stack {
+        display: grid;
+        gap: 0.62rem;
       }
 
       .hero-profile,
       .hero-practice {
-        padding: 1.15rem 1.3rem;
-        background: rgba(255, 255, 255, 0.9);
+        padding: 0.94rem 1rem;
+        border-color: rgba(251, 250, 246, 0.2);
+        background: rgba(251, 250, 246, 0.94);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.13);
       }
 
       .hero-profile .detail-item,
       .hero-practice .detail-item {
-        padding-top: 0.85rem;
+        padding-top: 0.72rem;
         border-top: 1px solid var(--line);
       }
 
@@ -695,7 +804,7 @@
       .hero-profile .detail-item p,
       .hero-practice .detail-item p {
         max-width: 25rem;
-        font-size: 0.98rem;
+        font-size: 0.94rem;
       }
 
       .hero-status {
@@ -736,17 +845,18 @@
 
       /* Current */
       #current {
-        --panel-line: rgba(74, 112, 132, 0.16);
-        --panel-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.66));
-        --panel-shadow: 0 8px 18px rgba(32, 70, 90, 0.025);
-        background: linear-gradient(180deg, #eaf3f9 0%, rgba(239, 247, 251, 0.98) 100%);
-        border-top-color: rgba(74, 112, 132, 0.16);
+        --panel-line: rgba(47, 75, 85, 0.16);
+        --panel-surface: var(--surface);
+        --panel-shadow: var(--shadow-soft);
+        background:
+          linear-gradient(180deg, #e4ebe9 0%, #edf2f0 100%);
+        border-top-color: rgba(47, 75, 85, 0.16);
       }
 
       #current .eyebrow,
       #current .detail-label,
       #current .proof-label {
-        color: #4a7084;
+        color: var(--slate-blue);
       }
 
       #icu .section-heading h2,
@@ -759,64 +869,112 @@
       .current-layout {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-areas:
-          "intro"
-          "pursuits"
-          "presence"
-          "learning";
-        gap: 1rem;
+        gap: clamp(1.2rem, 3vw, 2.2rem);
+        align-items: start;
       }
 
       .current-heading {
         display: grid;
-        gap: 0.85rem;
+        gap: 0.95rem;
         align-content: start;
-        grid-area: intro;
+        padding-top: 0.2rem;
       }
 
       .current-heading h2 {
-        max-width: 10ch;
-        font-size: clamp(2.6rem, 5vw, 4.5rem);
-        line-height: 0.95;
+        max-width: 9ch;
+        font-size: clamp(3rem, 5.6vw, 5.2rem);
+        line-height: 0.9;
       }
 
       .current-heading p {
-        max-width: 24rem;
+        max-width: 26rem;
+        color: var(--ink-soft);
+        font-weight: 500;
+      }
+
+      .current-board {
+        display: grid;
+        gap: clamp(1.1rem, 2.5vw, 1.8rem);
+        padding: clamp(1.35rem, 3vw, 2.4rem) clamp(1.25rem, 3vw, 2.2rem);
+        border-top: 1px solid rgba(16, 24, 32, 0.18);
+        border-bottom: 1px solid rgba(16, 24, 32, 0.18);
+        border-left: 3px solid rgba(47, 75, 85, 0.42);
+        background:
+          linear-gradient(90deg, rgba(255, 254, 250, 0.82), rgba(249, 250, 247, 0.42));
+      }
+
+      .current-secondary {
+        display: grid;
+        gap: clamp(0.9rem, 2vw, 1.4rem);
+        padding-top: clamp(1rem, 2vw, 1.35rem);
+        border-top: 1px solid rgba(16, 24, 32, 0.12);
       }
 
       .current-card {
+        position: relative;
         display: grid;
-        gap: 0.85rem;
-        padding: clamp(1.2rem, 2.8vw, 1.45rem);
+        gap: 0.7rem;
+        min-height: 100%;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        overflow: visible;
       }
 
       .current-card--pursuits {
-        grid-area: pursuits;
+        min-height: 0;
+        align-content: start;
+        color: var(--heading);
+        box-shadow: none;
       }
 
-      .current-card--presence {
-        grid-area: presence;
+      .current-card--pursuits::before {
+        content: none;
       }
 
-      .current-card--learning {
-        grid-area: learning;
+      .current-card--pursuits h3,
+      .current-card--pursuits .current-card-text {
+        color: inherit;
+      }
+
+      .current-card--pursuits .stack-link {
+        border-color: rgba(47, 75, 85, 0.2);
+        background: transparent;
+        color: var(--heading);
+      }
+
+      .current-card--pursuits .stack-link::after {
+        color: rgba(47, 75, 85, 0.72);
+      }
+
+      .current-card--pursuits .stack-link:hover,
+      .current-card--pursuits .stack-link:focus-visible {
+        border-color: rgba(47, 75, 85, 0.34);
+        background: rgba(47, 75, 85, 0.06);
       }
 
       .current-card h3 {
-        font-size: clamp(1.34rem, 2.2vw, 1.62rem);
+        font-size: clamp(1.32rem, 2.1vw, 1.72rem);
         line-height: 1.08;
       }
 
+      .current-card--pursuits h3 {
+        font-size: clamp(1.8rem, 3vw, 2.55rem);
+      }
+
       .current-card-text {
-        color: var(--heading);
+        color: var(--ink-soft);
         font-size: 0.98rem;
         line-height: 1.58;
       }
 
       .stacked-links {
-        display: grid;
-        gap: 0.75rem;
-        margin-top: 0.15rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.62rem;
+        margin-top: 0.35rem;
       }
 
       .stack-link {
@@ -825,10 +983,10 @@
         justify-content: space-between;
         gap: 0.8rem;
         min-height: 3.15rem;
-        padding: 0.82rem 1rem;
-        border: 1px solid rgba(74, 112, 132, 0.18);
-        border-radius: 1rem;
-        background: rgba(255, 255, 255, 0.66);
+        padding: 0.76rem 0.95rem;
+        border: 1px solid rgba(47, 75, 85, 0.18);
+        border-radius: 999px;
+        background: transparent;
         color: var(--heading);
         font-size: 0.94rem;
         font-weight: 600;
@@ -841,37 +999,37 @@
       }
 
       .stack-link::after {
-        content: "↗";
-        color: rgba(74, 112, 132, 0.72);
+        content: "->";
+        color: rgba(47, 75, 85, 0.72);
         font-size: 0.8rem;
       }
 
       .stack-link:hover,
       .stack-link:focus-visible {
         transform: translateY(-1px);
-        border-color: rgba(74, 112, 132, 0.3);
-        background: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 12px 24px rgba(32, 70, 90, 0.06);
+        border-color: rgba(47, 75, 85, 0.32);
+        background: rgba(255, 255, 255, 0.34);
+        box-shadow: none;
       }
 
-      .stack-link--quest-primary {
-        border-color: rgba(199, 175, 122, 0.34);
-        background: linear-gradient(180deg, rgba(199, 175, 122, 0.16), rgba(199, 175, 122, 0.08));
-        color: #5f4b22;
+      .stack-link--primary-direction {
+        border-color: rgba(47, 75, 85, 0.28);
+        background: rgba(47, 75, 85, 0.07);
+        color: var(--heading);
       }
 
-      .stack-link--quest-primary::after {
-        color: rgba(95, 75, 34, 0.7);
+      .stack-link--primary-direction::after {
+        color: rgba(47, 75, 85, 0.8);
       }
 
-      .stack-link--quest-primary:hover,
-      .stack-link--quest-primary:focus-visible {
-        border-color: rgba(199, 175, 122, 0.5);
-        background: linear-gradient(180deg, rgba(199, 175, 122, 0.22), rgba(199, 175, 122, 0.12));
+      .stack-link--primary-direction:hover,
+      .stack-link--primary-direction:focus-visible {
+        border-color: rgba(47, 75, 85, 0.4);
+        background: rgba(47, 75, 85, 0.1);
       }
 
-      .stack-link--quest-secondary {
-        background: linear-gradient(180deg, rgba(74, 112, 132, 0.08), rgba(74, 112, 132, 0.03));
+      .stack-link--secondary-practice {
+        background: rgba(73, 108, 112, 0.06);
       }
 
       .current-list {
@@ -881,7 +1039,7 @@
 
       .current-list-item {
         padding: 0.68rem 0;
-        border-top: 1px solid rgba(74, 112, 132, 0.14);
+        border-top: 1px solid rgba(47, 75, 85, 0.16);
         color: var(--muted);
         font-size: 0.92rem;
         line-height: 1.5;
@@ -894,15 +1052,15 @@
 
       .subpage-view {
         padding-top: clamp(1.6rem, 4vw, 2.5rem);
-        background: linear-gradient(180deg, #eaf3f9 0%, rgba(241, 248, 251, 0.98) 100%);
-        border-top-color: rgba(74, 112, 132, 0.16);
+        background: var(--bg-cool);
+        border-top-color: rgba(47, 75, 85, 0.16);
       }
 
       .subpage-back {
         display: inline-flex;
         align-items: center;
         gap: 0.45rem;
-        color: #4a7084;
+        color: var(--slate-blue);
         font-size: 0.9rem;
         font-weight: 700;
       }
@@ -916,7 +1074,7 @@
         max-width: 42rem;
         padding: 1.1rem 1.15rem;
         border-top-width: 2px;
-        border-top-color: rgba(74, 112, 132, 0.22);
+        border-top-color: rgba(47, 75, 85, 0.22);
       }
 
       .subpage-note p {
@@ -925,31 +1083,34 @@
 
       .subpage-view .eyebrow,
       .subpage-view .detail-label {
-        color: #4a7084;
+        color: var(--slate-blue);
       }
 
       .subpage-view .work-body,
       .subpage-view .work-details {
         border-top-width: 2px;
-        border-top-color: rgba(74, 112, 132, 0.22);
-        background: rgba(255, 255, 255, 0.82);
-        box-shadow: 0 10px 20px rgba(32, 70, 90, 0.03);
+        border-top-color: rgba(47, 75, 85, 0.22);
+        background: var(--surface);
+        box-shadow: none;
       }
 
       /* Current Work */
       .work-layout {
         display: grid;
-        gap: 1.15rem;
+        gap: 1rem;
       }
 
       .work-body,
       .work-details {
-        padding: clamp(1.35rem, 3vw, 2rem);
+        padding: clamp(1.35rem, 3vw, 2.2rem);
       }
 
       .work-body {
         display: grid;
-        gap: 0.9rem;
+        gap: 1rem;
+        border-radius: 0;
+        background: rgba(249, 250, 247, 0.48);
+        box-shadow: none;
       }
 
       .work-body-block {
@@ -958,15 +1119,15 @@
       }
 
       .work-body-block + .work-body-block {
-        padding-top: 0.25rem;
-        border-top: 1px solid rgba(16, 42, 51, 0.08);
+        padding-top: 0.8rem;
+        border-top: 1px solid rgba(16, 24, 32, 0.1);
       }
 
       .work-body-block h3 {
         color: var(--heading);
         font-size: 0.92rem;
         font-weight: 700;
-        letter-spacing: 0.04em;
+        letter-spacing: 0;
         text-transform: uppercase;
       }
 
@@ -984,9 +1145,12 @@
 
       .work-details {
         --detail-card-line: var(--panel-line, var(--line));
-        --detail-card-surface: rgba(255, 255, 255, 0.46);
+        --detail-card-surface: transparent;
         display: grid;
         gap: 0.9rem;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
       }
 
       .work-details .detail-list {
@@ -996,10 +1160,16 @@
 
       .work-details .detail-item {
         gap: 0.45rem;
-        padding: 1rem 1.05rem;
-        border: 1px solid var(--detail-card-line);
-        border-radius: 0.95rem;
+        padding: 0 0 0.95rem;
+        border: 0;
+        border-bottom: 1px solid var(--detail-card-line);
+        border-radius: 0;
         background: var(--detail-card-surface);
+      }
+
+      .work-details .detail-item:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
       }
 
       .work-details .detail-item p {
@@ -1032,8 +1202,8 @@
         background-image: var(--section-photo, none);
         background-size: cover;
         background-position: center;
-        filter: blur(24px) saturate(0.9);
-        transform: scale(1.06);
+        filter: none;
+        transform: none;
         opacity: 0;
       }
 
@@ -1045,47 +1215,39 @@
       .hero {
         --section-photo: var(--hero-photo);
         --section-photo-opacity: var(--hero-photo-opacity);
-        --section-tint:
-          radial-gradient(circle at top left, rgba(143, 175, 166, 0.12), transparent 24%),
-          linear-gradient(180deg, rgba(247, 251, 249, 0.64), rgba(242, 248, 246, 0.3));
+        --section-tint: transparent;
       }
 
       #icu {
         --panel-line: var(--icu-line);
-        --panel-surface: linear-gradient(180deg, rgba(255, 250, 244, 0.92), rgba(255, 248, 242, 0.82));
-        --panel-shadow: 0 16px 30px rgba(67, 48, 35, 0.05);
+        --panel-surface: var(--icu-surface);
+        --panel-shadow: var(--shadow-soft);
         --section-photo: var(--icu-photo);
         --section-photo-opacity: var(--icu-photo-opacity);
-        --section-tint:
-          linear-gradient(180deg, rgba(245, 241, 235, 0.8), rgba(245, 241, 235, 0.94));
-        background:
-          linear-gradient(180deg, rgba(245, 241, 235, 0.98), rgba(248, 244, 239, 0.98));
+        --section-tint: transparent;
+        background: var(--icu-bg);
         border-top-color: var(--icu-line);
       }
 
       #ltc {
         --panel-line: var(--ltc-line);
-        --panel-surface: linear-gradient(180deg, rgba(249, 252, 250, 0.92), rgba(244, 249, 245, 0.86));
-        --panel-shadow: 0 16px 30px rgba(31, 68, 58, 0.05);
+        --panel-surface: var(--ltc-surface);
+        --panel-shadow: var(--shadow-soft);
         --section-photo: var(--ltc-photo);
         --section-photo-opacity: var(--ltc-photo-opacity);
-        --section-tint:
-          linear-gradient(180deg, rgba(240, 247, 242, 0.92), rgba(243, 249, 244, 0.98));
-        background:
-          linear-gradient(180deg, #f0f7f2 0%, rgba(244, 249, 245, 0.98) 100%);
+        --section-tint: transparent;
+        background: var(--ltc-bg);
         border-top-color: var(--ltc-line);
       }
 
       #contact {
         --panel-line: var(--contact-line);
-        --panel-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.04));
-        --panel-shadow: 0 16px 32px rgba(8, 21, 26, 0.14);
+        --panel-surface: var(--contact-surface);
+        --panel-shadow: 0 20px 48px rgba(0, 0, 0, 0.18);
         --section-photo: var(--contact-photo);
         --section-photo-opacity: var(--contact-photo-opacity);
-        --section-tint:
-          linear-gradient(180deg, rgba(18, 47, 56, 0.72) 0%, rgba(18, 47, 56, 0.94) 100%);
-        background:
-          linear-gradient(180deg, #183741 0%, var(--contact-bg) 100%);
+        --section-tint: transparent;
+        background: var(--contact-bg);
         border-top-color: var(--contact-line);
       }
 
@@ -1106,7 +1268,7 @@
       #contact .contact-card {
         background: var(--contact-surface);
         border-color: var(--contact-line);
-        box-shadow: 0 14px 26px rgba(8, 21, 26, 0.14);
+        box-shadow: var(--panel-shadow);
       }
 
       #icu .eyebrow,
@@ -1121,7 +1283,7 @@
 
       #icu .work-details {
         --detail-card-line: rgba(122, 91, 73, 0.16);
-        --detail-card-surface: rgba(255, 251, 246, 0.62);
+        --detail-card-surface: rgba(255, 253, 248, 0.28);
       }
 
       #ltc .eyebrow,
@@ -1139,7 +1301,7 @@
 
       #ltc .work-details {
         --detail-card-line: rgba(94, 128, 109, 0.16);
-        --detail-card-surface: rgba(249, 252, 250, 0.74);
+        --detail-card-surface: rgba(255, 253, 248, 0.28);
       }
 
       .super-link {
@@ -1148,13 +1310,13 @@
         justify-content: center;
         min-height: 3rem;
         padding: 0.7rem 1rem;
-        border: 1px solid rgba(199, 175, 122, 0.22);
+        border: 1px solid rgba(183, 161, 109, 0.28);
         border-radius: 999px;
-        background: rgba(199, 175, 122, 0.045);
+        background: rgba(183, 161, 109, 0.08);
         color: var(--contact-chip);
         font-size: 0.86rem;
         font-weight: 600;
-        letter-spacing: 0.01em;
+        letter-spacing: 0;
       }
 
       .closing-links {
@@ -1229,8 +1391,8 @@
       }
 
       .compact-grid .proof-item {
-        background: rgba(255, 255, 255, 0.62);
-        box-shadow: 0 10px 22px rgba(16, 42, 51, 0.035);
+        background: var(--surface);
+        box-shadow: none;
       }
 
       .compact-grid .proof-item .proof-meta {
@@ -1242,7 +1404,7 @@
         display: grid;
         gap: 0.7rem;
         padding: 1.2rem 1.15rem;
-        background: rgba(255, 255, 255, 0.44);
+        background: var(--surface);
         box-shadow: none;
       }
 
@@ -1282,8 +1444,8 @@
       /* Contact */
       .contact-card {
         display: grid;
-        gap: 1.2rem;
-        padding: clamp(1.35rem, 3vw, 1.9rem);
+        gap: 1.25rem;
+        padding: clamp(1.45rem, 3vw, 2.1rem);
         max-width: 36rem;
       }
 
@@ -1309,18 +1471,14 @@
         overflow-wrap: anywhere;
         word-break: break-word;
         transition:
-          transform 180ms ease,
           background-color 180ms ease,
-          border-color 180ms ease,
-          box-shadow 180ms ease;
+          border-color 180ms ease;
       }
 
       .contact-mail:hover,
       .contact-mail:focus-visible {
-        transform: translateY(-1px);
         border-color: rgba(234, 243, 240, 0.38);
         background: rgba(255, 255, 255, 0.12);
-        box-shadow: 0 16px 28px rgba(8, 21, 26, 0.14);
       }
 
       .contact-links {
@@ -1343,8 +1501,9 @@
       }
 
       .footer {
-        padding: 1.5rem 0 2.35rem;
-        border-top: 1px solid var(--line);
+        padding: 2rem 0 2.8rem;
+        border-top: 1px solid rgba(251, 250, 246, 0.12);
+        background: var(--blue-black);
       }
 
       .footer-row {
@@ -1356,26 +1515,30 @@
           "note note";
         column-gap: 1.05rem;
         row-gap: 0.38rem;
-        min-height: 7.4rem;
+        min-height: 7rem;
         align-items: center;
       }
 
       .footer-logo {
         grid-area: logo;
         display: block;
-        width: clamp(5.1rem, 10vw, 6.6rem);
+        width: clamp(7rem, 11vw, 9rem);
         height: auto;
         justify-self: end;
         align-self: center;
         flex: 0 0 auto;
         object-fit: contain;
+        /* Future asset work: replace this with a dedicated light footer logo. */
+        filter: invert(1) brightness(1.8) saturate(0.55);
+        opacity: 0.82;
       }
 
       .footer-summary {
         grid-area: summary;
         align-self: center;
-        max-width: min(42rem, calc(100% - 7.5rem));
-        font-size: 0.98rem;
+        max-width: min(42rem, calc(100% - 9.5rem));
+        color: var(--surface);
+        font-size: 1rem;
         font-weight: 600;
         line-height: 1.55;
       }
@@ -1388,8 +1551,8 @@
         font-size: clamp(0.3rem, 0.5vw, 0.38rem);
         line-height: 1.45;
         text-align: center;
-        letter-spacing: 0.03em;
-        color: var(--muted);
+        letter-spacing: 0;
+        color: rgba(251, 250, 246, 0.55);
       }
 
       /* Motion */
@@ -1411,15 +1574,19 @@
         .header-row {
           display: flex;
           justify-content: space-between;
-          gap: 1rem;
+          gap: 0.9rem;
         }
 
         .header-actions-shell {
-          justify-items: end;
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 0.74rem;
         }
 
         .site-nav {
-          gap: 0.75rem;
+          gap: 0.42rem;
           overflow: visible;
         }
 
@@ -1431,12 +1598,15 @@
         }
 
         .hero-stage {
-          grid-template-columns: minmax(0, 1.4fr) minmax(14.5rem, 0.72fr);
-          min-height: clamp(26rem, 62vh, 32rem);
+          grid-template-columns: minmax(0, 1.14fr) minmax(18rem, 0.76fr);
+          grid-template-areas:
+            "main portrait"
+            "credentials portrait";
+          min-height: clamp(32rem, 64vh, 42rem);
         }
 
         .hero-main {
-          max-width: 41rem;
+          max-width: 46rem;
         }
 
         .signal-list {
@@ -1448,24 +1618,25 @@
         }
 
         .current-layout {
-          grid-template-columns: minmax(15rem, 0.82fr) minmax(0, 1.18fr);
-          grid-template-areas:
-            "intro pursuits"
-            "presence learning";
-          gap: 1.15rem;
+          grid-template-columns: minmax(15rem, 0.72fr) minmax(0, 1.28fr);
+          gap: clamp(1.4rem, 3vw, 2.4rem);
+        }
+
+        .current-secondary {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         .hero-aside {
-          justify-items: end;
+          align-self: stretch;
+          justify-self: stretch;
         }
 
         .headshot-shell {
-          width: min(100%, 19rem);
-          padding: 0.6rem;
+          width: 100%;
         }
 
         .hero-profile {
-          width: min(100%, 19rem);
+          width: 100%;
         }
 
         .hero-status {
@@ -1560,8 +1731,7 @@
         }
 
         .panel {
-          box-shadow: 0 12px 22px rgba(16, 42, 51, 0.045);
-          backdrop-filter: blur(12px) saturate(1.02);
+          box-shadow: none;
         }
 
         .brand-lockup {
@@ -1569,7 +1739,7 @@
         }
 
         .brand-wordmark {
-          display: none;
+          display: grid;
         }
 
         .current-card,
@@ -1585,15 +1755,19 @@
       html[data-view-mode="desktop"] .header-row {
         display: flex;
         justify-content: space-between;
-        gap: 1rem;
+        gap: 0.9rem;
       }
 
       html[data-view-mode="desktop"] .header-actions-shell {
-        justify-items: end;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.74rem;
       }
 
       html[data-view-mode="desktop"] .site-nav {
-        gap: 0.75rem;
+        gap: 0.42rem;
         overflow: visible;
       }
 
@@ -1605,8 +1779,11 @@
       }
 
       html[data-view-mode="desktop"] .hero-stage {
-        grid-template-columns: minmax(0, 1.4fr) minmax(14.5rem, 0.72fr);
-        min-height: clamp(26rem, 62vh, 32rem);
+        grid-template-columns: minmax(0, 1.14fr) minmax(18rem, 0.76fr);
+        grid-template-areas:
+          "main portrait"
+          "credentials portrait";
+        min-height: clamp(32rem, 64vh, 42rem);
       }
 
       html[data-view-mode="desktop"] .signal-list {
@@ -1618,24 +1795,25 @@
       }
 
       html[data-view-mode="desktop"] .current-layout {
-        grid-template-columns: minmax(15rem, 0.82fr) minmax(0, 1.18fr);
-        grid-template-areas:
-          "intro pursuits"
-          "presence learning";
-        gap: 1.15rem;
+        grid-template-columns: minmax(15rem, 0.72fr) minmax(0, 1.28fr);
+        gap: clamp(1.4rem, 3vw, 2.4rem);
+      }
+
+      html[data-view-mode="desktop"] .current-secondary {
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
       }
 
       html[data-view-mode="desktop"] .hero-aside {
-        justify-items: end;
+        align-self: stretch;
+        justify-self: stretch;
       }
 
       html[data-view-mode="desktop"] .headshot-shell {
-        width: min(100%, 19rem);
-        padding: 0.6rem;
+        width: 100%;
       }
 
       html[data-view-mode="desktop"] .hero-profile {
-        width: min(100%, 19rem);
+        width: 100%;
       }
 
       html[data-view-mode="desktop"] .work-layout {
@@ -1660,32 +1838,33 @@
 
       html[data-view-mode="phone"] {
         --section-space: clamp(3rem, 9vw, 4.2rem);
+        --site-header-offset: 6.75rem;
       }
 
       html[data-view-mode="phone"] .site-header {
-        --header-height-expanded: 6.7rem;
-        --header-height-compact: 5.6rem;
-        --phone-nav-gap: 0.34rem;
-        --phone-control-height: 2.78rem;
+        --header-height-expanded: 5.45rem;
+        --header-height-compact: 5.15rem;
+        --phone-nav-gap: 0.28rem;
+        --phone-control-height: 2.32rem;
       }
 
       html[data-view-mode="phone"] .header-row {
         grid-template-columns: repeat(4, minmax(0, 1fr));
         align-items: start;
         column-gap: var(--phone-nav-gap);
-        row-gap: 0.62rem;
-        padding: 0.72rem 0 0.94rem;
+        row-gap: 0.42rem;
+        padding: 0.48rem 0 0.58rem;
       }
 
       html[data-view-mode="phone"] .site-name {
-        grid-column: 1 / span 3;
+        grid-column: 1 / span 2;
         align-self: start;
         min-height: var(--phone-control-height);
       }
 
       html[data-view-mode="phone"] .brand-lockup {
         justify-content: flex-start;
-        gap: 0;
+        gap: 0.48rem;
         height: var(--phone-control-height);
       }
 
@@ -1699,7 +1878,18 @@
       }
 
       html[data-view-mode="phone"] .brand-wordmark {
-        display: none;
+        display: grid;
+      }
+
+      html[data-view-mode="phone"] .brand-name {
+        font-size: 0.78rem;
+        letter-spacing: 0;
+      }
+
+      html[data-view-mode="phone"] .brand-support {
+        display: block;
+        font-size: 0.48rem;
+        letter-spacing: 0;
       }
 
       html[data-view-mode="phone"] .header-actions-shell {
@@ -1707,8 +1897,11 @@
       }
 
       html[data-view-mode="phone"] .header-tools {
-        grid-column: 4;
-        justify-self: stretch;
+        grid-column: 3 / -1;
+        width: 100%;
+        max-width: 8.4rem;
+        min-width: 0;
+        justify-self: start;
         align-self: start;
       }
 
@@ -1724,19 +1917,25 @@
 
       html[data-view-mode="phone"] .segmented-control {
         width: 100%;
+        max-width: 100%;
         padding: 0.18rem;
       }
 
       html[data-view-mode="phone"] .control-button {
         flex: 1 1 0;
+        min-width: 0;
         min-height: var(--phone-control-height);
         padding: 0.42rem 0;
-        font-size: 0.72rem;
+        font-size: 0.7rem;
       }
 
       html[data-view-mode="phone"] .site-nav {
         grid-column: 1 / -1;
         display: grid;
+        width: 100%;
+        max-width: 22.35rem;
+        min-width: 0;
+        justify-self: start;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: var(--phone-nav-gap);
         overflow: visible;
@@ -1744,11 +1943,12 @@
       }
 
       html[data-view-mode="phone"] .site-nav a {
+        min-width: 0;
         min-height: var(--phone-control-height);
-        padding: 0.58rem 0.2rem;
-        border: 1px solid rgba(23, 61, 71, 0.12);
-        background: rgba(255, 255, 255, 0.74);
-        font-size: 0.72rem;
+        padding: 0.48rem 0.12rem;
+        border: 1px solid rgba(47, 75, 85, 0.14);
+        background: rgba(251, 250, 247, 0.72);
+        font-size: 0.68rem;
         line-height: 1.14;
         text-align: center;
       }
@@ -1760,37 +1960,55 @@
 
       html[data-view-mode="phone"] .hero-stage {
         grid-template-areas:
-          "aside"
-          "main";
+          "main"
+          "portrait"
+          "credentials";
         min-height: auto;
-        gap: 0.95rem;
-        padding: 0.98rem;
+        gap: 0.78rem;
+        padding: 0.72rem;
       }
 
       html[data-view-mode="phone"] .hero-main {
         grid-area: main;
+        width: 100%;
+        max-width: 100%;
         gap: 0.88rem;
+        justify-self: stretch;
       }
 
       html[data-view-mode="phone"] .hero-aside {
-        grid-area: aside;
-        grid-template-columns: minmax(8.6rem, 38vw) minmax(0, 1fr);
+        grid-area: portrait;
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr;
         grid-template-areas:
-          "photo profile"
-          "practice practice";
-        gap: 0.82rem;
+          "photo"
+          "details";
+        gap: 0.66rem;
         align-items: stretch;
+        padding: 0.58rem;
       }
 
       html[data-view-mode="phone"] .hero-main h1 {
-        max-width: none;
-        font-size: clamp(2.7rem, 10.4vw, 4rem);
+        max-width: min(100%, 7.8ch);
+        font-size: clamp(2.45rem, 10.2vw, 3.42rem);
+        line-height: 0.9;
       }
 
       html[data-view-mode="phone"] .hero-role {
-        max-width: none;
+        max-width: min(100%, 20.5rem);
         font-size: 1rem;
         line-height: 1.5;
+      }
+
+      html[data-view-mode="phone"] .hero-identity,
+      html[data-view-mode="phone"] .hero-actions,
+      html[data-view-mode="phone"] .hero-evidence,
+      html[data-view-mode="phone"] .hero-detail-stack,
+      html[data-view-mode="phone"] .hero-profile,
+      html[data-view-mode="phone"] .hero-practice {
+        width: 100%;
+        max-width: 100%;
       }
 
       html[data-view-mode="phone"] .hero-intro p,
@@ -1803,8 +2021,12 @@
       }
 
       html[data-view-mode="phone"] .signal-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: 1fr;
         gap: 0.55rem;
+      }
+
+      html[data-view-mode="phone"] .hero-evidence {
+        grid-area: credentials;
       }
 
       html[data-view-mode="phone"] .signal-item--wide {
@@ -1820,6 +2042,7 @@
 
       html[data-view-mode="phone"] .signal-item {
         gap: 0.32rem;
+        min-height: auto;
         padding: 0.84rem 0.88rem;
       }
 
@@ -1838,20 +2061,20 @@
 
       html[data-view-mode="phone"] .headshot-shell {
         grid-area: photo;
-        width: 100%;
+        width: min(100%, 17.5rem);
         padding: 0.42rem;
         align-self: start;
+        justify-self: center;
       }
 
       html[data-view-mode="phone"] .headshot-stage {
         width: 100%;
-        aspect-ratio: 4 / 5.9;
-        max-height: 19rem;
-        background-position: center, 78% 16%;
+        aspect-ratio: 4 / 5;
+        max-height: 18.25rem;
+        background-position: center, center 16%;
       }
 
       html[data-view-mode="phone"] .hero-profile {
-        grid-area: profile;
         padding: 0.92rem 0.96rem;
       }
 
@@ -1870,8 +2093,12 @@
       }
 
       html[data-view-mode="phone"] .hero-practice {
-        grid-area: practice;
         padding: 0.92rem 0.96rem;
+      }
+
+      html[data-view-mode="phone"] .hero-detail-stack {
+        grid-area: details;
+        gap: 0.56rem;
       }
 
       html[data-view-mode="phone"] .hero-practice .detail-list {
@@ -1892,13 +2119,16 @@
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 0.62rem;
+        max-width: min(100%, 21.5rem);
       }
 
       html[data-view-mode="phone"] .hero-actions .button,
       html[data-view-mode="phone"] .hero-actions .text-link {
+        min-width: 0;
         width: 100%;
         min-height: 3.05rem;
         padding: 0.82rem 0.9rem;
+        white-space: normal;
       }
 
       html[data-view-mode="phone"] .section-heading h2 {
@@ -1925,17 +2155,20 @@
       }
 
       html[data-view-mode="phone"] .current-layout {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-areas:
-          "intro intro"
-          "pursuits pursuits"
-          "presence learning";
+        grid-template-columns: 1fr;
         gap: 0.82rem;
       }
 
+      html[data-view-mode="phone"] .current-secondary {
+        grid-template-columns: 1fr;
+      }
+
+      html[data-view-mode="phone"] .current-card--pursuits {
+        min-height: 0;
+      }
+
       html[data-view-mode="phone"] .panel {
-        box-shadow: 0 10px 20px rgba(16, 42, 51, 0.04);
-        backdrop-filter: blur(10px) saturate(1.02);
+        box-shadow: var(--shadow-tight);
       }
 
       html[data-view-mode="phone"] .section-subtitle {
@@ -2014,7 +2247,7 @@
       }
 
       html[data-view-mode="phone"] main section {
-        scroll-margin-top: 11.2rem;
+        scroll-margin-top: calc(var(--site-header-offset) + 0.9rem);
       }
 
       html[data-view-mode="phone"] .footer-row {
@@ -2024,7 +2257,7 @@
       }
 
       html[data-view-mode="phone"] .footer-summary {
-        max-width: min(18rem, calc(100% - 5.3rem));
+        max-width: min(18rem, calc(100% - 6.8rem));
       }
 
       html[data-view-mode="phone"] .footer-note {
@@ -2032,7 +2265,7 @@
       }
 
       html[data-view-mode="phone"] .footer-logo {
-        width: clamp(4.5rem, 24vw, 5.4rem);
+        width: clamp(5.6rem, 28vw, 6.5rem);
       }
 
       html[data-view-mode="phone"] .current-card,
@@ -2052,7 +2285,7 @@
 
       @media (min-aspect-ratio: 16 / 10) and (min-width: 980px) {
         .hero-stage {
-          min-height: clamp(23rem, 54vh, 28rem);
+          min-height: clamp(31rem, 60vh, 40rem);
         }
       }
 
@@ -2061,8 +2294,7 @@
           grid-template-columns: 1fr;
           grid-template-areas:
             "photo"
-            "profile"
-            "practice";
+            "details";
         }
 
         html[data-view-mode="phone"] .hero-actions {
@@ -2071,11 +2303,10 @@
 
         html[data-view-mode="phone"] .current-layout {
           grid-template-columns: 1fr;
-          grid-template-areas:
-            "intro"
-            "pursuits"
-            "presence"
-            "learning";
+        }
+
+        html[data-view-mode="phone"] .current-secondary {
+          grid-template-columns: 1fr;
         }
       }
 
@@ -2098,6 +2329,12 @@
         .reveal.is-visible,
         .button,
         .text-link,
+        .skip-link,
+        .site-header,
+        .header-row,
+        .header-actions-shell,
+        .brand-mark,
+        .control-button,
         .site-nav a {
           transition: none;
           transform: none;
@@ -2122,7 +2359,6 @@
           effectiveViewMode: "desktop",
           page: getCurrentPage()
         };
-        var teardownHeaderAutoHide = null;
         var teardownCurrentSectionObserver = null;
 
         var CONTENT = {
@@ -2131,21 +2367,21 @@
               siteName: "Shaoting He (Julius)",
               title: "Shaoting He (Julius) | Registered Nurse",
               description:
-                "Professional headquarters for Shaoting He (Julius), a Registered Nurse based in Toronto with ICU, internal medicine, geriatric care, and bilingual clinical experience.",
+                "Clinical background, current focus, senior-health perspective, and professional contact for Shaoting He (Julius), a Registered Nurse based in Toronto.",
               ogTitle: "Shaoting He (Julius) | Registered Nurse",
               ogDescription:
-                "ICU, internal medicine, geriatric care, current work, and contact for Shaoting He (Julius), Registered Nurse.",
+                "Clinical background, current focus, senior-health perspective, and professional contact for Shaoting He (Julius), Registered Nurse.",
               pageMeta: {
                 pursuits: {
-                  title: "Shaoting He (Julius) | The Pursuits",
-                  description: "This page outlines the work currently receiving the most attention, including the main build and the supporting lines of effort around it."
+                  title: "Shaoting He (Julius) | Professional Direction",
+                  description: "This page outlines the professional direction currently receiving the most attention, including full-time RN search and technical systems practice."
                 },
                 presence: {
                   title: "Shaoting He (Julius) | My Presence",
                   description: "This page will gather Shaoting He (Julius)’s public-facing channels over time, including writing, interviews, talks, and other selected appearances."
                 },
                 learning: {
-                  title: "Shaoting He (Julius) | Forever Learning",
+                  title: "Shaoting He (Julius) | Current Study",
                   description: "This page captures the fields and questions Shaoting He (Julius) is actively studying to deepen judgment, domain understanding, and long-term work."
                 }
               }
@@ -2166,19 +2402,19 @@
               },
               primaryNavLabel: "Primary",
               nav: {
-                current: "What He Is Doing?",
+                current: "Current Focus",
                 icu: "ICU",
                 ltc: "Senior Health",
                 contact: "Contact"
               },
               navCompact: {
-                current: "Current",
+                current: "Focus",
                 icu: "ICU",
                 ltc: "Senior",
                 contact: "Contact"
               },
               openPage: "Open page",
-              backToCurrent: "Back to What He Is Doing?"
+              backToCurrent: "Back to Current Focus"
             },
             hero: {
               eyebrow: "Registered Nurse | Toronto",
@@ -2227,28 +2463,28 @@
               ]
             },
             current: {
-              eyebrow: "NOW",
-              title: "What He Is Doing?",
-              summary: "A concise view of current focus, public links, and ongoing study.",
+              eyebrow: "Current",
+              title: "Current Focus",
+              summary: "Focused work, selected public links, and the study threads shaping the next chapter.",
               pursuits: {
-                title: "The Pursuits",
-                lead: "Two active tracks: the full-time RN search and a smaller run of tool-building experiments.",
+                title: "Professional Direction",
+                lead: "Two current tracks: the full-time RN search and a disciplined technical systems practice.",
                 buttons: [
                   {
-                    label: "Main Quest",
+                    label: "Full-Time RN Search",
                     href: "main-quest.html",
-                    toneClass: "stack-link--quest-primary"
+                    toneClass: "stack-link--primary-direction"
                   },
                   {
-                    label: "Side Quest",
+                    label: "Technical Systems Practice",
                     href: "side-quest.html",
-                    toneClass: "stack-link--quest-secondary"
+                    toneClass: "stack-link--secondary-practice"
                   }
                 ]
               },
               presence: {
-                title: "My Presence",
-                lead: "A small public footprint, kept useful.",
+                title: "Professional Presence",
+                lead: "A quiet public footprint, kept useful.",
                 links: [
                   {
                     label: "Instagram",
@@ -2261,7 +2497,7 @@
                 ]
               },
               learning: {
-                title: "Forever Learning",
+                title: "Current Study",
                 lead: "Hemodynamics, older-adult risk patterns, and documentation discipline remain central.",
                 items: [
                   "InterRAI-CHA on CIHI",
@@ -2351,7 +2587,7 @@
             contact: {
               eyebrow: "",
               title: "Professional Contact",
-              summary: "Always looking for new opportunities, and new friends",
+              summary: "Open to relevant nursing opportunities and thoughtful professional connection.",
               cardText: "Based in Toronto. For relevant nursing opportunities, introductions, or professional correspondence, email is the clearest way to reach me.",
               location: "Toronto, Ontario",
               email: "shaotinghe2037@gmail.com",
@@ -2370,20 +2606,20 @@
             meta: {
               siteName: "何少霆",
               title: "何少霆 | 注册护士",
-              description: "何少霆的专业主页：现居多伦多，具备重症监护、内科、老年照护及双语临床沟通经验。",
+              description: "何少霆的临床背景、当前重点、老年健康方向与专业联系信息；现居多伦多，为注册护士。",
               ogTitle: "何少霆 | 注册护士",
-              ogDescription: "重症监护、内科、老年照护、当前动态与联系信息。",
+              ogDescription: "何少霆的临床背景、当前重点、老年健康方向与专业联系信息。",
               pageMeta: {
                 pursuits: {
-                  title: "何少霆 | 当前重点",
-                  description: "此页概述何少霆当前最主要投入的工作，包括核心项目，以及围绕其展开的相关方向。"
+                  title: "何少霆 | 专业方向",
+                  description: "此页概述何少霆当前最主要投入的专业方向，包括全职 RN 求职与技术系统实践。"
                 },
                 presence: {
                   title: "何少霆 | 公开动态",
                   description: "此页将逐步汇集何少霆对外公开的渠道，包括写作、访谈、演讲及其他精选公开内容。"
                 },
                 learning: {
-                  title: "何少霆 | 持续学习",
+                  title: "何少霆 | 当前学习",
                   description: "此页记录何少霆当前持续深入的学习方向与问题意识，以深化判断力、领域理解及长期工作能力。"
                 }
               }
@@ -2404,19 +2640,19 @@
               },
               primaryNavLabel: "主导航",
               nav: {
-                current: "他现做何事？",
+                current: "当前重点",
                 icu: "重症监护",
                 ltc: "老年健康",
                 contact: "联系"
               },
               navCompact: {
-                current: "当前",
+                current: "重点",
                 icu: "重症",
                 ltc: "老年",
                 contact: "联系"
               },
               openPage: "查看页面",
-              backToCurrent: "返回 他现做何事？"
+              backToCurrent: "返回当前重点"
             },
             hero: {
               eyebrow: "注册护士 | 多伦多",
@@ -2466,27 +2702,27 @@
             },
             current: {
               eyebrow: "当前",
-              title: "他现做何事？",
-              summary: "当前重点、公开链接，以及持续学习方向的简要说明。",
+              title: "当前重点",
+              summary: "当前投入、精选公开入口，以及塑造下一阶段工作的学习线索。",
               pursuits: {
-                title: "当前重点",
-                lead: "目前有两条并行主线：寻找全职 RN 岗位，以及继续做一些小型工具实验。",
+                title: "专业方向",
+                lead: "目前有两条并行方向：寻找全职 RN 岗位，以及持续进行有纪律的技术系统实践。",
                 buttons: [
                   {
-                    label: "Main Quest",
+                    label: "全职 RN 求职",
                     href: "main-quest.html",
-                    toneClass: "stack-link--quest-primary"
+                    toneClass: "stack-link--primary-direction"
                   },
                   {
-                    label: "Side Quest",
+                    label: "技术系统实践",
                     href: "side-quest.html",
-                    toneClass: "stack-link--quest-secondary"
+                    toneClass: "stack-link--secondary-practice"
                   }
                 ]
               },
               presence: {
                 title: "公开动态",
-                lead: "公开呈现保持克制，只保留真正有用的入口。",
+                lead: "公开呈现保持安静克制，只保留真正有用的入口。",
                 links: [
                   {
                     label: "Instagram",
@@ -2499,7 +2735,7 @@
                 ]
               },
               learning: {
-                title: "持续学习",
+                title: "当前学习",
                 lead: "血流动力学、老年照护风险模式与记录纪律，仍是当前学习重点。",
                 items: [
                   "InterRAI-CHA on CIHI",
@@ -2588,7 +2824,7 @@
             contact: {
               eyebrow: "",
               title: "专业联系",
-              summary: "一直在寻找新的机会，也在认识新的朋友。",
+              summary: "欢迎相关护理机会、引荐与真诚的专业交流。",
               cardText: "现居加拿大安大略省多伦多。如有相关护理机会、引荐或专业交流，电子邮件是最直接的联系方式。",
               location: "加拿大安大略省多伦多",
               email: "shaotinghe2037@gmail.com",
@@ -2682,6 +2918,8 @@
           setMetaTag('meta[property="og:title"]', pageMeta ? title : content.meta.ogTitle);
           setMetaTag('meta[property="og:description"]', pageMeta ? description : content.meta.ogDescription);
           setMetaTag('meta[property="og:site_name"]', content.meta.siteName);
+          setMetaTag('meta[name="twitter:title"]', pageMeta ? title : content.meta.ogTitle);
+          setMetaTag('meta[name="twitter:description"]', pageMeta ? description : content.meta.ogDescription);
         }
 
         function setMetaTag(selector, value) {
@@ -2744,21 +2982,21 @@
           var primaryDetails = isPhoneSplit ? details.slice(0, 2) : details;
           var practiceDetails = isPhoneSplit ? details.slice(2) : [];
           var profileHtml =
-            '<div class="hero-profile panel" aria-label="' +
+            '<div class="hero-detail-stack"><div class="hero-profile panel" aria-label="' +
             escapeHtml(content.hero.profileAriaLabel) +
             '"><div class="detail-list">' +
             renderDetailList(primaryDetails) +
             '<\/div><\/div>';
 
           if (!practiceDetails.length) {
-            return profileHtml;
+            return profileHtml + "<\/div>";
           }
 
           return (
             profileHtml +
             '<div class="hero-practice panel"><div class="detail-list">' +
             renderDetailList(practiceDetails) +
-            '<\/div><\/div>'
+            '<\/div><\/div><\/div>'
           );
         }
 
@@ -2941,7 +3179,7 @@
         }
 
         function getBrandSupportText() {
-          return state.language === "zh-Hans" ? "注册护士" : "RN";
+          return state.language === "zh-Hans" ? "注册护士" : "Registered Nurse";
         }
 
         function getBrandShortText(content) {
@@ -2950,6 +3188,14 @@
           }
 
           return "Shaoting He";
+        }
+
+        function getHeroIdentityText() {
+          return state.language === "zh-Hans" ? "临床实践" : "Clinical Practice";
+        }
+
+        function getHeroCredentialsLabel() {
+          return state.language === "zh-Hans" ? "专业资质" : "Professional credentials";
         }
 
         function renderSelectiveAccent(text) {
@@ -2965,12 +3211,12 @@
             return '<span class="name-accent">何<\/span>少霆';
           }
 
-          if (text === "What He Is Doing?") {
-            return 'What <span class="name-accent">He<\/span> Is Doing?';
+          if (text === "Current Focus") {
+            return 'Current <span class="name-accent">Focus<\/span>';
           }
 
-          if (text === "他现做何事？") {
-            return '他现做<span class="name-accent">何<\/span>事？';
+          if (text === "当前重点") {
+            return '<span class="name-accent">当前<\/span>重点';
           }
 
           return escapeHtml(text);
@@ -2978,7 +3224,7 @@
 
         function renderBrandLockup(content) {
           return (
-            '<span class="brand-lockup"><span class="brand-mark" aria-hidden="true"><img class="brand-logo" src="logo.png?v=20260314" alt="" />' +
+            '<span class="brand-lockup"><span class="brand-mark" aria-hidden="true"><img class="brand-logo" src="logo-web.png?v=20260529" alt="" width="768" height="512" decoding="async" />' +
             '<\/span><span class="brand-wordmark"><span class="brand-name brand-name--full">' +
             renderSelectiveAccent(content.meta.siteName) +
             '<\/span><span class="brand-name brand-name--short">' +
@@ -3088,7 +3334,9 @@
           var intro = getHeroIntro(content);
 
           return (
-            '<section class="hero photo-backed" id="top"><div class="container"><div class="hero-stage reveal"><div class="hero-main"><span class="eyebrow">' +
+            '<section class="hero photo-backed" id="top"><div class="container"><div class="hero-stage reveal"><div class="hero-main"><div class="hero-identity" aria-hidden="true"><img src="logo-web.png?v=20260529" alt="" width="768" height="512" decoding="async" /><span>' +
+            escapeHtml(getHeroIdentityText()) +
+            '<\/span><\/div><span class="eyebrow">' +
             escapeHtml(content.hero.eyebrow) +
             '<\/span><h1>' +
             renderSelectiveAccent(content.hero.title) +
@@ -3096,9 +3344,7 @@
             escapeHtml(content.hero.role) +
             '<\/p>' +
             (intro ? '<div class="hero-intro"><p>' + escapeHtml(intro) + '<\/p><\/div>' : "") +
-            '<div class="hero-evidence">' +
-            renderSignals(content.hero.signals) +
-            '<\/div><div class="hero-actions"><a class="button" href="' +
+            '<div class="hero-actions"><a class="button" href="' +
             escapeHtml(content.hero.actions[0].href) +
             '">' +
             escapeHtml(content.hero.actions[0].label) +
@@ -3112,7 +3358,11 @@
             escapeHtml(content.hero.portraitAriaLabel) +
             '"><\/div><\/div>' +
             renderHeroProfilePanels(content) +
-            '<\/aside><\/div><\/div><\/section>'
+            '<\/aside><div class="hero-evidence" aria-label="' +
+            escapeHtml(getHeroCredentialsLabel()) +
+            '">' +
+            renderSignals(content.hero.signals) +
+            '<\/div><\/div><\/div><\/section>'
           );
         }
 
@@ -3124,13 +3374,13 @@
             renderSelectiveAccent(content.current.title) +
             '<\/h2><p>' +
             escapeHtml(content.current.summary) +
-            '<\/p><\/div><article class="current-card current-card--pursuits panel reveal"><h3>' +
+            '<\/p><\/div><div class="current-board"><article class="current-card current-card--pursuits panel reveal"><h3>' +
             escapeHtml(content.current.pursuits.title) +
             '<\/h3><p class="current-card-text">' +
             escapeHtml(content.current.pursuits.lead) +
             '<\/p>' +
             renderStackedLinks(content.current.pursuits.buttons) +
-            '<\/article><article class="current-card current-card--presence panel reveal"><h3>' +
+            '<\/article><div class="current-secondary"><article class="current-card current-card--presence panel reveal"><h3>' +
             escapeHtml(content.current.presence.title) +
             '<\/h3><p class="current-card-text">' +
             escapeHtml(content.current.presence.lead) +
@@ -3142,7 +3392,7 @@
             escapeHtml(content.current.learning.lead) +
             '<\/p>' +
             renderCurrentList(content.current.learning.items) +
-            '<\/article><\/div><\/section>'
+            '<\/article><\/div><\/div><\/div><\/section>'
           );
         }
 
@@ -3250,7 +3500,7 @@
             escapeHtml(content.footer.text) +
             '<\/p><p class="footer-note">' +
             escapeHtml(content.footer.copyright) +
-            '<\/p><img class="footer-logo" src="logoB.png?v=20260314" alt="" /><\/div><\/footer>'
+            '<\/p><img class="footer-logo" src="logoB-web.png?v=20260529" alt="" width="768" height="512" loading="lazy" decoding="async" /><\/div><\/footer>'
           );
         }
 
@@ -3288,7 +3538,6 @@
             renderFooter(content) +
             '<\/div>';
 
-          initHeaderAutoHide();
           initRevealObserver();
 
           if (shouldSyncHash) {
@@ -3372,22 +3621,13 @@
             });
           }
 
-          function setActiveHash(nextId) {
-            var nextHash = "#" + nextId;
-
-            if (window.location.hash === nextHash) {
-              return;
-            }
-
-            window.history.replaceState(null, "", nextHash);
-          }
-
           function updateActiveSection() {
             ticking = false;
 
             var headerBottom = header ? Math.max(header.getBoundingClientRect().bottom, 0) : 0;
             var focusY = headerBottom + Math.min(window.innerHeight * 0.18, 120);
             var nextId = "top";
+            var pageBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
 
             sections.forEach(function (section) {
               if (section.getBoundingClientRect().top <= focusY) {
@@ -3395,13 +3635,16 @@
               }
             });
 
+            if (pageBottom) {
+              nextId = sections[sections.length - 1].id;
+            }
+
             if (activeId === nextId) {
               return;
             }
 
             activeId = nextId;
             setActiveLink(nextId);
-            setActiveHash(nextId);
           }
 
           function requestUpdate() {
@@ -3437,157 +3680,6 @@
           window.requestAnimationFrame(function () {
             target.scrollIntoView();
           });
-        }
-
-        function initHeaderAutoHide() {
-          if (typeof teardownHeaderAutoHide === "function") {
-            teardownHeaderAutoHide();
-            teardownHeaderAutoHide = null;
-          }
-
-          var header = document.querySelector(".site-header");
-
-          if (!header) {
-            return;
-          }
-
-          var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-          var lastScrollY = window.scrollY;
-          var hidden = false;
-          var compact = false;
-          var focusWithin = false;
-          var ticking = false;
-          var upwardTravel = 0;
-          var downwardTravel = 0;
-
-          header.classList.remove("is-hidden");
-          header.classList.remove("is-compact");
-
-          function setCompact(nextCompact) {
-            if (compact === nextCompact) {
-              return;
-            }
-
-            compact = nextCompact;
-            header.classList.toggle("is-compact", compact);
-          }
-
-          if (reducedMotion.matches) {
-            setCompact(window.scrollY > 40);
-            return;
-          }
-
-          function setHidden(nextHidden) {
-            if (hidden === nextHidden) {
-              return;
-            }
-
-            hidden = nextHidden;
-            header.classList.toggle("is-hidden", hidden);
-            upwardTravel = 0;
-            downwardTravel = 0;
-          }
-
-          function updateHeaderVisibility() {
-            ticking = false;
-
-            var currentY = window.scrollY;
-            var delta = currentY - lastScrollY;
-            lastScrollY = currentY;
-
-            if (focusWithin || currentY <= 6) {
-              setCompact(false);
-              setHidden(false);
-              return;
-            }
-
-            if (state.effectiveViewMode === "phone") {
-              setCompact(currentY > 24);
-
-              if (Math.abs(delta) < 3) {
-                return;
-              }
-
-              if (delta > 0) {
-                downwardTravel += delta;
-                upwardTravel = 0;
-              } else {
-                upwardTravel += Math.abs(delta);
-                downwardTravel = 0;
-              }
-
-              if (!hidden && delta > 0 && currentY > 72 && downwardTravel > 22) {
-                setHidden(true);
-                return;
-              }
-
-              if (hidden && delta < 0 && upwardTravel > 10) {
-                setHidden(false);
-              }
-
-              return;
-            }
-
-            setCompact(currentY > 40);
-
-            if (Math.abs(delta) < 4) {
-              return;
-            }
-
-            if (delta > 0) {
-              downwardTravel += delta;
-              upwardTravel = 0;
-            } else {
-              upwardTravel += Math.abs(delta);
-              downwardTravel = 0;
-            }
-
-            if (!hidden && delta > 0 && currentY > 96 && downwardTravel > 34) {
-              setHidden(true);
-              return;
-            }
-
-            if (hidden && delta < 0 && upwardTravel > 16) {
-              setHidden(false);
-            }
-          }
-
-          function onScroll() {
-            if (ticking) {
-              return;
-            }
-
-            ticking = true;
-            window.requestAnimationFrame(updateHeaderVisibility);
-          }
-
-          function onFocusIn() {
-            focusWithin = true;
-            setCompact(false);
-            setHidden(false);
-          }
-
-          function onFocusOut() {
-            window.requestAnimationFrame(function () {
-              focusWithin = header.contains(document.activeElement);
-
-              if (!focusWithin) {
-                onScroll();
-              }
-            });
-          }
-
-          window.addEventListener("scroll", onScroll, { passive: true });
-          header.addEventListener("focusin", onFocusIn);
-          header.addEventListener("focusout", onFocusOut);
-
-          teardownHeaderAutoHide = function () {
-            window.removeEventListener("scroll", onScroll);
-            header.removeEventListener("focusin", onFocusIn);
-            header.removeEventListener("focusout", onFocusOut);
-            header.classList.remove("is-hidden");
-            header.classList.remove("is-compact");
-          };
         }
 
         function bindEvents() {
