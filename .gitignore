@@ -1,0 +1,11 @@
+# macOS filesystem clutter
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Local editor/workspace clutter
+.vscode/
+.idea/
+*.swp
+*~

@@ -299,9 +299,7 @@ h2 {
   align-self: center;
   flex: 0 0 auto;
   object-fit: contain;
-  /* Future asset work: replace this with a dedicated light footer logo. */
-  filter: invert(1) brightness(1.8) saturate(0.55);
-  opacity: 0.82;
+  opacity: 0.88;
 }
 
 .site-footer__summary {
