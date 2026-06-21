@@ -10,7 +10,7 @@ This site is a static GitHub Pages style website for `shaotinghe.com`.
 - Simplified Chinese homepage content lives in `CONTENT["zh-Hans"]`.
 - The linked note pages are `main-quest.html` and `side-quest.html`.
 - Shared note page styling lives in `notes.css`.
-- Current V2 homepage sections are:
+- Current V3 homepage sections are:
   - `#top` Hero / Clinical Identity
   - `#practice` Practice Domains
   - `#timeline` Clinical Timeline
@@ -20,9 +20,9 @@ This site is a static GitHub Pages style website for `shaotinghe.com`.
   - `#systems` Technical / Systems Practice
   - `#contact` Contact
 
-## Resume-Derived Content Map
+## Public-Safe Content Map
 
-The V2 site uses public-safe resume facts only. It is a clinical dossier, not a raw resume archive.
+The V3 site uses public-safe professional facts only. It is a clinical dossier, not a raw resume archive.
 
 Public-safe facts currently integrated:
 
@@ -85,8 +85,8 @@ Do not update those files for normal public-site content changes unless the CMS/
 
 ## Design Direction
 
-- Current visual direction: quiet clinical editorial dossier with controlled depth.
-- The homepage should feel authored, clinical, and editorial rather than like a resume dashboard.
+- Current visual direction: Fresh Clinical Signal with controlled clinical depth.
+- The homepage should feel authored, clinical, young, and editorial rather than like a resume dashboard.
 - Logo usage is intentionally reduced: text identity in the header, favicon / social assets in metadata, and one quiet footer seal.
 - Avoid decorative repeated logos, gamified labels, glass effects, and scattered dashboard cards.
 
@@ -94,7 +94,7 @@ Do not update those files for normal public-site content changes unless the CMS/
 
 - Keep the original high-resolution source files: `logo.png`, `logoB.png`, and `portrait-side-profile.png`.
 - Active web references use optimized derivatives where needed, especially `portrait-side-profile-web.jpg` and `footer-logo-light.png`.
-- `logo-web.png` and `logoB-web.png` remain available brand assets but are not required in the V2 header or hero.
+- `logo-web.png` and `logoB-web.png` remain available brand assets but are not required in the V3 header or hero.
 - Favicon and touch assets are `favicon-16x16.png`, `favicon-32x32.png`, and `apple-touch-icon.png`.
 - Social preview metadata uses `og-image.png`.
 - Homepage metadata lives in the `<head>` of `index.html`; note-page metadata lives in `main-quest.html` and `side-quest.html`.
