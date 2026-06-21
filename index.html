@@ -3,144 +3,107 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Shaoting He (Julius) | Registered Nurse</title>
+    <title>Shaoting He, RN | Fresh Clinical Signal</title>
     <meta
       name="description"
-      content="Clinical background, current focus, senior-health perspective, and professional contact for Shaoting He (Julius), a Registered Nurse based in Toronto."
+      content="Fresh Clinical Signal for Shaoting He, RN, focused on critical care judgment, senior-health continuity, bilingual clinical communication, and practical systems support."
     />
-    <meta
-      property="og:title"
-      content="Shaoting He (Julius) | Registered Nurse"
-    />
+    <meta property="og:title" content="Shaoting He, RN | Fresh Clinical Signal" />
     <meta
       property="og:description"
-      content="Clinical background, current focus, senior-health perspective, and professional contact for Shaoting He (Julius), Registered Nurse."
+      content="A clinical dossier for RN practice shaped by ICU monitoring, senior-health continuity, bilingual communication, and practical workflow systems."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Shaoting He (Julius)" />
+    <meta property="og:site_name" content="Shaoting He, RN" />
     <meta property="og:url" content="https://shaotinghe.com/" />
     <meta property="og:image" content="https://shaotinghe.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Shaoting He brand preview" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Shaoting He (Julius) | Registered Nurse"
-    />
+    <meta name="twitter:title" content="Shaoting He, RN | Fresh Clinical Signal" />
     <meta
       name="twitter:description"
-      content="Clinical background, current focus, senior-health perspective, and professional contact for Shaoting He (Julius), Registered Nurse."
+      content="A clinical dossier for Shaoting He, RN, focused on bedside clarity and practical clinical systems."
     />
     <meta name="twitter:image" content="https://shaotinghe.com/og-image.png" />
     <link rel="canonical" href="https://shaotinghe.com/" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <meta name="theme-color" content="#17262e" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="theme-color" content="#0e1b2d" />
     <meta name="color-scheme" content="light" />
     <meta name="robots" content="index, follow" />
-
-    <!--
-      Professional headquarters with inline content, routing, and responsive behavior.
-      Update copy, section structure, and subpage content in this file.
-    -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
       rel="stylesheet"
     />
 
     <style>
-      /* Design Tokens */
       :root {
-        --bg: #eef1ef;
-        --bg-cool: #e4ebe9;
-        --bg-soft: var(--bg-cool);
-        --bg-support: #d9e1df;
-        --surface: #f9faf7;
-        --surface-muted: #dce2df;
-        --surface-strong: #fffefa;
-        --ink: #101820;
-        --ink-soft: #22323b;
-        --text: var(--ink);
-        --heading: var(--ink);
-        --muted: #5b6c73;
-        --muted-2: #7a8588;
-        --accent: #2c4853;
-        --accent-strong: #111f27;
-        --accent-soft: #42696b;
-        --blue-black: #111f27;
-        --slate-blue: #2c4853;
-        --quiet-teal: #42696b;
-        --champagne: #b7a16d;
-        --champagne-soft: rgba(183, 161, 109, 0.12);
-        --sage: #738b84;
-        --line: rgba(16, 24, 32, 0.13);
-        --line-strong: rgba(16, 24, 32, 0.24);
-        --shadow: 0 24px 70px rgba(16, 24, 32, 0.12);
-        --shadow-soft: 0 14px 36px rgba(16, 24, 32, 0.075);
-        --shadow-tight: 0 8px 18px rgba(16, 24, 32, 0.08);
-        --container: 1180px;
-        --measure: 44rem;
-        --radius: 0.5rem;
-        --radius-large: 0.92rem;
-        --font-body: "Manrope", "Helvetica Neue", Arial, sans-serif;
-        --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
-        --section-space: clamp(4.6rem, 8vw, 7.6rem);
-        --site-header-offset: 4.75rem;
-        --hero-surface: var(--surface);
-        --hero-line: var(--line);
-        --hero-accent: var(--slate-blue);
-        --icu-bg: #e8ecea;
-        --icu-surface: #f8faf7;
-        --icu-surface-soft: #edf2f0;
-        --icu-line: rgba(47, 75, 85, 0.18);
-        --icu-accent: #354f5a;
-        --ltc-bg: #eef2f1;
-        --ltc-surface: #fbfaf7;
-        --ltc-surface-soft: #eef2f1;
-        --ltc-line: rgba(73, 108, 112, 0.18);
-        --ltc-accent: var(--quiet-teal);
-        --contact-bg: #17262e;
-        --contact-surface: rgba(251, 250, 247, 0.06);
-        --contact-line: rgba(251, 250, 247, 0.16);
-        --contact-text: #f3f1ec;
-        --contact-chip: #d2c390;
-        --portrait-image: url("portrait-side-profile-web.jpg");
-        --hero-photo: none;
-        --icu-photo: none;
-        --ltc-photo: none;
-        --contact-photo: none;
-        --hero-photo-opacity: 0;
-        --icu-photo-opacity: 0;
-        --ltc-photo-opacity: 0;
-        --contact-photo-opacity: 0;
+        --bg: #f7fafc;
+        --bg-2: #eaf2f8;
+        --paper: #ffffff;
+        --paper-2: #f1f6fa;
+        --ink: #0e1b2d;
+        --ink-2: #1f2f46;
+        --muted: #5b6a70;
+        --muted-2: #5e7fa3;
+        --line: rgba(16, 24, 32, 0.14);
+        --line-strong: rgba(16, 24, 32, 0.26);
+        --blue-black: #0e1b2d;
+        --slate: #35506b;
+        --teal: #5e7fa3;
+        --champagne: #5e7fa3;
+        --champagne-soft: rgba(94, 127, 163, 0.13);
+        --footer: #0e1b2d;
+        --white: #f7fafc;
+        --shadow: 0 26px 70px rgba(16, 24, 32, 0.12);
+        --shadow-soft: 0 14px 34px rgba(16, 24, 32, 0.08);
+        --container: 1200px;
+        --header-offset: 5.8rem;
+        --motion-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+        --motion-fast: 160ms;
+        --motion-med: 240ms;
+        --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+        --font-display: "Playfair Display", Georgia, serif;
       }
 
-      /* Base */
       * {
         box-sizing: border-box;
       }
 
       html {
-        overflow-x: hidden;
+        overflow-x: clip;
         scroll-behavior: smooth;
       }
 
       body {
         margin: 0;
-        overflow-x: hidden;
+        overflow-x: clip;
         background:
-          linear-gradient(180deg, rgba(222, 232, 230, 0.82) 0%, rgba(238, 241, 239, 0) 22rem),
-          linear-gradient(180deg, var(--bg) 0%, #e8ecea 52%, var(--bg-cool) 100%);
-        color: var(--text);
+          radial-gradient(circle at 72% 5%, rgba(94, 127, 163, 0.16), transparent 28rem),
+          linear-gradient(180deg, var(--bg) 0%, var(--paper) 48%, var(--bg-2) 100%);
+        color: var(--ink);
         font-family: var(--font-body);
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
-        transition: background-color 320ms ease;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        pointer-events: none;
+        background-image:
+          linear-gradient(rgba(14, 27, 45, 0.026) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(14, 27, 45, 0.022) 1px, transparent 1px);
+        background-size: 56px 56px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.64), transparent 72%);
       }
 
       img {
@@ -153,6 +116,31 @@
         text-decoration: none;
       }
 
+      button {
+        font: inherit;
+      }
+
+      :focus-visible {
+        outline: 3px solid rgba(66, 105, 107, 0.55);
+        outline-offset: 4px;
+      }
+
+      @supports selector(:focus-visible) {
+        :focus:not(:focus-visible) {
+          outline: none;
+        }
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        color: var(--ink);
+        font-family: var(--font-display);
+        font-weight: 600;
+        letter-spacing: 0;
+      }
+
       p {
         margin: 0;
         color: var(--muted);
@@ -160,352 +148,267 @@
         line-height: 1.74;
       }
 
-      p + p {
-        margin-top: 1rem;
-      }
-
-      h1,
-      h2,
-      h3 {
-        margin: 0;
-        color: var(--heading);
-        font-family: var(--font-display);
-        font-weight: 600;
-        letter-spacing: 0;
-      }
-
-      .name-accent {
-        color: var(--slate-blue);
-      }
-
-      ul {
+      ul,
+      ol {
         margin: 0;
         padding: 0;
         list-style: none;
       }
 
-      button,
-      input,
-      textarea,
-      select {
-        font: inherit;
-      }
-
-      :focus-visible {
-        outline: 3px solid var(--accent-soft);
-        outline-offset: 4px;
-      }
-
       .skip-link {
-        position: absolute;
-        top: -3rem;
+        position: fixed;
+        top: -4rem;
         left: 1rem;
-        z-index: 50;
-        padding: 0.8rem 1rem;
+        z-index: 100;
+        padding: 0.76rem 1rem;
         border: 1px solid var(--line-strong);
         border-radius: 999px;
-        background: var(--surface-strong);
-        color: var(--heading);
-        transition: top 180ms ease;
+        background: var(--paper);
+        color: var(--ink);
+        font-weight: 700;
+        transition: top 160ms ease;
       }
 
       .skip-link:focus {
         top: 1rem;
       }
 
-      /* Layout */
-      .page-shell {
-        min-height: 100vh;
-        padding-top: var(--site-header-offset);
-        position: relative;
-        isolation: isolate;
-      }
-
       .container {
         width: min(calc(100% - 2rem), var(--container));
+        max-width: 100%;
         margin: 0 auto;
       }
 
-      .header-row,
-      .site-name,
-      .brand-lockup,
-      .header-actions-shell,
-      .site-nav,
-      .hero-stage,
-      .hero-main,
-      .hero-aside,
-      .hero-evidence,
-      .current-board,
-      .current-secondary,
-      .work-layout,
-      .contact-card {
-        min-width: 0;
+      .page-shell {
+        min-height: 100vh;
+        padding-top: var(--header-offset);
+      }
+
+      .noscript-fallback {
+        display: grid;
+        gap: 1rem;
+        width: min(calc(100% - 2rem), 46rem);
+        margin: 4rem auto;
+        padding: 1.35rem;
+        border: 1px solid var(--line);
+        border-radius: 0.65rem;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .noscript-fallback h1 {
+        font-size: clamp(2.2rem, 8vw, 4rem);
+        line-height: 0.96;
+      }
+
+      .noscript-fallback a {
+        width: max-content;
       }
 
       .site-header {
-        --header-height-expanded: 4.75rem;
-        --header-current-height: var(--header-height-expanded);
-        --logo-height-ratio: 0.72;
         position: fixed;
-        top: 0;
-        left: 0;
+        top: 0.9rem;
         right: 0;
-        z-index: 20;
-        background: rgba(238, 241, 239, 0.96);
-        border-bottom: 1px solid var(--line);
-        box-shadow: 0 12px 32px rgba(16, 24, 32, 0.045);
-        transition:
-          background-color 180ms ease,
-          border-color 180ms ease;
+        left: 0;
+        z-index: 80;
+        background: transparent;
+        pointer-events: none;
       }
 
       .header-row {
         display: grid;
-        gap: 0.62rem;
+        grid-template-columns: minmax(13rem, 1fr) auto;
+        gap: 1rem;
         align-items: center;
-        min-height: var(--header-current-height);
-        padding: 0.48rem 0;
-        transition:
-          min-height 180ms ease,
-          padding 180ms ease,
-          gap 180ms ease;
-      }
-
-      .header-actions-shell {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.72rem;
-        align-items: center;
-        justify-content: flex-end;
-        align-self: center;
-        transition: gap 180ms ease;
-      }
-
-      .header-tools {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 0.4rem;
-        align-items: center;
-      }
-
-      .control-group {
-        display: grid;
-        gap: 0.35rem;
-      }
-
-      .control-label {
-        display: none;
-        color: var(--accent);
-        font-size: 0.58rem;
-        font-weight: 700;
-        letter-spacing: 0;
-        text-transform: uppercase;
-      }
-
-      .segmented-control {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.24rem;
-        padding: 0.18rem;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        background: rgba(251, 250, 247, 0.72);
-      }
-
-      .control-button {
-        min-height: 2.08rem;
-        padding: 0.4rem 0.66rem;
-        border: 0;
-        border-radius: 999px;
-        background: transparent;
-        color: var(--muted);
-        font-size: 0.82rem;
-        font-weight: 700;
-        white-space: nowrap;
-        cursor: pointer;
-        transition:
-          background-color 180ms ease,
-          color 180ms ease,
-          transform 180ms ease;
-      }
-
-      .control-button:hover,
-      .control-button:focus-visible,
-      .control-button.is-active {
-        color: var(--heading);
-        background: rgba(47, 75, 85, 0.1);
+        min-height: 3.65rem;
+        padding: 0 0.68rem 0 0.95rem;
+        border: 1px solid rgba(247, 250, 252, 0.08);
+        border-radius: 0.55rem;
+        background: rgba(14, 27, 45, 0.98);
+        box-shadow: 0 18px 44px rgba(14, 27, 45, 0.18);
+        backdrop-filter: blur(16px);
+        pointer-events: auto;
       }
 
       .site-name {
-        display: flex;
-        align-self: stretch;
+        display: inline-grid;
+        grid-template-columns: auto minmax(0, auto);
+        column-gap: 0.56rem;
         align-items: center;
-        min-height: 0;
-        color: var(--accent-strong);
-        line-height: 1;
-      }
-
-      .brand-lockup {
-        display: flex;
-        align-items: center;
-        gap: 0.82rem;
-        height: 100%;
-        min-height: 0;
-        min-width: 0;
+        min-height: 2.75rem;
+        width: max-content;
+        max-width: 100%;
       }
 
       .brand-mark {
-        display: flex;
-        align-items: center;
-        width: auto;
-        height: calc(var(--header-current-height) * var(--logo-height-ratio));
-        flex: 0 0 auto;
-        overflow: visible;
-        transition: height 180ms ease;
+        display: inline-grid;
+        place-items: center;
+        width: 2.08rem;
+        height: 2.08rem;
+        border: 1px solid rgba(247, 250, 252, 0.26);
+        border-radius: 50%;
+        color: var(--white);
+        font-family: var(--font-display);
+        font-size: 0.86rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        line-height: 1;
+        transition:
+          border-color var(--motion-fast) var(--motion-ease),
+          background-color var(--motion-fast) var(--motion-ease);
       }
 
-      .brand-logo {
-        display: block;
-        width: auto;
-        height: 100%;
-        max-height: none;
-        object-fit: contain;
-      }
-
-      .brand-wordmark {
+      .site-name-text {
         display: grid;
-        align-content: center;
-        gap: 0.08rem;
+        gap: 0.12rem;
         min-width: 0;
       }
 
-      .brand-name {
-        color: var(--accent-strong);
-        font-size: 1rem;
+      .wordmark {
+        color: var(--white);
+        font-family: var(--font-display);
+        font-size: 1.28rem;
         font-weight: 700;
-        letter-spacing: 0;
-        line-height: 1.1;
-        white-space: nowrap;
+        line-height: 1;
       }
 
-      .brand-name--short {
-        display: none;
-      }
-
-      .brand-support {
-        color: var(--slate-blue);
-        font-size: 0.62rem;
+      .wordmark-meta {
+        color: rgba(247, 250, 252, 0.62);
+        font-size: 0.69rem;
         font-weight: 700;
-        letter-spacing: 0;
-        line-height: 1.1;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        justify-content: end;
+        min-width: 0;
+        max-width: 100%;
+      }
+
+      .language-control {
+        display: inline-flex;
+        gap: 0.18rem;
+        flex: 0 0 auto;
+        padding: 0.18rem;
+        border: 1px solid rgba(247, 250, 252, 0.14);
+        border-radius: 999px;
+        background: rgba(247, 250, 252, 0.07);
+      }
+
+      .language-control button {
+        min-width: 2.55rem;
+        min-height: 2.75rem;
+        border: 0;
+        border-radius: 999px;
+        background: transparent;
+        color: rgba(247, 250, 252, 0.72);
+        cursor: pointer;
+        font-size: 0.77rem;
+        font-weight: 800;
         white-space: nowrap;
+        transition:
+          background-color var(--motion-fast) var(--motion-ease),
+          color var(--motion-fast) var(--motion-ease),
+          transform var(--motion-fast) var(--motion-ease);
+      }
+
+      .language-control button[aria-pressed="true"] {
+        background: var(--white);
+        color: var(--ink);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
       }
 
       .site-nav {
         display: flex;
-        gap: 0.48rem;
+        flex: 1 1 auto;
+        gap: 0.08rem;
+        align-items: center;
+        justify-content: end;
+        min-width: 0;
+        max-width: 100%;
         overflow-x: auto;
-        padding-bottom: 0.1rem;
-        scrollbar-width: none;
-      }
-
-      .site-nav::-webkit-scrollbar {
-        display: none;
+        overflow-y: hidden;
       }
 
       .site-nav a {
         display: inline-flex;
         align-items: center;
-        justify-content: center;
-        min-height: 2.24rem;
+        min-height: 2.75rem;
+        padding: 0.52rem 0.74rem;
         border-radius: 999px;
-        padding: 0.4rem 0.68rem;
-        color: var(--ink-soft);
-        font-size: 0.86rem;
-        font-weight: 700;
+        color: rgba(247, 250, 252, 0.78);
+        font-size: 0.78rem;
+        font-weight: 800;
         white-space: nowrap;
         transition:
-          color 180ms ease,
-          background-color 180ms ease,
-          border-color 180ms ease;
+          background-color var(--motion-fast) var(--motion-ease),
+          color var(--motion-fast) var(--motion-ease),
+          transform var(--motion-fast) var(--motion-ease);
       }
 
       .site-nav a:hover,
       .site-nav a:focus-visible,
       .site-nav a[aria-current="page"] {
-        color: var(--heading);
-        background: rgba(44, 72, 83, 0.1);
+        background: rgba(247, 250, 252, 0.1);
+        color: var(--white);
       }
 
       main section {
-        padding: var(--section-space) 0;
-        border-top: 1px solid var(--line);
         position: relative;
-        overflow: clip;
-        isolation: isolate;
-        scroll-margin-top: calc(var(--site-header-offset) + 1.25rem);
+        scroll-margin-top: calc(var(--header-offset) + 1.35rem);
       }
 
-      main section:first-child {
-        border-top: 0;
-      }
-
-      .section-grid,
-      .contact-grid {
-        display: grid;
-        gap: 2.2rem;
+      .section {
+        padding: clamp(4.5rem, 8vw, 7.4rem) 0;
+        border-top: 1px solid var(--line);
       }
 
       .section-heading {
         display: grid;
-        gap: 0.9rem;
-        align-content: start;
+        grid-template-columns: minmax(0, 0.86fr) minmax(18rem, 1.14fr);
+        gap: clamp(2rem, 5vw, 4.8rem);
+        align-items: start;
+        margin-bottom: clamp(2.2rem, 5vw, 4rem);
       }
 
-      .section-heading h2 {
-        max-width: 11ch;
-        font-size: clamp(2.55rem, 5vw, 4.8rem);
-        line-height: 0.92;
-      }
-
-      .section-heading p {
-        max-width: 32rem;
-      }
-
-      .section-content {
+      .section-heading > * {
         min-width: 0;
       }
 
-      .section-content > p {
-        max-width: var(--measure);
+      .section-heading h2 {
+        max-width: min(13ch, 100%);
+        font-size: clamp(2.75rem, 6vw, 5.45rem);
+        line-height: 0.9;
+        overflow-wrap: normal;
+        text-wrap: balance;
+      }
+
+      .section-heading p {
+        max-width: min(46rem, 100%);
+        padding-top: 0.25rem;
+        font-size: clamp(1.02rem, 1.35vw, 1.18rem);
       }
 
       .eyebrow {
         display: inline-flex;
+        gap: 0.58rem;
         align-items: center;
-        gap: 0.65rem;
-        color: var(--slate-blue);
+        color: var(--slate);
         font-size: 0.74rem;
-        font-weight: 700;
-        letter-spacing: 0;
+        font-weight: 800;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
       }
 
       .eyebrow::before {
         content: "";
-        width: 2.75rem;
+        width: 2.1rem;
         height: 1px;
-        background: currentColor;
-        opacity: 0.42;
-      }
-
-      /* Components */
-      .panel {
-        border: 1px solid var(--panel-line, var(--line));
-        border-radius: var(--radius);
-        background: var(--panel-surface, var(--surface));
-        box-shadow: var(--panel-shadow, var(--shadow-soft));
+        background: var(--champagne);
       }
 
       .button,
@@ -514,1052 +417,720 @@
         align-items: center;
         justify-content: center;
         min-height: 3rem;
-        padding: 0.85rem 1.3rem;
+        padding: 0.82rem 1.16rem;
         border: 1px solid var(--line-strong);
         border-radius: 999px;
-        font-size: 0.94rem;
-        font-weight: 600;
+        font-size: 0.92rem;
+        font-weight: 800;
         transition:
-          transform 180ms ease,
-          background-color 180ms ease,
-          border-color 180ms ease,
-          color 180ms ease,
-          box-shadow 180ms ease;
+          border-color var(--motion-fast) var(--motion-ease),
+          background-color var(--motion-fast) var(--motion-ease),
+          color var(--motion-fast) var(--motion-ease),
+          box-shadow var(--motion-fast) var(--motion-ease),
+          transform var(--motion-fast) var(--motion-ease);
       }
 
       .button {
         background: var(--blue-black);
         border-color: var(--blue-black);
-        color: var(--surface);
-      }
-
-      .button:hover,
-      .button:focus-visible {
-        transform: translateY(-1px);
-        background: var(--ink-soft);
-        box-shadow: 0 10px 20px rgba(18, 26, 32, 0.12);
+        color: var(--white);
       }
 
       .text-link {
-        background: transparent;
-        color: var(--heading);
+        background: rgba(247, 250, 252, 0.8);
+        color: var(--ink);
       }
 
-      .text-link:hover,
-      .text-link:focus-visible {
-        transform: translateY(-1px);
-        border-color: var(--line-strong);
-        background: rgba(18, 26, 32, 0.04);
-      }
-
-      .detail-list {
-        display: grid;
-        gap: 0.95rem;
-      }
-
-      .detail-item {
-        display: grid;
-        gap: 0.35rem;
-      }
-
-      .detail-label,
-      .status-label,
-      .proof-label,
-      .signal-label {
-        color: var(--slate-blue);
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 0;
-        text-transform: uppercase;
-      }
-
-      .detail-item p,
-      .signal-text {
-        color: var(--heading);
-        font-size: 0.96rem;
-        line-height: 1.62;
-      }
-
-      .signal-text {
-        display: grid;
-        gap: 0.18rem;
-      }
-
-      .signal-text strong {
-        font-weight: 700;
-        color: inherit;
-      }
-
-      .signal-line {
-        display: block;
-      }
-
-      /* Hero */
       .hero {
-        padding: clamp(1rem, 2.4vw, 2.1rem) 0 clamp(4rem, 7vw, 6.4rem);
-        background:
-          linear-gradient(180deg, rgba(222, 232, 230, 0.9) 0%, rgba(238, 241, 239, 0) 76%),
-          var(--bg);
+        padding: clamp(1rem, 2.4vw, 2.2rem) 0 clamp(4.6rem, 8vw, 6.8rem);
       }
 
-      .hero-stage {
-        position: relative;
+      .hero-frame {
         display: grid;
-        grid-template-areas:
-          "main"
-          "portrait"
-          "credentials";
-        gap: clamp(0.82rem, 1.8vw, 1.25rem);
+        grid-template-columns: minmax(0, 0.8fr) minmax(22rem, 1.08fr);
+        gap: 0;
         align-items: stretch;
-        min-height: clamp(32rem, 64vh, 42rem);
-        padding: clamp(0.88rem, 2.4vw, 1.85rem);
-        border: 1px solid rgba(16, 24, 32, 0.16);
-        border-radius: var(--radius-large);
-        background:
-          linear-gradient(135deg, rgba(250, 251, 248, 0.98) 0%, rgba(240, 244, 242, 0.96) 48%, rgba(226, 235, 233, 0.92) 100%);
-        box-shadow: var(--shadow);
         overflow: hidden;
+        min-height: clamp(31rem, 45vw, 37rem);
+        border: 1px solid rgba(14, 27, 45, 0.1);
+        border-radius: 0.65rem;
+        background:
+          linear-gradient(90deg, rgba(247, 250, 252, 0.98) 0%, rgba(247, 250, 252, 0.88) 44%, rgba(234, 242, 248, 0.52) 100%),
+          var(--paper);
+        box-shadow: var(--shadow);
       }
 
-      .hero-stage::before {
-        content: "";
-        position: absolute;
-        inset: clamp(0.55rem, 1vw, 0.8rem);
-        border: 1px solid rgba(16, 24, 32, 0.08);
-        border-radius: calc(var(--radius-large) - 0.32rem);
-        pointer-events: none;
-      }
-
-      .hero-main {
-        grid-area: main;
+      .hero-copy {
         display: grid;
-        gap: clamp(0.9rem, 1.7vw, 1.18rem);
         align-content: center;
-        max-width: 100%;
-        padding: clamp(0.18rem, 1vw, 0.82rem);
-        position: relative;
-        z-index: 1;
-      }
-
-      .hero-identity {
-        display: inline-flex;
-        align-items: center;
         gap: 1rem;
-        width: max-content;
-        max-width: 100%;
-        padding: 0.2rem 0 0.85rem;
-        border-bottom: 1px solid rgba(16, 24, 32, 0.16);
+        min-height: auto;
+        padding: clamp(1.7rem, 4.2vw, 3.65rem);
+        border: 0;
+        background: linear-gradient(90deg, rgba(247, 250, 252, 0.98), rgba(247, 250, 252, 0.74));
+        box-shadow: none;
       }
 
-      .hero-identity img {
-        width: clamp(5rem, 8vw, 6.8rem);
-        height: auto;
-        object-fit: contain;
-      }
-
-      .hero-identity span {
-        color: var(--slate-blue);
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 0;
-        line-height: 1.3;
-        text-transform: uppercase;
-      }
-
-      .hero-main h1 {
-        max-width: 9.8ch;
-        font-size: clamp(3.55rem, 7.7vw, 6.35rem);
-        line-height: 0.88;
+      .hero h1 {
+        max-width: 13ch;
+        font-size: clamp(3.4rem, 5.7vw, 5.65rem);
+        line-height: 0.93;
       }
 
       .hero-role {
-        max-width: 37rem;
-        color: var(--heading);
-        font-size: clamp(1.12rem, 1.8vw, 1.42rem);
-        font-weight: 600;
-        line-height: 1.42;
+        max-width: 35rem;
+        color: var(--ink-2);
+        font-family: var(--font-body);
+        font-size: clamp(0.94rem, 1.18vw, 1.06rem);
+        font-weight: 700;
+        line-height: 1.55;
       }
 
       .hero-intro {
-        max-width: 38rem;
+        max-width: 35rem;
+        font-size: 0.95rem;
+        line-height: 1.62;
       }
 
-      .hero-intro p:first-child {
-        color: var(--muted);
-      }
-
-      .hero-evidence {
-        grid-area: credentials;
-        position: relative;
-        z-index: 1;
-        align-self: end;
-        padding-top: 0.5rem;
-        border-top: 1px solid rgba(16, 24, 32, 0.14);
-      }
-
-      .signal-list {
-        display: grid;
-        gap: 0;
-      }
-
-      .signal-item {
-        display: grid;
-        gap: 0.32rem;
-        min-height: 0;
-        padding: 0.72rem 0;
-        border: 0;
-        border-bottom: 1px solid rgba(16, 24, 32, 0.1);
-        border-radius: 0;
-        background: transparent;
-        box-shadow: none;
-        align-content: start;
-      }
-
-      .signal-item:first-child {
-        border-top: 0;
-      }
-
-      .signal-item:last-child {
-        border-bottom: 0;
-      }
-
-      .hero-actions {
+      .hero-actions,
+      .contact-actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.8rem;
-        margin-top: 0.2rem;
+        gap: 0.75rem;
+        align-items: center;
       }
 
-      .hero-aside {
-        grid-area: portrait;
-        position: relative;
-        z-index: 1;
+      .identity-strip {
         display: grid;
-        gap: 0.68rem;
-        align-content: start;
-        padding: 0.62rem;
-        border: 1px solid rgba(16, 31, 39, 0.5);
-        border-radius: calc(var(--radius-large) - 0.18rem);
-        background:
-          linear-gradient(180deg, rgba(17, 31, 39, 0.98), rgba(25, 45, 55, 0.96));
-        box-shadow: 0 24px 52px rgba(16, 24, 32, 0.18);
-      }
-
-      .headshot-shell {
-        padding: 0;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.52rem;
+        padding-top: 0.38rem;
+        overflow: visible;
         border: 0;
         background: transparent;
+      }
+
+      .identity-item {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 0.08rem 0.48rem;
+        align-items: center;
+        min-height: auto;
+        max-width: none;
+        padding: 0.52rem 0.68rem;
+        border: 1px solid rgba(14, 27, 45, 0.12);
+        border-radius: 0.55rem;
+        background: rgba(255, 255, 255, 0.72);
+        box-shadow: 0 8px 20px rgba(14, 27, 45, 0.06);
+        transition:
+          border-color var(--motion-fast) var(--motion-ease),
+          background-color var(--motion-fast) var(--motion-ease),
+          box-shadow var(--motion-fast) var(--motion-ease),
+          transform var(--motion-fast) var(--motion-ease);
+      }
+
+      .label {
+        color: var(--slate);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .identity-item p,
+      .index-line p,
+      .timeline-item p,
+      .education-row p,
+      .language-row p {
+        color: var(--ink-2);
+        font-size: 0.82rem;
+        line-height: 1.32;
+        overflow-wrap: anywhere;
+      }
+
+      .identity-item .label {
+        grid-column: 1 / -1;
+        color: var(--slate);
+        font-size: 0.58rem;
+      }
+
+      .hero-visual {
+        display: grid;
+        grid-template-rows: minmax(24rem, 1fr);
+        gap: 0;
+        min-width: 0;
+      }
+
+      .portrait-panel {
+        position: relative;
+        overflow: hidden;
+        min-height: 100%;
+        border: 0;
+        background:
+          linear-gradient(90deg, rgba(247, 250, 252, 0.24), rgba(234, 242, 248, 0.06)),
+          #dce8ef;
         box-shadow: none;
       }
 
-      .headshot-stage {
-        position: relative;
-        aspect-ratio: 4 / 5.08;
-        width: 100%;
-        overflow: hidden;
-        border-radius: calc(var(--radius-large) - 0.32rem);
-        background-color: #bdc7c4;
-        background-image:
-          linear-gradient(180deg, rgba(17, 31, 39, 0.02), rgba(17, 31, 39, 0.26)),
-          var(--portrait-image);
-        background-size: cover, cover;
-        background-position: center, center 18%;
-        box-shadow: inset 0 0 0 1px rgba(251, 250, 246, 0.18);
-      }
-
-      .headshot-stage::after {
+      .portrait-panel::before {
         content: "";
         position: absolute;
-        inset: 0.75rem;
-        border: 1px solid rgba(234, 243, 240, 0.26);
-        border-radius: calc(var(--radius-large) - 0.48rem);
-        pointer-events: none;
+        inset: 0;
+        background-image: url("portrait-side-profile-web.jpg");
+        background-size: cover;
+        background-position: center center;
+        filter: saturate(0.88) contrast(1.04);
       }
 
-      .hero-detail-stack {
-        display: grid;
-        gap: 0.62rem;
-      }
-
-      .hero-profile,
-      .hero-practice {
-        padding: 0.94rem 1rem;
-        border-color: rgba(251, 250, 246, 0.2);
-        background: rgba(251, 250, 246, 0.94);
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.13);
-      }
-
-      .hero-profile .detail-item,
-      .hero-practice .detail-item {
-        padding-top: 0.72rem;
-        border-top: 1px solid var(--line);
-      }
-
-      .hero-profile .detail-item:first-child,
-      .hero-practice .detail-item:first-child {
-        padding-top: 0;
-        border-top: 0;
-      }
-
-      .hero-profile .detail-item p,
-      .hero-practice .detail-item p {
-        max-width: 25rem;
-        font-size: 0.94rem;
-      }
-
-      .hero-status {
-        display: grid;
-        gap: 0.8rem;
-        align-items: start;
-        padding: 1rem 1.1rem;
-        margin-top: 1rem;
-        border: 1px solid rgba(23, 61, 71, 0.14);
-        border-radius: 1rem;
-        background: rgba(143, 175, 166, 0.12);
-      }
-
-      .status-main {
-        display: grid;
-        gap: 0.3rem;
-      }
-
-      .status-title {
-        color: var(--heading);
-        font-size: 1rem;
-        font-weight: 700;
-        line-height: 1.45;
-      }
-
-      .status-link {
-        width: max-content;
-        color: var(--accent);
-        font-size: 0.92rem;
-        font-weight: 700;
-        border-bottom: 1px solid rgba(23, 61, 71, 0.24);
-      }
-
-      .status-link:hover,
-      .status-link:focus-visible {
-        border-color: var(--accent);
-      }
-
-      /* Current */
-      #current {
-        --panel-line: rgba(47, 75, 85, 0.16);
-        --panel-surface: var(--surface);
-        --panel-shadow: var(--shadow-soft);
+      .portrait-panel::after {
+        content: "";
+        position: absolute;
+        inset: 0;
         background:
-          linear-gradient(180deg, #e4ebe9 0%, #edf2f0 100%);
-        border-top-color: rgba(47, 75, 85, 0.16);
+          linear-gradient(90deg, rgba(247, 250, 252, 0.9) 0%, rgba(247, 250, 252, 0.48) 19%, rgba(247, 250, 252, 0.02) 52%),
+          linear-gradient(180deg, rgba(14, 27, 45, 0.02), rgba(14, 27, 45, 0.18));
       }
 
-      #current .eyebrow,
-      #current .detail-label,
-      #current .proof-label {
-        color: var(--slate-blue);
-      }
-
-      #icu .section-heading h2,
-      #ltc .section-heading h2 {
-        max-width: 12ch;
-        font-size: clamp(3rem, 6.2vw, 5.6rem);
-        line-height: 0.92;
-      }
-
-      .current-layout {
+      .portrait-caption {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        left: 1rem;
         display: grid;
-        grid-template-columns: 1fr;
-        gap: clamp(1.2rem, 3vw, 2.2rem);
-        align-items: start;
+        gap: 0.25rem;
+        z-index: 1;
+        padding: 0.85rem 0.95rem;
+        border: 1px solid rgba(247, 250, 252, 0.18);
+        border-radius: 0.5rem;
+        background: rgba(14, 27, 45, 0.82);
+        color: var(--white);
+        backdrop-filter: blur(12px);
       }
 
-      .current-heading {
+      .portrait-caption span {
+        color: rgba(251, 250, 247, 0.62);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      .portrait-caption strong {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        line-height: 1.12;
+      }
+
+      .dossier-note {
+        display: none;
+      }
+
+      .practice-section {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.48), rgba(234, 242, 248, 0.5));
+      }
+
+      .domain-list {
         display: grid;
-        gap: 0.95rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(0.85rem, 2vw, 1.35rem);
+      }
+
+      .domain-row {
+        display: grid;
+        gap: 0.85rem;
         align-content: start;
-        padding-top: 0.2rem;
+        min-height: 100%;
+        padding: clamp(1.1rem, 2.6vw, 1.55rem);
+        border: 1px solid var(--line);
+        border-top: 2px solid rgba(94, 127, 163, 0.72);
+        border-radius: 0.5rem;
+        background: rgba(255, 255, 255, 0.78);
+        box-shadow: var(--shadow-soft);
+        transition:
+          border-color var(--motion-med) var(--motion-ease),
+          box-shadow var(--motion-med) var(--motion-ease),
+          transform var(--motion-med) var(--motion-ease);
       }
 
-      .current-heading h2 {
-        max-width: 9ch;
-        font-size: clamp(3rem, 5.6vw, 5.2rem);
+      .domain-number {
+        color: var(--champagne);
+        font-family: var(--font-display);
+        font-size: clamp(1.55rem, 2.5vw, 2.1rem);
         line-height: 0.9;
       }
 
-      .current-heading p {
-        max-width: 26rem;
-        color: var(--ink-soft);
-        font-weight: 500;
+      .domain-row h3,
+      .timeline-item h3,
+      .systems-feature h3 {
+        font-size: clamp(1.35rem, 2.25vw, 1.85rem);
+        line-height: 1;
       }
 
-      .current-board {
-        display: grid;
-        gap: clamp(1.1rem, 2.5vw, 1.8rem);
-        padding: clamp(1.35rem, 3vw, 2.4rem) clamp(1.25rem, 3vw, 2.2rem);
-        border-top: 1px solid rgba(16, 24, 32, 0.18);
-        border-bottom: 1px solid rgba(16, 24, 32, 0.18);
-        border-left: 3px solid rgba(47, 75, 85, 0.42);
-        background:
-          linear-gradient(90deg, rgba(255, 254, 250, 0.82), rgba(249, 250, 247, 0.42));
-      }
-
-      .current-secondary {
-        display: grid;
-        gap: clamp(0.9rem, 2vw, 1.4rem);
-        padding-top: clamp(1rem, 2vw, 1.35rem);
-        border-top: 1px solid rgba(16, 24, 32, 0.12);
-      }
-
-      .current-card {
-        position: relative;
-        display: grid;
-        gap: 0.7rem;
-        min-height: 100%;
-        padding: 0;
-        border: 0;
-        border-radius: 0;
-        background: transparent;
-        box-shadow: none;
-        overflow: visible;
-      }
-
-      .current-card--pursuits {
-        min-height: 0;
-        align-content: start;
-        color: var(--heading);
-        box-shadow: none;
-      }
-
-      .current-card--pursuits::before {
-        content: none;
-      }
-
-      .current-card--pursuits h3,
-      .current-card--pursuits .current-card-text {
-        color: inherit;
-      }
-
-      .current-card--pursuits .stack-link {
-        border-color: rgba(47, 75, 85, 0.2);
-        background: transparent;
-        color: var(--heading);
-      }
-
-      .current-card--pursuits .stack-link::after {
-        color: rgba(47, 75, 85, 0.72);
-      }
-
-      .current-card--pursuits .stack-link:hover,
-      .current-card--pursuits .stack-link:focus-visible {
-        border-color: rgba(47, 75, 85, 0.34);
-        background: rgba(47, 75, 85, 0.06);
-      }
-
-      .current-card h3 {
-        font-size: clamp(1.32rem, 2.1vw, 1.72rem);
-        line-height: 1.08;
-      }
-
-      .current-card--pursuits h3 {
-        font-size: clamp(1.8rem, 3vw, 2.55rem);
-      }
-
-      .current-card-text {
-        color: var(--ink-soft);
-        font-size: 0.98rem;
-        line-height: 1.58;
-      }
-
-      .stacked-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.62rem;
-        margin-top: 0.35rem;
-      }
-
-      .stack-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 0.8rem;
-        min-height: 3.15rem;
-        padding: 0.76rem 0.95rem;
-        border: 1px solid rgba(47, 75, 85, 0.18);
-        border-radius: 999px;
-        background: transparent;
-        color: var(--heading);
+      .domain-row p {
         font-size: 0.94rem;
-        font-weight: 600;
-        line-height: 1.3;
-        transition:
-          transform 180ms ease,
-          border-color 180ms ease,
-          background-color 180ms ease,
-          box-shadow 180ms ease;
+        line-height: 1.62;
       }
 
-      .stack-link::after {
-        content: "->";
-        color: rgba(47, 75, 85, 0.72);
-        font-size: 0.8rem;
-      }
-
-      .stack-link:hover,
-      .stack-link:focus-visible {
-        transform: translateY(-1px);
-        border-color: rgba(47, 75, 85, 0.32);
-        background: rgba(255, 255, 255, 0.34);
-        box-shadow: none;
-      }
-
-      .stack-link--primary-direction {
-        border-color: rgba(47, 75, 85, 0.28);
-        background: rgba(47, 75, 85, 0.07);
-        color: var(--heading);
-      }
-
-      .stack-link--primary-direction::after {
-        color: rgba(47, 75, 85, 0.8);
-      }
-
-      .stack-link--primary-direction:hover,
-      .stack-link--primary-direction:focus-visible {
-        border-color: rgba(47, 75, 85, 0.4);
-        background: rgba(47, 75, 85, 0.1);
-      }
-
-      .stack-link--secondary-practice {
-        background: rgba(73, 108, 112, 0.06);
-      }
-
-      .current-list {
-        display: grid;
-        gap: 0;
-      }
-
-      .current-list-item {
-        padding: 0.68rem 0;
-        border-top: 1px solid rgba(47, 75, 85, 0.16);
-        color: var(--muted);
-        font-size: 0.92rem;
+      .detail-text {
+        display: block;
+        margin-top: 0.64rem;
+        color: var(--ink-2);
+        font-size: 0.88rem;
+        font-weight: 700;
         line-height: 1.5;
       }
 
-      .current-list-item:first-child {
-        padding-top: 0;
-        border-top: 0;
+      .domain-signals,
+      .timeline-signals {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.38rem;
+        align-items: center;
       }
 
-      .subpage-view {
-        padding-top: clamp(1.6rem, 4vw, 2.5rem);
-        background: var(--bg-cool);
-        border-top-color: rgba(47, 75, 85, 0.16);
-      }
-
-      .subpage-back {
+      .signal-pill,
+      .signal-token {
         display: inline-flex;
         align-items: center;
+        min-height: 1.72rem;
+        padding: 0.32rem 0.5rem;
+        border: 1px solid rgba(94, 127, 163, 0.28);
+        border-radius: 999px;
+        background: rgba(94, 127, 163, 0.1);
+        color: var(--ink-2);
+        font-size: 0.72rem;
+        font-weight: 800;
+        line-height: 1.15;
+        transition:
+          border-color var(--motion-fast) var(--motion-ease),
+          background-color var(--motion-fast) var(--motion-ease),
+          color var(--motion-fast) var(--motion-ease),
+          transform var(--motion-fast) var(--motion-ease);
+      }
+
+      .practice-story-board {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(0.75rem, 2vw, 1rem);
+        margin-top: clamp(1.25rem, 3vw, 2rem);
+      }
+
+      .practice-story-intro {
+        display: grid;
+        grid-template-columns: minmax(10rem, 0.32fr) minmax(0, 1fr);
+        gap: 1rem;
+        align-items: start;
+        margin-top: clamp(1.4rem, 3vw, 2.2rem);
+        padding-top: clamp(1.1rem, 2.6vw, 1.7rem);
+        border-top: 1px solid var(--line);
+      }
+
+      .practice-story-intro p {
+        color: var(--ink-2);
+        font-size: 0.92rem;
+        line-height: 1.55;
+      }
+
+      .story-card {
+        display: grid;
         gap: 0.45rem;
-        color: var(--slate-blue);
+        padding: clamp(1rem, 2.2vw, 1.3rem);
+        border: 1px solid var(--line);
+        border-radius: 0.5rem;
+        background: rgba(247, 250, 252, 0.74);
+        transition:
+          border-color var(--motion-med) var(--motion-ease),
+          background-color var(--motion-med) var(--motion-ease),
+          box-shadow var(--motion-med) var(--motion-ease),
+          transform var(--motion-med) var(--motion-ease);
+      }
+
+      .story-card h3 {
+        font-size: clamp(1.08rem, 1.8vw, 1.28rem);
+        line-height: 1.12;
+      }
+
+      .story-card p {
+        color: var(--ink-2);
+        font-size: 0.86rem;
+        line-height: 1.48;
+      }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: minmax(0, 1.14fr) minmax(18rem, 0.86fr);
+        gap: clamp(2rem, 5vw, 4.2rem);
+        align-items: start;
+      }
+
+      .timeline-rail {
+        display: grid;
+        gap: 0.72rem;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: minmax(7rem, 0.28fr) minmax(0, 1fr);
+        gap: 1.1rem;
+        padding: clamp(1rem, 2.4vw, 1.35rem);
+        border: 1px solid var(--line);
+        border-left: 3px solid rgba(94, 127, 163, 0.74);
+        border-radius: 0.5rem;
+        background: rgba(255, 255, 255, 0.72);
+        transition:
+          border-color var(--motion-med) var(--motion-ease),
+          background-color var(--motion-med) var(--motion-ease),
+          box-shadow var(--motion-med) var(--motion-ease),
+          transform var(--motion-med) var(--motion-ease);
+      }
+
+      .timeline-meta {
+        color: var(--slate);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        line-height: 1.35;
+        text-transform: uppercase;
+      }
+
+      .timeline-body {
+        display: grid;
+        gap: 0.52rem;
+        min-width: 0;
+      }
+
+      .timeline-body p {
+        color: var(--ink-2);
         font-size: 0.9rem;
-        font-weight: 700;
+        line-height: 1.5;
       }
 
-      .subpage-layout {
+      .signal-token {
+        min-height: 1.55rem;
+        padding: 0.26rem 0.45rem;
+        font-size: 0.68rem;
+      }
+
+      .timeline-aside {
         display: grid;
         gap: 1rem;
+        align-self: start;
+        padding: clamp(1.4rem, 3vw, 2rem);
+        border: 1px solid var(--line);
+        border-top: 2px solid rgba(44, 72, 83, 0.55);
+        border-radius: 0.5rem;
+        background: rgba(250, 250, 246, 0.66);
+        box-shadow: var(--shadow-soft);
+        transition:
+          border-color var(--motion-med) var(--motion-ease),
+          box-shadow var(--motion-med) var(--motion-ease);
       }
 
-      .subpage-note {
-        max-width: 42rem;
-        padding: 1.1rem 1.15rem;
-        border-top-width: 2px;
-        border-top-color: rgba(47, 75, 85, 0.22);
+      .timeline-aside p {
+        color: var(--ink-2);
+        font-family: var(--font-display);
+        font-size: clamp(1.32rem, 2.3vw, 1.85rem);
+        line-height: 1.15;
       }
 
-      .subpage-note p {
-        font-size: 0.95rem;
-      }
-
-      .subpage-view .eyebrow,
-      .subpage-view .detail-label {
-        color: var(--slate-blue);
-      }
-
-      .subpage-view .work-body,
-      .subpage-view .work-details {
-        border-top-width: 2px;
-        border-top-color: rgba(47, 75, 85, 0.22);
-        background: var(--surface);
-        box-shadow: none;
-      }
-
-      /* Current Work */
-      .work-layout {
-        display: grid;
-        gap: 1rem;
-      }
-
-      .work-body,
-      .work-details {
-        padding: clamp(1.35rem, 3vw, 2.2rem);
-      }
-
-      .work-body {
-        display: grid;
-        gap: 1rem;
-        border-radius: 0;
-        background: rgba(249, 250, 247, 0.48);
-        box-shadow: none;
-      }
-
-      .work-body-block {
+      .timeline-aside-list {
         display: grid;
         gap: 0.55rem;
       }
 
-      .work-body-block + .work-body-block {
-        padding-top: 0.8rem;
-        border-top: 1px solid rgba(16, 24, 32, 0.1);
-      }
-
-      .work-body-block h3 {
-        color: var(--heading);
-        font-size: 0.92rem;
+      .timeline-aside-list li {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 0.5rem;
+        color: var(--ink-2);
+        font-size: 0.88rem;
         font-weight: 700;
-        letter-spacing: 0;
-        text-transform: uppercase;
+        line-height: 1.45;
       }
 
-      .work-body p:first-child {
-        color: var(--heading);
-        font-size: clamp(1.08rem, 1.6vw, 1.2rem);
-      }
-
-      .work-emphasis {
-        padding-left: 1rem;
-        border-left: 2px solid var(--sage);
-        color: var(--heading);
-        font-weight: 600;
-      }
-
-      .work-details {
-        --detail-card-line: var(--panel-line, var(--line));
-        --detail-card-surface: transparent;
-        display: grid;
-        gap: 0.9rem;
-        border-radius: 0;
-        background: transparent;
-        box-shadow: none;
-      }
-
-      .work-details .detail-list {
-        grid-template-columns: 1fr;
-        gap: 0.9rem;
-      }
-
-      .work-details .detail-item {
-        gap: 0.45rem;
-        padding: 0 0 0.95rem;
-        border: 0;
-        border-bottom: 1px solid var(--detail-card-line);
-        border-radius: 0;
-        background: var(--detail-card-surface);
-      }
-
-      .work-details .detail-item:last-child {
-        padding-bottom: 0;
-        border-bottom: 0;
-      }
-
-      .work-details .detail-item p {
-        max-width: none;
-        font-size: 0.95rem;
-        line-height: 1.62;
-      }
-
-      .proof-item h3,
-      .approach-item h3 {
-        font-size: clamp(1.45rem, 2.8vw, 1.9rem);
-        line-height: 1.02;
-      }
-
-      .photo-backed > .container {
-        position: relative;
-        z-index: 1;
-      }
-
-      .photo-backed::before,
-      .photo-backed::after {
+      .timeline-aside-list li::before {
         content: "";
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
+        width: 0.42rem;
+        height: 0.42rem;
+        margin-top: 0.46rem;
+        border-radius: 50%;
+        background: var(--champagne);
       }
 
-      .photo-backed::before {
-        z-index: -2;
-        background-image: var(--section-photo, none);
-        background-size: cover;
-        background-position: center;
-        filter: none;
-        transform: none;
-        opacity: 0;
-      }
-
-      .photo-backed::after {
-        z-index: -1;
-        background: var(--section-tint, transparent);
-      }
-
-      .hero {
-        --section-photo: var(--hero-photo);
-        --section-photo-opacity: var(--hero-photo-opacity);
-        --section-tint: transparent;
-      }
-
-      #icu {
-        --panel-line: var(--icu-line);
-        --panel-surface: var(--icu-surface);
-        --panel-shadow: var(--shadow-soft);
-        --section-photo: var(--icu-photo);
-        --section-photo-opacity: var(--icu-photo-opacity);
-        --section-tint: transparent;
-        background: var(--icu-bg);
-        border-top-color: var(--icu-line);
-      }
-
-      #ltc {
-        --panel-line: var(--ltc-line);
-        --panel-surface: var(--ltc-surface);
-        --panel-shadow: var(--shadow-soft);
-        --section-photo: var(--ltc-photo);
-        --section-photo-opacity: var(--ltc-photo-opacity);
-        --section-tint: transparent;
-        background: var(--ltc-bg);
-        border-top-color: var(--ltc-line);
-      }
-
-      #contact {
-        --panel-line: var(--contact-line);
-        --panel-surface: var(--contact-surface);
-        --panel-shadow: 0 20px 48px rgba(0, 0, 0, 0.18);
-        --section-photo: var(--contact-photo);
-        --section-photo-opacity: var(--contact-photo-opacity);
-        --section-tint: transparent;
-        background: var(--contact-bg);
-        border-top-color: var(--contact-line);
-      }
-
-      #contact .section-heading h2,
-      #contact .section-heading p,
-      #contact .section-heading .eyebrow,
-      #contact .contact-card p,
-      #contact .detail-label,
-      #contact .footer-summary,
-      #contact .footer-note {
-        color: var(--contact-text);
-      }
-
-      #contact .eyebrow::before {
-        background: rgba(234, 243, 240, 0.52);
-      }
-
-      #contact .contact-card {
-        background: var(--contact-surface);
-        border-color: var(--contact-line);
-        box-shadow: var(--panel-shadow);
-      }
-
-      #icu .eyebrow,
-      #icu .detail-label {
-        color: var(--icu-accent);
-      }
-
-      #icu .section-subtitle,
-      #icu .work-details .detail-item {
-        border-color: var(--icu-line);
-      }
-
-      #icu .work-details {
-        --detail-card-line: rgba(122, 91, 73, 0.16);
-        --detail-card-surface: rgba(255, 253, 248, 0.28);
-      }
-
-      #ltc .eyebrow,
-      #ltc .detail-label,
-      #ltc .proof-label {
-        color: var(--ltc-accent);
-      }
-
-      #ltc .section-subtitle,
-      #ltc .compact-grid .proof-item,
-      #ltc .work-details .detail-item,
-      #ltc .teaser-card {
-        border-color: var(--ltc-line);
-      }
-
-      #ltc .work-details {
-        --detail-card-line: rgba(94, 128, 109, 0.16);
-        --detail-card-surface: rgba(255, 253, 248, 0.28);
-      }
-
-      .super-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 3rem;
-        padding: 0.7rem 1rem;
-        border: 1px solid rgba(183, 161, 109, 0.28);
-        border-radius: 999px;
-        background: rgba(183, 161, 109, 0.08);
-        color: var(--contact-chip);
-        font-size: 0.86rem;
-        font-weight: 600;
-        letter-spacing: 0;
-      }
-
-      .closing-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.7rem;
-      }
-
-      /* Proof */
-      .proof-grid {
+      .index-table {
         display: grid;
-        gap: 1rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 0.5rem;
+        background: var(--line);
       }
 
-      .proof-item {
+      .index-line {
         display: grid;
-        gap: 0.7rem;
-        padding: 1.25rem 1.2rem;
+        gap: 0.72rem;
+        align-content: start;
+        min-height: 13rem;
+        padding: clamp(1rem, 2.4vw, 1.35rem);
+        background: rgba(255, 255, 255, 0.78);
+        transition:
+          background-color var(--motion-med) var(--motion-ease),
+          box-shadow var(--motion-med) var(--motion-ease),
+          transform var(--motion-med) var(--motion-ease);
       }
 
-      .proof-item p {
+      .index-line h3 {
+        font-size: clamp(1.18rem, 2vw, 1.42rem);
+        line-height: 1.08;
+      }
+
+      .index-items {
+        display: grid;
+        gap: 0.48rem;
+      }
+
+      .index-item {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 0.46rem;
+        color: var(--ink-2);
+        font-size: 0.84rem;
+        font-weight: 700;
+        line-height: 1.42;
+      }
+
+      .index-item::before {
+        content: "";
+        width: 0.36rem;
+        height: 0.36rem;
+        margin-top: 0.46rem;
+        border-radius: 50%;
+        background: var(--champagne);
+        transition:
+          background-color var(--motion-fast) var(--motion-ease),
+          transform var(--motion-fast) var(--motion-ease);
+      }
+
+      .index-line .index-note {
         color: var(--muted);
+        font-size: 0.82rem;
+        line-height: 1.45;
       }
 
-      .proof-item .proof-meta {
-        color: var(--heading);
+      .education-grid,
+      .language-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: var(--line);
+      }
+
+      .education-row,
+      .language-row {
+        display: grid;
+        gap: 0.55rem;
+        min-height: 11rem;
+        padding: clamp(1.1rem, 3vw, 1.7rem);
+        background: rgba(250, 250, 246, 0.74);
+      }
+
+      .education-row:last-child:nth-child(odd),
+      .language-row:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        min-height: 8rem;
+      }
+
+      .education-row h3,
+      .language-row h3 {
+        font-size: clamp(1.28rem, 2.3vw, 1.75rem);
+      }
+
+      .systems-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 0.85fr) minmax(18rem, 1.15fr);
+        gap: clamp(2rem, 5vw, 4rem);
+        align-items: start;
+      }
+
+      .systems-section {
+        padding: clamp(3.4rem, 6vw, 5.4rem) 0;
+      }
+
+      .systems-section .section-heading {
+        margin-bottom: clamp(1.6rem, 4vw, 2.8rem);
+      }
+
+      .systems-section .section-heading h2 {
+        max-width: min(15ch, 100%);
+        font-size: clamp(2.25rem, 4.4vw, 3.8rem);
+        line-height: 0.95;
+      }
+
+      .systems-feature {
+        display: grid;
+        gap: 0.72rem;
+        padding: clamp(1.1rem, 2.4vw, 1.55rem);
+        border-top: 2px solid rgba(44, 72, 83, 0.55);
+        background: rgba(250, 250, 246, 0.48);
+        transition:
+          background-color var(--motion-med) var(--motion-ease),
+          box-shadow var(--motion-med) var(--motion-ease);
+      }
+
+      .systems-feature h3 {
+        font-size: clamp(1.25rem, 2.1vw, 1.65rem);
+      }
+
+      .systems-feature p {
+        font-size: 0.95rem;
+      }
+
+      .systems-links {
+        display: grid;
+        gap: 1px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: var(--line);
+      }
+
+      .systems-link {
+        display: grid;
+        gap: 0.35rem;
+        padding: 0.95rem 1.05rem;
+        background: rgba(250, 250, 246, 0.78);
+        transition:
+          background-color var(--motion-fast) var(--motion-ease),
+          box-shadow var(--motion-fast) var(--motion-ease),
+          transform var(--motion-fast) var(--motion-ease);
+      }
+
+      .systems-link strong {
+        color: var(--ink);
+        font-family: var(--font-display);
+        font-size: 1.12rem;
+      }
+
+      .systems-link span {
+        color: var(--muted);
         font-size: 0.94rem;
-        font-weight: 600;
         line-height: 1.55;
       }
 
-      .proof-link {
-        width: max-content;
-        color: var(--accent);
-        font-size: 0.94rem;
-        font-weight: 700;
-        border-bottom: 1px solid rgba(23, 61, 71, 0.24);
+      .contact-section {
+        background: var(--footer);
+        color: var(--white);
       }
 
-      .proof-link:hover,
-      .proof-link:focus-visible {
-        border-color: var(--accent);
+      .contact-section .section-heading h2,
+      .contact-section .section-heading p,
+      .contact-section .eyebrow,
+      .contact-section .contact-panel p,
+      .contact-section .label {
+        color: var(--white);
       }
 
-      .section-stack {
+      .contact-section .eyebrow::before {
+        background: rgba(251, 250, 247, 0.44);
+      }
+
+      .contact-grid {
         display: grid;
-        gap: 1.2rem;
+        grid-template-columns: minmax(0, 0.8fr) minmax(18rem, 1.2fr);
+        gap: clamp(2rem, 5vw, 4rem);
+        align-items: start;
       }
 
-      .section-subtitle {
-        display: grid;
-        gap: 0.45rem;
-        padding-top: 1rem;
-        border-top: 1px solid var(--panel-line, var(--line));
-      }
-
-      .section-subtitle h3 {
-        font-size: clamp(1.24rem, 2.2vw, 1.55rem);
-        line-height: 1.04;
-      }
-
-      .section-subtitle p {
-        max-width: 42rem;
-        color: var(--muted);
-        font-size: 0.96rem;
-      }
-
-      .compact-grid,
-      .teaser-grid {
-        display: grid;
+      .contact-section .contact-grid > .section-heading {
+        grid-template-columns: 1fr;
         gap: 1rem;
+        margin-bottom: 0;
       }
 
-      .compact-grid .proof-item {
-        background: var(--surface);
-        box-shadow: none;
+      .contact-section .section-heading p {
+        max-width: 34rem;
+        padding-top: 0;
       }
 
-      .compact-grid .proof-item .proof-meta {
-        color: var(--muted);
-        font-size: 0.88rem;
-      }
-
-      .teaser-card {
+      .contact-panel {
         display: grid;
-        gap: 0.7rem;
-        padding: 1.2rem 1.15rem;
-        background: var(--surface);
-        box-shadow: none;
-      }
-
-      .teaser-card p {
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-
-      .teaser-card .proof-label {
-        opacity: 0.8;
-      }
-
-      .teaser-card h3 {
-        font-size: clamp(1.25rem, 2.2vw, 1.5rem);
-      }
-
-      .approach-strip,
-      .direction-list {
-        display: grid;
-        gap: 0;
-        border-top: 1px solid var(--line);
-      }
-
-      .approach-item,
-      .direction-item {
-        display: grid;
-        gap: 0.45rem;
-        padding: 1.2rem 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .direction-item strong {
-        color: var(--heading);
-        font-size: 1.06rem;
-      }
-
-      /* Contact */
-      .contact-card {
-        display: grid;
-        gap: 1.25rem;
-        padding: clamp(1.45rem, 3vw, 2.1rem);
-        max-width: 36rem;
-      }
-
-      .contact-actions {
-        display: grid;
-        gap: 1rem;
+        gap: 1.1rem;
+        padding: clamp(1.5rem, 3vw, 2.4rem);
+        border: 1px solid rgba(251, 250, 247, 0.16);
+        background: rgba(251, 250, 247, 0.055);
+        box-shadow: 0 24px 56px rgba(0, 0, 0, 0.18);
+        transition:
+          border-color var(--motion-med) var(--motion-ease),
+          background-color var(--motion-med) var(--motion-ease);
       }
 
       .contact-mail {
         display: inline-flex;
-        align-items: center;
-        justify-content: center;
         width: max-content;
         max-width: 100%;
-        min-height: 3rem;
-        padding: 0.82rem 1.1rem;
-        border: 1px solid rgba(234, 243, 240, 0.22);
+        padding: 0.82rem 1.08rem;
+        border: 1px solid rgba(251, 250, 247, 0.22);
         border-radius: 999px;
-        background: rgba(255, 255, 255, 0.08);
-        color: var(--contact-text);
-        font-size: 0.94rem;
-        font-weight: 600;
+        color: var(--white);
+        font-weight: 800;
         overflow-wrap: anywhere;
-        word-break: break-word;
         transition:
-          background-color 180ms ease,
-          border-color 180ms ease;
+          border-color var(--motion-fast) var(--motion-ease),
+          background-color var(--motion-fast) var(--motion-ease),
+          transform var(--motion-fast) var(--motion-ease);
       }
 
-      .contact-mail:hover,
-      .contact-mail:focus-visible {
-        border-color: rgba(234, 243, 240, 0.38);
-        background: rgba(255, 255, 255, 0.12);
+      .contact-note {
+        color: rgba(251, 250, 247, 0.7);
+        font-size: 0.9rem;
       }
 
-      .contact-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.7rem 1rem;
-      }
-
-      .contact-links a {
-        color: var(--muted);
-        font-size: 0.95rem;
-        font-weight: 600;
-        border-bottom: 1px solid transparent;
-      }
-
-      .contact-links a:hover,
-      .contact-links a:focus-visible {
-        color: var(--heading);
-        border-color: var(--heading);
-      }
-
-      .footer {
-        padding: 2rem 0 2.8rem;
-        border-top: 1px solid rgba(251, 250, 246, 0.12);
-        background: var(--blue-black);
+      .site-footer {
+        border-top: 1px solid rgba(251, 250, 247, 0.13);
+        background: var(--footer);
+        color: var(--white);
       }
 
       .footer-row {
         display: grid;
         grid-template-columns: minmax(0, 1fr) auto;
-        grid-template-rows: minmax(3.45rem, 1fr) auto;
-        grid-template-areas:
-          "summary logo"
-          "note note";
-        column-gap: 1.05rem;
-        row-gap: 0.38rem;
-        min-height: 7rem;
+        gap: 1rem;
         align-items: center;
-      }
-
-      .footer-logo {
-        grid-area: logo;
-        display: block;
-        width: clamp(7rem, 11vw, 9rem);
-        height: auto;
-        justify-self: end;
-        align-self: center;
-        flex: 0 0 auto;
-        object-fit: contain;
-        opacity: 0.88;
+        min-height: 7.2rem;
+        padding: 1.35rem 0 1.9rem;
       }
 
       .footer-summary {
-        grid-area: summary;
-        align-self: center;
-        max-width: min(42rem, calc(100% - 9.5rem));
-        color: var(--surface);
-        font-size: 1rem;
-        font-weight: 600;
-        line-height: 1.55;
+        max-width: 42rem;
+        color: rgba(251, 250, 247, 0.86);
+        font-weight: 700;
       }
 
       .footer-note {
-        grid-area: note;
+        grid-column: 1 / -1;
         justify-self: center;
-        align-self: end;
-        max-width: min(28rem, 84vw);
-        font-size: clamp(0.3rem, 0.5vw, 0.38rem);
+        max-width: min(31rem, 90vw);
+        color: rgba(251, 250, 247, 0.5);
+        font-size: 0.58rem;
         line-height: 1.45;
         text-align: center;
-        letter-spacing: 0;
-        color: rgba(251, 250, 246, 0.55);
       }
 
-      /* Motion */
-      .reveal {
-        opacity: 0;
-        transform: translateY(18px);
+      .footer-logo {
+        width: clamp(5.8rem, 8vw, 8rem);
+        height: auto;
+        opacity: 0.88;
         transition:
-          opacity 460ms ease,
-          transform 460ms ease;
+          opacity var(--motion-fast) var(--motion-ease),
+          transform var(--motion-fast) var(--motion-ease);
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
       }
 
       .reveal.is-visible {
@@ -1567,754 +1138,283 @@
         transform: translateY(0);
       }
 
-      /* Responsive */
-      @media (min-width: 760px) {
-        .header-row {
-          display: flex;
-          justify-content: space-between;
-          gap: 0.9rem;
+      @media (hover: hover) and (pointer: fine) {
+        .site-name:hover .brand-mark {
+          border-color: rgba(247, 250, 252, 0.5);
+          background: rgba(247, 250, 252, 0.08);
         }
 
-        .header-actions-shell {
-          display: flex;
-          flex-wrap: nowrap;
-          align-items: center;
-          justify-content: flex-end;
-          gap: 0.74rem;
+        .language-control button:hover,
+        .site-nav a:hover {
+          transform: translateY(-1px);
+        }
+
+        .button:hover,
+        .text-link:hover,
+        .button:focus-visible,
+        .text-link:focus-visible {
+          transform: translateY(-1px);
+          box-shadow: 0 12px 24px rgba(14, 27, 45, 0.14);
+        }
+
+        .text-link:hover,
+        .text-link:focus-visible {
+          border-color: rgba(94, 127, 163, 0.42);
+          background: var(--paper);
+        }
+
+        .identity-item:hover,
+        .domain-row:hover,
+        .story-card:hover,
+        .timeline-item:hover,
+        .index-line:hover,
+        .systems-link:hover,
+        .contact-mail:hover,
+        .footer-logo:hover {
+          transform: translateY(-2px);
+        }
+
+        .identity-item:hover,
+        .domain-row:hover,
+        .story-card:hover,
+        .timeline-item:hover {
+          border-color: rgba(94, 127, 163, 0.44);
+          box-shadow: 0 18px 36px rgba(14, 27, 45, 0.1);
+        }
+
+        .signal-pill:hover,
+        .signal-token:hover {
+          border-color: rgba(94, 127, 163, 0.45);
+          background: rgba(94, 127, 163, 0.16);
+          color: var(--ink);
+          transform: translateY(-1px);
+        }
+
+        .timeline-item:hover {
+          background: rgba(255, 255, 255, 0.9);
+        }
+
+        .timeline-aside:hover,
+        .systems-feature:hover {
+          border-color: rgba(94, 127, 163, 0.36);
+          box-shadow: 0 18px 34px rgba(14, 27, 45, 0.08);
+        }
+
+        .index-line:hover {
+          background: rgba(255, 255, 255, 0.94);
+          box-shadow: inset 0 2px 0 rgba(94, 127, 163, 0.34);
+        }
+
+        .index-line:hover .index-item::before {
+          background: var(--ink-2);
+          transform: scale(1.25);
+        }
+
+        .systems-link:hover,
+        .systems-link:focus-visible {
+          background: rgba(255, 255, 255, 0.86);
+          box-shadow: inset 2px 0 0 rgba(94, 127, 163, 0.48);
+        }
+
+        .contact-panel:hover {
+          border-color: rgba(251, 250, 247, 0.28);
+          background: rgba(251, 250, 247, 0.075);
+        }
+
+        .contact-mail:hover,
+        .contact-mail:focus-visible {
+          border-color: rgba(251, 250, 247, 0.42);
+          background: rgba(251, 250, 247, 0.08);
+        }
+
+        .footer-logo:hover {
+          opacity: 1;
+        }
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        .motion-ready .reveal {
+          transition:
+            opacity 260ms var(--motion-ease),
+            transform 260ms var(--motion-ease);
+        }
+
+        .motion-ready .reveal:not(.is-visible) {
+          opacity: 0.88;
+          transform: translateY(6px);
+        }
+      }
+
+      @media (max-width: 980px) {
+        :root {
+          --header-offset: 7rem;
+        }
+
+        .header-row {
+          grid-template-columns: 1fr;
+          gap: 0.55rem;
+          align-content: center;
+          padding: 0.6rem 0;
+        }
+
+        .header-actions {
+          display: grid;
+          grid-template-columns: auto minmax(0, 1fr);
+          justify-content: start;
+          width: 100%;
+          min-width: 0;
+          overflow: hidden;
         }
 
         .site-nav {
-          gap: 0.42rem;
+          justify-content: start;
+          width: 100%;
+          min-width: 0;
+          max-width: 100%;
+          overflow-x: auto;
+          overflow-y: hidden;
+          scrollbar-width: none;
+        }
+
+        .site-nav::-webkit-scrollbar {
+          display: none;
+        }
+
+        .hero-frame,
+        .section-heading,
+        .timeline,
+        .systems-layout,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-copy {
+          min-height: auto;
+        }
+
+        .education-grid,
+        .language-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .domain-list,
+        .practice-story-board,
+        .index-table {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .practice-story-intro {
+          grid-template-columns: 1fr;
+          gap: 0.48rem;
+        }
+      }
+
+      @media (max-width: 620px) {
+        :root {
+          --header-offset: 7.65rem;
+        }
+
+        .container {
+          width: min(calc(100% - 1rem), var(--container));
+        }
+
+        .header-row {
+          grid-template-columns: minmax(0, 1fr) auto;
+          gap: 0.34rem 0.55rem;
+          padding: 0.42rem 0;
+        }
+
+        .wordmark {
+          font-size: 1.05rem;
+        }
+
+        .wordmark-meta {
+          font-size: 0.62rem;
+        }
+
+        .brand-mark {
+          width: 1.86rem;
+          height: 1.86rem;
+          font-size: 0.78rem;
+        }
+
+        .language-control button,
+        .site-nav a {
+          min-height: 2.75rem;
+          padding: 0.44rem 0.54rem;
+          font-size: 0.68rem;
+        }
+
+        .language-control button {
+          min-width: 2.55rem;
+        }
+
+        .header-actions {
+          display: contents;
+        }
+
+        .language-control {
+          justify-self: end;
+          width: max-content;
+        }
+
+        .site-nav {
+          grid-column: 1 / -1;
+          flex-wrap: wrap;
+          gap: 0.12rem;
           overflow: visible;
         }
 
-        .section-grid,
-        .contact-grid {
-          grid-template-columns: minmax(15rem, 0.8fr) minmax(0, 1.2fr);
-          gap: 3rem;
-          align-items: start;
-        }
-
-        .hero-stage {
-          grid-template-columns: minmax(0, 1.14fr) minmax(18rem, 0.76fr);
-          grid-template-areas:
-            "main portrait"
-            "credentials portrait";
-          min-height: clamp(32rem, 64vh, 42rem);
-        }
-
-        .hero-main {
-          max-width: 46rem;
-        }
-
-        .signal-list {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .signal-item--wide {
-          grid-column: span 2;
-        }
-
-        .current-layout {
-          grid-template-columns: minmax(15rem, 0.72fr) minmax(0, 1.28fr);
-          gap: clamp(1.4rem, 3vw, 2.4rem);
-        }
-
-        .current-secondary {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .hero-aside {
-          align-self: stretch;
-          justify-self: stretch;
-        }
-
-        .headshot-shell {
-          width: 100%;
-        }
-
-        .hero-profile {
-          width: 100%;
-        }
-
-        .hero-status {
-          grid-template-columns: auto minmax(0, 1fr) auto;
-          gap: 1rem 1.2rem;
-          align-items: center;
-        }
-
-        .status-main {
-          min-width: 0;
-        }
-
-        .work-layout {
-          grid-template-columns: minmax(0, 1.12fr) minmax(17rem, 0.88fr);
-          align-items: start;
-        }
-
-        .subpage-layout {
-          grid-template-columns: minmax(0, 1.08fr) minmax(17rem, 0.92fr);
-          align-items: start;
-        }
-
-        .work-details .detail-list {
-          grid-template-columns: 1fr;
-        }
-
-        .proof-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .compact-grid,
-        .teaser-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .approach-strip,
-        .direction-list {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          column-gap: 2rem;
-        }
-      }
-
-      @media (min-width: 980px) {
-        .section-heading {
-          position: sticky;
-          top: 6.7rem;
-        }
-      }
-
-      @media (max-width: 1024px) {
-        .brand-name--full {
-          display: none;
-        }
-
-        .brand-name--short {
-          display: inline;
-        }
-
-        .brand-support {
-          display: none;
-        }
-      }
-
-      @media (max-width: 759px) {
-        .header-actions-shell {
-          gap: 0.8rem;
-        }
-
-        .header-tools {
-          gap: 0.5rem;
-        }
-
-        .section-grid,
-        .contact-grid {
-          gap: 1.8rem;
-        }
-
-        .hero-stage {
-          min-height: auto;
-        }
-
-        .hero-aside {
-          max-width: min(15.5rem, 78vw);
-        }
-
-        .headshot-shell {
-          width: min(100%, 15.5rem);
-        }
-
-        .headshot-stage {
-          width: 100%;
-        }
-
-        .panel {
-          box-shadow: none;
-        }
-
-        .brand-lockup {
-          gap: 0.62rem;
-        }
-
-        .brand-wordmark {
-          display: grid;
-        }
-
-        .current-card,
-        .subpage-note {
-          padding: 1rem;
-        }
-
-        .work-details .detail-list {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      html[data-view-mode="desktop"] .header-row {
-        display: flex;
-        justify-content: space-between;
-        gap: 0.9rem;
-      }
-
-      html[data-view-mode="desktop"] .header-actions-shell {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 0.74rem;
-      }
-
-      html[data-view-mode="desktop"] .site-nav {
-        gap: 0.42rem;
-        overflow: visible;
-      }
-
-      html[data-view-mode="desktop"] .section-grid,
-      html[data-view-mode="desktop"] .contact-grid {
-        grid-template-columns: minmax(15rem, 0.8fr) minmax(0, 1.2fr);
-        gap: 3rem;
-        align-items: start;
-      }
-
-      html[data-view-mode="desktop"] .hero-stage {
-        grid-template-columns: minmax(0, 1.14fr) minmax(18rem, 0.76fr);
-        grid-template-areas:
-          "main portrait"
-          "credentials portrait";
-        min-height: clamp(32rem, 64vh, 42rem);
-      }
-
-      html[data-view-mode="desktop"] .signal-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      html[data-view-mode="desktop"] .signal-item--wide {
-        grid-column: span 2;
-      }
-
-      html[data-view-mode="desktop"] .current-layout {
-        grid-template-columns: minmax(15rem, 0.72fr) minmax(0, 1.28fr);
-        gap: clamp(1.4rem, 3vw, 2.4rem);
-      }
-
-      html[data-view-mode="desktop"] .current-secondary {
-        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-      }
-
-      html[data-view-mode="desktop"] .hero-aside {
-        align-self: stretch;
-        justify-self: stretch;
-      }
-
-      html[data-view-mode="desktop"] .headshot-shell {
-        width: 100%;
-      }
-
-      html[data-view-mode="desktop"] .hero-profile {
-        width: 100%;
-      }
-
-      html[data-view-mode="desktop"] .work-layout {
-        grid-template-columns: minmax(0, 1.12fr) minmax(17rem, 0.88fr);
-        align-items: start;
-      }
-
-      html[data-view-mode="desktop"] .subpage-layout {
-        grid-template-columns: minmax(0, 1.08fr) minmax(17rem, 0.92fr);
-        align-items: start;
-      }
-
-      html[data-view-mode="desktop"] .work-details .detail-list {
-        grid-template-columns: 1fr;
-      }
-
-      html[data-view-mode="desktop"] .compact-grid,
-      html[data-view-mode="desktop"] .teaser-grid,
-      html[data-view-mode="desktop"] .proof-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      html[data-view-mode="phone"] {
-        --section-space: clamp(3rem, 9vw, 4.2rem);
-        --site-header-offset: 6.75rem;
-      }
-
-      html[data-view-mode="phone"] .site-header {
-        --header-height-expanded: 5.45rem;
-        --header-height-compact: 5.15rem;
-        --phone-nav-gap: 0.28rem;
-        --phone-control-height: 2.32rem;
-      }
-
-      html[data-view-mode="phone"] .header-row {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        align-items: start;
-        column-gap: var(--phone-nav-gap);
-        row-gap: 0.42rem;
-        padding: 0.48rem 0 0.58rem;
-      }
-
-      html[data-view-mode="phone"] .site-name {
-        grid-column: 1 / span 2;
-        align-self: start;
-        min-height: var(--phone-control-height);
-      }
-
-      html[data-view-mode="phone"] .brand-lockup {
-        justify-content: flex-start;
-        gap: 0.48rem;
-        height: var(--phone-control-height);
-      }
-
-      html[data-view-mode="phone"] .brand-mark {
-        height: var(--phone-control-height);
-        max-width: 100%;
-      }
-
-      html[data-view-mode="phone"] .brand-logo {
-        max-width: 100%;
-      }
-
-      html[data-view-mode="phone"] .brand-wordmark {
-        display: grid;
-      }
-
-      html[data-view-mode="phone"] .brand-name {
-        font-size: 0.78rem;
-        letter-spacing: 0;
-      }
-
-      html[data-view-mode="phone"] .brand-support {
-        display: block;
-        font-size: 0.48rem;
-        letter-spacing: 0;
-      }
-
-      html[data-view-mode="phone"] .header-actions-shell {
-        display: contents;
-      }
-
-      html[data-view-mode="phone"] .header-tools {
-        grid-column: 3 / -1;
-        width: 100%;
-        max-width: 8.4rem;
-        min-width: 0;
-        justify-self: start;
-        align-self: start;
-      }
-
-      html[data-view-mode="phone"] .control-group {
-        width: 100%;
-        gap: 0;
-        min-width: 0;
-      }
-
-      html[data-view-mode="phone"] .control-label {
-        display: none;
-      }
-
-      html[data-view-mode="phone"] .segmented-control {
-        width: 100%;
-        max-width: 100%;
-        padding: 0.18rem;
-      }
-
-      html[data-view-mode="phone"] .control-button {
-        flex: 1 1 0;
-        min-width: 0;
-        min-height: var(--phone-control-height);
-        padding: 0.42rem 0;
-        font-size: 0.7rem;
-      }
-
-      html[data-view-mode="phone"] .site-nav {
-        grid-column: 1 / -1;
-        display: grid;
-        width: 100%;
-        max-width: 22.35rem;
-        min-width: 0;
-        justify-self: start;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: var(--phone-nav-gap);
-        overflow: visible;
-        padding-bottom: 0;
-      }
-
-      html[data-view-mode="phone"] .site-nav a {
-        min-width: 0;
-        min-height: var(--phone-control-height);
-        padding: 0.48rem 0.12rem;
-        border: 1px solid rgba(47, 75, 85, 0.14);
-        background: rgba(251, 250, 247, 0.72);
-        font-size: 0.68rem;
-        line-height: 1.14;
-        text-align: center;
-      }
-
-      html[data-view-mode="phone"] .section-grid,
-      html[data-view-mode="phone"] .contact-grid {
-        gap: 1.1rem;
-      }
-
-      html[data-view-mode="phone"] .hero-stage {
-        grid-template-areas:
-          "main"
-          "portrait"
-          "credentials";
-        min-height: auto;
-        gap: 0.78rem;
-        padding: 0.72rem;
-      }
-
-      html[data-view-mode="phone"] .hero-main {
-        grid-area: main;
-        width: 100%;
-        max-width: 100%;
-        gap: 0.88rem;
-        justify-self: stretch;
-      }
-
-      html[data-view-mode="phone"] .hero-aside {
-        grid-area: portrait;
-        width: 100%;
-        max-width: 100%;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          "photo"
-          "details";
-        gap: 0.66rem;
-        align-items: stretch;
-        padding: 0.58rem;
-      }
-
-      html[data-view-mode="phone"] .hero-main h1 {
-        max-width: min(100%, 7.8ch);
-        font-size: clamp(2.45rem, 10.2vw, 3.42rem);
-        line-height: 0.9;
-      }
-
-      html[data-view-mode="phone"] .hero-role {
-        max-width: min(100%, 20.5rem);
-        font-size: 1rem;
-        line-height: 1.5;
-      }
-
-      html[data-view-mode="phone"] .hero-identity,
-      html[data-view-mode="phone"] .hero-actions,
-      html[data-view-mode="phone"] .hero-evidence,
-      html[data-view-mode="phone"] .hero-detail-stack,
-      html[data-view-mode="phone"] .hero-profile,
-      html[data-view-mode="phone"] .hero-practice {
-        width: 100%;
-        max-width: 100%;
-      }
-
-      html[data-view-mode="phone"] .hero-intro p,
-      html[data-view-mode="phone"] .work-body p,
-      html[data-view-mode="phone"] .contact-card p,
-      html[data-view-mode="phone"] .detail-item p,
-      html[data-view-mode="phone"] .signal-text {
-        font-size: 0.96rem;
-        line-height: 1.64;
-      }
-
-      html[data-view-mode="phone"] .signal-list {
-        grid-template-columns: 1fr;
-        gap: 0.55rem;
-      }
-
-      html[data-view-mode="phone"] .hero-evidence {
-        grid-area: credentials;
-      }
-
-      html[data-view-mode="phone"] .signal-item--wide {
-        grid-column: 1 / -1;
-      }
-
-      html[data-view-mode="phone"] .signal-item,
-      html[data-view-mode="phone"] .work-body,
-      html[data-view-mode="phone"] .work-details,
-      html[data-view-mode="phone"] .contact-card {
-        padding: 1rem;
-      }
-
-      html[data-view-mode="phone"] .signal-item {
-        gap: 0.32rem;
-        min-height: auto;
-        padding: 0.84rem 0.88rem;
-      }
-
-      html[data-view-mode="phone"] .signal-label {
-        font-size: 0.64rem;
-      }
-
-      html[data-view-mode="phone"] .signal-text {
-        font-size: 0.9rem;
-        line-height: 1.52;
-      }
-
-      html[data-view-mode="phone"] .hero-aside {
-        max-width: none;
-      }
-
-      html[data-view-mode="phone"] .headshot-shell {
-        grid-area: photo;
-        width: min(100%, 17.5rem);
-        padding: 0.42rem;
-        align-self: start;
-        justify-self: center;
-      }
-
-      html[data-view-mode="phone"] .headshot-stage {
-        width: 100%;
-        aspect-ratio: 4 / 5;
-        max-height: 18.25rem;
-        background-position: center, center 16%;
-      }
-
-      html[data-view-mode="phone"] .hero-profile {
-        padding: 0.92rem 0.96rem;
-      }
-
-      html[data-view-mode="phone"] .hero-profile .detail-list {
-        gap: 0.58rem;
-      }
-
-      html[data-view-mode="phone"] .hero-profile .detail-item {
-        gap: 0.3rem;
-        padding-top: 0.6rem;
-      }
-
-      html[data-view-mode="phone"] .hero-profile .detail-item p {
-        font-size: 0.88rem;
-        line-height: 1.48;
-      }
-
-      html[data-view-mode="phone"] .hero-practice {
-        padding: 0.92rem 0.96rem;
-      }
-
-      html[data-view-mode="phone"] .hero-detail-stack {
-        grid-area: details;
-        gap: 0.56rem;
-      }
-
-      html[data-view-mode="phone"] .hero-practice .detail-list {
-        gap: 0;
-      }
-
-      html[data-view-mode="phone"] .hero-practice .detail-item {
-        gap: 0.3rem;
-      }
-
-      html[data-view-mode="phone"] .hero-practice .detail-item p {
-        font-size: 0.9rem;
-        line-height: 1.5;
-        max-width: none;
-      }
-
-      html[data-view-mode="phone"] .hero-actions {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.62rem;
-        max-width: min(100%, 21.5rem);
-      }
-
-      html[data-view-mode="phone"] .hero-actions .button,
-      html[data-view-mode="phone"] .hero-actions .text-link {
-        min-width: 0;
-        width: 100%;
-        min-height: 3.05rem;
-        padding: 0.82rem 0.9rem;
-        white-space: normal;
-      }
-
-      html[data-view-mode="phone"] .section-heading h2 {
-        font-size: clamp(2rem, 7vw, 2.8rem);
-      }
-
-      html[data-view-mode="phone"] #icu .section-heading h2,
-      html[data-view-mode="phone"] #ltc .section-heading h2 {
-        font-size: clamp(2.5rem, 8.4vw, 3.5rem);
-      }
-
-      html[data-view-mode="phone"] .section-subtitle {
-        padding-top: 1rem;
-      }
-
-      html[data-view-mode="phone"] .section-stack {
-        gap: 1rem;
-      }
-
-      html[data-view-mode="phone"] .compact-grid,
-      html[data-view-mode="phone"] .teaser-grid,
-      html[data-view-mode="phone"] .proof-grid {
-        grid-template-columns: 1fr;
-      }
-
-      html[data-view-mode="phone"] .current-layout {
-        grid-template-columns: 1fr;
-        gap: 0.82rem;
-      }
-
-      html[data-view-mode="phone"] .current-secondary {
-        grid-template-columns: 1fr;
-      }
-
-      html[data-view-mode="phone"] .current-card--pursuits {
-        min-height: 0;
-      }
-
-      html[data-view-mode="phone"] .panel {
-        box-shadow: var(--shadow-tight);
-      }
-
-      html[data-view-mode="phone"] .section-subtitle {
-        padding-top: 0.9rem;
-      }
-
-      html[data-view-mode="phone"] .super-link {
-        width: 100%;
-        min-height: 3rem;
-        justify-content: space-between;
-        padding: 0.7rem 0.94rem;
-      }
-
-      html[data-view-mode="phone"] .current-card {
-        gap: 0.72rem;
-      }
-
-      html[data-view-mode="phone"] .current-card h3 {
-        font-size: 1.2rem;
-      }
-
-      html[data-view-mode="phone"] .current-card-text {
-        font-size: 0.92rem;
-        line-height: 1.52;
-      }
-
-      html[data-view-mode="phone"] .stacked-links {
-        gap: 0.58rem;
-      }
-
-      html[data-view-mode="phone"] .stack-link {
-        min-height: 2.95rem;
-        padding: 0.76rem 0.9rem;
-        font-size: 0.88rem;
-      }
-
-      html[data-view-mode="phone"] .current-list-item {
-        padding: 0.6rem 0;
-        font-size: 0.86rem;
-        line-height: 1.46;
-      }
-
-      html[data-view-mode="phone"] .work-layout,
-      html[data-view-mode="phone"] .subpage-layout {
-        gap: 0.88rem;
-      }
-
-      html[data-view-mode="phone"] .work-body {
-        gap: 0.82rem;
-      }
-
-      html[data-view-mode="phone"] .work-body-block h3 {
-        font-size: 0.84rem;
-      }
-
-      html[data-view-mode="phone"] .work-details .detail-list {
-        gap: 0.72rem;
-      }
-
-      html[data-view-mode="phone"] .contact-card {
-        max-width: none;
-      }
-
-      html[data-view-mode="phone"] .contact-actions {
-        gap: 0.8rem;
-      }
-
-      html[data-view-mode="phone"] .contact-mail {
-        width: 100%;
-        justify-content: center;
-      }
-
-      html[data-view-mode="phone"] .closing-links {
-        display: grid;
-        gap: 0.62rem;
-      }
-
-      html[data-view-mode="phone"] main section {
-        scroll-margin-top: calc(var(--site-header-offset) + 0.9rem);
-      }
-
-      html[data-view-mode="phone"] .footer-row {
-        min-height: 6.25rem;
-        column-gap: 0.82rem;
-        row-gap: 0.42rem;
-      }
-
-      html[data-view-mode="phone"] .footer-summary {
-        max-width: min(18rem, calc(100% - 6.8rem));
-      }
-
-      html[data-view-mode="phone"] .footer-note {
-        max-width: min(14rem, 50vw);
-      }
-
-      html[data-view-mode="phone"] .footer-logo {
-        width: clamp(5.6rem, 28vw, 6.5rem);
-      }
-
-      html[data-view-mode="phone"] .current-card,
-      html[data-view-mode="phone"] .subpage-note {
-        padding: 1rem;
-      }
-
-      html[data-view-mode="phone"] .work-details .detail-list {
-        grid-template-columns: 1fr;
-      }
-
-      html[data-view-mode="phone"] .work-details .detail-item,
-      html[data-view-mode="phone"] .compact-grid .proof-item,
-      html[data-view-mode="phone"] .teaser-card {
-        box-shadow: none;
-      }
-
-      @media (min-aspect-ratio: 16 / 10) and (min-width: 980px) {
-        .hero-stage {
-          min-height: clamp(31rem, 60vh, 40rem);
-        }
-      }
-
-      @media (max-width: 389px) {
-        html[data-view-mode="phone"] .hero-aside {
-          grid-template-columns: 1fr;
-          grid-template-areas:
-            "photo"
-            "details";
-        }
-
-        html[data-view-mode="phone"] .hero-actions {
-          grid-template-columns: 1fr;
-        }
-
-        html[data-view-mode="phone"] .current-layout {
-          grid-template-columns: 1fr;
-        }
-
-        html[data-view-mode="phone"] .current-secondary {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @media (max-aspect-ratio: 10 / 16) {
         .hero {
-          padding-top: 1.2rem;
+          padding-top: 1.4rem;
         }
 
-        .hero-stage {
+        .hero-copy {
+          padding: 1.22rem;
+        }
+
+        .hero h1 {
+          font-size: clamp(2.75rem, 13.8vw, 4.15rem);
+          line-height: 0.96;
+        }
+
+        .education-grid,
+        .language-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .portrait-panel {
+          min-height: 25rem;
+        }
+
+        .section-heading h2 {
+          font-size: clamp(2.2rem, 11.5vw, 3.15rem);
+          line-height: 0.95;
+          max-width: 100%;
+        }
+
+        .domain-list,
+        .practice-story-board,
+        .index-table {
+          grid-template-columns: 1fr;
+        }
+
+        .timeline-item,
+        .practice-story-intro {
+          grid-template-columns: 1fr;
+          gap: 0.75rem;
+        }
+
+        .index-line {
           min-height: auto;
+        }
+
+        .footer-row {
+          grid-template-columns: minmax(0, 1fr) auto;
+        }
+
+        .footer-logo {
+          width: 5.6rem;
         }
       }
 
@@ -2323,516 +1423,560 @@
           scroll-behavior: auto;
         }
 
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+
         .reveal,
         .reveal.is-visible,
-        .button,
-        .text-link,
         .skip-link,
-        .site-header,
-        .header-row,
-        .header-actions-shell,
-        .brand-mark,
-        .control-button,
-        .site-nav a {
-          transition: none;
-          transform: none;
+        .language-control button:hover,
+        .site-nav a:hover,
+        .button:hover,
+        .text-link:hover,
+        .button:focus-visible,
+        .text-link:focus-visible,
+        .identity-item:hover,
+        .domain-row:hover,
+        .story-card:hover,
+        .timeline-item:hover,
+        .index-line:hover,
+        .systems-link:hover,
+        .contact-mail:hover,
+        .footer-logo:hover,
+        .signal-pill:hover,
+        .signal-token:hover,
+        .motion-ready .reveal:not(.is-visible) {
           opacity: 1;
+          transform: none;
         }
       }
     </style>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <main class="noscript-fallback" id="main-content" tabindex="-1">
+        <span class="eyebrow">Fresh Clinical Signal</span>
+        <h1>Shaoting He, RN</h1>
+        <p>Critical care judgment, senior-health continuity, bilingual clinical communication, and practical systems support.</p>
+        <section aria-label="Clinical practice fallback">
+          <h2>Clinical Practice</h2>
+          <p>RN practice shaped by ICU monitoring, senior-health continuity, cross-system clinical context, and documentation discipline.</p>
+        </section>
+        <section aria-label="Signal fallback">
+          <h2>Capability Signals</h2>
+          <p>Critical care, cardiac rhythm awareness, senior health, bilingual communication, and practical clinical systems.</p>
+        </section>
+        <section aria-label="Experience fallback">
+          <h2>Experience Flow</h2>
+          <p>Selected clinical contexts include ICU, senior-health continuity, supervised internal medicine practice in China, surgical/short stay, and student placements.</p>
+        </section>
+        <section aria-label="Systems fallback">
+          <h2>Systems Support</h2>
+          <p>Technical practice remains secondary: small tools and follow-through habits support clinical communication and documentation clarity.</p>
+        </section>
+        <a class="button" href="mailto:shaotinghe2037@gmail.com">shaotinghe2037@gmail.com</a>
+      </main>
+    </div>
     <script>
       (function () {
         "use strict";
 
-        var STORAGE_KEYS = {
-          language: "site:language"
-        };
+        var STORAGE_KEY = "site:language";
         var LANGUAGES = ["en", "zh-Hans"];
-        var appRoot = document.getElementById("app");
-        var state = {
-          language: getInitialLanguage(),
-          effectiveViewMode: "desktop",
-          page: getCurrentPage()
-        };
-        var teardownCurrentSectionObserver = null;
+        var app = document.getElementById("app");
+        var state = { language: getInitialLanguage() };
+        var teardownActiveNav = null;
 
         var CONTENT = {
           en: {
             meta: {
-              siteName: "Shaoting He (Julius)",
-              title: "Shaoting He (Julius) | Registered Nurse",
+              siteName: "Shaoting He, RN",
+              role: "Registered Nurse",
+              title: "Shaoting He, RN | Fresh Clinical Signal",
               description:
-                "Clinical background, current focus, senior-health perspective, and professional contact for Shaoting He (Julius), a Registered Nurse based in Toronto.",
-              ogTitle: "Shaoting He (Julius) | Registered Nurse",
+                "Fresh Clinical Signal for Shaoting He, RN, focused on critical care judgment, senior-health continuity, bilingual clinical communication, and practical systems support.",
               ogDescription:
-                "Clinical background, current focus, senior-health perspective, and professional contact for Shaoting He (Julius), Registered Nurse.",
-              pageMeta: {
-                pursuits: {
-                  title: "Shaoting He (Julius) | Professional Direction",
-                  description: "This page outlines the professional direction currently receiving the most attention, including full-time RN search and technical systems practice."
-                },
-                presence: {
-                  title: "Shaoting He (Julius) | My Presence",
-                  description: "This page will gather Shaoting He (Julius)’s public-facing channels over time, including writing, interviews, talks, and other selected appearances."
-                },
-                learning: {
-                  title: "Shaoting He (Julius) | Current Study",
-                  description: "This page captures the fields and questions Shaoting He (Julius) is actively studying to deepen judgment, domain understanding, and long-term work."
-                }
-              }
+                "A clinical dossier for RN practice shaped by ICU monitoring, senior-health continuity, bilingual communication, and practical workflow systems."
             },
             ui: {
-              skipLink: "Skip to content",
-              controlsLabel: "Language controls",
-              viewLabel: "View",
-              languageLabel: "Language",
-              viewModes: {
-                auto: "Auto",
-                desktop: "Desktop",
-                phone: "Phone"
-              },
-              languages: {
-                en: "EN",
-                "zh-Hans": "中文"
-              },
-              primaryNavLabel: "Primary",
-              nav: {
-                current: "Current Focus",
-                icu: "ICU",
-                ltc: "Senior Health",
-                contact: "Contact"
-              },
-              navCompact: {
-                current: "Focus",
-                icu: "ICU",
-                ltc: "Senior",
-                contact: "Contact"
-              },
-              openPage: "Open page",
-              backToCurrent: "Back to Current Focus"
+              skip: "Skip to content",
+              language: "Language",
+              navLabel: "Primary",
+              nav: [
+                ["practice", "Clinical Practice"],
+                ["capability", "Signals"],
+                ["timeline", "Experience"],
+                ["education", "Current Study"],
+                ["language", "Languages"],
+                ["systems", "Systems"],
+                ["contact", "Contact"]
+              ]
             },
             hero: {
-              eyebrow: "Registered Nurse | Toronto",
-              title: "Shaoting He (Julius)",
-              role: "Registered Nurse with experience across intensive care, senior health, community care, and internal medicine.",
-              intro: "",
-              mobileIntro: "",
-              portraitAriaLabel: "Professional headshot of Shaoting He (Julius)",
-              profileAriaLabel: "Professional details",
-              signals: [
-                {
-                  label: "Licensure",
-                  size: "wide",
-                  lines: [
-                    [
-                      { strong: true, text: "Registered Nurse" },
-                      { text: " - College of Nurses of Ontario" }
-                    ],
-                    [
-                      { strong: true, text: "Nursing Registration" },
-                      { text: " in People’s Republic of China" }
-                    ]
-                  ]
-                },
-                { label: "Education", text: "TMU BScN, Minor in Psychology" },
-                { label: "Training", text: "Centennial College Intensive Care Training" },
-                {
-                  label: "Multilingual",
-                  size: "wide",
-                  lines: [
-                    "English — Professional",
-                    "Mandarin — Native",
-                    "French — A2",
-                    "Spanish — A1"
-                  ]
-                }
-              ],
+              eyebrow: "Fresh Clinical Signal",
+              title: "Critical care nurse focused on bedside clarity.",
+              titleTail: "",
+              role:
+                "RN practice shaped by ICU monitoring, senior-health continuity, bilingual communication, and cross-system clinical judgment.",
+              intro:
+                "I bring calm observation, disciplined documentation, and practical follow-through to high-acuity and complex-care settings.",
+              portraitLabel: "Shaoting He, RN",
+              portraitText: "Critical care judgment with steady clinical communication.",
               actions: [
-                { label: "Intensive Care", href: "#icu" },
-                { label: "Contact", href: "#contact" }
+                ["#practice", "Clinical Practice"],
+                ["#contact", "Contact"]
               ],
-              profileDetails: [
-                { label: "Based in", text: "Toronto, Ontario" },
-                { label: "Care settings", text: "ICU, cardiology, telemetry, internal medicine, geriatric care, senior health, community care, and cross-border clinical practice." },
-                { label: "Practice style", text: "Structured clinical observation, pattern recognition, disciplined documentation, care planning, interdisciplinary coordination, and calm escalation when patient status changes." }
+              identity: [
+                ["RN", "NSCN"],
+                ["Critical Care", "ICU practice context"],
+                ["Training", "BLS / ACLS · Coronary Care 1"],
+                ["Clinical Signal", "Hemodynamics · rhythm · escalation"]
               ]
             },
-            current: {
-              eyebrow: "Current",
-              title: "Current Focus",
-              summary: "Focused work, selected public links, and the study threads shaping the next chapter.",
-              pursuits: {
-                title: "Professional Direction",
-                lead: "Two current tracks: the full-time RN search and a disciplined technical systems practice.",
-                buttons: [
-                  {
-                    label: "Full-Time RN Search",
-                    href: "main-quest.html",
-                    toneClass: "stack-link--primary-direction"
-                  },
-                  {
-                    label: "Technical Systems Practice",
-                    href: "side-quest.html",
-                    toneClass: "stack-link--secondary-practice"
-                  }
-                ]
-              },
-              presence: {
-                title: "Professional Presence",
-                lead: "A quiet public footprint, kept useful.",
-                links: [
-                  {
-                    label: "Instagram",
-                    href: "https://www.instagram.com/juljulio_he?igsh=Mm4zcWVrMXU4ZHlo&utm_source=qr"
-                  },
-                  {
-                    label: "LinkedIn",
-                    href: "https://www.linkedin.com/in/shaoting-he-10a141179/"
-                  }
-                ]
-              },
-              learning: {
-                title: "Current Study",
-                lead: "Hemodynamics, older-adult risk patterns, and documentation discipline remain central.",
+            sections: {
+              practice: {
+                eyebrow: "Practice Domains",
+                title: "What I bring to patient care.",
+                summary:
+                  "The through-line is clear observation, careful escalation, and documentation that keeps complex care understandable.",
                 items: [
-                  "InterRAI-CHA on CIHI",
-                  "NURS-8963: Transition to Nursing Practice",
-                  "ECG course on Coursera"
+                  {
+                    title: "Critical care judgment",
+                    text:
+                      "Bedside practice shaped by ICU monitoring, hemodynamic and cardiac signals, respiratory support exposure, neurological assessment, and escalation.",
+                    detail:
+                      "Practice context: 3WG Intensive Care Unit and ICU student placement.",
+                    signals: ["Hemodynamics", "Rhythm / ECG", "Ventilation exposure", "Escalation"]
+                  },
+                  {
+                    title: "Senior-health continuity",
+                    text:
+                      "Older-adult care shaped by dementia, dysphagia, aphasia, falls risk, pressure injury prevention, infection control, family communication, and ADL support.",
+                    detail:
+                      "Practice context: Senior Health Centre, long-term care, and complex chronic needs.",
+                    signals: ["Dementia", "Dysphagia / aphasia", "Falls risk", "Family clarity"]
+                  },
+                  {
+                    title: "Cross-system communication",
+                    text:
+                      "Canadian and Chinese clinical environments support internal medicine perspective, Mandarin clinical review, dialect-aware elderly patient communication, and care-plan clarity.",
+                    detail:
+                      "Practice context: supervised internal medicine practice in China and Canadian RN practice.",
+                    signals: ["Mandarin review", "Care plans", "Patient education", "System awareness"]
+                  }
+                ],
+                storyLabel: "Practice Stories",
+                storySummary:
+                  "Compact examples of how the clinical signal shows up at bedside.",
+                stories: [
+                  {
+                    title: "Change recognition",
+                    text:
+                      "Vital signs, rhythm, work of breathing, neuro status, and bedside behavior are read together before escalation."
+                  },
+                  {
+                    title: "Family and patient clarity",
+                    text:
+                      "Older-adult care uses plain language, dignity, and repeated checks for what the patient and family understood."
+                  },
+                  {
+                    title: "Documentation discipline",
+                    text:
+                      "Handoffs and notes are written so concern, action, and follow-up are visible without guesswork."
+                  }
                 ]
               },
-              pillars: [],
-              pages: {}
-            },
-            icu: {
-              eyebrow: "Fast-Paced Critical Care",
-              title: "Intensive Care",
-              summary: "Acute-care experience in intensive care, with focus on monitoring, medication titration, ventilation support, neurological assessment, rhythm interpretation, escalation, and interdisciplinary coordination.",
-              body: [
-                {
-                  heading: "Monitoring and Response",
-                  paragraphs: [
-                    "Continuous cardiac and hemodynamic monitoring, rhythm interpretation, and prompt escalation when patient status changes."
-                  ]
-                },
-                {
-                  heading: "Critical Care Management",
-                  paragraphs: [
-                    "Experience with vasoactive medication titration, ventilated and sedated patients, neurological assessment, and high-acuity documentation."
-                  ]
-                },
-                {
-                  heading: "Team and Family Care",
-                  paragraphs: [
-                    "Interdisciplinary coordination with intensivists and care teams, including code response participation and end-of-life support for patients and families."
-                  ]
-                }
-              ],
-              mobileBody:
-                "At Markham Stouffville Hospital’s Intensive Care Unit, care included continuous monitoring, rhythm interpretation, medication titration, ventilated patient support, neurological assessment, escalation, and interdisciplinary coordination.",
-              detailsAriaLabel: "ICU details",
-              details: [
-                { label: "Lead Role / Unit", text: "Registered Nurse, Markham Stouffville Hospital ICU, providing high-acuity bedside nursing with frequent reassessment and disciplined charting." },
-                { label: "Monitoring & Rhythm", text: "Continuous hemodynamic and cardiac monitoring, ECG and rhythm interpretation, arrhythmia recognition, and neurological assessment." },
-                { label: "High-Risk Medication & Ventilation", text: "Vasoactive, inotrope, dopamine, and other high-alert medication titration, with mechanical ventilation and sedation support." },
-                { label: "Response, Escalation & Family Care", text: "Prompt escalation to intensivists, code blue / ACLS assistance, interdisciplinary ICU coordination, end-of-life care, family support, and post-mortem care." }
-              ]
-            },
-            ltc: {
-              eyebrow: "Community and LTC",
-              title: "Senior Health",
-              summary:
-                "Senior-health experience across long-term care, geriatric internal medicine, and supportive care, with attention to dementia, dysphagia, ADLs, fall prevention, pressure injury prevention, continence awareness, and family-centred care.",
-              body: [
-                {
-                  heading: "Daily Care and Safety",
-                  paragraphs: [
-                    "Support for older adults with ADLs, mobility, feeding, continence-related care, fall prevention, and pressure injury prevention."
-                  ]
-                },
-                {
-                  heading: "Complex Needs",
-                  paragraphs: [
-                    "Experience caring for patients with dementia, dysphagia, aphasia, and medical complexity, with close attention to change-in-condition recognition."
-                  ]
-                },
-                {
-                  heading: "Communication and Dignity",
-                  paragraphs: [
-                    "Clear SBAR communication, calm de-escalation, family-centred care, and practical attention to dignity, comfort, and safe transitions."
-                  ]
-                }
-              ],
-              mobileBody:
-                "Senior-health practice includes dementia care, dysphagia precautions, ADL support, fall prevention, pressure injury prevention, early change recognition, SBAR communication, and family-centred care.",
-              detailsAriaLabel: "Senior health details",
-              details: [
-                { label: "Setting & Population", text: "North York General Hospital Senior Health Center, community support, and geriatric care focused on older adults with complex functional and cognitive needs." },
-                { label: "Daily Care & Support", text: "ADLs, dementia care, dysphagia support, continence care, Foley and intermittent catheter care, and wound / skin care." },
-                { label: "Safety & Change Recognition", text: "Fall prevention, pressure injury prevention, environmental risk awareness, and early change-in-condition recognition across facility and home settings." },
-                { label: "SBAR & Family Communication", text: "SBAR reporting, calm de-escalation, dignity advocacy, family-centred communication, and community / home-care safety awareness." }
-              ],
-              communityTitle: "Community PSW / Senior Health / Community Care Experience",
-              communitySummary: "Community-care experience involving home visits, environmental risk awareness, transfer safety, and practical support for vulnerable adults living outside institutional settings.",
-              communityBody: [
-                "Community-based work included home visits for adults with complex needs, with attention to mobility, transfer safety, skin integrity concerns, medication-related issues, and hazards within the home environment.",
-                "The role required close observation, practical problem-solving, and timely escalation when risk increased.",
-                "Communication with patients, families, and care teams needed to be direct, calm, and focused on safe next steps."
-              ]
-            },
-            contact: {
-              eyebrow: "",
-              title: "Professional Contact",
-              summary: "Open to relevant nursing opportunities and thoughtful professional connection.",
-              cardText: "Based in Toronto. For relevant nursing opportunities, introductions, or professional correspondence, email is the clearest way to reach me.",
-              location: "Toronto, Ontario",
-              email: "shaotinghe2037@gmail.com",
-              chipsAriaLabel: "Professional contact notes",
-              chips: [
-                { label: "Resume available on request" }
-              ]
+              timeline: {
+                eyebrow: "Motion Timeline",
+                title: "Clinical experience flow.",
+                summary:
+                  "Selected roles are grouped as a formation path: high-acuity observation, older-adult continuity, and cross-system practice.",
+                aside:
+                  "Clinical judgment formed through repeated observation, clear escalation, and documentation that carries the next step.",
+                asideList: ["Acute deterioration", "Older-adult continuity", "Cross-system review", "Clear handoff trail"],
+                items: [
+                  {
+                    kicker: "Registered Nurse",
+                    title: "Markham Stouffville Hospital - 3WG Intensive Care Unit",
+                    text:
+                      "Critical care monitoring, reassessment, rhythm-aware documentation, escalation, and unit coordination.",
+                    signals: ["ICU", "Monitoring", "Escalation"]
+                  },
+                  {
+                    kicker: "Supervised Practice",
+                    title: "Youyu County Hospital of Chinese Medicine - 3F Internal Medicine",
+                    text:
+                      "Internal medicine practice in China with Mandarin documentation review, patient education, and follow-up clarity.",
+                    signals: ["Internal medicine", "Mandarin review", "Education"]
+                  },
+                  {
+                    kicker: "Clinical Extern",
+                    title: "Markham Stouffville Hospital - Surgical / Short Stay",
+                    text:
+                      "Perioperative and short-stay support across observation, communication, and unit flow.",
+                    signals: ["Observation", "Unit flow", "Handoff"]
+                  },
+                  {
+                    kicker: "Senior Health",
+                    title: "North York General Hospital - Senior Health Centre",
+                    text:
+                      "Older-adult support across ADLs, dementia needs, fall prevention, pressure injury awareness, and family communication.",
+                    signals: ["Dementia", "Falls", "Family communication"]
+                  },
+                  {
+                    kicker: "ICU Placement",
+                    title: "Humber River Hospital - 6E Intensive Care Unit",
+                    text:
+                      "Placement exposure to ventilated patients, hemodynamic observation, neurological assessment, and documentation.",
+                    signals: ["Ventilation exposure", "Neuro checks", "Charting"]
+                  },
+                  {
+                    kicker: "Acute Care",
+                    title: "St. Michael's Hospital - Fracture Clinic and General Medicine",
+                    text:
+                      "Clinic and medicine placements across assessment, documentation, patient education, and care-team communication.",
+                    signals: ["Assessment", "Documentation", "Education"]
+                  }
+                ]
+              },
+              capability: {
+                eyebrow: "Signal Board",
+                title: "Capability groups.",
+                summary:
+                  "A compact board of grouped signals for quick clinical reading.",
+                groups: [
+                  {
+                    title: "Critical Care",
+                    items: ["Hemodynamic monitoring", "Ventilation and airway exposure", "Neurological reassessment", "Escalation readiness"],
+                    note: "Built around trend recognition and timely follow-through."
+                  },
+                  {
+                    title: "Cardiac / Rhythm",
+                    items: ["Rhythm interpretation", "ECG-aware notes", "Coronary Care 1", "BLS / ACLS training"],
+                    note: "Cardiac signal is documented in practical bedside language."
+                  },
+                  {
+                    title: "Senior Health",
+                    items: ["Dementia", "Dysphagia and aphasia", "Falls and pressure injury risk", "Chronic-disease continuity"],
+                    note: "Complex needs are handled with dignity and repeatable support."
+                  },
+                  {
+                    title: "Cross-System",
+                    items: ["Canada / China practice", "Internal medicine lens", "Mandarin clinical review", "Care-plan clarity"],
+                    note: "System differences become context for clearer decisions."
+                  },
+                  {
+                    title: "Communication",
+                    items: ["SBAR-style escalation", "Patient education", "Bilingual listening", "Family updates"],
+                    note: "Communication is treated as a safety tool, not an afterthought."
+                  },
+                  {
+                    title: "Systems Practice",
+                    items: ["Small tooling", "Revision habits", "Follow-up structure", "Workflow discipline"],
+                    note: "Technical work supports clinical clarity in a secondary track."
+                  }
+                ]
+              },
+              education: {
+                eyebrow: "Education & Registration",
+                title: "Credentials, without overstatement.",
+                summary:
+                  "A concise view of registration, education, critical care training, and current study.",
+                items: [
+                  ["Registered Nurse", "NSCN."],
+                  ["Bachelor of Science in Nursing", "Toronto Metropolitan University collaborative nursing program, minor in Psychology, graduated with Distinction."],
+                  ["Critical Care Education", "Centennial College Intensive Care Training Program and Coronary Care 1."],
+                  ["Current / Additional Learning", "Conestoga College NURS8963 Transition to Nursing Practice, ongoing; CIHI InterRAI LTCF Essentials 1 & 2."],
+                  ["Cross-System Registration Context", "China nursing registration examination context, framed at a public professional level."]
+                ]
+              },
+              language: {
+                eyebrow: "Language & Cross-Cultural Practice",
+                title: "Clinical communication across languages and systems.",
+                summary:
+                  "Language ability is presented as clinical context: clearer education, safer handoffs, and more precise listening.",
+                items: [
+                  ["English", "Professional clinical working proficiency."],
+                  ["Mandarin", "Mother tongue, including clinical and regulatory review context."],
+                  ["French", "A2 active learning."],
+                  ["Spanish", "A1 leisure learning."],
+                  ["Cross-Cultural Practice", "Canadian and Chinese clinical environments support flexible communication, dialect-aware elderly patient care, and awareness of system differences."]
+                ]
+              },
+              systems: {
+                eyebrow: "Technical Systems Support",
+                title: "Tools stay secondary to clinical clarity.",
+                summary:
+                  "This support track shows practical follow-through habits that help documentation, care-plan clarity, and continuity.",
+                featureTitle: "Secondary support track",
+                feature:
+                  "Small tools, revision habits, and checklists are useful when they make clinical communication easier to continue.",
+                links: [
+                  ["main-quest.html", "Professional Direction", "A concise note on current RN direction."],
+                  ["side-quest.html", "Technical Systems Practice", "Small tools and follow-through habits that support documentation clarity."]
+                ]
+              },
+              contact: {
+                eyebrow: "Contact",
+                title: "Professional contact.",
+                summary:
+                  "For relevant nursing opportunities, referrals, or professional exchange, email is the clearest channel.",
+                location: "Toronto, Ontario",
+                text:
+                  "Email is the preferred channel for relevant nursing opportunities, referrals, professional material requests, and professional exchange.",
+                email: "shaotinghe2037@gmail.com",
+                note: "Additional professional materials can be provided when relevant."
+              }
             },
             footer: {
-              text: "Registered Nurse focused on clinically reliable, calm, and useful work.",
+              text: "Registered Nurse focused on critical care judgment, senior-health continuity, and practical clinical systems.",
               copyright:
                 "Copyright © 2026 Shaoting He. All rights reserved. Content and design may not be reproduced without permission."
             }
           },
           "zh-Hans": {
             meta: {
-              siteName: "何少霆",
-              title: "何少霆 | 注册护士",
-              description: "何少霆的临床背景、当前重点、老年健康方向与专业联系信息；现居多伦多，为注册护士。",
-              ogTitle: "何少霆 | 注册护士",
-              ogDescription: "何少霆的临床背景、当前重点、老年健康方向与专业联系信息。",
-              pageMeta: {
-                pursuits: {
-                  title: "何少霆 | 专业方向",
-                  description: "此页概述何少霆当前最主要投入的专业方向，包括全职 RN 求职与技术系统实践。"
-                },
-                presence: {
-                  title: "何少霆 | 公开动态",
-                  description: "此页将逐步汇集何少霆对外公开的渠道，包括写作、访谈、演讲及其他精选公开内容。"
-                },
-                learning: {
-                  title: "何少霆 | 当前学习",
-                  description: "此页记录何少霆当前持续深入的学习方向与问题意识，以深化判断力、领域理解及长期工作能力。"
-                }
-              }
+              siteName: "何少霆 RN",
+              role: "注册护士",
+              title: "何少霆 RN | Fresh Clinical Signal",
+              description:
+                "何少霆 RN 的临床档案：聚焦重症判断、老年健康连续性、跨体系临床实践、双语沟通与实用系统工作。",
+              ogDescription:
+                "以 ICU 监测、老年健康连续性、双语沟通与实用工作流系统为线索的 RN 临床档案。"
             },
             ui: {
-              skipLink: "跳至主要内容",
-              controlsLabel: "语言控制",
-              viewLabel: "视图",
-              languageLabel: "语言",
-              viewModes: {
-                auto: "自动",
-                desktop: "桌面",
-                phone: "手机"
-              },
-              languages: {
-                en: "EN",
-                "zh-Hans": "中文"
-              },
-              primaryNavLabel: "主导航",
-              nav: {
-                current: "当前重点",
-                icu: "重症监护",
-                ltc: "老年健康",
-                contact: "联系"
-              },
-              navCompact: {
-                current: "重点",
-                icu: "重症",
-                ltc: "老年",
-                contact: "联系"
-              },
-              openPage: "查看页面",
-              backToCurrent: "返回当前重点"
+              skip: "跳至主要内容",
+              language: "语言",
+              navLabel: "主导航",
+              nav: [
+                ["practice", "临床实践"],
+                ["capability", "信号"],
+                ["timeline", "经历"],
+                ["education", "当前学习"],
+                ["language", "语言"],
+                ["systems", "系统"],
+                ["contact", "联系"]
+              ]
             },
             hero: {
-              eyebrow: "注册护士 | 多伦多",
-              title: "何少霆",
-              role: "具有重症监护、老年健康、社区照护及内科经验的注册护士。",
-              intro: "",
-              mobileIntro: "",
-              portraitAriaLabel: "何少霆的职业头像",
-              profileAriaLabel: "专业信息",
-              signals: [
-                {
-                  label: "执照与注册",
-                  size: "wide",
-                  lines: [
-                    [
-                      { strong: true, text: "注册护士" },
-                      { text: " - 安大略省护士学院" }
-                    ],
-                    [
-                      { strong: true, text: "护士执业注册" },
-                      { text: " - 中华人民共和国" }
-                    ]
-                  ]
-                },
-                { label: "教育背景", text: "多伦多都会大学护理学学士，辅修心理学" },
-                { label: "重症培训", text: "Centennial College 重症护理培训" },
-                {
-                  label: "多语能力",
-                  size: "wide",
-                  lines: [
-                    "英语：专业熟练",
-                    "普通话：母语",
-                    "法语：A2",
-                    "西班牙语：A1"
-                  ]
-                }
-              ],
+              eyebrow: "Fresh Clinical Signal",
+              title: "聚焦床旁清晰度的重症护士。",
+              titleTail: "",
+              role:
+                "RN 实践由 ICU 监测、老年健康连续性、双语沟通与跨体系临床判断共同塑造。",
+              intro:
+                "我把冷静观察、有纪律的记录与务实跟进带入高急性与复杂照护场景。",
+              portraitLabel: "何少霆，RN",
+              portraitText: "重症判断与稳定清晰的临床沟通。",
               actions: [
-                { label: "重症护理", href: "#icu" },
-                { label: "联系", href: "#contact" }
+                ["#practice", "临床实践"],
+                ["#contact", "联系"]
               ],
-              profileDetails: [
-                { label: "所在地", text: "加拿大安大略省多伦多" },
-                { label: "照护场景", text: "重症监护、心脏科、遥测监护、内科、老年照护、老年健康、社区照护及跨体系临床实践。" },
-                { label: "实践方式", text: "以结构化临床观察、模式识别、严谨记录、护理计划、跨专业协作与沉着升级处置为核心。" }
+              identity: [
+                ["RN", "NSCN"],
+                ["重症护理", "ICU 实践语境"],
+                ["训练", "BLS / ACLS · Coronary Care 1"],
+                ["临床信号", "血流动力学 · 心律 · 升级汇报"]
               ]
             },
-            current: {
-              eyebrow: "当前",
-              title: "当前重点",
-              summary: "当前投入、精选公开入口，以及塑造下一阶段工作的学习线索。",
-              pursuits: {
-                title: "专业方向",
-                lead: "目前有两条并行方向：寻找全职 RN 岗位，以及持续进行有纪律的技术系统实践。",
-                buttons: [
-                  {
-                    label: "全职 RN 求职",
-                    href: "main-quest.html",
-                    toneClass: "stack-link--primary-direction"
-                  },
-                  {
-                    label: "技术系统实践",
-                    href: "side-quest.html",
-                    toneClass: "stack-link--secondary-practice"
-                  }
-                ]
-              },
-              presence: {
-                title: "公开动态",
-                lead: "公开呈现保持安静克制，只保留真正有用的入口。",
-                links: [
-                  {
-                    label: "Instagram",
-                    href: "https://www.instagram.com/juljulio_he?igsh=Mm4zcWVrMXU4ZHlo&utm_source=qr"
-                  },
-                  {
-                    label: "LinkedIn",
-                    href: "https://www.linkedin.com/in/shaoting-he-10a141179/"
-                  }
-                ]
-              },
-              learning: {
-                title: "当前学习",
-                lead: "血流动力学、老年照护风险模式与记录纪律，仍是当前学习重点。",
+            sections: {
+              practice: {
+                eyebrow: "实践领域",
+                title: "我带入患者照护的能力。",
+                summary:
+                  "主线是清晰观察、谨慎升级汇报，以及让复杂照护更容易被接续理解的记录。",
                 items: [
-                  "InterRAI-CHA on CIHI",
-                  "NURS-8963: Transition to Nursing Practice",
-                  "ECG course on Coursera"
+                  {
+                    title: "重症判断",
+                    text:
+                      "床旁实践由 ICU 监测、血流动力学与心电信号、呼吸支持接触、神经系统评估和升级汇报共同塑造。",
+                    detail: "实践语境：3WG Intensive Care Unit 以及 ICU 学生实习。",
+                    signals: ["血流动力学", "心律 / ECG", "机械通气接触", "升级汇报"]
+                  },
+                  {
+                    title: "老年健康连续性",
+                    text:
+                      "老年照护经验涵盖失智、吞咽困难、失语、跌倒风险、压力性损伤预防、感染控制、家庭沟通与 ADL 支持。",
+                    detail: "实践语境：Senior Health Centre、长期照护及复杂慢性需求。",
+                    signals: ["失智", "吞咽困难 / 失语", "跌倒风险", "家庭沟通"]
+                  },
+                  {
+                    title: "跨体系沟通",
+                    text:
+                      "加拿大与中国临床环境支持内科视角、普通话临床材料审阅、面向老年患者的方言敏感沟通，以及护理计划清晰度。",
+                    detail: "实践语境：中国内科督导实践与加拿大 RN 实践。",
+                    signals: ["普通话审阅", "护理计划", "患者教育", "体系意识"]
+                  }
+                ],
+                storyLabel: "实践小片段",
+                storySummary:
+                  "几个简短例子，说明临床信号如何体现在床旁工作中。",
+                stories: [
+                  {
+                    title: "变化识别",
+                    text:
+                      "生命体征、心律、呼吸做功、神经状态和床旁行为会被放在一起阅读，再决定是否升级汇报。"
+                  },
+                  {
+                    title: "患者与家庭清晰度",
+                    text:
+                      "老年照护需要平实语言、尊严感，以及反复确认患者和家属真正理解了什么。"
+                  },
+                  {
+                    title: "记录纪律",
+                    text:
+                      "交接与记录让担忧点、已采取行动和后续计划清楚可见，减少下一位临床人员猜测。"
+                  }
                 ]
               },
-              pillars: [],
-              pages: {}
-            },
-            icu: {
-              eyebrow: "快节奏重症照护",
-              title: "重症护理",
-              summary: "具备重症急性护理经验，重点涵盖持续监测、药物滴定、机械通气支持、神经系统评估、节律判读、升级处置与跨专业协作。",
-              body: [
-                {
-                  heading: "监测与响应",
-                  paragraphs: [
-                    "持续进行心电与血流动力学监测、节律判读，并在患者状态变化时及时升级处置。"
-                  ]
-                },
-                {
-                  heading: "重症管理",
-                  paragraphs: [
-                    "具备血管活性药物滴定、机械通气与镇静患者支持、神经系统评估，以及高急性记录工作的经验。"
-                  ]
-                },
-                {
-                  heading: "团队与家属照护",
-                  paragraphs: [
-                    "与 intensivist 及照护团队进行跨专业协作，包括参与抢救反应，以及为患者和家属提供临终支持。"
-                  ]
-                }
-              ],
-              mobileBody:
-                "在 Markham Stouffville Hospital 重症监护病房，工作重点包括持续监测、节律判读、药物滴定、机械通气支持、神经系统评估、升级处置与跨专业协作。",
-              detailsAriaLabel: "重症监护详情",
-              details: [
-                { label: "核心角色与科室", text: "Markham Stouffville Hospital ICU 注册护士，负责高急性床旁护理、频繁再评估与严谨记录。" },
-                { label: "监测与节律", text: "持续血流动力学与心电监测、ECG 与节律判读、心律失常识别，以及神经系统评估。" },
-                { label: "高风险药物与呼吸支持", text: "血管活性药物、正性肌力药物、多巴胺及其他高警示药物滴定，并支持机械通气与镇静管理。" },
-                { label: "响应升级与家属照护", text: "及时向 intensivist 升级报告、Code Blue / ACLS 协助、ICU 协作、临终照护、家属支持与遗体护理。" }
-              ]
-            },
-            ltc: {
-              eyebrow: "社区与长期照护",
-              title: "老年健康",
-              summary: "具备老年健康、长期照护、老年内科与支持性照护经验，重点涵盖失智照护、吞咽困难、ADL 支持、跌倒预防、压力性损伤预防、失禁照护意识与以家庭为中心的照护。",
-              body: [
-                {
-                  heading: "日常照护与安全",
-                  paragraphs: [
-                    "为老年人提供 ADLs、移动、进食、失禁相关照护、跌倒预防与压力性损伤预防支持。"
-                  ]
-                },
-                {
-                  heading: "复杂需求",
-                  paragraphs: [
-                    "具备照护失智、吞咽困难、失语及病情复杂患者的经验，并密切关注病情变化识别。"
-                  ]
-                },
-                {
-                  heading: "沟通与尊严",
-                  paragraphs: [
-                    "保持清晰的 SBAR 沟通、沉着去激化、以家庭为中心的照护，并在尊严、舒适与安全转衔上给予务实关注。"
-                  ]
-                }
-              ],
-              mobileBody:
-                "老年健康实践涵盖失智照护、吞咽困难预防、ADL 支持、跌倒预防、压力性损伤预防、早期变化识别、SBAR 沟通与以家庭为中心的照护。",
-              detailsAriaLabel: "老年健康详情",
-              details: [
-                { label: "场景与对象", text: "North York General Hospital Senior Health Center、社区支持与老年照护工作，服务具有复杂功能与认知需求的老年人。" },
-                { label: "日常照护与支持", text: "ADLs、失智照护、吞咽困难支持、失禁照护、Foley 与间歇导尿相关照护，以及伤口 / 皮肤护理。" },
-                { label: "安全与变化识别", text: "跌倒预防、压力性损伤预防、环境风险识别，以及在机构与居家环境中的早期变化识别。" },
-                { label: "SBAR 与家属沟通", text: "SBAR 报告、沉着去激化、尊严倡导、以家庭为中心的沟通，以及社区 / 居家照护安全意识。" }
-              ],
-              communityTitle: "社区 PSW / 老年健康 / 社区照护经验",
-              communitySummary: "具备社区照护经验，涵盖入户访问、环境风险识别、转运安全，以及对机构外脆弱成人的务实支持。",
-              communityBody: [
-                "社区工作包括上门探访具有复杂需求的成人，关注其行动能力、转运安全、皮肤完整性、与用药相关的问题，以及家庭环境中的风险因素。",
-                "该角色要求细致观察、务实处理问题，并在风险上升时及时升级。",
-                "与患者、家属及照护团队的沟通需要直接、沉着，并聚焦于下一步的安全安排。"
-              ]
-            },
-            contact: {
-              eyebrow: "",
-              title: "专业联系",
-              summary: "欢迎相关护理机会、引荐与真诚的专业交流。",
-              cardText: "现居加拿大安大略省多伦多。如有相关护理机会、引荐或专业交流，电子邮件是最直接的联系方式。",
-              location: "加拿大安大略省多伦多",
-              email: "shaotinghe2037@gmail.com",
-              chipsAriaLabel: "联系说明",
-              chips: [
-                { label: "简历可按需提供" }
-              ]
+              timeline: {
+                eyebrow: "流动时间线",
+                title: "临床经历流。",
+                summary:
+                  "精选经历被组织为一条形成路径：高急性观察、老年连续性照护与跨体系实践。",
+                aside:
+                  "临床判断来自反复观察、清晰升级汇报，以及能承载下一步行动的记录。",
+                asideList: ["急性恶化", "老年连续性", "跨体系审阅", "清晰交接轨迹"],
+                items: [
+                  {
+                    kicker: "注册护士",
+                    title: "Markham Stouffville Hospital - 3WG Intensive Care Unit",
+                    text:
+                      "重症监测、再评估、心律相关记录、升级汇报与病区协作。",
+                    signals: ["ICU", "监测", "升级汇报"]
+                  },
+                  {
+                    kicker: "督导实践",
+                    title: "右玉县中医院 - 3F 内科",
+                    text:
+                      "中国内科实践，包含普通话记录审阅、患者教育与随访清晰度。",
+                    signals: ["内科", "普通话审阅", "患者教育"]
+                  },
+                  {
+                    kicker: "Clinical Extern",
+                    title: "Markham Stouffville Hospital - Surgical / Short Stay",
+                    text:
+                      "围手术期与短住院支持，包括观察、沟通与病区流转。",
+                    signals: ["观察", "病区流转", "交接"]
+                  },
+                  {
+                    kicker: "老年健康",
+                    title: "North York General Hospital - Senior Health Centre",
+                    text:
+                      "老年支持，包括 ADL、失智需求、跌倒预防、压力性损伤意识与家庭沟通。",
+                    signals: ["失智", "跌倒", "家庭沟通"]
+                  },
+                  {
+                    kicker: "ICU 实习",
+                    title: "Humber River Hospital - 6E Intensive Care Unit",
+                    text:
+                      "实习接触机械通气患者、血流动力学观察、神经系统评估与记录。",
+                    signals: ["机械通气接触", "神经评估", "记录"]
+                  },
+                  {
+                    kicker: "急性照护",
+                    title: "St. Michael's Hospital - Fracture Clinic and General Medicine",
+                    text:
+                      "门诊与内科实习，包含评估、记录、患者教育与团队沟通。",
+                    signals: ["评估", "记录", "教育"]
+                  }
+                ]
+              },
+              capability: {
+                eyebrow: "信号板",
+                title: "能力分组。",
+                summary:
+                  "将临床信号压缩成分组，便于快速阅读。",
+                groups: [
+                  {
+                    title: "重症监护",
+                    items: ["血流动力学监测", "通气与气道接触", "神经系统再评估", "升级汇报准备"],
+                    note: "围绕趋势识别与及时跟进组织。"
+                  },
+                  {
+                    title: "心脏 / 心律",
+                    items: ["心律判读", "ECG 相关记录", "Coronary Care 1", "BLS / ACLS 训练"],
+                    note: "心脏信号以实用的床旁语言记录。"
+                  },
+                  {
+                    title: "老年健康",
+                    items: ["失智", "吞咽困难与失语", "跌倒与压力性损伤风险", "慢性病连续性"],
+                    note: "复杂需求需要尊严感和可重复的支持。"
+                  },
+                  {
+                    title: "跨体系",
+                    items: ["加拿大 / 中国实践", "内科视角", "普通话临床审阅", "护理计划清晰度"],
+                    note: "体系差异成为更清晰决策的语境。"
+                  },
+                  {
+                    title: "沟通",
+                    items: ["SBAR 式升级汇报", "患者教育", "双语倾听", "家庭更新"],
+                    note: "沟通被作为安全工具，而不是附加项。"
+                  },
+                  {
+                    title: "系统实践",
+                    items: ["小型工具", "修订习惯", "跟进结构", "工作流纪律"],
+                    note: "技术工作作为次要支线，支持临床清晰度。"
+                  }
+                ]
+              },
+              education: {
+                eyebrow: "教育与注册",
+                title: "资质呈现不过度包装。",
+                summary:
+                  "注册、教育、重症培训与当前学习的简明视图。",
+                items: [
+                  ["注册护士", "NSCN。"],
+                  ["护理学理学士", "Toronto Metropolitan University collaborative nursing program，辅修心理学，以 Distinction 毕业。"],
+                  ["重症护理教育", "Centennial College Intensive Care Training Program 与 Coronary Care 1。"],
+                  ["当前 / 额外学习", "Conestoga College NURS8963 Transition to Nursing Practice，进行中；CIHI InterRAI LTCF Essentials 1 & 2。"],
+                  ["跨体系注册语境", "中国护士注册考试语境，以公开专业层级呈现。"]
+                ]
+              },
+              language: {
+                eyebrow: "语言与跨文化实践",
+                title: "跨语言与跨体系的临床沟通。",
+                summary:
+                  "语言能力在这里作为临床语境呈现：更清晰的教育、更安全的交接，以及更精确的倾听。",
+                items: [
+                  ["英语", "专业临床工作熟练度。"],
+                  ["普通话", "母语，包括临床与监管材料阅读语境。"],
+                  ["法语", "A2 主动学习。"],
+                  ["西班牙语", "A1 休闲学习。"],
+                  ["跨文化实践", "加拿大与中国临床环境经验，支持灵活沟通、面向老年患者的方言敏感照护，以及对体系差异的理解。"]
+                ]
+              },
+              systems: {
+                eyebrow: "技术系统支持",
+                title: "工具始终服务于临床清晰度。",
+                summary:
+                  "这一支线呈现实用跟进习惯，帮助记录、护理计划清晰度与照护连续性。",
+                featureTitle: "次要支持支线",
+                feature:
+                  "小型工具、修订习惯和清单只有在让临床沟通更容易接续时才有价值。",
+                links: [
+                  ["main-quest.html", "Professional Direction", "关于当前 RN 方向的简短说明。"],
+                  ["side-quest.html", "Technical Systems Practice", "小型工具与跟进习惯，用于支持记录清晰度。"]
+                ]
+              },
+              contact: {
+                eyebrow: "联系",
+                title: "专业联系。",
+                summary:
+                  "如有相关护理机会、引荐或专业交流，电子邮件是最清晰的方式。",
+                location: "加拿大安大略省多伦多",
+                text:
+                  "如有相关护理机会、引荐、专业材料请求或专业交流，电子邮件是首选渠道。",
+                email: "shaotinghe2037@gmail.com",
+                note: "可在相关情况下提供更多专业材料。"
+              }
             },
             footer: {
-              text: "专注于临床可靠、沉着且有实际价值的护理工作。",
+              text: "注册护士，聚焦重症判断、老年健康连续性与实用临床系统。",
               copyright:
                 "Copyright © 2026 何少霆。保留所有权利。未经许可，不得复制本站内容与设计。"
             }
@@ -2842,23 +1986,30 @@
         function escapeHtml(value) {
           return String(value || "")
             .replace(/&/g, "&amp;")
-            .replace(/\u003c/g, "&lt;")
-            .replace(/\u003e/g, "&gt;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
             .replace(/"/g, "&quot;")
             .replace(/'/g, "&#39;");
         }
 
-        function readStorage(key) {
+        function getInitialLanguage() {
+          var stored = null;
           try {
-            return window.localStorage.getItem(key);
+            stored = window.localStorage.getItem(STORAGE_KEY);
           } catch (error) {
-            return null;
+            stored = null;
           }
+
+          if (LANGUAGES.indexOf(stored) !== -1) {
+            return stored;
+          }
+
+          return /^zh/i.test(window.navigator.language || "") ? "zh-Hans" : "en";
         }
 
-        function writeStorage(key, value) {
+        function storeLanguage(value) {
           try {
-            window.localStorage.setItem(key, value);
+            window.localStorage.setItem(STORAGE_KEY, value);
           } catch (error) {
             return false;
           }
@@ -2866,694 +2017,408 @@
           return true;
         }
 
-        function getInitialLanguage() {
-          var stored = readStorage(STORAGE_KEYS.language);
-
-          if (stored && LANGUAGES.indexOf(stored) !== -1) {
-            return stored;
-          }
-
-          return /^zh/i.test(window.navigator.language || "") ? "zh-Hans" : "en";
-        }
-
-        function getCurrentPage() {
-          return "home";
-        }
-
-        function resolveAutoViewMode() {
-          var width = window.innerWidth || document.documentElement.clientWidth || 1280;
-          var coarsePointer = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
-
-          if (width <= 680) {
-            return "phone";
-          }
-
-          if (width <= 820 && coarsePointer) {
-            return "phone";
-          }
-
-          return "desktop";
-        }
-
-        function getContent() {
-          return CONTENT[state.language] || CONTENT.en;
-        }
-
-        function updateRootState() {
-          document.documentElement.dataset.viewMode = state.effectiveViewMode;
-          document.documentElement.dataset.viewPreference = "auto";
-          document.documentElement.dataset.lang = state.language;
-          document.documentElement.lang = state.language === "zh-Hans" ? "zh-Hans" : "en";
-        }
-
         function setMeta(content) {
-          var pageMeta = content.meta.pageMeta[state.page];
-          var title = pageMeta ? pageMeta.title : content.meta.title;
-          var description = pageMeta ? pageMeta.description : content.meta.description;
-
-          document.title = title;
-          setMetaTag('meta[name="description"]', description);
-          setMetaTag('meta[property="og:title"]', pageMeta ? title : content.meta.ogTitle);
-          setMetaTag('meta[property="og:description"]', pageMeta ? description : content.meta.ogDescription);
+          document.documentElement.lang = state.language === "zh-Hans" ? "zh-Hans" : "en";
+          document.documentElement.dataset.lang = state.language;
+          document.title = content.meta.title;
+          setMetaTag('meta[name="description"]', content.meta.description);
+          setMetaTag('meta[property="og:title"]', content.meta.title);
+          setMetaTag('meta[property="og:description"]', content.meta.ogDescription);
           setMetaTag('meta[property="og:site_name"]', content.meta.siteName);
-          setMetaTag('meta[name="twitter:title"]', pageMeta ? title : content.meta.ogTitle);
-          setMetaTag('meta[name="twitter:description"]', pageMeta ? description : content.meta.ogDescription);
+          setMetaTag('meta[name="twitter:title"]', content.meta.title);
+          setMetaTag('meta[name="twitter:description"]', content.meta.ogDescription);
         }
 
         function setMetaTag(selector, value) {
           var element = document.querySelector(selector);
-
-          if (element && value) {
+          if (element) {
             element.setAttribute("content", value);
           }
         }
 
-        function getHeroIntro(content) {
-          if (state.effectiveViewMode === "phone" && content.hero.mobileIntro) {
-            return content.hero.mobileIntro;
-          }
-
-          return content.hero.intro;
-        }
-
-        function getSectionBody(section) {
-          if (state.effectiveViewMode === "phone" && section.mobileBody) {
-            return [section.mobileBody];
-          }
-
-          return section.body || [];
-        }
-
-        function renderLanguageButtons(label, options, activeValue) {
-          return (
-            '<div class="control-group"><span class="control-label">' +
-            escapeHtml(label) +
-            '<\/span><div class="segmented-control" role="group" aria-label="' +
-            escapeHtml(label) +
-            '">' +
-            options
-              .map(function (option) {
-                var isActive = option.value === activeValue;
-
-                return (
-                  '<button class="control-button' +
-                  (isActive ? " is-active" : "") +
-                  '" type="button" ' +
-                  'data-set-lang' +
-                  '="' +
-                  escapeHtml(option.value) +
-                  '" aria-pressed="' +
-                  (isActive ? "true" : "false") +
-                  '">' +
-                  escapeHtml(option.label) +
-                  '<\/button>'
-                );
-              })
-              .join("") +
-            '<\/div><\/div>'
-          );
-        }
-
-        function renderHeroProfilePanels(content) {
-          var details = content.hero.profileDetails || [];
-          var isPhoneSplit = state.effectiveViewMode === "phone" && details.length > 2;
-          var primaryDetails = isPhoneSplit ? details.slice(0, 2) : details;
-          var practiceDetails = isPhoneSplit ? details.slice(2) : [];
-          var profileHtml =
-            '<div class="hero-detail-stack"><div class="hero-profile panel" aria-label="' +
-            escapeHtml(content.hero.profileAriaLabel) +
-            '"><div class="detail-list">' +
-            renderDetailList(primaryDetails) +
-            '<\/div><\/div>';
-
-          if (!practiceDetails.length) {
-            return profileHtml + "<\/div>";
-          }
-
-          return (
-            profileHtml +
-            '<div class="hero-practice panel"><div class="detail-list">' +
-            renderDetailList(practiceDetails) +
-            '<\/div><\/div><\/div>'
-          );
-        }
-
-        function renderDetailList(items) {
-          return (items || [])
-            .map(function (item) {
-              return (
-                '<div class="detail-item"><span class="detail-label">' +
-                escapeHtml(item.label) +
-                '<\/span><p>' +
-                escapeHtml(item.text) +
-                '<\/p><\/div>'
-              );
-            })
-            .join("");
-        }
-
-        function renderInlineSegments(segments) {
-          return (segments || [])
-            .map(function (segment) {
-              var text = escapeHtml(segment && segment.text ? segment.text : "");
-
-              if (segment && segment.strong) {
-                return "<strong>" + text + "<\/strong>";
-              }
-
-              return text;
-            })
-            .join("");
-        }
-
-        function renderSignalLine(line) {
-          if (Array.isArray(line)) {
-            return renderInlineSegments(line);
-          }
-
-          return escapeHtml(line);
-        }
-
-        function renderSignals(items) {
-          return (
-            '<div class="signal-list">' +
-            (items || [])
-              .map(function (item) {
-                var signalValue = Array.isArray(item.lines)
-                  ? '<p class="signal-text">' +
-                    item.lines
-                      .map(function (line) {
-                        return '<span class="signal-line">' + renderSignalLine(line) + "<\/span>";
-                      })
-                      .join("") +
-                    "<\/p>"
-                  : '<p class="signal-text">' + escapeHtml(item.text) + "<\/p>";
-
-                return (
-                  '<div class="signal-item' +
-                  (item.size === "wide" ? " signal-item--wide" : "") +
-                  '"><span class="signal-label">' +
-                  escapeHtml(item.label) +
-                  '<\/span>' +
-                  signalValue +
-                  "<\/div>"
-                );
-              })
-              .join("") +
-            '<\/div>'
-          );
-        }
-
-        function renderParagraphs(paragraphs) {
-          return (paragraphs || [])
-            .map(function (paragraph) {
-              if (paragraph && typeof paragraph === "object" && !Array.isArray(paragraph)) {
-                return (
-                  '<div class="work-body-block">' +
-                  (paragraph.heading ? "<h3>" + escapeHtml(paragraph.heading) + "<\/h3>" : "") +
-                  ((paragraph.paragraphs || [])
-                    .map(function (line) {
-                      return "<p>" + escapeHtml(line) + "<\/p>";
-                    })
-                    .join("")) +
-                  "<\/div>"
-                );
-              }
-
-              return "<p>" + escapeHtml(paragraph) + "<\/p>";
-            })
-            .join("");
-        }
-
-        function renderProof(items) {
-          return (items || [])
-            .map(function (item) {
-              return (
-                '<article class="proof-item panel reveal"><span class="proof-label">' +
-                escapeHtml(item.label) +
-                '<\/span><h3>' +
-                escapeHtml(item.title) +
-                '<\/h3><p class="proof-meta">' +
-                escapeHtml(item.meta) +
-                '<\/p><p>' +
-                escapeHtml(item.text) +
-                '<\/p><\/article>'
-              );
-            })
-            .join("");
-        }
-
-        function renderTeasers(items) {
-          return (items || [])
-            .map(function (item) {
-              return (
-                '<article class="teaser-card panel reveal"><span class="proof-label">' +
-                escapeHtml(item.label) +
-                '<\/span><h3>' +
-                escapeHtml(item.title) +
-                '<\/h3><p>' +
-                escapeHtml(item.text) +
-                '<\/p><\/article>'
-              );
-            })
-            .join("");
-        }
-
-        function renderClosingLinks(items) {
-          return (items || [])
-            .map(function (item) {
-              if (item.href) {
-                return '<a class="super-link" href="' + escapeHtml(item.href) + '">' + escapeHtml(item.label) + '<\/a>';
-              }
-
-              return '<span class="super-link">' + escapeHtml(item.label) + "<\/span>";
-            })
-            .join("");
-        }
-
-        function renderStackedLinks(items) {
-          return (
-            '<div class="stacked-links">' +
-            (items || [])
-              .map(function (item) {
-                var href = String(item.href || "#");
-                var isExternal = /^https?:\/\//i.test(href);
-
-                return (
-                  '<a class="stack-link' +
-                  (item.toneClass ? " " + item.toneClass : "") +
-                  '" href="' +
-                  escapeHtml(href) +
-                  '"' +
-                  (isExternal ? ' target="_blank" rel="noopener noreferrer"' : "") +
-                  ">" +
-                  escapeHtml(item.label) +
-                  "<\/a>"
-                );
-              })
-              .join("") +
-            "<\/div>"
-          );
-        }
-
-        function renderCurrentList(items) {
-          return (
-            '<div class="current-list">' +
-            (items || [])
-              .map(function (item) {
-                return '<p class="current-list-item">' + escapeHtml(item) + "<\/p>";
-              })
-              .join("") +
-            "<\/div>"
-          );
-        }
-
-        function getHomeHref(anchor) {
-          return state.page === "home" ? anchor : "?page=home" + anchor;
-        }
-
-        function getPageHref(slug) {
-          return "?page=" + encodeURIComponent(slug);
-        }
-
-        function getBrandSupportText() {
-          return state.language === "zh-Hans" ? "注册护士" : "Registered Nurse";
-        }
-
-        function getBrandShortText(content) {
-          if (state.language === "zh-Hans") {
-            return content.meta.siteName;
-          }
-
-          return "Shaoting He";
-        }
-
-        function getHeroIdentityText() {
-          return state.language === "zh-Hans" ? "临床实践" : "Clinical Practice";
-        }
-
-        function getHeroCredentialsLabel() {
-          return state.language === "zh-Hans" ? "专业资质" : "Professional credentials";
-        }
-
-        function renderSelectiveAccent(text) {
-          if (text === "Shaoting He (Julius)") {
-            return 'Shaoting <span class="name-accent">He<\/span> (Julius)';
-          }
-
-          if (text === "Shaoting He") {
-            return 'Shaoting <span class="name-accent">He<\/span>';
-          }
-
-          if (text === "何少霆") {
-            return '<span class="name-accent">何<\/span>少霆';
-          }
-
-          if (text === "Current Focus") {
-            return 'Current <span class="name-accent">Focus<\/span>';
-          }
-
-          if (text === "当前重点") {
-            return '<span class="name-accent">当前<\/span>重点';
-          }
-
-          return escapeHtml(text);
-        }
-
-        function renderBrandLockup(content) {
-          return (
-            '<span class="brand-lockup"><span class="brand-mark" aria-hidden="true"><img class="brand-logo" src="logo-web.png?v=20260529" alt="" width="768" height="512" decoding="async" />' +
-            '<\/span><span class="brand-wordmark"><span class="brand-name brand-name--full">' +
-            renderSelectiveAccent(content.meta.siteName) +
-            '<\/span><span class="brand-name brand-name--short">' +
-            renderSelectiveAccent(getBrandShortText(content)) +
-            '<\/span><span class="brand-support">' +
-            escapeHtml(getBrandSupportText()) +
-            "<\/span><\/span><\/span>"
-          );
-        }
-
-        function renderPresencePreview(channels) {
-          return (
-            '<div class="presence-preview">' +
-            (channels || [])
-              .map(function (channel) {
-                return (
-                  '<div class="presence-row"><span class="presence-icon" aria-hidden="true">' +
-                  escapeHtml(channel.icon) +
-                  '<\/span><div class="presence-text"><span class="presence-platform">' +
-                  escapeHtml(channel.label) +
-                  '<\/span><span class="presence-status">' +
-                  escapeHtml(channel.status) +
-                  "<\/span><\/div><\/div>"
-                );
-              })
-              .join("") +
-            "<\/div>"
-          );
-        }
-
-        function renderCurrentPillars(content) {
-          return content.current.pillars
-            .map(function (pillar) {
-              var pillarBody = pillar.channels && pillar.channels.length
-                ? renderPresencePreview(pillar.channels)
-                : '<div class="endeavor-notes">' +
-                  pillar.notes
-                    .map(function (note) {
-                      return '<p class="endeavor-note">' + escapeHtml(note) + "<\/p>";
-                    })
-                    .join("") +
-                  "<\/div>";
-
-              return (
-                '<a class="endeavor-pillar reveal" href="' +
-                getPageHref(pillar.slug) +
-                '"><h3>' +
-                escapeHtml(pillar.title) +
-                '<\/h3><p class="endeavor-lead">' +
-                escapeHtml(pillar.lead) +
-                '<\/p>' +
-                pillarBody +
-                '<span class="endeavor-link">' +
-                escapeHtml(pillar.cue || content.ui.openPage) +
-                '<\/span><\/a>'
-              );
-            })
-            .join("");
-        }
-
         function renderHeader(content) {
-          var languageOptions = [
-            { value: "en", label: content.ui.languages.en },
-            { value: "zh-Hans", label: content.ui.languages["zh-Hans"] }
-          ];
-          var navLabels = state.effectiveViewMode === "phone" && content.ui.navCompact
-            ? content.ui.navCompact
-            : content.ui.nav;
-          var currentActive = state.page !== "home" ? ' aria-current="page"' : "";
+          var languageOptions = LANGUAGES.map(function (language) {
+            var isActive = language === state.language;
+            var label = language === "zh-Hans" ? "中文" : "EN";
+
+            return (
+              '<button type="button" data-language="' +
+              escapeHtml(language) +
+              '" aria-pressed="' +
+              (isActive ? "true" : "false") +
+              '">' +
+              escapeHtml(label) +
+              "</button>"
+            );
+          }).join("");
+
+          var nav = content.ui.nav
+            .map(function (item) {
+              return '<a href="#' + escapeHtml(item[0]) + '" data-nav-link="' + escapeHtml(item[0]) + '">' + escapeHtml(item[1]) + "</a>";
+            })
+            .join("");
 
           return (
-            '<header class="site-header"><div class="container header-row"><a class="site-name" href="' +
-            getHomeHref("#top") +
-            '" aria-label="' +
+            '<header class="site-header"><div class="container header-row"><a class="site-name" href="#top" aria-label="' +
             escapeHtml(content.meta.siteName) +
+            '"><span class="brand-mark" aria-hidden="true">SH</span><span class="site-name-text"><span class="wordmark">' +
+            escapeHtml(content.meta.siteName) +
+            '</span><span class="wordmark-meta">' +
+            escapeHtml(content.meta.role) +
+            '</span></span></a><div class="header-actions"><div class="language-control" role="group" aria-label="' +
+            escapeHtml(content.ui.language) +
             '">' +
-            renderBrandLockup(content) +
-            '<\/a><div class="header-actions-shell"><div class="header-tools" aria-label="' +
-            escapeHtml(content.ui.controlsLabel) +
+            languageOptions +
+            '</div><nav class="site-nav" aria-label="' +
+            escapeHtml(content.ui.navLabel) +
             '">' +
-            renderLanguageButtons(content.ui.languageLabel, languageOptions, state.language) +
-            '<\/div><nav class="site-nav" aria-label="' +
-            escapeHtml(content.ui.primaryNavLabel) +
-            '"><a href="' +
-            getHomeHref("#current") +
-            '" data-nav-link="current"' +
-            currentActive +
-            ">" +
-            escapeHtml(navLabels.current) +
-            '<\/a><a href="' +
-            getHomeHref("#icu") +
-            '" data-nav-link="icu">' +
-            escapeHtml(navLabels.icu) +
-            '<\/a><a href="' +
-            getHomeHref("#ltc") +
-            '" data-nav-link="ltc">' +
-            escapeHtml(navLabels.ltc) +
-            '<\/a><a href="' +
-            getHomeHref("#contact") +
-            '" data-nav-link="contact">' +
-            escapeHtml(navLabels.contact) +
-            '<\/a><\/nav><\/div><\/div><\/header>'
+            nav +
+            "</nav></div></div></header>"
           );
         }
 
         function renderHero(content) {
-          var intro = getHeroIntro(content);
-
           return (
-            '<section class="hero photo-backed" id="top"><div class="container"><div class="hero-stage reveal"><div class="hero-main"><div class="hero-identity" aria-hidden="true"><img src="logo-web.png?v=20260529" alt="" width="768" height="512" decoding="async" /><span>' +
-            escapeHtml(getHeroIdentityText()) +
-            '<\/span><\/div><span class="eyebrow">' +
+            '<section class="hero" id="top"><div class="container hero-frame"><div class="hero-copy reveal"><span class="eyebrow">' +
             escapeHtml(content.hero.eyebrow) +
-            '<\/span><h1>' +
-            renderSelectiveAccent(content.hero.title) +
-            '<\/h1><p class="hero-role">' +
+            '</span><h1>' +
+            escapeHtml(content.hero.title) +
+            (content.hero.titleTail ? '<br /><span>' + escapeHtml(content.hero.titleTail) + "</span>" : "") +
+            '</h1><p class="hero-role">' +
             escapeHtml(content.hero.role) +
-            '<\/p>' +
-            (intro ? '<div class="hero-intro"><p>' + escapeHtml(intro) + '<\/p><\/div>' : "") +
-            '<div class="hero-actions"><a class="button" href="' +
-            escapeHtml(content.hero.actions[0].href) +
-            '">' +
-            escapeHtml(content.hero.actions[0].label) +
-            '<\/a><a class="text-link" href="' +
-            escapeHtml(content.hero.actions[1].href) +
-            '">' +
-            escapeHtml(content.hero.actions[1].label) +
-            '<\/a><\/div><\/div><aside class="hero-aside" aria-label="' +
-            escapeHtml(content.hero.portraitAriaLabel) +
-            '"><div class="headshot-shell panel"><div class="headshot-stage" role="img" aria-label="' +
-            escapeHtml(content.hero.portraitAriaLabel) +
-            '"><\/div><\/div>' +
-            renderHeroProfilePanels(content) +
-            '<\/aside><div class="hero-evidence" aria-label="' +
-            escapeHtml(getHeroCredentialsLabel()) +
-            '">' +
-            renderSignals(content.hero.signals) +
-            '<\/div><\/div><\/div><\/section>'
+            '</p><p class="hero-intro">' +
+            escapeHtml(content.hero.intro) +
+            '</p><div class="hero-actions">' +
+            renderActions(content.hero.actions) +
+            '</div><div class="identity-strip">' +
+            renderIdentity(content.hero.identity) +
+            '</div></div><aside class="hero-visual reveal" aria-label="' +
+            escapeHtml(content.hero.portraitLabel) +
+            '"><div class="portrait-panel" role="img" aria-label="' +
+            escapeHtml(content.hero.portraitLabel) +
+            '"><div class="portrait-caption"><span>' +
+            escapeHtml(content.hero.portraitLabel) +
+            '</span><strong>' +
+            escapeHtml(content.hero.portraitText) +
+            '</strong></div></div><div class="dossier-note"><p>' +
+            escapeHtml(content.sections.timeline.aside) +
+            "</p></div></aside></div></section>"
           );
         }
 
-        function renderCurrentSection(content) {
+        function renderActions(actions) {
+          return actions
+            .map(function (action, index) {
+              return '<a class="' + (index === 0 ? "button" : "text-link") + '" href="' + escapeHtml(action[0]) + '">' + escapeHtml(action[1]) + "</a>";
+            })
+            .join("");
+        }
+
+        function renderIdentity(items) {
+          return items
+            .map(function (item) {
+              return '<div class="identity-item"><span class="label">' + escapeHtml(item[0]) + "</span><p>" + escapeHtml(item[1]) + "</p></div>";
+            })
+            .join("");
+        }
+
+        function renderSignals(items, wrapperClass, itemClass) {
+          if (!items || !items.length) {
+            return "";
+          }
+
           return (
-            '<section id="current"><div class="container current-layout"><div class="current-heading reveal"><span class="eyebrow">' +
-            escapeHtml(content.current.eyebrow) +
-            '<\/span><h2>' +
-            renderSelectiveAccent(content.current.title) +
-            '<\/h2><p>' +
-            escapeHtml(content.current.summary) +
-            '<\/p><\/div><div class="current-board"><article class="current-card current-card--pursuits panel reveal"><h3>' +
-            escapeHtml(content.current.pursuits.title) +
-            '<\/h3><p class="current-card-text">' +
-            escapeHtml(content.current.pursuits.lead) +
-            '<\/p>' +
-            renderStackedLinks(content.current.pursuits.buttons) +
-            '<\/article><div class="current-secondary"><article class="current-card current-card--presence panel reveal"><h3>' +
-            escapeHtml(content.current.presence.title) +
-            '<\/h3><p class="current-card-text">' +
-            escapeHtml(content.current.presence.lead) +
-            '<\/p>' +
-            renderStackedLinks(content.current.presence.links) +
-            '<\/article><article class="current-card current-card--learning panel reveal"><h3>' +
-            escapeHtml(content.current.learning.title) +
-            '<\/h3><p class="current-card-text">' +
-            escapeHtml(content.current.learning.lead) +
-            '<\/p>' +
-            renderCurrentList(content.current.learning.items) +
-            '<\/article><\/div><\/div><\/div><\/section>'
+            '<div class="' +
+            escapeHtml(wrapperClass) +
+            '">' +
+            items
+              .map(function (item) {
+                return '<span class="' + escapeHtml(itemClass) + '">' + escapeHtml(item) + "</span>";
+              })
+              .join("") +
+            "</div>"
           );
         }
 
-        function renderClinicalSection(sectionId, section) {
+        function renderSectionHeading(section) {
           return (
-            '<section id="' +
-            escapeHtml(sectionId) +
-            '" class="photo-backed"><div class="container section-grid"><div class="section-heading reveal"><span class="eyebrow">' +
+            '<div class="section-heading reveal"><div><span class="eyebrow">' +
             escapeHtml(section.eyebrow) +
-            '<\/span><h2>' +
+            '</span><h2>' +
             escapeHtml(section.title) +
-            '<\/h2><p>' +
+            '</h2></div><p>' +
             escapeHtml(section.summary) +
-            '<\/p><\/div><div class="section-content work-layout reveal"><div class="work-body panel">' +
-            renderParagraphs(getSectionBody(section)) +
-            '<\/div><aside class="work-details panel" aria-label="' +
-            escapeHtml(section.detailsAriaLabel) +
-            '"><div class="detail-list">' +
-            renderDetailList(section.details) +
-            '<\/div><\/aside><\/div><\/div><\/section>'
+            "</p></div>"
           );
         }
 
-        function renderLtcSection(content) {
+        function renderPractice(section) {
+          var stories = "";
+
+          if (section.stories && section.stories.length) {
+            stories =
+              '<div class="practice-story-intro reveal"><span class="label">' +
+              escapeHtml(section.storyLabel) +
+              "</span><p>" +
+              escapeHtml(section.storySummary) +
+              '</p></div><div class="practice-story-board">' +
+              section.stories
+                .map(function (story) {
+                  return '<article class="story-card reveal"><h3>' + escapeHtml(story.title) + "</h3><p>" + escapeHtml(story.text) + "</p></article>";
+                })
+                .join("") +
+              "</div>";
+          }
+
           return (
-            '<section id="ltc" class="photo-backed"><div class="container section-grid"><div class="section-heading reveal"><span class="eyebrow">' +
-            escapeHtml(content.ltc.eyebrow) +
-            '<\/span><h2>' +
-            escapeHtml(content.ltc.title) +
-            '<\/h2><p>' +
-            escapeHtml(content.ltc.summary) +
-            '<\/p><\/div><div class="section-content section-stack"><div class="work-layout reveal"><div class="work-body panel">' +
-            renderParagraphs(getSectionBody(content.ltc)) +
-            '<\/div><aside class="work-details panel" aria-label="' +
-            escapeHtml(content.ltc.detailsAriaLabel) +
-            '"><div class="detail-list">' +
-            renderDetailList(content.ltc.details) +
-            '<\/div><\/aside><\/div><div class="section-subtitle reveal"><h3>' +
-            escapeHtml(content.ltc.communityTitle) +
-            '<\/h3><p>' +
-            escapeHtml(content.ltc.communitySummary) +
-            '<\/p><\/div><div class="work-body panel reveal">' +
-            renderParagraphs(content.ltc.communityBody) +
-            '<\/div><\/div><\/div><\/section>'
+            '<section class="section practice-section" id="practice">' +
+            '<div class="container">' +
+            renderSectionHeading(section) +
+            '<div class="domain-list">' +
+            section.items
+              .map(function (item, index) {
+                return (
+                  '<article class="domain-row reveal"><span class="domain-number">' +
+                  String(index + 1).padStart(2, "0") +
+                  '</span><h3>' +
+                  escapeHtml(item.title) +
+                  '</h3><p>' +
+                  escapeHtml(item.text) +
+                  '<span class="detail-text">' +
+                  escapeHtml(item.detail) +
+                  "</span></p>" +
+                  renderSignals(item.signals, "domain-signals", "signal-pill") +
+                  "</article>"
+                );
+              })
+              .join("") +
+            "</div>" +
+            stories +
+            "</div></section>"
           );
         }
 
-        function renderContactSection(content) {
-          var contactEyebrow = content.contact.eyebrow
-            ? '<span class="eyebrow">' + escapeHtml(content.contact.eyebrow) + '<\/span>'
+        function renderTimeline(section) {
+          var asideList = section.asideList && section.asideList.length
+            ? '<ul class="timeline-aside-list">' +
+              section.asideList
+                .map(function (item) {
+                  return "<li>" + escapeHtml(item) + "</li>";
+                })
+                .join("") +
+              "</ul>"
             : "";
 
           return (
-            '<section id="contact" class="photo-backed"><div class="container contact-grid"><div class="section-heading reveal">' +
-            contactEyebrow +
-            '<h2>' +
-            escapeHtml(content.contact.title) +
-            '<\/h2><p>' +
-            escapeHtml(content.contact.summary) +
-            '<\/p><\/div><div class="contact-card panel reveal"><p class="detail-label">' +
-            escapeHtml(content.contact.location) +
-            '<\/p><p>' +
-            escapeHtml(content.contact.cardText) +
-            '<\/p><div class="contact-actions"><a class="contact-mail" href="mailto:' +
-            escapeHtml(content.contact.email) +
-            '">' +
-            escapeHtml(content.contact.email) +
-            '<\/a><div class="closing-links" aria-label="' +
-            escapeHtml(content.contact.chipsAriaLabel) +
-            '">' +
-            renderClosingLinks(content.contact.chips) +
-            '<\/div><\/div><\/div><\/div><\/section>'
+            '<section class="section" id="timeline"><div class="container">' +
+            renderSectionHeading(section) +
+            '<div class="timeline"><div class="timeline-rail">' +
+            section.items
+              .map(function (item) {
+                var kicker = Array.isArray(item) ? item[0] : item.kicker;
+                var title = Array.isArray(item) ? item[1] : item.title;
+                var text = Array.isArray(item) ? item[2] : item.text;
+                var signals = Array.isArray(item) ? [] : item.signals;
+
+                return (
+                  '<article class="timeline-item reveal"><span class="timeline-meta">' +
+                  escapeHtml(kicker) +
+                  '</span><div class="timeline-body"><h3>' +
+                  escapeHtml(title) +
+                  '</h3><p>' +
+                  escapeHtml(text) +
+                  "</p>" +
+                  renderSignals(signals, "timeline-signals", "signal-token") +
+                  "</div></article>"
+                );
+              })
+              .join("") +
+            '</div><aside class="timeline-aside reveal"><p>' +
+            escapeHtml(section.aside) +
+            "</p>" +
+            asideList +
+            "</aside></div></div></section>"
           );
         }
 
-        function renderSubpage(content, slug) {
-          var page = content.current.pages[slug];
+        function renderIndex(section) {
+          var rows = section.groups && section.groups.length
+            ? section.groups
+                .map(function (group) {
+                  return (
+                    '<article class="index-line reveal"><h3>' +
+                    escapeHtml(group.title) +
+                    '</h3><ul class="index-items">' +
+                    group.items
+                      .map(function (item) {
+                        return '<li class="index-item">' + escapeHtml(item) + "</li>";
+                      })
+                      .join("") +
+                    '</ul><p class="index-note">' +
+                    escapeHtml(group.note) +
+                    "</p></article>"
+                  );
+                })
+                .join("")
+            : section.items
+                .map(function (item) {
+                  return '<div class="index-line reveal"><span class="label">' + escapeHtml(item[0]) + "</span><p>" + escapeHtml(item[1]) + "</p></div>";
+                })
+                .join("");
 
           return (
-            '<section class="subpage-view" id="top"><div class="container section-grid"><div class="section-heading reveal"><a class="subpage-back" href="' +
-            getHomeHref("#current") +
-            '">← ' +
-            escapeHtml(content.ui.backToCurrent) +
-            '<\/a><span class="eyebrow">' +
-            escapeHtml(page.eyebrow) +
-            '<\/span><h2>' +
-            escapeHtml(page.title) +
-            '<\/h2><p>' +
-            escapeHtml(page.summary) +
-            '<\/p><\/div><div class="section-content section-stack"><div class="subpage-layout reveal"><div class="work-body panel">' +
-            renderParagraphs(page.body) +
-            '<\/div><aside class="work-details panel" aria-label="' +
-            escapeHtml(page.detailsAriaLabel) +
-            '"><div class="detail-list">' +
-            renderDetailList(page.details) +
-            '<\/div><\/aside><\/div><div class="subpage-note panel reveal"><p>' +
-            escapeHtml(page.note) +
-            '<\/p><\/div><\/div><\/div><\/section>'
+            '<section class="section" id="capability"><div class="container">' +
+            renderSectionHeading(section) +
+            '<div class="index-table">' +
+            rows +
+            "</div></div></section>"
+          );
+        }
+
+        function renderGridSection(id, section, className) {
+          return (
+            '<section class="section" id="' +
+            escapeHtml(id) +
+            '"><div class="container">' +
+            renderSectionHeading(section) +
+            '<div class="' +
+            escapeHtml(className) +
+            '">' +
+            section.items
+              .map(function (item) {
+                return '<article class="' + (className === "education-grid" ? "education-row" : "language-row") + ' reveal"><span class="label">' + escapeHtml(item[0]) + "</span><p>" + escapeHtml(item[1]) + "</p></article>";
+              })
+              .join("") +
+            "</div></div></section>"
+          );
+        }
+
+        function renderSystems(section) {
+          return (
+            '<section class="section systems-section" id="systems"><div class="container">' +
+            renderSectionHeading(section) +
+            '<div class="systems-layout"><article class="systems-feature reveal"><span class="label">' +
+            escapeHtml(section.featureTitle) +
+            '</span><h3>' +
+            escapeHtml(section.title) +
+            '</h3><p>' +
+            escapeHtml(section.feature) +
+            '</p></article><div class="systems-links">' +
+            section.links
+              .map(function (link) {
+                return '<a class="systems-link reveal" href="' + escapeHtml(link[0]) + '"><strong>' + escapeHtml(link[1]) + "</strong><span>" + escapeHtml(link[2]) + "</span></a>";
+              })
+              .join("") +
+            "</div></div></div></section>"
+          );
+        }
+
+        function renderContact(section) {
+          return (
+            '<section class="section contact-section" id="contact"><div class="container contact-grid"><div class="section-heading reveal"><div><span class="eyebrow">' +
+            escapeHtml(section.eyebrow) +
+            '</span><h2>' +
+            escapeHtml(section.title) +
+            '</h2></div><p>' +
+            escapeHtml(section.summary) +
+            '</p></div><article class="contact-panel reveal"><span class="label">' +
+            escapeHtml(section.location) +
+            '</span><p>' +
+            escapeHtml(section.text) +
+            '</p><div class="contact-actions"><a class="contact-mail" href="mailto:' +
+            escapeHtml(section.email) +
+            '">' +
+            escapeHtml(section.email) +
+            '</a></div><p class="contact-note">' +
+            escapeHtml(section.note) +
+            "</p></article></div></section>"
           );
         }
 
         function renderFooter(content) {
           return (
-            '<footer class="footer"><div class="container footer-row"><p class="footer-summary">' +
+            '<footer class="site-footer"><div class="container footer-row"><p class="footer-summary">' +
             escapeHtml(content.footer.text) +
-            '<\/p><p class="footer-note">' +
+            '</p><img class="footer-logo" src="footer-logo-light.png?v=20260530" alt="" width="768" height="512" decoding="async" /><p class="footer-note">' +
             escapeHtml(content.footer.copyright) +
-            '<\/p><img class="footer-logo" src="footer-logo-light.png?v=20260530" alt="" width="768" height="512" loading="lazy" decoding="async" /><\/div><\/footer>'
+            "</p></div></footer>"
           );
         }
 
-        function renderMain(content) {
-          if (state.page === "home") {
-            return (
-              renderHero(content) +
-              renderCurrentSection(content) +
-              renderClinicalSection("icu", content.icu) +
-              renderLtcSection(content) +
-              renderContactSection(content)
-            );
+        function scrollToHash(hash) {
+          var targetHash = hash || window.location.hash;
+          var target = targetHash ? document.querySelector(targetHash) : null;
+
+          if (!target) {
+            return;
           }
 
-          return renderSubpage(content, state.page) + renderContactSection(content);
+          window.requestAnimationFrame(function () {
+            target.scrollIntoView({ block: "start" });
+          });
         }
 
-        function renderApp(options) {
-          var content = getContent();
-          var shouldSyncHash = options && options.syncHash;
-          state.effectiveViewMode = resolveAutoViewMode();
-          state.page = getCurrentPage();
-
-          updateRootState();
+        function render() {
+          var content = CONTENT[state.language] || CONTENT.en;
+          var hash = window.location.hash;
           setMeta(content);
 
-          appRoot.innerHTML =
+          app.innerHTML =
             '<a class="skip-link" href="#main-content">' +
-            escapeHtml(content.ui.skipLink) +
-            '<\/a><div class="page-shell">' +
+            escapeHtml(content.ui.skip) +
+            '</a><div class="page-shell">' +
             renderHeader(content) +
-            '<main id="main-content">' +
-            renderMain(content) +
-            '<\/main>' +
+            '<main id="main-content" tabindex="-1">' +
+            renderHero(content) +
+            renderPractice(content.sections.practice) +
+            renderIndex(content.sections.capability) +
+            renderTimeline(content.sections.timeline) +
+            renderGridSection("education", content.sections.education, "education-grid") +
+            renderGridSection("language", content.sections.language, "language-grid") +
+            renderSystems(content.sections.systems) +
+            renderContact(content.sections.contact) +
+            "</main>" +
             renderFooter(content) +
-            '<\/div>';
+            "</div>";
 
-          initRevealObserver();
-
-          if (shouldSyncHash) {
-            syncHash();
-          }
-
-          initCurrentSectionObserver();
+          initReveal();
+          initActiveNav();
+          initSkipLinkFocus();
+          scrollToHash(hash);
         }
 
-        function initRevealObserver() {
-          var revealItems = document.querySelectorAll(".reveal");
+        function initSkipLinkFocus() {
+          var skipLink = document.querySelector('.skip-link[href="#main-content"]');
+
+          if (!skipLink) {
+            return;
+          }
+
+          skipLink.addEventListener("click", function () {
+            var target = document.getElementById("main-content");
+
+            if (!target) {
+              return;
+            }
+
+            window.requestAnimationFrame(function () {
+              target.focus({ preventScroll: true });
+            });
+          });
+        }
+
+        function initReveal() {
+          var items = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
 
           if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            revealItems.forEach(function (item) {
+            app.classList.remove("motion-ready");
+            items.forEach(function (item) {
               item.classList.add("is-visible");
             });
             return;
           }
+
+          app.classList.add("motion-ready");
 
           var observer = new IntersectionObserver(
             function (entries) {
@@ -3564,68 +2429,34 @@
                 }
               });
             },
-            {
-              threshold: 0.14,
-              rootMargin: "0px 0px -40px 0px"
-            }
+            { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
           );
 
-          revealItems.forEach(function (item) {
+          items.forEach(function (item) {
             observer.observe(item);
           });
         }
 
-        function initCurrentSectionObserver() {
-          if (typeof teardownCurrentSectionObserver === "function") {
-            teardownCurrentSectionObserver();
-            teardownCurrentSectionObserver = null;
+        function initActiveNav() {
+          if (typeof teardownActiveNav === "function") {
+            teardownActiveNav();
           }
 
           var links = Array.prototype.slice.call(document.querySelectorAll("[data-nav-link]"));
-
-          if (state.page !== "home") {
-            links.forEach(function (link) {
-              if (link.getAttribute("data-nav-link") === "current") {
-                link.setAttribute("aria-current", "page");
-              } else {
-                link.removeAttribute("aria-current");
-              }
-            });
-            return;
-          }
-
-          var header = document.querySelector(".site-header");
-          var hero = document.getElementById("top");
-          var sections = ["current", "icu", "ltc", "contact"]
-            .map(function (id) {
-              return document.getElementById(id);
+          var sections = links
+            .map(function (link) {
+              return document.getElementById(link.getAttribute("data-nav-link"));
             })
             .filter(Boolean);
-
-          if (!hero || !sections.length) {
-            return;
-          }
-
           var activeId = null;
           var ticking = false;
 
-          function setActiveLink(nextId) {
-            links.forEach(function (link) {
-              if (nextId !== "top" && link.getAttribute("data-nav-link") === nextId) {
-                link.setAttribute("aria-current", "page");
-              } else {
-                link.removeAttribute("aria-current");
-              }
-            });
-          }
-
-          function updateActiveSection() {
+          function update() {
             ticking = false;
-
-            var headerBottom = header ? Math.max(header.getBoundingClientRect().bottom, 0) : 0;
-            var focusY = headerBottom + Math.min(window.innerHeight * 0.18, 120);
-            var nextId = "top";
-            var pageBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+            var header = document.querySelector(".site-header");
+            var focusY = (header ? Math.max(header.getBoundingClientRect().bottom, 0) : 0) + Math.min(window.innerHeight * 0.18, 120);
+            var nextId = "";
+            var atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
 
             sections.forEach(function (section) {
               if (section.getBoundingClientRect().top <= focusY) {
@@ -3633,7 +2464,7 @@
               }
             });
 
-            if (pageBottom) {
+            if (atBottom && sections.length) {
               nextId = sections[sections.length - 1].id;
             }
 
@@ -3642,77 +2473,52 @@
             }
 
             activeId = nextId;
-            setActiveLink(nextId);
+            links.forEach(function (link) {
+              if (link.getAttribute("data-nav-link") === nextId) {
+                link.setAttribute("aria-current", "page");
+              } else {
+                link.removeAttribute("aria-current");
+              }
+            });
           }
 
           function requestUpdate() {
             if (ticking) {
               return;
             }
-
             ticking = true;
-            window.requestAnimationFrame(updateActiveSection);
+            window.requestAnimationFrame(update);
+          }
+
+          function handleHashChange() {
+            scrollToHash();
+            requestUpdate();
           }
 
           window.addEventListener("scroll", requestUpdate, { passive: true });
           window.addEventListener("resize", requestUpdate);
+          window.addEventListener("hashchange", handleHashChange);
           requestUpdate();
 
-          teardownCurrentSectionObserver = function () {
+          teardownActiveNav = function () {
             window.removeEventListener("scroll", requestUpdate);
             window.removeEventListener("resize", requestUpdate);
+            window.removeEventListener("hashchange", handleHashChange);
           };
         }
 
-        function syncHash() {
-          if (state.page !== "home" || !window.location.hash) {
+        document.addEventListener("click", function (event) {
+          var button = event.target.closest("[data-language]");
+          if (!button) {
             return;
           }
 
-          var target = document.querySelector(window.location.hash);
+          state.language = button.getAttribute("data-language");
+          storeLanguage(state.language);
+          render();
+        });
 
-          if (!target) {
-            return;
-          }
-
-          window.requestAnimationFrame(function () {
-            target.scrollIntoView();
-          });
-        }
-
-        function bindEvents() {
-          document.addEventListener("click", function (event) {
-            var button = event.target.closest("[data-set-lang]");
-
-            if (!button) {
-              return;
-            }
-
-            if (button.hasAttribute("data-set-lang")) {
-              state.language = button.getAttribute("data-set-lang");
-              writeStorage(STORAGE_KEYS.language, state.language);
-            }
-
-            renderApp();
-          });
-
-          window.addEventListener("resize", function () {
-            if (resolveAutoViewMode() === state.effectiveViewMode) {
-              return;
-            }
-
-            window.requestAnimationFrame(function () {
-              renderApp();
-            });
-          });
-
-          window.addEventListener("popstate", function () {
-            renderApp();
-          });
-        }
-
-        bindEvents();
-        renderApp({ syncHash: true });
+        render();
       })();
     </script>
   </body>
