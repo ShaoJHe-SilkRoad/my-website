@@ -629,9 +629,48 @@
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.48), rgba(234, 242, 248, 0.5));
       }
 
-      .domain-list {
+      .current-focus-section {
+        padding: clamp(3.2rem, 5vw, 4.8rem) 0 clamp(4rem, 6vw, 5.8rem);
+        background: linear-gradient(180deg, rgba(234, 242, 248, 0.42), rgba(255, 255, 255, 0.62));
+      }
+
+      .focus-list {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(0.85rem, 2vw, 1.35rem);
+      }
+
+      .focus-card {
+        display: grid;
+        gap: 0.72rem;
+        align-content: start;
+        min-height: 100%;
+        padding: clamp(1rem, 2.4vw, 1.35rem);
+        border: 1px solid var(--line);
+        border-top: 2px solid rgba(94, 127, 163, 0.72);
+        border-radius: 0.5rem;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: var(--shadow-soft);
+        transition:
+          border-color var(--motion-med) var(--motion-ease),
+          box-shadow var(--motion-med) var(--motion-ease),
+          transform var(--motion-med) var(--motion-ease);
+      }
+
+      .focus-card h3 {
+        font-size: clamp(1.18rem, 2vw, 1.42rem);
+        line-height: 1.08;
+      }
+
+      .focus-card p {
+        color: var(--ink-2);
+        font-size: 0.9rem;
+        line-height: 1.52;
+      }
+
+      .domain-list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: clamp(0.85rem, 2vw, 1.35rem);
       }
 
@@ -659,7 +698,11 @@
         line-height: 0.9;
       }
 
-      .domain-row h3,
+      .domain-row h3 {
+        font-size: clamp(1.18rem, 1.65vw, 1.48rem);
+        line-height: 1.04;
+      }
+
       .timeline-item h3,
       .systems-feature h3 {
         font-size: clamp(1.35rem, 2.25vw, 1.85rem);
@@ -916,6 +959,108 @@
         color: var(--muted);
         font-size: 0.82rem;
         line-height: 1.45;
+      }
+
+      .section-disclosure {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 0.55rem;
+        background: rgba(255, 255, 255, 0.72);
+        box-shadow: var(--shadow-soft);
+        transition:
+          border-color var(--motion-med) var(--motion-ease),
+          box-shadow var(--motion-med) var(--motion-ease);
+      }
+
+      .domain-list + .section-disclosure {
+        margin-top: clamp(1.25rem, 3vw, 2rem);
+      }
+
+      .disclosure-summary {
+        position: relative;
+        display: list-item;
+        min-height: 4.2rem;
+        padding: clamp(0.9rem, 2.4vw, 1.2rem) clamp(3.45rem, 5vw, 4rem) clamp(0.9rem, 2.4vw, 1.2rem) clamp(0.9rem, 2.4vw, 1.2rem);
+        cursor: pointer;
+        list-style: none;
+      }
+
+      .disclosure-summary::marker {
+        content: "";
+      }
+
+      .disclosure-summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .disclosure-summary:focus-visible {
+        outline: 2px solid rgba(94, 127, 163, 0.55);
+        outline-offset: 0.22rem;
+      }
+
+      .disclosure-summary strong {
+        color: var(--ink);
+        font-family: var(--font-display);
+        font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+        font-weight: 600;
+        line-height: 1.12;
+      }
+
+      .disclosure-summary-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 0.52fr) minmax(12rem, 1fr);
+        gap: 1rem;
+        align-items: center;
+        min-width: 0;
+      }
+
+      .disclosure-copy {
+        display: grid;
+        gap: 0.24rem;
+        min-width: 0;
+      }
+
+      .disclosure-preview {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.38rem;
+        min-width: 0;
+      }
+
+      .disclosure-summary::after {
+        content: "+";
+        position: absolute;
+        top: 50%;
+        right: clamp(0.9rem, 2.4vw, 1.2rem);
+        transform: translateY(-50%);
+        display: inline-grid;
+        place-items: center;
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid rgba(94, 127, 163, 0.28);
+        border-radius: 50%;
+        color: var(--ink-2);
+        font-size: 1.05rem;
+        font-weight: 800;
+        line-height: 1;
+        transition:
+          border-color var(--motion-fast) var(--motion-ease),
+          background-color var(--motion-fast) var(--motion-ease),
+          transform var(--motion-fast) var(--motion-ease);
+      }
+
+      .section-disclosure[open] .disclosure-summary::after {
+        content: "-";
+        background: rgba(94, 127, 163, 0.12);
+      }
+
+      .disclosure-panel {
+        padding: 0 clamp(0.9rem, 2.4vw, 1.2rem) clamp(0.9rem, 2.4vw, 1.2rem);
+        border-top: 1px solid var(--line);
+      }
+
+      .disclosure-panel > * {
+        margin-top: clamp(0.9rem, 2vw, 1.2rem);
       }
 
       .education-grid,
@@ -1175,6 +1320,7 @@
         }
 
         .identity-item:hover,
+        .focus-card:hover,
         .domain-row:hover,
         .story-card:hover,
         .timeline-item:hover {
@@ -1195,9 +1341,15 @@
         }
 
         .timeline-aside:hover,
-        .systems-feature:hover {
+        .systems-feature:hover,
+        .section-disclosure:hover {
           border-color: rgba(94, 127, 163, 0.36);
           box-shadow: 0 18px 34px rgba(14, 27, 45, 0.08);
+        }
+
+        .disclosure-summary:hover::after {
+          border-color: rgba(94, 127, 163, 0.45);
+          transform: translateY(-1px);
         }
 
         .index-line:hover {
@@ -1297,6 +1449,7 @@
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
+        .focus-list,
         .domain-list,
         .practice-story-board,
         .index-table {
@@ -1393,6 +1546,7 @@
           max-width: 100%;
         }
 
+        .focus-list,
         .domain-list,
         .practice-story-board,
         .index-table {
@@ -1400,7 +1554,8 @@
         }
 
         .timeline-item,
-        .practice-story-intro {
+        .practice-story-intro,
+        .disclosure-summary-inner {
           grid-template-columns: 1fr;
           gap: 0.75rem;
         }
@@ -1459,28 +1614,17 @@
   <body>
     <div id="app">
       <main class="noscript-fallback" id="main-content" tabindex="-1">
-        <span class="eyebrow">Fresh Clinical Signal</span>
+        <span class="eyebrow">Clinical Nursing Profile</span>
         <h1>Shaoting He, RN</h1>
-        <p>Critical care judgment, senior-health continuity, bilingual clinical communication, and practical systems support.</p>
+        <p>Registered nurse with ICU practice context, senior-health experience, bilingual clinical communication, and clear documentation.</p>
         <section aria-label="Clinical practice fallback">
           <h2>Clinical Practice</h2>
-          <p>RN practice shaped by ICU monitoring, senior-health continuity, cross-system clinical context, and documentation discipline.</p>
-        </section>
-        <section aria-label="Signal fallback">
-          <h2>Capability Signals</h2>
-          <p>Critical care, cardiac rhythm awareness, senior health, bilingual communication, and practical clinical systems.</p>
-        </section>
-        <section aria-label="Experience fallback">
-          <h2>Experience Flow</h2>
-          <p>Selected clinical contexts include ICU, senior-health continuity, supervised internal medicine practice in China, surgical/short stay, and student placements.</p>
-        </section>
-        <section aria-label="Systems fallback">
-          <h2>Systems Support</h2>
-          <p>Technical practice remains secondary: small tools and follow-through habits support clinical communication and documentation clarity.</p>
+          <p>Focused on calm observation, disciplined documentation, and escalation support for complex-care teams.</p>
         </section>
         <a class="button" href="mailto:shaotinghe2037@gmail.com">shaotinghe2037@gmail.com</a>
       </main>
     </div>
+    <script src="content/homepage-content.js?v=20260622-v1"></script>
     <script>
       (function () {
         "use strict";
@@ -1488,500 +1632,14 @@
         var STORAGE_KEY = "site:language";
         var LANGUAGES = ["en", "zh-Hans"];
         var app = document.getElementById("app");
-        var state = { language: getInitialLanguage() };
+        var state = { language: getInitialLanguage(), openDisclosures: [] };
         var teardownActiveNav = null;
 
-        var CONTENT = {
-          en: {
-            meta: {
-              siteName: "Shaoting He, RN",
-              role: "Registered Nurse",
-              title: "Shaoting He, RN | Fresh Clinical Signal",
-              description:
-                "Fresh Clinical Signal for Shaoting He, RN, focused on critical care judgment, senior-health continuity, bilingual clinical communication, and practical systems support.",
-              ogDescription:
-                "A clinical dossier for RN practice shaped by ICU monitoring, senior-health continuity, bilingual communication, and practical workflow systems."
-            },
-            ui: {
-              skip: "Skip to content",
-              language: "Language",
-              navLabel: "Primary",
-              nav: [
-                ["practice", "Clinical Practice"],
-                ["capability", "Signals"],
-                ["timeline", "Experience"],
-                ["education", "Current Study"],
-                ["language", "Languages"],
-                ["systems", "Systems"],
-                ["contact", "Contact"]
-              ]
-            },
-            hero: {
-              eyebrow: "Fresh Clinical Signal",
-              title: "Critical care nurse focused on bedside clarity.",
-              titleTail: "",
-              role:
-                "RN practice shaped by ICU monitoring, senior-health continuity, bilingual communication, and cross-system clinical judgment.",
-              intro:
-                "I bring calm observation, disciplined documentation, and practical follow-through to high-acuity and complex-care settings.",
-              portraitLabel: "Shaoting He, RN",
-              portraitText: "Critical care judgment with steady clinical communication.",
-              actions: [
-                ["#practice", "Clinical Practice"],
-                ["#contact", "Contact"]
-              ],
-              identity: [
-                ["RN", "NSCN"],
-                ["Critical Care", "ICU practice context"],
-                ["Training", "BLS / ACLS · Coronary Care 1"],
-                ["Clinical Signal", "Hemodynamics · rhythm · escalation"]
-              ]
-            },
-            sections: {
-              practice: {
-                eyebrow: "Practice Domains",
-                title: "What I bring to patient care.",
-                summary:
-                  "The through-line is clear observation, careful escalation, and documentation that keeps complex care understandable.",
-                items: [
-                  {
-                    title: "Critical care judgment",
-                    text:
-                      "Bedside practice shaped by ICU monitoring, hemodynamic and cardiac signals, respiratory support exposure, neurological assessment, and escalation.",
-                    detail:
-                      "Practice context: 3WG Intensive Care Unit and ICU student placement.",
-                    signals: ["Hemodynamics", "Rhythm / ECG", "Ventilation exposure", "Escalation"]
-                  },
-                  {
-                    title: "Senior-health continuity",
-                    text:
-                      "Older-adult care shaped by dementia, dysphagia, aphasia, falls risk, pressure injury prevention, infection control, family communication, and ADL support.",
-                    detail:
-                      "Practice context: Senior Health Centre, long-term care, and complex chronic needs.",
-                    signals: ["Dementia", "Dysphagia / aphasia", "Falls risk", "Family clarity"]
-                  },
-                  {
-                    title: "Cross-system communication",
-                    text:
-                      "Canadian and Chinese clinical environments support internal medicine perspective, Mandarin clinical review, dialect-aware elderly patient communication, and care-plan clarity.",
-                    detail:
-                      "Practice context: supervised internal medicine practice in China and Canadian RN practice.",
-                    signals: ["Mandarin review", "Care plans", "Patient education", "System awareness"]
-                  }
-                ],
-                storyLabel: "Practice Stories",
-                storySummary:
-                  "Compact examples of how the clinical signal shows up at bedside.",
-                stories: [
-                  {
-                    title: "Change recognition",
-                    text:
-                      "Vital signs, rhythm, work of breathing, neuro status, and bedside behavior are read together before escalation."
-                  },
-                  {
-                    title: "Family and patient clarity",
-                    text:
-                      "Older-adult care uses plain language, dignity, and repeated checks for what the patient and family understood."
-                  },
-                  {
-                    title: "Documentation discipline",
-                    text:
-                      "Handoffs and notes are written so concern, action, and follow-up are visible without guesswork."
-                  }
-                ]
-              },
-              timeline: {
-                eyebrow: "Motion Timeline",
-                title: "Clinical experience flow.",
-                summary:
-                  "Selected roles are grouped as a formation path: high-acuity observation, older-adult continuity, and cross-system practice.",
-                aside:
-                  "Clinical judgment formed through repeated observation, clear escalation, and documentation that carries the next step.",
-                asideList: ["Acute deterioration", "Older-adult continuity", "Cross-system review", "Clear handoff trail"],
-                items: [
-                  {
-                    kicker: "Registered Nurse",
-                    title: "Markham Stouffville Hospital - 3WG Intensive Care Unit",
-                    text:
-                      "Critical care monitoring, reassessment, rhythm-aware documentation, escalation, and unit coordination.",
-                    signals: ["ICU", "Monitoring", "Escalation"]
-                  },
-                  {
-                    kicker: "Supervised Practice",
-                    title: "Youyu County Hospital of Chinese Medicine - 3F Internal Medicine",
-                    text:
-                      "Internal medicine practice in China with Mandarin documentation review, patient education, and follow-up clarity.",
-                    signals: ["Internal medicine", "Mandarin review", "Education"]
-                  },
-                  {
-                    kicker: "Clinical Extern",
-                    title: "Markham Stouffville Hospital - Surgical / Short Stay",
-                    text:
-                      "Perioperative and short-stay support across observation, communication, and unit flow.",
-                    signals: ["Observation", "Unit flow", "Handoff"]
-                  },
-                  {
-                    kicker: "Senior Health",
-                    title: "North York General Hospital - Senior Health Centre",
-                    text:
-                      "Older-adult support across ADLs, dementia needs, fall prevention, pressure injury awareness, and family communication.",
-                    signals: ["Dementia", "Falls", "Family communication"]
-                  },
-                  {
-                    kicker: "ICU Placement",
-                    title: "Humber River Hospital - 6E Intensive Care Unit",
-                    text:
-                      "Placement exposure to ventilated patients, hemodynamic observation, neurological assessment, and documentation.",
-                    signals: ["Ventilation exposure", "Neuro checks", "Charting"]
-                  },
-                  {
-                    kicker: "Acute Care",
-                    title: "St. Michael's Hospital - Fracture Clinic and General Medicine",
-                    text:
-                      "Clinic and medicine placements across assessment, documentation, patient education, and care-team communication.",
-                    signals: ["Assessment", "Documentation", "Education"]
-                  }
-                ]
-              },
-              capability: {
-                eyebrow: "Signal Board",
-                title: "Capability groups.",
-                summary:
-                  "A compact board of grouped signals for quick clinical reading.",
-                groups: [
-                  {
-                    title: "Critical Care",
-                    items: ["Hemodynamic monitoring", "Ventilation and airway exposure", "Neurological reassessment", "Escalation readiness"],
-                    note: "Built around trend recognition and timely follow-through."
-                  },
-                  {
-                    title: "Cardiac / Rhythm",
-                    items: ["Rhythm interpretation", "ECG-aware notes", "Coronary Care 1", "BLS / ACLS training"],
-                    note: "Cardiac signal is documented in practical bedside language."
-                  },
-                  {
-                    title: "Senior Health",
-                    items: ["Dementia", "Dysphagia and aphasia", "Falls and pressure injury risk", "Chronic-disease continuity"],
-                    note: "Complex needs are handled with dignity and repeatable support."
-                  },
-                  {
-                    title: "Cross-System",
-                    items: ["Canada / China practice", "Internal medicine lens", "Mandarin clinical review", "Care-plan clarity"],
-                    note: "System differences become context for clearer decisions."
-                  },
-                  {
-                    title: "Communication",
-                    items: ["SBAR-style escalation", "Patient education", "Bilingual listening", "Family updates"],
-                    note: "Communication is treated as a safety tool, not an afterthought."
-                  },
-                  {
-                    title: "Systems Practice",
-                    items: ["Small tooling", "Revision habits", "Follow-up structure", "Workflow discipline"],
-                    note: "Technical work supports clinical clarity in a secondary track."
-                  }
-                ]
-              },
-              education: {
-                eyebrow: "Education & Registration",
-                title: "Credentials, without overstatement.",
-                summary:
-                  "A concise view of registration, education, critical care training, and current study.",
-                items: [
-                  ["Registered Nurse", "NSCN."],
-                  ["Bachelor of Science in Nursing", "Toronto Metropolitan University collaborative nursing program, minor in Psychology, graduated with Distinction."],
-                  ["Critical Care Education", "Centennial College Intensive Care Training Program and Coronary Care 1."],
-                  ["Current / Additional Learning", "Conestoga College NURS8963 Transition to Nursing Practice, ongoing; CIHI InterRAI LTCF Essentials 1 & 2."],
-                  ["Cross-System Registration Context", "China nursing registration examination context, framed at a public professional level."]
-                ]
-              },
-              language: {
-                eyebrow: "Language & Cross-Cultural Practice",
-                title: "Clinical communication across languages and systems.",
-                summary:
-                  "Language ability is presented as clinical context: clearer education, safer handoffs, and more precise listening.",
-                items: [
-                  ["English", "Professional clinical working proficiency."],
-                  ["Mandarin", "Mother tongue, including clinical and regulatory review context."],
-                  ["French", "A2 active learning."],
-                  ["Spanish", "A1 leisure learning."],
-                  ["Cross-Cultural Practice", "Canadian and Chinese clinical environments support flexible communication, dialect-aware elderly patient care, and awareness of system differences."]
-                ]
-              },
-              systems: {
-                eyebrow: "Technical Systems Support",
-                title: "Tools stay secondary to clinical clarity.",
-                summary:
-                  "This support track shows practical follow-through habits that help documentation, care-plan clarity, and continuity.",
-                featureTitle: "Secondary support track",
-                feature:
-                  "Small tools, revision habits, and checklists are useful when they make clinical communication easier to continue.",
-                links: [
-                  ["main-quest.html", "Professional Direction", "A concise note on current RN direction."],
-                  ["side-quest.html", "Technical Systems Practice", "Small tools and follow-through habits that support documentation clarity."]
-                ]
-              },
-              contact: {
-                eyebrow: "Contact",
-                title: "Professional contact.",
-                summary:
-                  "For relevant nursing opportunities, referrals, or professional exchange, email is the clearest channel.",
-                location: "Toronto, Ontario",
-                text:
-                  "Email is the preferred channel for relevant nursing opportunities, referrals, professional material requests, and professional exchange.",
-                email: "shaotinghe2037@gmail.com",
-                note: "Additional professional materials can be provided when relevant."
-              }
-            },
-            footer: {
-              text: "Registered Nurse focused on critical care judgment, senior-health continuity, and practical clinical systems.",
-              copyright:
-                "Copyright © 2026 Shaoting He. All rights reserved. Content and design may not be reproduced without permission."
-            }
-          },
-          "zh-Hans": {
-            meta: {
-              siteName: "何少霆 RN",
-              role: "注册护士",
-              title: "何少霆 RN | Fresh Clinical Signal",
-              description:
-                "何少霆 RN 的临床档案：聚焦重症判断、老年健康连续性、跨体系临床实践、双语沟通与实用系统工作。",
-              ogDescription:
-                "以 ICU 监测、老年健康连续性、双语沟通与实用工作流系统为线索的 RN 临床档案。"
-            },
-            ui: {
-              skip: "跳至主要内容",
-              language: "语言",
-              navLabel: "主导航",
-              nav: [
-                ["practice", "临床实践"],
-                ["capability", "信号"],
-                ["timeline", "经历"],
-                ["education", "当前学习"],
-                ["language", "语言"],
-                ["systems", "系统"],
-                ["contact", "联系"]
-              ]
-            },
-            hero: {
-              eyebrow: "Fresh Clinical Signal",
-              title: "聚焦床旁清晰度的重症护士。",
-              titleTail: "",
-              role:
-                "RN 实践由 ICU 监测、老年健康连续性、双语沟通与跨体系临床判断共同塑造。",
-              intro:
-                "我把冷静观察、有纪律的记录与务实跟进带入高急性与复杂照护场景。",
-              portraitLabel: "何少霆，RN",
-              portraitText: "重症判断与稳定清晰的临床沟通。",
-              actions: [
-                ["#practice", "临床实践"],
-                ["#contact", "联系"]
-              ],
-              identity: [
-                ["RN", "NSCN"],
-                ["重症护理", "ICU 实践语境"],
-                ["训练", "BLS / ACLS · Coronary Care 1"],
-                ["临床信号", "血流动力学 · 心律 · 升级汇报"]
-              ]
-            },
-            sections: {
-              practice: {
-                eyebrow: "实践领域",
-                title: "我带入患者照护的能力。",
-                summary:
-                  "主线是清晰观察、谨慎升级汇报，以及让复杂照护更容易被接续理解的记录。",
-                items: [
-                  {
-                    title: "重症判断",
-                    text:
-                      "床旁实践由 ICU 监测、血流动力学与心电信号、呼吸支持接触、神经系统评估和升级汇报共同塑造。",
-                    detail: "实践语境：3WG Intensive Care Unit 以及 ICU 学生实习。",
-                    signals: ["血流动力学", "心律 / ECG", "机械通气接触", "升级汇报"]
-                  },
-                  {
-                    title: "老年健康连续性",
-                    text:
-                      "老年照护经验涵盖失智、吞咽困难、失语、跌倒风险、压力性损伤预防、感染控制、家庭沟通与 ADL 支持。",
-                    detail: "实践语境：Senior Health Centre、长期照护及复杂慢性需求。",
-                    signals: ["失智", "吞咽困难 / 失语", "跌倒风险", "家庭沟通"]
-                  },
-                  {
-                    title: "跨体系沟通",
-                    text:
-                      "加拿大与中国临床环境支持内科视角、普通话临床材料审阅、面向老年患者的方言敏感沟通，以及护理计划清晰度。",
-                    detail: "实践语境：中国内科督导实践与加拿大 RN 实践。",
-                    signals: ["普通话审阅", "护理计划", "患者教育", "体系意识"]
-                  }
-                ],
-                storyLabel: "实践小片段",
-                storySummary:
-                  "几个简短例子，说明临床信号如何体现在床旁工作中。",
-                stories: [
-                  {
-                    title: "变化识别",
-                    text:
-                      "生命体征、心律、呼吸做功、神经状态和床旁行为会被放在一起阅读，再决定是否升级汇报。"
-                  },
-                  {
-                    title: "患者与家庭清晰度",
-                    text:
-                      "老年照护需要平实语言、尊严感，以及反复确认患者和家属真正理解了什么。"
-                  },
-                  {
-                    title: "记录纪律",
-                    text:
-                      "交接与记录让担忧点、已采取行动和后续计划清楚可见，减少下一位临床人员猜测。"
-                  }
-                ]
-              },
-              timeline: {
-                eyebrow: "流动时间线",
-                title: "临床经历流。",
-                summary:
-                  "精选经历被组织为一条形成路径：高急性观察、老年连续性照护与跨体系实践。",
-                aside:
-                  "临床判断来自反复观察、清晰升级汇报，以及能承载下一步行动的记录。",
-                asideList: ["急性恶化", "老年连续性", "跨体系审阅", "清晰交接轨迹"],
-                items: [
-                  {
-                    kicker: "注册护士",
-                    title: "Markham Stouffville Hospital - 3WG Intensive Care Unit",
-                    text:
-                      "重症监测、再评估、心律相关记录、升级汇报与病区协作。",
-                    signals: ["ICU", "监测", "升级汇报"]
-                  },
-                  {
-                    kicker: "督导实践",
-                    title: "右玉县中医院 - 3F 内科",
-                    text:
-                      "中国内科实践，包含普通话记录审阅、患者教育与随访清晰度。",
-                    signals: ["内科", "普通话审阅", "患者教育"]
-                  },
-                  {
-                    kicker: "Clinical Extern",
-                    title: "Markham Stouffville Hospital - Surgical / Short Stay",
-                    text:
-                      "围手术期与短住院支持，包括观察、沟通与病区流转。",
-                    signals: ["观察", "病区流转", "交接"]
-                  },
-                  {
-                    kicker: "老年健康",
-                    title: "North York General Hospital - Senior Health Centre",
-                    text:
-                      "老年支持，包括 ADL、失智需求、跌倒预防、压力性损伤意识与家庭沟通。",
-                    signals: ["失智", "跌倒", "家庭沟通"]
-                  },
-                  {
-                    kicker: "ICU 实习",
-                    title: "Humber River Hospital - 6E Intensive Care Unit",
-                    text:
-                      "实习接触机械通气患者、血流动力学观察、神经系统评估与记录。",
-                    signals: ["机械通气接触", "神经评估", "记录"]
-                  },
-                  {
-                    kicker: "急性照护",
-                    title: "St. Michael's Hospital - Fracture Clinic and General Medicine",
-                    text:
-                      "门诊与内科实习，包含评估、记录、患者教育与团队沟通。",
-                    signals: ["评估", "记录", "教育"]
-                  }
-                ]
-              },
-              capability: {
-                eyebrow: "信号板",
-                title: "能力分组。",
-                summary:
-                  "将临床信号压缩成分组，便于快速阅读。",
-                groups: [
-                  {
-                    title: "重症监护",
-                    items: ["血流动力学监测", "通气与气道接触", "神经系统再评估", "升级汇报准备"],
-                    note: "围绕趋势识别与及时跟进组织。"
-                  },
-                  {
-                    title: "心脏 / 心律",
-                    items: ["心律判读", "ECG 相关记录", "Coronary Care 1", "BLS / ACLS 训练"],
-                    note: "心脏信号以实用的床旁语言记录。"
-                  },
-                  {
-                    title: "老年健康",
-                    items: ["失智", "吞咽困难与失语", "跌倒与压力性损伤风险", "慢性病连续性"],
-                    note: "复杂需求需要尊严感和可重复的支持。"
-                  },
-                  {
-                    title: "跨体系",
-                    items: ["加拿大 / 中国实践", "内科视角", "普通话临床审阅", "护理计划清晰度"],
-                    note: "体系差异成为更清晰决策的语境。"
-                  },
-                  {
-                    title: "沟通",
-                    items: ["SBAR 式升级汇报", "患者教育", "双语倾听", "家庭更新"],
-                    note: "沟通被作为安全工具，而不是附加项。"
-                  },
-                  {
-                    title: "系统实践",
-                    items: ["小型工具", "修订习惯", "跟进结构", "工作流纪律"],
-                    note: "技术工作作为次要支线，支持临床清晰度。"
-                  }
-                ]
-              },
-              education: {
-                eyebrow: "教育与注册",
-                title: "资质呈现不过度包装。",
-                summary:
-                  "注册、教育、重症培训与当前学习的简明视图。",
-                items: [
-                  ["注册护士", "NSCN。"],
-                  ["护理学理学士", "Toronto Metropolitan University collaborative nursing program，辅修心理学，以 Distinction 毕业。"],
-                  ["重症护理教育", "Centennial College Intensive Care Training Program 与 Coronary Care 1。"],
-                  ["当前 / 额外学习", "Conestoga College NURS8963 Transition to Nursing Practice，进行中；CIHI InterRAI LTCF Essentials 1 & 2。"],
-                  ["跨体系注册语境", "中国护士注册考试语境，以公开专业层级呈现。"]
-                ]
-              },
-              language: {
-                eyebrow: "语言与跨文化实践",
-                title: "跨语言与跨体系的临床沟通。",
-                summary:
-                  "语言能力在这里作为临床语境呈现：更清晰的教育、更安全的交接，以及更精确的倾听。",
-                items: [
-                  ["英语", "专业临床工作熟练度。"],
-                  ["普通话", "母语，包括临床与监管材料阅读语境。"],
-                  ["法语", "A2 主动学习。"],
-                  ["西班牙语", "A1 休闲学习。"],
-                  ["跨文化实践", "加拿大与中国临床环境经验，支持灵活沟通、面向老年患者的方言敏感照护，以及对体系差异的理解。"]
-                ]
-              },
-              systems: {
-                eyebrow: "技术系统支持",
-                title: "工具始终服务于临床清晰度。",
-                summary:
-                  "这一支线呈现实用跟进习惯，帮助记录、护理计划清晰度与照护连续性。",
-                featureTitle: "次要支持支线",
-                feature:
-                  "小型工具、修订习惯和清单只有在让临床沟通更容易接续时才有价值。",
-                links: [
-                  ["main-quest.html", "Professional Direction", "关于当前 RN 方向的简短说明。"],
-                  ["side-quest.html", "Technical Systems Practice", "小型工具与跟进习惯，用于支持记录清晰度。"]
-                ]
-              },
-              contact: {
-                eyebrow: "联系",
-                title: "专业联系。",
-                summary:
-                  "如有相关护理机会、引荐或专业交流，电子邮件是最清晰的方式。",
-                location: "加拿大安大略省多伦多",
-                text:
-                  "如有相关护理机会、引荐、专业材料请求或专业交流，电子邮件是首选渠道。",
-                email: "shaotinghe2037@gmail.com",
-                note: "可在相关情况下提供更多专业材料。"
-              }
-            },
-            footer: {
-              text: "注册护士，聚焦重症判断、老年健康连续性与实用临床系统。",
-              copyright:
-                "Copyright © 2026 何少霆。保留所有权利。未经许可，不得复制本站内容与设计。"
-            }
-          }
-        };
+        var CONTENT = window.SHAOTING_HOME_CONTENT || null;
+
+        if (!isValidContent(CONTENT)) {
+          return;
+        }
 
         function escapeHtml(value) {
           return String(value || "")
@@ -2015,6 +1673,37 @@
           }
 
           return true;
+        }
+
+        function hasDisclosureContent(section) {
+          return !!(section && section.disclosureTitle && section.disclosureSummary);
+        }
+
+        function isValidContent(content) {
+          if (!content) {
+            return false;
+          }
+
+          return LANGUAGES.every(function (language) {
+            var locale = content[language];
+            var sections = locale && locale.sections;
+            return !!(
+              locale &&
+              locale.meta &&
+              locale.ui &&
+              locale.hero &&
+              sections &&
+              sections.focus &&
+              sections.practice &&
+              hasDisclosureContent(sections.timeline) &&
+              hasDisclosureContent(sections.capability) &&
+              hasDisclosureContent(sections.education) &&
+              hasDisclosureContent(sections.language) &&
+              hasDisclosureContent(sections.systems) &&
+              sections.contact &&
+              locale.footer
+            );
+          });
         }
 
         function setMeta(content) {
@@ -2140,6 +1829,30 @@
           );
         }
 
+        function renderPreview(items) {
+          if (!items || !items.length) {
+            return "";
+          }
+
+          return renderSignals(items.slice(0, 4), "disclosure-preview", "signal-token");
+        }
+
+        function renderDisclosure(id, section, previewItems, panel) {
+          return (
+            '<details class="section-disclosure reveal" data-disclosure-id="' +
+            escapeHtml(id) +
+            '"><summary class="disclosure-summary"><span class="disclosure-summary-inner"><span class="disclosure-copy"><span class="label">' +
+            escapeHtml(section.disclosureTitle || section.storyLabel || "Details") +
+            "</span><strong>" +
+            escapeHtml(section.disclosureSummary || section.storySummary || "Open details.") +
+            "</strong></span>" +
+            renderPreview(previewItems) +
+            '</span></summary><div class="disclosure-panel">' +
+            panel +
+            "</div></details>"
+          );
+        }
+
         function renderSectionHeading(section) {
           return (
             '<div class="section-heading reveal"><div><span class="eyebrow">' +
@@ -2152,22 +1865,45 @@
           );
         }
 
+        function renderCurrentFocus(section) {
+          return (
+            '<section class="section current-focus-section" id="focus"><div class="container">' +
+            renderSectionHeading(section) +
+            '<div class="focus-list">' +
+            section.items
+              .map(function (item) {
+                return '<article class="focus-card reveal"><h3>' + escapeHtml(item.title) + "</h3><p>" + escapeHtml(item.text) + "</p></article>";
+              })
+              .join("") +
+            "</div></div></section>"
+          );
+        }
+
         function renderPractice(section) {
           var stories = "";
 
           if (section.stories && section.stories.length) {
-            stories =
-              '<div class="practice-story-intro reveal"><span class="label">' +
-              escapeHtml(section.storyLabel) +
-              "</span><p>" +
-              escapeHtml(section.storySummary) +
-              '</p></div><div class="practice-story-board">' +
+            var storyPanel =
+              '<div class="practice-story-board">' +
               section.stories
                 .map(function (story) {
                   return '<article class="story-card reveal"><h3>' + escapeHtml(story.title) + "</h3><p>" + escapeHtml(story.text) + "</p></article>";
                 })
                 .join("") +
               "</div>";
+
+            stories =
+              renderDisclosure(
+                "practice-stories",
+                {
+                  disclosureTitle: section.storyLabel,
+                  disclosureSummary: section.storySummary
+                },
+                section.stories.map(function (story) {
+                  return story.title;
+                }),
+                storyPanel
+              );
           }
 
           return (
@@ -2184,9 +1920,8 @@
                   escapeHtml(item.title) +
                   '</h3><p>' +
                   escapeHtml(item.text) +
-                  '<span class="detail-text">' +
-                  escapeHtml(item.detail) +
-                  "</span></p>" +
+                  (item.detail ? '<span class="detail-text">' + escapeHtml(item.detail) + "</span>" : "") +
+                  "</p>" +
                   renderSignals(item.signals, "domain-signals", "signal-pill") +
                   "</article>"
                 );
@@ -2199,6 +1934,7 @@
         }
 
         function renderTimeline(section) {
+          var evidence = "";
           var asideList = section.asideList && section.asideList.length
             ? '<ul class="timeline-aside-list">' +
               section.asideList
@@ -2209,9 +1945,30 @@
               "</ul>"
             : "";
 
-          return (
-            '<section class="section" id="timeline"><div class="container">' +
-            renderSectionHeading(section) +
+          if (section.evidence && section.evidence.length) {
+            evidence =
+              '<div class="domain-list evidence-list">' +
+              section.evidence
+                .map(function (item, index) {
+                  return (
+                    '<article class="domain-row evidence-card reveal"><span class="domain-number">' +
+                    String(index + 1).padStart(2, "0") +
+                    '</span><span class="label">' +
+                    escapeHtml(item.kicker) +
+                    "</span><h3>" +
+                    escapeHtml(item.title) +
+                    "</h3><p>" +
+                    escapeHtml(item.text) +
+                    "</p>" +
+                    renderSignals(item.signals, "domain-signals", "signal-pill") +
+                    "</article>"
+                  );
+                })
+                .join("") +
+              "</div>";
+          }
+
+          var panel =
             '<div class="timeline"><div class="timeline-rail">' +
             section.items
               .map(function (item) {
@@ -2237,7 +1994,21 @@
             escapeHtml(section.aside) +
             "</p>" +
             asideList +
-            "</aside></div></div></section>"
+            "</aside></div>";
+
+          return (
+            '<section class="section" id="timeline"><div class="container">' +
+            renderSectionHeading(section) +
+            evidence +
+            renderDisclosure(
+              "timeline",
+              section,
+              section.items.map(function (item) {
+                return Array.isArray(item) ? item[0] : item.kicker;
+              }),
+              panel
+            ) +
+            "</div></section>"
           );
         }
 
@@ -2269,18 +2040,20 @@
           return (
             '<section class="section" id="capability"><div class="container">' +
             renderSectionHeading(section) +
-            '<div class="index-table">' +
-            rows +
-            "</div></div></section>"
+            renderDisclosure(
+              "capability",
+              section,
+              (section.groups || section.items).map(function (item) {
+                return Array.isArray(item) ? item[0] : item.title;
+              }),
+              '<div class="index-table">' + rows + "</div>"
+            ) +
+            "</div></section>"
           );
         }
 
         function renderGridSection(id, section, className) {
-          return (
-            '<section class="section" id="' +
-            escapeHtml(id) +
-            '"><div class="container">' +
-            renderSectionHeading(section) +
+          var panel =
             '<div class="' +
             escapeHtml(className) +
             '">' +
@@ -2289,14 +2062,27 @@
                 return '<article class="' + (className === "education-grid" ? "education-row" : "language-row") + ' reveal"><span class="label">' + escapeHtml(item[0]) + "</span><p>" + escapeHtml(item[1]) + "</p></article>";
               })
               .join("") +
-            "</div></div></section>"
+            "</div>";
+
+          return (
+            '<section class="section" id="' +
+            escapeHtml(id) +
+            '"><div class="container">' +
+            renderSectionHeading(section) +
+            renderDisclosure(
+              id,
+              section,
+              section.items.map(function (item) {
+                return item[0];
+              }),
+              panel
+            ) +
+            "</div></section>"
           );
         }
 
         function renderSystems(section) {
-          return (
-            '<section class="section systems-section" id="systems"><div class="container">' +
-            renderSectionHeading(section) +
+          var panel =
             '<div class="systems-layout"><article class="systems-feature reveal"><span class="label">' +
             escapeHtml(section.featureTitle) +
             '</span><h3>' +
@@ -2309,7 +2095,20 @@
                 return '<a class="systems-link reveal" href="' + escapeHtml(link[0]) + '"><strong>' + escapeHtml(link[1]) + "</strong><span>" + escapeHtml(link[2]) + "</span></a>";
               })
               .join("") +
-            "</div></div></div></section>"
+            "</div></div>";
+
+          return (
+            '<section class="section systems-section" id="systems"><div class="container">' +
+            renderSectionHeading(section) +
+            renderDisclosure(
+              "systems",
+              section,
+              section.links.map(function (link) {
+                return link[1];
+              }),
+              panel
+            ) +
+            "</div></section>"
           );
         }
 
@@ -2358,6 +2157,46 @@
           });
         }
 
+        function getOpenDisclosures() {
+          return Array.prototype.slice
+            .call(document.querySelectorAll("[data-disclosure-id][open]"))
+            .map(function (item) {
+              return item.getAttribute("data-disclosure-id");
+            })
+            .filter(Boolean);
+        }
+
+        function restoreOpenDisclosures(ids) {
+          (ids || []).forEach(function (id) {
+            var item = Array.prototype.slice
+              .call(document.querySelectorAll("[data-disclosure-id]"))
+              .find(function (candidate) {
+                return candidate.getAttribute("data-disclosure-id") === id;
+              });
+            if (item) {
+              item.open = true;
+            }
+          });
+        }
+
+        function initDisclosureKeys() {
+          document.querySelectorAll(".disclosure-summary").forEach(function (summary) {
+            summary.addEventListener("keydown", function (event) {
+              if (event.key !== "Enter" && event.key !== " " && event.key !== "Spacebar") {
+                return;
+              }
+
+              var disclosure = summary.closest("details");
+              if (!disclosure) {
+                return;
+              }
+
+              event.preventDefault();
+              disclosure.open = !disclosure.open;
+            });
+          });
+        }
+
         function render() {
           var content = CONTENT[state.language] || CONTENT.en;
           var hash = window.location.hash;
@@ -2370,6 +2209,7 @@
             renderHeader(content) +
             '<main id="main-content" tabindex="-1">' +
             renderHero(content) +
+            renderCurrentFocus(content.sections.focus) +
             renderPractice(content.sections.practice) +
             renderIndex(content.sections.capability) +
             renderTimeline(content.sections.timeline) +
@@ -2381,6 +2221,8 @@
             renderFooter(content) +
             "</div>";
 
+          restoreOpenDisclosures(state.openDisclosures);
+          initDisclosureKeys();
           initReveal();
           initActiveNav();
           initSkipLinkFocus();
@@ -2514,6 +2356,7 @@
           }
 
           state.language = button.getAttribute("data-language");
+          state.openDisclosures = getOpenDisclosures();
           storeLanguage(state.language);
           render();
         });
