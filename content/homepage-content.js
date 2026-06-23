@@ -9,11 +9,11 @@
             meta: {
               siteName: "Shaoting He, RN",
               role: "Registered Nurse",
-              title: "Shaoting He, RN | Fresh Clinical Signal",
+              title: "Shaoting He, RN | ICU Nursing Profile",
               description:
-                "Fresh Clinical Signal for Shaoting He, RN, focused on critical care judgment, senior-health continuity, bilingual clinical communication, and practical systems support.",
+                "Shaoting He, RN is an NSCN-licensed registered nurse in a full-time ICU role at Valley Regional Hospital in Kentville, Nova Scotia.",
               ogDescription:
-                "A clinical dossier for RN practice shaped by ICU monitoring, senior-health continuity, bilingual communication, and practical workflow systems."
+                "An ICU-focused nursing profile shaped by current critical-care practice, senior-health context, bilingual communication, and clear documentation."
             },
             ui: {
               skip: "Skip to content",
@@ -35,19 +35,19 @@
               title: "Shaoting He, RN",
               titleTail: "",
               role:
-                "Registered nurse with ICU practice context, senior-health experience, and bilingual clinical communication.",
+                "Registered Nurse (RN), licensed with NSCN, in a full-time ICU role at Valley Regional Hospital in Kentville, Nova Scotia.",
               intro:
-                "Focused on calm observation, disciplined documentation, and escalation support for complex-care teams.",
+                "Focused on concise critical-care growth, clear documentation, and steady bilingual clinical communication.",
               portraitLabel: "Shaoting He, RN",
-              portraitText: "Bedside judgment with clear clinical communication.",
+              portraitText: "Current ICU direction with clear clinical communication.",
               actions: [
-                ["#contact", "Contact"],
+                ["#contact", "Request information"],
                 ["#practice", "Expertise"]
               ],
               identity: [
-                ["RN", "NSCN"],
-                ["ICU Context", "Monitoring · escalation support"],
-                ["Care Continuity", "Senior health · bilingual communication"]
+                ["RN", "Licensed with NSCN"],
+                ["Valley Regional ICU", "Full-time role · Kentville, Nova Scotia"],
+                ["Critical Care Direction", "ICU certificate · current clinical growth"]
               ]
             },
             sections: {
@@ -55,22 +55,22 @@
                 eyebrow: "Now",
                 title: "Current Focus",
                 summary:
-                  "What I am focused on now: bedside clinical judgment, senior-health continuity, and practical workflow clarity.",
+                  "Current focus: full-time ICU nursing in Kentville, concise critical-care growth, and public-safe professional material.",
                 items: [
                   {
                     title: "Current Role",
                     text:
-                      "RN practice focused on careful observation, disciplined documentation, senior-health continuity, and safe clinical communication in complex-care settings."
+                      "Full-time ICU RN at Valley Regional Hospital in Kentville, Nova Scotia, with newly obtained NSCN licensure."
                   },
                   {
                     title: "Clinical Focus",
                     text:
-                      "Monitoring, reassessment, escalation, rhythm awareness, care planning, and family communication across bedside and continuity-focused care."
+                      "Critical-care practice, ICU specialty development, disciplined documentation, and calm communication around changing clinical needs."
                   },
                   {
-                    title: "Recent Systems / Practice Build",
+                    title: "Professional Direction",
                     text:
-                      "Small practical tools for clearer clinical reasoning, documentation structure, portfolio upkeep, and follow-through while keeping nursing practice central."
+                      "ICU nursing first, with senior-health interest and clinical systems habits kept as supporting context."
                   }
                 ]
               },
@@ -78,30 +78,30 @@
                 eyebrow: "Expertise Snapshot",
                 title: "RN expertise, in one scan.",
                 summary:
-                  "Four bedside-readable signals: critical care observation, senior-health continuity, bilingual clinical communication, and secondary systems support.",
+                  "Four concise signals: current ICU direction, senior-health interest, cross-system communication, and secondary systems support.",
                 items: [
                   {
-                    title: "Critical Care Observation",
+                    title: "Current Critical Care Direction",
                     text:
-                      "ICU RN context and ICU placement exposure support monitoring, reassessment, rhythm-aware documentation, neuro checks, respiratory-support exposure, and escalation.",
-                    signals: ["ICU context", "Monitoring", "Rhythm-aware", "Escalation"]
+                      "A current full-time ICU role and ICU certificate support the critical-care direction while keeping the profile concise.",
+                    signals: ["Current ICU role", "NSCN", "ICU certificate", "Critical care"]
                   },
                   {
-                    title: "Senior-Health Continuity",
+                    title: "Senior-Health Interest",
                     text:
-                      "Senior-health and long-term care work support older-adult needs across dementia, dysphagia or aphasia, falls risk, pressure-injury prevention, ADLs, and family clarity.",
-                    signals: ["Older-adult care", "Dementia", "Falls risk", "Family clarity"]
+                      "Senior health stays secondary here: a noted interest and accomplishment, including InterRAI-LTCF, without competing with the current ICU identity.",
+                    signals: ["Senior health", "InterRAI-LTCF", "Continuity", "Older adults"]
                   },
                   {
-                    title: "Bilingual Clinical Communication",
+                    title: "Cross-System Communication",
                     text:
-                      "Canadian and Chinese clinical environments support Mandarin clinical review, patient education, care-plan clarity, and dialect-aware elderly communication.",
+                      "Canadian and Chinese clinical environments support Mandarin review, patient education, care-plan clarity, and practical cross-system communication.",
                     signals: ["Canada / China", "Mandarin review", "Patient education", "Care plans"]
                   },
                   {
                     title: "Clinical Systems Support",
                     text:
-                      "Secondary to nursing practice, clear notes, handoffs, follow-up structure, and small tools support continuity without replacing clinical judgment.",
+                      "Clear notes, handoffs, follow-up structure, and small tools stay secondary, supporting clinical communication rather than becoming a separate portfolio.",
                     signals: ["Documentation", "Handoffs", "Follow-through", "Secondary tools"]
                   }
                 ]
@@ -110,25 +110,32 @@
                 eyebrow: "Selected Evidence",
                 title: "Clinical proof, kept concrete.",
                 summary:
-                  "Selected proof points support the snapshot without turning the homepage into a full resume timeline.",
+                  "Selected proof points stay specific: current ICU context, earlier ICU practice, senior-health context, and cross-system clinical practice.",
                 disclosureTitle: "Supporting role detail",
                 disclosureSummary: "Open the fuller role and placement context.",
                 aside:
-                  "The default proof stays filtered: ICU observation and escalation, senior-health continuity, cross-system communication, and secondary documentation support.",
-                asideList: ["RN-first proof", "Full timeline folded", "Systems stay secondary", "Evidence before labels"],
+                  "The default proof stays filtered: current ICU direction, selected clinical evidence, and folded detail for readers who need more.",
+                asideList: ["Current ICU direction", "Four proof cards", "Full timeline folded", "Systems stay secondary"],
                 evidence: [
+                  {
+                    kicker: "Current ICU role",
+                    title: "Valley Regional Hospital - Intensive Care Unit",
+                    text:
+                      "Newly licensed with NSCN and in a full-time ICU role in Kentville, Nova Scotia; kept brief as current context, not a full role description.",
+                    signals: ["Current ICU", "NSCN", "Kentville"]
+                  },
                   {
                     kicker: "ICU RN practice",
                     title: "Markham Stouffville Hospital - 3WG ICU",
                     text:
-                      "RN practice in the 3WG Intensive Care Unit is the clearest proof for monitoring, reassessment, rhythm-aware documentation, escalation, and unit coordination.",
+                      "ICU practice at Markham Stouffville supports the critical-care thread through monitoring, reassessment, rhythm-aware documentation, and escalation context.",
                     signals: ["ICU", "Monitoring", "Reassessment", "Escalation"]
                   },
                   {
-                    kicker: "Senior-health continuity",
+                    kicker: "Senior-health context",
                     title: "North York General Hospital - Senior Health Centre",
                     text:
-                      "Older-adult care there supports the continuity track across ADLs, dementia needs, falls prevention, pressure-injury awareness, and family communication.",
+                      "Older-adult care there supports the secondary senior-health thread across ADLs, dementia needs, falls prevention, pressure-injury awareness, and family communication.",
                     signals: ["Older adults", "ADLs", "Falls risk", "Family clarity"]
                   },
                   {
@@ -137,13 +144,6 @@
                     text:
                       "Supervised internal-medicine practice in China gives concrete proof for Mandarin documentation review, patient education, and follow-up clarity across clinical settings.",
                     signals: ["Internal medicine", "Mandarin review", "Patient education", "Follow-up"]
-                  },
-                  {
-                    kicker: "Secondary systems support",
-                    title: "Documentation and follow-through tools",
-                    text:
-                      "Small workflow supports are proof of documentation discipline and follow-through; they remain secondary to bedside nursing judgment.",
-                    signals: ["Documentation", "Handoffs", "Follow-up", "Secondary"]
                   }
                 ],
                 items: [
@@ -201,8 +201,8 @@
                 groups: [
                   {
                     title: "Critical Care",
-                    items: ["Hemodynamic monitoring", "Ventilation and airway exposure", "Neurological reassessment", "Escalation readiness"],
-                    note: "Built around trend recognition and timely follow-through."
+                    items: ["Current ICU role", "ICU certificate", "Hemodynamic monitoring", "Escalation readiness"],
+                    note: "Focused on current critical-care growth without overstating scope."
                   },
                   {
                     title: "Cardiac / Rhythm",
@@ -211,8 +211,8 @@
                   },
                   {
                     title: "Senior Health",
-                    items: ["Dementia", "Dysphagia and aphasia", "Falls and pressure injury risk", "Chronic-disease continuity"],
-                    note: "Complex needs are handled with dignity and repeatable support."
+                    items: ["Senior-health interest", "InterRAI-LTCF", "Falls and pressure injury risk", "Chronic-disease continuity"],
+                    note: "Presented as supporting context rather than the main identity."
                   },
                   {
                     title: "Cross-System",
@@ -235,15 +235,15 @@
                 eyebrow: "Education & Registration",
                 title: "Credentials, without overstatement.",
                 summary:
-                  "A concise view of registration, education, critical care training, and current study.",
+                  "A concise view of NSCN registration, education, critical care training, and selected learning.",
                 disclosureTitle: "Education & professional development",
                 disclosureSummary: "Open credentials, training, and current study.",
                 items: [
-                  ["Registered Nurse", "NSCN."],
+                  ["Registered Nurse", "Licensed with NSCN; no private identifier is published."],
                   ["Bachelor of Science in Nursing", "Toronto Metropolitan University collaborative nursing program, minor in Psychology, graduated with Distinction."],
-                  ["Critical Care Education", "Centennial College Intensive Care Training Program and Coronary Care 1."],
-                  ["Current / Additional Learning", "Conestoga College NURS8963 Transition to Nursing Practice, ongoing; CIHI InterRAI LTCF Essentials 1 & 2."],
-                  ["Cross-System Registration Context", "China nursing registration examination context, framed at a public professional level."]
+                  ["Critical Care Education", "ICU certificate, Centennial College Intensive Care Training Program, and Coronary Care 1."],
+                  ["Additional Learning", "Conestoga College NURS8963 Transition to Nursing Practice; CIHI InterRAI-LTCF Essentials 1 & 2."],
+                  ["Psychology Minor", "Psychology study supports patient education, family communication, and steady cross-cultural listening."]
                 ]
               },
               language: {
@@ -280,16 +280,17 @@
                 eyebrow: "Contact",
                 title: "Professional contact.",
                 summary:
-                  "For relevant nursing opportunities, referrals, or professional exchange, email is the clearest channel.",
-                location: "Toronto, Ontario",
+                  "For relevant nursing opportunities, referrals, or professional exchange, use the request information link.",
+                location: "Kentville, Nova Scotia",
                 text:
-                  "Email is the preferred channel for relevant nursing opportunities, referrals, professional material requests, and professional exchange.",
-                email: "shaotinghe2037@gmail.com",
-                note: "Additional professional materials can be provided when relevant."
+                  "This static site does not run a contact backend. The request link opens an email draft for professional inquiries.",
+                email: "Locutus1207@outlook.com",
+                ctaLabel: "Request professional information",
+                note: "Additional professional details can be requested when relevant."
               }
             },
             footer: {
-              text: "Registered Nurse focused on critical care judgment, senior-health continuity, and practical clinical systems.",
+              text: "NSCN-licensed Registered Nurse in a current ICU role, with senior-health context and practical clinical systems support.",
               copyright:
                 "Copyright © 2026 Shaoting He. All rights reserved. Content and design may not be reproduced without permission."
             }
@@ -298,11 +299,11 @@
             meta: {
               siteName: "何少霆 RN",
               role: "注册护士",
-              title: "何少霆 RN | 临床护理档案",
+              title: "何少霆 RN | ICU 临床护理档案",
               description:
-                "何少霆 RN 的临床档案：聚焦 ICU 实践经历、老年健康连续照护、双语临床沟通与文档清晰度。",
+                "何少霆 RN 已获得 NSCN 执业注册，目前在新斯科舍省 Kentville 的 Valley Regional Hospital ICU 担任全职岗位。",
               ogDescription:
-                "何少霆 RN 的临床档案，呈现 ICU 实践经历、老年健康连续照护与双语临床沟通。"
+                "何少霆 RN 的 ICU 临床护理档案，呈现当前重症护理方向、老年健康背景、双语临床沟通与清晰记录。"
             },
             ui: {
               skip: "跳至主要内容",
@@ -324,19 +325,19 @@
               title: "何少霆，注册护士",
               titleTail: "",
               role:
-                "ICU 实践经历 · 老年健康经验 · 双语临床沟通。",
+                "NSCN 执业注册护士，目前在新斯科舍省 Kentville 的 Valley Regional Hospital ICU 担任全职岗位。",
               intro:
-                "关注细致观察、规范记录，以及复杂照护团队中的及时上报与升级处理。",
+                "当前方向聚焦 ICU / 重症护理、清晰记录与稳定的双语临床沟通。",
               portraitLabel: "何少霆，RN",
-              portraitText: "床旁判断与清晰临床沟通。",
+              portraitText: "当前 ICU 方向与清晰临床沟通。",
               actions: [
-                ["#contact", "联系"],
+                ["#contact", "请求更多信息"],
                 ["#practice", "专长速览"]
               ],
               identity: [
-                ["RN", "NSCN"],
-                ["ICU 相关实践", "监测 · 升级处理"],
-                ["连续照护", "老年健康 · 双语沟通"]
+                ["RN", "NSCN 执业注册"],
+                ["Valley Regional ICU", "全职岗位 · Kentville, Nova Scotia"],
+                ["重症护理方向", "ICU 证书 · 当前临床成长"]
               ]
             },
             sections: {
@@ -344,22 +345,22 @@
                 eyebrow: "当前",
                 title: "近期重点",
                 summary:
-                  "当前重点：床旁临床判断、老年健康连续照护，以及支持临床工作流程和文档清晰度的实用工具。",
+                  "当前重点：Kentville 的全职 ICU 护理岗位、重症护理发展，以及简洁、公开安全的专业资料。",
                 items: [
                   {
                     title: "当前角色",
                     text:
-                      "注册护士实践，重点是细致观察、规范记录、老年健康连续照护，以及复杂照护场景中的安全临床沟通。"
+                      "目前在 Valley Regional Hospital Intensive Care Unit 担任全职 ICU 注册护士，并已获得 NSCN 执业注册。"
                   },
                   {
                     title: "临床重点",
                     text:
-                      "关注监测、再评估、及时上报与升级处理、心律相关观察与记录意识，以及护理计划与家属沟通的连续性。"
+                      "聚焦重症护理、ICU 专业方向、规范记录，以及临床变化中的稳定沟通。"
                   },
                   {
-                    title: "近期流程实践",
+                    title: "专业方向",
                     text:
-                      "整理轻量级临床流程与文档支持，用于临床思考、记录结构、个人档案维护与后续跟进。"
+                      "以 ICU 护理为主，老年健康兴趣与临床系统习惯作为支持背景。"
                   }
                 ]
               },
@@ -367,30 +368,30 @@
                 eyebrow: "专长速览",
                 title: "RN 专业重点一览。",
                 summary:
-                  "四项专业重点：重症护理观察与判断、老年健康连续照护、双语临床沟通，以及临床流程与文档支持。",
+                  "四项简洁重点：当前 ICU 方向、老年健康兴趣、跨体系沟通，以及辅助性的临床流程支持。",
                 items: [
                   {
-                    title: "重症护理观察与判断",
+                    title: "当前重症护理方向",
                     text:
-                      "ICU 注册护士实践与 ICU 实习接触，支持监测、再评估、心律相关记录意识、神经系统观察、呼吸支持相关照护，以及及时上报与升级处理。",
-                    signals: ["ICU 相关实践", "监测", "心律记录意识", "及时上报"]
+                      "当前全职 ICU 注册护士岗位与 ICU 证书支持重症护理方向；主页保持概览，不展开成完整履历。",
+                    signals: ["当前 ICU 岗位", "NSCN", "ICU 证书", "重症护理"]
                   },
                   {
-                    title: "老年健康连续照护",
+                    title: "老年健康兴趣",
                     text:
-                      "老年照护经验覆盖失智相关需求、吞咽或沟通障碍、跌倒风险、压力性损伤预防、ADL 支持与家庭沟通。",
-                    signals: ["失智照护", "吞咽支持", "跌倒预防", "家庭沟通"]
+                      "老年健康作为次要兴趣与已完成事项呈现，包括 InterRAI-LTCF，不盖过当前 ICU 身份。",
+                    signals: ["老年健康", "InterRAI-LTCF", "连续照护", "老年照护"]
                   },
                   {
-                    title: "双语临床沟通",
+                    title: "跨体系临床沟通",
                     text:
-                      "具备加拿大与中国临床环境下的沟通经验，可支持普通话临床沟通、资料审阅、患者教育、护理计划表达，以及面向老年患者的方言敏感沟通。",
-                    signals: ["中加临床环境", "普通话沟通", "患者教育", "护理计划"]
+                      "加拿大与中国临床环境经验，可支持普通话资料审阅、患者教育、护理计划表达与跨体系沟通。",
+                    signals: ["中加临床环境", "普通话审阅", "患者教育", "护理计划"]
                   },
                   {
                     title: "临床流程与文档支持",
                     text:
-                      "记录结构、交接清晰度、跟进习惯与小型工具只作为辅助，用于支持照护连续性与文档清晰度。",
+                      "记录结构、交接清晰度、跟进习惯与小型工具只作为辅助，服务于临床沟通，而不是独立作品集。",
                     signals: ["文档清晰度", "交接清晰", "跟进习惯", "辅助工具"]
                   }
                 ]
@@ -399,25 +400,32 @@
                 eyebrow: "精选证据",
                 title: "临床证据，保持具体。",
                 summary:
-                  "以下证据支持上方专业重点，同时避免首页默认呈现完整履历时间线。",
+                  "精选证据保持具体：当前 ICU 背景、既往 ICU 实践、老年健康背景与跨体系临床实践。",
                 disclosureTitle: "补充角色细节",
                 disclosureSummary: "展开较完整的角色与实习经历。",
                 aside:
-                  "默认证据保持筛选：ICU 观察与及时上报、老年健康连续照护、跨体系临床实践，以及辅助性文档支持。",
-                asideList: ["RN 优先", "完整时间线折叠", "系统支持为辅助", "证据先于标签"],
+                  "默认证据保持筛选：当前 ICU 方向、精选临床证据，以及供需要更多信息者展开的折叠细节。",
+                asideList: ["当前 ICU 方向", "四项证据", "完整时间线折叠", "系统支持为辅助"],
                 evidence: [
+                  {
+                    kicker: "当前 ICU 岗位",
+                    title: "Valley Regional Hospital - Intensive Care Unit",
+                    text:
+                      "已获得 NSCN 执业注册，并在新斯科舍省 Kentville 的 Valley Regional Hospital ICU 担任全职岗位；此处只作为当前背景简要呈现。",
+                    signals: ["当前 ICU", "NSCN", "Kentville"]
+                  },
                   {
                     kicker: "ICU 注册护士实践",
                     title: "Markham Stouffville Hospital - 3WG ICU",
                     text:
-                      "3WG Intensive Care Unit 的 RN 实践，是支持重症监测、再评估、心律相关记录、及时上报与病区协作的最直接证据。",
+                      "Markham Stouffville ICU 实践支持重症护理主线，包括监测、再评估、心律相关记录与及时上报背景。",
                     signals: ["ICU", "监测", "再评估", "及时上报"]
                   },
                   {
-                    kicker: "老年健康连续照护",
+                    kicker: "老年健康背景",
                     title: "North York General Hospital - Senior Health Centre",
                     text:
-                      "这段老年健康照护经历覆盖 ADL 支持、失智相关需求、跌倒预防、压力性损伤意识与家庭沟通。",
+                      "这段老年健康照护经历作为支持背景，覆盖 ADL 支持、失智相关需求、跌倒预防、压力性损伤意识与家庭沟通。",
                     signals: ["老年照护", "ADL", "跌倒预防", "家庭沟通"]
                   },
                   {
@@ -426,13 +434,6 @@
                     text:
                       "受督导内科实践支持普通话沟通、资料审阅、患者教育与随访沟通清晰度，也是跨体系临床实践的具体证据。",
                     signals: ["内科", "普通话审阅", "患者教育", "随访"]
-                  },
-                  {
-                    kicker: "临床流程与文档支持",
-                    title: "文档结构与跟进工具",
-                    text:
-                      "流程与工具只作为辅助证据，用于支持文档清晰度、交接清晰度与后续跟进，不替代临床判断。",
-                    signals: ["文档清晰度", "交接清晰", "跟进", "辅助"]
                   }
                 ],
                 items: [
@@ -490,8 +491,8 @@
                 groups: [
                   {
                     title: "重症护理",
-                    items: ["血流动力学监测", "通气与气道相关接触", "神经系统再评估", "及时上报与升级处理准备"],
-                    note: "以趋势识别与及时跟进为核心。"
+                    items: ["当前 ICU 岗位", "ICU 证书", "血流动力学监测", "及时上报与升级处理准备"],
+                    note: "聚焦当前重症护理成长，不夸大执业范围。"
                   },
                   {
                     title: "心脏 / 心律",
@@ -500,8 +501,8 @@
                   },
                   {
                     title: "老年健康",
-                    items: ["失智", "吞咽困难与失语", "跌倒与压力性损伤风险", "慢性病连续性"],
-                    note: "复杂需求需要有尊严、可持续的照护支持。"
+                    items: ["老年健康兴趣", "InterRAI-LTCF", "跌倒与压力性损伤风险", "慢性病连续性"],
+                    note: "作为支持背景呈现，而不是主页主要身份。"
                   },
                   {
                     title: "跨体系临床实践",
@@ -524,15 +525,15 @@
                 eyebrow: "教育与注册",
                 title: "专业资质与当前进修。",
                 summary:
-                  "简明呈现注册、教育背景、重症护理培训与当前学习。",
+                  "简明呈现 NSCN 执业注册、教育背景、重症护理培训与补充学习。",
                 disclosureTitle: "教育与专业发展",
                 disclosureSummary: "展开资质、培训与当前学习。",
                 items: [
-                  ["注册护士", "NSCN。"],
+                  ["注册护士", "已获得 NSCN 执业注册；不公开私人识别信息。"],
                   ["护理学理学士", "Toronto Metropolitan University 护理学理学士（协作护理项目），辅修心理学，以 Distinction 毕业。"],
-                  ["重症护理教育", "Centennial College 重症护理培训项目及 Coronary Care 1。"],
-                  ["当前进修 / 额外学习", "Conestoga College NURS8963 Transition to Nursing Practice（进行中）；CIHI InterRAI LTCF Essentials 1 与 2。"],
-                  ["跨体系注册背景", "中国护士注册考试背景，以公开专业层级呈现。"]
+                  ["重症护理教育", "ICU 证书、Centennial College 重症护理培训项目及 Coronary Care 1。"],
+                  ["额外学习", "Conestoga College NURS8963 Transition to Nursing Practice；CIHI InterRAI-LTCF Essentials 1 与 2。"],
+                  ["心理学辅修", "心理学学习支持患者教育、家庭沟通与稳定的跨文化倾听。"]
                 ]
               },
               language: {
@@ -569,16 +570,17 @@
                 eyebrow: "联系",
                 title: "专业联系。",
                 summary:
-                  "如有相关护理机会、引荐或专业交流，电子邮件是最合适的联系渠道。",
-                location: "加拿大安大略省多伦多",
+                  "如有相关护理机会、引荐或专业交流，请使用请求信息链接。",
+                location: "加拿大新斯科舍省 Kentville",
                 text:
-                  "如有相关护理机会、引荐、专业材料请求或专业交流，电子邮件是首选联系渠道。",
-                email: "shaotinghe2037@gmail.com",
-                note: "可在相关情况下提供更多专业材料。"
+                  "本站是静态页面，不运行联系表单后端。请求链接会打开邮件草稿，用于专业咨询。",
+                email: "Locutus1207@outlook.com",
+                ctaLabel: "请求更多专业信息",
+                note: "可在相关情况下请求更多专业资料。"
               }
             },
             footer: {
-              text: "注册护士，聚焦重症护理判断、老年健康连续照护，以及临床流程与文档支持。",
+              text: "已获得 NSCN 执业注册的注册护士，目前从事 ICU 岗位，并保留老年健康背景与临床流程支持能力。",
               copyright:
                 "Copyright © 2026 何少霆。保留所有权利。未经许可，不得复制本站内容与设计。"
             }
