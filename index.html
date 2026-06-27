@@ -6,12 +6,12 @@
     <title>Shaoting He, RN | ICU Nursing Profile</title>
     <meta
       name="description"
-      content="Shaoting He, RN is an NSCN-licensed registered nurse in a full-time ICU role at Valley Regional Hospital in Kentville, Nova Scotia."
+      content="Shaoting He, RN is a registered nurse with an ICU-focused public nursing profile."
     />
     <meta property="og:title" content="Shaoting He, RN | ICU Nursing Profile" />
     <meta
       property="og:description"
-      content="An ICU-focused nursing profile shaped by current critical-care practice, senior-health context, bilingual communication, and clear documentation."
+      content="ICU-focused RN practice with direct evidence in monitoring, reassessment, escalation, documentation, senior care, and bilingual clinical communication."
     />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Shaoting He, RN" />
@@ -24,7 +24,7 @@
     <meta name="twitter:title" content="Shaoting He, RN | ICU Nursing Profile" />
     <meta
       name="twitter:description"
-      content="An ICU-focused nursing profile shaped by current critical-care practice, senior-health context, bilingual communication, and clear documentation."
+      content="ICU-focused RN practice with direct evidence in monitoring, reassessment, escalation, documentation, senior care, and bilingual clinical communication."
     />
     <meta name="twitter:image" content="https://shaotinghe.com/og-image.png" />
     <link rel="canonical" href="https://shaotinghe.com/" />
@@ -77,13 +77,13 @@
       }
 
       html {
-        overflow-x: clip;
+        overflow-x: hidden;
         scroll-behavior: smooth;
       }
 
       body {
         margin: 0;
-        overflow-x: clip;
+        overflow-x: hidden;
         background:
           radial-gradient(circle at 72% 5%, rgba(94, 127, 163, 0.16), transparent 28rem),
           linear-gradient(180deg, var(--bg) 0%, var(--paper) 48%, var(--bg-2) 100%);
@@ -376,7 +376,8 @@
 
       .site-nav a:hover,
       .site-nav a:focus-visible,
-      .site-nav a[aria-current="page"] {
+      .site-nav a[aria-current="page"],
+      .site-nav a[aria-current="location"] {
         background: rgba(247, 250, 252, 0.1);
         color: var(--white);
       }
@@ -605,9 +606,15 @@
         content: "";
         position: absolute;
         inset: 0;
-        background-image: url("portrait-side-profile-web.jpg");
-        background-size: cover;
-        background-position: center 46%;
+      }
+
+      .portrait-photo {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 46%;
         filter: saturate(0.88) contrast(1.04);
       }
 
@@ -1496,7 +1503,25 @@
         }
 
         .hero-copy {
+          gap: 0.68rem;
           min-height: auto;
+          padding: clamp(1.1rem, 3vw, 1.8rem);
+        }
+
+        .hero-frame {
+          min-height: auto;
+        }
+
+        .hero h1 {
+          font-size: clamp(2.75rem, 7.6vw, 4.2rem);
+        }
+
+        .hero-visual {
+          grid-template-rows: minmax(17rem, 20rem);
+        }
+
+        .portrait-panel {
+          min-height: 17rem;
         }
 
         .education-grid,
@@ -1519,7 +1544,7 @@
 
       @media (max-width: 620px) {
         :root {
-          --header-offset: 7.65rem;
+          --header-offset: 8.4rem;
         }
 
         .container {
@@ -1528,8 +1553,8 @@
 
         .header-row {
           grid-template-columns: minmax(0, 1fr) auto;
-          gap: 0.34rem 0.55rem;
-          padding: 0.42rem 0;
+          gap: 0.28rem 0.5rem;
+          padding: 0.38rem 0.42rem 0.46rem;
         }
 
         .wordmark {
@@ -1549,9 +1574,8 @@
         .language-control button,
         .site-nav a {
           min-height: 2.75rem;
-          min-width: 2.75rem;
-          padding: 0.44rem 0.5rem;
-          font-size: 0.68rem;
+          padding: 0.38rem 0.34rem;
+          font-size: 0.66rem;
         }
 
         .language-control button {
@@ -1569,21 +1593,29 @@
 
         .site-nav {
           grid-column: 1 / -1;
-          flex-wrap: nowrap;
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
           gap: 0.16rem;
-          overflow-x: auto;
-          overflow-y: hidden;
-          padding-bottom: 0.08rem;
-          scrollbar-width: none;
+          width: 100%;
+          overflow: visible;
+          padding-bottom: 0;
+        }
+
+        .site-nav a[data-nav-link="capability"],
+        .site-nav a[data-nav-link="education"],
+        .site-nav a[data-nav-link="language"],
+        .site-nav a[data-nav-link="systems"] {
+          display: none;
         }
 
         .site-nav a {
-          flex: 0 0 auto;
+          width: 100%;
+          min-width: 0;
         }
 
         .hero {
-          padding-top: 0.45rem;
-          padding-bottom: 2.8rem;
+          padding-top: 0.35rem;
+          padding-bottom: 2.1rem;
         }
 
         .hero-frame {
@@ -1592,23 +1624,23 @@
         }
 
         .hero-copy {
-          gap: 0.64rem;
-          padding: 0.88rem;
+          gap: 0.52rem;
+          padding: 0.72rem;
         }
 
         .hero h1 {
-          font-size: clamp(2.35rem, 12.2vw, 3.45rem);
+          font-size: clamp(2.18rem, 11.4vw, 3.18rem);
           line-height: 0.96;
         }
 
         .hero-role {
-          font-size: 0.91rem;
-          line-height: 1.42;
+          font-size: 0.86rem;
+          line-height: 1.35;
         }
 
         .hero-intro {
-          font-size: 0.88rem;
-          line-height: 1.45;
+          font-size: 0.84rem;
+          line-height: 1.38;
         }
 
         .hero-actions,
@@ -1624,12 +1656,12 @@
         }
 
         .identity-strip {
-          grid-template-columns: 1fr;
-          gap: 0.36rem;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 0.28rem;
         }
 
         .identity-item {
-          padding: 0.42rem 0.55rem;
+          padding: 0.34rem 0.42rem;
         }
 
         .identity-item p,
@@ -1637,12 +1669,12 @@
         .timeline-item p,
         .education-row p,
         .language-row p {
-          font-size: 0.78rem;
-          line-height: 1.28;
+          font-size: 0.74rem;
+          line-height: 1.23;
         }
 
         .identity-item .label {
-          font-size: 0.55rem;
+          font-size: 0.5rem;
         }
 
         .education-grid,
@@ -1655,15 +1687,19 @@
         }
 
         .hero-visual {
-          grid-template-rows: minmax(13.5rem, 15rem);
+          grid-template-rows: minmax(11rem, 12.25rem);
         }
 
         .portrait-panel {
-          min-height: 13.5rem;
+          min-height: 11rem;
         }
 
         .portrait-panel::before {
           background-position: center 32%;
+        }
+
+        .portrait-photo {
+          object-position: center 32%;
         }
 
         .portrait-caption {
@@ -1671,37 +1707,38 @@
           bottom: 0.7rem;
           left: 0.7rem;
           width: auto;
-          padding: 0.58rem 0.66rem;
+          gap: 0.16rem;
+          padding: 0.45rem 0.54rem;
         }
 
         .portrait-caption span {
-          font-size: 0.6rem;
+          font-size: 0.55rem;
         }
 
         .portrait-caption strong {
-          font-size: 0.95rem;
+          font-size: 0.84rem;
         }
 
         .section {
-          padding: 3.35rem 0;
+          padding: 2.65rem 0;
         }
 
         .current-focus-section {
-          padding: 2.95rem 0 3.35rem;
+          padding: 2.3rem 0 2.65rem;
         }
 
         .section-heading {
-          gap: 0.9rem;
-          margin-bottom: 1.55rem;
+          gap: 0.72rem;
+          margin-bottom: 1.22rem;
         }
 
         .section-heading p {
-          font-size: 0.98rem;
-          line-height: 1.62;
+          font-size: 0.94rem;
+          line-height: 1.5;
         }
 
         .section-heading h2 {
-          font-size: clamp(2.2rem, 11.5vw, 3.15rem);
+          font-size: clamp(2.05rem, 10.6vw, 2.95rem);
           line-height: 0.95;
           max-width: 100%;
         }
@@ -1729,7 +1766,31 @@
         .story-card,
         .timeline-item,
         .index-line {
-          padding: 1rem;
+          padding: 0.86rem;
+        }
+
+        .focus-card,
+        .domain-row,
+        .story-card,
+        .timeline-item,
+        .index-line,
+        .contact-panel {
+          gap: 0.58rem;
+        }
+
+        .domain-row p,
+        .timeline-body p,
+        .systems-feature p,
+        .systems-link span,
+        .contact-panel p {
+          font-size: 0.88rem;
+          line-height: 1.48;
+        }
+
+        .detail-text {
+          margin-top: 0.45rem;
+          font-size: 0.8rem;
+          line-height: 1.42;
         }
 
         .domain-signals,
@@ -1737,11 +1798,44 @@
           gap: 0.28rem;
         }
 
+        .domain-signals .signal-pill:nth-child(n + 3),
+        .timeline-signals .signal-token:nth-child(n + 3) {
+          display: none;
+        }
+
         .signal-pill,
         .signal-token {
           min-height: 1.42rem;
           padding: 0.23rem 0.38rem;
           font-size: 0.66rem;
+        }
+
+        .disclosure-summary {
+          min-height: 3.35rem;
+          padding: 0.72rem 2.85rem 0.72rem 0.78rem;
+        }
+
+        .disclosure-summary strong {
+          font-size: 1rem;
+          line-height: 1.08;
+        }
+
+        .disclosure-summary::after {
+          right: 0.72rem;
+          width: 1.72rem;
+          height: 1.72rem;
+        }
+
+        .contact-section {
+          padding: 2.8rem 0 3.05rem;
+        }
+
+        .contact-grid {
+          gap: 1.15rem;
+        }
+
+        .contact-panel {
+          padding: 0.95rem;
         }
 
         .contact-mail {
@@ -1801,20 +1895,20 @@
       <main class="noscript-fallback" id="main-content" tabindex="-1">
         <span class="eyebrow">Clinical Nursing Profile</span>
         <h1>Shaoting He, RN</h1>
-        <p>Registered Nurse (RN), licensed with NSCN, in a full-time ICU role at Valley Regional Hospital in Kentville, Nova Scotia.</p>
+        <p>Registered Nurse (RN) with a public profile centered on ICU nursing practice.</p>
         <section aria-label="Clinical practice fallback">
           <h2>Clinical Practice</h2>
-          <p>Focused on concise critical-care growth, clear documentation, and steady bilingual clinical communication.</p>
+          <p>ICU practice with monitoring, reassessment, escalation, documentation, and bilingual clinical communication.</p>
           <ul aria-label="Core clinical signals">
-            <li>Current ICU role and newly obtained NSCN licensure.</li>
-            <li>Senior-health interest and cross-system clinical communication.</li>
-            <li>Practical documentation habits that stay secondary to nursing practice.</li>
+            <li>Current ICU practice and registration context kept brief.</li>
+            <li>Senior care interest and Mandarin clinical communication.</li>
+            <li id="systems">Small documentation and follow-up tools stay secondary to nursing practice.</li>
           </ul>
         </section>
-        <a class="button" href="mailto:Locutus1207@outlook.com">Request professional information</a>
+        <a class="button" id="contact" href="mailto:Locutus1207@outlook.com">Request professional information</a>
       </main>
     </div>
-    <script src="content/homepage-content.js?v=20260623-g6"></script>
+    <script src="content/homepage-content.js?v=20260624-g5"></script>
     <script>
       (function () {
         "use strict";
@@ -1975,7 +2069,7 @@
             escapeHtml(content.hero.portraitLabel) +
             '"><div class="portrait-panel" role="img" aria-label="' +
             escapeHtml(content.hero.portraitLabel) +
-            '"><div class="portrait-caption"><span>' +
+            '"><img class="portrait-photo" src="portrait-side-profile-web.jpg" alt="" width="1600" height="1200" decoding="async" fetchpriority="high" /><div class="portrait-caption"><span>' +
             escapeHtml(content.hero.portraitLabel) +
             '</span><strong>' +
             escapeHtml(content.hero.portraitText) +
@@ -2348,8 +2442,20 @@
             var header = document.querySelector(".site-header");
             var headerBottom = header ? Math.ceil(header.getBoundingClientRect().bottom) : 0;
             var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-            var top = target.getBoundingClientRect().top + window.scrollY - headerBottom - 16;
-            window.scrollTo({ top: Math.max(top, 0), behavior: forceAuto || prefersReduced ? "auto" : "smooth" });
+            var scrollTarget = Math.max(target.getBoundingClientRect().top + window.scrollY - headerBottom - 16, 0);
+            var scroller = document.scrollingElement || document.documentElement;
+
+            try {
+              window.scrollTo({ top: scrollTarget, behavior: forceAuto || prefersReduced ? "auto" : "smooth" });
+            } catch (error) {
+              window.scrollTo(0, scrollTarget);
+            }
+
+            try {
+              if (scroller) {
+                scroller.scrollTop = scrollTarget;
+              }
+            } catch (error) {}
           }
 
           window.requestAnimationFrame(function () {
@@ -2384,24 +2490,6 @@
           });
         }
 
-        function initDisclosureKeys() {
-          document.querySelectorAll(".disclosure-summary").forEach(function (summary) {
-            summary.addEventListener("keydown", function (event) {
-              if (event.key !== "Enter" && event.key !== " " && event.key !== "Spacebar") {
-                return;
-              }
-
-              var disclosure = summary.closest("details");
-              if (!disclosure) {
-                return;
-              }
-
-              event.preventDefault();
-              disclosure.open = !disclosure.open;
-            });
-          });
-        }
-
         function render() {
           var content = CONTENT[state.language] || CONTENT.en;
           var hash = window.location.hash;
@@ -2427,7 +2515,6 @@
             "</div>";
 
           restoreOpenDisclosures(state.openDisclosures);
-          initDisclosureKeys();
           initReveal();
           initActiveNav();
           initSkipLinkFocus();
@@ -2522,7 +2609,7 @@
             activeId = nextId;
             links.forEach(function (link) {
               if (link.getAttribute("data-nav-link") === nextId) {
-                link.setAttribute("aria-current", "page");
+                link.setAttribute("aria-current", "location");
               } else {
                 link.removeAttribute("aria-current");
               }

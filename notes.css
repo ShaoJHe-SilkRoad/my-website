@@ -26,13 +26,13 @@
 }
 
 html {
-  overflow-x: clip;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  overflow-x: clip;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at 72% 4%, rgba(94, 127, 163, 0.16), transparent 28rem),
     linear-gradient(180deg, var(--bg) 0%, var(--paper) 52%, var(--bg-2) 100%);
@@ -201,12 +201,15 @@ h3 {
   display: inline-flex;
   align-items: center;
   min-height: 2.75rem;
+  max-width: 100%;
   padding: 0.52rem 0.74rem;
   border-radius: 999px;
   color: rgba(247, 250, 252, 0.78);
   font-size: 0.78rem;
   font-weight: 800;
-  white-space: nowrap;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+  text-align: center;
   transition:
     background-color var(--motion-fast) var(--motion-ease),
     color var(--motion-fast) var(--motion-ease),
