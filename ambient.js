@@ -15,6 +15,14 @@
     const pulses = [];
     let width = 0;
     let height = 0;
+    let viewportHeight = 0;
+    let heroTop = 0;
+    let heroBottom = 0;
+    let observedHero = null;
+    let observedAnchor = null;
+    let layoutObserver = null;
+    const backdrop = canvas.parentElement;
+    const clientPointer = { x: 0, y: 0, known: false };
     let ratio = 1;
     let elapsed = 0;
     let frame = 0;
@@ -223,31 +231,82 @@
         }
     }
 
-    function measure() {
+    const scrollLeft = () => window.scrollX || 0;
+    const scrollTop = () => window.scrollY || 0;
+
+    function updateVisibility() {
+        const top = scrollTop();
+        visible = heroBottom > top && heroTop < top + viewportHeight;
+    }
+
+    function trackLayout(hero, anchor) {
+        if (!layoutObserver || (hero === observedHero && anchor === observedAnchor)) return;
+        layoutObserver.disconnect();
+        observedHero = hero;
+        observedAnchor = anchor;
+        if (hero) layoutObserver.observe(hero);
+        if (anchor && anchor !== hero) layoutObserver.observe(anchor);
+    }
+
+    // Layout coordinates belong to the document. Scrolling only moves the existing canvas.
+    function measureLayout() {
+        const nextWidth = window.innerWidth;
+        viewportHeight = window.innerHeight;
+        const nextMobile = nextWidth < 760;
+        const nextRatio = Math.min(window.devicePixelRatio || 1, 1.5);
+        const top = scrollTop();
         const hero = document.querySelector('.hero');
         const heroBounds = hero && hero.getBoundingClientRect();
-        visible = !heroBounds || heroBounds.bottom > 80 && heroBounds.top < height;
-        const oldY = geometry.y;
-        if (mobile) {
-            geometry.y = Math.min(height * 0.79, 650);
-            const anchor = document.querySelector('.signal-annotation');
-            const bounds = anchor && anchor.getBoundingClientRect();
-            if (bounds && bounds.height > 0) {
-                geometry.y = bounds.top + bounds.height * 0.61;
-                visible = visible && bounds.bottom > 0 && bounds.top < height;
-            }
+        heroTop = heroBounds ? heroBounds.top + top : 0;
+        heroBottom = heroBounds ? heroBounds.bottom + top : viewportHeight;
+        const nextHeight = Math.max(1, Math.ceil(heroBottom));
+        const anchor = nextMobile ? document.querySelector('.signal-annotation') : null;
+        const bounds = anchor && anchor.getBoundingClientRect();
+        const nextY = nextMobile
+            ? bounds && bounds.height > 0 ? bounds.top + top + bounds.height * 0.61 : Math.min(viewportHeight * 0.79, 650)
+            : Math.min(viewportHeight * 0.53, 470);
+        const span = nextMobile ? Math.min(nextWidth * 1.3, 900) : Math.min(nextWidth * 0.66, 1060);
+        const spread = nextMobile ? 96 : Math.min(viewportHeight * 0.42, 340);
+        const amplitude = nextMobile ? 65 : Math.min(viewportHeight * 0.25, 192);
+        const changed = !geometry || width !== nextWidth || height !== nextHeight || ratio !== nextRatio
+            || geometry.y !== nextY || geometry.spread !== spread || geometry.amplitude !== amplitude;
+        const rebuildGrid = !grid || mobile !== nextMobile;
+        width = nextWidth;
+        height = nextHeight;
+        mobile = nextMobile;
+        ratio = nextRatio;
+        const pixelWidth = Math.round(width * ratio);
+        const pixelHeight = Math.round(height * ratio);
+        // Mobile browser chrome often changes only viewport height. Keep the bitmap when its document size is unchanged.
+        if (canvas.width !== pixelWidth) canvas.width = pixelWidth;
+        if (canvas.height !== pixelHeight) canvas.height = pixelHeight;
+        if (canvas.style.width !== `${width}px`) canvas.style.width = `${width}px`;
+        if (canvas.style.height !== `${height}px`) canvas.style.height = `${height}px`;
+        if (backdrop && backdrop.style && backdrop.style.height !== `${height}px`) backdrop.style.height = `${height}px`;
+        geometry = {
+            x: width * (mobile ? 0.58 : 0.805), y: nextY, span, spread, amplitude,
+            inverseReachSquared: 1 / Math.pow(Math.max(145, span * 0.25), 2)
+        };
+        if (rebuildGrid) {
+            grid = makeGrid(mobile ? 144 : 224);
+            const count = mobile ? 16 : 39;
+            strands = Array.from({ length: count }, (_, index) => makeStrand(index / (count - 1)));
+            mainStrand = makeStrand(0.51);
         }
-        if (!styles || oldY !== geometry.y) refreshStyles();
+        if (changed) styles = null;
+        trackLayout(hero, anchor);
+        updateVisibility();
+        if (!styles) refreshStyles();
+        return changed;
     }
 
     function draw() {
-        if (!width || !height || document.hidden) return;
+        if (!width || !height || document.hidden || !visible) return;
         const { x, y, span } = geometry;
         const presence = mobile ? 0.88 : 1;
         const time = elapsed * 0.001;
         context.setTransform(ratio, 0, 0, ratio, 0, 0);
         context.clearRect(0, 0, width, height);
-        if (!visible) return;
         const drift = Math.sin(time * 0.21) * 0.009;
         for (const strand of strands) prepareStrand(strand, time, drift);
         prepareStrand(mainStrand, time, drift);
@@ -366,7 +425,8 @@
         lastFrame = null;
         lastPaint = null;
         lastMotionPaint = null;
-        measure();
+        updateVisibility();
+        if (!styles) refreshStyles();
         if (isPaused()) {
             pointer.target = 0;
             pointer.strength = 0;
@@ -380,32 +440,20 @@
     }
 
     function resize() {
-        width = window.innerWidth;
-        height = window.innerHeight;
-        mobile = width < 760;
-        ratio = Math.min(window.devicePixelRatio || 1, 1.5);
-        canvas.width = Math.round(width * ratio);
-        canvas.height = Math.round(height * ratio);
-        canvas.style.width = `${width}px`;
-        canvas.style.height = `${height}px`;
-        const span = mobile ? Math.min(width * 1.3, 900) : Math.min(width * 0.66, 1060);
-        geometry = {
-            x: width * (mobile ? 0.58 : 0.805),
-            y: mobile ? Math.min(height * 0.79, 650) : Math.min(height * 0.53, 470),
-            span, spread: mobile ? 96 : Math.min(height * 0.42, 340),
-            amplitude: mobile ? 65 : Math.min(height * 0.25, 192),
-            inverseReachSquared: 1 / Math.pow(Math.max(145, span * 0.25), 2)
-        };
-        grid = makeGrid(mobile ? 144 : 224);
-        const count = mobile ? 16 : 39;
-        strands = Array.from({ length: count }, (_, index) => makeStrand(index / (count - 1)));
-        mainStrand = makeStrand(0.51);
-        styles = null;
-        reconcile();
+        const wasVisible = visible;
+        const changed = measureLayout();
+        if (changed || wasVisible !== visible) reconcile();
     }
 
     function inGraphic(x, y) {
-        return width >= 760 && x > width * 0.46 && y > 85 && y < height - 40;
+        return !mobile && visible && x > width * 0.46 && y > Math.max(heroTop, 85) && y < heroBottom;
+    }
+
+    function updatePointerTarget() {
+        if (!clientPointer.known) return;
+        pointer.tx = clientPointer.x + scrollLeft();
+        pointer.ty = clientPointer.y + scrollTop();
+        pointer.target = inGraphic(pointer.tx, pointer.ty) ? 1 : 0;
     }
 
     window.SHAOTING_AMBIENT = Object.freeze({
@@ -431,9 +479,10 @@
 
     window.addEventListener('pointermove', (event) => {
         if (!canAnimate() || event.pointerType === 'touch') return;
-        pointer.tx = event.clientX;
-        pointer.ty = event.clientY;
-        pointer.target = inGraphic(event.clientX, event.clientY) ? 1 : 0;
+        clientPointer.x = event.clientX;
+        clientPointer.y = event.clientY;
+        clientPointer.known = true;
+        updatePointerTarget();
         if (pointer.strength < 0.01) {
             pointer.x = pointer.tx;
             pointer.y = pointer.ty;
@@ -441,27 +490,30 @@
     }, { passive: true });
     window.addEventListener('pointerdown', (event) => {
         if (!canAnimate() || event.pointerType === 'touch' || event.button !== 0 || event.defaultPrevented) return;
-        if (!inGraphic(event.clientX, event.clientY)) return;
+        const x = event.clientX + scrollLeft();
+        const y = event.clientY + scrollTop();
+        if (!inGraphic(x, y)) return;
         const target = event.target;
         if (target && typeof target.closest === 'function' && target.closest('a, button, input, textarea, select, summary, label, [role="button"], [contenteditable="true"]')) return;
         if (pulses.length >= 3) pulses.shift();
-        pulses.push({ x: event.clientX, y: event.clientY, born: elapsed });
+        pulses.push({ x, y, born: elapsed });
     }, { passive: true });
-    document.addEventListener('pointerleave', () => { pointer.target = 0; });
-    window.addEventListener('blur', () => { pointer.target = 0; });
+    document.addEventListener('pointerleave', () => { pointer.target = 0; clientPointer.known = false; });
+    window.addEventListener('blur', () => { pointer.target = 0; clientPointer.known = false; });
     window.addEventListener('resize', resize, { passive: true });
     window.addEventListener('scroll', () => {
         const wasVisible = visible;
-        measure();
+        updateVisibility();
+        updatePointerTarget();
         if (wasVisible !== visible) reconcile();
-        else if (mobile && !canAnimate()) draw();
     }, { passive: true });
     document.addEventListener('visibilitychange', reconcile);
     window.addEventListener('pagehide', () => {
         if (frame) window.cancelAnimationFrame(frame);
         frame = 0;
     });
-    window.addEventListener('pageshow', reconcile);
+    window.addEventListener('pageshow', () => { measureLayout(); reconcile(); });
+    window.addEventListener('load', resize, { once: true });
     if (preference.addEventListener) preference.addEventListener('change', reconcile);
     else if (preference.addListener) preference.addListener(reconcile);
 
@@ -471,8 +523,10 @@
             light = nextLight;
             styles = null;
         }
+        measureLayout();
         reconcile();
     }).observe(root, { attributes: true, attributeFilter: ['data-theme', 'lang'] });
 
+    if (typeof ResizeObserver === 'function') layoutObserver = new ResizeObserver(resize);
     resize();
 })();

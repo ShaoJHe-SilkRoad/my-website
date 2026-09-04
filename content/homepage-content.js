@@ -73,7 +73,7 @@
     "work": {
       "eyebrow": "01 / FROM OBSERVATION TO SOFTWARE",
       "title": "The work speaks.",
-      "intro": "Tools I’m building to make complex information easier to use. Two projects. A clear direction.",
+      "intro": "A native Mac companion for AI usage. A bilingual news digest. Two tools I’m building to make information easier to use.",
       "all": "Explore my GitHub"
     },
     "projects": [
@@ -144,26 +144,20 @@
     },
     "focus": {
       "eyebrow": "02 / CURRENT FOCUS",
-      "title": "Attention,\nput to work.",
-      "intro": "UMA and BID are where my development time goes. The focus: useful context, clear interfaces, and tools that earn their place in a day.",
+      "title": "What I’m\nimproving.",
+      "intro": "My current development priorities in UMA and BID.",
       "items": [
         {
-          "label": "UMA",
-          "title": "Making the everyday feel simpler.",
-          "text": "Exploring how usage information and native desktop interactions can work better together.",
+          "label": "UMA / PRODUCT EXPERIENCE",
+          "title": "Usage, understood at a glance.",
+          "text": "Refining how usage, limits, and recent tasks are presented across the desktop app and menu bar.",
           "link": "#uma"
         },
         {
-          "label": "BID NEWS DIGEST",
-          "title": "Giving information more context.",
-          "text": "Exploring a bilingual reading experience across technology, finance, and health.",
+          "label": "BID / READING EXPERIENCE",
+          "title": "More context. Less feed hopping.",
+          "text": "Shaping the English and Chinese reading flow, topic structure, and source context across general news, finance, medicine, and nursing.",
           "link": "#bid"
-        },
-        {
-          "label": "THE COMMON THREAD",
-          "title": "Build. Observe. Refine.",
-          "text": "Looking for thoughtful feedback and collaborators who enjoy turning rough ideas into useful tools.",
-          "link": "#contact"
         }
       ]
     },
@@ -289,7 +283,7 @@
     "work": {
       "eyebrow": "01 / 从观察到作品",
       "title": "让作品说话。",
-      "intro": "把复杂的信息，变成更好用的工具。这是我正在投入的两个项目。",
+      "intro": "一个关注 AI 用量的原生 Mac 工具，一份双语新闻摘要。让信息更好用，是这两个项目共同的出发点。",
       "all": "探索我的 GitHub"
     },
     "projects": [
@@ -360,26 +354,20 @@
     },
     "focus": {
       "eyebrow": "02 / 正在投入",
-      "title": "把注意力，\n变成行动。",
-      "intro": "UMA 与 BID 是当前的主要开发对象。我正在打磨信息的语境、界面的清晰度，以及一个工具值得被日常使用的理由。",
+      "title": "最近在\n打磨什么。",
+      "intro": "UMA 与 BID 当前的开发重点。",
       "items": [
         {
-          "label": "UMA",
-          "title": "让日常使用更简单。",
-          "text": "探索用量信息与原生桌面交互之间，更自然的结合方式。",
+          "label": "UMA / 产品体验",
+          "title": "让用量信息，一眼就懂。",
+          "text": "打磨桌面应用与菜单栏中的用量、额度和近期任务展示，让关键信息更容易读懂。",
           "link": "#uma"
         },
         {
-          "label": "BID NEWS DIGEST",
-          "title": "让信息保留更多语境。",
-          "text": "探索跨越科技、金融与健康领域的双语阅读体验。",
+          "label": "BID / 阅读体验",
+          "title": "多一点语境，少切几个信息流。",
+          "text": "打磨中英文阅读流程、主题结构与来源语境，涵盖综合新闻、财经、医学与护理。",
           "link": "#bid"
-        },
-        {
-          "label": "贯穿其中的方法",
-          "title": "创造、观察，再改进。",
-          "text": "寻找认真反馈，也寻找愿意一起把初步想法变成实用工具的伙伴。",
-          "link": "#contact"
         }
       ]
     },

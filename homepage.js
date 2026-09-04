@@ -68,7 +68,7 @@
     if(!('IntersectionObserver' in window)) return;
     observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){
       if(!entry.isIntersecting) return;
-      if(document.documentElement.dataset.motion!=='off' && entry.target.animate) entry.target.animate([{opacity:.45,transform:'translateY(18px)'},{opacity:1,transform:'translateY(0)'}],{duration:650,easing:'cubic-bezier(.2,.7,.2,1)'});
+      if(document.documentElement.dataset.motion!=='off' && entry.target.animate) entry.target.animate([{opacity:.9},{opacity:1}],{duration:200,easing:'ease-out'});
       observer.unobserve(entry.target);
     });},{threshold:.1});
     document.querySelectorAll('[data-reveal]').forEach(function(el){observer.observe(el);});

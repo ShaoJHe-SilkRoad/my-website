@@ -83,3 +83,32 @@
 :root[data-rhythm=vf] .digest-concept:before{background-image:linear-gradient(#efac9705 1px,transparent 1px),linear-gradient(90deg,#efac9705 1px,transparent 1px)}
 :root[data-rhythm=vf] .portrait-frame{background:#310c12}
 :root[data-rhythm=vf] .button:hover{box-shadow:0 6px 16px #5e142a22}
+
+/* The signal scrolls with the document; reading surfaces stay quiet and legible. */
+body{position:relative;isolation:isolate}
+.ambient-backdrop{position:absolute;inset:0 0 auto;width:100%;height:100vh;contain:layout paint;mask-image:linear-gradient(#000 0%,#000 78%,transparent 100%);-webkit-mask-image:linear-gradient(#000 0%,#000 78%,transparent 100%)}
+.site-header,.mobile-nav{background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none}
+.brand-name{font-size:10px}.brand-name>span{font-size:9px}
+:root .hero-credentials,:root[lang=zh-Hans] .hero-credentials{font-size:11px;line-height:1.7;letter-spacing:.025em}
+.hero-foot>p{font-size:11px}.now-link{font-size:12px}.now-link>.eyebrow{font-size:10px}
+.signal-index{font-size:10px}.signal-hint,.signal-still{font-size:11px}
+.section{padding-block:84px}.section-heading>.eyebrow{font-size:11px}
+.project-meta,.art-label{font-size:11px}.tag-list li{font-size:11px}
+.project-details summary,.clinical-details summary{font-size:13px}
+.project-art figcaption{font-size:11px}.project-actions .button{font-size:12px}
+.uma-preview{width:200px;transform:none;box-shadow:0 18px 44px #01081370}
+.uma-preview:hover{transform:translateY(-3px)}
+.focus-section{padding-top:48px}.focus-layout{gap:72px}.focus-item>.eyebrow{font-size:11px}.focus-item p{font-size:14px}
+.about-facts{font-size:12px}.contact-footnote,.footer-row,.footer-row span{font-size:11px}
+.code-blue{min-height:38px;font-size:10px}
+@media(max-width:1100px){.project-meta{font-size:10px}.uma-preview{width:185px}.focus-layout{gap:42px}}
+@media(max-width:800px){.section{padding-block:68px}.uma-preview{width:170px}:root .hero-credentials,:root[lang=zh-Hans] .hero-credentials{font-size:10px}.signal-index{font-size:9px}.signal-hint,.signal-still{font-size:10px}}
+@media(max-width:620px){
+.hero-eyebrow{font-size:9px;letter-spacing:.05em}.hero-credentials{gap:7px 10px}.hero-credentials li+li{padding-left:10px}
+.hero-foot>p{font-size:10px;max-width:155px}.now-link{font-size:10px}.now-link>.eyebrow{font-size:9px}
+.signal-index{font-size:9px}.signal-name{font-size:12px}.section{padding-block:54px}.section-heading>.eyebrow{font-size:10px}
+.project-meta,.art-label{font-size:10px}.tag-list li{font-size:10px}.project-art figcaption{font-size:10px}.project-art{min-height:395px}
+.uma-preview{width:160px}.focus-section{padding-top:34px}.focus-item>.eyebrow{font-size:10px}.about-facts{font-size:11px}
+.mobile-nav a{font-size:12px;min-height:40px}.code-blue{font-size:10px;min-height:38px}
+}
+@media(max-width:359px){:root .hero-credentials,:root[lang=zh-Hans] .hero-credentials{font-size:9px}.hero-eyebrow{font-size:8px}.code-blue{font-size:9px}.header-row{gap:6px}.hero-foot>p{max-width:130px}}

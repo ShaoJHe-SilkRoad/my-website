@@ -34,11 +34,11 @@ fs.writeFileSync(root+'/index.html',`<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="homepage.css?v=fluid-20260904-7">
+<link rel="stylesheet" href="homepage.css?v=scroll-20260904-8">
 <script>(function(){try{var t=localStorage.getItem('sh-theme');document.documentElement.dataset.theme=t==='light'?'light':'dark';}catch(e){}})();</script>
-<script defer src="content/homepage-content.js?v=fluid-20260904-7"></script>
-<script defer src="ambient.js?v=fluid-20260904-7"></script>
-<script defer src="homepage.js?v=fluid-20260904-7"></script>
+<script defer src="content/homepage-content.js?v=scroll-20260904-8"></script>
+<script defer src="ambient.js?v=scroll-20260904-8"></script>
+<script defer src="homepage.js?v=scroll-20260904-8"></script>
 </head>
 <body>
 <div class="ambient-backdrop" aria-hidden="true"><canvas id="ambient-field" aria-hidden="true"></canvas></div>
