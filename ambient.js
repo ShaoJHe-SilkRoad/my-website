@@ -52,6 +52,15 @@
     const isPaused = () => manuallyPaused || preference.matches;
     const canAnimate = () => !isPaused() && !document.hidden && visible;
 
+    function syncPalette() {
+        // Code blue has a dark canvas even when the saved page preference is light.
+        const nextLight = root.dataset.theme === 'light' && rhythm !== 'vf';
+        if (nextLight !== light) {
+            light = nextLight;
+            styles = null;
+        }
+    }
+
     function glow(x, y, radius, color, opacity) {
         const gradient = context.createRadialGradient(x, y, 0, x, y, radius);
         gradient.addColorStop(0, `rgba(${color},${opacity})`);
@@ -466,6 +475,8 @@
             if (value !== 'nsr' && value !== 'vf') return;
             if (value === rhythm) return;
             rhythm = value;
+            syncPalette();
+            if (!styles) refreshStyles();
             transitionFrom = rhythmBlend;
             transitionStarted = elapsed;
             if (!canAnimate()) {
@@ -518,11 +529,7 @@
     else if (preference.addListener) preference.addListener(reconcile);
 
     new MutationObserver(() => {
-        const nextLight = root.dataset.theme === 'light';
-        if (nextLight !== light) {
-            light = nextLight;
-            styles = null;
-        }
+        syncPalette();
         measureLayout();
         reconcile();
     }).observe(root, { attributes: true, attributeFilter: ['data-theme', 'lang'] });
