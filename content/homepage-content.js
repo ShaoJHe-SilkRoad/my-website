@@ -1,11 +1,11 @@
 // Public bilingual portfolio content. Update English and Chinese together.
 // Project visibility verified against GitHub on 2026-09-04.
-// BID is described at project level; no private repository or operational data is exposed.
+// QDigest is described at project level; no private repository or operational data is exposed.
 (function(window) { "use strict"; window.SHAOTING_HOME_CONTENT = {
   "en": {
     "meta": {
       "title": "Shaoting He — ICU Nurse. Independent Builder.",
-      "description": "ICU nurse. Independent builder. Shaoting He brings a nurse’s attention to the software he creates. Explore UMA, BID News Digest, and ways to collaborate."
+      "description": "ICU nurse. Independent builder. Shaoting He brings a nurse’s attention to the software he creates. Explore UMA, QDigest, and ways to collaborate."
     },
     "nav": [
       [
@@ -55,7 +55,7 @@
       "secondary": "Explore GitHub",
       "note": "ICU practice · Nova Scotia, Canada",
       "current": "CURRENTLY BUILDING",
-      "currentProjects": "UMA + BID News Digest",
+      "currentProjects": "UMA + QDigest",
       "scroll": "A little further down",
       "statement": "Care is my discipline.\nCreation is my drive.",
       "credentials": [
@@ -106,46 +106,47 @@
       {
         "id": "bid",
         "number": "02",
-        "name": "BID",
-        "subtitle": "News Digest",
+        "name": "QDigest",
+        "subtitle": "Research, explained",
         "status": "In development",
         "kind": "Information tools · Bilingual reading",
         "headline": "Make room for understanding.",
-        "description": "A bilingual news digest bringing general news, finance, medicine, and nursing into a format made for focused reading.",
+        "description": "Source-grounded health research, explained in English and Simplified Chinese: concise email briefs with fuller explanations on the web.",
         "tags": [
           "English + 中文",
           "Source-conscious",
           "Mobile-friendly"
         ],
-        "primary": "Talk about BID",
-        "url": "mailto:Locutus1207@outlook.com?subject=BID%20News%20Digest%20%E2%80%94%20let%E2%80%99s%20talk",
-        "caption": "Format concept · not a live edition",
+        "primary": "Read QDigest",
+        "url": "/qdigest/",
+        "caption": "Preview edition · 14 September 2026",
         "whyTitle": "The question",
-        "why": "How do you keep up with several fields without spending the day switching between feeds?",
+        "why": "How can health research become easier to understand while keeping its evidence and uncertainty visible?",
         "focusTitle": "What I’m working toward",
-        "focus": "A readable bilingual digest that keeps useful context and source quality at the center.",
+        "focus": "One source-linked fact package for concise email briefs and fuller bilingual web explanations.",
         "inviteTitle": "Where you can help",
         "invite": "I’d like to hear from curious readers, editorial thinkers, and people who care about how information is presented."
       }
     ],
     "digest": {
-      "label": "THE DAILY PERSPECTIVE",
-      "title": "BID",
-      "subtitle": "News Digest",
-      "edition": "One digest. Wider perspective.",
+      "label": "HEALTH RESEARCH",
+      "title": "QDigest",
+      "subtitle": "Research, explained",
+      "edition": "Brief in email. Explained on the web.",
       "topics": [
-        "General",
-        "Finance",
-        "Medicine",
-        "Nursing"
+        "Heart, metabolism & kidneys",
+        "Hearing & cognition",
+        "Stroke",
+        "Respiratory health",
+        "Cancer risk"
       ],
-      "bottom": "From many signals, a clearer picture.",
+      "bottom": "Evidence and uncertainty, kept in view.",
       "language": "EN ↔ 中文"
     },
     "focus": {
       "eyebrow": "02 / CURRENT FOCUS",
       "title": "What I’m\nimproving.",
-      "intro": "My current development priorities in UMA and BID.",
+      "intro": "My current development priorities in UMA and QDigest.",
       "items": [
         {
           "label": "UMA / PRODUCT EXPERIENCE",
@@ -154,10 +155,10 @@
           "link": "#uma"
         },
         {
-          "label": "BID / READING EXPERIENCE",
+          "label": "QDigest / READING EXPERIENCE",
           "title": "More context. Less feed hopping.",
-          "text": "Shaping the English and Chinese reading flow, topic structure, and source context across general news, finance, medicine, and nursing.",
-          "link": "#bid"
+          "text": "Connecting concise email discovery with source-grounded bilingual research explanations on the web.",
+          "link": "/qdigest/"
         }
       ]
     },
@@ -191,7 +192,7 @@
         {
           "number": "02",
           "title": "Share a perspective",
-          "text": "Try UMA, talk about BID, or tell me what could work better.",
+          "text": "Try UMA, talk about QDigest, or tell me what could work better.",
           "label": "Start a conversation",
           "subject": "A thought about your projects"
         },
@@ -215,7 +216,7 @@
   "zh-Hans": {
     "meta": {
       "title": "何少霆 — ICU 护士，也在创造。",
-      "description": "我是何少霆，一名在 ICU 工作的注册护士，也是一名独立开发者。了解 UMA、BID News Digest，以及合作与支持创作的方式。"
+      "description": "我是何少霆，一名在 ICU 工作的注册护士，也是一名独立开发者。了解 UMA、QDigest，以及合作与支持创作的方式。"
     },
     "nav": [
       [
@@ -265,7 +266,7 @@
       "secondary": "探索 GitHub",
       "note": "重症护理 · 加拿大新斯科舍省",
       "current": "正在投入",
-      "currentProjects": "UMA + BID News Digest",
+      "currentProjects": "UMA + QDigest",
       "scroll": "往下看看",
       "statement": "以护理为根，\n让创造发生。",
       "credentials": [
@@ -316,46 +317,47 @@
       {
         "id": "bid",
         "number": "02",
-        "name": "BID",
-        "subtitle": "News Digest",
+        "name": "QDigest",
+        "subtitle": "读懂研究",
         "status": "开发中",
         "kind": "信息工具 · 双语阅读",
-        "headline": "看见新闻，也看懂来龙去脉。",
-        "description": "将综合新闻、金融、医学与护理整理成适合专注阅读的双语简报。",
+        "headline": "看见研究，也读懂研究。",
+        "description": "用英文与简体中文解释有据可查的健康研究：邮件简报用于发现，网页提供更完整的研究解释。",
         "tags": [
           "English + 中文",
           "重视来源",
           "移动端阅读"
         ],
-        "primary": "聊聊 BID",
-        "url": "mailto:Locutus1207@outlook.com?subject=BID%20News%20Digest%20%E2%80%94%20let%E2%80%99s%20talk",
-        "caption": "版式概念展示 · 非实时新闻",
+        "primary": "阅读 QDigest",
+        "url": "/qdigest/",
+        "caption": "预览版 · 2026年9月14日",
         "whyTitle": "我在思考的问题",
-        "why": "关注多个领域，是否可以不用整天在不同的信息流之间来回切换？",
+        "why": "怎样让健康研究更容易理解，同时保留证据与不确定性？",
         "focusTitle": "正在努力的方向",
-        "focus": "以阅读体验、必要语境和来源质量为核心，打磨一份清晰的双语简报。",
+        "focus": "同一份可追溯事实包，生成简洁邮件与完整双语网页解释。",
         "inviteTitle": "欢迎你的参与",
         "invite": "希望听到好奇的读者、关注内容的人，以及对信息呈现有想法的伙伴的反馈。"
       }
     ],
     "digest": {
-      "label": "把信息，变成理解",
-      "title": "BID",
-      "subtitle": "News Digest",
-      "edition": "一份简报，多种视角。",
+      "label": "健康研究",
+      "title": "QDigest",
+      "subtitle": "读懂研究",
+      "edition": "邮件发现，网页理解。",
       "topics": [
-        "综合",
-        "金融",
-        "医学",
-        "护理"
+        "心脏、代谢与肾脏",
+        "听力与认知",
+        "卒中",
+        "呼吸健康",
+        "癌症风险"
       ],
-      "bottom": "从纷繁信息中，找到清晰的脉络。",
+      "bottom": "保留证据，也保留不确定性。",
       "language": "EN ↔ 中文"
     },
     "focus": {
       "eyebrow": "02 / 正在投入",
       "title": "最近在\n打磨什么。",
-      "intro": "UMA 与 BID 当前的开发重点。",
+      "intro": "UMA 与 QDigest 当前的开发重点。",
       "items": [
         {
           "label": "UMA / 产品体验",
@@ -364,10 +366,10 @@
           "link": "#uma"
         },
         {
-          "label": "BID / 阅读体验",
+          "label": "QDigest / 阅读体验",
           "title": "多一点语境，少切几个信息流。",
-          "text": "打磨中英文阅读流程、主题结构与来源语境，涵盖综合新闻、财经、医学与护理。",
-          "link": "#bid"
+          "text": "将简洁邮件发现与来源可追溯的双语网页研究解释连接起来。",
+          "link": "/qdigest/"
         }
       ]
     },
@@ -401,7 +403,7 @@
         {
           "number": "02",
           "title": "交换视角",
-          "text": "试试 UMA，聊聊 BID，或告诉我哪里还能更好。",
+          "text": "试试 UMA，聊聊 QDigest，或告诉我哪里还能更好。",
           "label": "开始交流",
           "subject": "A thought about your projects"
         },
