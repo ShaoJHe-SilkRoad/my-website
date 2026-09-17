@@ -1130,6 +1130,13 @@
       }
     },
     "license": "Existing NotoSansSC-LICENSE.txt and SourceSerif-LICENSE.md retained",
-    "verification": "All101 CJK WOFF2 fvar weight axes cover400\u2013700; Serif OS/2 weight700. Old400 files retained locally, excluded from new release."
+    "verification": "All101 CJK WOFF2 fvar weight axes cover400–700; Serif OS/2 weight700. Old400 files retained locally, excluded from new release."
+  },
+  "SourceSerif4-Light.woff2": {
+    "source": "https://raw.githubusercontent.com/adobe-fonts/source-serif/release/WOFF2/OTF/SourceSerif4-Light.otf.woff2",
+    "license": "SourceSerif-LICENSE.md (OFL-1.1)",
+    "purpose": "same-family weight 300 for non-emphasized Lazy text",
+    "acquired_utc": "2026-09-17",
+    "bytes": 110316
   }
 }
