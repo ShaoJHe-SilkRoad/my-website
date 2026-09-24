@@ -159,3 +159,544 @@ html{scroll-padding-top:100px}
   .email-row{margin-top:24px}.email-link{font-size:20px}
   a,button,summary{box-shadow:none!important}
 }
+
+/* === Collaborator hierarchy pass (2026-09-22) ===
+   Audience: collaborators / partners / future service users.
+   Keep ECG ambient; clear first-screen competition; UMA lead; mobile-safe.
+   Do not touch Notion stable keys or content JS paths. */
+:root{
+  --warm:#ff9f40;
+  --warm-strong:#ff932e;
+  --text-meta:12px;
+}
+.eyebrow,
+.hero-eyebrow,
+.art-label,
+.project-meta,
+.project-meta>span,
+.status-tag,
+.tag-list li,
+.focus-item>.eyebrow,
+.about-facts,
+.contact-path>.eyebrow,
+.signal-index,
+.signal-hint,
+.signal-still,
+.now-link .eyebrow,
+.brand-name,
+.brand-name>span,
+.language-control button,
+.copy-button,
+.contact-footnote,
+.footer-row,
+.footer-row span,
+.footer-links .text-link,
+.digest-top,
+.digest-topics i,
+.project-details summary,
+.clinical-details summary{
+  font-size:var(--text-meta)!important;
+  letter-spacing:.08em;
+}
+.signal-dot,
+.status-tag i{
+  background:var(--solid)!important;
+  box-shadow:0 0 14px color-mix(in srgb,var(--solid) 35%,transparent);
+}
+.project--bid .status-tag i,
+.digest-rule{
+  background:var(--warm)!important;
+}
+.gradient-text{
+  background:linear-gradient(105deg,var(--solid) 8%,var(--solid) 39%,var(--warm) 80%);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* Hero: one winner — title + primary CTA. ECG stays; credentials + currently-building leave first screen. */
+.hero-credentials,
+.hero-foot .now-link{
+  display:none!important;
+}
+.hero-github{
+  opacity:.72;
+  font-size:var(--text-meta);
+}
+.hero-foot{
+  margin-top:48px;
+  padding-top:18px;
+}
+.signal-annotation{
+  opacity:.78;
+  pointer-events:auto;
+}
+.signal-hint,
+.signal-still{
+  max-width:22ch;
+}
+
+/* Work: UMA lead, QDigest one step quieter */
+.project--uma .project-name h3{
+  font-size:clamp(40px,5vw,52px);
+}
+.project--uma .project-art{
+  min-height:520px;
+}
+.project--bid{
+  opacity:.92;
+  transform:scale(.985);
+  transform-origin:top center;
+}
+.project--bid .project-name h3{
+  font-size:clamp(28px,3.6vw,34px);
+}
+.project--bid .project-art,
+.project--bid .bid-art{
+  min-height:360px;
+  padding:28px;
+}
+.project--bid .digest-wordmark{
+  font-size:72px;
+}
+.project--bid .project-copy h4{
+  font-size:18px;
+}
+
+/* Contact: one primary path + email row; fold the other two */
+.contact-paths{
+  grid-template-columns:1fr;
+}
+.contact-path:nth-child(n+2){
+  display:none!important;
+}
+.contact-path+.contact-path{
+  border-left:0;
+}
+.contact-path{
+  max-width:560px;
+}
+
+/* Mobile: stack cleanly, readable meta, tap targets */
+@media(max-width:760px){
+  .hero{
+    min-height:auto;
+    padding-top:48px;
+    padding-bottom:36px;
+  }
+  .hero h1{
+    font-size:clamp(44px,12vw,64px);
+  }
+  .hero-intro,
+  .hero-statement{
+    font-size:16px;
+    max-width:100%;
+  }
+  .hero-actions{
+    flex-direction:column;
+    align-items:stretch;
+    gap:14px;
+  }
+  .button,
+  .button--small,
+  .copy-button,
+  .contact-path>a,
+  .hero-github{
+    min-height:44px;
+  }
+  .signal-annotation{
+    position:relative;
+    margin-top:20px;
+    opacity:.7;
+  }
+  .project,
+  .project--bid{
+    grid-template-columns:1fr;
+    transform:none;
+  }
+  .project--bid .project-art,
+  .project--uma .project-art{
+    min-height:280px;
+    order:0;
+  }
+  .project--bid .project-art{order:0}
+  .focus-layout,
+  .about-layout,
+  .focus-layout,
+  .about-layout,
+  .focus-section .focus-layout,
+  .about-section .about-layout{
+    grid-template-columns:1fr;
+    gap:36px;
+  }
+  .contact-paths{grid-template-columns:1fr}
+  .email-link{font-size:clamp(16px,5vw,24px);word-break:break-all}
+}
+
+/* === Code blue quieter (2026-09-22) ===
+   Keep the nursing easter egg; demote fill so yellow CTA wins first glance.
+   Outline + softer ink at rest; pressed still reads “active.” */
+.code-blue{
+  background:transparent!important;
+  border:1px solid color-mix(in srgb,#c84842 55%,transparent)!important;
+  color:color-mix(in srgb,#fff0ec 62%,transparent)!important;
+  opacity:.72;
+  box-shadow:none!important;
+}
+.code-blue:hover{
+  background:color-mix(in srgb,#741f29 28%,transparent)!important;
+  border-color:color-mix(in srgb,#f76e59 70%,transparent)!important;
+  color:#fff0ec!important;
+  opacity:.9;
+}
+.code-blue[aria-pressed=true]{
+  background:color-mix(in srgb,#c23237 55%,transparent)!important;
+  border-color:#ff8a69!important;
+  color:#fff0ec!important;
+  opacity:1;
+  box-shadow:0 0 12px #cd303418!important;
+}
+.code-blue-dot{
+  background:color-mix(in srgb,#ff9b80 70%,transparent)!important;
+  opacity:.85;
+}
+.code-blue[aria-pressed=true] .code-blue-dot{
+  background:#fff0bb!important;
+  opacity:1;
+}
+
+/* === Hybrid DF (2026-09-22) ===
+   Desktop (≥760px): D Nightward — deeper night, ECG depth, tighter type.
+   Narrow (<760px): F Matter-first — shorter hero, UMA into first viewport.
+   No HUD / fake vitals / hard split. Stable keys untouched. */
+@media (min-width: 760px) {
+  :root {
+    --bg: #020914;
+    --surface: #061222;
+  }
+  body { background: #020914; }
+  .ambient-backdrop { opacity: 1; }
+  #ambient-field {
+    filter: saturate(1.18) brightness(0.92) contrast(1.1);
+    transform: scale(1.06) translate(2%, 1%);
+    transform-origin: 70% 42%;
+  }
+  .hero {
+    min-height: 88vh;
+    padding-top: 64px;
+  }
+  .hero-copy { max-width: 640px; }
+  .hero h1 {
+    letter-spacing: -0.07em;
+    line-height: 0.98;
+  }
+  .hero-statement {
+    font-size: clamp(20px, 2.1vw, 26px);
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    margin-top: 18px;
+  }
+  .hero-intro {
+    max-width: 480px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .hero-actions { margin-top: 26px; gap: 18px; }
+  .signal-annotation {
+    opacity: 0.82;
+    filter: drop-shadow(0 12px 40px rgba(0, 0, 0, 0.45));
+  }
+  .site-header { background: rgba(2, 9, 20, 0.82); }
+  /* Keep yellow CTA winning over deeper night */
+  .button {
+    box-shadow: 0 10px 34px rgba(251, 226, 73, 0.2);
+  }
+}
+
+@media (max-width: 759px) {
+  .hero {
+    min-height: auto !important;
+    padding-top: 28px !important;
+    padding-bottom: 12px !important;
+  }
+  .hero-copy { max-width: 100%; }
+  .hero h1 {
+    font-size: clamp(44px, 12vw, 60px) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.055em !important;
+  }
+  .hero-statement {
+    font-size: 17px !important;
+    margin-top: 12px !important;
+    line-height: 1.35 !important;
+  }
+  .hero-intro {
+    font-size: 14px !important;
+    margin-top: 10px !important;
+    line-height: 1.65 !important;
+  }
+  .hero-actions {
+    margin-top: 18px !important;
+    margin-bottom: 4px !important;
+    gap: 12px !important;
+  }
+  .hero-foot {
+    margin-top: 20px !important;
+    padding-top: 12px !important;
+  }
+  .signal-annotation {
+    opacity: 0.68 !important;
+    margin-top: 12px !important;
+    max-height: 160px;
+    overflow: hidden;
+  }
+  #ambient-field {
+    opacity: 0.78;
+    transform: scale(1.12) translate(0, 8%);
+  }
+  .work-section {
+    padding-top: 24px !important;
+    margin-top: 0 !important;
+  }
+  .work-heading {
+    margin-bottom: 16px !important;
+  }
+  .work-heading .section-heading h2 {
+    font-size: clamp(26px, 7vw, 34px) !important;
+    margin: 10px 0 8px !important;
+  }
+  .work-heading .section-heading > p {
+    display: none !important;
+  }
+  .project--uma {
+    margin-bottom: 20px !important;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+  }
+  .project--uma .project-art,
+  .project--uma .uma-art {
+    min-height: 220px !important;
+  }
+  .project--uma .project-copy {
+    padding: 22px 18px !important;
+  }
+  .project--uma .project-name h3 {
+    font-size: clamp(28px, 8vw, 36px) !important;
+  }
+}
+
+/* Soften the jump around the breakpoint */
+@media (min-width: 760px) and (max-width: 900px) {
+  .hero { min-height: 82vh; padding-top: 52px; }
+  .hero-statement { font-size: 20px; }
+}
+
+/* Hybrid DF — mobile F tighten (UMA must enter first viewport) */
+@media (max-width: 759px) {
+  .hero {
+    padding-top: 20px !important;
+    padding-bottom: 4px !important;
+  }
+  .hero-eyebrow {
+    margin-bottom: 10px !important;
+    font-size: 10px !important;
+  }
+  .hero h1 {
+    font-size: clamp(40px, 11vw, 52px) !important;
+    line-height: 1.0 !important;
+  }
+  .hero-statement {
+    font-size: 16px !important;
+    margin-top: 8px !important;
+  }
+  .hero-intro {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    font-size: 13.5px !important;
+    margin-top: 8px !important;
+    max-height: 3.2em !important;
+  }
+  .hero-actions {
+    margin-top: 14px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .hero-actions .button { width: 100%; }
+  .hero-github { justify-content: center; }
+  /* ECG stays, but as a thin strip — depth without height */
+  .signal-annotation {
+    display: none !important; /* labels live on ambient; reclaim vertical for UMA */
+  }
+  .hero-foot {
+    margin-top: 14px !important;
+    padding-top: 10px !important;
+    font-size: 11px !important;
+  }
+  #ambient-field {
+    opacity: 0.55 !important;
+    transform: scale(1.2) translate(0, 18%) !important;
+  }
+  .work-section {
+    padding-top: 16px !important;
+  }
+  .work-heading {
+    margin-bottom: 12px !important;
+  }
+  .work-heading .section-heading .eyebrow {
+    font-size: 10px !important;
+  }
+  .work-heading .section-heading h2 {
+    font-size: clamp(24px, 6.5vw, 30px) !important;
+    margin: 6px 0 0 !important;
+  }
+  .work-heading .text-link { display: none !important; }
+  .project--uma .project-art,
+  .project--uma .uma-art {
+    min-height: 180px !important;
+  }
+}
+
+/* V6 clinical sections. Editorial copy is meta / ui / hero / sections.* / footer.
+   Identity stays visible. Eight nav targets scroll. Folded detail stays closed until opened. */
+.hero h1,
+:root[lang=zh-Hans] .hero h1{
+  font-size:clamp(40px,5.6vw,72px)!important;
+  line-height:1.08!important;
+  letter-spacing:-.045em!important;
+  max-width:16ch;
+}
+.hero-statement,
+:root[lang=zh-Hans] .hero-statement{
+  font-size:17px!important;
+  font-weight:500!important;
+  line-height:1.55!important;
+  max-width:40rem!important;
+  color:var(--ink);
+}
+.hero-credentials{
+  display:flex!important;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:10px;
+  margin-top:28px;
+  max-width:36rem;
+}
+.hero-credentials li,
+.hero-credentials li+li{
+  border:0;
+  padding:0;
+}
+.hero-credentials li span{
+  display:block;
+  color:var(--accent);
+  letter-spacing:.08em;
+  margin-bottom:2px;
+}
+.hero-secondary{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  min-height:44px;
+  font-size:13px;
+  color:var(--muted);
+}
+.hero-secondary:hover{color:var(--ink)}
+.desktop-nav{gap:16px;min-width:0}
+.desktop-nav a{font-size:12px;white-space:nowrap}
+.focus-intro{min-width:0}
+.focus-item{grid-template-columns:1fr}
+.practice-layout{
+  display:grid;
+  grid-template-columns:minmax(200px,280px) 1fr;
+  gap:48px;
+  align-items:start;
+  margin-top:36px;
+}
+.practice-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.practice-card,.evidence-card,.capability-group,.systems-link{
+  border:1px solid var(--line);
+  background:var(--card);
+  border-radius:4px;
+  padding:22px;
+}
+.practice-card h3,.evidence-card h3,.capability-group h3,.systems-feature h3{
+  font-size:18px;
+  font-weight:500;
+  letter-spacing:-.02em;
+  margin-top:8px;
+}
+.practice-card p,.evidence-card p,.capability-group p,.systems-feature p,.pair-list dd,.fold-hint,.contact-panel p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.75;
+  margin-top:10px;
+}
+.practice-card .tag-list,.evidence-card .tag-list{margin-bottom:0}
+.timeline-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(200px,280px);gap:36px;align-items:start}
+.evidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.timeline-aside{color:var(--muted);font-size:14px;line-height:1.7;border-left:1px solid var(--line);padding-left:18px}
+.timeline-aside ul{margin:14px 0 0;padding-left:18px}
+.timeline-aside li+li{margin-top:6px}
+.fold{border-top:1px solid var(--line);margin-top:28px}
+.fold summary{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+  cursor:pointer;
+  list-style:none;
+  min-height:48px;
+  padding:16px 0;
+  font-size:14px;
+}
+.fold summary::-webkit-details-marker{display:none}
+.fold summary>span:last-child{font-size:19px;line-height:1;transition:transform .2s}
+.fold[open] summary>span:last-child{transform:rotate(45deg)}
+.fold-body{padding-bottom:8px}
+.capability-groups{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+.capability-group ul{margin:12px 0 0;padding-left:18px;color:var(--muted);font-size:14px}
+.capability-group li+li{margin-top:6px}
+.pair-list{margin:8px 0 0}
+.pair-list>div+div{margin-top:16px}
+.pair-list dt{font-weight:600}
+.pair-list dd{margin:4px 0 0}
+.systems-feature{margin-bottom:16px}
+.systems-links{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.systems-link{display:flex;flex-direction:column;gap:6px;min-height:44px}
+.systems-link strong{font-weight:600}
+.systems-link span{color:var(--muted);font-size:14px;line-height:1.6}
+.contact-panel{max-width:640px;margin-top:28px}
+.contact-location{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--accent);margin:0}
+.contact-panel .button{margin-top:22px}
+.portrait figcaption span{display:block;color:var(--faint);margin-top:4px}
+.footer-row{align-items:flex-start}
+.footer-identity p{max-width:62ch}
+.footer-links{flex-wrap:wrap}
+@media(max-width:1080px){
+  .desktop-nav{display:none}
+  .mobile-nav{
+    display:flex;
+    overflow-x:auto;
+    justify-content:flex-start;
+    gap:4px;
+    scrollbar-width:none;
+  }
+  .mobile-nav a{flex:0 0 auto;min-width:0;padding:0 12px}
+  .site-footer{padding-bottom:100px}
+  html{scroll-padding-bottom:84px}
+}
+@media(max-width:900px){
+  .practice-layout,.timeline-layout,.capability-groups,.systems-links,.evidence-grid,.practice-grid{grid-template-columns:1fr}
+  .timeline-aside{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:16px}
+}
+@media(max-width:759px){
+  .hero-credentials{gap:8px}
+  .practice-layout{margin-top:24px}
+  .contact-panel .button,.hero-secondary,.systems-link{min-height:44px}
+}
+@media print{
+  details.fold,details.fold>*,.fold-body{display:block!important}
+  .practice-layout,.timeline-layout,.capability-groups,.systems-links,.evidence-grid,.practice-grid{display:block}
+  .practice-card,.evidence-card,.capability-group,.systems-link{break-inside:avoid;margin-top:12px}
+}

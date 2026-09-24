@@ -185,6 +185,38 @@ for (const lang of ['en', 'zh-Hans']) {
   assert(html.includes('id="main-content" tabindex="-1"'), `${lang}: skip target can receive focus`);
   for (const id of ['theme-toggle', 'motion-toggle', 'code-blue-toggle', 'copy-email', 'copy-status']) assert(ids.has(id), `${lang}: ${id} exists`);
   assert(html.includes(`data-language="${lang}" aria-pressed="true"`), `${lang}: active language state`);
+  const page = contentContext.window.SHAOTING_HOME_CONTENT[lang];
+  for (const item of page.ui.nav) assert(ids.has(item[0]), `${lang}: nav target #${item[0]} is rendered`);
+  assert(html.includes(page.sections.focus.items[0].title), `${lang}: focus card renders`);
+  if (page.sections.focus.items[0].label) assert(html.includes(page.sections.focus.items[0].label), `${lang}: focus label renders`);
+  assert(html.includes(page.sections.contact.email), `${lang}: contact email renders`);
+  assert(!html.includes('c.nav') && !page.nav, `${lang}: renderer is not fed the old top-level nav`);
+  if (page.sections.work && page.sections.work.title) assert(html.includes(String(page.sections.work.title).split('\n')[0]), `${lang}: work heading renders`);
+  if (page.sections.about && page.sections.about.intro) assert(html.includes(page.sections.about.intro), `${lang}: about intro renders`);
+  if (page.sections.about) assert(ids.has('about'), `${lang}: about section renders`);
+  if (page.sections.digest && page.sections.digest.topics && page.sections.digest.topics[0]) {
+    assert(html.includes(page.sections.digest.topics[0].replace(/&/g, '&amp;')), `${lang}: digest topics render`);
+  }
+  if (page.sections.projects && page.sections.projects.items) {
+    assert(html.includes('id="uma"') && html.indexOf('id="uma"') < html.indexOf('id="bid"'), `${lang}: UMA leads QDigest`);
+    assert(html.includes('/qdigest/'), `${lang}: QDigest links to /qdigest/`);
+  }
+  for (const key of ['timeline', 'practice', 'capability']) {
+    if (!page.sections[key]) assert(!ids.has(key), `${lang}: nursing section #${key} is absent`);
+  }
+  for (const key of ['codeBlue', 'copy', 'motion']) assert(html.includes(page.ui[key]), `${lang}: ui.${key} renders`);
 }
+const sample = JSON.parse(JSON.stringify(contentContext.window.SHAOTING_HOME_CONTENT.en));
+sample.sections.projects = [
+  { id: 'qdigest', name: 'QDigest', subtitle: 'Research', status: 'In development', kind: 'Reading', headline: 'Explain', description: 'Secondary project', tags: ['EN'], url: '/qdigest/', primary: 'Read', caption: 'Edition' },
+  { id: 'uma', name: 'UMA', subtitle: 'Usage', status: 'Public', kind: 'macOS', headline: 'Limits', description: 'Lead project', tags: ['Swift'], url: 'https://github.com/ShaoJHe-SilkRoad/UMA', primary: 'View', caption: 'Preview' }
+];
+const ordered = render(sample, 'en');
+assert(ordered.indexOf('id="uma"') !== -1 && ordered.indexOf('id="qdigest"') !== -1, 'optional projects render');
+assert(ordered.indexOf('id="uma"') < ordered.indexOf('id="qdigest"'), 'UMA leads and QDigest follows when both are provided');
+const renderedKeys = ['focus', 'work', 'projects', 'digest', 'about', 'practice', 'timeline', 'capability', 'education', 'language', 'systems', 'contact'];
+const present = Object.keys(contentContext.window.SHAOTING_HOME_CONTENT.en.sections);
+const unrendered = present.filter(key => !renderedKeys.includes(key));
+assert.deepEqual(unrendered, [], `section keys without a renderer: ${unrendered.join(', ')}`);
 console.log('PASS: light/VF palette and lifecycle; scroll and relayout; deep-scroll anchoring; hidden-time exclusion; both locale renderers.');
 console.log(`Simulated paints/second: ${cadence.join(', ')}. This does not measure real-device frame time.`);

@@ -1,0 +1,2697 @@
+{
+  "schemaVersion": "v6-notion-schema-freeze-sample-v1",
+  "mockOnly": true,
+  "exportTarget": "content/generated/homepage-content.generated.js",
+  "databases": {
+    "homeSections": [
+      {
+        "stableKey": "site.meta",
+        "status": "approved",
+        "visibility": "visible",
+        "priority": 10,
+        "sort": 10,
+        "en": {
+          "title": "Shaoting He — ICU Nurse. Independent Builder.",
+          "summary": "ICU nurse. Independent builder. Shaoting He brings a nurse’s attention to the software he creates. Explore UMA, QDigest, and ways to collaborate.",
+          "body": "ICU nurse. Independent builder. Shaoting He brings a nurse’s attention to the software he creates. Explore UMA, QDigest, and ways to collaborate.",
+          "tags": [
+            "homepage",
+            "creative"
+          ]
+        },
+        "zhHans": {
+          "title": "何少霆 — ICU 护士，也在创造。",
+          "summary": "我是何少霆，一名在 ICU 工作的注册护士，也是一名独立开发者。了解 UMA、QDigest，以及合作与支持创作的方式。",
+          "body": "我是何少霆，一名在 ICU 工作的注册护士，也是一名独立开发者。了解 UMA、QDigest，以及合作与支持创作的方式。",
+          "tags": [
+            "首页",
+            "创意"
+          ]
+        },
+        "maxEnWords": 220,
+        "maxZhHansCharacters": 420,
+        "sourceEvidenceNote": "Seeded from live creative homepage-content.js (2026-09-24).",
+        "lastVerifiedDate": "2026-09-24",
+        "publish": true,
+        "sectionKey": "site.meta",
+        "recordKind": "meta",
+        "output": {
+          "en": {
+            "title": "Shaoting He — ICU Nurse. Independent Builder.",
+            "description": "ICU nurse. Independent builder. Shaoting He brings a nurse’s attention to the software he creates. Explore UMA, QDigest, and ways to collaborate."
+          },
+          "zhHans": {
+            "title": "何少霆 — ICU 护士，也在创造。",
+            "description": "我是何少霆，一名在 ICU 工作的注册护士，也是一名独立开发者。了解 UMA、QDigest，以及合作与支持创作的方式。"
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "current_focus",
+          "professional_direction",
+          "documentation_clarity"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ]
+      },
+      {
+        "stableKey": "site.ui",
+        "status": "approved",
+        "visibility": "visible",
+        "priority": 10,
+        "sort": 20,
+        "en": {
+          "title": "site.ui",
+          "summary": null,
+          "body": null,
+          "tags": [
+            "homepage",
+            "creative"
+          ]
+        },
+        "zhHans": {
+          "title": "site.ui",
+          "summary": null,
+          "body": null,
+          "tags": [
+            "首页",
+            "创意"
+          ]
+        },
+        "maxEnWords": 220,
+        "maxZhHansCharacters": 420,
+        "sourceEvidenceNote": "Seeded from live creative homepage-content.js (2026-09-24).",
+        "lastVerifiedDate": "2026-09-24",
+        "publish": true,
+        "sectionKey": "site.nav",
+        "recordKind": "ui",
+        "output": {
+          "en": {
+            "nav": [
+              [
+                "projects",
+                "Work"
+              ],
+              [
+                "focus",
+                "Focus"
+              ],
+              [
+                "about",
+                "About"
+              ],
+              [
+                "contact",
+                "Connect"
+              ]
+            ],
+            "skip": "Skip to content",
+            "language": "Language",
+            "light": "Switch to light theme",
+            "motion": "Pause background motion",
+            "resume": "Resume background motion",
+            "dark": "Switch to dark theme",
+            "reduced": "Motion reduced by your device",
+            "menu": "Main navigation",
+            "github": "GitHub",
+            "back": "Back to top",
+            "more": "Behind the project",
+            "copy": "Copy email",
+            "copied": "Email copied",
+            "copyFailed": "Copy unavailable. Use the email link.",
+            "close": "Close",
+            "projectPreview": "Open full UMA demo preview",
+            "codeBlue": "Code blue",
+            "codeBlueOn": "Nurse joke: switch the waveform to V-Fib",
+            "codeBlueOff": "Return the waveform to normal sinus rhythm"
+          },
+          "zhHans": {
+            "nav": [
+              [
+                "projects",
+                "作品"
+              ],
+              [
+                "focus",
+                "近期投入"
+              ],
+              [
+                "about",
+                "关于我"
+              ],
+              [
+                "contact",
+                "联系"
+              ]
+            ],
+            "skip": "跳至主要内容",
+            "language": "语言",
+            "light": "切换浅色主题",
+            "motion": "暂停背景动效",
+            "resume": "继续背景动效",
+            "dark": "切换深色主题",
+            "reduced": "已遵循设备的减少动态效果设置",
+            "menu": "主导航",
+            "github": "GitHub",
+            "back": "回到顶部",
+            "more": "项目背后的想法",
+            "copy": "复制邮箱",
+            "copied": "邮箱已复制",
+            "copyFailed": "暂时无法复制，请使用邮件链接。",
+            "close": "关闭",
+            "projectPreview": "打开完整 UMA 演示预览",
+            "codeBlue": "Code blue",
+            "codeBlueOn": "护理彩蛋：将波形切换为室颤",
+            "codeBlueOff": "将波形恢复为正常窦性心律"
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "current_focus",
+          "professional_direction",
+          "documentation_clarity"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ]
+      },
+      {
+        "stableKey": "home.hero",
+        "status": "approved",
+        "visibility": "visible",
+        "priority": 20,
+        "sort": 10,
+        "en": {
+          "title": "home.hero",
+          "summary": "I work in intensive care. I build software beyond it. Both start with the same instinct: notice what matters, and make it better.",
+          "body": "I work in intensive care. I build software beyond it. Both start with the same instinct: notice what matters, and make it better.",
+          "tags": [
+            "homepage",
+            "creative"
+          ]
+        },
+        "zhHans": {
+          "title": "home.hero",
+          "summary": "我在 ICU 照护生命，也在工作之外创造软件。两件事，都从同一个习惯开始：发现真正重要的问题，然后动手改善。",
+          "body": "我在 ICU 照护生命，也在工作之外创造软件。两件事，都从同一个习惯开始：发现真正重要的问题，然后动手改善。",
+          "tags": [
+            "首页",
+            "创意"
+          ]
+        },
+        "maxEnWords": 220,
+        "maxZhHansCharacters": 420,
+        "sourceEvidenceNote": "Seeded from live creative homepage-content.js (2026-09-24).",
+        "lastVerifiedDate": "2026-09-24",
+        "publish": true,
+        "sectionKey": "home.hero",
+        "recordKind": "hero",
+        "output": {
+          "en": {
+            "eyebrow": "SHAOTING HE / REGISTERED NURSE",
+            "line1": "Nurse.",
+            "line2": "Builder.",
+            "intro": "I work in intensive care. I build software beyond it. Both start with the same instinct: notice what matters, and make it better.",
+            "primary": "See what I’m building",
+            "secondary": "Explore GitHub",
+            "note": "ICU practice · Nova Scotia, Canada",
+            "current": "CURRENTLY BUILDING",
+            "currentProjects": "UMA + QDigest",
+            "scroll": "A little further down",
+            "statement": "Care is my discipline.\nCreation is my drive.",
+            "credentials": [
+              "RN · NSCN",
+              "CRITICAL CARE",
+              "INDEPENDENT DEVELOPER"
+            ],
+            "signalTitle": "THE HUMAN SIGNAL",
+            "signalCaption": "Care × Curiosity",
+            "signalHint": "Move to influence · Click to send a pulse",
+            "signalStill": "Inspired by the rhythm of critical care",
+            "rhythmNormal": "NSR / Sinus rhythm",
+            "rhythmVf": "VF / Ventricular fibrillation"
+          },
+          "zhHans": {
+            "eyebrow": "何少霆 / 注册护士",
+            "line1": "我是护士。",
+            "line2": "也在创造。",
+            "intro": "我在 ICU 照护生命，也在工作之外创造软件。两件事，都从同一个习惯开始：发现真正重要的问题，然后动手改善。",
+            "primary": "看看我在做什么",
+            "secondary": "探索 GitHub",
+            "note": "重症护理 · 加拿大新斯科舍省",
+            "current": "正在投入",
+            "currentProjects": "UMA + QDigest",
+            "scroll": "往下看看",
+            "statement": "以护理为根，\n让创造发生。",
+            "credentials": [
+              "注册护士 · NSCN",
+              "重症护理",
+              "独立开发"
+            ],
+            "signalTitle": "THE HUMAN SIGNAL",
+            "signalCaption": "关怀 × 好奇心",
+            "signalHint": "移动鼠标扰动波形 · 点击释放脉冲",
+            "signalStill": "灵感来自重症护理中的生命节律",
+            "rhythmNormal": "NSR / 正常窦性心律",
+            "rhythmVf": "VF / 心室颤动"
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "current_focus",
+          "professional_direction",
+          "documentation_clarity"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ]
+      },
+      {
+        "stableKey": "home.focus",
+        "status": "approved",
+        "visibility": "visible",
+        "priority": 30,
+        "sort": 10,
+        "en": {
+          "title": "What I’m\nimproving.",
+          "summary": "My current development priorities in UMA and QDigest.",
+          "body": "My current development priorities in UMA and QDigest.",
+          "tags": [
+            "homepage",
+            "creative"
+          ]
+        },
+        "zhHans": {
+          "title": "最近在\n打磨什么。",
+          "summary": "UMA 与 QDigest 当前的开发重点。",
+          "body": "UMA 与 QDigest 当前的开发重点。",
+          "tags": [
+            "首页",
+            "创意"
+          ]
+        },
+        "maxEnWords": 220,
+        "maxZhHansCharacters": 420,
+        "sourceEvidenceNote": "Seeded from live creative homepage-content.js (2026-09-24).",
+        "lastVerifiedDate": "2026-09-24",
+        "publish": true,
+        "sectionKey": "home.focus",
+        "recordKind": "section",
+        "output": {
+          "en": {
+            "eyebrow": "02 / CURRENT FOCUS",
+            "title": "What I’m\nimproving.",
+            "intro": "My current development priorities in UMA and QDigest."
+          },
+          "zhHans": {
+            "eyebrow": "02 / 正在投入",
+            "title": "最近在\n打磨什么。",
+            "intro": "UMA 与 QDigest 当前的开发重点。"
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "current_focus",
+          "professional_direction",
+          "documentation_clarity"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ]
+      },
+      {
+        "stableKey": "home.work",
+        "status": "approved",
+        "visibility": "visible",
+        "priority": 34,
+        "sort": 10,
+        "en": {
+          "title": "The work speaks.",
+          "summary": "A native Mac companion for AI usage. Bilingual research explanations. Two tools I’m building to make information easier to use.",
+          "body": "A native Mac companion for AI usage. Bilingual research explanations. Two tools I’m building to make information easier to use.",
+          "tags": [
+            "homepage",
+            "creative"
+          ]
+        },
+        "zhHans": {
+          "title": "让作品说话。",
+          "summary": "一个关注 AI 用量的原生 Mac 工具，双语健康研究解释。让信息更好用，是这两个项目共同的出发点。",
+          "body": "一个关注 AI 用量的原生 Mac 工具，双语健康研究解释。让信息更好用，是这两个项目共同的出发点。",
+          "tags": [
+            "首页",
+            "创意"
+          ]
+        },
+        "maxEnWords": 220,
+        "maxZhHansCharacters": 420,
+        "sourceEvidenceNote": "Seeded from live creative homepage-content.js (2026-09-24).",
+        "lastVerifiedDate": "2026-09-24",
+        "publish": true,
+        "sectionKey": "home.work",
+        "recordKind": "section",
+        "output": {
+          "en": {
+            "eyebrow": "01 / FROM OBSERVATION TO SOFTWARE",
+            "title": "The work speaks.",
+            "intro": "A native Mac companion for AI usage. Bilingual research explanations. Two tools I’m building to make information easier to use.",
+            "all": "Explore my GitHub"
+          },
+          "zhHans": {
+            "eyebrow": "01 / 从观察到作品",
+            "title": "让作品说话。",
+            "intro": "一个关注 AI 用量的原生 Mac 工具，双语健康研究解释。让信息更好用，是这两个项目共同的出发点。",
+            "all": "探索我的 GitHub"
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "current_focus",
+          "professional_direction",
+          "documentation_clarity"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ]
+      },
+      {
+        "stableKey": "home.projects",
+        "status": "approved",
+        "visibility": "visible",
+        "priority": 35,
+        "sort": 10,
+        "en": {
+          "title": "The work speaks.",
+          "summary": "A native Mac companion for AI usage. Bilingual research explanations. Two tools I’m building to make information easier to use.",
+          "body": "A native Mac companion for AI usage. Bilingual research explanations. Two tools I’m building to make information easier to use.",
+          "tags": [
+            "homepage",
+            "creative"
+          ]
+        },
+        "zhHans": {
+          "title": "让作品说话。",
+          "summary": "一个关注 AI 用量的原生 Mac 工具，双语健康研究解释。让信息更好用，是这两个项目共同的出发点。",
+          "body": "一个关注 AI 用量的原生 Mac 工具，双语健康研究解释。让信息更好用，是这两个项目共同的出发点。",
+          "tags": [
+            "首页",
+            "创意"
+          ]
+        },
+        "maxEnWords": 900,
+        "maxZhHansCharacters": 1600,
+        "sourceEvidenceNote": "Seeded from live creative homepage-content.js (2026-09-24).",
+        "lastVerifiedDate": "2026-09-24",
+        "publish": true,
+        "sectionKey": "home.projects",
+        "recordKind": "section",
+        "output": {
+          "en": {
+            "eyebrow": "01 / FROM OBSERVATION TO SOFTWARE",
+            "title": "The work speaks.",
+            "intro": "A native Mac companion for AI usage. Bilingual research explanations. Two tools I’m building to make information easier to use.",
+            "items": [
+              {
+                "id": "uma",
+                "number": "01",
+                "name": "UMA",
+                "subtitle": "Usage Monitor",
+                "status": "Public repository",
+                "kind": "macOS · Developer tools",
+                "headline": "Know your limits. Keep your flow.",
+                "description": "A native macOS companion for Codex usage, limits, and recent tasks. Built to make the numbers easier to see, right from the menu bar.",
+                "tags": [
+                  "SwiftUI + AppKit",
+                  "macOS",
+                  "EN / 中文"
+                ],
+                "primary": "View repository",
+                "url": "https://github.com/ShaoJHe-SilkRoad/UMA",
+                "secondary": "Releases",
+                "secondaryUrl": "https://github.com/ShaoJHe-SilkRoad/UMA/releases",
+                "caption": "Public repository demo preview",
+                "whyTitle": "The question",
+                "why": "How can keeping track of AI usage feel like a natural part of the desktop, instead of another dashboard to manage?",
+                "focusTitle": "What I’m working toward",
+                "focus": "Clearer interfaces, useful usage context, and a dependable native Mac experience.",
+                "inviteTitle": "Where you can help",
+                "invite": "Try the public project, share a confusing moment, or bring a fresh product perspective."
+              },
+              {
+                "id": "bid",
+                "number": "02",
+                "name": "QDigest",
+                "subtitle": "Research, explained",
+                "status": "In development",
+                "kind": "Information tools · Bilingual reading",
+                "headline": "Make room for understanding.",
+                "description": "Source-grounded health research, explained in English and Simplified Chinese: concise email briefs with fuller explanations on the web.",
+                "tags": [
+                  "English + 中文",
+                  "Source-conscious",
+                  "Mobile-friendly"
+                ],
+                "primary": "Read QDigest",
+                "url": "/qdigest/",
+                "caption": "Format concept · not a live edition",
+                "whyTitle": "The question",
+                "why": "How can health research become easier to understand while keeping its evidence and uncertainty visible?",
+                "focusTitle": "What I’m working toward",
+                "focus": "One source-linked fact package for concise email briefs and fuller bilingual web explanations.",
+                "inviteTitle": "Where you can help",
+                "invite": "I’d like to hear from curious readers, editorial thinkers, and people who care about how information is presented."
+              }
+            ]
+          },
+          "zhHans": {
+            "eyebrow": "01 / 从观察到作品",
+            "title": "让作品说话。",
+            "intro": "一个关注 AI 用量的原生 Mac 工具，双语健康研究解释。让信息更好用，是这两个项目共同的出发点。",
+            "items": [
+              {
+                "id": "uma",
+                "number": "01",
+                "name": "UMA",
+                "subtitle": "Usage Monitor",
+                "status": "公开仓库",
+                "kind": "macOS · 开发者工具",
+                "headline": "掌握用量，专注创造。",
+                "description": "原生 macOS 工具，在菜单栏查看 Codex 用量、额度与近期任务，让使用情况更容易掌握。",
+                "tags": [
+                  "SwiftUI + AppKit",
+                  "macOS",
+                  "EN / 中文"
+                ],
+                "primary": "查看代码仓库",
+                "url": "https://github.com/ShaoJHe-SilkRoad/UMA",
+                "secondary": "发布版本",
+                "secondaryUrl": "https://github.com/ShaoJHe-SilkRoad/UMA/releases",
+                "caption": "公开仓库中的演示预览",
+                "whyTitle": "我在思考的问题",
+                "why": "关注 AI 用量，能否成为桌面体验中自然的一部分，而不用再多管理一个仪表盘？",
+                "focusTitle": "正在努力的方向",
+                "focus": "更清楚的界面、更有用的用量信息，以及可靠的原生 Mac 体验。",
+                "inviteTitle": "欢迎你的参与",
+                "invite": "试用公开项目，分享让你困惑的地方，或带来新的产品视角。"
+              },
+              {
+                "id": "bid",
+                "number": "02",
+                "name": "QDigest",
+                "subtitle": "读懂研究",
+                "status": "开发中",
+                "kind": "信息工具 · 双语阅读",
+                "headline": "看见研究，也读懂研究。",
+                "description": "用英文与简体中文解释有据可查的健康研究：邮件简报用于发现，网页提供更完整的研究解释。",
+                "tags": [
+                  "English + 中文",
+                  "重视来源",
+                  "移动端阅读"
+                ],
+                "primary": "阅读 QDigest",
+                "url": "/qdigest/",
+                "caption": "版式概念展示 · 非实时新闻",
+                "whyTitle": "我在思考的问题",
+                "why": "怎样让健康研究更容易理解，同时保留证据与不确定性？",
+                "focusTitle": "正在努力的方向",
+                "focus": "同一份可追溯事实包，生成简洁邮件与完整双语网页解释。",
+                "inviteTitle": "欢迎你的参与",
+                "invite": "希望听到好奇的读者、关注内容的人，以及对信息呈现有想法的伙伴的反馈。"
+              }
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "current_focus",
+          "professional_direction",
+          "documentation_clarity"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ]
+      },
+      {
+        "stableKey": "home.digest",
+        "status": "approved",
+        "visibility": "visible",
+        "priority": 36,
+        "sort": 10,
+        "en": {
+          "title": "QDigest",
+          "summary": "QDigest",
+          "body": "QDigest",
+          "tags": [
+            "homepage",
+            "creative"
+          ]
+        },
+        "zhHans": {
+          "title": "QDigest",
+          "summary": "QDigest",
+          "body": "QDigest",
+          "tags": [
+            "首页",
+            "创意"
+          ]
+        },
+        "maxEnWords": 220,
+        "maxZhHansCharacters": 420,
+        "sourceEvidenceNote": "Seeded from live creative homepage-content.js (2026-09-24).",
+        "lastVerifiedDate": "2026-09-24",
+        "publish": true,
+        "sectionKey": "home.digest",
+        "recordKind": "section",
+        "output": {
+          "en": {
+            "label": "HEALTH RESEARCH",
+            "title": "QDigest",
+            "subtitle": "Research, explained",
+            "edition": "Brief in email. Explained on the web.",
+            "topics": [
+              "Heart, metabolism & kidneys",
+              "Hearing & cognition",
+              "Stroke",
+              "Respiratory health",
+              "Cancer risk"
+            ],
+            "bottom": "Evidence and uncertainty, kept in view.",
+            "language": "EN ↔ 中文"
+          },
+          "zhHans": {
+            "label": "健康研究",
+            "title": "QDigest",
+            "subtitle": "读懂研究",
+            "edition": "邮件发现，网页理解。",
+            "topics": [
+              "心脏、代谢与肾脏",
+              "听力与认知",
+              "卒中",
+              "呼吸健康",
+              "癌症风险"
+            ],
+            "bottom": "保留证据，也保留不确定性。",
+            "language": "EN ↔ 中文"
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "current_focus",
+          "professional_direction",
+          "documentation_clarity"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ]
+      },
+      {
+        "stableKey": "home.about",
+        "status": "approved",
+        "visibility": "visible",
+        "priority": 70,
+        "sort": 10,
+        "en": {
+          "title": "A person behind\nevery signal.",
+          "summary": "I’m Shaoting He, a registered nurse working in intensive care in Nova Scotia.",
+          "body": "I’m Shaoting He, a registered nurse working in intensive care in Nova Scotia.",
+          "tags": [
+            "homepage",
+            "creative"
+          ]
+        },
+        "zhHans": {
+          "title": "每一个信号背后，\n都是一个人。",
+          "summary": "我是何少霆，在加拿大新斯科舍省从事重症护理的注册护士。",
+          "body": "我是何少霆，在加拿大新斯科舍省从事重症护理的注册护士。",
+          "tags": [
+            "首页",
+            "创意"
+          ]
+        },
+        "maxEnWords": 220,
+        "maxZhHansCharacters": 420,
+        "sourceEvidenceNote": "Seeded from live creative homepage-content.js (2026-09-24).",
+        "lastVerifiedDate": "2026-09-24",
+        "publish": true,
+        "sectionKey": "home.about",
+        "recordKind": "section",
+        "output": {
+          "en": {
+            "eyebrow": "03 / NURSING IS THE FOUNDATION",
+            "title": "A person behind\nevery signal.",
+            "intro": "I’m Shaoting He, a registered nurse working in intensive care in Nova Scotia.",
+            "body": "In the ICU, a small change can deserve your full attention. Nursing has shaped how I observe, communicate, and take responsibility.",
+            "end": "I bring that discipline to building software: understand the problem, make the details count, and keep improving what people use.",
+            "facts": [
+              "Registered Nurse · NSCN",
+              "Nova Scotia, Canada",
+              "English / Mandarin"
+            ],
+            "caption": "Shaoting He · 何少霆",
+            "detail": "Nursing background",
+            "clinical": "Currently in a full-time ICU role at Valley Regional Hospital in Kentville. BScN, Toronto Metropolitan University collaborative nursing program, graduated with Distinction."
+          },
+          "zhHans": {
+            "eyebrow": "03 / 护理，是我的根基",
+            "title": "每一个信号背后，\n都是一个人。",
+            "intro": "我是何少霆，在加拿大新斯科舍省从事重症护理的注册护士。",
+            "body": "在 ICU，一个细微的变化，也值得全神贯注。护理塑造了我观察、沟通与承担责任的方式。",
+            "end": "创造软件时，我也坚持同样的事：理解问题，认真对待细节，持续改善人们真正会用到的东西。",
+            "facts": [
+              "注册护士 · NSCN",
+              "加拿大 · 新斯科舍省",
+              "英语 / 普通话"
+            ],
+            "caption": "何少霆 · Shaoting He",
+            "detail": "护理背景",
+            "clinical": "目前在 Kentville 的 Valley Regional Hospital ICU 担任全职岗位。毕业于 Toronto Metropolitan University 协作护理项目，获护理学理学士学位，以 Distinction 毕业。"
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "current_focus",
+          "professional_direction",
+          "documentation_clarity"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ]
+      },
+      {
+        "stableKey": "home.contact",
+        "status": "approved",
+        "visibility": "visible",
+        "priority": 100,
+        "sort": 10,
+        "en": {
+          "title": "Bring your perspective.\nLet’s build something.",
+          "summary": "Developers, designers, supporters, and entrepreneurial communities: I’m looking for people who want to turn useful ideas into working tools.",
+          "body": "Developers, designers, supporters, and entrepreneurial communities: I’m looking for people who want to turn useful ideas into working tools.",
+          "tags": [
+            "homepage",
+            "creative"
+          ]
+        },
+        "zhHans": {
+          "title": "带上你的视角，\n一起把想法做出来。",
+          "summary": "欢迎开发者、设计师、支持者与创业社群。我希望找到愿意一起把有用的想法，变成实际作品的人。",
+          "body": "欢迎开发者、设计师、支持者与创业社群。我希望找到愿意一起把有用的想法，变成实际作品的人。",
+          "tags": [
+            "首页",
+            "创意"
+          ]
+        },
+        "maxEnWords": 220,
+        "maxZhHansCharacters": 420,
+        "sourceEvidenceNote": "Seeded from live creative homepage-content.js (2026-09-24).",
+        "lastVerifiedDate": "2026-09-24",
+        "publish": true,
+        "sectionKey": "home.contact",
+        "recordKind": "section",
+        "output": {
+          "en": {
+            "eyebrow": "04 / LET’S CONNECT",
+            "title": "Bring your perspective.\nLet’s build something.",
+            "intro": "Developers, designers, supporters, and entrepreneurial communities: I’m looking for people who want to turn useful ideas into working tools.",
+            "paths": [
+              {
+                "number": "01",
+                "title": "Build together",
+                "text": "Have a complementary skill or an idea we should explore?",
+                "label": "Discuss a collaboration",
+                "subject": "Let’s collaborate"
+              },
+              {
+                "number": "02",
+                "title": "Share a perspective",
+                "text": "Try UMA, talk about QDigest, or tell me what could work better.",
+                "label": "Start a conversation",
+                "subject": "A thought about your projects"
+              },
+              {
+                "number": "03",
+                "title": "Support the work",
+                "text": "Interested in backing independent tools and the time it takes to build them?",
+                "label": "Talk about supporting",
+                "subject": "Supporting your independent work"
+              }
+            ],
+            "email": "Locutus1207@outlook.com",
+            "footer": "Independent work. Human purpose."
+          },
+          "zhHans": {
+            "eyebrow": "04 / 建立联系",
+            "title": "带上你的视角，\n一起把想法做出来。",
+            "intro": "欢迎开发者、设计师、支持者与创业社群。我希望找到愿意一起把有用的想法，变成实际作品的人。",
+            "paths": [
+              {
+                "number": "01",
+                "title": "一起创造",
+                "text": "你有互补的技能，或一个值得共同探索的想法？",
+                "label": "聊聊合作",
+                "subject": "Let’s collaborate"
+              },
+              {
+                "number": "02",
+                "title": "交换视角",
+                "text": "试试 UMA，聊聊 QDigest，或告诉我哪里还能更好。",
+                "label": "开始交流",
+                "subject": "A thought about your projects"
+              },
+              {
+                "number": "03",
+                "title": "支持创作",
+                "text": "愿意支持独立工具，以及把它们做出来所需要的时间？",
+                "label": "聊聊支持方式",
+                "subject": "Supporting your independent work"
+              }
+            ],
+            "email": "Locutus1207@outlook.com",
+            "footer": "独立创造，为人而做。"
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "current_focus",
+          "professional_direction",
+          "documentation_clarity"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ]
+      },
+      {
+        "stableKey": "site.footer",
+        "status": "approved",
+        "visibility": "visible",
+        "priority": 110,
+        "sort": 10,
+        "en": {
+          "title": "site.footer",
+          "summary": null,
+          "body": null,
+          "tags": [
+            "homepage",
+            "creative"
+          ]
+        },
+        "zhHans": {
+          "title": "site.footer",
+          "summary": null,
+          "body": null,
+          "tags": [
+            "首页",
+            "创意"
+          ]
+        },
+        "maxEnWords": 220,
+        "maxZhHansCharacters": 420,
+        "sourceEvidenceNote": "Seeded from live creative homepage-content.js (2026-09-24).",
+        "lastVerifiedDate": "2026-09-24",
+        "publish": true,
+        "sectionKey": "site.footer",
+        "recordKind": "footer",
+        "output": {
+          "en": {
+            "identity": "Shaoting He · RN & independent builder",
+            "note": "Care in the details. Curiosity in the work.",
+            "copyright": "© 2026 Shaoting He."
+          },
+          "zhHans": {
+            "identity": "何少霆 · 注册护士与独立开发者",
+            "note": "认真对待细节，持续保持好奇。",
+            "copyright": "© 2026 何少霆。"
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "current_focus",
+          "professional_direction",
+          "documentation_clarity"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ]
+      },
+      {
+        "stableKey": "home.practice",
+        "status": "archived",
+        "visibility": "hidden",
+        "priority": 40,
+        "sort": 10,
+        "en": {
+          "title": "RN expertise snapshot.",
+          "summary": "Four compact signals with ICU direction first.",
+          "body": "Expertise Snapshot RN expertise snapshot. Four compact signals with ICU direction first. Current Critical Care Direction Current ICU practice and intensive-care training support the critical-care direction. Current ICU NSCN ICU training Growth Senior-Health Interest Senior health remains supporting context, including InterRAI-LTCF, without competing with the ICU identity. Senior health InterRAI-LTCF Continuity Older adults Cross-System Communication Canadian and Chinese clinical environments support Mandarin review, patient education, and care-plan clarity. Canada / China Mandarin review Education Care plans Workflow Support Habits Documentation habits and small tools stay secondary to clinical communication. Documentation Handoffs Follow-up Checklists",
+          "tags": [
+            "expertise",
+            "clinical"
+          ]
+        },
+        "zhHans": {
+          "title": "RN 专业重点。",
+          "summary": "四项简洁重点，ICU 方向优先。",
+          "body": "专长速览 RN 专业重点。 四项简洁重点，ICU 方向优先。 当前重症护理方向 当前 ICU 实践与重症护理培训背景支持重症护理方向；主页保持概览。 当前 ICU NSCN 重症护理培训 成长 老年健康兴趣 老年健康作为支持背景呈现，包括 InterRAI-LTCF，不盖过当前 ICU 身份。 老年健康 InterRAI-LTCF 连续照护 老年照护 跨体系临床沟通 加拿大与中国临床环境经验，可支持普通话资料审阅、患者教育与护理计划表达。 中加临床环境 普通话审阅 患者教育 护理计划 临床流程与文档支持 记录习惯与小型工具保持辅助地位，服务于临床沟通。 文档清晰度 交接清晰 跟进习惯 辅助工具",
+          "tags": [
+            "专长",
+            "临床"
+          ]
+        },
+        "maxEnWords": 220,
+        "maxZhHansCharacters": 430,
+        "sourceEvidenceNote": "Public-safe professional domains from the homepage content map.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "sectionKey": "home.practice",
+        "recordKind": "section",
+        "output": {
+          "en": {
+            "eyebrow": "Expertise Snapshot",
+            "title": "RN expertise snapshot.",
+            "summary": "Four compact signals with ICU direction first.",
+            "items": [
+              {
+                "title": "Current Critical Care Direction",
+                "text": "Current ICU practice and intensive-care training support the critical-care direction.",
+                "signals": [
+                  "Current ICU",
+                  "NSCN",
+                  "ICU training",
+                  "Growth"
+                ]
+              },
+              {
+                "title": "Senior-Health Interest",
+                "text": "Senior health remains supporting context, including InterRAI-LTCF, without competing with the ICU identity.",
+                "signals": [
+                  "Senior health",
+                  "InterRAI-LTCF",
+                  "Continuity",
+                  "Older adults"
+                ]
+              },
+              {
+                "title": "Cross-System Communication",
+                "text": "Canadian and Chinese clinical environments support Mandarin review, patient education, and care-plan clarity.",
+                "signals": [
+                  "Canada / China",
+                  "Mandarin review",
+                  "Education",
+                  "Care plans"
+                ]
+              },
+              {
+                "title": "Workflow Support Habits",
+                "text": "Documentation habits and small tools stay secondary to clinical communication.",
+                "signals": [
+                  "Documentation",
+                  "Handoffs",
+                  "Follow-up",
+                  "Checklists"
+                ]
+              }
+            ]
+          },
+          "zhHans": {
+            "eyebrow": "专长速览",
+            "title": "RN 专业重点。",
+            "summary": "四项简洁重点，ICU 方向优先。",
+            "items": [
+              {
+                "title": "当前重症护理方向",
+                "text": "当前 ICU 实践与重症护理培训背景支持重症护理方向；主页保持概览。",
+                "signals": [
+                  "当前 ICU",
+                  "NSCN",
+                  "重症护理培训",
+                  "成长"
+                ]
+              },
+              {
+                "title": "老年健康兴趣",
+                "text": "老年健康作为支持背景呈现，包括 InterRAI-LTCF，不盖过当前 ICU 身份。",
+                "signals": [
+                  "老年健康",
+                  "InterRAI-LTCF",
+                  "连续照护",
+                  "老年照护"
+                ]
+              },
+              {
+                "title": "跨体系临床沟通",
+                "text": "加拿大与中国临床环境经验，可支持普通话资料审阅、患者教育与护理计划表达。",
+                "signals": [
+                  "中加临床环境",
+                  "普通话审阅",
+                  "患者教育",
+                  "护理计划"
+                ]
+              },
+              {
+                "title": "临床流程与文档支持",
+                "text": "记录习惯与小型工具保持辅助地位，服务于临床沟通。",
+                "signals": [
+                  "文档清晰度",
+                  "交接清晰",
+                  "跟进习惯",
+                  "辅助工具"
+                ]
+              }
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "clinical_systems_practice",
+          "practical_clinical_systems",
+          "workflow_discipline",
+          "documentation_clarity",
+          "senior_health_continuity",
+          "handoff_clarity",
+          "critical_care_judgment",
+          "cross_system_practice"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ]
+      },
+      {
+        "stableKey": "home.timeline",
+        "status": "archived",
+        "visibility": "hidden",
+        "priority": 50,
+        "sort": 10,
+        "en": {
+          "title": "Clinical proof.",
+          "summary": "Selected proof stays specific and concise.",
+          "body": "Selected Evidence Clinical proof. Selected proof stays specific and concise. Folded timeline detail Open timeline detail. Selected proof stays visible; the longer timeline remains folded. Visible proof cards Folded timeline Current role context Systems kept secondary",
+          "tags": [
+            "evidence",
+            "timeline"
+          ]
+        },
+        "zhHans": {
+          "title": "临床证据。",
+          "summary": "精选证据保持具体、简洁。",
+          "body": "精选证据 临床证据。 精选证据保持具体、简洁。 折叠时间线细节 展开时间线细节。 精选证据默认可见；较长时间线继续折叠。 可见证据卡片 折叠时间线 当前角色背景 系统支持保持辅助",
+          "tags": [
+            "证据",
+            "经历"
+          ]
+        },
+        "maxEnWords": 130,
+        "maxZhHansCharacters": 210,
+        "sourceEvidenceNote": "Timeline section shell and disclosure copy from current static contract.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "sectionKey": "home.timeline",
+        "recordKind": "section",
+        "output": {
+          "en": {
+            "eyebrow": "Selected Evidence",
+            "title": "Clinical proof.",
+            "summary": "Selected proof stays specific and concise.",
+            "disclosureTitle": "Folded timeline detail",
+            "disclosureSummary": "Open timeline detail.",
+            "aside": "Selected proof stays visible; the longer timeline remains folded.",
+            "asideList": [
+              "Visible proof cards",
+              "Folded timeline",
+              "Current role context",
+              "Systems kept secondary"
+            ]
+          },
+          "zhHans": {
+            "eyebrow": "精选证据",
+            "title": "临床证据。",
+            "summary": "精选证据保持具体、简洁。",
+            "disclosureTitle": "折叠时间线细节",
+            "disclosureSummary": "展开时间线细节。",
+            "aside": "精选证据默认可见；较长时间线继续折叠。",
+            "asideList": [
+              "可见证据卡片",
+              "折叠时间线",
+              "当前角色背景",
+              "系统支持保持辅助"
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "clinical_systems_practice",
+          "practical_clinical_systems"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ]
+      },
+      {
+        "stableKey": "home.capability",
+        "status": "archived",
+        "visibility": "hidden",
+        "priority": 60,
+        "sort": 10,
+        "en": {
+          "title": "Detailed signal board.",
+          "summary": "Grouped signals stay folded for detail readers, not homepage scanning.",
+          "body": "Detail Layer Detailed signal board. Grouped signals stay folded for detail readers, not homepage scanning. Detailed capability groups Open grouped signals. Critical Care Current ICU role Intensive-care training Hemodynamic monitoring Escalation readiness Focused on current critical-care growth without overstating scope. Cardiac / Rhythm Rhythm interpretation ECG-aware notes Coronary Care 1 BLS / ACLS training Cardiac signal is documented in practical bedside language. Senior Health Senior-health interest InterRAI-LTCF Falls and pressure injury risk Chronic-disease continuity Presented as supporting context rather than the main identity. Cross-System Canada / China practice Internal medicine lens Mandarin clinical review Care-plan clarity System differences become context for clearer decisions. Communication SBAR-style escalation Patient education Bilingual listening Family updates Communication is treated as a safety tool, not an afterthought. Systems Practice Structured notes Checklist habits Follow-up structure Workflow discipline Technical work supports clinical clarity in a secondary track.",
+          "tags": [
+            "capability",
+            "detail"
+          ]
+        },
+        "zhHans": {
+          "title": "能力要点细分。",
+          "summary": "详细能力保持折叠，供需要细节的读者查看。",
+          "body": "能力细分 能力要点细分。 详细能力保持折叠，供需要细节的读者查看。 详细能力要点 展开分组信号。 重症护理 当前 ICU 岗位 重症护理培训 血流动力学监测 及时上报与升级处理准备 聚焦当前重症护理成长，不夸大执业范围。 心脏 / 心律 心律识别 ECG 相关记录 Coronary Care 1 BLS / ACLS 训练 心脏相关内容以床旁可用的语言记录。 老年健康 老年健康兴趣 InterRAI-LTCF 跌倒与压力性损伤风险 慢性病连续性 作为支持背景呈现，而不是主页主要身份。 跨体系临床实践 中加临床环境 内科视角 普通话沟通与资料审阅 护理计划清晰度 体系差异成为理解照护决策的临床背景。 沟通 SBAR 式及时上报 患者教育 双语倾听 家庭沟通 沟通被视为安全工具，而不是附加环节。 临床系统实践 结构化记录 清单习惯 跟进结构 流程执行一致性 技术工作仅作为辅助，服务于临床清晰度。",
+          "tags": [
+            "能力",
+            "细节"
+          ]
+        },
+        "maxEnWords": 180,
+        "maxZhHansCharacters": 331,
+        "sourceEvidenceNote": "Folded detail layer preserves current content contract.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "sectionKey": "home.capability",
+        "recordKind": "section",
+        "output": {
+          "en": {
+            "eyebrow": "Detail Layer",
+            "title": "Detailed signal board.",
+            "summary": "Grouped signals stay folded for detail readers, not homepage scanning.",
+            "disclosureTitle": "Detailed capability groups",
+            "disclosureSummary": "Open grouped signals.",
+            "groups": [
+              {
+                "title": "Critical Care",
+                "items": [
+                  "Current ICU role",
+                  "Intensive-care training",
+                  "Hemodynamic monitoring",
+                  "Escalation readiness"
+                ],
+                "note": "Focused on current critical-care growth without overstating scope."
+              },
+              {
+                "title": "Cardiac / Rhythm",
+                "items": [
+                  "Rhythm interpretation",
+                  "ECG-aware notes",
+                  "Coronary Care 1",
+                  "BLS / ACLS training"
+                ],
+                "note": "Cardiac signal is documented in practical bedside language."
+              },
+              {
+                "title": "Senior Health",
+                "items": [
+                  "Senior-health interest",
+                  "InterRAI-LTCF",
+                  "Falls and pressure injury risk",
+                  "Chronic-disease continuity"
+                ],
+                "note": "Presented as supporting context rather than the main identity."
+              },
+              {
+                "title": "Cross-System",
+                "items": [
+                  "Canada / China practice",
+                  "Internal medicine lens",
+                  "Mandarin clinical review",
+                  "Care-plan clarity"
+                ],
+                "note": "System differences become context for clearer decisions."
+              },
+              {
+                "title": "Communication",
+                "items": [
+                  "SBAR-style escalation",
+                  "Patient education",
+                  "Bilingual listening",
+                  "Family updates"
+                ],
+                "note": "Communication is treated as a safety tool, not an afterthought."
+              },
+              {
+                "title": "Systems Practice",
+                "items": [
+                  "Structured notes",
+                  "Checklist habits",
+                  "Follow-up structure",
+                  "Workflow discipline"
+                ],
+                "note": "Technical work supports clinical clarity in a secondary track."
+              }
+            ]
+          },
+          "zhHans": {
+            "eyebrow": "能力细分",
+            "title": "能力要点细分。",
+            "summary": "详细能力保持折叠，供需要细节的读者查看。",
+            "disclosureTitle": "详细能力要点",
+            "disclosureSummary": "展开分组信号。",
+            "groups": [
+              {
+                "title": "重症护理",
+                "items": [
+                  "当前 ICU 岗位",
+                  "重症护理培训",
+                  "血流动力学监测",
+                  "及时上报与升级处理准备"
+                ],
+                "note": "聚焦当前重症护理成长，不夸大执业范围。"
+              },
+              {
+                "title": "心脏 / 心律",
+                "items": [
+                  "心律识别",
+                  "ECG 相关记录",
+                  "Coronary Care 1",
+                  "BLS / ACLS 训练"
+                ],
+                "note": "心脏相关内容以床旁可用的语言记录。"
+              },
+              {
+                "title": "老年健康",
+                "items": [
+                  "老年健康兴趣",
+                  "InterRAI-LTCF",
+                  "跌倒与压力性损伤风险",
+                  "慢性病连续性"
+                ],
+                "note": "作为支持背景呈现，而不是主页主要身份。"
+              },
+              {
+                "title": "跨体系临床实践",
+                "items": [
+                  "中加临床环境",
+                  "内科视角",
+                  "普通话沟通与资料审阅",
+                  "护理计划清晰度"
+                ],
+                "note": "体系差异成为理解照护决策的临床背景。"
+              },
+              {
+                "title": "沟通",
+                "items": [
+                  "SBAR 式及时上报",
+                  "患者教育",
+                  "双语倾听",
+                  "家庭沟通"
+                ],
+                "note": "沟通被视为安全工具，而不是附加环节。"
+              },
+              {
+                "title": "临床系统实践",
+                "items": [
+                  "结构化记录",
+                  "清单习惯",
+                  "跟进结构",
+                  "流程执行一致性"
+                ],
+                "note": "技术工作仅作为辅助，服务于临床清晰度。"
+              }
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "clinical_systems_practice",
+          "practical_clinical_systems",
+          "workflow_discipline",
+          "documentation_clarity",
+          "senior_health_continuity",
+          "rapid_escalation",
+          "rhythm_interpretation",
+          "hemodynamic_monitoring",
+          "critical_care_judgment",
+          "cross_system_practice"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ]
+      },
+      {
+        "stableKey": "home.education",
+        "status": "archived",
+        "visibility": "hidden",
+        "priority": 70,
+        "sort": 10,
+        "en": {
+          "title": "Credentials, without overstatement.",
+          "summary": "Registration, education, and training stay folded.",
+          "body": "Education & Registration Credentials, without overstatement. Registration, education, and training stay folded. Education & professional development Open credentials and training. Registered Nurse Licensed with NSCN; no private identifier is published. Bachelor of Science in Nursing Toronto Metropolitan University collaborative nursing program, minor in Psychology, graduated with Distinction. Critical Care Education Centennial College Intensive Care Training Program, Coronary Care 1, and related ICU preparation. Additional Learning Conestoga College NURS8963 Transition to Nursing Practice; CIHI InterRAI-LTCF Essentials 1 & 2. Psychology Minor Psychology study supports patient education, family communication, and steady cross-cultural listening.",
+          "tags": [
+            "education",
+            "training"
+          ]
+        },
+        "zhHans": {
+          "title": "专业资质与当前进修。",
+          "summary": "注册、教育与培训保持折叠。",
+          "body": "教育与注册 专业资质与当前进修。 注册、教育与培训保持折叠。 教育与专业发展 展开资质与培训。 注册护士 持有 NSCN 执业注册；不公开私人识别信息。 护理学理学士 Toronto Metropolitan University 护理学理学士（协作护理项目），辅修心理学，以 Distinction 毕业。 重症护理教育 Centennial College 重症护理培训项目、Coronary Care 1 及相关 ICU 准备。 额外学习 Conestoga College NURS8963 Transition to Nursing Practice；CIHI InterRAI-LTCF Essentials 1 与 2。 心理学辅修 心理学学习支持患者教育、家庭沟通与稳定的跨文化倾听。",
+          "tags": [
+            "教育",
+            "培训"
+          ]
+        },
+        "maxEnWords": 120,
+        "maxZhHansCharacters": 180,
+        "sourceEvidenceNote": "Public-safe education and training summary.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "sectionKey": "home.education",
+        "recordKind": "section",
+        "output": {
+          "en": {
+            "eyebrow": "Education & Registration",
+            "title": "Credentials, without overstatement.",
+            "summary": "Registration, education, and training stay folded.",
+            "disclosureTitle": "Education & professional development",
+            "disclosureSummary": "Open credentials and training.",
+            "items": [
+              [
+                "Registered Nurse",
+                "Licensed with NSCN; no private identifier is published."
+              ],
+              [
+                "Bachelor of Science in Nursing",
+                "Toronto Metropolitan University collaborative nursing program, minor in Psychology, graduated with Distinction."
+              ],
+              [
+                "Critical Care Education",
+                "Centennial College Intensive Care Training Program, Coronary Care 1, and related ICU preparation."
+              ],
+              [
+                "Additional Learning",
+                "Conestoga College NURS8963 Transition to Nursing Practice; CIHI InterRAI-LTCF Essentials 1 & 2."
+              ],
+              [
+                "Psychology Minor",
+                "Psychology study supports patient education, family communication, and steady cross-cultural listening."
+              ]
+            ]
+          },
+          "zhHans": {
+            "eyebrow": "教育与注册",
+            "title": "专业资质与当前进修。",
+            "summary": "注册、教育与培训保持折叠。",
+            "disclosureTitle": "教育与专业发展",
+            "disclosureSummary": "展开资质与培训。",
+            "items": [
+              [
+                "注册护士",
+                "持有 NSCN 执业注册；不公开私人识别信息。"
+              ],
+              [
+                "护理学理学士",
+                "Toronto Metropolitan University 护理学理学士（协作护理项目），辅修心理学，以 Distinction 毕业。"
+              ],
+              [
+                "重症护理教育",
+                "Centennial College 重症护理培训项目、Coronary Care 1 及相关 ICU 准备。"
+              ],
+              [
+                "额外学习",
+                "Conestoga College NURS8963 Transition to Nursing Practice；CIHI InterRAI-LTCF Essentials 1 与 2。"
+              ],
+              [
+                "心理学辅修",
+                "心理学学习支持患者教育、家庭沟通与稳定的跨文化倾听。"
+              ]
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "critical_care_judgment"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ]
+      },
+      {
+        "stableKey": "home.language",
+        "status": "archived",
+        "visibility": "hidden",
+        "priority": 80,
+        "sort": 10,
+        "en": {
+          "title": "Clinical communication across languages and systems.",
+          "summary": "Language context stays folded for communication detail.",
+          "body": "Language & Cross-Cultural Practice Clinical communication across languages and systems. Language context stays folded for communication detail. Language practice Open language context. English Professional clinical working proficiency. Mandarin Mother tongue, including clinical material review context. French A2 active learning. Spanish A1 leisure learning. Cross-Cultural Practice Canadian and Chinese clinical environments support flexible communication, dialect-aware elderly patient care, and awareness of system differences.",
+          "tags": [
+            "language",
+            "communication"
+          ]
+        },
+        "zhHans": {
+          "title": "跨语言与跨体系的临床沟通。",
+          "summary": "语言背景保持折叠，服务临床沟通。",
+          "body": "语言与跨文化实践 跨语言与跨体系的临床沟通。 语言背景保持折叠，服务临床沟通。 语言实践 展开语言背景。 英语 专业临床工作熟练度。 普通话 母语，可支持临床沟通与临床资料阅读。 法语 A2 主动学习。 西班牙语 A1 休闲学习。 跨文化实践 中加临床环境经验，支持灵活沟通、面向老年患者的方言敏感照护，以及对体系差异的理解。",
+          "tags": [
+            "语言",
+            "沟通"
+          ]
+        },
+        "maxEnWords": 110,
+        "maxZhHansCharacters": 180,
+        "sourceEvidenceNote": "Public-safe language profile and cross-system communication context.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "sectionKey": "home.language",
+        "recordKind": "section",
+        "output": {
+          "en": {
+            "eyebrow": "Language & Cross-Cultural Practice",
+            "title": "Clinical communication across languages and systems.",
+            "summary": "Language context stays folded for communication detail.",
+            "disclosureTitle": "Language practice",
+            "disclosureSummary": "Open language context.",
+            "items": [
+              [
+                "English",
+                "Professional clinical working proficiency."
+              ],
+              [
+                "Mandarin",
+                "Mother tongue, including clinical material review context."
+              ],
+              [
+                "French",
+                "A2 active learning."
+              ],
+              [
+                "Spanish",
+                "A1 leisure learning."
+              ],
+              [
+                "Cross-Cultural Practice",
+                "Canadian and Chinese clinical environments support flexible communication, dialect-aware elderly patient care, and awareness of system differences."
+              ]
+            ]
+          },
+          "zhHans": {
+            "eyebrow": "语言与跨文化实践",
+            "title": "跨语言与跨体系的临床沟通。",
+            "summary": "语言背景保持折叠，服务临床沟通。",
+            "disclosureTitle": "语言实践",
+            "disclosureSummary": "展开语言背景。",
+            "items": [
+              [
+                "英语",
+                "专业临床工作熟练度。"
+              ],
+              [
+                "普通话",
+                "母语，可支持临床沟通与临床资料阅读。"
+              ],
+              [
+                "法语",
+                "A2 主动学习。"
+              ],
+              [
+                "西班牙语",
+                "A1 休闲学习。"
+              ],
+              [
+                "跨文化实践",
+                "中加临床环境经验，支持灵活沟通、面向老年患者的方言敏感照护，以及对体系差异的理解。"
+              ]
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "clinical_systems_practice",
+          "practical_clinical_systems",
+          "senior_health_continuity",
+          "cross_system_practice"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ]
+      },
+      {
+        "stableKey": "home.systems",
+        "status": "archived",
+        "visibility": "hidden",
+        "priority": 90,
+        "sort": 10,
+        "en": {
+          "title": "Systems stay secondary to nursing.",
+          "summary": "Clinical workflow and documentation support stay in a folded lane.",
+          "body": "Clinical Workflow Support Systems stay secondary to nursing. Clinical workflow and documentation support stay in a folded lane. Clinical systems detail Open secondary systems links. Secondary support track Small tools and checklists matter only when they support clinical communication, documentation, or follow-through. professional-direction.html Professional Direction A concise note on current RN direction. systems-practice.html Clinical Systems Practice Small tools and habits for documentation clarity.",
+          "tags": [
+            "systems",
+            "secondary"
+          ]
+        },
+        "zhHans": {
+          "title": "系统实践服务于护理。",
+          "summary": "临床流程与文档支持保持折叠，不成为主身份。",
+          "body": "临床系统实践 系统实践服务于护理。 临床流程与文档支持保持折叠，不成为主身份。 临床流程系统细节 展开辅助系统链接。 临床系统实践支持 小型工具与清单只有在支持临床沟通、文档清晰度或后续跟进时才有意义。 professional-direction.html 职业方向说明 关于当前 RN 方向的简短说明。 systems-practice.html 临床系统实践 小型工具与习惯，用于支持文档清晰度。",
+          "tags": [
+            "系统",
+            "辅助"
+          ]
+        },
+        "maxEnWords": 130,
+        "maxZhHansCharacters": 190,
+        "sourceEvidenceNote": "Secondary systems track remains subordinate to nursing identity.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "sectionKey": "home.systems",
+        "recordKind": "section",
+        "output": {
+          "en": {
+            "eyebrow": "Clinical Workflow Support",
+            "title": "Systems stay secondary to nursing.",
+            "summary": "Clinical workflow and documentation support stay in a folded lane.",
+            "disclosureTitle": "Clinical systems detail",
+            "disclosureSummary": "Open secondary systems links.",
+            "featureTitle": "Secondary support track",
+            "feature": "Small tools and checklists matter only when they support clinical communication, documentation, or follow-through.",
+            "links": [
+              [
+                "professional-direction.html",
+                "Professional Direction",
+                "A concise note on current RN direction."
+              ],
+              [
+                "systems-practice.html",
+                "Clinical Systems Practice",
+                "Small tools and habits for documentation clarity."
+              ]
+            ]
+          },
+          "zhHans": {
+            "eyebrow": "临床系统实践",
+            "title": "系统实践服务于护理。",
+            "summary": "临床流程与文档支持保持折叠，不成为主身份。",
+            "disclosureTitle": "临床流程系统细节",
+            "disclosureSummary": "展开辅助系统链接。",
+            "featureTitle": "临床系统实践支持",
+            "feature": "小型工具与清单只有在支持临床沟通、文档清晰度或后续跟进时才有意义。",
+            "links": [
+              [
+                "professional-direction.html",
+                "职业方向说明",
+                "关于当前 RN 方向的简短说明。"
+              ],
+              [
+                "systems-practice.html",
+                "临床系统实践",
+                "小型工具与习惯，用于支持文档清晰度。"
+              ]
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "professional_direction",
+          "clinical_systems_practice",
+          "practical_clinical_systems",
+          "workflow_discipline",
+          "documentation_clarity"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ]
+      }
+    ],
+    "currentFocus": [
+      {
+        "stableKey": "home.focus.current-role",
+        "status": "approved",
+        "visibility": "visible",
+        "priority": 30,
+        "sort": 10,
+        "en": {
+          "title": "Usage, understood at a glance.",
+          "summary": "Refining how usage, limits, and recent tasks are presented across the desktop ap",
+          "body": "Refining how usage, limits, and recent tasks are presented across the desktop app and menu bar.",
+          "tags": [
+            "homepage"
+          ]
+        },
+        "zhHans": {
+          "title": "让用量信息，一眼就懂。",
+          "summary": "打磨桌面应用与菜单栏中的用量、额度和近期任务展示，让关键信息更容易读懂。",
+          "body": "打磨桌面应用与菜单栏中的用量、额度和近期任务展示，让关键信息更容易读懂。",
+          "tags": [
+            "首页"
+          ]
+        },
+        "maxEnWords": 32,
+        "maxZhHansCharacters": 65,
+        "sourceEvidenceNote": "Creative focus card from live homepage (2026-09-24).",
+        "lastVerifiedDate": "2026-09-24",
+        "publish": true,
+        "focusType": "current_role",
+        "homepageSection": "home.focus",
+        "contentPath": "sections.focus.items[0]",
+        "output": {
+          "en": {
+            "title": "Usage, understood at a glance.",
+            "text": "Refining how usage, limits, and recent tasks are presented across the desktop app and menu bar."
+          },
+          "zhHans": {
+            "title": "让用量信息，一眼就懂。",
+            "text": "打磨桌面应用与菜单栏中的用量、额度和近期任务展示，让关键信息更容易读懂。"
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "current_focus",
+          "professional_direction",
+          "critical_care_judgment"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ],
+        "focusKey": "home.focus.current-role",
+        "ongoing": false
+      },
+      {
+        "stableKey": "home.focus.clinical-focus",
+        "status": "approved",
+        "visibility": "visible",
+        "priority": 30,
+        "sort": 20,
+        "en": {
+          "title": "More context. Less feed hopping.",
+          "summary": "Connecting concise email discovery with source-grounded bilingual research expla",
+          "body": "Connecting concise email discovery with source-grounded bilingual research explanations on the web.",
+          "tags": [
+            "homepage"
+          ]
+        },
+        "zhHans": {
+          "title": "多一点语境，少切几个信息流。",
+          "summary": "将简洁邮件发现与来源可追溯的双语网页研究解释连接起来。",
+          "body": "将简洁邮件发现与来源可追溯的双语网页研究解释连接起来。",
+          "tags": [
+            "首页"
+          ]
+        },
+        "maxEnWords": 32,
+        "maxZhHansCharacters": 65,
+        "sourceEvidenceNote": "Creative focus card from live homepage (2026-09-24).",
+        "lastVerifiedDate": "2026-09-24",
+        "publish": true,
+        "focusType": "clinical_focus",
+        "homepageSection": "home.focus",
+        "contentPath": "sections.focus.items[1]",
+        "output": {
+          "en": {
+            "title": "More context. Less feed hopping.",
+            "text": "Connecting concise email discovery with source-grounded bilingual research explanations on the web."
+          },
+          "zhHans": {
+            "title": "多一点语境，少切几个信息流。",
+            "text": "将简洁邮件发现与来源可追溯的双语网页研究解释连接起来。"
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "current_focus",
+          "professional_direction",
+          "critical_care_judgment"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ],
+        "focusKey": "home.focus.clinical-focus",
+        "ongoing": false
+      },
+      {
+        "stableKey": "home.focus.professional-direction",
+        "status": "approved",
+        "visibility": "visible",
+        "priority": 30,
+        "sort": 30,
+        "en": {
+          "title": "Building UMA + QDigest",
+          "summary": "UMA is the lead product surface; QDigest is the secondary bilingual research rea",
+          "body": "UMA is the lead product surface; QDigest is the secondary bilingual research reading experiment.",
+          "tags": [
+            "homepage"
+          ]
+        },
+        "zhHans": {
+          "title": "构建 UMA + QDigest",
+          "summary": "UMA 是主要产品界面；QDigest 是次要的双语研究阅读实验。",
+          "body": "UMA 是主要产品界面；QDigest 是次要的双语研究阅读实验。",
+          "tags": [
+            "首页"
+          ]
+        },
+        "maxEnWords": 32,
+        "maxZhHansCharacters": 65,
+        "sourceEvidenceNote": "Creative focus card from live homepage (2026-09-24).",
+        "lastVerifiedDate": "2026-09-24",
+        "publish": true,
+        "focusType": "professional_direction",
+        "homepageSection": "home.focus",
+        "contentPath": "sections.focus.items[2]",
+        "output": {
+          "en": {
+            "title": "Building UMA + QDigest",
+            "text": "UMA is the lead product surface; QDigest is the secondary bilingual research reading experiment."
+          },
+          "zhHans": {
+            "title": "构建 UMA + QDigest",
+            "text": "UMA 是主要产品界面；QDigest 是次要的双语研究阅读实验。"
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "current_focus",
+          "professional_direction",
+          "critical_care_judgment"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ],
+        "focusKey": "home.focus.professional-direction",
+        "ongoing": false
+      }
+    ],
+    "evidenceTimeline": [
+      {
+        "stableKey": "home.timeline.evidence-icu",
+        "status": "archived",
+        "visibility": "hidden",
+        "priority": 50,
+        "sort": 10,
+        "en": {
+          "title": "Valley Regional Hospital - Intensive Care Unit",
+          "summary": "Current ICU role context.",
+          "body": "Current ICU role Valley Regional Hospital - Intensive Care Unit NSCN licensure and a full-time ICU role in Kentville, Nova Scotia are kept brief as current context, not a full role description. Current ICU NSCN Kentville",
+          "tags": [
+            "Current ICU",
+            "NSCN",
+            "Kentville"
+          ]
+        },
+        "zhHans": {
+          "title": "Valley Regional Hospital - Intensive Care Unit",
+          "summary": "当前 ICU 岗位背景。",
+          "body": "当前 ICU 岗位 Valley Regional Hospital - Intensive Care Unit 持有 NSCN 执业注册，并在新斯科舍省 Kentville 的 Valley Regional Hospital ICU 担任全职岗位；此处只作为当前背景简要呈现。 当前 ICU NSCN Kentville",
+          "tags": [
+            "当前 ICU",
+            "NSCN",
+            "Kentville"
+          ]
+        },
+        "maxEnWords": 55,
+        "maxZhHansCharacters": 90,
+        "sourceEvidenceNote": "Owner-approved current ICU role context used on homepage.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "evidenceType": "selected_evidence",
+        "organization": "Valley Regional Hospital",
+        "roleContext": "Registered Nurse",
+        "clinicalDomain": [
+          "ICU"
+        ],
+        "contentPath": "sections.timeline.evidence[0]",
+        "output": {
+          "en": {
+            "kicker": "Current ICU role",
+            "title": "Valley Regional Hospital - Intensive Care Unit",
+            "text": "NSCN licensure and a full-time ICU role in Kentville, Nova Scotia are kept brief as current context, not a full role description.",
+            "signals": [
+              "Current ICU",
+              "NSCN",
+              "Kentville"
+            ]
+          },
+          "zhHans": {
+            "kicker": "当前 ICU 岗位",
+            "title": "Valley Regional Hospital - Intensive Care Unit",
+            "text": "持有 NSCN 执业注册，并在新斯科舍省 Kentville 的 Valley Regional Hospital ICU 担任全职岗位；此处只作为当前背景简要呈现。",
+            "signals": [
+              "当前 ICU",
+              "NSCN",
+              "Kentville"
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "critical_care_judgment"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ],
+        "homepageSection": "home.timeline"
+      },
+      {
+        "stableKey": "home.timeline.evidence-senior-health",
+        "status": "archived",
+        "visibility": "hidden",
+        "priority": 50,
+        "sort": 20,
+        "en": {
+          "title": "North York General Hospital - Senior Health Centre",
+          "summary": "Selected senior-health continuity evidence.",
+          "body": "Senior-health context North York General Hospital - Senior Health Centre Older-adult care supports the secondary senior-health thread through ADLs, falls risk, and family communication. Older adults ADLs Falls Family clarity",
+          "tags": [
+            "older adults",
+            "ADLs",
+            "falls risk",
+            "family clarity"
+          ]
+        },
+        "zhHans": {
+          "title": "North York General Hospital - Senior Health Centre",
+          "summary": "精选老年健康连续照护证据。",
+          "body": "老年健康背景 North York General Hospital - Senior Health Centre 老年照护支持作为次要证据，覆盖 ADL、跌倒风险与家庭沟通。 老年照护 ADL 跌倒预防 家庭沟通",
+          "tags": [
+            "老年照护",
+            "ADL",
+            "跌倒预防",
+            "家庭沟通"
+          ]
+        },
+        "maxEnWords": 49,
+        "maxZhHansCharacters": 90,
+        "sourceEvidenceNote": "Public clinical role context already used on homepage.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "evidenceType": "selected_evidence",
+        "organization": "North York General Hospital",
+        "roleContext": "Senior Health Centre",
+        "clinicalDomain": [
+          "senior_health"
+        ],
+        "contentPath": "sections.timeline.evidence[2]",
+        "output": {
+          "en": {
+            "kicker": "Senior-health context",
+            "title": "North York General Hospital - Senior Health Centre",
+            "text": "Older-adult care supports the secondary senior-health thread through ADLs, falls risk, and family communication.",
+            "signals": [
+              "Older adults",
+              "ADLs",
+              "Falls",
+              "Family clarity"
+            ]
+          },
+          "zhHans": {
+            "kicker": "老年健康背景",
+            "title": "North York General Hospital - Senior Health Centre",
+            "text": "老年照护支持作为次要证据，覆盖 ADL、跌倒风险与家庭沟通。",
+            "signals": [
+              "老年照护",
+              "ADL",
+              "跌倒预防",
+              "家庭沟通"
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "senior_health_continuity"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ],
+        "homepageSection": "home.timeline"
+      },
+      {
+        "stableKey": "home.timeline.evidence-china-internal-medicine",
+        "status": "archived",
+        "visibility": "hidden",
+        "priority": 50,
+        "sort": 30,
+        "en": {
+          "title": "Youyu County Hospital of Chinese Medicine - 3F Internal Medicine",
+          "summary": "Selected cross-system clinical practice evidence.",
+          "body": "Cross-system clinical practice Youyu County Hospital of Chinese Medicine - 3F Internal Medicine Supervised internal-medicine practice in China supports Mandarin review, patient education, and follow-up clarity. Internal medicine Mandarin review Education Follow-up",
+          "tags": [
+            "internal medicine",
+            "Mandarin review",
+            "patient education",
+            "follow-up"
+          ]
+        },
+        "zhHans": {
+          "title": "右玉县中医院 - 3F 内科",
+          "summary": "精选跨体系临床实践证据。",
+          "body": "中国内科受督导实践 右玉县中医院 - 3F 内科 受督导内科实践支持普通话沟通、资料审阅、患者教育与随访清晰度。 内科 普通话审阅 患者教育 随访",
+          "tags": [
+            "内科",
+            "普通话审阅",
+            "患者教育",
+            "随访"
+          ]
+        },
+        "maxEnWords": 51,
+        "maxZhHansCharacters": 98,
+        "sourceEvidenceNote": "Public supervised practice context already used on homepage.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "evidenceType": "selected_evidence",
+        "organization": "Youyu County Hospital of Chinese Medicine",
+        "roleContext": "Supervised practice",
+        "clinicalDomain": [
+          "internal_medicine",
+          "cross_system"
+        ],
+        "contentPath": "sections.timeline.evidence[3]",
+        "output": {
+          "en": {
+            "kicker": "Cross-system clinical practice",
+            "title": "Youyu County Hospital of Chinese Medicine - 3F Internal Medicine",
+            "text": "Supervised internal-medicine practice in China supports Mandarin review, patient education, and follow-up clarity.",
+            "signals": [
+              "Internal medicine",
+              "Mandarin review",
+              "Education",
+              "Follow-up"
+            ]
+          },
+          "zhHans": {
+            "kicker": "中国内科受督导实践",
+            "title": "右玉县中医院 - 3F 内科",
+            "text": "受督导内科实践支持普通话沟通、资料审阅、患者教育与随访清晰度。",
+            "signals": [
+              "内科",
+              "普通话审阅",
+              "患者教育",
+              "随访"
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "cross_system_practice"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ],
+        "homepageSection": "home.timeline"
+      },
+      {
+        "stableKey": "home.timeline.evidence-icu-rn",
+        "status": "archived",
+        "visibility": "hidden",
+        "priority": 50,
+        "sort": 40,
+        "en": {
+          "title": "Markham Stouffville Hospital - 3WG ICU",
+          "summary": "Selected ICU RN practice evidence.",
+          "body": "ICU RN practice Markham Stouffville Hospital - 3WG ICU ICU practice at Markham Stouffville supports the critical-care thread through monitoring, reassessment, documentation, and escalation context. ICU Monitoring Reassessment Escalation",
+          "tags": [
+            "ICU",
+            "monitoring",
+            "reassessment",
+            "escalation"
+          ]
+        },
+        "zhHans": {
+          "title": "Markham Stouffville Hospital - 3WG ICU",
+          "summary": "精选 ICU 注册护士实践证据。",
+          "body": "ICU 注册护士实践 Markham Stouffville Hospital - 3WG ICU Markham Stouffville ICU 实践支持重症护理主线，包括监测、再评估、记录与及时上报背景。 ICU 监测 再评估 及时上报",
+          "tags": [
+            "ICU",
+            "监测",
+            "再评估",
+            "上报"
+          ]
+        },
+        "maxEnWords": 48,
+        "maxZhHansCharacters": 90,
+        "sourceEvidenceNote": "Public ICU RN practice context already used on homepage.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "evidenceType": "selected_evidence",
+        "organization": "Markham Stouffville Hospital",
+        "roleContext": "ICU RN practice",
+        "clinicalDomain": [
+          "ICU",
+          "critical_care"
+        ],
+        "contentPath": "sections.timeline.evidence[1]",
+        "output": {
+          "en": {
+            "kicker": "ICU RN practice",
+            "title": "Markham Stouffville Hospital - 3WG ICU",
+            "text": "ICU practice at Markham Stouffville supports the critical-care thread through monitoring, reassessment, documentation, and escalation context.",
+            "signals": [
+              "ICU",
+              "Monitoring",
+              "Reassessment",
+              "Escalation"
+            ]
+          },
+          "zhHans": {
+            "kicker": "ICU 注册护士实践",
+            "title": "Markham Stouffville Hospital - 3WG ICU",
+            "text": "Markham Stouffville ICU 实践支持重症护理主线，包括监测、再评估、记录与及时上报背景。",
+            "signals": [
+              "ICU",
+              "监测",
+              "再评估",
+              "及时上报"
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "documentation_clarity",
+          "rapid_escalation",
+          "critical_care_judgment"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ],
+        "homepageSection": "home.timeline"
+      },
+      {
+        "stableKey": "home.timeline.full-icu-rn",
+        "status": "archived",
+        "visibility": "hidden",
+        "priority": 60,
+        "sort": 10,
+        "en": {
+          "title": "Markham Stouffville Hospital - 3WG Intensive Care Unit",
+          "summary": "Folded ICU RN role detail.",
+          "body": "Registered Nurse Markham Stouffville Hospital - 3WG Intensive Care Unit Critical care monitoring, reassessment, rhythm-aware documentation, escalation, and unit coordination. ICU Monitoring Escalation",
+          "tags": [
+            "ICU",
+            "monitoring",
+            "escalation"
+          ]
+        },
+        "zhHans": {
+          "title": "Markham Stouffville Hospital - 3WG Intensive Care Unit",
+          "summary": "折叠 ICU 注册护士角色细节。",
+          "body": "注册护士 Markham Stouffville Hospital - 3WG Intensive Care Unit 重症监测、再评估、心律相关记录、及时上报与病区协作。 ICU 监测 及时上报",
+          "tags": [
+            "ICU",
+            "监测",
+            "及时上报"
+          ]
+        },
+        "maxEnWords": 42,
+        "maxZhHansCharacters": 72,
+        "sourceEvidenceNote": "Folded role detail from public-safe timeline.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "evidenceType": "full_timeline",
+        "organization": "Markham Stouffville Hospital",
+        "roleContext": "Registered Nurse",
+        "clinicalDomain": [
+          "ICU"
+        ],
+        "contentPath": "sections.timeline.items[0]",
+        "output": {
+          "en": {
+            "kicker": "Registered Nurse",
+            "title": "Markham Stouffville Hospital - 3WG Intensive Care Unit",
+            "text": "Critical care monitoring, reassessment, rhythm-aware documentation, escalation, and unit coordination.",
+            "signals": [
+              "ICU",
+              "Monitoring",
+              "Escalation"
+            ]
+          },
+          "zhHans": {
+            "kicker": "注册护士",
+            "title": "Markham Stouffville Hospital - 3WG Intensive Care Unit",
+            "text": "重症监测、再评估、心律相关记录、及时上报与病区协作。",
+            "signals": [
+              "ICU",
+              "监测",
+              "及时上报"
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "documentation_clarity",
+          "rapid_escalation",
+          "rhythm_interpretation",
+          "critical_care_judgment"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ],
+        "homepageSection": "home.timeline"
+      },
+      {
+        "stableKey": "home.timeline.full-china-practice",
+        "status": "archived",
+        "visibility": "hidden",
+        "priority": 60,
+        "sort": 20,
+        "en": {
+          "title": "Youyu County Hospital of Chinese Medicine - 3F Internal Medicine",
+          "summary": "Folded supervised practice detail.",
+          "body": "Supervised Practice Youyu County Hospital of Chinese Medicine - 3F Internal Medicine Internal medicine practice in China with Mandarin documentation review, patient education, and follow-up clarity. Internal medicine Mandarin review Education",
+          "tags": [
+            "internal medicine",
+            "Mandarin review",
+            "education"
+          ]
+        },
+        "zhHans": {
+          "title": "右玉县中医院 - 3F 内科",
+          "summary": "折叠受督导实践细节。",
+          "body": "督导实践 右玉县中医院 - 3F 内科 中国内科受督导实践，包括普通话沟通、资料审阅、患者教育与随访沟通清晰度。 内科 普通话审阅 患者教育",
+          "tags": [
+            "内科",
+            "普通话审阅",
+            "患者教育"
+          ]
+        },
+        "maxEnWords": 50,
+        "maxZhHansCharacters": 95,
+        "sourceEvidenceNote": "Folded role detail from public-safe timeline.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "evidenceType": "full_timeline",
+        "organization": "Youyu County Hospital of Chinese Medicine",
+        "roleContext": "Supervised practice",
+        "clinicalDomain": [
+          "internal_medicine"
+        ],
+        "contentPath": "sections.timeline.items[1]",
+        "output": {
+          "en": {
+            "kicker": "Supervised Practice",
+            "title": "Youyu County Hospital of Chinese Medicine - 3F Internal Medicine",
+            "text": "Internal medicine practice in China with Mandarin documentation review, patient education, and follow-up clarity.",
+            "signals": [
+              "Internal medicine",
+              "Mandarin review",
+              "Education"
+            ]
+          },
+          "zhHans": {
+            "kicker": "督导实践",
+            "title": "右玉县中医院 - 3F 内科",
+            "text": "中国内科受督导实践，包括普通话沟通、资料审阅、患者教育与随访沟通清晰度。",
+            "signals": [
+              "内科",
+              "普通话审阅",
+              "患者教育"
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "documentation_clarity"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ],
+        "homepageSection": "home.timeline"
+      },
+      {
+        "stableKey": "home.timeline.full-extern",
+        "status": "archived",
+        "visibility": "hidden",
+        "priority": 60,
+        "sort": 30,
+        "en": {
+          "title": "Markham Stouffville Hospital - Surgical / Short Stay",
+          "summary": "Folded clinical extern role detail.",
+          "body": "Clinical Extern Markham Stouffville Hospital - Surgical / Short Stay Perioperative and short-stay support across observation, communication, and unit flow. Observation Unit flow Handoff",
+          "tags": [
+            "observation",
+            "unit flow",
+            "handoff"
+          ]
+        },
+        "zhHans": {
+          "title": "Markham Stouffville Hospital - Surgical / Short Stay",
+          "summary": "折叠临床助理实习细节。",
+          "body": "临床助理实习 Markham Stouffville Hospital - Surgical / Short Stay 围手术期与短住院支持，包括观察、沟通、交接与病区流转。 观察 交接 病区流转",
+          "tags": [
+            "观察",
+            "交接",
+            "病区流转"
+          ]
+        },
+        "maxEnWords": 42,
+        "maxZhHansCharacters": 77,
+        "sourceEvidenceNote": "Folded role detail from public-safe timeline.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "evidenceType": "full_timeline",
+        "organization": "Markham Stouffville Hospital",
+        "roleContext": "Clinical Extern",
+        "clinicalDomain": [
+          "acute_care"
+        ],
+        "contentPath": "sections.timeline.items[2]",
+        "output": {
+          "en": {
+            "kicker": "Clinical Extern",
+            "title": "Markham Stouffville Hospital - Surgical / Short Stay",
+            "text": "Perioperative and short-stay support across observation, communication, and unit flow.",
+            "signals": [
+              "Observation",
+              "Unit flow",
+              "Handoff"
+            ]
+          },
+          "zhHans": {
+            "kicker": "临床助理实习",
+            "title": "Markham Stouffville Hospital - Surgical / Short Stay",
+            "text": "围手术期与短住院支持，包括观察、沟通、交接与病区流转。",
+            "signals": [
+              "观察",
+              "交接",
+              "病区流转"
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "clinical_extern",
+          "handoff_clarity"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ],
+        "homepageSection": "home.timeline"
+      },
+      {
+        "stableKey": "home.timeline.full-senior-health",
+        "status": "archived",
+        "visibility": "hidden",
+        "priority": 60,
+        "sort": 40,
+        "en": {
+          "title": "North York General Hospital - Senior Health Centre",
+          "summary": "Folded senior-health role detail.",
+          "body": "Senior Health North York General Hospital - Senior Health Centre Older-adult support across ADLs, dementia needs, fall prevention, pressure injury awareness, and family communication. Dementia Falls Family communication",
+          "tags": [
+            "dementia",
+            "falls",
+            "family communication"
+          ]
+        },
+        "zhHans": {
+          "title": "North York General Hospital - Senior Health Centre",
+          "summary": "折叠老年健康角色细节。",
+          "body": "老年健康 North York General Hospital - Senior Health Centre 老年照护支持，包括 ADL、失智相关需求、跌倒预防、压力性损伤意识与家庭沟通。 失智 跌倒 家庭沟通",
+          "tags": [
+            "失智",
+            "跌倒",
+            "家庭沟通"
+          ]
+        },
+        "maxEnWords": 47,
+        "maxZhHansCharacters": 82,
+        "sourceEvidenceNote": "Folded role detail from public-safe timeline.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "evidenceType": "full_timeline",
+        "organization": "North York General Hospital",
+        "roleContext": "Senior Health Centre",
+        "clinicalDomain": [
+          "senior_health"
+        ],
+        "contentPath": "sections.timeline.items[3]",
+        "output": {
+          "en": {
+            "kicker": "Senior Health",
+            "title": "North York General Hospital - Senior Health Centre",
+            "text": "Older-adult support across ADLs, dementia needs, fall prevention, pressure injury awareness, and family communication.",
+            "signals": [
+              "Dementia",
+              "Falls",
+              "Family communication"
+            ]
+          },
+          "zhHans": {
+            "kicker": "老年健康",
+            "title": "North York General Hospital - Senior Health Centre",
+            "text": "老年照护支持，包括 ADL、失智相关需求、跌倒预防、压力性损伤意识与家庭沟通。",
+            "signals": [
+              "失智",
+              "跌倒",
+              "家庭沟通"
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "senior_health_continuity"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ],
+        "homepageSection": "home.timeline"
+      },
+      {
+        "stableKey": "home.timeline.full-icu-placement",
+        "status": "archived",
+        "visibility": "hidden",
+        "priority": 60,
+        "sort": 50,
+        "en": {
+          "title": "Humber River Hospital - 6E Intensive Care Unit",
+          "summary": "Folded ICU placement detail.",
+          "body": "ICU Placement Humber River Hospital - 6E Intensive Care Unit Placement exposure to ventilated patients, hemodynamic observation, neurological assessment, and documentation. Ventilation exposure Neuro checks Charting",
+          "tags": [
+            "ventilation exposure",
+            "neuro checks",
+            "charting"
+          ]
+        },
+        "zhHans": {
+          "title": "Humber River Hospital - 6E Intensive Care Unit",
+          "summary": "折叠 ICU 实习细节。",
+          "body": "ICU 实习 Humber River Hospital - 6E Intensive Care Unit ICU 实习阶段接触机械通气患者、血流动力学观察、神经系统观察与记录。 机械通气相关接触 神经观察 记录",
+          "tags": [
+            "机械通气相关接触",
+            "神经观察",
+            "记录"
+          ]
+        },
+        "maxEnWords": 45,
+        "maxZhHansCharacters": 84,
+        "sourceEvidenceNote": "Folded placement detail from public-safe timeline.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "evidenceType": "full_timeline",
+        "organization": "Humber River Hospital",
+        "roleContext": "ICU placement",
+        "clinicalDomain": [
+          "ICU"
+        ],
+        "contentPath": "sections.timeline.items[4]",
+        "output": {
+          "en": {
+            "kicker": "ICU Placement",
+            "title": "Humber River Hospital - 6E Intensive Care Unit",
+            "text": "Placement exposure to ventilated patients, hemodynamic observation, neurological assessment, and documentation.",
+            "signals": [
+              "Ventilation exposure",
+              "Neuro checks",
+              "Charting"
+            ]
+          },
+          "zhHans": {
+            "kicker": "ICU 实习",
+            "title": "Humber River Hospital - 6E Intensive Care Unit",
+            "text": "ICU 实习阶段接触机械通气患者、血流动力学观察、神经系统观察与记录。",
+            "signals": [
+              "机械通气相关接触",
+              "神经观察",
+              "记录"
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "documentation_clarity",
+          "hemodynamic_monitoring",
+          "critical_care_judgment"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ],
+        "homepageSection": "home.timeline"
+      },
+      {
+        "stableKey": "home.timeline.full-acute-care",
+        "status": "archived",
+        "visibility": "hidden",
+        "priority": 60,
+        "sort": 60,
+        "en": {
+          "title": "St. Michael's Hospital - Fracture Clinic and General Medicine",
+          "summary": "Folded acute care placement detail.",
+          "body": "Acute Care St. Michael's Hospital - Fracture Clinic and General Medicine Clinic and medicine placements across assessment, documentation, patient education, and care-team communication. Assessment Documentation Education",
+          "tags": [
+            "assessment",
+            "documentation",
+            "education"
+          ]
+        },
+        "zhHans": {
+          "title": "St. Michael's Hospital - Fracture Clinic and General Medicine",
+          "summary": "折叠急性照护实习细节。",
+          "body": "急性照护 St. Michael's Hospital - Fracture Clinic and General Medicine 门诊与内科实习，涉及评估、记录、患者教育与照护团队沟通。 评估 记录 教育",
+          "tags": [
+            "评估",
+            "记录",
+            "教育"
+          ]
+        },
+        "maxEnWords": 45,
+        "maxZhHansCharacters": 74,
+        "sourceEvidenceNote": "Folded placement detail from public-safe timeline.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "evidenceType": "full_timeline",
+        "organization": "St. Michael's Hospital",
+        "roleContext": "Clinical placement",
+        "clinicalDomain": [
+          "acute_care"
+        ],
+        "contentPath": "sections.timeline.items[5]",
+        "output": {
+          "en": {
+            "kicker": "Acute Care",
+            "title": "St. Michael's Hospital - Fracture Clinic and General Medicine",
+            "text": "Clinic and medicine placements across assessment, documentation, patient education, and care-team communication.",
+            "signals": [
+              "Assessment",
+              "Documentation",
+              "Education"
+            ]
+          },
+          "zhHans": {
+            "kicker": "急性照护",
+            "title": "St. Michael's Hospital - Fracture Clinic and General Medicine",
+            "text": "门诊与内科实习，涉及评估、记录、患者教育与照护团队沟通。",
+            "signals": [
+              "评估",
+              "记录",
+              "教育"
+            ]
+          }
+        },
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved",
+        "relatedGlossaryTerms": [
+          "documentation_clarity"
+        ],
+        "changeLog": [
+          "v6-notion-schema-freeze-001"
+        ],
+        "homepageSection": "home.timeline"
+      }
+    ],
+    "secondaryPages": [
+      {
+        "stableKey": "secondary.professional-direction",
+        "status": "approved",
+        "visibility": "secondary",
+        "priority": 120,
+        "sort": 10,
+        "en": {
+          "title": "Professional Direction",
+          "summary": "Concise current ICU direction and professional contact context.",
+          "body": "Current ICU direction, senior-health context, cross-system communication, and professional exchange stay concise.",
+          "tags": [
+            "professional direction",
+            "ICU",
+            "RN"
+          ]
+        },
+        "zhHans": {
+          "title": "职业方向说明",
+          "summary": "简要说明当前 ICU 方向与专业联系场景。",
+          "body": "公开资料以 ICU 注册护士方向为主，老年健康、中加临床沟通与结构化记录习惯作为支持背景。",
+          "tags": [
+            "职业方向",
+            "ICU",
+            "注册护士"
+          ]
+        },
+        "maxEnWords": 40,
+        "maxZhHansCharacters": 75,
+        "sourceEvidenceNote": "Existing static secondary page remains direct HTML.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "slug": "professional-direction.html",
+        "legacySlug": "main-quest.html",
+        "pageType": "professional_direction",
+        "template": "static_note_page",
+        "relatedHomeSections": [
+          "home.systems",
+          "home.practice"
+        ],
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved"
+      },
+      {
+        "stableKey": "secondary.systems-practice",
+        "status": "approved",
+        "visibility": "secondary",
+        "priority": 120,
+        "sort": 20,
+        "en": {
+          "title": "Clinical Systems Practice",
+          "summary": "Secondary clinical workflow support page.",
+          "body": "Clinical systems practice supports documentation clarity, structured follow-up, and clinical communication without becoming a software portfolio.",
+          "tags": [
+            "clinical systems",
+            "documentation",
+            "follow-up"
+          ]
+        },
+        "zhHans": {
+          "title": "临床系统实践",
+          "summary": "作为辅助的临床流程支持页面。",
+          "body": "临床系统实践只用于支持临床记录、交接、跟进和沟通清晰度，不强化软件作品集身份。",
+          "tags": [
+            "临床系统",
+            "文档清晰度",
+            "跟进"
+          ]
+        },
+        "maxEnWords": 43,
+        "maxZhHansCharacters": 84,
+        "sourceEvidenceNote": "Existing static secondary page remains direct HTML.",
+        "lastVerifiedDate": "2026-06-24",
+        "publish": false,
+        "slug": "systems-practice.html",
+        "legacySlug": "side-quest.html",
+        "pageType": "clinical_systems_practice",
+        "template": "static_note_page",
+        "relatedHomeSections": [
+          "home.systems"
+        ],
+        "privacyState": "public_safe",
+        "ownerApprovalState": "approved"
+      }
+    ],
+    "translationGlossary": [
+      {
+        "termKey": "current_focus",
+        "enSourceTerm": "Current Focus",
+        "preferredZhHans": "近期重点",
+        "reviewZhHansVariants": "当前重点 is acceptable by context",
+        "clinicalContext": "Homepage section for present-tense focus",
+        "status": "approved",
+        "lastVerifiedDate": "2026-06-22"
+      },
+      {
+        "termKey": "critical_care_judgment",
+        "enSourceTerm": "Critical care judgment",
+        "preferredZhHans": "重症护理判断",
+        "reviewZhHansVariants": "Avoid compressed generic alternatives",
+        "clinicalContext": "Critical care positioning",
+        "status": "approved",
+        "lastVerifiedDate": "2026-06-22"
+      },
+      {
+        "termKey": "senior_health_continuity",
+        "enSourceTerm": "Senior-health continuity",
+        "preferredZhHans": "老年健康连续照护",
+        "reviewZhHansVariants": "Avoid abstract continuity phrasing",
+        "clinicalContext": "Older-adult care and continuity",
+        "status": "approved",
+        "lastVerifiedDate": "2026-06-22"
+      },
+      {
+        "termKey": "cross_system_practice",
+        "enSourceTerm": "Cross-system practice",
+        "preferredZhHans": "跨体系临床实践",
+        "reviewZhHansVariants": "Use only when comparing clinical environments",
+        "clinicalContext": "Canada and China clinical context",
+        "status": "approved",
+        "lastVerifiedDate": "2026-06-22"
+      },
+      {
+        "termKey": "documentation_support",
+        "enSourceTerm": "Documentation support",
+        "preferredZhHans": "临床流程与文档支持",
+        "reviewZhHansVariants": "Avoid product-like system wording",
+        "clinicalContext": "Secondary workflow support",
+        "status": "approved",
+        "lastVerifiedDate": "2026-06-22"
+      },
+      {
+        "termKey": "documentation_clarity",
+        "enSourceTerm": "Documentation clarity",
+        "preferredZhHans": "文档清晰度",
+        "reviewZhHansVariants": "Use for notes and follow-through",
+        "clinicalContext": "Clinical documentation and handoff context",
+        "status": "approved",
+        "lastVerifiedDate": "2026-06-22"
+      },
+      {
+        "termKey": "rapid_escalation",
+        "enSourceTerm": "Rapid escalation",
+        "preferredZhHans": "及时上报与升级处理",
+        "reviewZhHansVariants": "Use nursing-context phrase",
+        "clinicalContext": "Escalation and follow-through",
+        "status": "approved",
+        "lastVerifiedDate": "2026-06-22"
+      },
+      {
+        "termKey": "rhythm_interpretation",
+        "enSourceTerm": "Rhythm interpretation",
+        "preferredZhHans": "心律识别",
+        "reviewZhHansVariants": "Use with ECG or rhythm context",
+        "clinicalContext": "Cardiac and rhythm awareness",
+        "status": "approved",
+        "lastVerifiedDate": "2026-06-22"
+      },
+      {
+        "termKey": "hemodynamic_monitoring",
+        "enSourceTerm": "Hemodynamic monitoring",
+        "preferredZhHans": "血流动力学监测",
+        "reviewZhHansVariants": "Use standard clinical phrasing",
+        "clinicalContext": "Critical care monitoring",
+        "status": "approved",
+        "lastVerifiedDate": "2026-06-22"
+      },
+      {
+        "termKey": "handoff_clarity",
+        "enSourceTerm": "Handoff clarity",
+        "preferredZhHans": "交接清晰度",
+        "reviewZhHansVariants": "Use for handoff communication",
+        "clinicalContext": "Documentation and communication",
+        "status": "approved",
+        "lastVerifiedDate": "2026-06-22"
+      },
+      {
+        "termKey": "clinical_extern",
+        "enSourceTerm": "Clinical Extern",
+        "preferredZhHans": "临床助理实习",
+        "reviewZhHansVariants": "Clinical Extern may remain in parentheses if needed",
+        "clinicalContext": "Placement or externship wording",
+        "status": "approved",
+        "lastVerifiedDate": "2026-06-22"
+      },
+      {
+        "termKey": "professional_direction",
+        "enSourceTerm": "Professional Direction",
+        "preferredZhHans": "职业方向说明",
+        "reviewZhHansVariants": "Use for secondary page visible label",
+        "clinicalContext": "Current RN direction detail page",
+        "status": "approved",
+        "lastVerifiedDate": "2026-06-22"
+      },
+      {
+        "termKey": "clinical_systems_practice",
+        "enSourceTerm": "Clinical Systems Practice",
+        "preferredZhHans": "临床系统实践",
+        "reviewZhHansVariants": "Use as secondary support, not a competing identity",
+        "clinicalContext": "Secondary support track for clinical workflow and documentation clarity.",
+        "status": "approved",
+        "lastVerifiedDate": "2026-06-22"
+      },
+      {
+        "termKey": "workflow_discipline",
+        "enSourceTerm": "Workflow discipline",
+        "preferredZhHans": "流程执行一致性",
+        "reviewZhHansVariants": "Use for systems support detail",
+        "clinicalContext": "Workflow and follow-through",
+        "status": "approved",
+        "lastVerifiedDate": "2026-06-22"
+      }
+    ],
+    "changeLog": [
+      {
+        "changeId": "v6-creative-homepage-seed-2026-09-24",
+        "status": "approved",
+        "releaseScope": [
+          "homepage",
+          "secondary_pages",
+          "glossary",
+          "qa_only"
+        ],
+        "changedStableKeys": [
+          "home.about",
+          "home.capability",
+          "home.contact",
+          "home.digest",
+          "home.education",
+          "home.focus",
+          "home.focus.clinical-focus",
+          "home.focus.current-role",
+          "home.focus.professional-direction",
+          "home.hero",
+          "home.language",
+          "home.practice",
+          "home.projects",
+          "home.systems",
+          "home.timeline",
+          "home.timeline.evidence-china-internal-medicine",
+          "home.timeline.evidence-icu",
+          "home.timeline.evidence-icu-rn",
+          "home.timeline.evidence-senior-health",
+          "home.timeline.full-acute-care",
+          "home.timeline.full-china-practice",
+          "home.timeline.full-extern",
+          "home.timeline.full-icu-placement",
+          "home.timeline.full-icu-rn",
+          "home.timeline.full-senior-health",
+          "home.work",
+          "site.footer",
+          "site.meta",
+          "site.ui"
+        ],
+        "rationale": "Freeze V6 Notion schema, owner approval gates, and review-only static export path.",
+        "beforeAfterSummary": "Updated sample fixture to V6 RN-first content and clinical systems terminology.",
+        "sourceEvidenceNote": "Sample rows preserve the current static homepage contract and public-safe content map.",
+        "editor": "Codex",
+        "reviewer": "Codex local validation",
+        "enZhParityResult": "pass",
+        "glossaryResult": "pass",
+        "budgetResult": "pass",
+        "sensitiveInfoResult": "pass",
+        "staticSafetyResult": "pass",
+        "exportTarget": "content/generated/homepage-content.generated.js",
+        "exportDate": "2026-06-24",
+        "rollbackNote": "Generated candidate is separate from production; delete generated file to discard."
+      }
+    ]
+  }
+}
