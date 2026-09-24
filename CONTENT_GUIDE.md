@@ -8,20 +8,16 @@ This site is a static GitHub Pages style website for `shaotinghe.com`.
 - Homepage styling is `homepage.css`. Rendering is `homepage.js`.
 - Bilingual homepage copy lives in `content/homepage-content.js` as `window.SHAOTING_HOME_CONTENT`.
 - English copy is `SHAOTING_HOME_CONTENT.en`. Simplified Chinese copy is `SHAOTING_HOME_CONTENT["zh-Hans"]`.
-- The V6 contract on each language is `meta`, `ui` (including `ui.nav`), `hero`, `sections` (`focus`, `practice`, `timeline`, `capability`, `education`, `language`, `systems`, `contact`), and `footer`.
+- The V6 contract on each language is `meta`, `ui` (including `ui.nav`), `hero`, `sections` (`work`, `projects`, `focus`, `digest`, `about`, `contact`), and `footer`. Nursing-archive buckets (`practice`, `timeline`, `capability`, `education`, `language`, `systems`) are not the public homepage.
 - `content/generated/homepage-content.generated.js` is the review export. It is not loaded by `index.html`.
 - The linked note pages are `main-quest.html` and `side-quest.html`.
 - Shared note page styling lives in `notes.css`.
 - Current homepage sections are:
-  - `#top` Hero / Clinical Identity
+  - `#top` Hero
+  - `#projects` Work (UMA, then QDigest)
   - `#focus` Current Focus
-  - `#practice` Practice Domains
-  - `#timeline` Clinical Timeline
-  - `#capability` Clinical Capability Index
-  - `#education` Education & Registration
-  - `#language` Language & Cross-Cultural Practice
-  - `#systems` Technical / Systems Practice
-  - `#contact` Contact
+  - `#about` About
+  - `#contact` Connect
 
 ## Public-Safe Content Map
 
@@ -47,14 +43,12 @@ Owner approval required before publication:
 
 Section content locations:
 
-- Hero / Clinical Identity: `SHAOTING_HOME_CONTENT.en.hero` and `SHAOTING_HOME_CONTENT["zh-Hans"].hero`.
+- Hero: `SHAOTING_HOME_CONTENT.en.hero` and `SHAOTING_HOME_CONTENT["zh-Hans"].hero`.
+- Work: `SHAOTING_HOME_CONTENT.en.sections.work` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.work`.
+- Projects: `SHAOTING_HOME_CONTENT.en.sections.projects` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.projects`. UMA is first. QDigest is second, with id `bid` and links to `/qdigest/`.
+- Digest: `SHAOTING_HOME_CONTENT.en.sections.digest` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.digest`, drawn with the QDigest project.
 - Current Focus: `SHAOTING_HOME_CONTENT.en.sections.focus` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.focus`.
-- Practice Domains: `SHAOTING_HOME_CONTENT.en.sections.practice` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.practice`.
-- Clinical Timeline: `SHAOTING_HOME_CONTENT.en.sections.timeline` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.timeline`.
-- Clinical Capability Index: `SHAOTING_HOME_CONTENT.en.sections.capability` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.capability`.
-- Education & Registration: `SHAOTING_HOME_CONTENT.en.sections.education` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.education`.
-- Language & Cross-Cultural Practice: `SHAOTING_HOME_CONTENT.en.sections.language` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.language`.
-- Technical / Systems Practice: `SHAOTING_HOME_CONTENT.en.sections.systems` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.systems`.
+- About: `SHAOTING_HOME_CONTENT.en.sections.about` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.about`.
 - Contact: `SHAOTING_HOME_CONTENT.en.sections.contact` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.contact`.
 
 English / Simplified Chinese parity rules:
@@ -84,7 +78,7 @@ Do not update those files for normal public-site content changes unless the CMS/
 2. Rebuild the static shell with `node scripts/build-homepage.cjs`. The public site does not call Notion.
 3. To refresh from Notion later: run the existing static sync so it writes `content/generated/homepage-content.generated.js`, review that file, then replace `content/homepage-content.js` with the V6 payload and drop any review-only banner. Rebuild `index.html` after the replacement.
 4. Edit note-page copy directly in `main-quest.html` or `side-quest.html`.
-5. Preserve anchors `#top`, `#focus`, `#practice`, `#timeline`, `#capability`, `#education`, `#language`, `#systems`, `#contact`, and `#main-content`.
+5. Preserve anchors `#top`, `#projects`, `#uma`, `#focus`, `#about`, `#contact`, and `#main-content`.
 6. Preserve contact links, favicon paths, and root-level image paths unless every reference is updated and verified.
 
 ## Design Direction

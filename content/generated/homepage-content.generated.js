@@ -8,865 +8,445 @@
   "en": {
     "sections": {
       "focus": {
-        "eyebrow": "Now",
-        "title": "Current Focus",
-        "summary": "Current focus: ICU nursing, critical-care growth, and public-safe professional material.",
+        "eyebrow": "02 / CURRENT FOCUS",
+        "title": "What I’m\nimproving.",
+        "intro": "My current development priorities in UMA and QDigest.",
         "items": [
           {
-            "title": "Current Role",
-            "text": "Full-time ICU RN at Valley Regional Hospital in Kentville, Nova Scotia, with NSCN licensure."
+            "label": "UMA / PRODUCT EXPERIENCE",
+            "title": "Usage, understood at a glance.",
+            "text": "Refining how usage, limits, and recent tasks are presented across the desktop app and menu bar.",
+            "link": "#uma"
           },
           {
-            "title": "Clinical Focus",
-            "text": "Critical-care practice, disciplined documentation, and calm communication around changing clinical needs."
+            "label": "QDigest / READING EXPERIENCE",
+            "title": "More context. Less feed hopping.",
+            "text": "Connecting concise email discovery with source-grounded bilingual research explanations on the web.",
+            "link": "/qdigest/"
           },
           {
-            "title": "Professional Direction",
-            "text": "ICU nursing first; senior health and systems habits stay supporting context."
+            "title": "Building UMA + QDigest",
+            "text": "UMA is the lead product surface; QDigest is the secondary bilingual research reading experiment."
           }
         ]
       },
-      "practice": {
-        "eyebrow": "Expertise Snapshot",
-        "title": "RN expertise snapshot.",
-        "summary": "Four compact signals with ICU direction first.",
+      "work": {
+        "eyebrow": "01 / FROM OBSERVATION TO SOFTWARE",
+        "title": "The work speaks.",
+        "intro": "A native Mac companion for AI usage. Bilingual research explanations. Two tools I’m building to make information easier to use.",
+        "all": "Explore my GitHub"
+      },
+      "projects": {
+        "eyebrow": "01 / FROM OBSERVATION TO SOFTWARE",
+        "title": "The work speaks.",
+        "intro": "A native Mac companion for AI usage. Bilingual research explanations. Two tools I’m building to make information easier to use.",
         "items": [
           {
-            "title": "Current Critical Care Direction",
-            "text": "Current ICU practice and intensive-care training support the critical-care direction.",
-            "signals": [
-              "Current ICU",
-              "NSCN",
-              "ICU training",
-              "Growth"
-            ]
+            "id": "uma",
+            "number": "01",
+            "name": "UMA",
+            "subtitle": "Usage Monitor",
+            "status": "Public repository",
+            "kind": "macOS · Developer tools",
+            "headline": "Know your limits. Keep your flow.",
+            "description": "A native macOS companion for Codex usage, limits, and recent tasks. Built to make the numbers easier to see, right from the menu bar.",
+            "tags": [
+              "SwiftUI + AppKit",
+              "macOS",
+              "EN / 中文"
+            ],
+            "primary": "View repository",
+            "url": "https://github.com/ShaoJHe-SilkRoad/UMA",
+            "secondary": "Releases",
+            "secondaryUrl": "https://github.com/ShaoJHe-SilkRoad/UMA/releases",
+            "caption": "Public repository demo preview",
+            "whyTitle": "The question",
+            "why": "How can keeping track of AI usage feel like a natural part of the desktop, instead of another dashboard to manage?",
+            "focusTitle": "What I’m working toward",
+            "focus": "Clearer interfaces, useful usage context, and a dependable native Mac experience.",
+            "inviteTitle": "Where you can help",
+            "invite": "Try the public project, share a confusing moment, or bring a fresh product perspective."
           },
           {
-            "title": "Senior-Health Interest",
-            "text": "Senior health remains supporting context, including InterRAI-LTCF, without competing with the ICU identity.",
-            "signals": [
-              "Senior health",
-              "InterRAI-LTCF",
-              "Continuity",
-              "Older adults"
-            ]
-          },
-          {
-            "title": "Cross-System Communication",
-            "text": "Canadian and Chinese clinical environments support Mandarin review, patient education, and care-plan clarity.",
-            "signals": [
-              "Canada / China",
-              "Mandarin review",
-              "Education",
-              "Care plans"
-            ]
-          },
-          {
-            "title": "Workflow Support Habits",
-            "text": "Documentation habits and small tools stay secondary to clinical communication.",
-            "signals": [
-              "Documentation",
-              "Handoffs",
-              "Follow-up",
-              "Checklists"
-            ]
+            "id": "bid",
+            "number": "02",
+            "name": "QDigest",
+            "subtitle": "Research, explained",
+            "status": "In development",
+            "kind": "Information tools · Bilingual reading",
+            "headline": "Make room for understanding.",
+            "description": "Source-grounded health research, explained in English and Simplified Chinese: concise email briefs with fuller explanations on the web.",
+            "tags": [
+              "English + 中文",
+              "Source-conscious",
+              "Mobile-friendly"
+            ],
+            "primary": "Read QDigest",
+            "url": "/qdigest/",
+            "caption": "Format concept · not a live edition",
+            "whyTitle": "The question",
+            "why": "How can health research become easier to understand while keeping its evidence and uncertainty visible?",
+            "focusTitle": "What I’m working toward",
+            "focus": "One source-linked fact package for concise email briefs and fuller bilingual web explanations.",
+            "inviteTitle": "Where you can help",
+            "invite": "I’d like to hear from curious readers, editorial thinkers, and people who care about how information is presented."
           }
         ]
       },
-      "timeline": {
-        "eyebrow": "Selected Evidence",
-        "title": "Clinical proof.",
-        "summary": "Selected proof stays specific and concise.",
-        "disclosureTitle": "Folded timeline detail",
-        "disclosureSummary": "Open timeline detail.",
-        "aside": "Selected proof stays visible; the longer timeline remains folded.",
-        "asideList": [
-          "Visible proof cards",
-          "Folded timeline",
-          "Current role context",
-          "Systems kept secondary"
+      "digest": {
+        "label": "HEALTH RESEARCH",
+        "title": "QDigest",
+        "subtitle": "Research, explained",
+        "edition": "Brief in email. Explained on the web.",
+        "topics": [
+          "Heart, metabolism & kidneys",
+          "Hearing & cognition",
+          "Stroke",
+          "Respiratory health",
+          "Cancer risk"
         ],
-        "evidence": [
-          {
-            "kicker": "Current ICU role",
-            "title": "Valley Regional Hospital - Intensive Care Unit",
-            "text": "NSCN licensure and a full-time ICU role in Kentville, Nova Scotia are kept brief as current context, not a full role description.",
-            "signals": [
-              "Current ICU",
-              "NSCN",
-              "Kentville"
-            ]
-          },
-          {
-            "kicker": "ICU RN practice",
-            "title": "Markham Stouffville Hospital - 3WG ICU",
-            "text": "ICU practice at Markham Stouffville supports the critical-care thread through monitoring, reassessment, documentation, and escalation context.",
-            "signals": [
-              "ICU",
-              "Monitoring",
-              "Reassessment",
-              "Escalation"
-            ]
-          },
-          {
-            "kicker": "Senior-health context",
-            "title": "North York General Hospital - Senior Health Centre",
-            "text": "Older-adult care supports the secondary senior-health thread through ADLs, falls risk, and family communication.",
-            "signals": [
-              "Older adults",
-              "ADLs",
-              "Falls",
-              "Family clarity"
-            ]
-          },
-          {
-            "kicker": "Cross-system clinical practice",
-            "title": "Youyu County Hospital of Chinese Medicine - 3F Internal Medicine",
-            "text": "Supervised internal-medicine practice in China supports Mandarin review, patient education, and follow-up clarity.",
-            "signals": [
-              "Internal medicine",
-              "Mandarin review",
-              "Education",
-              "Follow-up"
-            ]
-          }
+        "bottom": "Evidence and uncertainty, kept in view.",
+        "language": "EN ↔ 中文"
+      },
+      "about": {
+        "eyebrow": "03 / NURSING IS THE FOUNDATION",
+        "title": "A person behind\nevery signal.",
+        "intro": "I’m Shaoting He, a registered nurse working in intensive care in Nova Scotia.",
+        "body": "In the ICU, a small change can deserve your full attention. Nursing has shaped how I observe, communicate, and take responsibility.",
+        "end": "I bring that discipline to building software: understand the problem, make the details count, and keep improving what people use.",
+        "facts": [
+          "Registered Nurse · NSCN",
+          "Nova Scotia, Canada",
+          "English / Mandarin"
         ],
-        "items": [
-          {
-            "kicker": "Registered Nurse",
-            "title": "Markham Stouffville Hospital - 3WG Intensive Care Unit",
-            "text": "Critical care monitoring, reassessment, rhythm-aware documentation, escalation, and unit coordination.",
-            "signals": [
-              "ICU",
-              "Monitoring",
-              "Escalation"
-            ]
-          },
-          {
-            "kicker": "Supervised Practice",
-            "title": "Youyu County Hospital of Chinese Medicine - 3F Internal Medicine",
-            "text": "Internal medicine practice in China with Mandarin documentation review, patient education, and follow-up clarity.",
-            "signals": [
-              "Internal medicine",
-              "Mandarin review",
-              "Education"
-            ]
-          },
-          {
-            "kicker": "Clinical Extern",
-            "title": "Markham Stouffville Hospital - Surgical / Short Stay",
-            "text": "Perioperative and short-stay support across observation, communication, and unit flow.",
-            "signals": [
-              "Observation",
-              "Unit flow",
-              "Handoff"
-            ]
-          },
-          {
-            "kicker": "Senior Health",
-            "title": "North York General Hospital - Senior Health Centre",
-            "text": "Older-adult support across ADLs, dementia needs, fall prevention, pressure injury awareness, and family communication.",
-            "signals": [
-              "Dementia",
-              "Falls",
-              "Family communication"
-            ]
-          },
-          {
-            "kicker": "ICU Placement",
-            "title": "Humber River Hospital - 6E Intensive Care Unit",
-            "text": "Placement exposure to ventilated patients, hemodynamic observation, neurological assessment, and documentation.",
-            "signals": [
-              "Ventilation exposure",
-              "Neuro checks",
-              "Charting"
-            ]
-          },
-          {
-            "kicker": "Acute Care",
-            "title": "St. Michael's Hospital - Fracture Clinic and General Medicine",
-            "text": "Clinic and medicine placements across assessment, documentation, patient education, and care-team communication.",
-            "signals": [
-              "Assessment",
-              "Documentation",
-              "Education"
-            ]
-          }
-        ]
-      },
-      "capability": {
-        "eyebrow": "Detail Layer",
-        "title": "Detailed signal board.",
-        "summary": "Grouped signals stay folded for detail readers, not homepage scanning.",
-        "disclosureTitle": "Detailed capability groups",
-        "disclosureSummary": "Open grouped signals.",
-        "groups": [
-          {
-            "title": "Critical Care",
-            "items": [
-              "Current ICU role",
-              "Intensive-care training",
-              "Hemodynamic monitoring",
-              "Escalation readiness"
-            ],
-            "note": "Focused on current critical-care growth without overstating scope."
-          },
-          {
-            "title": "Cardiac / Rhythm",
-            "items": [
-              "Rhythm interpretation",
-              "ECG-aware notes",
-              "Coronary Care 1",
-              "BLS / ACLS training"
-            ],
-            "note": "Cardiac signal is documented in practical bedside language."
-          },
-          {
-            "title": "Senior Health",
-            "items": [
-              "Senior-health interest",
-              "InterRAI-LTCF",
-              "Falls and pressure injury risk",
-              "Chronic-disease continuity"
-            ],
-            "note": "Presented as supporting context rather than the main identity."
-          },
-          {
-            "title": "Cross-System",
-            "items": [
-              "Canada / China practice",
-              "Internal medicine lens",
-              "Mandarin clinical review",
-              "Care-plan clarity"
-            ],
-            "note": "System differences become context for clearer decisions."
-          },
-          {
-            "title": "Communication",
-            "items": [
-              "SBAR-style escalation",
-              "Patient education",
-              "Bilingual listening",
-              "Family updates"
-            ],
-            "note": "Communication is treated as a safety tool, not an afterthought."
-          },
-          {
-            "title": "Systems Practice",
-            "items": [
-              "Structured notes",
-              "Checklist habits",
-              "Follow-up structure",
-              "Workflow discipline"
-            ],
-            "note": "Technical work supports clinical clarity in a secondary track."
-          }
-        ]
-      },
-      "education": {
-        "eyebrow": "Education & Registration",
-        "title": "Credentials, without overstatement.",
-        "summary": "Registration, education, and training stay folded.",
-        "disclosureTitle": "Education & professional development",
-        "disclosureSummary": "Open credentials and training.",
-        "items": [
-          [
-            "Registered Nurse",
-            "Licensed with NSCN; no private identifier is published."
-          ],
-          [
-            "Bachelor of Science in Nursing",
-            "Toronto Metropolitan University collaborative nursing program, minor in Psychology, graduated with Distinction."
-          ],
-          [
-            "Critical Care Education",
-            "Centennial College Intensive Care Training Program, Coronary Care 1, and related ICU preparation."
-          ],
-          [
-            "Additional Learning",
-            "Conestoga College NURS8963 Transition to Nursing Practice; CIHI InterRAI-LTCF Essentials 1 & 2."
-          ],
-          [
-            "Psychology Minor",
-            "Psychology study supports patient education, family communication, and steady cross-cultural listening."
-          ]
-        ]
-      },
-      "language": {
-        "eyebrow": "Language & Cross-Cultural Practice",
-        "title": "Clinical communication across languages and systems.",
-        "summary": "Language context stays folded for communication detail.",
-        "disclosureTitle": "Language practice",
-        "disclosureSummary": "Open language context.",
-        "items": [
-          [
-            "English",
-            "Professional clinical working proficiency."
-          ],
-          [
-            "Mandarin",
-            "Mother tongue, including clinical material review context."
-          ],
-          [
-            "French",
-            "A2 active learning."
-          ],
-          [
-            "Spanish",
-            "A1 leisure learning."
-          ],
-          [
-            "Cross-Cultural Practice",
-            "Canadian and Chinese clinical environments support flexible communication, dialect-aware elderly patient care, and awareness of system differences."
-          ]
-        ]
-      },
-      "systems": {
-        "eyebrow": "Clinical Workflow Support",
-        "title": "Systems stay secondary to nursing.",
-        "summary": "Clinical workflow and documentation support stay in a folded lane.",
-        "disclosureTitle": "Clinical systems detail",
-        "disclosureSummary": "Open secondary systems links.",
-        "featureTitle": "Secondary support track",
-        "feature": "Small tools and checklists matter only when they support clinical communication, documentation, or follow-through.",
-        "links": [
-          [
-            "professional-direction.html",
-            "Professional Direction",
-            "A concise note on current RN direction."
-          ],
-          [
-            "systems-practice.html",
-            "Clinical Systems Practice",
-            "Small tools and habits for documentation clarity."
-          ]
-        ]
+        "caption": "Shaoting He · 何少霆",
+        "detail": "Nursing background",
+        "clinical": "Currently in a full-time ICU role at Valley Regional Hospital in Kentville. BScN, Toronto Metropolitan University collaborative nursing program, graduated with Distinction."
       },
       "contact": {
-        "eyebrow": "Contact",
-        "title": "Professional contact.",
-        "summary": "For relevant nursing opportunities or professional exchange.",
-        "location": "Kentville, Nova Scotia",
-        "text": "The request link opens an email draft for professional inquiries.",
+        "eyebrow": "04 / LET’S CONNECT",
+        "title": "Bring your perspective.\nLet’s build something.",
+        "intro": "Developers, designers, supporters, and entrepreneurial communities: I’m looking for people who want to turn useful ideas into working tools.",
+        "paths": [
+          {
+            "number": "01",
+            "title": "Build together",
+            "text": "Have a complementary skill or an idea we should explore?",
+            "label": "Discuss a collaboration",
+            "subject": "Let’s collaborate"
+          },
+          {
+            "number": "02",
+            "title": "Share a perspective",
+            "text": "Try UMA, talk about QDigest, or tell me what could work better.",
+            "label": "Start a conversation",
+            "subject": "A thought about your projects"
+          },
+          {
+            "number": "03",
+            "title": "Support the work",
+            "text": "Interested in backing independent tools and the time it takes to build them?",
+            "label": "Talk about supporting",
+            "subject": "Supporting your independent work"
+          }
+        ],
         "email": "Locutus1207@outlook.com",
-        "ctaLabel": "Request professional information",
-        "note": "Additional professional details can be shared when relevant."
+        "footer": "Independent work. Human purpose."
       }
     },
     "meta": {
-      "siteName": "Shaoting He, RN",
-      "role": "Registered Nurse",
-      "title": "Shaoting He, RN | ICU Nursing Profile",
-      "description": "Shaoting He, RN is an NSCN-licensed registered nurse in a full-time ICU role at Valley Regional Hospital in Kentville, Nova Scotia.",
-      "ogDescription": "An ICU-focused nursing profile shaped by current critical-care practice, senior-health context, bilingual communication, and clear documentation."
+      "title": "Shaoting He — ICU Nurse. Independent Builder.",
+      "description": "ICU nurse. Independent builder. Shaoting He brings a nurse’s attention to the software he creates. Explore UMA, QDigest, and ways to collaborate."
     },
     "ui": {
-      "skip": "Skip to content",
-      "language": "Language",
-      "navLabel": "Primary",
       "nav": [
+        [
+          "projects",
+          "Work"
+        ],
         [
           "focus",
           "Focus"
         ],
         [
-          "practice",
-          "Practice"
-        ],
-        [
-          "capability",
-          "Detail"
-        ],
-        [
-          "timeline",
-          "Proof"
-        ],
-        [
-          "education",
-          "Study"
-        ],
-        [
-          "language",
-          "Language"
-        ],
-        [
-          "systems",
-          "Systems"
+          "about",
+          "About"
         ],
         [
           "contact",
-          "Contact"
-        ]
-      ]
-    },
-    "hero": {
-      "eyebrow": "Nursing Profile",
-      "title": "Shaoting He, RN",
-      "titleTail": "",
-      "role": "Registered Nurse (RN), licensed with NSCN, in a full-time ICU role at Valley Regional Hospital in Kentville, Nova Scotia.",
-      "intro": "Focused on ICU growth, documentation, and communication.",
-      "portraitLabel": "Shaoting He, RN",
-      "portraitText": "ICU direction with clear clinical communication.",
-      "actions": [
-        [
-          "#contact",
-          "Contact"
-        ],
-        [
-          "#practice",
-          "Practice"
+          "Connect"
         ]
       ],
-      "identity": [
-        [
-          "RN",
-          "Licensed with NSCN"
-        ],
-        [
-          "Valley Regional ICU",
-          "Full-time role"
-        ],
-        [
-          "ICU Direction",
-          "Clinical growth"
-        ]
-      ]
+      "skip": "Skip to content",
+      "language": "Language",
+      "light": "Switch to light theme",
+      "motion": "Pause background motion",
+      "resume": "Resume background motion",
+      "dark": "Switch to dark theme",
+      "reduced": "Motion reduced by your device",
+      "menu": "Main navigation",
+      "github": "GitHub",
+      "back": "Back to top",
+      "more": "Behind the project",
+      "copy": "Copy email",
+      "copied": "Email copied",
+      "copyFailed": "Copy unavailable. Use the email link.",
+      "close": "Close",
+      "projectPreview": "Open full UMA demo preview",
+      "codeBlue": "Code blue",
+      "codeBlueOn": "Nurse joke: switch the waveform to V-Fib",
+      "codeBlueOff": "Return the waveform to normal sinus rhythm"
+    },
+    "hero": {
+      "eyebrow": "SHAOTING HE / REGISTERED NURSE",
+      "line1": "Nurse.",
+      "line2": "Builder.",
+      "intro": "I work in intensive care. I build software beyond it. Both start with the same instinct: notice what matters, and make it better.",
+      "primary": "See what I’m building",
+      "secondary": "Explore GitHub",
+      "note": "ICU practice · Nova Scotia, Canada",
+      "current": "CURRENTLY BUILDING",
+      "currentProjects": "UMA + QDigest",
+      "scroll": "A little further down",
+      "statement": "Care is my discipline.\nCreation is my drive.",
+      "credentials": [
+        "RN · NSCN",
+        "CRITICAL CARE",
+        "INDEPENDENT DEVELOPER"
+      ],
+      "signalTitle": "THE HUMAN SIGNAL",
+      "signalCaption": "Care × Curiosity",
+      "signalHint": "Move to influence · Click to send a pulse",
+      "signalStill": "Inspired by the rhythm of critical care",
+      "rhythmNormal": "NSR / Sinus rhythm",
+      "rhythmVf": "VF / Ventricular fibrillation"
     },
     "footer": {
-      "text": "NSCN-licensed Registered Nurse in a current ICU role, with senior-health context and practical clinical systems support.",
-      "copyright": "Copyright © 2026 Shaoting He. All rights reserved. Content and design may not be reproduced without permission."
+      "identity": "Shaoting He · RN & independent builder",
+      "note": "Care in the details. Curiosity in the work.",
+      "copyright": "© 2026 Shaoting He."
     }
   },
   "zh-Hans": {
     "sections": {
       "focus": {
-        "eyebrow": "当前",
-        "title": "近期重点",
-        "summary": "当前重点：ICU 护理、重症护理发展，以及公开安全的专业资料。",
+        "eyebrow": "02 / 正在投入",
+        "title": "最近在\n打磨什么。",
+        "intro": "UMA 与 QDigest 当前的开发重点。",
         "items": [
           {
-            "title": "当前角色",
-            "text": "目前在 Valley Regional Hospital Intensive Care Unit 担任全职 ICU 注册护士，并持有 NSCN 执业注册。"
+            "label": "UMA / 产品体验",
+            "title": "让用量信息，一眼就懂。",
+            "text": "打磨桌面应用与菜单栏中的用量、额度和近期任务展示，让关键信息更容易读懂。",
+            "link": "#uma"
           },
           {
-            "title": "临床重点",
-            "text": "聚焦重症护理、规范记录，以及临床变化中的稳定沟通。"
+            "label": "QDigest / 阅读体验",
+            "title": "多一点语境，少切几个信息流。",
+            "text": "将简洁邮件发现与来源可追溯的双语网页研究解释连接起来。",
+            "link": "/qdigest/"
           },
           {
-            "title": "专业方向",
-            "text": "以 ICU 护理为主，老年健康与临床流程习惯作为支持背景。"
+            "title": "构建 UMA + QDigest",
+            "text": "UMA 是主要产品界面；QDigest 是次要的双语研究阅读实验。"
           }
         ]
       },
-      "practice": {
-        "eyebrow": "专长速览",
-        "title": "RN 专业重点。",
-        "summary": "四项简洁重点，ICU 方向优先。",
+      "work": {
+        "eyebrow": "01 / 从观察到作品",
+        "title": "让作品说话。",
+        "intro": "一个关注 AI 用量的原生 Mac 工具，双语健康研究解释。让信息更好用，是这两个项目共同的出发点。",
+        "all": "探索我的 GitHub"
+      },
+      "projects": {
+        "eyebrow": "01 / 从观察到作品",
+        "title": "让作品说话。",
+        "intro": "一个关注 AI 用量的原生 Mac 工具，双语健康研究解释。让信息更好用，是这两个项目共同的出发点。",
         "items": [
           {
-            "title": "当前重症护理方向",
-            "text": "当前 ICU 实践与重症护理培训背景支持重症护理方向；主页保持概览。",
-            "signals": [
-              "当前 ICU",
-              "NSCN",
-              "重症护理培训",
-              "成长"
-            ]
+            "id": "uma",
+            "number": "01",
+            "name": "UMA",
+            "subtitle": "Usage Monitor",
+            "status": "公开仓库",
+            "kind": "macOS · 开发者工具",
+            "headline": "掌握用量，专注创造。",
+            "description": "原生 macOS 工具，在菜单栏查看 Codex 用量、额度与近期任务，让使用情况更容易掌握。",
+            "tags": [
+              "SwiftUI + AppKit",
+              "macOS",
+              "EN / 中文"
+            ],
+            "primary": "查看代码仓库",
+            "url": "https://github.com/ShaoJHe-SilkRoad/UMA",
+            "secondary": "发布版本",
+            "secondaryUrl": "https://github.com/ShaoJHe-SilkRoad/UMA/releases",
+            "caption": "公开仓库中的演示预览",
+            "whyTitle": "我在思考的问题",
+            "why": "关注 AI 用量，能否成为桌面体验中自然的一部分，而不用再多管理一个仪表盘？",
+            "focusTitle": "正在努力的方向",
+            "focus": "更清楚的界面、更有用的用量信息，以及可靠的原生 Mac 体验。",
+            "inviteTitle": "欢迎你的参与",
+            "invite": "试用公开项目，分享让你困惑的地方，或带来新的产品视角。"
           },
           {
-            "title": "老年健康兴趣",
-            "text": "老年健康作为支持背景呈现，包括 InterRAI-LTCF，不盖过当前 ICU 身份。",
-            "signals": [
-              "老年健康",
-              "InterRAI-LTCF",
-              "连续照护",
-              "老年照护"
-            ]
-          },
-          {
-            "title": "跨体系临床沟通",
-            "text": "加拿大与中国临床环境经验，可支持普通话资料审阅、患者教育与护理计划表达。",
-            "signals": [
-              "中加临床环境",
-              "普通话审阅",
-              "患者教育",
-              "护理计划"
-            ]
-          },
-          {
-            "title": "临床流程与文档支持",
-            "text": "记录习惯与小型工具保持辅助地位，服务于临床沟通。",
-            "signals": [
-              "文档清晰度",
-              "交接清晰",
-              "跟进习惯",
-              "辅助工具"
-            ]
+            "id": "bid",
+            "number": "02",
+            "name": "QDigest",
+            "subtitle": "读懂研究",
+            "status": "开发中",
+            "kind": "信息工具 · 双语阅读",
+            "headline": "看见研究，也读懂研究。",
+            "description": "用英文与简体中文解释有据可查的健康研究：邮件简报用于发现，网页提供更完整的研究解释。",
+            "tags": [
+              "English + 中文",
+              "重视来源",
+              "移动端阅读"
+            ],
+            "primary": "阅读 QDigest",
+            "url": "/qdigest/",
+            "caption": "版式概念展示 · 非实时新闻",
+            "whyTitle": "我在思考的问题",
+            "why": "怎样让健康研究更容易理解，同时保留证据与不确定性？",
+            "focusTitle": "正在努力的方向",
+            "focus": "同一份可追溯事实包，生成简洁邮件与完整双语网页解释。",
+            "inviteTitle": "欢迎你的参与",
+            "invite": "希望听到好奇的读者、关注内容的人，以及对信息呈现有想法的伙伴的反馈。"
           }
         ]
       },
-      "timeline": {
-        "eyebrow": "精选证据",
-        "title": "临床证据。",
-        "summary": "精选证据保持具体、简洁。",
-        "disclosureTitle": "折叠时间线细节",
-        "disclosureSummary": "展开时间线细节。",
-        "aside": "精选证据默认可见；较长时间线继续折叠。",
-        "asideList": [
-          "可见证据卡片",
-          "折叠时间线",
-          "当前角色背景",
-          "系统支持保持辅助"
+      "digest": {
+        "label": "健康研究",
+        "title": "QDigest",
+        "subtitle": "读懂研究",
+        "edition": "邮件发现，网页理解。",
+        "topics": [
+          "心脏、代谢与肾脏",
+          "听力与认知",
+          "卒中",
+          "呼吸健康",
+          "癌症风险"
         ],
-        "evidence": [
-          {
-            "kicker": "当前 ICU 岗位",
-            "title": "Valley Regional Hospital - Intensive Care Unit",
-            "text": "持有 NSCN 执业注册，并在新斯科舍省 Kentville 的 Valley Regional Hospital ICU 担任全职岗位；此处只作为当前背景简要呈现。",
-            "signals": [
-              "当前 ICU",
-              "NSCN",
-              "Kentville"
-            ]
-          },
-          {
-            "kicker": "ICU 注册护士实践",
-            "title": "Markham Stouffville Hospital - 3WG ICU",
-            "text": "Markham Stouffville ICU 实践支持重症护理主线，包括监测、再评估、记录与及时上报背景。",
-            "signals": [
-              "ICU",
-              "监测",
-              "再评估",
-              "及时上报"
-            ]
-          },
-          {
-            "kicker": "老年健康背景",
-            "title": "North York General Hospital - Senior Health Centre",
-            "text": "老年照护支持作为次要证据，覆盖 ADL、跌倒风险与家庭沟通。",
-            "signals": [
-              "老年照护",
-              "ADL",
-              "跌倒预防",
-              "家庭沟通"
-            ]
-          },
-          {
-            "kicker": "中国内科受督导实践",
-            "title": "右玉县中医院 - 3F 内科",
-            "text": "受督导内科实践支持普通话沟通、资料审阅、患者教育与随访清晰度。",
-            "signals": [
-              "内科",
-              "普通话审阅",
-              "患者教育",
-              "随访"
-            ]
-          }
+        "bottom": "保留证据，也保留不确定性。",
+        "language": "EN ↔ 中文"
+      },
+      "about": {
+        "eyebrow": "03 / 护理，是我的根基",
+        "title": "每一个信号背后，\n都是一个人。",
+        "intro": "我是何少霆，在加拿大新斯科舍省从事重症护理的注册护士。",
+        "body": "在 ICU，一个细微的变化，也值得全神贯注。护理塑造了我观察、沟通与承担责任的方式。",
+        "end": "创造软件时，我也坚持同样的事：理解问题，认真对待细节，持续改善人们真正会用到的东西。",
+        "facts": [
+          "注册护士 · NSCN",
+          "加拿大 · 新斯科舍省",
+          "英语 / 普通话"
         ],
-        "items": [
-          {
-            "kicker": "注册护士",
-            "title": "Markham Stouffville Hospital - 3WG Intensive Care Unit",
-            "text": "重症监测、再评估、心律相关记录、及时上报与病区协作。",
-            "signals": [
-              "ICU",
-              "监测",
-              "及时上报"
-            ]
-          },
-          {
-            "kicker": "督导实践",
-            "title": "右玉县中医院 - 3F 内科",
-            "text": "中国内科受督导实践，包括普通话沟通、资料审阅、患者教育与随访沟通清晰度。",
-            "signals": [
-              "内科",
-              "普通话审阅",
-              "患者教育"
-            ]
-          },
-          {
-            "kicker": "临床助理实习",
-            "title": "Markham Stouffville Hospital - Surgical / Short Stay",
-            "text": "围手术期与短住院支持，包括观察、沟通、交接与病区流转。",
-            "signals": [
-              "观察",
-              "交接",
-              "病区流转"
-            ]
-          },
-          {
-            "kicker": "老年健康",
-            "title": "North York General Hospital - Senior Health Centre",
-            "text": "老年照护支持，包括 ADL、失智相关需求、跌倒预防、压力性损伤意识与家庭沟通。",
-            "signals": [
-              "失智",
-              "跌倒",
-              "家庭沟通"
-            ]
-          },
-          {
-            "kicker": "ICU 实习",
-            "title": "Humber River Hospital - 6E Intensive Care Unit",
-            "text": "ICU 实习阶段接触机械通气患者、血流动力学观察、神经系统观察与记录。",
-            "signals": [
-              "机械通气相关接触",
-              "神经观察",
-              "记录"
-            ]
-          },
-          {
-            "kicker": "急性照护",
-            "title": "St. Michael's Hospital - Fracture Clinic and General Medicine",
-            "text": "门诊与内科实习，涉及评估、记录、患者教育与照护团队沟通。",
-            "signals": [
-              "评估",
-              "记录",
-              "教育"
-            ]
-          }
-        ]
-      },
-      "capability": {
-        "eyebrow": "能力细分",
-        "title": "能力要点细分。",
-        "summary": "详细能力保持折叠，供需要细节的读者查看。",
-        "disclosureTitle": "详细能力要点",
-        "disclosureSummary": "展开分组信号。",
-        "groups": [
-          {
-            "title": "重症护理",
-            "items": [
-              "当前 ICU 岗位",
-              "重症护理培训",
-              "血流动力学监测",
-              "及时上报与升级处理准备"
-            ],
-            "note": "聚焦当前重症护理成长，不夸大执业范围。"
-          },
-          {
-            "title": "心脏 / 心律",
-            "items": [
-              "心律识别",
-              "ECG 相关记录",
-              "Coronary Care 1",
-              "BLS / ACLS 训练"
-            ],
-            "note": "心脏相关内容以床旁可用的语言记录。"
-          },
-          {
-            "title": "老年健康",
-            "items": [
-              "老年健康兴趣",
-              "InterRAI-LTCF",
-              "跌倒与压力性损伤风险",
-              "慢性病连续性"
-            ],
-            "note": "作为支持背景呈现，而不是主页主要身份。"
-          },
-          {
-            "title": "跨体系临床实践",
-            "items": [
-              "中加临床环境",
-              "内科视角",
-              "普通话沟通与资料审阅",
-              "护理计划清晰度"
-            ],
-            "note": "体系差异成为理解照护决策的临床背景。"
-          },
-          {
-            "title": "沟通",
-            "items": [
-              "SBAR 式及时上报",
-              "患者教育",
-              "双语倾听",
-              "家庭沟通"
-            ],
-            "note": "沟通被视为安全工具，而不是附加环节。"
-          },
-          {
-            "title": "临床系统实践",
-            "items": [
-              "结构化记录",
-              "清单习惯",
-              "跟进结构",
-              "流程执行一致性"
-            ],
-            "note": "技术工作仅作为辅助，服务于临床清晰度。"
-          }
-        ]
-      },
-      "education": {
-        "eyebrow": "教育与注册",
-        "title": "专业资质与当前进修。",
-        "summary": "注册、教育与培训保持折叠。",
-        "disclosureTitle": "教育与专业发展",
-        "disclosureSummary": "展开资质与培训。",
-        "items": [
-          [
-            "注册护士",
-            "持有 NSCN 执业注册；不公开私人识别信息。"
-          ],
-          [
-            "护理学理学士",
-            "Toronto Metropolitan University 护理学理学士（协作护理项目），辅修心理学，以 Distinction 毕业。"
-          ],
-          [
-            "重症护理教育",
-            "Centennial College 重症护理培训项目、Coronary Care 1 及相关 ICU 准备。"
-          ],
-          [
-            "额外学习",
-            "Conestoga College NURS8963 Transition to Nursing Practice；CIHI InterRAI-LTCF Essentials 1 与 2。"
-          ],
-          [
-            "心理学辅修",
-            "心理学学习支持患者教育、家庭沟通与稳定的跨文化倾听。"
-          ]
-        ]
-      },
-      "language": {
-        "eyebrow": "语言与跨文化实践",
-        "title": "跨语言与跨体系的临床沟通。",
-        "summary": "语言背景保持折叠，服务临床沟通。",
-        "disclosureTitle": "语言实践",
-        "disclosureSummary": "展开语言背景。",
-        "items": [
-          [
-            "英语",
-            "专业临床工作熟练度。"
-          ],
-          [
-            "普通话",
-            "母语，可支持临床沟通与临床资料阅读。"
-          ],
-          [
-            "法语",
-            "A2 主动学习。"
-          ],
-          [
-            "西班牙语",
-            "A1 休闲学习。"
-          ],
-          [
-            "跨文化实践",
-            "中加临床环境经验，支持灵活沟通、面向老年患者的方言敏感照护，以及对体系差异的理解。"
-          ]
-        ]
-      },
-      "systems": {
-        "eyebrow": "临床系统实践",
-        "title": "系统实践服务于护理。",
-        "summary": "临床流程与文档支持保持折叠，不成为主身份。",
-        "disclosureTitle": "临床流程系统细节",
-        "disclosureSummary": "展开辅助系统链接。",
-        "featureTitle": "临床系统实践支持",
-        "feature": "小型工具与清单只有在支持临床沟通、文档清晰度或后续跟进时才有意义。",
-        "links": [
-          [
-            "professional-direction.html",
-            "职业方向说明",
-            "关于当前 RN 方向的简短说明。"
-          ],
-          [
-            "systems-practice.html",
-            "临床系统实践",
-            "小型工具与习惯，用于支持文档清晰度。"
-          ]
-        ]
+        "caption": "何少霆 · Shaoting He",
+        "detail": "护理背景",
+        "clinical": "目前在 Kentville 的 Valley Regional Hospital ICU 担任全职岗位。毕业于 Toronto Metropolitan University 协作护理项目，获护理学理学士学位，以 Distinction 毕业。"
       },
       "contact": {
-        "eyebrow": "联系",
-        "title": "专业联系。",
-        "summary": "如有相关护理机会或专业交流。",
-        "location": "加拿大新斯科舍省 Kentville",
-        "text": "请求链接会打开邮件草稿，用于专业咨询。",
+        "eyebrow": "04 / 建立联系",
+        "title": "带上你的视角，\n一起把想法做出来。",
+        "intro": "欢迎开发者、设计师、支持者与创业社群。我希望找到愿意一起把有用的想法，变成实际作品的人。",
+        "paths": [
+          {
+            "number": "01",
+            "title": "一起创造",
+            "text": "你有互补的技能，或一个值得共同探索的想法？",
+            "label": "聊聊合作",
+            "subject": "Let’s collaborate"
+          },
+          {
+            "number": "02",
+            "title": "交换视角",
+            "text": "试试 UMA，聊聊 QDigest，或告诉我哪里还能更好。",
+            "label": "开始交流",
+            "subject": "A thought about your projects"
+          },
+          {
+            "number": "03",
+            "title": "支持创作",
+            "text": "愿意支持独立工具，以及把它们做出来所需要的时间？",
+            "label": "聊聊支持方式",
+            "subject": "Supporting your independent work"
+          }
+        ],
         "email": "Locutus1207@outlook.com",
-        "ctaLabel": "请求更多专业信息",
-        "note": "可在相关情况下提供更多专业资料。"
+        "footer": "独立创造，为人而做。"
       }
     },
     "meta": {
-      "siteName": "何少霆 RN",
-      "role": "注册护士",
-      "title": "何少霆 RN | ICU 临床护理档案",
-      "description": "何少霆 RN 持有 NSCN 执业注册，目前在新斯科舍省 Kentville 的 Valley Regional Hospital ICU 担任全职岗位。",
-      "ogDescription": "何少霆 RN 的 ICU 临床护理档案，呈现当前重症护理方向、老年健康背景、双语临床沟通与清晰记录。"
+      "title": "何少霆 — ICU 护士，也在创造。",
+      "description": "我是何少霆，一名在 ICU 工作的注册护士，也是一名独立开发者。了解 UMA、QDigest，以及合作与支持创作的方式。"
     },
     "ui": {
-      "skip": "跳至主要内容",
-      "language": "语言",
-      "navLabel": "主导航",
       "nav": [
         [
+          "projects",
+          "作品"
+        ],
+        [
           "focus",
-          "重点"
+          "近期投入"
         ],
         [
-          "practice",
-          "专长"
-        ],
-        [
-          "capability",
-          "细节"
-        ],
-        [
-          "timeline",
-          "证据"
-        ],
-        [
-          "education",
-          "学习"
-        ],
-        [
-          "language",
-          "语言"
-        ],
-        [
-          "systems",
-          "系统"
+          "about",
+          "关于我"
         ],
         [
           "contact",
           "联系"
         ]
-      ]
+      ],
+      "skip": "跳至主要内容",
+      "language": "语言",
+      "light": "切换浅色主题",
+      "motion": "暂停背景动效",
+      "resume": "继续背景动效",
+      "dark": "切换深色主题",
+      "reduced": "已遵循设备的减少动态效果设置",
+      "menu": "主导航",
+      "github": "GitHub",
+      "back": "回到顶部",
+      "more": "项目背后的想法",
+      "copy": "复制邮箱",
+      "copied": "邮箱已复制",
+      "copyFailed": "暂时无法复制，请使用邮件链接。",
+      "close": "关闭",
+      "projectPreview": "打开完整 UMA 演示预览",
+      "codeBlue": "Code blue",
+      "codeBlueOn": "护理彩蛋：将波形切换为室颤",
+      "codeBlueOff": "将波形恢复为正常窦性心律"
     },
     "hero": {
-      "eyebrow": "护理档案",
-      "title": "何少霆，注册护士",
-      "titleTail": "",
-      "role": "NSCN 执业注册护士，目前在新斯科舍省 Kentville 的 Valley Regional Hospital ICU 担任全职岗位。",
-      "intro": "当前聚焦 ICU / 重症护理、记录与沟通。",
-      "portraitLabel": "何少霆，RN",
-      "portraitText": "ICU 方向与清晰临床沟通。",
-      "actions": [
-        [
-          "#contact",
-          "联系"
-        ],
-        [
-          "#practice",
-          "专长"
-        ]
+      "eyebrow": "何少霆 / 注册护士",
+      "line1": "我是护士。",
+      "line2": "也在创造。",
+      "intro": "我在 ICU 照护生命，也在工作之外创造软件。两件事，都从同一个习惯开始：发现真正重要的问题，然后动手改善。",
+      "primary": "看看我在做什么",
+      "secondary": "探索 GitHub",
+      "note": "重症护理 · 加拿大新斯科舍省",
+      "current": "正在投入",
+      "currentProjects": "UMA + QDigest",
+      "scroll": "往下看看",
+      "statement": "以护理为根，\n让创造发生。",
+      "credentials": [
+        "注册护士 · NSCN",
+        "重症护理",
+        "独立开发"
       ],
-      "identity": [
-        [
-          "RN",
-          "NSCN 执业注册"
-        ],
-        [
-          "Valley Regional ICU",
-          "全职岗位"
-        ],
-        [
-          "ICU 方向",
-          "临床成长"
-        ]
-      ]
+      "signalTitle": "THE HUMAN SIGNAL",
+      "signalCaption": "关怀 × 好奇心",
+      "signalHint": "移动鼠标扰动波形 · 点击释放脉冲",
+      "signalStill": "灵感来自重症护理中的生命节律",
+      "rhythmNormal": "NSR / 正常窦性心律",
+      "rhythmVf": "VF / 心室颤动"
     },
     "footer": {
-      "text": "持有 NSCN 执业注册的注册护士，目前从事 ICU 岗位，并保留老年健康背景与临床流程支持能力。",
-      "copyright": "Copyright © 2026 何少霆。保留所有权利。未经许可，不得复制本站内容与设计。"
+      "identity": "何少霆 · 注册护士与独立开发者",
+      "note": "认真对待细节，持续保持好奇。",
+      "copyright": "© 2026 何少霆。"
     }
   }
 };
