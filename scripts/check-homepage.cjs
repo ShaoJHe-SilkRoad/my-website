@@ -185,6 +185,23 @@ for (const lang of ['en', 'zh-Hans']) {
   assert(html.includes('id="main-content" tabindex="-1"'), `${lang}: skip target can receive focus`);
   for (const id of ['theme-toggle', 'motion-toggle', 'code-blue-toggle', 'copy-email', 'copy-status']) assert(ids.has(id), `${lang}: ${id} exists`);
   assert(html.includes(`data-language="${lang}" aria-pressed="true"`), `${lang}: active language state`);
+  const page = contentContext.window.SHAOTING_HOME_CONTENT[lang];
+  for (const item of page.ui.nav) assert(ids.has(item[0]), `${lang}: nav target #${item[0]} is rendered`);
+  assert(html.includes(page.sections.focus.items[0].title), `${lang}: focus card renders`);
+  assert(html.includes(page.sections.contact.email), `${lang}: contact email renders`);
+  assert(!html.includes('c.nav') && !page.nav, `${lang}: renderer is not fed the old top-level nav`);
 }
+const sample = JSON.parse(JSON.stringify(contentContext.window.SHAOTING_HOME_CONTENT.en));
+sample.sections.projects = [
+  { id: 'qdigest', name: 'QDigest', subtitle: 'Research', status: 'In development', kind: 'Reading', headline: 'Explain', description: 'Secondary project', tags: ['EN'], url: '/qdigest/', primary: 'Read', caption: 'Edition' },
+  { id: 'uma', name: 'UMA', subtitle: 'Usage', status: 'Public', kind: 'macOS', headline: 'Limits', description: 'Lead project', tags: ['Swift'], url: 'https://github.com/ShaoJHe-SilkRoad/UMA', primary: 'View', caption: 'Preview' }
+];
+const ordered = render(sample, 'en');
+assert(ordered.indexOf('id="uma"') !== -1 && ordered.indexOf('id="qdigest"') !== -1, 'optional projects render');
+assert(ordered.indexOf('id="uma"') < ordered.indexOf('id="qdigest"'), 'UMA leads and QDigest follows when both are provided');
+const renderedKeys = ['focus', 'practice', 'timeline', 'capability', 'education', 'language', 'systems', 'contact'];
+const present = Object.keys(contentContext.window.SHAOTING_HOME_CONTENT.en.sections);
+const unrendered = present.filter(key => !renderedKeys.includes(key));
+assert.deepEqual(unrendered, [], `section keys without a renderer: ${unrendered.join(', ')}`);
 console.log('PASS: light/VF palette and lifecycle; scroll and relayout; deep-scroll anchoring; hidden-time exclusion; both locale renderers.');
 console.log(`Simulated paints/second: ${cadence.join(', ')}. This does not measure real-device frame time.`);

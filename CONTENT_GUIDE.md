@@ -4,14 +4,17 @@ This site is a static GitHub Pages style website for `shaotinghe.com`.
 
 ## Active Source Of Truth
 
-- The active public homepage is `index.html`.
-- Homepage styling, bilingual content, and rendering functions are inline in `index.html`.
-- English homepage content lives in `CONTENT.en`.
-- Simplified Chinese homepage content lives in `CONTENT["zh-Hans"]`.
+- The active public homepage is `index.html`, rebuilt by `node scripts/build-homepage.cjs`.
+- Homepage styling is `homepage.css`. Rendering is `homepage.js`.
+- Bilingual homepage copy lives in `content/homepage-content.js` as `window.SHAOTING_HOME_CONTENT`.
+- English copy is `SHAOTING_HOME_CONTENT.en`. Simplified Chinese copy is `SHAOTING_HOME_CONTENT["zh-Hans"]`.
+- The V6 contract on each language is `meta`, `ui` (including `ui.nav`), `hero`, `sections` (`focus`, `practice`, `timeline`, `capability`, `education`, `language`, `systems`, `contact`), and `footer`.
+- `content/generated/homepage-content.generated.js` is the review export. It is not loaded by `index.html`.
 - The linked note pages are `main-quest.html` and `side-quest.html`.
 - Shared note page styling lives in `notes.css`.
-- Current V3 homepage sections are:
+- Current homepage sections are:
   - `#top` Hero / Clinical Identity
+  - `#focus` Current Focus
   - `#practice` Practice Domains
   - `#timeline` Clinical Timeline
   - `#capability` Clinical Capability Index
@@ -44,14 +47,15 @@ Owner approval required before publication:
 
 Section content locations:
 
-- Hero / Clinical Identity: `CONTENT.en.hero` and `CONTENT["zh-Hans"].hero`.
-- Practice Domains: `CONTENT.en.sections.practice` and `CONTENT["zh-Hans"].sections.practice`.
-- Clinical Timeline: `CONTENT.en.sections.timeline` and `CONTENT["zh-Hans"].sections.timeline`.
-- Clinical Capability Index: `CONTENT.en.sections.capability` and `CONTENT["zh-Hans"].sections.capability`.
-- Education & Registration: `CONTENT.en.sections.education` and `CONTENT["zh-Hans"].sections.education`.
-- Language & Cross-Cultural Practice: `CONTENT.en.sections.language` and `CONTENT["zh-Hans"].sections.language`.
-- Technical / Systems Practice: `CONTENT.en.sections.systems` and `CONTENT["zh-Hans"].sections.systems`.
-- Contact: `CONTENT.en.sections.contact` and `CONTENT["zh-Hans"].sections.contact`.
+- Hero / Clinical Identity: `SHAOTING_HOME_CONTENT.en.hero` and `SHAOTING_HOME_CONTENT["zh-Hans"].hero`.
+- Current Focus: `SHAOTING_HOME_CONTENT.en.sections.focus` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.focus`.
+- Practice Domains: `SHAOTING_HOME_CONTENT.en.sections.practice` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.practice`.
+- Clinical Timeline: `SHAOTING_HOME_CONTENT.en.sections.timeline` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.timeline`.
+- Clinical Capability Index: `SHAOTING_HOME_CONTENT.en.sections.capability` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.capability`.
+- Education & Registration: `SHAOTING_HOME_CONTENT.en.sections.education` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.education`.
+- Language & Cross-Cultural Practice: `SHAOTING_HOME_CONTENT.en.sections.language` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.language`.
+- Technical / Systems Practice: `SHAOTING_HOME_CONTENT.en.sections.systems` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.systems`.
+- Contact: `SHAOTING_HOME_CONTENT.en.sections.contact` and `SHAOTING_HOME_CONTENT["zh-Hans"].sections.contact`.
 
 English / Simplified Chinese parity rules:
 
@@ -76,12 +80,12 @@ Do not update those files for normal public-site content changes unless the CMS/
 
 ## Safe Update Workflow
 
-1. Edit homepage copy in `index.html` only.
-2. For every homepage wording change, update both English and Simplified Chinese content in the same pass.
-3. Keep repeated UI labels aligned across nav, compact nav, section headings, back-link copy, metadata, and any accent-rendering logic.
+1. Edit homepage copy in `content/homepage-content.js`, keeping English and Simplified Chinese on the same V6 keys.
+2. Rebuild the static shell with `node scripts/build-homepage.cjs`. The public site does not call Notion.
+3. To refresh from Notion later: run the existing static sync so it writes `content/generated/homepage-content.generated.js`, review that file, then replace `content/homepage-content.js` with the V6 payload and drop any review-only banner. Rebuild `index.html` after the replacement.
 4. Edit note-page copy directly in `main-quest.html` or `side-quest.html`.
-5. Preserve active V2 anchors: `#top`, `#practice`, `#timeline`, `#capability`, `#education`, `#language`, `#systems`, `#contact`, and `#main-content`.
-6. Preserve contact links, social links, favicon paths, and root-level image paths unless every reference is updated and verified.
+5. Preserve anchors `#top`, `#focus`, `#practice`, `#timeline`, `#capability`, `#education`, `#language`, `#systems`, `#contact`, and `#main-content`.
+6. Preserve contact links, favicon paths, and root-level image paths unless every reference is updated and verified.
 
 ## Design Direction
 
