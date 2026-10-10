@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Install AUV / 安装 AUV — AUV | Shaoting He</title>
+<meta name="description" content="Download, install and upgrade AUV on your Mac. English instructions first, followed by Chinese.">
+<link rel="canonical" href="https://shaotinghe.com/auv/install/">
+<link rel="icon" href="/favicon-32x32.png"><meta name="color-scheme" content="dark light">
+<link rel="stylesheet" href="/product-guide.css?v=auv-guides-20261010">
+<script defer src="/product-guide.js?v=auv-guides-20261010"></script>
+</head>
+<body data-language-mode="both">
+<a class="skip-link" href="#guide-content">Skip to guide / 跳到指南</a>
+<header class="guide-header"><a href="/">SHAOTING HE</a>
+<nav aria-label="AUV guides"><a href="/#uma">AUV</a><a href="/auv/install/">Install / 安装</a><a href="/threados/">ThreadOS / 线程工</a><a href="/sectorium/">Sectorium / 分区工</a></nav>
+<div class="tools"><a href="#english-installation-guide">English</a><a href="#中文安装指南" lang="zh-Hans">中文</a><button id="guide-theme" aria-label="Toggle light and dark appearance / 切换明暗">◐</button></div></header>
+<main id="guide-content"><article class="guide" lang="en" id="english-installation-guide"><h1>Install AUV</h1><p>AUV 0.15.1 · build 2026101002</p><h2>Before you start</h2>
+<p>You need <strong>macOS 14 or later and an Apple silicon Mac (M-series chip)</strong>. Check Apple menu → About This Mac if you are unsure. This release does not include an Intel version.</p>
+<p>AUV 0.15.1 includes ThreadOS and Sectorium. You only need one app download.</p>
+<h2>Install</h2>
+<ol>
+<li><a href="https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.15.1/AUV-0.15.1-build2026101002.zip">Download AUV-0.15.1-build2026101002.zip</a>. Choose this application ZIP, not GitHub’s “Source code” download.</li>
+<li>Double-click the ZIP in Finder. It extracts <strong><code>UMA.app</code></strong> — the app opens as <strong>AUV</strong>, but keeps its old filename for compatibility.</li>
+<li>Drag it into <strong>Applications</strong> on your Mac’s internal disk. Your personal <code>~/Applications</code> folder also works. Keep the app on the internal disk if you plan to eject an external development drive.</li>
+<li>Open the installed copy and follow the normal macOS first-open prompt. This release is Developer ID signed and Apple notarized.</li>
+<li>Open <strong>AUV → About AUV</strong> and check <strong>0.15.1</strong>. The build number is <strong>2026101002</strong>; Finder → Get Info can also show the installed app’s version details.</li>
+</ol>
+<h2>Upgrade from UMA or an older AUV</h2>
+<p>Quit the old app through its menu — closing the window may leave it running in the menu bar. Keep a copy of the old app as a backup, then replace it with the new <code>UMA.app</code> in the same installation folder. Open the new copy.</p>
+<p>Your saved settings are retained. You do not need to clear preferences, history or caches. Installing AUV does not automatically install or activate Sectorium’s storage tools.</p>
+<h2>What to do after opening</h2>
+<ul>
+<li><strong>AUV:</strong> choose an agent to see the usage information available for its account.</li>
+<li><strong>ThreadOS:</strong> choose each role’s model and thinking level, copy the instruction, and paste it into your Leader conversation. <a href="https://shaotinghe.com/threados/">ThreadOS guide</a>.</li>
+<li><strong>Sectorium:</strong> follow the <a href="https://shaotinghe.com/sectorium/">setup guide</a> before using storage actions. It is still experimental: back up important data and start with noncritical data. Do not unplug a drive until its complete safe-eject operation succeeds.</li>
+</ul>
+<h2>If something goes wrong</h2>
+<ul>
+<li><strong>An older version opens:</strong> quit it, then open the copy in your chosen Applications folder rather than Downloads.</li>
+<li><strong>macOS blocks the app or says it is damaged:</strong> download it again from the official release and check the file below. Do not disable system security or force it open. If the problem remains, <a href="https://github.com/ShaoJHe-SilkRoad/UMA/issues">report the message</a>.</li>
+<li><strong>You need to go back:</strong> quit AUV and restore your backed-up app to the same folder. This restores the app only; it does not undo changes to Sectorium tools, services or disk data.</li>
+</ul>
+<h2>Optional: verify your download</h2>
+<p>For the ZIP saved with its original name in Downloads, run:</p>
+<pre><code>shasum -a 256 ~/Downloads/AUV-0.15.1-build2026101002.zip</code></pre>
+<p>The first value should match:</p>
+<pre><code>598bd61b8a439dde426b943bee3f84e57ad46bba96b94747405ae687825d505e</code></pre>
+<p>If it differs, do not install that file. Download it again. The <a href="https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v0.15.1">release page</a> also provides <code>HASHES.txt</code> and the signing record. The signing identity is <strong>SHAOTING HE (C6TUZVJ6SJ)</strong>.</p></article>
+<article class="guide" lang="zh-Hans" id="中文安装指南"><h2>安装 AUV</h2><p>AUV 0.15.1 · 构建号 2026101002</p><h3>安装前</h3>
+<p>需要 <strong>macOS 14 或更新版本，以及 Apple silicon Mac（M 系列芯片）</strong>。不确定时，可在苹果菜单 →“关于本机”查看。本版不提供 Intel 版本。</p>
+<p>AUV 0.15.1 已包含线程工和分区工，只需下载一个应用。</p>
+<h3>安装</h3>
+<ol>
+<li><a href="https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.15.1/AUV-0.15.1-build2026101002.zip">下载 AUV-0.15.1-build2026101002.zip</a>。请选择这个应用 ZIP，不要选择 GitHub 的“Source code”源码包。</li>
+<li>在 Finder 中双击解压，得到 <strong><code>UMA.app</code></strong>。打开后显示为 <strong>AUV</strong>，文件名沿用旧名以兼容已有安装。</li>
+<li>将它拖入 Mac 内置盘的<strong>“应用程序”</strong>文件夹，也可以使用个人 <code>~/Applications</code> 文件夹。如果以后需要弹出外接开发硬盘，应用本身请放在内置盘。</li>
+<li>打开安装后的应用，按 macOS 正常首次启动提示操作。本版已使用 Developer ID 签名，并通过 Apple 公证。</li>
+<li>在 <strong>AUV → 关于 AUV</strong> 中确认版本为 <strong>0.15.1</strong>。构建号为 <strong>2026101002</strong>；Finder →“显示简介”也可查看已安装应用的版本信息。</li>
+</ol>
+<h3>从 UMA 或旧版 AUV 升级</h3>
+<p>先通过菜单正常退出旧应用；只关窗口可能仍会在菜单栏运行。保留一份旧应用备份，再用新的 <code>UMA.app</code> 替换原安装文件夹中的应用，然后打开新版。</p>
+<p>已保存的设置会保留，无需清空偏好、历史或缓存。安装 AUV 不会自动安装或启用分区工的存储工具。</p>
+<h3>打开后做什么</h3>
+<ul>
+<li><strong>AUV：</strong>选择代理，查看其账户能够提供的用量信息。</li>
+<li><strong>线程工：</strong>分别选择角色的模型与思考档位，复制指令，粘贴给 Leader。<a href="https://shaotinghe.com/threados/">线程工指南</a>。</li>
+<li><strong>分区工：</strong>先阅读<a href="https://shaotinghe.com/sectorium/">设置指南</a>，再使用磁盘操作。它仍是试验功能，请先备份重要数据，用非关键数据试用；完整安全弹出成功前不要拔盘。</li>
+</ul>
+<h3>遇到问题</h3>
+<ul>
+<li><strong>打开的还是旧版：</strong>正常退出后，从选定的“应用程序”文件夹打开，不要打开“下载”里的旧副本。</li>
+<li><strong>macOS 阻止启动或提示应用损坏：</strong>从正式发布页重新下载，并按下方方法校验。不要关闭系统安全检查或强行启动。仍有问题时，请<a href="https://github.com/ShaoJHe-SilkRoad/UMA/issues">反馈具体提示</a>。</li>
+<li><strong>需要退回旧版：</strong>退出 AUV，将备份的旧应用放回原位置。这只回退应用，不会撤销分区工工具、服务或磁盘数据的变化。</li>
+</ul>
+<h3>可选：校验下载文件</h3>
+<p>如果 ZIP 保留原名并位于“下载”文件夹，在终端执行：</p>
+<pre><code>shasum -a 256 ~/Downloads/AUV-0.15.1-build2026101002.zip</code></pre>
+<p>输出的第一个值应为：</p>
+<pre><code>598bd61b8a439dde426b943bee3f84e57ad46bba96b94747405ae687825d505e</code></pre>
+<p>不一致就不要安装，请重新下载。<a href="https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v0.15.1">正式发布页</a>也提供 <code>HASHES.txt</code> 和签名记录；签名者为 <strong>SHAOTING HE (C6TUZVJ6SJ)</strong>。</p></article></main>
+</body></html>

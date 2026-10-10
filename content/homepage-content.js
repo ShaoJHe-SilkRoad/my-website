@@ -1,11 +1,9 @@
-// Public bilingual portfolio content. Update English and Chinese together.
-// Project visibility verified against GitHub on 2026-09-04.
-// QDigest is described at project level; no private repository or operational data is exposed.
-(function(window) { "use strict"; window.SHAOTING_HOME_CONTENT = {
+/* Bilingual homepage content. */
+window.SHAOTING_HOME_CONTENT = {
   "en": {
     "meta": {
       "title": "Shaoting He — ICU Nurse. Independent Builder.",
-      "description": "ICU nurse. Independent builder. Shaoting He brings a nurse’s attention to the software he creates. Explore UMA, QDigest, and ways to collaborate."
+      "description": "ICU nurse. Independent builder. Shaoting He brings a nurse’s attention to the software he creates. Explore AUV, QDigest, and ways to collaborate."
     },
     "nav": [
       [
@@ -41,7 +39,7 @@
       "copied": "Email copied",
       "copyFailed": "Copy unavailable. Use the email link.",
       "close": "Close",
-      "projectPreview": "Open full UMA demo preview",
+      "projectPreview": "View AUV screenshot",
       "codeBlue": "Code blue",
       "codeBlueOn": "Nurse joke: switch the waveform to V-Fib",
       "codeBlueOff": "Return the waveform to normal sinus rhythm"
@@ -55,7 +53,7 @@
       "secondary": "Explore GitHub",
       "note": "ICU practice · Nova Scotia, Canada",
       "current": "CURRENTLY BUILDING",
-      "currentProjects": "UMA + QDigest",
+      "currentProjects": "AUV + QDigest",
       "scroll": "A little further down",
       "statement": "Care is my discipline.\nCreation is my drive.",
       "credentials": [
@@ -82,26 +80,26 @@
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "Public repository",
-        "kind": "macOS · Developer tools",
-        "headline": "Know your limits. Keep your flow.",
-        "description": "AUV (formerly UMA) brings agent usage, ThreadOS team instructions and early-development Sectorium storage tools into one native Mac app.",
+        "status": "0.15.1 available",
+        "kind": "Mac app",
+        "headline": "See usage. Set your team. Use a development disk.",
+        "description": "Check remaining AI usage, choose models and thinking levels for your coding team, and try virtual development-disk tools. One app, three workspaces. Sectorium is still in early development.",
         "tags": [
-          "SwiftUI + AppKit",
-          "macOS",
-          "EN / 中文"
+          "macOS 14+",
+          "Apple silicon",
+          "English / 中文"
         ],
-        "primary": "View repository",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA",
-        "secondary": "Releases",
-        "secondaryUrl": "https://github.com/ShaoJHe-SilkRoad/UMA/releases",
-        "caption": "AUV 0.15.1 native candidate · sample data",
-        "whyTitle": "The question",
-        "why": "How can keeping track of AI usage feel like a natural part of the desktop, instead of another dashboard to manage?",
-        "focusTitle": "What I’m working toward",
-        "focus": "Clearer interfaces, useful usage context, and a dependable native Mac experience.",
-        "inviteTitle": "Where you can help",
-        "invite": "Try the public project, share a confusing moment, or bring a fresh product perspective."
+        "primary": "Download AUV",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.15.1/AUV-0.15.1-build2026101002.zip",
+        "secondary": "Installation guide",
+        "secondaryUrl": "/auv/install/",
+        "caption": "AUV 0.15.1 · sample data",
+        "whyTitle": "What it is for",
+        "why": "AI usage, coding-team model settings and virtual development disks in one Mac app.",
+        "focusTitle": "How to start",
+        "focus": "Download the app and move it to Applications. In ThreadOS, copy one instruction and paste it into the Leader for your development folder.",
+        "inviteTitle": "Before you try it",
+        "invite": "Sectorium is experimental. Back up and use noncritical data; live disk operations have not been tested for this release."
       },
       {
         "id": "bid",
@@ -146,10 +144,10 @@
     "focus": {
       "eyebrow": "02 / CURRENT FOCUS",
       "title": "What I’m\nimproving.",
-      "intro": "My current development priorities in UMA and QDigest.",
+      "intro": "My current development priorities in AUV and QDigest.",
       "items": [
         {
-          "label": "UMA / PRODUCT EXPERIENCE",
+          "label": "AUV / PRODUCT EXPERIENCE",
           "title": "Usage, understood at a glance.",
           "text": "Refining how usage, limits, and recent tasks are presented across the desktop app and menu bar.",
           "link": "#uma"
@@ -192,7 +190,7 @@
         {
           "number": "02",
           "title": "Share a perspective",
-          "text": "Try UMA, talk about QDigest, or tell me what could work better.",
+          "text": "Try AUV, talk about QDigest, or tell me what could work better.",
           "label": "Start a conversation",
           "subject": "A thought about your projects"
         },
@@ -216,7 +214,7 @@
   "zh-Hans": {
     "meta": {
       "title": "何少霆 — ICU 护士，也在创造。",
-      "description": "我是何少霆，一名在 ICU 工作的注册护士，也是一名独立开发者。了解 UMA、QDigest，以及合作与支持创作的方式。"
+      "description": "我是何少霆，一名在 ICU 工作的注册护士，也是一名独立开发者。了解 AUV、QDigest，以及合作与支持创作的方式。"
     },
     "nav": [
       [
@@ -252,7 +250,7 @@
       "copied": "邮箱已复制",
       "copyFailed": "暂时无法复制，请使用邮件链接。",
       "close": "关闭",
-      "projectPreview": "打开完整 UMA 演示预览",
+      "projectPreview": "查看 AUV 界面截图",
       "codeBlue": "Code blue",
       "codeBlueOn": "护理彩蛋：将波形切换为室颤",
       "codeBlueOff": "将波形恢复为正常窦性心律"
@@ -266,7 +264,7 @@
       "secondary": "探索 GitHub",
       "note": "重症护理 · 加拿大新斯科舍省",
       "current": "正在投入",
-      "currentProjects": "UMA + QDigest",
+      "currentProjects": "AUV + QDigest",
       "scroll": "往下看看",
       "statement": "以护理为根，\n让创造发生。",
       "credentials": [
@@ -293,26 +291,26 @@
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "公开仓库",
-        "kind": "macOS · 开发者工具",
-        "headline": "掌握用量，专注创造。",
-        "description": "AUV（原名 UMA）在原生 Mac 应用中整合代理用量、ThreadOS（线程工）团队指令和早期开发阶段的 Sectorium（分区工）存储工具。",
+        "status": "0.15.1 已发布",
+        "kind": "Mac 应用",
+        "headline": "看用量，设团队，用开发盘。",
+        "description": "查看 AI 剩余额度，分别设置开发团队的模型与思考档位，并试用虚拟开发盘工具。一个应用，三个功能区。分区工仍处于早期开发阶段。",
         "tags": [
-          "SwiftUI + AppKit",
-          "macOS",
-          "EN / 中文"
+          "macOS 14+",
+          "Apple silicon",
+          "中英文"
         ],
-        "primary": "查看代码仓库",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA",
-        "secondary": "发布版本",
-        "secondaryUrl": "https://github.com/ShaoJHe-SilkRoad/UMA/releases",
-        "caption": "AUV 0.15.1 原生候选 · 样例数据",
-        "whyTitle": "我在思考的问题",
-        "why": "关注 AI 用量，能否成为桌面体验中自然的一部分，而不用再多管理一个仪表盘？",
-        "focusTitle": "正在努力的方向",
-        "focus": "更清楚的界面、更有用的用量信息，以及可靠的原生 Mac 体验。",
-        "inviteTitle": "欢迎你的参与",
-        "invite": "试用公开项目，分享让你困惑的地方，或带来新的产品视角。"
+        "primary": "下载 AUV",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.15.1/AUV-0.15.1-build2026101002.zip",
+        "secondary": "安装指南",
+        "secondaryUrl": "/auv/install/",
+        "caption": "AUV 0.15.1 · 示例数据",
+        "whyTitle": "用来做什么",
+        "why": "把 AI 用量、团队模型设置和虚拟开发盘管理放在同一个 Mac 应用里。",
+        "focusTitle": "怎么开始",
+        "focus": "下载后移入“应用程序”。线程工生成一条指令，复制并粘贴给负责开发目录的 Leader。",
+        "inviteTitle": "使用前须知",
+        "invite": "分区工仍是试验功能，请先备份并使用非关键数据；本版尚未完成真实磁盘操作测试。"
       },
       {
         "id": "bid",
@@ -357,10 +355,10 @@
     "focus": {
       "eyebrow": "02 / 正在投入",
       "title": "最近在\n打磨什么。",
-      "intro": "UMA 与 QDigest 当前的开发重点。",
+      "intro": "AUV 与 QDigest 当前的开发重点。",
       "items": [
         {
-          "label": "UMA / 产品体验",
+          "label": "AUV / 产品体验",
           "title": "让用量信息，一眼就懂。",
           "text": "打磨桌面应用与菜单栏中的用量、额度和近期任务展示，让关键信息更容易读懂。",
           "link": "#uma"
@@ -403,7 +401,7 @@
         {
           "number": "02",
           "title": "交换视角",
-          "text": "试试 UMA，聊聊 QDigest，或告诉我哪里还能更好。",
+          "text": "试试 AUV，聊聊 QDigest，或告诉我哪里还能更好。",
           "label": "开始交流",
           "subject": "A thought about your projects"
         },
@@ -424,4 +422,4 @@
       "copyright": "© 2026 何少霆。"
     }
   }
-}; })(window);
+};

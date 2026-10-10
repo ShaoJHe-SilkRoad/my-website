@@ -3,3 +3,5 @@ body{line-height:1.75}.guide-header{position:sticky;top:0;z-index:10;background:
 .guide p,.guide ol,.guide figure,.guide table{margin:16px 0}.guide a{text-decoration:underline;text-underline-offset:3px}.guide p,.guide td,.guide li{overflow-wrap:anywhere}
 
 .guide h3{font-size:19px;margin:24px 0 10px}.guide pre{max-width:100%;padding:12px;border:1px solid var(--line,#456);white-space:pre-wrap;overflow-wrap:anywhere}.guide code{font-size:.9em;overflow-wrap:anywhere}
+
+.guide li+li{margin-top:8px}.guide th{font-weight:600}.guide[id]{scroll-margin-top:120px}.guide+.guide{border-top:1px solid var(--line,#456)}

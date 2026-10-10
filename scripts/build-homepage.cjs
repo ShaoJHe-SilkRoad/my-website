@@ -36,9 +36,9 @@ fs.writeFileSync(root+'/index.html',`<!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="homepage.css?v=review-20260905-9">
 <script>(function(){try{var t=localStorage.getItem('sh-theme');document.documentElement.dataset.theme=t==='light'?'light':'dark';}catch(e){}})();</script>
-<script defer src="content/homepage-content.js?v=review-20260905-9"></script>
+<script defer src="content/homepage-content.js?v=auv-guides-20261010"></script>
 <script defer src="ambient.js?v=review-20260905-9"></script>
-<script defer src="homepage.js?v=review-20260905-9"></script>
+<script defer src="homepage.js?v=auv-guides-20261010"></script>
 </head>
 <body>
 <div class="ambient-backdrop" aria-hidden="true"><canvas id="ambient-field" aria-hidden="true"></canvas></div>
