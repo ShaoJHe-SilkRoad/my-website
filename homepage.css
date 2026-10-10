@@ -138,6 +138,35 @@ html{scroll-padding-top:100px}
   .header-row{gap:4px}.header-tools{gap:1px}.code-blue{margin-right:2px;padding-inline:8px}
   .project-copy{padding:24px 20px}
 }
+/* AUV uses a readable, full-width real screenshot rather than a decorative thumbnail. */
+.project--uma{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+.project--uma .project-actions{flex-wrap:wrap;gap:12px 20px}
+.project--uma .project-actions .button{flex-shrink:0}
+.project--uma .uma-art{min-height:0;padding:40px 28px;flex-direction:column;gap:22px;background:radial-gradient(ellipse at 50% 45%,#1a3e60 0%,#0b2138 58%,#08182c 100%)}
+.project--uma .art-label{position:static;width:100%;font-size:11px;letter-spacing:.12em;color:#b6cce2}
+.project--uma .uma-preview{display:block;position:relative;width:100%;max-width:680px;flex-shrink:0;aspect-ratio:1520/1042;transform:none;border-radius:14px;box-shadow:0 24px 48px #0005,0 0 0 1px #c0dcf033;transition:transform .2s,box-shadow .2s}
+/* Crop only the black desktop padding: window bounds (112,76)-(1632,1118), canvas 1744x1256. */
+.project--uma .uma-preview img{position:absolute;width:114.736842%;max-width:none;height:auto;left:-7.368421%;top:-7.293666%}
+.project--uma .uma-preview:hover{transform:translateY(-3px);box-shadow:0 28px 52px #0006,0 0 0 1px #c0dcf066}
+.project--uma .project-art figcaption{position:static;width:100%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;text-align:left;font-size:11px;color:#b6cce2}
+.preview-open{display:inline-flex;align-items:center;gap:6px;color:#d9eaff}
+:root[data-theme=light] .project--uma .uma-art{background:radial-gradient(ellipse at 50% 45%,#d1e1ef 0%,#e4edf5 70%,#eef4fa 100%)}
+:root[data-theme=light] .project--uma .art-label,:root[data-theme=light] .project--uma .project-art figcaption{color:#435f7a}
+:root[data-theme=light] .preview-open{color:#164b7b}
+@media(max-width:1000px) and (min-width:760px){
+  .project--uma{grid-template-columns:1fr}
+  .project--uma .uma-art{padding:32px;gap:18px}
+  .project--uma .uma-preview{max-width:720px}
+  .project--uma .project-copy{padding:32px}
+  .project--uma .project-copy h4{max-width:none}
+}
+@media(max-width:759px){
+  .project--uma .uma-art{padding:26px 18px;gap:16px}
+  .project--uma .uma-preview{border-radius:10px}
+  .project--uma .project-art figcaption{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){.project--uma .uma-preview{transition:none}.project--uma .uma-preview:hover{transform:none}}
+
 /* Print is a readable document, independent of the saved theme or emergency palette. */
 @media print{
   :root,:root[data-theme=light],:root[data-rhythm=vf]{color-scheme:light;--bg:#fff;--surface:#fff;--ink:#14202d;--muted:#364351;--faint:#465466;--line:#bac3cc;--accent:#194875;--solid:#194875;--solid-ink:#fff;--card:#fff;--wash:#fff;--orange:#194875}
