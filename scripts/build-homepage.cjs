@@ -36,8 +36,8 @@ fs.writeFileSync(root+'/index.html',`<!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="homepage.css?v=auv-0162">
 <script>(function(){try{var t=localStorage.getItem('sh-theme');document.documentElement.dataset.theme=t==='light'?'light':'dark';}catch(e){}})();</script>
-<script defer src="content/auv-releases.js?v=auv-0162"></script>
-<script defer src="content/homepage-content.js?v=auv-0162"></script>
+<script defer src="content/auv-releases.js?v=auv-mac-0163"></script>
+<script defer src="content/homepage-content.js?v=auv-mac-0163"></script>
 <script defer src="ambient.js?v=review-20260905-9"></script>
 <script defer src="homepage.js?v=auv-0162"></script>
 </head>

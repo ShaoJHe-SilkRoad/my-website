@@ -13,11 +13,11 @@ window.AUV_RELEASES = {
     }
   },
   "macos": {
-    "version": "0.15.1",
-    "build": "2026101002",
-    "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.15.1/AUV-0.15.1-build2026101002.zip",
-    "release": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v0.15.1",
-    "sha256": "598bd61b8a439dde426b943bee3f84e57ad46bba96b94747405ae687825d505e",
+    "version": "0.16.3",
+    "build": "2026101101",
+    "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.16.3/AUV_Mac_0.16.3.zip",
+    "release": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v0.16.3",
+    "sha256": "d89f8be1ff76ceb9e4381666bf8f590541d02662995f30c74c5876383ab66039",
     "requirements": {
       "en": "macOS 14+ · Apple silicon",
       "zh-Hans": "macOS 14 或更新 · Apple silicon"
