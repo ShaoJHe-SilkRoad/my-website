@@ -1,7 +1,7 @@
 // Run node scripts/build-homepage.cjs after editing homepage content or markup.
 const fs=require('fs'),vm=require('vm');
 const root=require('path').resolve(__dirname,'..');
-const context={window:{}};vm.runInNewContext(fs.readFileSync(root+'/content/homepage-content.js','utf8'),context);
+const context={window:{}};vm.runInNewContext(fs.readFileSync(root+'/content/auv-releases.js','utf8'),context);vm.runInNewContext(fs.readFileSync(root+'/content/homepage-content.js','utf8'),context);
 const c=context.window.SHAOTING_HOME_CONTENT.en, render=require(root+'/homepage.js');
 const escape=s=>s.replace(/&/g,'&amp;').replace(/"/g,'&quot;');
 fs.writeFileSync(root+'/index.html',`<!DOCTYPE html>
@@ -34,11 +34,12 @@ fs.writeFileSync(root+'/index.html',`<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="homepage.css?v=auv-preview-20261010">
+<link rel="stylesheet" href="homepage.css?v=auv-0162">
 <script>(function(){try{var t=localStorage.getItem('sh-theme');document.documentElement.dataset.theme=t==='light'?'light':'dark';}catch(e){}})();</script>
-<script defer src="content/homepage-content.js?v=auv-guides-20261010"></script>
+<script defer src="content/auv-releases.js?v=auv-0162"></script>
+<script defer src="content/homepage-content.js?v=auv-0162"></script>
 <script defer src="ambient.js?v=review-20260905-9"></script>
-<script defer src="homepage.js?v=auv-preview-20261010"></script>
+<script defer src="homepage.js?v=auv-0162"></script>
 </head>
 <body>
 <div class="ambient-backdrop" aria-hidden="true"><canvas id="ambient-field" aria-hidden="true"></canvas></div>
@@ -46,3 +47,15 @@ fs.writeFileSync(root+'/index.html',`<!DOCTYPE html>
 </body>
 </html>
 `);
+
+// The install page remains static and bilingual; release metadata has one source.
+const releases=context.window.AUV_RELEASES;
+const safe=s=>String(s).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;');
+let guide=fs.readFileSync(root+'/auv/install/index.html','utf8');
+for(const lang of ['en','zh-Hans']) {
+ const buttons='<div class="platform-downloads">'+['windows','macos'].map(platform=>{const r=releases[platform],name=platform==='windows'?'Windows':'macOS',label=(lang==='en'?'Download for '+name:'下载 '+name+' 版')+' · v'+r.version;return '<div class="platform-download"><a class="button button--small" href="'+safe(r.url)+'">'+safe(label)+'</a><p class="download-requirements">'+safe(r.requirements[lang])+'</p></div>';}).join('')+'</div>';
+ const begin='<!--AUV-DOWNLOADS:'+lang+'-->',end='<!--/AUV-DOWNLOADS:'+lang+'-->',a=guide.indexOf(begin),b=guide.indexOf(end);
+ if(a<0||b<0)throw Error('Missing install download markers: '+lang);
+ guide=guide.slice(0,a+begin.length)+buttons+guide.slice(b);
+}
+fs.writeFileSync(root+'/auv/install/index.html',guide);

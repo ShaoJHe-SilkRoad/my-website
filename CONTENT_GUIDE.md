@@ -4,21 +4,17 @@ This site is a static GitHub Pages style website for `shaotinghe.com`.
 
 ## Active Source Of Truth
 
-- The active public homepage is `index.html`.
-- Homepage styling, bilingual content, and rendering functions are inline in `index.html`.
-- English homepage content lives in `CONTENT.en`.
-- Simplified Chinese homepage content lives in `CONTENT["zh-Hans"]`.
-- The linked note pages are `main-quest.html` and `side-quest.html`.
-- Shared note page styling lives in `notes.css`.
-- Current V3 homepage sections are:
-  - `#top` Hero / Clinical Identity
-  - `#practice` Practice Domains
-  - `#timeline` Clinical Timeline
-  - `#capability` Clinical Capability Index
-  - `#education` Education & Registration
-  - `#language` Language & Cross-Cultural Practice
-  - `#systems` Technical / Systems Practice
-  - `#contact` Contact
+- Bilingual homepage content: `content/homepage-content.js` (`window.SHAOTING_HOME_CONTENT.en` / `['zh-Hans']`).
+- Platform release metadata: `content/auv-releases.js`. Keep Windows and Mac versions/assets separate; verify public downloads before promotion.
+- Renderer: `homepage.js`; styles: `homepage.css`; ambient behavior: `ambient.js`.
+- `index.html` is the generated document shell and complete static English fallback.
+- Run `node scripts/build-homepage.cjs` after homepage/release changes. It regenerates the homepage and platform download choices in the bilingual `auv/install/index.html` guide.
+- Run `node scripts/check-homepage.cjs`; preview desktop/mobile, language switching, light/dark, focus and no-JS fallback.
+- Active sections: `#top`, `#projects`, `#uma`, `#bid`, `#focus`, `#about`, `#contact`. Preserve compatibility anchors.
+- Product guides: `/auv/install/`, `/threados/`, `/sectorium/`. Existing Mac screenshots must remain platform-labeled.
+- Keep cache versions synchronized when changing loaded scripts/styles. Preserve the existing GitHub Pages deployment.
+
+The historical content map below describes the earlier V3 structure; do not use its inline CONTENT paths for the active homepage.
 
 ## Public-Safe Content Map
 
@@ -76,7 +72,7 @@ Do not update those files for normal public-site content changes unless the CMS/
 
 ## Safe Update Workflow
 
-1. Edit homepage copy in `index.html` only.
+1. Edit `content/homepage-content.js` and the relevant renderer/styles; regenerate `index.html` with `node scripts/build-homepage.cjs`.
 2. For every homepage wording change, update both English and Simplified Chinese content in the same pass.
 3. Keep repeated UI labels aligned across nav, compact nav, section headings, back-link copy, metadata, and any accent-rendering logic.
 4. Edit note-page copy directly in `main-quest.html` or `side-quest.html`.

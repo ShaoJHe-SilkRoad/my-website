@@ -71,7 +71,7 @@ window.SHAOTING_HOME_CONTENT = {
     "work": {
       "eyebrow": "01 / FROM OBSERVATION TO SOFTWARE",
       "title": "The work speaks.",
-      "intro": "A native Mac companion for AI usage. A bilingual news digest. Two tools I’m building to make information easier to use.",
+      "intro": "Native AI usage tools for Windows and Mac. A bilingual research digest. Making information easier to use.",
       "all": "Explore my GitHub"
     },
     "projects": [
@@ -80,26 +80,26 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "0.15.1 available",
-        "kind": "Mac app",
-        "headline": "See usage. Set your team. Use a development disk.",
-        "description": "Check remaining AI usage, choose models and thinking levels for your coding team, and try virtual development-disk tools. One app, three workspaces. Sectorium is still in early development.",
+        "status": "Windows 0.16.2 · macOS 0.15.1",
+        "kind": "Windows & Mac app",
+        "headline": "See usage. Set your team.",
+        "description": "Native desktop usage with a floating Wizard and tray/menu bar. ThreadOS generates team instructions; features vary by platform. Windows Sectorium is UI only.",
         "tags": [
-          "macOS 14+",
-          "Apple silicon",
+          "Windows 11 x64",
+          "macOS 14+ · Apple silicon",
           "English / 中文"
         ],
         "primary": "Download AUV",
         "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.15.1/AUV-0.15.1-build2026101002.zip",
         "secondary": "Installation guide",
         "secondaryUrl": "/auv/install/",
-        "caption": "AUV 0.15.1 · sample data",
+        "caption": "macOS 0.15.1 · sample data",
         "whyTitle": "What it is for",
-        "why": "AI usage, coding-team model settings and virtual development disks in one Mac app.",
+        "why": "See AI usage on your desktop and configure coding-team instructions.",
         "focusTitle": "How to start",
-        "focus": "Download the app and move it to Applications. In ThreadOS, copy one instruction and paste it into the Leader for your development folder.",
+        "focus": "Choose your platform and follow its installation guide. Copy ThreadOS instructions and paste them into your Leader.",
         "inviteTitle": "Before you try it",
-        "invite": "Sectorium is experimental. Back up and use noncritical data; live disk operations have not been tested for this release."
+        "invite": "Windows is unsigned; WorkBuddy sync is experimental, Claude/Antigravity live transports are unavailable, and Sectorium storage is not implemented. Mac Sectorium remains experimental."
       },
       {
         "id": "bid",
@@ -282,7 +282,7 @@ window.SHAOTING_HOME_CONTENT = {
     "work": {
       "eyebrow": "01 / 从观察到作品",
       "title": "让作品说话。",
-      "intro": "一个关注 AI 用量的原生 Mac 工具，一份双语新闻摘要。让信息更好用，是这两个项目共同的出发点。",
+      "intro": "Windows 与 Mac 原生 AI 用量工具，以及双语研究简报。让信息更便于使用。",
       "all": "探索我的 GitHub"
     },
     "projects": [
@@ -291,26 +291,26 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "0.15.1 已发布",
-        "kind": "Mac 应用",
-        "headline": "看用量，设团队，用开发盘。",
-        "description": "查看 AI 剩余额度，分别设置开发团队的模型与思考档位，并试用虚拟开发盘工具。一个应用，三个功能区。分区工仍处于早期开发阶段。",
+        "status": "Windows 0.16.2 · macOS 0.15.1",
+        "kind": "Windows 与 Mac 应用",
+        "headline": "看用量，配团队。",
+        "description": "原生桌面用量工具，含独立浮窗和托盘/菜单栏。线程工可生成团队指令；各平台功能不同，Windows 分区工仅为界面。",
         "tags": [
-          "macOS 14+",
-          "Apple silicon",
-          "中英文"
+          "Windows 11 x64",
+          "macOS 14+ · Apple silicon",
+          "English / 中文"
         ],
         "primary": "下载 AUV",
         "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.15.1/AUV-0.15.1-build2026101002.zip",
         "secondary": "安装指南",
         "secondaryUrl": "/auv/install/",
-        "caption": "AUV 0.15.1 · 示例数据",
+        "caption": "macOS 0.15.1 · 示例数据",
         "whyTitle": "用来做什么",
-        "why": "把 AI 用量、团队模型设置和虚拟开发盘管理放在同一个 Mac 应用里。",
+        "why": "在桌面查看 AI 用量并配置开发团队指令。",
         "focusTitle": "怎么开始",
-        "focus": "下载后移入“应用程序”。线程工生成一条指令，复制并粘贴给负责开发目录的 Leader。",
+        "focus": "选择对应平台下载，按安装指南完整解压或安装。线程工指令由用户复制、粘贴给 Leader。",
         "inviteTitle": "使用前须知",
-        "invite": "分区工仍是试验功能，请先备份并使用非关键数据；本版尚未完成真实磁盘操作测试。"
+        "invite": "Windows 未签名；WorkBuddy 同步为试验功能，Claude/Antigravity 尚无实时连接，分区工磁盘操作未实现。Mac 分区工仍是试验功能。"
       },
       {
         "id": "bid",
@@ -423,3 +423,8 @@ window.SHAOTING_HOME_CONTENT = {
     }
   }
 };
+if (window.AUV_RELEASES) ['en','zh-Hans'].forEach(function(lang) {
+  var p=window.SHAOTING_HOME_CONTENT[lang].projects.find(function(p){return p.id==='uma';});
+  p.downloads=['windows','macos'].map(function(platform){var r=window.AUV_RELEASES[platform];return {platform:platform,url:r.url,label:(lang==='en'?'Download for '+(platform==='windows'?'Windows':'macOS'):'下载 '+(platform==='windows'?'Windows':'macOS')+' 版')+' · v'+r.version,description:r.requirements[lang]};});
+  p.releaseUrl=window.AUV_RELEASES.windows.release;
+});

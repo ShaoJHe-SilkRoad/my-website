@@ -159,6 +159,7 @@ for (const hz of [60, 90, 120, 144, 240]) {
 
 // Validate renderer output in both locales without relying on a browser parser to repair it.
 const contentContext = { window: {} };
+vm.runInNewContext(fs.readFileSync(path.join(root, 'content/auv-releases.js'), 'utf8'), contentContext);
 vm.runInNewContext(fs.readFileSync(path.join(root, 'content/homepage-content.js'), 'utf8'), contentContext);
 const render = require(path.join(root, 'homepage.js'));
 const voidTags = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr']);
@@ -188,3 +189,25 @@ for (const lang of ['en', 'zh-Hans']) {
 }
 console.log('PASS: light/VF palette and lifecycle; scroll and relayout; deep-scroll anchoring; hidden-time exclusion; both locale renderers.');
 console.log(`Simulated paints/second: ${cadence.join(', ')}. This does not measure real-device frame time.`);
+
+const releaseData=contentContext.window.AUV_RELEASES;
+for (const lang of ['en','zh-Hans']) {
+ const c=contentContext.window.SHAOTING_HOME_CONTENT[lang],html=render(c,lang),p=c.projects.find(p=>p.id==='uma');
+ assert.equal(p.downloads.length,2);for(const d of p.downloads){assert(html.includes(d.url));assert(html.includes(d.label));assert(html.includes(d.description));}
+ assert(html.includes('id="bid"'));assert.equal(p.downloads[0].url,releaseData.windows.url);assert.equal(p.downloads[1].url,releaseData.macos.url);
+}
+const fallback=fs.readFileSync(path.join(root,'index.html'),'utf8'),expected=render(contentContext.window.SHAOTING_HOME_CONTENT.en,'en');assert(fallback.includes('<div id="app">'+expected+'</div>'));
+const install=fs.readFileSync(path.join(root,'auv/install/index.html'),'utf8');for(const id of ['english-installation-guide','中文安装指南','windows-installation-guide','windows-中文安装指南'])assert(install.includes('id="'+id+'"'));
+for(const r of Object.values(releaseData)){assert(install.includes(r.url));assert(install.includes(r.version));}
+assert(install.includes(releaseData.windows.sha256));assert(install.includes('未签名'));assert(!fallback.includes('Download AUV</a>'));
+console.log('PASS: both platform downloads, both locales, static fallback, installation anchors and checksums.');
+
+// A failed metadata/content request must never replace two static choices with a legacy single download.
+for (const loadContent of [true,false]) {
+ const app={innerHTML:'STATIC_TWO_PLATFORM_DOWNLOADS'};
+ const failure={window:{},document:{getElementById:()=>app}};
+ if(loadContent)vm.runInNewContext(fs.readFileSync(path.join(root,'content/homepage-content.js'),'utf8'),failure);
+ vm.runInNewContext(fs.readFileSync(path.join(root,'homepage.js'),'utf8'),failure);
+ assert.equal(app.innerHTML,'STATIC_TWO_PLATFORM_DOWNLOADS');
+}
+console.log('PASS: missing release metadata/content preserves the static download choices.');
