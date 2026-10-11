@@ -6,15 +6,15 @@
 <meta name="description" content="Practical AUV sectorium guide in English and Chinese.">
 <link rel="canonical" href="https://shaotinghe.com/sectorium/">
 <link rel="icon" href="/favicon-32x32.png"><meta name="color-scheme" content="dark light">
-<link rel="stylesheet" href="/product-guide.css?v=auv-0162-anchors">
-<script defer src="/product-guide.js?v=auv-0162"></script>
+<link rel="stylesheet" href="/product-guide.css?v=auv-0163-anchors">
+<script defer src="/product-guide.js?v=auv-0163"></script>
 </head>
 <body>
 <a class="skip-link" href="#guide-content">Skip to guide / 跳到指南</a>
 <header class="guide-header"><a href="/">SHAOTING HE</a>
 <nav aria-label="AUV guides"><a href="/#uma">AUV</a><a href="/auv/install/">Install / 安装</a><a href="/threados/">ThreadOS / 线程工</a><a href="/sectorium/">Sectorium / 分区工</a></nav>
 <div class="tools"><button data-set-language="en" aria-pressed="true">EN</button><button data-set-language="zh-Hans" aria-pressed="false">中文</button><button id="guide-theme" aria-label="Toggle light and dark appearance / 切换明暗">◐</button></div></header>
-<main id="guide-content"><article class="guide" data-language="en" lang="en"><h1>Sectorium</h1><p class="warning">Windows 0.16.2 is UI only: the Sectorium storage backend is unavailable and all mutating actions are disabled. The disk instructions below apply to macOS only. <a href="/auv/install/#windows-installation-guide">Windows installation</a>.</p>
+<main id="guide-content"><article class="guide" data-language="en" lang="en"><h1>Sectorium</h1><p class="warning">Windows 0.16.3 is UI only: the Sectorium storage backend is unavailable and all mutating actions are disabled. The disk instructions below apply to macOS only. <a href="/auv/install/#windows-installation-guide">Windows installation</a>.</p>
 <p>A virtual development disk on your drive — without repartitioning it.</p>
 <p>Sectorium creates or uses a file-based APFS disk image, such as DEV_APFS, and helps you start it, stop it and safely eject its external drive. It is part of AUV; there is no separate app to download.</p>
 <aside class="warning"><strong>Early-stage feature.</strong> Back up important data and try it with noncritical data first. Unexpected disconnection or interrupted operations can cause data loss. Unplug only after the complete safe-eject operation succeeds.</aside>
@@ -44,7 +44,7 @@
 <p>Sectorium reads device identity, mount status and supported I/O statistics. It does not scan your project file contents. Read/write rates describe the physical drive, not an individual project; unavailable figures show as unknown.</p>
 <p><strong>For 0.15.1, real-device creation, mounting, stopping, ejection and service activation have not been tested.</strong> Encryption, disconnect recovery, sleep and restart behavior also remain unverified. Software tests do not establish that these operations are safe on your hardware. The detailed test record is linked below.</p>
 <p><a href="/auv/install/">Install AUV</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/blob/v0.15.1/docs/releases/0.15.1.md">Detailed release checks</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/issues">Report a problem</a></p><footer><a href="https://github.com/ShaoJHe-SilkRoad/UMA">GitHub</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v0.15.1">AUV 0.15.1</a></footer></article>
-<article class="guide" data-language="zh-Hans" lang="zh-Hans" hidden><h1>分区工</h1><p class="warning">Windows 0.16.2 的分区工仅为界面，存储后台未实现，磁盘操作均禁用。下方磁盘步骤仅适用于 macOS。 <a href="/auv/install/#windows-中文安装指南">Windows 安装指南</a>。</p>
+<article class="guide" data-language="zh-Hans" lang="zh-Hans" hidden><h1>分区工</h1><p class="warning">Windows 0.16.3 的分区工仅为界面，存储后台未实现，磁盘操作均禁用。下方磁盘步骤仅适用于 macOS。 <a href="/auv/install/#windows-中文安装指南">Windows 安装指南</a>。</p>
 <p>在硬盘上使用虚拟开发盘，不必重新分区。</p>
 <p>分区工创建或使用 DEV_APFS 这类文件型 APFS 镜像，帮助你启动、停止开发盘，以及安全弹出所在的外接硬盘。它包含在 AUV 中，无需另下一个应用。</p>
 <aside class="warning"><strong>仍处于早期开发阶段。</strong> 请先备份重要数据，用非关键数据试用。意外断连或操作中断可能导致数据损失；完整安全弹出成功前不要拔盘。</aside>
