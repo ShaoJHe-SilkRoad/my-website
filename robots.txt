@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Keep crawlers off the reader-state URL variants (?depth=lazy&mode=STANDARD etc.).
+# Real users still get them; the canonical tag tells search engines which URL counts.
+Disallow: /*?*
+
+Sitemap: https://shaotinghe.com/sitemap.xml

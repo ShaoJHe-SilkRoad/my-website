@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://shaotinghe.com/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/zh-CN/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/en/p-15dad38ffb6ed92644e1/8fb9908a6bfaddee/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-15dad38ffb6ed92644e1/8fb9908a6bfaddee/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-15dad38ffb6ed92644e1/8fb9908a6bfaddee/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-15dad38ffb6ed92644e1/8fb9908a6bfaddee/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-15dad38ffb6ed92644e1/8fb9908a6bfaddee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-15dad38ffb6ed92644e1/8fb9908a6bfaddee/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/en/p-16c7283032171dcd994a/b4a47679780b205b/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-16c7283032171dcd994a/b4a47679780b205b/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-16c7283032171dcd994a/b4a47679780b205b/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-16c7283032171dcd994a/b4a47679780b205b/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-16c7283032171dcd994a/b4a47679780b205b/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-16c7283032171dcd994a/b4a47679780b205b/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/en/p-2644e0cdc2aa501711f7/0f3e76427b03c570/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-2644e0cdc2aa501711f7/0f3e76427b03c570/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-2644e0cdc2aa501711f7/0f3e76427b03c570/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-2644e0cdc2aa501711f7/0f3e76427b03c570/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-2644e0cdc2aa501711f7/0f3e76427b03c570/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-2644e0cdc2aa501711f7/0f3e76427b03c570/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/en/p-29d4b7e7f1b98f3c9fd7/4399967a3f6e3517/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-29d4b7e7f1b98f3c9fd7/4399967a3f6e3517/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-29d4b7e7f1b98f3c9fd7/4399967a3f6e3517/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-29d4b7e7f1b98f3c9fd7/4399967a3f6e3517/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-29d4b7e7f1b98f3c9fd7/4399967a3f6e3517/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-29d4b7e7f1b98f3c9fd7/4399967a3f6e3517/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/en/p-53c866affe3509cf48b1/f85c5e78d1268aca/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-53c866affe3509cf48b1/f85c5e78d1268aca/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-53c866affe3509cf48b1/f85c5e78d1268aca/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-53c866affe3509cf48b1/f85c5e78d1268aca/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-53c866affe3509cf48b1/f85c5e78d1268aca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-53c866affe3509cf48b1/f85c5e78d1268aca/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/en/p-65659ed58fa5c080a32f/d1adfffd8a06a5b3/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-65659ed58fa5c080a32f/d1adfffd8a06a5b3/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-65659ed58fa5c080a32f/d1adfffd8a06a5b3/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-65659ed58fa5c080a32f/d1adfffd8a06a5b3/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-65659ed58fa5c080a32f/d1adfffd8a06a5b3/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-65659ed58fa5c080a32f/d1adfffd8a06a5b3/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/en/p-75b6b0bef68d85f29e4a/58291e88ba7787c8/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-75b6b0bef68d85f29e4a/58291e88ba7787c8/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-75b6b0bef68d85f29e4a/58291e88ba7787c8/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-75b6b0bef68d85f29e4a/58291e88ba7787c8/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-75b6b0bef68d85f29e4a/58291e88ba7787c8/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-75b6b0bef68d85f29e4a/58291e88ba7787c8/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/en/p-9f6a4db96bfd74d34d9a/a12fd67c090debe3/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-9f6a4db96bfd74d34d9a/a12fd67c090debe3/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-9f6a4db96bfd74d34d9a/a12fd67c090debe3/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-9f6a4db96bfd74d34d9a/a12fd67c090debe3/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-9f6a4db96bfd74d34d9a/a12fd67c090debe3/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-9f6a4db96bfd74d34d9a/a12fd67c090debe3/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/en/p-a40f6646add72c0d5507/ef1ef48877d2eb22/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-a40f6646add72c0d5507/ef1ef48877d2eb22/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-a40f6646add72c0d5507/ef1ef48877d2eb22/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-a40f6646add72c0d5507/ef1ef48877d2eb22/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-a40f6646add72c0d5507/ef1ef48877d2eb22/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-a40f6646add72c0d5507/ef1ef48877d2eb22/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/en/p-a5ef613f7cac9c125ed8/86d62d172db89b6d/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-a5ef613f7cac9c125ed8/86d62d172db89b6d/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-a5ef613f7cac9c125ed8/86d62d172db89b6d/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-a5ef613f7cac9c125ed8/86d62d172db89b6d/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-a5ef613f7cac9c125ed8/86d62d172db89b6d/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-a5ef613f7cac9c125ed8/86d62d172db89b6d/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/en/p-a9d1ac9b92ab97df8f4e/e072a1d82702891f/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-a9d1ac9b92ab97df8f4e/e072a1d82702891f/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-a9d1ac9b92ab97df8f4e/e072a1d82702891f/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-a9d1ac9b92ab97df8f4e/e072a1d82702891f/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-a9d1ac9b92ab97df8f4e/e072a1d82702891f/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-a9d1ac9b92ab97df8f4e/e072a1d82702891f/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/en/p-d942f52aff758816bbac/097fef6b7b31662b/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-d942f52aff758816bbac/097fef6b7b31662b/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-d942f52aff758816bbac/097fef6b7b31662b/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-d942f52aff758816bbac/097fef6b7b31662b/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-d942f52aff758816bbac/097fef6b7b31662b/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-d942f52aff758816bbac/097fef6b7b31662b/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/en/p-ef4cb2a9f4ae06e2dfcd/af5e8faa298b31d5/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-ef4cb2a9f4ae06e2dfcd/af5e8faa298b31d5/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-ef4cb2a9f4ae06e2dfcd/af5e8faa298b31d5/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-ef4cb2a9f4ae06e2dfcd/af5e8faa298b31d5/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-ef4cb2a9f4ae06e2dfcd/af5e8faa298b31d5/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-ef4cb2a9f4ae06e2dfcd/af5e8faa298b31d5/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/en/p-fd6846524cfe058cfe5f/43eed42fa6e0b8d2/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-fd6846524cfe058cfe5f/43eed42fa6e0b8d2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-fd6846524cfe058cfe5f/43eed42fa6e0b8d2/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-fd6846524cfe058cfe5f/43eed42fa6e0b8d2/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-fd6846524cfe058cfe5f/43eed42fa6e0b8d2/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-fd6846524cfe058cfe5f/43eed42fa6e0b8d2/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/en/p-fdcbda454c17dd49e142/515538b10b1b49ae/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-fdcbda454c17dd49e142/515538b10b1b49ae/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-fdcbda454c17dd49e142/515538b10b1b49ae/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-fdcbda454c17dd49e142/515538b10b1b49ae/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-14/zh-CN/p-fdcbda454c17dd49e142/515538b10b1b49ae/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-14/en/p-fdcbda454c17dd49e142/515538b10b1b49ae/"/>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/zh-CN/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/en/p-29d4b7e7f1b98f3c9fd7/ae55b46b41e2db12/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-29d4b7e7f1b98f3c9fd7/ae55b46b41e2db12/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-29d4b7e7f1b98f3c9fd7/ae55b46b41e2db12/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-29d4b7e7f1b98f3c9fd7/ae55b46b41e2db12/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-29d4b7e7f1b98f3c9fd7/ae55b46b41e2db12/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-29d4b7e7f1b98f3c9fd7/ae55b46b41e2db12/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/en/p-53c866affe3509cf48b1/99def89a7d6786c5/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-53c866affe3509cf48b1/99def89a7d6786c5/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-53c866affe3509cf48b1/99def89a7d6786c5/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-53c866affe3509cf48b1/99def89a7d6786c5/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-53c866affe3509cf48b1/99def89a7d6786c5/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-53c866affe3509cf48b1/99def89a7d6786c5/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/en/p-9f6a4db96bfd74d34d9a/a11d56eaa40e6444/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-9f6a4db96bfd74d34d9a/a11d56eaa40e6444/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-9f6a4db96bfd74d34d9a/a11d56eaa40e6444/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-9f6a4db96bfd74d34d9a/a11d56eaa40e6444/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-9f6a4db96bfd74d34d9a/a11d56eaa40e6444/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-9f6a4db96bfd74d34d9a/a11d56eaa40e6444/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/en/p-a40f6646add72c0d5507/d3ac5620ff2ec4a0/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-a40f6646add72c0d5507/d3ac5620ff2ec4a0/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-a40f6646add72c0d5507/d3ac5620ff2ec4a0/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-a40f6646add72c0d5507/d3ac5620ff2ec4a0/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-a40f6646add72c0d5507/d3ac5620ff2ec4a0/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-a40f6646add72c0d5507/d3ac5620ff2ec4a0/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/en/p-a5ef613f7cac9c125ed8/a26f56bbfb303ee6/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-a5ef613f7cac9c125ed8/a26f56bbfb303ee6/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-a5ef613f7cac9c125ed8/a26f56bbfb303ee6/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-a5ef613f7cac9c125ed8/a26f56bbfb303ee6/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-a5ef613f7cac9c125ed8/a26f56bbfb303ee6/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-a5ef613f7cac9c125ed8/a26f56bbfb303ee6/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/en/p-a9d1ac9b92ab97df8f4e/0e07996a1ac18dae/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-a9d1ac9b92ab97df8f4e/0e07996a1ac18dae/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-a9d1ac9b92ab97df8f4e/0e07996a1ac18dae/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-a9d1ac9b92ab97df8f4e/0e07996a1ac18dae/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-a9d1ac9b92ab97df8f4e/0e07996a1ac18dae/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-a9d1ac9b92ab97df8f4e/0e07996a1ac18dae/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/en/p-ddbe26a4a1ceb9981404/f32456feb3759280/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-ddbe26a4a1ceb9981404/f32456feb3759280/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-ddbe26a4a1ceb9981404/f32456feb3759280/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-ddbe26a4a1ceb9981404/f32456feb3759280/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-ddbe26a4a1ceb9981404/f32456feb3759280/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-ddbe26a4a1ceb9981404/f32456feb3759280/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/en/p-ef4cb2a9f4ae06e2dfcd/93903423637c6e70/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-ef4cb2a9f4ae06e2dfcd/93903423637c6e70/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-ef4cb2a9f4ae06e2dfcd/93903423637c6e70/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-ef4cb2a9f4ae06e2dfcd/93903423637c6e70/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-ef4cb2a9f4ae06e2dfcd/93903423637c6e70/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-ef4cb2a9f4ae06e2dfcd/93903423637c6e70/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/en/p-fcefb5504c653eac4750/7940cc5cd62697ef/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-fcefb5504c653eac4750/7940cc5cd62697ef/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-fcefb5504c653eac4750/7940cc5cd62697ef/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-fcefb5504c653eac4750/7940cc5cd62697ef/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://shaotinghe.com/qdigest/2026-09-16/zh-CN/p-fcefb5504c653eac4750/7940cc5cd62697ef/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://shaotinghe.com/qdigest/2026-09-16/en/p-fcefb5504c653eac4750/7940cc5cd62697ef/"/>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
