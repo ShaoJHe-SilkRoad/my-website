@@ -201,6 +201,16 @@ const install=fs.readFileSync(path.join(root,'auv/install/index.html'),'utf8');f
 for(const r of Object.values(releaseData)){assert(install.includes(r.url));assert(install.includes(r.version));}
 assert(install.includes(releaseData.windows.sha256));assert(install.includes('未签名'));assert(!fallback.includes('Download AUV</a>'));
 console.log('PASS: both platform downloads, both locales, static fallback, installation anchors and checksums.');
+assert(install.includes(releaseData.macos.sha256), 'Mac checksum is included in the installation guide');
+assert(install.indexOf('id="english-installation-guide"') < install.indexOf('id="中文安装指南"'), 'English precedes Chinese');
+for (const lang of ['en', 'zh-Hans']) {
+ const html=render(contentContext.window.SHAOTING_HOME_CONTENT[lang],lang);
+ for (const platform of ['macos','windows']) assert(html.includes('data-platform="'+platform+'"'), lang+': platform logo next to download');
+ assert(html.includes(releaseData.macos.release), lang+': release notes point to current Mac version');
+}
+for (const platform of ['macos','windows']) assert.equal((install.match(new RegExp('data-platform="'+platform+'"','g'))||[]).length,2,'Install guide has each platform mark in both languages');
+console.log('PASS: current Mac checksum and release links; English-first guide; Apple/Microsoft download marks in both locales.');
+
 
 // A failed metadata/content request must never replace two static choices with a legacy single download.
 for (const loadContent of [true,false]) {

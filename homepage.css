@@ -191,3 +191,5 @@ html{scroll-padding-top:100px}
 
 /* Explicit platform downloads; visible with or without JavaScript. */
 .platform-downloads{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px;margin:24px 0 8px}.platform-download{min-width:0}.platform-download .button{display:flex;width:100%;height:auto;min-height:44px;text-align:center;justify-content:center;white-space:normal;overflow-wrap:anywhere}.platform-download .download-requirements{font-size:13px;line-height:1.5;color:var(--muted);margin:7px 0 0}.project-actions{flex-wrap:wrap}.platform-download a:focus-visible{outline:3px solid #e0b354;outline-offset:4px}
+
+.platform-download .platform-logo{flex:0 0 18px;width:18px;height:18px}.platform-download .button{gap:10px}

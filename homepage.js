@@ -9,11 +9,18 @@
     var paths = {sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>',pause:'<path d="M9 5v14M15 5v14"/>',play:'<path d="m8 5 11 7-11 7Z"/>',github:'<path d="M9 19c-4 1-4-2-6-2m12 5v-3.9c0-1 .1-1.4-.5-2 3.5-.4 7-1.7 7-7.5A5.8 5.8 0 0 0 20 4.5a5.4 5.4 0 0 0-.1-4S18.7.1 16 2a14 14 0 0 0-8 0C5.3.1 4.1.5 4.1.5a5.4 5.4 0 0 0-.1 4A5.8 5.8 0 0 0 2.5 8.6c0 5.8 3.5 7.1 7 7.5-.6.6-.6 1.2-.5 2V22"/>',copy:'<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/>'};
     return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+paths[name]+'</svg>';
   }
+  // Decorative platform marks; the adjacent download text is the accessible name.
+  function platformIcon(platform) {
+    var shape = platform === 'macos'
+      ? '<path d="M16.37 4.2c.78-.95 1.3-2.26 1.15-3.57-1.12.05-2.47.75-3.27 1.69-.72.83-1.35 2.17-1.18 3.44 1.24.1 2.51-.64 3.3-1.56ZM19.97 12.85c.03-3.07 2.5-4.55 2.61-4.62-1.43-2.09-3.64-2.37-4.42-2.4-1.88-.19-3.68 1.11-4.64 1.11-.96 0-2.44-1.08-4.01-1.05-2.06.03-3.96 1.19-5.02 3.03-2.14 3.72-.55 9.24 1.53 12.25 1.02 1.47 2.23 3.12 3.83 3.06 1.54-.06 2.12-.99 3.98-.99 1.85 0 2.38.99 4 .95 1.66-.03 2.71-1.5 3.72-2.98 1.17-1.71 1.65-3.37 1.68-3.45-.04-.02-3.23-1.24-3.26-4.91Z"/>'
+      : '<path d="M1 1h10v10H1zM13 1h10v10H13zM1 13h10v10H1zM13 13h10v10H13z"/>';
+    return '<svg class="platform-logo" data-platform="'+platform+'" viewBox="0 0 25 25" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false">'+shape+'</svg>';
+  }
   function external(href,label,cls) { return '<a class="'+(cls||'text-link')+'" href="'+e(href)+'" target="_blank" rel="noopener noreferrer">'+e(label)+arrow()+'</a>'; }
   function heading(kicker,title,summary) { return '<div class="section-heading" data-reveal><span class="eyebrow">'+e(kicker)+'</span><h2>'+lines(title)+'</h2>'+(summary?'<p>'+e(summary)+'</p>':'')+'</div>'; }
   function projectActions(p,zh) {
     if (!p.downloads) return '<div class="project-actions"><a class="button button--small" href="'+e(p.url)+'">'+e(p.primary)+arrow()+'</a>'+(p.secondary?'<a class="text-link" href="'+e(p.secondaryUrl)+'">'+e(p.secondary)+'</a>':'')+'</div>';
-    return '<div class="platform-downloads">'+p.downloads.map(function(d){return '<div class="platform-download">'+external(d.url,d.label,'button button--small')+'<p class="download-requirements">'+e(d.description)+'</p></div>';}).join('')+'</div><div class="project-actions"><a class="text-link" href="/auv/install/">'+(zh?'安装指南':'Installation guide')+'</a>'+external(p.releaseUrl,zh?'更新说明':'Release notes')+external(github+'/UMA','GitHub')+'<a class="text-link" href="/threados/">'+(zh?'线程工指南':'ThreadOS guide')+'</a><a class="text-link" href="/sectorium/">'+(zh?'分区工指南':'Sectorium guide')+'</a></div>';
+    return '<div class="platform-downloads">'+p.downloads.map(function(d){return '<div class="platform-download">'+'<a class="button button--small" href="'+e(d.url)+'" target="_blank" rel="noopener noreferrer">'+platformIcon(d.platform)+'<span>'+e(d.label)+'</span>'+arrow()+'</a>'+'<p class="download-requirements">'+e(d.description)+'</p></div>';}).join('')+'</div><div class="project-actions"><a class="text-link" href="/auv/install/">'+(zh?'安装指南':'Installation guide')+'</a>'+external(p.releaseUrl,zh?'更新说明':'Release notes')+external(github+'/UMA','GitHub')+'<a class="text-link" href="/threados/">'+(zh?'线程工指南':'ThreadOS guide')+'</a><a class="text-link" href="/sectorium/">'+(zh?'分区工指南':'Sectorium guide')+'</a></div>';
   }
   function render(c,lang) {
     var zh=lang==='zh-Hans';
@@ -32,7 +39,7 @@
       '<footer class="site-footer"><div class="container footer-row"><div class="footer-identity"><span class="brand-mark brand-mark--heritage" aria-hidden="true"></span><div><p>'+e(c.footer.identity)+'</p><span>'+e(c.footer.note)+'</span></div></div><div class="footer-links">'+external(github,'GitHub')+'<a href="#top">'+e(c.ui.back)+' ↑</a><span>'+e(c.footer.copyright)+'</span></div></div></footer><nav class="mobile-nav" aria-label="'+e(c.ui.menu)+'">'+nav+'</nav>';
   }
   // The same renderer generates static English HTML without a browser or dependencies.
-  if (typeof module !== 'undefined' && module.exports) { module.exports=render; return; }
+  if (typeof module !== 'undefined' && module.exports) { render.platformIcon=platformIcon; module.exports=render; return; }
   var content=window.SHAOTING_HOME_CONTENT;
   var app=document.getElementById('app');
   if (!content || !content.en || !content['zh-Hans'] || !app) return;

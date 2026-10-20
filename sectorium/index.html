@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Sectorium — AUV | Shaoting He</title>
-<meta name="description" content="Practical AUV sectorium guide in English and Chinese.">
+<meta name="description" content="Use Sectorium on Mac: load and unload development volumes, safely disconnect external drives, and understand the current validation scope. English and Chinese.">
 <link rel="canonical" href="https://shaotinghe.com/sectorium/">
 <link rel="icon" href="/favicon-32x32.png"><meta name="color-scheme" content="dark light">
-<link rel="stylesheet" href="/product-guide.css?v=auv-0163-anchors">
+<link rel="stylesheet" href="/product-guide.css?v=auv-0172">
 <script defer src="/product-guide.js?v=auv-0163"></script>
 </head>
 <body>
@@ -14,64 +14,70 @@
 <header class="guide-header"><a href="/">SHAOTING HE</a>
 <nav aria-label="AUV guides"><a href="/#uma">AUV</a><a href="/auv/install/">Install / 安装</a><a href="/threados/">ThreadOS / 线程工</a><a href="/sectorium/">Sectorium / 分区工</a></nav>
 <div class="tools"><button data-set-language="en" aria-pressed="true">EN</button><button data-set-language="zh-Hans" aria-pressed="false">中文</button><button id="guide-theme" aria-label="Toggle light and dark appearance / 切换明暗">◐</button></div></header>
-<main id="guide-content"><article class="guide" data-language="en" lang="en"><h1>Sectorium</h1><p class="warning">Windows 0.16.3 is UI only: the Sectorium storage backend is unavailable and all mutating actions are disabled. The disk instructions below apply to macOS only. <a href="/auv/install/#windows-installation-guide">Windows installation</a>.</p>
-<p>A virtual development disk on your drive — without repartitioning it.</p>
-<p>Sectorium creates or uses a file-based APFS disk image, such as DEV_APFS, and helps you start it, stop it and safely eject its external drive. It is part of AUV; there is no separate app to download.</p>
-<aside class="warning"><strong>Early-stage feature.</strong> Back up important data and try it with noncritical data first. Unexpected disconnection or interrupted operations can cause data loss. Unplug only after the complete safe-eject operation succeeds.</aside>
-<h2>Read the drive list</h2>
-<p>External drives appear first. Each physical drive groups its volumes and any verified virtual development disk beneath it. A 300 GB development disk on a 1 TB external drive is not a second piece of hardware.</p>
-<p>Select the intended drive and check its name, capacity and development disk. Internal system-drive details are secondary; Sectorium does not physically eject the internal drive.</p>
-<h2>First-time setup</h2>
+<main id="guide-content">
+<article class="guide" data-language="en" lang="en">
+<h1>Sectorium</h1>
+<p class="subtitle">Load to work. Unload to pause. Disconnect to unplug.</p>
+<p>Sectorium manages file-based development volumes such as DEV_APFS. Your external drive stays one physical drive; its development volume is shown underneath it. AUV includes Sectorium — no separate app download.</p>
+<p><strong>Mac 0.17.2:</strong> the basic Load → Unload → Load and Disconnect cycle has been confirmed on the developer’s Mac and external DEV_APFS volume. Windows 0.16.3 has the interface only; its storage actions are unavailable.</p>
+<h2>Use an existing development volume</h2>
 <ol>
-<li>Install <a href="/auv/install/">AUV</a>, then open <strong>Sectorium</strong> in the top navigation.</li>
-<li>Select your drive and open <strong>Settings</strong>. If tools are missing, use <strong>Install HESectorium</strong>. If an existing installation is reported as conflicting, check its diagnostics before proceeding.</li>
-<li>Already have a development image? Choose <strong>Adopt existing disk</strong> and select it. Wait for verification. Do not create another DEV_APFS just to use the one you have.</li>
-<li>Need a new one? Choose <strong>Create development disk</strong>, select its location and logical capacity, then create it. The default is 100 GiB; this is a maximum size, not space reserved immediately. Encryption and case sensitivity are optional. Keep an encryption password safe: losing it can prevent access.</li>
-<li><strong>Start after creation</strong> is off by default. Use <strong>Start</strong> when you want to use the disk, and wait for it to be ready.</li>
+<li>Connect the external drive, open <strong>AUV → Sectorium</strong>, and find its card. External drives appear above internal storage.</li>
+<li>If your existing volume is not registered, use <strong>Register existing volume</strong>, or the drive’s menu → <strong>Register existing…</strong> to choose its image. Registration keeps your existing files in place.</li>
+<li>Choose <strong>Load</strong>. Enter an unlock password if prompted, then wait for <strong>Loaded</strong> before opening your development work.</li>
 </ol>
-<p>Installing tools and creating a disk are different steps. Neither operation formats or repartitions your physical drive. Existing images are not meant to be overwritten.</p>
-<h2>Everyday use</h2>
-<table><thead><tr><th scope="col">What you want</th><th scope="col">What to use</th></tr></thead><tbody>
-<tr><td>Open a stopped development disk</td><td><strong>Start</strong>, then wait for readiness; unlock it if prompted.</td></tr>
-<tr><td>Close the virtual disk, leaving the hardware connected</td><td><strong>Stop</strong>.</td></tr>
-<tr><td>Unplug an external drive</td><td>Save work and close apps using it, then choose <strong>Safe Eject</strong> for the whole drive. Unplug only after full completion.</td></tr>
-<tr><td>Check a changed connection or an error</td><td><strong>Refresh</strong>, then read the current state and diagnostics.</td></tr>
+<p>Register once. Switching between AUV and Sectorium keeps the registration and last observed state; it does not require starting over.</p>
+<h2>Choose the right action</h2>
+<table><thead><tr><th scope="col">Action</th><th scope="col">What happens</th></tr></thead><tbody>
+<tr><td><strong>Load</strong></td><td>Mounts the development volume so you can use its files.</td></tr>
+<tr><td><strong>Unload</strong></td><td>Unmounts only the development volume. The physical drive remains connected and available. When it finishes, <strong>Load</strong> is available again.</td></tr>
+<tr><td><strong>Disconnect</strong></td><td>Unloads the related volumes and safely ejects the whole external drive. Wait for the success message before unplugging.</td></tr>
 </tbody></table>
-<p><strong>Busy, unknown or partly complete does not mean safe to unplug.</strong> If an operation fails, read the failed step, resolve the reported problem and use the offered recovery action. Do not force-unmount, kill processes, delete lock files or repeatedly press Resume.</p>
-<h2>Automatic mounting</h2>
-<p>Settings shows your automation preference and the service’s observed state separately. Turning on the preference does not by itself start the service or mount the disk. The current installer does not activate the background service automatically. If the service is not loaded or its state is unknown, use manual <strong>Start</strong>; automatic mounting is not confirmed.</p>
-<h2>Privacy and current limits</h2>
-<p>Sectorium reads device identity, mount status and supported I/O statistics. It does not scan your project file contents. Read/write rates describe the physical drive, not an individual project; unavailable figures show as unknown.</p>
-<p><strong>For 0.15.1, real-device creation, mounting, stopping, ejection and service activation have not been tested.</strong> Encryption, disconnect recovery, sleep and restart behavior also remain unverified. Software tests do not establish that these operations are safe on your hardware. The detailed test record is linked below.</p>
-<p><a href="/auv/install/">Install AUV</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/blob/v0.15.1/docs/releases/0.15.1.md">Detailed release checks</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/issues">Report a problem</a></p><footer><a href="https://github.com/ShaoJHe-SilkRoad/UMA">GitHub</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v0.16.3">AUV Mac 0.16.3</a></footer></article>
-<article class="guide" data-language="zh-Hans" lang="zh-Hans" hidden><h1>分区工</h1><p class="warning">Windows 0.16.3 的分区工仅为界面，存储后台未实现，磁盘操作均禁用。下方磁盘步骤仅适用于 macOS。 <a href="/auv/install/#windows-中文安装指南">Windows 安装指南</a>。</p>
-<p>在硬盘上使用虚拟开发盘，不必重新分区。</p>
-<p>分区工创建或使用 DEV_APFS 这类文件型 APFS 镜像，帮助你启动、停止开发盘，以及安全弹出所在的外接硬盘。它包含在 AUV 中，无需另下一个应用。</p>
-<aside class="warning"><strong>仍处于早期开发阶段。</strong> 请先备份重要数据，用非关键数据试用。意外断连或操作中断可能导致数据损失；完整安全弹出成功前不要拔盘。</aside>
-<h2>看懂硬盘列表</h2>
-<p>外接硬盘优先显示，每块物理硬盘下会列出它的卷和已核实的虚拟开发盘。1 TB 外接硬盘上的 300 GB 开发盘，不是第二块硬件。</p>
-<p>选择目标硬盘，核对名称、容量和开发盘。内置系统盘的信息放在次要位置，分区工不会物理弹出内置硬盘。</p>
-<h2>首次设置</h2>
+<p>Save work before Unload or Disconnect. If an application is using the volume, follow the displayed prompt to close it and retry. An incomplete operation is not permission to unplug. Internal storage cannot be physically disconnected through Sectorium.</p>
+<h2>Reconnect and keep the status current</h2>
+<p>Connect the drive again and use <strong>Load</strong> when its registered volume appears. Per-volume automatic loading can be enabled in its settings.</p>
+<p>Sectorium listens for macOS disk appearance, disappearance and property changes. It also performs a consistency check every five minutes and runs deeper checks when something changes. Returning to the tab does not restart a full check; <strong>Refresh</strong> remains available when you need it.</p>
+<h2>Create a new volume</h2>
+<p><strong>Create volume</strong> lets you choose a drive, name and logical capacity for a file-based APFS image without repartitioning the physical disk. Logical capacity is a maximum, not space reserved immediately. Creation and encryption still need broader real-device validation; try them only with backed-up, noncritical data.</p>
+<h2>If a step does not finish</h2>
+<p>Read the message shown and expand <strong>History and diagnostics</strong> on the volume card. Use the offered retry or return-to-development action after resolving it. If the disk has been unplugged, reconnect it before loading; registering the same image again is not a repair.</p>
+<details><summary>Privacy and validation scope</summary>
+<p>Sectorium observes disk identity, mount state and supported whole-drive I/O statistics. It does not scan project file contents. Unknown statistics stay unknown; they do not mean zero activity.</p>
+<p>The confirmed lifecycle applies to the developer’s current Mac and external volume. It does not establish reliability for every drive, encrypted image, new-volume creation or recovery scenario. Mac 0.17.2 includes Apple silicon and Intel code for macOS 14+, but physical Intel hardware and macOS 14/15 have not been tested. See the <a href="/auv/install/#macos-installation-guide">installation guide</a> for the compatibility checks.</p>
+</details>
+<footer><a href="/auv/install/#macos-installation-guide">Install AUV for Mac</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v0.17.2">0.17.2 release notes</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/issues">Report a problem</a></footer>
+</article>
+<article class="guide" data-language="zh-Hans" lang="zh-Hans" hidden>
+<h1>分区工</h1>
+<p class="subtitle">加载后开发，卸载后暂停，安全断开后拔盘。</p>
+<p>分区工管理 DEV_APFS 这类文件型开发卷。外接硬盘仍是一块物理硬盘，开发卷显示在它下面。分区工已包含在 AUV 中，无需另下一个应用。</p>
+<p><strong>Mac 0.17.2：</strong>加载、卸载、重新加载和安全断开流程，已在开发者当前的 Mac 与外接 DEV_APFS 开发卷上确认可用。Windows 0.16.3 仅提供界面，磁盘操作尚不可用。</p>
+<h2>使用已有开发卷</h2>
 <ol>
-<li>安装 <a href="/auv/install/">AUV</a>，从顶部进入 <strong>Sectorium</strong>。</li>
-<li>选择硬盘，打开 <strong>Settings（设置）</strong>。缺少工具时使用 <strong>Install HESectorium（安装 HESectorium）</strong>；若提示已有安装冲突，先查看诊断。</li>
-<li>已有开发镜像时，选择 <strong>Adopt existing disk（接纳已有开发盘）</strong>并选中它，等待核验。不要为了使用现有 DEV_APFS 再创建一个。</li>
-<li>需要新建时，选择 <strong>Create development disk（创建开发盘）</strong>，设置位置和逻辑容量。默认 100 GiB，表示容量上限，不是立即占用这么多空间。加密和大小写敏感均为可选项；请妥善保管加密密码，丢失后可能无法访问。</li>
-<li><strong>Start after creation（创建后启动）</strong>默认关闭。需要使用时点击 <strong>Start（启动）</strong>，等待就绪。</li>
+<li>连接外接硬盘，打开 <strong>AUV → 分区工</strong>，找到对应硬盘卡片。外接硬盘优先于内置盘显示。</li>
+<li>尚未登记时，点击<strong>登记已有开发卷</strong>，或从硬盘菜单选择<strong>登记已有开发卷…</strong>并选中镜像。登记会保留原有文件。</li>
+<li>点击 <strong>Load（加载）</strong>；如提示解锁，输入密码。显示<strong>已加载</strong>后再打开开发工作。</li>
 </ol>
-<p>安装工具与创建开发盘是不同操作，两者都不会格式化或重新分区物理硬盘。不要覆盖已有镜像。</p>
-<h2>日常怎么用</h2>
-<table><thead><tr><th scope="col">你想做什么</th><th scope="col">使用哪个操作</th></tr></thead><tbody>
-<tr><td>打开未启动的开发盘</td><td><strong>启动</strong>，等待就绪；提示解锁时输入密码。</td></tr>
-<tr><td>只关闭虚拟盘，硬盘仍留在电脑上</td><td><strong>停止</strong>。</td></tr>
-<tr><td>拔出外接硬盘</td><td>保存工作，关闭正在使用该盘的应用，再选择整个硬盘的<strong>安全弹出</strong>；全部完成后才能拔线。</td></tr>
-<tr><td>连接变化或出现错误后查看状态</td><td><strong>刷新</strong>，查看当前状态和诊断。</td></tr>
+<p>只需登记一次。在 AUV 与分区工之间切换会保留登记信息和最近状态，不必重新登记。</p>
+<h2>三个操作有什么区别</h2>
+<table><thead><tr><th scope="col">操作</th><th scope="col">作用</th></tr></thead><tbody>
+<tr><td><strong>Load · 加载</strong></td><td>挂载开发卷，使其中的文件可以使用。</td></tr>
+<tr><td><strong>Unload · 卸载开发卷</strong></td><td>只卸载开发卷，母盘仍连接电脑、保持可用。完成后可再次点击<strong>加载</strong>。</td></tr>
+<tr><td><strong>Disconnect · 安全断开硬盘</strong></td><td>卸载相关卷并安全弹出整个外接硬盘。看到成功提示后再拔线。</td></tr>
 </tbody></table>
-<p><strong>忙碌、未知或部分完成，都不表示可以拔盘。</strong> 操作失败时，先看失败步骤，解决提示的问题，再使用界面提供的恢复操作。不要强制卸载、杀进程、删除锁文件或反复点击恢复。</p>
-<h2>自动挂载</h2>
-<p>设置中分别显示自动挂载偏好和服务的实际状态。勾选偏好本身不会启动服务，也不等于已经挂载；当前安装器不会自动启用后台服务。服务未加载或状态未知时，请手动点击<strong>启动</strong>，不要认为自动挂载已经可用。</p>
-<h2>隐私与当前限制</h2>
-<p>分区工读取设备身份、挂载状态和可用的 I/O 统计，不扫描项目文件内容。读写速率属于整块物理硬盘，不是单个项目；取不到的数值显示为未知。</p>
-<p><strong>0.15.1 尚未完成真实设备上的创建、挂载、停止、弹出和服务启用测试。</strong> 加密、断连恢复、睡眠和重启行为也尚未验证。软件测试不能证明这些操作在你的硬件上已经安全可用，详细测试记录见下方链接。</p>
-<p><a href="/auv/install/">安装 AUV</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/blob/v0.15.1/docs/releases/0.15.1.md">详细版本检查</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/issues">反馈问题</a></p><footer><a href="https://github.com/ShaoJHe-SilkRoad/UMA">GitHub</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v0.16.3">AUV Mac 0.16.3</a></footer></article></main>
+<p>卸载或断开前先保存工作。若有应用占用开发卷，按界面提示退出该应用后重试。操作未完成不代表可以拔盘；分区工不会物理弹出内置系统盘。</p>
+<h2>重新连接与状态更新</h2>
+<p>重新连接硬盘后，已登记的开发卷会再次显示，点击<strong>加载</strong>即可继续使用。也可在开发卷设置中启用连接后自动加载。</p>
+<p>分区工监听 macOS 的磁盘出现、消失和属性变化通知，每五分钟再进行一次一致性检查；发现变化时深入核验。切回页面不会重新等待完整检查，需要时仍可点击<strong>刷新</strong>。</p>
+<h2>新建开发卷</h2>
+<p><strong>创建开发卷</strong>可选择硬盘、名称和逻辑容量，创建文件型 APFS 镜像，不重新划分物理分区。逻辑容量是上限，不是立即预留的空间。创建与加密仍需更多实盘验证，请先在已备份、非关键数据环境中试用。</p>
+<h2>操作没有完成时</h2>
+<p>查看页面提示，并展开开发卷卡片上的<strong>历史与诊断</strong>。解决后再使用界面提供的重试或返回开发操作。硬盘已拔出时，先重新连接再加载；重复登记同一镜像不能修复操作失败。</p>
+<details><summary>隐私与验证范围</summary>
+<p>分区工读取设备身份、挂载状态及可用的整盘 I/O 统计，不扫描项目文件内容。统计不可用时显示未知，不会当作零活动。</p>
+<p>已确认的基础流程仅对应开发者当前的 Mac 和外接开发卷，不代表所有硬盘、加密镜像、新建和故障恢复场景均已验证。Mac 0.17.2 面向 macOS 14+，包含 Apple silicon 和 Intel 代码，但尚未测试实体 Intel Mac 或 macOS 14/15。兼容性检查范围见<a href="/auv/install/#macos-中文安装指南">安装指南</a>。</p>
+</details>
+<footer><a href="/auv/install/#macos-中文安装指南">安装 Mac 版 AUV</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v0.17.2">0.17.2 更新说明</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/issues">反馈问题</a></footer>
+</article>
+</main>
 </body></html>

@@ -34,12 +34,12 @@ fs.writeFileSync(root+'/index.html',`<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="homepage.css?v=auv-0163">
+<link rel="stylesheet" href="homepage.css?v=auv-0172">
 <script>(function(){try{var t=localStorage.getItem('sh-theme');document.documentElement.dataset.theme=t==='light'?'light':'dark';}catch(e){}})();</script>
-<script defer src="content/auv-releases.js?v=auv-0163-mac"></script>
-<script defer src="content/homepage-content.js?v=auv-0163-mac"></script>
+<script defer src="content/auv-releases.js?v=auv-0172"></script>
+<script defer src="content/homepage-content.js?v=auv-0172"></script>
 <script defer src="ambient.js?v=review-20260905-9"></script>
-<script defer src="homepage.js?v=auv-0163"></script>
+<script defer src="homepage.js?v=auv-0172"></script>
 </head>
 <body>
 <div class="ambient-backdrop" aria-hidden="true"><canvas id="ambient-field" aria-hidden="true"></canvas></div>
@@ -53,7 +53,7 @@ const releases=context.window.AUV_RELEASES;
 const safe=s=>String(s).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;');
 let guide=fs.readFileSync(root+'/auv/install/index.html','utf8');
 for(const lang of ['en','zh-Hans']) {
- const buttons='<div class="platform-downloads">'+['windows','macos'].map(platform=>{const r=releases[platform],name=platform==='windows'?'Windows':'macOS',label=(lang==='en'?'Download for '+name:'下载 '+name+' 版')+' · v'+r.version;return '<div class="platform-download"><a class="button button--small" href="'+safe(r.url)+'">'+safe(label)+'</a><p class="download-requirements">'+safe(r.requirements[lang])+'</p></div>';}).join('')+'</div>';
+ const buttons='<div class="platform-downloads">'+['windows','macos'].map(platform=>{const r=releases[platform],name=platform==='windows'?'Windows':'macOS',label=(lang==='en'?'Download for '+name:'下载 '+name+' 版')+' · v'+r.version;return '<div class="platform-download"><a class="button button--small" href="'+safe(r.url)+'">'+render.platformIcon(platform)+'<span>'+safe(label)+'</span></a><p class="download-requirements">'+safe(r.requirements[lang])+'</p></div>';}).join('')+'</div>';
  const begin='<!--AUV-DOWNLOADS:'+lang+'-->',end='<!--/AUV-DOWNLOADS:'+lang+'-->',a=guide.indexOf(begin),b=guide.indexOf(end);
  if(a<0||b<0)throw Error('Missing install download markers: '+lang);
  guide=guide.slice(0,a+begin.length)+buttons+guide.slice(b);

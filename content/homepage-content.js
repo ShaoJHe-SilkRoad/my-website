@@ -80,26 +80,26 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "Windows 0.16.3 · macOS 0.16.3",
+        "status": "macOS 0.17.2 · Windows 0.16.3",
         "kind": "Windows & Mac app",
-        "headline": "See usage. Set your team.",
-        "description": "Native desktop usage with a floating Wizard and tray/menu bar. ThreadOS generates team instructions; features vary by platform. Windows Sectorium is UI only. Mac 0.16.3 removes the Storage menu from the usage popup and restores its four buttons to the top right.",
+        "headline": "See usage. Set your team. Manage your development drive.",
+        "description": "Check AI account usage at a glance. Use ThreadOS to prepare coding-team instructions. On Mac, Sectorium loads and unloads your development volume and safely disconnects its external drive.",
         "tags": [
           "Windows 11 x64",
-          "macOS 14+ · Apple silicon",
+          "macOS 14+ · Apple silicon + Intel",
           "English / 中文"
         ],
         "primary": "Download AUV",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.16.3/AUV_Mac_0.16.3.zip",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.17.2/AUV_Mac_0.17.2_Universal.zip",
         "secondary": "Installation guide",
         "secondaryUrl": "/auv/install/",
-        "caption": "macOS 0.15.1 · sample data",
+        "caption": "Usage preview · sample data",
         "whyTitle": "What it is for",
-        "why": "See AI usage on your desktop and configure coding-team instructions.",
+        "why": "One app for account usage, team instructions and Mac development volumes.",
         "focusTitle": "How to start",
-        "focus": "Choose your platform and follow its installation guide. Copy ThreadOS instructions and paste them into your Leader.",
-        "inviteTitle": "Before you try it",
-        "invite": "Windows is unsigned; WorkBuddy sync is experimental, Claude/Antigravity live transports are unavailable, and Sectorium storage is not implemented. Mac Sectorium remains experimental."
+        "focus": "Install AUV, then sign in to the Codex app to view its account usage. The guides explain team setup and development drives.",
+        "inviteTitle": "What’s new on Mac",
+        "invite": "0.17.2 adds one download for Apple silicon and Intel and improves the Codex connection. Sectorium’s basic Load → Unload → Load and Disconnect flow has been confirmed on the developer’s Mac and external drive. Windows remains 0.16.3; its Sectorium storage actions are unavailable."
       },
       {
         "id": "bid",
@@ -291,26 +291,26 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "Windows 0.16.3 · macOS 0.16.3",
+        "status": "macOS 0.17.2 · Windows 0.16.3",
         "kind": "Windows 与 Mac 应用",
-        "headline": "看用量，配团队。",
-        "description": "原生桌面用量工具，含独立浮窗和托盘/菜单栏。线程工可生成团队指令；各平台功能不同，Windows 分区工仅为界面。Mac 0.16.3 移除用量浮窗的 Storage 菜单，四个按钮恢复至右上角。",
+        "headline": "看用量，配团队，管理开发盘。",
+        "description": "随时查看 AI 账户用量，用线程工准备开发团队指令。在 Mac 上，分区工负责加载、卸载开发卷，以及安全断开它所在的外接硬盘。",
         "tags": [
           "Windows 11 x64",
-          "macOS 14+ · Apple silicon",
+          "macOS 14+ · Apple silicon + Intel",
           "English / 中文"
         ],
         "primary": "下载 AUV",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.16.3/AUV_Mac_0.16.3.zip",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.17.2/AUV_Mac_0.17.2_Universal.zip",
         "secondary": "安装指南",
         "secondaryUrl": "/auv/install/",
-        "caption": "macOS 0.15.1 · 示例数据",
+        "caption": "用量界面示例 · 示例数据",
         "whyTitle": "用来做什么",
-        "why": "在桌面查看 AI 用量并配置开发团队指令。",
+        "why": "一个应用，查看账户用量、准备团队指令、管理 Mac 开发卷。",
         "focusTitle": "怎么开始",
-        "focus": "选择对应平台下载，按安装指南完整解压或安装。线程工指令由用户复制、粘贴给 Leader。",
-        "inviteTitle": "使用前须知",
-        "invite": "Windows 未签名；WorkBuddy 同步为试验功能，Claude/Antigravity 尚无实时连接，分区工磁盘操作未实现。Mac 分区工仍是试验功能。"
+        "focus": "安装 AUV，再登录 Codex 应用以查看账户用量。团队设置与开发盘操作可按对应指南完成。",
+        "inviteTitle": "Mac 新版变化",
+        "invite": "0.17.2 用同一个安装包支持 Apple silicon 与 Intel，并改进 Codex 连接。分区工的加载、卸载、重新加载和安全断开流程已在开发者的 Mac 与外接硬盘上确认可用。Windows 保持 0.16.3，分区工磁盘操作尚不可用。"
       },
       {
         "id": "bid",
@@ -426,5 +426,5 @@ window.SHAOTING_HOME_CONTENT = {
 if (window.AUV_RELEASES) ['en','zh-Hans'].forEach(function(lang) {
   var p=window.SHAOTING_HOME_CONTENT[lang].projects.find(function(p){return p.id==='uma';});
   p.downloads=['windows','macos'].map(function(platform){var r=window.AUV_RELEASES[platform];return {platform:platform,url:r.url,label:(lang==='en'?'Download for '+(platform==='windows'?'Windows':'macOS'):'下载 '+(platform==='windows'?'Windows':'macOS')+' 版')+' · v'+r.version,description:r.requirements[lang]};});
-  p.releaseUrl=window.AUV_RELEASES.windows.release;
+  p.releaseUrl=window.AUV_RELEASES.macos.release;
 });

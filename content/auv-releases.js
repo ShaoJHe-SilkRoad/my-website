@@ -13,14 +13,15 @@ window.AUV_RELEASES = {
     }
   },
   "macos": {
-    "version": "0.16.3",
-    "build": "2026101101",
-    "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.16.3/AUV_Mac_0.16.3.zip",
-    "release": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v0.16.3",
-    "sha256": "d89f8be1ff76ceb9e4381666bf8f590541d02662995f30c74c5876383ab66039",
+    "version": "0.17.2",
+    "build": "2026102001",
+    "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.17.2/AUV_Mac_0.17.2_Universal.zip",
+    "release": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v0.17.2",
+    "sha256": "99f435b8d4b35a51863e4b1242054bb0c1cd7f9e95912505e687c8170b281bc4",
+    "bytes": 14559662,
     "requirements": {
-      "en": "macOS 14+ · Apple silicon",
-      "zh-Hans": "macOS 14 或更新 · Apple silicon"
+      "en": "macOS 14+ · Apple silicon + Intel · signed and notarized",
+      "zh-Hans": "macOS 14+ · Apple silicon 与 Intel · 已签名、公证"
     }
   }
 };
