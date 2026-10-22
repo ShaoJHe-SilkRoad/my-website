@@ -80,7 +80,7 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "macOS 0.17.4 · Windows 0.16.3",
+        "status": "macOS 0.17.5 · Windows 0.16.3",
         "kind": "Windows & Mac app",
         "headline": "See usage. Set your team. Manage your development drive.",
         "description": "Check AI account usage at a glance. Use ThreadOS to prepare coding-team instructions. On Mac, Sectorium loads and unloads your development volume and safely disconnects its external drive.",
@@ -90,7 +90,7 @@ window.SHAOTING_HOME_CONTENT = {
           "English / 中文"
         ],
         "primary": "Download AUV",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.17.4/AUV_Mac_0.17.4_Universal.zip",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.17.5/AUV_Mac_0.17.5_Universal.zip",
         "secondary": "Installation guide",
         "secondaryUrl": "/auv/install/",
         "caption": "Usage preview · sample data",
@@ -99,7 +99,7 @@ window.SHAOTING_HOME_CONTENT = {
         "focusTitle": "How to start",
         "focus": "Install AUV, then sign in to the Codex app to view its account usage. The guides explain team setup and development drives.",
         "inviteTitle": "What’s new on Mac",
-        "invite": "0.17.4 fixes the cost panel added in 0.17.3, which could appear even with its Token Cost Estimate switch off. The 0.17.3 additions are unchanged: low-remaining colour on Claude’s quota bars once you state your plan, the menu bar number when Codex reports none, reset times in the menu bar panel, and a local API-equivalent cost estimate. Windows remains 0.16.3; its Sectorium storage actions are unavailable."
+        "invite": "0.17.5 fixes a crash: AUV could quit — the whole app, not just the connection — when the local Codex app-server it reads exited or was replaced mid-read. It also stops the Claude page disappearing when it has measured usage but no percentage, explains an empty Claude panel instead of telling you to refresh, and reads Claude’s local activity more completely. Claude still shows no remaining percentage from local activity alone, because local activity does not contain one. Windows remains 0.16.3; its Sectorium storage actions are unavailable."
       },
       {
         "id": "bid",
@@ -291,7 +291,7 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "macOS 0.17.4 · Windows 0.16.3",
+        "status": "macOS 0.17.5 · Windows 0.16.3",
         "kind": "Windows 与 Mac 应用",
         "headline": "看用量，配团队，管理开发盘。",
         "description": "随时查看 AI 账户用量，用线程工准备开发团队指令。在 Mac 上，分区工负责加载、卸载开发卷，以及安全断开它所在的外接硬盘。",
@@ -301,7 +301,7 @@ window.SHAOTING_HOME_CONTENT = {
           "English / 中文"
         ],
         "primary": "下载 AUV",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.17.4/AUV_Mac_0.17.4_Universal.zip",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.17.5/AUV_Mac_0.17.5_Universal.zip",
         "secondary": "安装指南",
         "secondaryUrl": "/auv/install/",
         "caption": "用量界面示例 · 示例数据",
@@ -310,7 +310,7 @@ window.SHAOTING_HOME_CONTENT = {
         "focusTitle": "怎么开始",
         "focus": "安装 AUV，再登录 Codex 应用以查看账户用量。团队设置与开发盘操作可按对应指南完成。",
         "inviteTitle": "Mac 新版变化",
-        "invite": "0.17.4 修复 0.17.3 新增的费用面板：在 Token 费用估算开关关闭时仍可能显示。0.17.3 的新增内容不变：说明 Claude 方案后额度不足显示颜色，Codex 没有可用额度时菜单栏改用 Claude 的数字，菜单栏面板显示重置时间，以及本地 API 等效费用估算。Windows 保持 0.16.3，分区工磁盘操作尚不可用。"
+        "invite": "0.17.5 修复一个崩溃：AUV 读取的本地 Codex app-server 退出或被替换时，可能终止整个应用而非仅断开连接。本版还让 Claude 页面在有已统计用量但没有百分比时不再消失，空面板会说明原因而不是让你刷新，并更完整地读取 Claude 的本地活动。仅凭本地活动，Claude 仍然不显示剩余百分比——因为其中本就没有这个数。Windows 保持 0.16.3，其分区工磁盘操作不可用。"
       },
       {
         "id": "bid",
