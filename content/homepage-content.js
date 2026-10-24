@@ -80,7 +80,7 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "macOS 0.17.6 · Windows 0.16.3",
+        "status": "macOS 0.17.7 · Windows 0.16.3",
         "kind": "Windows & Mac app",
         "headline": "See usage. Set your team. Manage your development drive.",
         "description": "Check AI account usage at a glance. Use ThreadOS to prepare coding-team instructions. On Mac, Sectorium loads and unloads your development volume and safely disconnects its external drive.",
@@ -90,7 +90,7 @@ window.SHAOTING_HOME_CONTENT = {
           "English / 中文"
         ],
         "primary": "Download AUV",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.17.6/AUV_Mac_0.17.6_Universal.zip",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.17.7/AUV_Mac_0.17.7_Universal.zip",
         "secondary": "Installation guide",
         "secondaryUrl": "/auv/install/",
         "caption": "Usage preview · sample data",
@@ -99,7 +99,7 @@ window.SHAOTING_HOME_CONTENT = {
         "focusTitle": "How to start",
         "focus": "Install AUV, then sign in to the Codex app to view its account usage. The guides explain team setup and development drives.",
         "inviteTitle": "What’s new on Mac",
-        "invite": "0.17.6 lets you drag the agent list into the order you want. The order is saved the moment you change it and kept until you change it again, and the menu bar number follows it — passing to the next agent in your order when the one on top has nothing to report, rather than disappearing. Until you drag something, nothing changes. Windows remains 0.16.3; its Sectorium storage actions are unavailable."
+        "invite": "0.17.7 fixes a saved ThreadOS team setup being rejected when it was written against an older model catalogue: the roles AUV filled in by default always named the newest models, so an older setup came back carrying models that catalogue never had. It also puts the product name right in the Claude consent text, and gives the Ultra thinking level a Chinese label. Windows remains 0.16.3; its Sectorium storage actions are unavailable."
       },
       {
         "id": "bid",
@@ -291,7 +291,7 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "macOS 0.17.6 · Windows 0.16.3",
+        "status": "macOS 0.17.7 · Windows 0.16.3",
         "kind": "Windows 与 Mac 应用",
         "headline": "看用量，配团队，管理开发盘。",
         "description": "随时查看 AI 账户用量，用线程工准备开发团队指令。在 Mac 上，分区工负责加载、卸载开发卷，以及安全断开它所在的外接硬盘。",
@@ -301,7 +301,7 @@ window.SHAOTING_HOME_CONTENT = {
           "English / 中文"
         ],
         "primary": "下载 AUV",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.17.6/AUV_Mac_0.17.6_Universal.zip",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.17.7/AUV_Mac_0.17.7_Universal.zip",
         "secondary": "安装指南",
         "secondaryUrl": "/auv/install/",
         "caption": "用量界面示例 · 示例数据",
@@ -310,7 +310,7 @@ window.SHAOTING_HOME_CONTENT = {
         "focusTitle": "怎么开始",
         "focus": "安装 AUV，再登录 Codex 应用以查看账户用量。团队设置与开发盘操作可按对应指南完成。",
         "inviteTitle": "Mac 新版变化",
-        "invite": "0.17.6 支持把智能体列表拖成你想要的顺序。顺序在更改的那一刻即保存，并一直保留到你再次更改；菜单栏数字也跟随该顺序——置顶的智能体当前没有数据时，数字交给你顺序中的下一个，而不是消失。在你拖动之前，一切照旧。Windows 保持 0.16.3，其分区工磁盘操作不可用。"
+        "invite": "0.17.7 修复按较早模型目录保存的 ThreadOS 团队设置被判为无效的问题：AUV 自动填入的默认角色总是指向最新模型，于是旧设置再打开时带着该目录从未有过的模型。本版还把 Claude 同意书里的产品名改对，并为 Ultra 思考档位补上中文标签。Windows 保持 0.16.3，其分区工磁盘操作不可用。"
       },
       {
         "id": "bid",
