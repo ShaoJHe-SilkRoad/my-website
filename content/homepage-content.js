@@ -80,7 +80,7 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "macOS 0.17.7 · Windows 0.16.3",
+        "status": "macOS 0.18.0 · Windows 0.16.3",
         "kind": "Windows & Mac app",
         "headline": "See usage. Set your team. Manage your development drive.",
         "description": "Check AI account usage at a glance. Use ThreadOS to prepare coding-team instructions. On Mac, Sectorium loads and unloads your development volume and safely disconnects its external drive.",
@@ -90,7 +90,7 @@ window.SHAOTING_HOME_CONTENT = {
           "English / 中文"
         ],
         "primary": "Download AUV",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.17.7/AUV_Mac_0.17.7_Universal.zip",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.18.0/AUV_Mac_0.18.0_Universal.zip",
         "secondary": "Installation guide",
         "secondaryUrl": "/auv/install/",
         "caption": "Usage preview · sample data",
@@ -99,7 +99,7 @@ window.SHAOTING_HOME_CONTENT = {
         "focusTitle": "How to start",
         "focus": "Install AUV, then sign in to the Codex app to view its account usage. The guides explain team setup and development drives.",
         "inviteTitle": "What’s new on Mac",
-        "invite": "0.17.7 fixes a saved ThreadOS team setup being rejected when it was written against an older model catalogue: the roles AUV filled in by default always named the newest models, so an older setup came back carrying models that catalogue never had. It also puts the product name right in the Claude consent text, and gives the Ultra thinking level a Chinese label. Windows remains 0.16.3; its Sectorium storage actions are unavailable."
+        "invite": "0.18.0 redesigns the main window and Settings: one type scale, a narrower agent rail, and six Settings panes with one place for each setting. Refresh All now brings Claude's exact figures too, and automatic refresh can run every 5, 15, 30 or 60 minutes with Claude included. Where an agent has a five-hour and a seven-day limit, AUV shows the one that changed most, and Claude stays on the Desktop Assistant. Windows remains 0.16.3; its Sectorium storage actions are unavailable."
       },
       {
         "id": "bid",
@@ -291,7 +291,7 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "macOS 0.17.7 · Windows 0.16.3",
+        "status": "macOS 0.18.0 · Windows 0.16.3",
         "kind": "Windows 与 Mac 应用",
         "headline": "看用量，配团队，管理开发盘。",
         "description": "随时查看 AI 账户用量，用线程工准备开发团队指令。在 Mac 上，分区工负责加载、卸载开发卷，以及安全断开它所在的外接硬盘。",
@@ -301,7 +301,7 @@ window.SHAOTING_HOME_CONTENT = {
           "English / 中文"
         ],
         "primary": "下载 AUV",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.17.7/AUV_Mac_0.17.7_Universal.zip",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.18.0/AUV_Mac_0.18.0_Universal.zip",
         "secondary": "安装指南",
         "secondaryUrl": "/auv/install/",
         "caption": "用量界面示例 · 示例数据",
@@ -310,7 +310,7 @@ window.SHAOTING_HOME_CONTENT = {
         "focusTitle": "怎么开始",
         "focus": "安装 AUV，再登录 Codex 应用以查看账户用量。团队设置与开发盘操作可按对应指南完成。",
         "inviteTitle": "Mac 新版变化",
-        "invite": "0.17.7 修复按较早模型目录保存的 ThreadOS 团队设置被判为无效的问题：AUV 自动填入的默认角色总是指向最新模型，于是旧设置再打开时带着该目录从未有过的模型。本版还把 Claude 同意书里的产品名改对，并为 Ultra 思考档位补上中文标签。Windows 保持 0.16.3，其分区工磁盘操作不可用。"
+        "invite": "0.18.0 重新设计主窗口与设置：统一字号体系，左侧智能体栏更窄，设置分为六个面板，每项设置只有一个位置。“全部刷新”现在也取得 Claude 的精确数值；自动刷新可设为每 5、15、30 或 60 分钟，并包含 Claude。智能体同时有 5 小时与 7 天限额时，AUV 显示变化最大的那个；Claude 也会一直留在桌面助手上。Windows 保持 0.16.3，其分区工磁盘操作不可用。"
       },
       {
         "id": "bid",
