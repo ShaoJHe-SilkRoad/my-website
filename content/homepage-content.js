@@ -80,7 +80,7 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "macOS 0.18.0 · Windows 0.16.3",
+        "status": "macOS 0.18.1 · Windows 0.16.3",
         "kind": "Windows & Mac app",
         "headline": "See usage. Set your team. Manage your development drive.",
         "description": "Check AI account usage at a glance. Use ThreadOS to prepare coding-team instructions. On Mac, Sectorium loads and unloads your development volume and safely disconnects its external drive.",
@@ -90,7 +90,7 @@ window.SHAOTING_HOME_CONTENT = {
           "English / 中文"
         ],
         "primary": "Download AUV",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.18.0/AUV_Mac_0.18.0_Universal.zip",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.18.1/AUV_Mac_0.18.1_Universal.zip",
         "secondary": "Installation guide",
         "secondaryUrl": "/auv/install/",
         "caption": "Usage preview · sample data",
@@ -99,7 +99,7 @@ window.SHAOTING_HOME_CONTENT = {
         "focusTitle": "How to start",
         "focus": "Install AUV, then sign in to the Codex app to view its account usage. The guides explain team setup and development drives.",
         "inviteTitle": "What’s new on Mac",
-        "invite": "0.18.0 redesigns the main window and Settings: one type scale, a narrower agent rail, and six Settings panes with one place for each setting. Refresh All now brings Claude's exact figures too, and automatic refresh can run every 5, 15, 30 or 60 minutes with Claude included. Where an agent has a five-hour and a seven-day limit, AUV shows the one that changed most, and Claude stays on the Desktop Assistant. Windows remains 0.16.3; its Sectorium storage actions are unavailable."
+        "invite": "0.18.1 colours Claude's Desktop Assistant bar by how current its reading is: green right after an Accuracy Sync, grey once the reading is outdated, with the percentage in the normal text colour. Automatic refresh can now also run every 10 minutes. It builds on 0.18.0's redesigned window and Settings, and Refresh All that brings Claude's exact figures. Windows remains 0.16.3; its Sectorium storage actions are unavailable."
       },
       {
         "id": "bid",
@@ -291,7 +291,7 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "macOS 0.18.0 · Windows 0.16.3",
+        "status": "macOS 0.18.1 · Windows 0.16.3",
         "kind": "Windows 与 Mac 应用",
         "headline": "看用量，配团队，管理开发盘。",
         "description": "随时查看 AI 账户用量，用线程工准备开发团队指令。在 Mac 上，分区工负责加载、卸载开发卷，以及安全断开它所在的外接硬盘。",
@@ -301,7 +301,7 @@ window.SHAOTING_HOME_CONTENT = {
           "English / 中文"
         ],
         "primary": "下载 AUV",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.18.0/AUV_Mac_0.18.0_Universal.zip",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.18.1/AUV_Mac_0.18.1_Universal.zip",
         "secondary": "安装指南",
         "secondaryUrl": "/auv/install/",
         "caption": "用量界面示例 · 示例数据",
@@ -310,7 +310,7 @@ window.SHAOTING_HOME_CONTENT = {
         "focusTitle": "怎么开始",
         "focus": "安装 AUV，再登录 Codex 应用以查看账户用量。团队设置与开发盘操作可按对应指南完成。",
         "inviteTitle": "Mac 新版变化",
-        "invite": "0.18.0 重新设计主窗口与设置：统一字号体系，左侧智能体栏更窄，设置分为六个面板，每项设置只有一个位置。“全部刷新”现在也取得 Claude 的精确数值；自动刷新可设为每 5、15、30 或 60 分钟，并包含 Claude。智能体同时有 5 小时与 7 天限额时，AUV 显示变化最大的那个；Claude 也会一直留在桌面助手上。Windows 保持 0.16.3，其分区工磁盘操作不可用。"
+        "invite": "0.18.1 让桌面助手上 Claude 的进度条反映读数是否最新：精确同步后为绿色，读数过时后为灰色，百分比保持正常文字颜色。自动刷新新增每 10 分钟一档。本版延续 0.18.0 重新设计的主窗口与设置，以及会取得 Claude 精确数值的“全部刷新”。Windows 保持 0.16.3，其分区工磁盘操作不可用。"
       },
       {
         "id": "bid",
