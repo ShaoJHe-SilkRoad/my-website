@@ -80,7 +80,7 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "macOS 0.18.2 · Windows 0.16.3",
+        "status": "macOS 0.18.3 · Windows 0.16.3",
         "kind": "Windows & Mac app",
         "headline": "See usage. Set your team. Manage your development drive.",
         "description": "Check AI account usage at a glance. Use ThreadOS to prepare coding-team instructions. On Mac, Sectorium loads and unloads your development volume and safely disconnects its external drive.",
@@ -90,7 +90,7 @@ window.SHAOTING_HOME_CONTENT = {
           "English / 中文"
         ],
         "primary": "Download AUV",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.18.2/AUV_Mac_0.18.2_Universal.zip",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.18.3/AUV_Mac_0.18.3_Universal.zip",
         "secondary": "Installation guide",
         "secondaryUrl": "/auv/install/",
         "caption": "Usage preview · sample data",
@@ -99,7 +99,7 @@ window.SHAOTING_HOME_CONTENT = {
         "focusTitle": "How to start",
         "focus": "Install AUV, then sign in to the Codex app to view its account usage. The guides explain team setup and development drives.",
         "inviteTitle": "What’s new on Mac",
-        "invite": "0.18.2 brings back Claude's reset time, shown like Codex's: AUV now reads it from claude.ai's redesigned Usage page. 0.18.1 coloured Claude's Desktop Assistant bar by how current its reading is and added a 10-minute refresh; 0.18.0 redesigned the window and Settings. Windows remains 0.16.3; its Sectorium storage actions are unavailable."
+        "invite": "0.18.3 keeps Claude's exact sync working when Safari is on another desktop or minimized, and one failed sync no longer stops it for hours. 0.18.2 brought back Claude's reset time; 0.18.0 redesigned the window and Settings. Windows remains 0.16.3; its Sectorium storage actions are unavailable."
       },
       {
         "id": "bid",
@@ -291,7 +291,7 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "macOS 0.18.2 · Windows 0.16.3",
+        "status": "macOS 0.18.3 · Windows 0.16.3",
         "kind": "Windows 与 Mac 应用",
         "headline": "看用量，配团队，管理开发盘。",
         "description": "随时查看 AI 账户用量，用线程工准备开发团队指令。在 Mac 上，分区工负责加载、卸载开发卷，以及安全断开它所在的外接硬盘。",
@@ -301,7 +301,7 @@ window.SHAOTING_HOME_CONTENT = {
           "English / 中文"
         ],
         "primary": "下载 AUV",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.18.2/AUV_Mac_0.18.2_Universal.zip",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.18.3/AUV_Mac_0.18.3_Universal.zip",
         "secondary": "安装指南",
         "secondaryUrl": "/auv/install/",
         "caption": "用量界面示例 · 示例数据",
@@ -310,7 +310,7 @@ window.SHAOTING_HOME_CONTENT = {
         "focusTitle": "怎么开始",
         "focus": "安装 AUV，再登录 Codex 应用以查看账户用量。团队设置与开发盘操作可按对应指南完成。",
         "inviteTitle": "Mac 新版变化",
-        "invite": "0.18.2 恢复显示 Claude 的额度重置时间，格式与 Codex 一致：AUV 现在能从 claude.ai 改版后的用量页读取它。0.18.1 让桌面助手上 Claude 的进度条反映读数是否最新，并新增每 10 分钟自动刷新；0.18.0 重新设计了主窗口与设置。Windows 保持 0.16.3，其分区工磁盘操作不可用。"
+        "invite": "0.18.3 让 Safari 在另一个桌面或最小化时，Claude 精确同步也能正常进行；一次同步失败不再让它连续几小时停摆。0.18.2 恢复显示 Claude 的重置时间；0.18.0 重新设计了主窗口与设置。Windows 保持 0.16.3，其分区工磁盘操作不可用。"
       },
       {
         "id": "bid",
