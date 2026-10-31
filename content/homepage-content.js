@@ -71,7 +71,7 @@ window.SHAOTING_HOME_CONTENT = {
     "work": {
       "eyebrow": "01 / FROM OBSERVATION TO SOFTWARE",
       "title": "The work speaks.",
-      "intro": "Native AI usage tools for Windows and Mac. A bilingual research digest. Making information easier to use.",
+      "intro": "Native AI usage tools for Windows and Mac. A bilingual research digest. A one-click screenshot lens for Windows. Making information easier to use.",
       "all": "Explore my GitHub"
     },
     "projects": [
@@ -124,6 +124,30 @@ window.SHAOTING_HOME_CONTENT = {
         "focus": "One source-linked fact package for concise email briefs and fuller bilingual web explanations.",
         "inviteTitle": "Where you can help",
         "invite": "I’d like to hear from curious readers, editorial thinkers, and people who care about how information is presented."
+      },
+      {
+        "id": "screensnap",
+        "number": "03",
+        "name": "ScreenSnap",
+        "subtitle": "Screenshot lens",
+        "status": "Windows 0.1.0",
+        "kind": "Windows utility",
+        "headline": "One click. Whole screen. On your clipboard.",
+        "description": "A small floating lens that copies a screenshot of every monitor to your clipboard. Click it or press Alt+C in any app, then paste.",
+        "tags": [
+          "Windows 10 / 11",
+          "Alt+C shortcut",
+          "Nothing to install"
+        ],
+        "primary": "Get ScreenSnap",
+        "url": "/screensnap/",
+        "caption": "ScreenSnap 0.1.0 · the lens floats above your windows",
+        "whyTitle": "What it is for",
+        "why": "Getting what is on your screen into a message or document in one motion, without saving files.",
+        "focusTitle": "How to start",
+        "focus": "Download the ZIP from the ScreenSnap page, unblock it, extract it and open ScreenSnap.vbs. The lens appears near the top-right of your screen.",
+        "inviteTitle": "Good to know",
+        "invite": "It uses the built-in Windows PowerShell, never saves or sends your screenshots, and hides itself so it is never in the picture."
       }
     ],
     "digest": {
@@ -282,7 +306,7 @@ window.SHAOTING_HOME_CONTENT = {
     "work": {
       "eyebrow": "01 / 从观察到作品",
       "title": "让作品说话。",
-      "intro": "Windows 与 Mac 原生 AI 用量工具，以及双语研究简报。让信息更便于使用。",
+      "intro": "Windows 与 Mac 原生 AI 用量工具、双语研究简报，以及一键截屏的 Windows 小镜头。让信息更便于使用。",
       "all": "探索我的 GitHub"
     },
     "projects": [
@@ -335,6 +359,30 @@ window.SHAOTING_HOME_CONTENT = {
         "focus": "同一份可追溯事实包，生成简洁邮件与完整双语网页解释。",
         "inviteTitle": "欢迎你的参与",
         "invite": "希望听到好奇的读者、关注内容的人，以及对信息呈现有想法的伙伴的反馈。"
+      },
+      {
+        "id": "screensnap",
+        "number": "03",
+        "name": "ScreenSnap",
+        "subtitle": "截屏镜头",
+        "status": "Windows 0.1.0",
+        "kind": "Windows 小工具",
+        "headline": "点一下，整屏截图就进剪贴板。",
+        "description": "一枚浮在屏幕上的小镜头，把所有显示器的画面截取到剪贴板。在任何应用中点击它或按 Alt+C，然后粘贴即可。",
+        "tags": [
+          "Windows 10 / 11",
+          "Alt+C 快捷键",
+          "无需安装"
+        ],
+        "primary": "获取 ScreenSnap",
+        "url": "/screensnap/",
+        "caption": "ScreenSnap 0.1.0 · 镜头浮在所有窗口上方",
+        "whyTitle": "用来做什么",
+        "why": "一个动作，把屏幕上的内容放进消息或文档，不用保存文件。",
+        "focusTitle": "怎么开始",
+        "focus": "在 ScreenSnap 页面下载 ZIP，解除锁定后解压，打开 ScreenSnap.vbs，镜头会出现在屏幕右上方附近。",
+        "inviteTitle": "值得知道",
+        "invite": "它使用系统自带的 Windows PowerShell，不保存也不发送截图，截图时会自动隐藏，不会出现在画面里。"
       }
     ],
     "digest": {
