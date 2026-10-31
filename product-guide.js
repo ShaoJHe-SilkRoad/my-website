@@ -12,7 +12,9 @@
       button.setAttribute('aria-pressed', String(button.dataset.setLanguage === lang));
     });
     var title = document.querySelector('[data-language="' + lang + '"] h1');
-    if (title) document.title = title.textContent + ' — AUV | Shaoting He';
+    // Pages for other products name themselves with data-product; AUV guides keep the default.
+    var product = document.body.dataset.product || 'AUV';
+    if (title) document.title = title.textContent + (title.textContent === product ? '' : ' — ' + product) + ' | Shaoting He';
     try { localStorage.setItem('site:language', lang); } catch (error) {}
   }
   document.querySelectorAll('[data-set-language]').forEach(function (button) {
