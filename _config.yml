@@ -1,0 +1,13 @@
+# GitHub Pages publishes this folder. Keep working notes, build scripts and
+# local drafts out of the public site even if they are committed.
+exclude:
+  - "*.md"
+  - "*.csv"
+  - "*.bak"
+  - "*.bak-*"
+  - "*.py"
+  - scripts/
+  - notion-autobuild/
+  - content/generated/
+  - content/notion-sample/
+  - "preview-*/"

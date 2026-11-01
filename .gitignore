@@ -9,3 +9,14 @@
 .idea/
 *.swp
 *~
+
+# Secrets
+.env
+
+# Local drafts, backups and tool scratch
+*.bak
+*.bak-*
+preview-*/
+.agent-scratch/
+.workbuddy/
+.claude/

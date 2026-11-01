@@ -40,14 +40,53 @@
     let gridDots = [];
     const resultPoint = new Float64Array(2);
     const lookupSize = 4096;
-    const signalTable = new Float64Array(lookupSize + 1);
+    const atrialTable = new Float64Array(lookupSize + 1);
+    const ventricularTable = new Float64Array(lookupSize + 1);
     const gaussianTable = new Float64Array(lookupSize + 1);
     let manuallyPaused = false;
     let light = root.dataset.theme === 'light';
+    let vf = false;
+    // Colours per palette; Code blue swaps the dark field for an alarm red.
+    const tones = {
+        dark: {
+            field: ['rgba(214,236,228,0)', 'rgba(214,236,228,0.1)', 'rgba(214,236,228,0.3)', 'rgba(214,236,228,0.14)', 'rgba(214,236,228,0)'],
+            trace: ['rgba(95,214,160,0)', 'rgba(95,214,160,0.55)', '#dbfbea', '#5fd6a0', 'rgba(95,214,160,0)'],
+            haze: ['30,80,110', '40,150,110'], grid: '#4d7686', streak: '#e6fff2', pulse: '95,214,160', dot: '#effff6',
+            pointer: '98,194,224', reticle: 'rgba(150,215,235,0.55)', mark: '#5fd6a0', ring: '#62c2e0'
+        },
+        light: {
+            field: ['rgba(15,23,28,0)', 'rgba(15,23,28,0.08)', 'rgba(15,23,28,0.26)', 'rgba(15,23,28,0.12)', 'rgba(15,23,28,0)'],
+            trace: ['rgba(29,127,86,0)', 'rgba(29,127,86,0.5)', '#14603f', '#1d7f56', 'rgba(29,127,86,0)'],
+            haze: ['31,122,160', '29,127,86'], grid: '#7f9aa3', streak: '#1d7f56', pulse: '29,127,86', dot: '#14603f',
+            pointer: '31,122,160', reticle: 'rgba(20,70,95,0.45)', mark: '#1d7f56', ring: '#1f7aa0'
+        },
+        vf: {
+            field: ['rgba(255,40,70,0)', 'rgba(255,70,90,0.42)', 'rgba(255,176,168,0.94)', 'rgba(255,82,92,0.64)', 'rgba(240,40,60,0)'],
+            trace: ['rgba(255,170,90,0)', 'rgba(255,178,103,0.55)', '#fff1dc', '#ffb267', 'rgba(255,150,80,0)'],
+            haze: ['200,30,50', '255,120,60'], grid: '#d07a7a', streak: '#fff3e2', pulse: '255,178,103', dot: '#fff6ea',
+            pointer: '255,90,90', reticle: 'rgba(255,170,160,0.67)', mark: '#ffb267', ring: '#ff8a80'
+        }
+    };
+    const tone = () => tones[vf ? 'vf' : light ? 'light' : 'dark'];
     let rhythm = 'nsr';
     let rhythmBlend = 0;
     let transitionFrom = 0;
     let transitionStarted = 0;
+    // Sinus rhythm runs at exactly 67 beats/min, so every R–R interval is identical.
+    const rrInterval = 60000 / 67;
+    // The R wave sits left of centre so the T wave stays on screen.
+    const qrsPhase = 0.4123;
+    let sinusOrigin = 0;
+    let sinusFlare = 0;
+    let atrialGain = 1;
+    let beatGain = 1;
+    let conduction = 1;
+    const blockedBeats = [];
+    let shockKick = 0;
+    let shockAt = -Infinity;
+    const ectopics = [];
+    const presses = [];
+    const touchStart = { x: 0, y: 0, at: 0, active: false };
 
     const isPaused = () => manuallyPaused || preference.matches;
     const canAnimate = () => !isPaused() && !document.hidden && visible;
@@ -55,8 +94,10 @@
     function syncPalette() {
         // Code blue has a dark canvas even when the saved page preference is light.
         const nextLight = root.dataset.theme === 'light' && rhythm !== 'vf';
-        if (nextLight !== light) {
+        const nextVf = rhythm === 'vf';
+        if (nextLight !== light || nextVf !== vf) {
             light = nextLight;
+            vf = nextVf;
             styles = null;
         }
     }
@@ -70,29 +111,44 @@
         context.fillRect(x - radius, y - radius, radius * 2, radius * 2);
     }
 
-    // An intentionally stylized P–QRS–T silhouette, never a patient measurement.
-    function signal(position) {
-        const p = Math.exp(-Math.pow((position + 0.16) / 0.041, 2)) * 0.14;
-        const q = -Math.exp(-Math.pow((position + 0.040) / 0.014, 2)) * 0.15;
-        const r = Math.exp(-Math.pow(position / 0.017, 2)) * 1.08;
-        const s = -Math.exp(-Math.pow((position - 0.039) / 0.018, 2)) * 0.33;
-        const t = Math.exp(-Math.pow((position - 0.16) / 0.058, 2)) * 0.23;
-        return p + q + r + s + t;
+    // Lead II at 67 beats/min. The window spans one R–R interval (895.5 ms), so position maps to time.
+    // Intervals: P ≈ 100 ms, PR ≈ 165 ms, QRS ≈ 90 ms, isoelectric ST, QT ≈ 385 ms (QTc ≈ 407 ms).
+    // Stylised for display, never a patient measurement.
+    function wave(t, centre, rise, fall, height) {
+        return Math.exp(-Math.pow((t - centre) / (t < centre ? rise : fall), 2)) * height;
+    }
+    function atrial(position) {
+        return wave(position * rrInterval, -160, 30, 28, 0.14);
+    }
+    function ventricular(position) {
+        const t = position * rrInterval;
+        return wave(t, -36, 10, 9, -0.12) + wave(t, 0, 11, 12, 1.08) + wave(t, 32, 11, 14, -0.3)
+            + wave(t, 250, 68, 45, 0.26);
     }
 
-    // The narrow QRS retains subpixel accuracy without recomputing five Gaussians per vertex.
+    // Narrow QRS retains subpixel accuracy without recomputing Gaussians per vertex.
     for (let index = 0; index <= lookupSize; index += 1) {
-        signalTable[index] = signal(index / lookupSize * 2 - 1);
+        const position = index / lookupSize * 2 - 1;
+        atrialTable[index] = atrial(position);
+        ventricularTable[index] = ventricular(position);
         gaussianTable[index] = Math.exp(-index / lookupSize * 18);
     }
 
-    function organizedSignal(position) {
+    function lookup(table, position) {
         const positionInTable = (position + 1) * (lookupSize / 2);
         if (positionInTable <= 0 || positionInTable >= lookupSize) return 0;
         const index = positionInTable | 0;
-        const fraction = positionInTable - index;
-        return signalTable[index] + (signalTable[index + 1] - signalTable[index]) * fraction;
+        return table[index] + (table[index + 1] - table[index]) * (positionInTable - index);
     }
+
+    // Premature ventricular beat: no P wave, broad QRS (≈ 150 ms) and a discordant, inverted T wave.
+    function ectopicShape(position) {
+        const t = position * rrInterval;
+        return wave(t, -45, 22, 20, -0.16) + wave(t, 0, 32, 34, 1.2) + wave(t, 62, 30, 36, -0.5)
+            + wave(t, 300, 80, 60, -0.32);
+    }
+    const ectopicTable = new Float64Array(lookupSize + 1);
+    for (let index = 0; index <= lookupSize; index += 1) ectopicTable[index] = ectopicShape(index / lookupSize * 2 - 1);
 
     function gaussian(square) {
         if (square >= 18) return 0;
@@ -103,7 +159,7 @@
 
     function makeGrid(steps) {
         const values = { steps, u: new Float64Array(steps + 1), sine: new Float64Array(steps + 1) };
-        for (const frequency of [8.5, 19, 37, 83, 143.59, 50.63]) {
+        for (const frequency of [8.5, 7, 13, 34.6, 45.2, 24.5]) {
             const sin = new Float64Array(steps + 1);
             const cos = new Float64Array(steps + 1);
             for (let index = 0; index <= steps; index += 1) {
@@ -123,7 +179,7 @@
     function makeStrand(band) {
         const offset = band - 0.5;
         return {
-            band, offset, center: 0.51 + offset * 0.23,
+            band, offset, center: 0.41 + offset * 0.23,
             fold: Math.sin(offset * Math.PI) * 0.15,
             amplitude: 0.85 + band * 0.26,
             opacity: 0.32 + Math.sin(band * Math.PI) * 0.56,
@@ -141,9 +197,9 @@
         phases[0] = Math.sin(wobble);
         phases[1] = Math.cos(wobble);
         if (rhythmBlend > 0) {
-            const phase = -strand.currentCenter * 83 + time * 2.7 + strand.band * 0.35;
-            const angles = [-strand.currentCenter * 19 + time * 0.6,
-                -strand.currentCenter * 37 - time * 0.9, phase, phase * 1.73 + 1.1, phase * 0.61 - 0.8];
+            const centre = strand.currentCenter, offset = strand.band * 0.35;
+            const angles = [-centre * 7 + time * 1.3, -centre * 13 - time * 2.1,
+                -centre * 34.6 + time * 38.7 + offset, -centre * 45.2 + time * 50.5 + 1.1 + offset, -centre * 24.5 + time * 27.4 - 0.8];
             for (let index = 0; index < angles.length; index += 1) {
                 phases[index * 2 + 2] = Math.sin(angles[index]);
                 phases[index * 2 + 3] = Math.cos(angles[index]);
@@ -161,16 +217,25 @@
         let px = geometry.x + (u - 0.5) * geometry.span;
         const sine = index < 0 ? Math.sin(u * Math.PI) : grid.sine[index];
         let py = strand.baseline + sine * strand.foldScale;
-        let shape = rhythmBlend < 1 ? organizedSignal(u - strand.currentCenter) * (1 - rhythmBlend) : 0;
+        let shape = 0;
+        if (rhythmBlend < 1) {
+            const position = u - strand.currentCenter;
+            shape = lookup(atrialTable, position) * atrialGain + lookup(ventricularTable, position) * beatGain * conduction;
+            for (let index = 0; index < ectopics.length; index += 1) {
+                const ectopic = ectopics[index];
+                if (ectopic.level > 0.002) shape += lookup(ectopicTable, u - ectopic.u) * ectopic.level;
+            }
+            shape *= 1 - rhythmBlend;
+        }
         const phases = strand.phases;
         if (rhythmBlend > 0) {
-            const envelope = 0.4 + 0.14 * phaseSine(19, u, index, phases, 2)
-                + 0.1 * phaseSine(37, u, index, phases, 4);
-            shape += envelope * (phaseSine(83, u, index, phases, 6)
-                + phaseSine(143.59, u, index, phases, 8) * 0.44
-                + phaseSine(50.63, u, index, phases, 10) * 0.3) * rhythmBlend;
+            const envelope = 0.34 + 0.12 * phaseSine(7, u, index, phases, 2)
+                + 0.08 * phaseSine(13, u, index, phases, 4);
+            shape += envelope * (phaseSine(34.6, u, index, phases, 6)
+                + phaseSine(45.2, u, index, phases, 8) * 0.44
+                + phaseSine(24.5, u, index, phases, 10) * 0.3) * rhythmBlend;
         }
-        py -= shape * strand.amplitudeScale;
+        py -= shape * strand.amplitudeScale + shockKick * sine;
         py += phaseSine(8.5, u, index, phases, 0) * 3.5 * sine;
         if (pointer.strength > 0.005) {
             const dx = px - pointer.x;
@@ -199,14 +264,33 @@
         return resultPoint;
     }
 
-    function drawTrace(strand, time, color, weight, opacity) {
+    function tracePath(strand, time) {
         context.beginPath();
         for (let index = 0; index <= grid.steps; index += 1) {
             point(grid.u[index], strand, time, index);
             if (index === 0) context.moveTo(resultPoint[0], resultPoint[1]);
             else context.lineTo(resultPoint[0], resultPoint[1]);
         }
+    }
+
+    function drawTrace(strand, time, color, weight, opacity) {
+        tracePath(strand, time);
         context.strokeStyle = color;
+        context.lineWidth = weight;
+        context.globalAlpha = opacity;
+        context.stroke();
+    }
+
+    // The lead trace is built once and stroked three times: a wide bloom, a halo, then the crisp line.
+    function drawGlowTrace(strand, time, color, weight, opacity) {
+        tracePath(strand, time);
+        context.strokeStyle = color;
+        context.lineWidth = weight * 6;
+        context.globalAlpha = opacity * (light ? 0.07 : 0.13) * (1 + sinusFlare * 1.4);
+        context.stroke();
+        context.lineWidth = weight * 2.6;
+        context.globalAlpha = opacity * (light ? 0.14 : 0.24) * (1 + sinusFlare * 0.8);
+        context.stroke();
         context.lineWidth = weight;
         context.globalAlpha = opacity;
         context.stroke();
@@ -215,23 +299,16 @@
     function refreshStyles() {
         const { x, y, span } = geometry;
         const blue = context.createLinearGradient(x - span * 0.5, y, x + span * 0.5, y);
-        blue.addColorStop(0, light ? 'rgba(17,93,179,0)' : 'rgba(28,111,233,0)');
-        blue.addColorStop(0.17, light ? 'rgba(15,99,178,0.32)' : 'rgba(46,147,255,0.42)');
-        blue.addColorStop(0.46, light ? 'rgba(0,103,163,0.65)' : 'rgba(91,209,255,0.94)');
-        blue.addColorStop(0.7, light ? 'rgba(16,115,178,0.53)' : 'rgba(53,153,255,0.64)');
-        blue.addColorStop(1, light ? 'rgba(20,86,151,0)' : 'rgba(42,125,239,0)');
+        const { field, trace } = tone();
+        [0, 0.17, 0.46, 0.7, 1].forEach((stop, index) => blue.addColorStop(stop, field[index]));
         const warm = context.createLinearGradient(x - span * 0.5, y, x + span * 0.5, y);
-        warm.addColorStop(0, 'rgba(255,167,47,0)');
-        warm.addColorStop(0.27, light ? 'rgba(172,105,0,0.49)' : 'rgba(255,190,79,0.53)');
-        warm.addColorStop(0.48, light ? '#aa6600' : '#ffec99');
-        warm.addColorStop(0.61, light ? '#ca7900' : '#ffc361');
-        warm.addColorStop(1, 'rgba(255,155,41,0)');
+        [0, 0.16, 0.36, 0.66, 1].forEach((stop, index) => warm.addColorStop(stop, trace[index]));
         styles = { blue, warm };
         gridDots = [];
         gridPath = typeof Path2D === 'function' ? new Path2D() : null;
         const left = mobile ? 20 : Math.max(width * 0.49, x - span * 0.46);
         const top = Math.max(120, y - geometry.amplitude - geometry.spread * 0.53);
-        const spacing = mobile ? 42 : 34;
+        const spacing = mobile ? 44 : 38;
         for (let gx = left; gx < width; gx += spacing) {
             for (let gy = top; gy < Math.min(height - 60, y + geometry.spread * 0.68); gy += spacing) {
                 if (gridPath) gridPath.rect(gx, gy, 1, 1);
@@ -269,12 +346,13 @@
         heroTop = heroBounds ? heroBounds.top + top : 0;
         heroBottom = heroBounds ? heroBounds.bottom + top : viewportHeight;
         const nextHeight = Math.max(1, Math.ceil(heroBottom));
-        const anchor = nextMobile ? document.querySelector('.signal-annotation') : null;
+        const anchor = nextMobile ? document.querySelector('.signal-slot') : null;
         const bounds = anchor && anchor.getBoundingClientRect();
         const nextY = nextMobile
             ? bounds && bounds.height > 0 ? bounds.top + top + bounds.height * 0.61 : Math.min(viewportHeight * 0.79, 650)
             : Math.min(viewportHeight * 0.53, 470);
-        const span = nextMobile ? Math.min(nextWidth * 1.3, 900) : Math.min(nextWidth * 0.66, 1060);
+        // The whole R–R window stays on screen, so the sweep and every beat remain visible.
+        const span = nextMobile ? Math.min(nextWidth, 900) : Math.min(nextWidth * 0.5, 820);
         const spread = nextMobile ? 96 : Math.min(viewportHeight * 0.42, 340);
         const amplitude = nextMobile ? 65 : Math.min(viewportHeight * 0.25, 192);
         const changed = !geometry || width !== nextWidth || height !== nextHeight || ratio !== nextRatio
@@ -293,7 +371,7 @@
         if (canvas.style.height !== `${height}px`) canvas.style.height = `${height}px`;
         if (backdrop && backdrop.style && backdrop.style.height !== `${height}px`) backdrop.style.height = `${height}px`;
         geometry = {
-            x: width * (mobile ? 0.58 : 0.805), y: nextY, span, spread, amplitude,
+            x: mobile ? width * 0.5 : width - span / 2 - Math.max(32, width * 0.03), y: nextY, span, spread, amplitude,
             inverseReachSquared: 1 / Math.pow(Math.max(145, span * 0.25), 2)
         };
         if (rebuildGrid) {
@@ -319,6 +397,26 @@
         const drift = Math.sin(time * 0.21) * 0.009;
         for (const strand of strands) prepareStrand(strand, time, drift);
         prepareStrand(mainStrand, time, drift);
+        const sinceShock = elapsed - shockAt;
+        const cycle = (elapsed - sinusOrigin) / rrInterval;
+        const phase = cycle - Math.floor(cycle);
+        const beatIndex = Math.floor(cycle);
+        const recovering = sinceShock < 1500;
+        // Full compensatory pause: a PVC leaves the ventricles refractory, so the next sinus QRS is not conducted.
+        const target = blockedBeats.includes(beatIndex) ? 0 : 1;
+        conduction += (target - conduction) * (target ? 0.2 : 0.45);
+        sinusFlare = recovering || !target ? 0 : Math.exp(-Math.pow((phase - qrsPhase) * rrInterval / 55, 2));
+        // Defibrillation: a large artifact decaying to baseline, a post-shock pause with no activity, then sinus.
+        atrialGain = recovering ? 0 : 1;
+        beatGain = recovering ? 0 : 1 + sinusFlare * 0.18;
+        shockKick = sinceShock < 30 ? sinceShock / 30 * geometry.amplitude * 0.9
+            : sinceShock < 700 ? Math.exp(-(sinceShock - 30) / 110) * geometry.amplitude * 0.9 : 0;
+        while (blockedBeats.length && blockedBeats[0] < beatIndex) blockedBeats.shift();
+        for (const ectopic of ectopics) {
+            const age = elapsed - ectopic.born;
+            // A premature complex persists for about one sweep, like phosphor on a monitor.
+            ectopic.level = age < 0 ? 0 : Math.min(1, age / 40) * Math.exp(-age / 650);
+        }
         for (const pulse of pulses) {
             const age = (elapsed - pulse.born) / 1500;
             pulse.radius = age * 550;
@@ -327,51 +425,65 @@
         }
         context.globalCompositeOperation = light ? 'source-over' : 'screen';
         context.globalAlpha = presence;
+        context.lineCap = 'round';
+        context.lineJoin = 'round';
 
-        glow(x, y - 45, span * 0.65, '15,87,221', light ? 0.07 : 0.19);
-        glow(x + span * 0.13, y - 115, span * 0.37, '0,162,237', light ? 0.045 : 0.075);
+        const palette = tone();
+        glow(x, y - 45, span * 0.65, palette.haze[0], light ? 0.07 : 0.19);
+        glow(x + span * 0.13, y - 115, span * 0.37, palette.haze[1], light ? 0.045 : 0.075);
 
         // Quiet calibration marks give the field an instrument-like structure.
-        context.fillStyle = light ? '#487ba0' : '#5498c3';
-        context.globalAlpha = (light ? 0.12 : 0.16) * presence;
+        context.fillStyle = palette.grid;
+        context.globalAlpha = (light ? 0.1 : 0.11) * presence;
         if (gridPath) context.fill(gridPath);
         else for (let index = 0; index < gridDots.length; index += 2) context.fillRect(gridDots[index], gridDots[index + 1], 1, 1);
         for (let index = 0; index < strands.length; index += 1) {
             const strand = strands[index];
-            drawTrace(strand, time, styles.blue, index % 6 === 0 ? 1.05 : 0.65, presence * strand.opacity);
+            // Centre strands sit closer to the viewer: slightly heavier and brighter than the edges.
+            drawTrace(strand, time, styles.blue, index % 6 === 0 ? 0.95 : 0.42 + strand.opacity * 0.3, presence * strand.opacity * 0.92);
         }
-        drawTrace(mainStrand, time, styles.warm, mobile ? 2.25 : 1.95, presence * 0.98);
+        drawGlowTrace(mainStrand, time, styles.warm, mobile ? 2 : 1.7, presence * 0.98);
 
         // The small traveling highlight reads as a pulse moving through the signal.
         const sweepClock = elapsed * 0.5;
         const sweepCycles = rhythm === 'vf'
             ? sweepClock / 250 + 0.12 * Math.sin(sweepClock * 0.010) + 0.045 * Math.sin(sweepClock * 0.027)
-            : sweepClock / (60000 / 90);
-        const progress = 0.1 + ((sweepCycles + 0.5) % 1) * 0.8;
-        context.beginPath();
-        for (let index = 0; index <= 8; index += 1) {
-            const u = Math.max(0.1, progress - 0.018 + index / 8 * 0.018);
-            point(u, mainStrand, time);
-            if (index === 0) context.moveTo(resultPoint[0], resultPoint[1]);
-            else context.lineTo(resultPoint[0], resultPoint[1]);
+            : (elapsed - sinusOrigin) / rrInterval;
+        const progress = rhythm === 'vf' ? 0.1 + ((sweepCycles + 0.5) % 1) * 0.8 : sweepCycles - Math.floor(sweepCycles);
+        const edge = Math.min(1, progress / 0.06, (1 - progress) / 0.06);
+        // A comet tail fades behind the pulse; each layer is shorter, finer and brighter.
+        context.strokeStyle = palette.streak;
+        for (const [length, weight, alpha] of [[0.08, 4.2, 0.08], [0.04, 2.8, 0.2], [0.014, 2, 0.55]]) {
+            context.beginPath();
+            for (let index = 0; index <= 10; index += 1) {
+                const u = Math.max(0.01, progress - length + index / 10 * length);
+                point(u, mainStrand, time);
+                if (index === 0) context.moveTo(resultPoint[0], resultPoint[1]);
+                else context.lineTo(resultPoint[0], resultPoint[1]);
+            }
+            context.lineWidth = weight;
+            context.globalAlpha = presence * alpha * edge;
+            context.stroke();
         }
-        context.strokeStyle = light ? '#b8780a' : '#fff0b0';
-        context.lineWidth = mobile ? 2.4 : 2.3;
-        context.globalAlpha = presence * 0.4;
-        context.stroke();
         const [pulseX, pulseY] = point(progress, mainStrand, time);
-        context.globalAlpha = presence;
-        glow(pulseX, pulseY, mobile ? 13 : 21, '255,200,89', light ? 0.15 : 0.30);
-        context.fillStyle = light ? '#a46800' : '#fff2c4';
+        context.globalAlpha = presence * edge;
+        glow(pulseX, pulseY, mobile ? 13 : 21, palette.pulse, light ? 0.15 : 0.30);
+        context.fillStyle = palette.dot;
         context.beginPath();
         context.arc(pulseX, pulseY, mobile ? 1.8 : 2.5, 0, Math.PI * 2);
         context.fill();
+        context.strokeStyle = palette.dot;
+        context.lineWidth = 0.8;
+        context.globalAlpha = presence * edge * (light ? 0.4 : 0.32);
+        context.beginPath();
+        context.arc(pulseX, pulseY, mobile ? 6 : 8, 0, Math.PI * 2);
+        context.stroke();
 
         if (!mobile && pointer.strength > 0.015) {
             const alpha = pointer.strength;
             context.globalAlpha = alpha;
-            glow(pointer.x, pointer.y, 150, '28,142,255', light ? 0.055 : 0.12);
-            context.strokeStyle = light ? 'rgba(13,114,167,0.55)' : 'rgba(132,213,255,0.67)';
+            glow(pointer.x, pointer.y, 150, palette.pointer, light ? 0.055 : 0.12);
+            context.strokeStyle = palette.reticle;
             context.lineWidth = 0.8;
             context.beginPath();
             context.arc(pointer.x, pointer.y, 16, 0, Math.PI * 2);
@@ -384,14 +496,14 @@
             context.moveTo(pointer.x, pointer.y + 20);
             context.lineTo(pointer.x, pointer.y + 25);
             context.stroke();
-            context.fillStyle = light ? '#bb7100' : '#ffce62';
+            context.fillStyle = palette.mark;
             context.fillRect(pointer.x - 1.5, pointer.y - 1.5, 3, 3);
         }
 
         for (const pulse of pulses) {
             const age = (elapsed - pulse.born) / 1500;
             context.globalAlpha = Math.max(0, 1 - age) * 0.6;
-            context.strokeStyle = light ? '#1b87b4' : '#62caff';
+            context.strokeStyle = palette.ring;
             context.lineWidth = 1;
             context.beginPath();
             context.arc(pulse.x, pulse.y, age * 550, 0, Math.PI * 2);
@@ -423,6 +535,7 @@
             pointer.y += (pointer.ty - pointer.y) * follow;
             pointer.strength += (pointer.target - pointer.strength) * engage;
             while (pulses.length && elapsed - pulses[0].born > 1500) pulses.shift();
+            while (ectopics.length && elapsed - ectopics[0].born > 2600) ectopics.shift();
             draw();
         }
         frame = window.requestAnimationFrame(tick);
@@ -485,8 +598,57 @@
                 draw();
             }
         },
-        getRhythm() { return rhythm; }
+        getRhythm() { return rhythm; },
+        shock() {
+            shockAt = elapsed;
+            // Sinus node recovers after a 1.5 s post-shock pause; the first QRS follows its P wave.
+            sinusOrigin = elapsed + 1700 - qrsPhase * rrInterval;
+            ectopics.length = 0;
+            blockedBeats.length = 0;
+            presses.length = 0;
+            rhythm = 'nsr';
+            syncPalette();
+            if (!styles) refreshStyles();
+            rhythmBlend = 0;
+            transitionFrom = 0;
+            transitionStarted = elapsed;
+            if (!canAnimate()) draw();
+        }
     });
+
+    // Each press adds a premature beat; the sinus schedule never resets, so R–R stays constant.
+    // Five presses within one second is an R-on-T storm: the field degenerates into VF.
+    function press(x, y) {
+        if (pulses.length >= 3) pulses.shift();
+        pulses.push({ x, y, born: elapsed });
+        if (rhythm === 'vf') return;
+        if (ectopics.length >= 5) ectopics.shift();
+        // The ectopic depolarises now, so it is drawn where the sweep cursor is, not where the pointer is.
+        const cycle = (elapsed - sinusOrigin) / rrInterval;
+        const u = Math.min(0.9, Math.max(0.1, cycle - Math.floor(cycle) + mainStrand.currentCenter - qrsPhase));
+        ectopics.push({ u, born: elapsed, level: 0 });
+        // Block the next sinus QRS if it would fall inside this beat's refractory period (≈ 450 ms).
+        const next = Math.ceil(cycle - qrsPhase);
+        if (sinusOrigin + (next + qrsPhase) * rrInterval - elapsed < 450 && !blockedBeats.includes(next)) blockedBeats.push(next);
+        const now = Date.now();
+        presses.push(now);
+        if (presses.length > 5) presses.shift();
+        if (presses.length === 5 && now - presses[0] <= 1000) {
+            presses.length = 0;
+            if (typeof window.dispatchEvent === 'function' && typeof CustomEvent === 'function') {
+                window.dispatchEvent(new CustomEvent('signal:fibrillate'));
+            }
+        }
+    }
+
+    function onControl(target) {
+        return target && typeof target.closest === 'function'
+            && target.closest('a, button, input, textarea, select, summary, label, [role="button"], [contenteditable="true"]');
+    }
+
+    function inTouchGraphic(y) {
+        return mobile && visible && Math.abs(y - geometry.y) < 150;
+    }
 
     window.addEventListener('pointermove', (event) => {
         if (!canAnimate() || event.pointerType === 'touch') return;
@@ -500,15 +662,27 @@
         }
     }, { passive: true });
     window.addEventListener('pointerdown', (event) => {
-        if (!canAnimate() || event.pointerType === 'touch' || event.button !== 0 || event.defaultPrevented) return;
+        if (!canAnimate() || event.button !== 0 || event.defaultPrevented || onControl(event.target)) return;
         const x = event.clientX + scrollLeft();
         const y = event.clientY + scrollTop();
-        if (!inGraphic(x, y)) return;
-        const target = event.target;
-        if (target && typeof target.closest === 'function' && target.closest('a, button, input, textarea, select, summary, label, [role="button"], [contenteditable="true"]')) return;
-        if (pulses.length >= 3) pulses.shift();
-        pulses.push({ x, y, born: elapsed });
+        // Touches count only as taps (see pointerup), so scrolling never adds beats.
+        if (event.pointerType === 'touch') {
+            touchStart.x = event.clientX;
+            touchStart.y = event.clientY;
+            touchStart.at = Date.now();
+            touchStart.active = inTouchGraphic(y);
+            return;
+        }
+        if (inGraphic(x, y)) press(x, y);
     }, { passive: true });
+    window.addEventListener('pointerup', (event) => {
+        if (event.pointerType !== 'touch' || !touchStart.active) return;
+        touchStart.active = false;
+        if (!canAnimate() || Date.now() - touchStart.at > 350) return;
+        if (Math.abs(event.clientX - touchStart.x) > 10 || Math.abs(event.clientY - touchStart.y) > 10) return;
+        press(event.clientX + scrollLeft(), event.clientY + scrollTop());
+    }, { passive: true });
+    window.addEventListener('pointercancel', () => { touchStart.active = false; }, { passive: true });
     document.addEventListener('pointerleave', () => { pointer.target = 0; clientPointer.known = false; });
     window.addEventListener('blur', () => { pointer.target = 0; clientPointer.known = false; });
     window.addEventListener('resize', resize, { passive: true });

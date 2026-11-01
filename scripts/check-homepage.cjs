@@ -19,7 +19,8 @@ function environment({ mobile = false, reduced = false, scroll = 0, theme = 'lig
     devicePixelRatio: 1.5, scrollX: 0, scrollY: scroll,
     addEventListener: listen, matchMedia: () => preference,
     requestAnimationFrame(fn) { frames.set(++nextFrame, fn); return nextFrame; },
-    cancelAnimationFrame(id) { frames.delete(id); }
+    cancelAnimationFrame(id) { frames.delete(id); },
+    dispatched: [], dispatchEvent(event) { this.dispatched.push(event.type); }
   };
   const rect = layout => {
     ops.reads++;
@@ -46,12 +47,13 @@ function environment({ mobile = false, reduced = false, scroll = 0, theme = 'lig
   const document = {
     hidden: false, documentElement: html, addEventListener: listen,
     getElementById: id => id === 'ambient-field' ? canvas : null,
-    querySelector: selector => selector === '.hero' ? hero : selector === '.signal-annotation' ? anchor : null
+    querySelector: selector => selector === '.hero' ? hero : selector === '.signal-slot' ? anchor : null
   };
   vm.runInNewContext(source, {
     window, document,
     MutationObserver: class { constructor(fn) { mutation = fn; } observe() {} },
-    ResizeObserver: class { constructor(fn) { resizeCallback = fn; } observe() {} disconnect() {} }
+    ResizeObserver: class { constructor(fn) { resizeCallback = fn; } observe() {} disconnect() {} },
+    CustomEvent: class { constructor(type) { this.type = type; } }
   }, { filename: 'ambient.js' });
   function fire(name, event = {}) { for (const fn of events.get(name) || []) fn(event); }
   return {
@@ -187,6 +189,35 @@ for (const lang of ['en', 'zh-Hans']) {
   for (const id of ['theme-toggle', 'motion-toggle', 'code-blue-toggle', 'copy-email', 'copy-status']) assert(ids.has(id), `${lang}: ${id} exists`);
   assert(html.includes(`data-language="${lang}" aria-pressed="true"`), `${lang}: active language state`);
 }
+// Presses add premature beats; five inside one second fibrillate; a shock restores sinus rhythm.
+{
+  const e = environment(); e.tick(0);
+  const click = () => e.fire('pointerdown', { button: 0, pointerType: 'mouse', clientX: 1200, clientY: 400, target: null });
+  for (let index = 0; index < 4; index += 1) click();
+  assert.deepEqual(e.window.dispatched, [], 'Four premature beats do not fibrillate');
+  click();
+  assert.deepEqual(e.window.dispatched, ['signal:fibrillate'], 'Five presses within one second request VF');
+  e.api.setRhythm('vf'); e.tick(16);
+  click();
+  assert.equal(e.window.dispatched.length, 1, 'Presses during VF request nothing further');
+  e.api.shock(); e.tick(32);
+  assert.equal(e.api.getRhythm(), 'nsr', 'A shock restores sinus rhythm');
+  mode(e, 'source-over', 'After a shock the selected light palette returns');
+  const touch = environment({ mobile: true }); touch.tick(0);
+  touch.fire('pointerdown', { button: 0, pointerType: 'touch', clientX: 200, clientY: 700, target: null });
+  touch.fire('pointerup', { pointerType: 'touch', clientX: 200, clientY: 760, target: null });
+  for (let index = 0; index < 4; index += 1) {
+    touch.fire('pointerdown', { button: 0, pointerType: 'touch', clientX: 200, clientY: 700, target: null });
+    touch.fire('pointerup', { pointerType: 'touch', clientX: 200, clientY: 760, target: null });
+  }
+  assert.deepEqual(touch.window.dispatched, [], 'Touch scrolls (finger moved) never count as beats');
+  for (let index = 0; index < 5; index += 1) {
+    touch.fire('pointerdown', { button: 0, pointerType: 'touch', clientX: 200, clientY: 760, target: null });
+    touch.fire('pointerup', { pointerType: 'touch', clientX: 202, clientY: 761, target: null });
+  }
+  assert.deepEqual(touch.window.dispatched, ['signal:fibrillate'], 'Five taps on the signal fibrillate on phones');
+}
+console.log('PASS: premature beats, five-press VF, shock to sinus rhythm, scroll-safe touch.');
 console.log('PASS: light/VF palette and lifecycle; scroll and relayout; deep-scroll anchoring; hidden-time exclusion; both locale renderers.');
 console.log(`Simulated paints/second: ${cadence.join(', ')}. This does not measure real-device frame time.`);
 

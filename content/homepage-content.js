@@ -11,16 +11,12 @@ window.SHAOTING_HOME_CONTENT = {
         "Work"
       ],
       [
-        "focus",
-        "Focus"
-      ],
-      [
         "about",
         "About"
       ],
       [
         "contact",
-        "Connect"
+        "Collaborate"
       ]
     ],
     "ui": {
@@ -28,9 +24,12 @@ window.SHAOTING_HOME_CONTENT = {
       "language": "Language",
       "light": "Switch to light theme",
       "motion": "Pause background motion",
+      "motionShort": "Pause",
       "resume": "Resume background motion",
+      "resumeShort": "Play",
       "dark": "Switch to dark theme",
       "reduced": "Motion reduced by your device",
+      "reducedShort": "Still",
       "menu": "Main navigation",
       "github": "GitHub",
       "back": "Back to top",
@@ -42,31 +41,22 @@ window.SHAOTING_HOME_CONTENT = {
       "projectPreview": "View AUV screenshot",
       "codeBlue": "Code blue",
       "codeBlueOn": "Nurse joke: switch the waveform to V-Fib",
-      "codeBlueOff": "Return the waveform to normal sinus rhythm"
+      "codeBlueOff": "Deliver a shock and restore sinus rhythm",
+      "shock": "Shock",
+      "desktopOnly": "AUV runs on Mac and Windows computers. Open this page on your computer to download it.",
+      "shareLink": "Send the link to my computer",
+      "linkCopied": "Link copied"
     },
     "hero": {
       "eyebrow": "SHAOTING HE / REGISTERED NURSE",
       "line1": "Nurse.",
       "line2": "Builder.",
-      "intro": "I work in intensive care. I build software beyond it. Both start with the same instinct: notice what matters, and make it better.",
-      "primary": "See what I’m building",
-      "secondary": "Explore GitHub",
+      "intro": "I work in intensive care and build software beyond it. Next: tools for nursing, and health research anyone can read. I’m looking for people to build them with.",
+      "primary": "Work with me",
+      "secondary": "See the work",
       "note": "ICU practice · Nova Scotia, Canada",
-      "current": "CURRENTLY BUILDING",
-      "currentProjects": "AUV + QDigest",
-      "scroll": "A little further down",
-      "statement": "Care is my discipline.\nCreation is my drive.",
-      "credentials": [
-        "RN · NSCN",
-        "CRITICAL CARE",
-        "INDEPENDENT DEVELOPER"
-      ],
-      "signalTitle": "THE HUMAN SIGNAL",
-      "signalCaption": "Care × Curiosity",
-      "signalHint": "Move to influence · Click to send a pulse",
-      "signalStill": "Inspired by the rhythm of critical care",
-      "rhythmNormal": "NSR / Sinus rhythm",
-      "rhythmVf": "VF / Ventricular fibrillation"
+      "current": "OPEN TO",
+      "currentProjects": "New collaborations"
     },
     "work": {
       "eyebrow": "01 / FROM OBSERVATION TO SOFTWARE",
@@ -82,31 +72,128 @@ window.SHAOTING_HOME_CONTENT = {
         "subtitle": "Agent Usage Viewer",
         "status": "macOS 0.18.3 · Windows 0.16.3",
         "kind": "Windows & Mac app",
-        "headline": "See usage. Set your team. Manage your development drive.",
-        "description": "Check AI account usage at a glance. Use ThreadOS to prepare coding-team instructions. On Mac, Sectorium loads and unloads your development volume and safely disconnects its external drive.",
+        "headline": "Know how much AI coding time you have left.",
+        "description": "AUV is a desktop app for Mac and Windows that shows your Codex and Claude usage and limits at a glance, so you can pace your work. It also includes ThreadOS, for preparing instructions for a team of coding agents, and on Mac, Sectorium, for managing a development drive.",
         "tags": [
-          "Windows 11 x64",
-          "macOS 14+ · Apple silicon + Intel",
           "English / 中文"
         ],
         "primary": "Download AUV",
         "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.18.3/AUV_Mac_0.18.3_Universal.zip",
         "secondary": "Installation guide",
         "secondaryUrl": "/auv/install/",
-        "caption": "Usage preview · sample data",
+        "caption": "AUV 0.18.3 on macOS · live Claude and Codex usage",
         "whyTitle": "What it is for",
         "why": "One app for account usage, team instructions and Mac development volumes.",
-        "focusTitle": "How to start",
-        "focus": "Install AUV, then sign in to the Codex app to view its account usage. The guides explain team setup and development drives.",
-        "inviteTitle": "What’s new on Mac",
-        "invite": "0.18.3 keeps Claude's exact sync working when Safari is on another desktop or minimized, and one failed sync no longer stops it for hours. 0.18.2 brought back Claude's reset time; 0.18.0 redesigned the window and Settings. Windows remains 0.16.3; its Sectorium storage actions are unavailable."
+        "focusTitle": "The hardest parts",
+        "focus": "Exact Claude usage comes from a signed-in Safari session, so AUV has to keep reading it when Safari is hidden, minimized or on another desktop. The other half of the work is shipping a signed, notarized Universal Mac app alongside a separate Windows version.",
+        "inviteTitle": "Where help is needed",
+        "invite": "Windows is the gap: it is still at 0.16.3, ships unsigned, and lacks Sectorium’s storage actions. A developer who knows Windows packaging and code signing would make the biggest difference. Testing and design feedback from people who use Codex or Claude every day is just as welcome.",
+        "log": {
+          "label": "AUV · Build log",
+          "title": "My first public app, built in the open.",
+          "note": "From the public GitHub repository · as of 31 Oct 2026",
+          "stats": [
+            [
+              "235",
+              "Commits"
+            ],
+            [
+              "16",
+              "Weeks in a row with commits"
+            ],
+            [
+              "15",
+              "Public releases"
+            ],
+            [
+              "88%",
+              "Written in Swift"
+            ]
+          ],
+          "weeksLabel": "Commits per week, July to October 2026",
+          "weeks": [
+            13,
+            3,
+            15,
+            12,
+            16,
+            6,
+            8,
+            17,
+            14,
+            5,
+            9,
+            13,
+            18,
+            5,
+            39,
+            35
+          ],
+          "languages": [
+            [
+              "Swift",
+              88.4
+            ],
+            [
+              "Shell",
+              5
+            ],
+            [
+              "C#",
+              3.1
+            ],
+            [
+              "JavaScript",
+              1.8
+            ],
+            [
+              "Python",
+              1.3
+            ],
+            [
+              "Other",
+              0.4
+            ]
+          ],
+          "milestones": [
+            [
+              "12 Jul 2026",
+              "First commit: a menu-bar Codex usage monitor"
+            ],
+            [
+              "6 Sep",
+              "First public release, UMA 0.14.0"
+            ],
+            [
+              "3 Oct",
+              "ThreadOS command workbench (0.14.1)"
+            ],
+            [
+              "10 Oct",
+              "Renamed AUV; signed and Apple-notarized (0.15.1)"
+            ],
+            [
+              "11 Oct",
+              "First Windows 11 build (0.16.2)"
+            ],
+            [
+              "20 Oct",
+              "Universal Mac build for Apple silicon and Intel (0.17.2)"
+            ],
+            [
+              "28 Oct",
+              "Redesigned window and Settings (0.18.0)"
+            ]
+          ]
+        }
       },
       {
         "id": "bid",
         "number": "02",
         "name": "QDigest",
         "subtitle": "Research, explained",
-        "status": "In development",
+        "status": "Published · 2 editions",
+        "trust": "Every explanation cites its original paper (journal, DOI, PubMed ID) and says when it relies on the abstract alone. Educational reading, not medical advice.",
         "kind": "Information tools · Bilingual reading",
         "headline": "Make room for understanding.",
         "description": "Source-grounded health research, explained in English and Simplified Chinese: concise email briefs with fuller explanations on the web.",
@@ -141,27 +228,8 @@ window.SHAOTING_HOME_CONTENT = {
       "bottom": "Evidence and uncertainty, kept in view.",
       "language": "EN ↔ 中文"
     },
-    "focus": {
-      "eyebrow": "02 / CURRENT FOCUS",
-      "title": "What I’m\nimproving.",
-      "intro": "My current development priorities in AUV and QDigest.",
-      "items": [
-        {
-          "label": "AUV / PRODUCT EXPERIENCE",
-          "title": "Usage, understood at a glance.",
-          "text": "Refining how usage, limits, and recent tasks are presented across the desktop app and menu bar.",
-          "link": "#uma"
-        },
-        {
-          "label": "QDigest / READING EXPERIENCE",
-          "title": "More context. Less feed hopping.",
-          "text": "Connecting concise email discovery with source-grounded bilingual research explanations on the web.",
-          "link": "/qdigest/"
-        }
-      ]
-    },
     "about": {
-      "eyebrow": "03 / NURSING IS THE FOUNDATION",
+      "eyebrow": "02 / NURSING IS THE FOUNDATION",
       "title": "A person behind\nevery signal.",
       "intro": "I’m Shaoting He, a registered nurse working in intensive care in Nova Scotia.",
       "body": "In the ICU, a small change can deserve your full attention. Nursing has shaped how I observe, communicate, and take responsibility.",
@@ -176,9 +244,24 @@ window.SHAOTING_HOME_CONTENT = {
       "clinical": "Currently in a full-time ICU role at Valley Regional Hospital in Kentville. BScN, Toronto Metropolitan University collaborative nursing program, graduated with Distinction."
     },
     "contact": {
-      "eyebrow": "04 / LET’S CONNECT",
+      "eyebrow": "03 / COLLABORATE",
       "title": "Bring your perspective.\nLet’s build something.",
-      "intro": "Developers, designers, supporters, and entrepreneurial communities: I’m looking for people who want to turn useful ideas into working tools.",
+      "intro": "Next, I want to build tools for nursing and clinical work, and keep making health research easier to read in English and Chinese. If you can help with either, write to me. I reply to every message.",
+      "offer": {
+        "bringTitle": "What I bring",
+        "bring": [
+          "A working ICU nurse’s eye for where tools fail the people using them",
+          "Shipped desktop software: 15 public releases for Mac and Windows since July",
+          "English and Mandarin, in the product and in the conversation"
+        ],
+        "seekTitle": "Who I’m looking for",
+        "seek": [
+          "Nurses and clinicians with a problem worth solving",
+          "Developers and designers to build with",
+          "People who want to support independent tools",
+          "Entrepreneurial communities with ideas worth testing"
+        ]
+      },
       "paths": [
         {
           "number": "01",
@@ -202,12 +285,10 @@ window.SHAOTING_HOME_CONTENT = {
           "subject": "Supporting your independent work"
         }
       ],
-      "email": "Locutus1207@outlook.com",
-      "footer": "Independent work. Human purpose."
+      "email": "Locutus1207@outlook.com"
     },
     "footer": {
       "identity": "Shaoting He · RN & independent builder",
-      "note": "Care in the details. Curiosity in the work.",
       "copyright": "© 2026 Shaoting He."
     }
   },
@@ -222,16 +303,12 @@ window.SHAOTING_HOME_CONTENT = {
         "作品"
       ],
       [
-        "focus",
-        "近期投入"
-      ],
-      [
         "about",
         "关于我"
       ],
       [
         "contact",
-        "联系"
+        "合作"
       ]
     ],
     "ui": {
@@ -239,9 +316,12 @@ window.SHAOTING_HOME_CONTENT = {
       "language": "语言",
       "light": "切换浅色主题",
       "motion": "暂停背景动效",
+      "motionShort": "暂停",
       "resume": "继续背景动效",
+      "resumeShort": "播放",
       "dark": "切换深色主题",
       "reduced": "已遵循设备的减少动态效果设置",
+      "reducedShort": "静止",
       "menu": "主导航",
       "github": "GitHub",
       "back": "回到顶部",
@@ -253,31 +333,22 @@ window.SHAOTING_HOME_CONTENT = {
       "projectPreview": "查看 AUV 界面截图",
       "codeBlue": "Code blue",
       "codeBlueOn": "护理彩蛋：将波形切换为室颤",
-      "codeBlueOff": "将波形恢复为正常窦性心律"
+      "codeBlueOff": "电击除颤，恢复窦性心律",
+      "shock": "除颤",
+      "desktopOnly": "AUV 适用于 Mac 与 Windows 电脑。请在电脑上打开本页下载。",
+      "shareLink": "把链接发到我的电脑",
+      "linkCopied": "链接已复制"
     },
     "hero": {
       "eyebrow": "何少霆 / 注册护士",
       "line1": "我是护士。",
       "line2": "也在创造。",
-      "intro": "我在 ICU 照护生命，也在工作之外创造软件。两件事，都从同一个习惯开始：发现真正重要的问题，然后动手改善。",
-      "primary": "看看我在做什么",
-      "secondary": "探索 GitHub",
+      "intro": "我在 ICU 照护生命，也在工作之外创造软件。接下来想做：护理工具，以及人人读得懂的健康研究。我在寻找一起把它们做出来的人。",
+      "primary": "一起合作",
+      "secondary": "看看作品",
       "note": "重症护理 · 加拿大新斯科舍省",
-      "current": "正在投入",
-      "currentProjects": "AUV + QDigest",
-      "scroll": "往下看看",
-      "statement": "以护理为根，\n让创造发生。",
-      "credentials": [
-        "注册护士 · NSCN",
-        "重症护理",
-        "独立开发"
-      ],
-      "signalTitle": "THE HUMAN SIGNAL",
-      "signalCaption": "关怀 × 好奇心",
-      "signalHint": "移动鼠标扰动波形 · 点击释放脉冲",
-      "signalStill": "灵感来自重症护理中的生命节律",
-      "rhythmNormal": "NSR / 正常窦性心律",
-      "rhythmVf": "VF / 心室颤动"
+      "current": "开放",
+      "currentProjects": "新的合作"
     },
     "work": {
       "eyebrow": "01 / 从观察到作品",
@@ -293,31 +364,128 @@ window.SHAOTING_HOME_CONTENT = {
         "subtitle": "Agent Usage Viewer",
         "status": "macOS 0.18.3 · Windows 0.16.3",
         "kind": "Windows 与 Mac 应用",
-        "headline": "看用量，配团队，管理开发盘。",
-        "description": "随时查看 AI 账户用量，用线程工准备开发团队指令。在 Mac 上，分区工负责加载、卸载开发卷，以及安全断开它所在的外接硬盘。",
+        "headline": "一眼看清 AI 编程还剩多少额度。",
+        "description": "AUV 是一款 Mac 与 Windows 桌面应用，随时显示 Codex 与 Claude 的用量和限额，帮你安排工作节奏。它还包含线程工（ThreadOS），为编码智能体团队准备指令；在 Mac 上还有分区工（Sectorium），用来管理开发盘。",
         "tags": [
-          "Windows 11 x64",
-          "macOS 14+ · Apple silicon + Intel",
           "English / 中文"
         ],
         "primary": "下载 AUV",
         "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.18.3/AUV_Mac_0.18.3_Universal.zip",
         "secondary": "安装指南",
         "secondaryUrl": "/auv/install/",
-        "caption": "用量界面示例 · 示例数据",
+        "caption": "AUV 0.18.3 · macOS 上的 Claude 与 Codex 实时用量",
         "whyTitle": "用来做什么",
         "why": "一个应用，查看账户用量、准备团队指令、管理 Mac 开发卷。",
-        "focusTitle": "怎么开始",
-        "focus": "安装 AUV，再登录 Codex 应用以查看账户用量。团队设置与开发盘操作可按对应指南完成。",
-        "inviteTitle": "Mac 新版变化",
-        "invite": "0.18.3 让 Safari 在另一个桌面或最小化时，Claude 精确同步也能正常进行；一次同步失败不再让它连续几小时停摆。0.18.2 恢复显示 Claude 的重置时间；0.18.0 重新设计了主窗口与设置。Windows 保持 0.16.3，其分区工磁盘操作不可用。"
+        "focusTitle": "最难的部分",
+        "focus": "Claude 的精确用量来自已登录的 Safari 会话，所以 Safari 被隐藏、最小化或在另一个桌面时，AUV 也要能继续读取。另一半工作，是在发布签名、公证的 Mac 通用版的同时，维护一个独立的 Windows 版。",
+        "inviteTitle": "需要帮手的地方",
+        "invite": "Windows 是短板：它还停在 0.16.3，没有签名，也缺少 Sectorium 的磁盘操作。最能帮上忙的，是一位熟悉 Windows 打包与代码签名的开发者。也同样欢迎每天使用 Codex 或 Claude 的人提供测试和设计反馈。",
+        "log": {
+          "label": "AUV · 开发日志",
+          "title": "我的第一个公开应用，开发过程全部公开。",
+          "note": "数据来自公开的 GitHub 仓库 · 截至 2026 年 10 月 31 日",
+          "stats": [
+            [
+              "235",
+              "次提交"
+            ],
+            [
+              "16",
+              "周连续有提交"
+            ],
+            [
+              "15",
+              "个公开版本"
+            ],
+            [
+              "88%",
+              "Swift 代码"
+            ]
+          ],
+          "weeksLabel": "每周提交次数，2026 年 7 月至 10 月",
+          "weeks": [
+            13,
+            3,
+            15,
+            12,
+            16,
+            6,
+            8,
+            17,
+            14,
+            5,
+            9,
+            13,
+            18,
+            5,
+            39,
+            35
+          ],
+          "languages": [
+            [
+              "Swift",
+              88.4
+            ],
+            [
+              "Shell",
+              5
+            ],
+            [
+              "C#",
+              3.1
+            ],
+            [
+              "JavaScript",
+              1.8
+            ],
+            [
+              "Python",
+              1.3
+            ],
+            [
+              "Other",
+              0.4
+            ]
+          ],
+          "milestones": [
+            [
+              "2026 年 7 月 12 日",
+              "第一次提交：菜单栏 Codex 用量监视器"
+            ],
+            [
+              "9 月 6 日",
+              "首个公开版本 UMA 0.14.0"
+            ],
+            [
+              "10 月 3 日",
+              "线程工指令工作台（0.14.1）"
+            ],
+            [
+              "10 月 10 日",
+              "更名 AUV，完成签名与 Apple 公证（0.15.1）"
+            ],
+            [
+              "10 月 11 日",
+              "首个 Windows 11 版本（0.16.2）"
+            ],
+            [
+              "10 月 20 日",
+              "支持 Apple 芯片与 Intel 的通用 Mac 版（0.17.2）"
+            ],
+            [
+              "10 月 28 日",
+              "重新设计主窗口与设置（0.18.0）"
+            ]
+          ]
+        }
       },
       {
         "id": "bid",
         "number": "02",
         "name": "QDigest",
         "subtitle": "读懂研究",
-        "status": "开发中",
+        "status": "已发布 · 2 期",
+        "trust": "每篇解读都注明原始论文（期刊、DOI、PubMed 编号），并说明是否仅依据摘要。仅供学习阅读，不构成医疗建议。",
         "kind": "信息工具 · 双语阅读",
         "headline": "看见研究，也读懂研究。",
         "description": "用英文与简体中文解释有据可查的健康研究：邮件简报用于发现，网页提供更完整的研究解释。",
@@ -352,27 +520,8 @@ window.SHAOTING_HOME_CONTENT = {
       "bottom": "保留证据，也保留不确定性。",
       "language": "EN ↔ 中文"
     },
-    "focus": {
-      "eyebrow": "02 / 正在投入",
-      "title": "最近在\n打磨什么。",
-      "intro": "AUV 与 QDigest 当前的开发重点。",
-      "items": [
-        {
-          "label": "AUV / 产品体验",
-          "title": "让用量信息，一眼就懂。",
-          "text": "打磨桌面应用与菜单栏中的用量、额度和近期任务展示，让关键信息更容易读懂。",
-          "link": "#uma"
-        },
-        {
-          "label": "QDigest / 阅读体验",
-          "title": "多一点语境，少切几个信息流。",
-          "text": "将简洁邮件发现与来源可追溯的双语网页研究解释连接起来。",
-          "link": "/qdigest/"
-        }
-      ]
-    },
     "about": {
-      "eyebrow": "03 / 护理，是我的根基",
+      "eyebrow": "02 / 护理，是我的根基",
       "title": "每一个信号背后，\n都是一个人。",
       "intro": "我是何少霆，在加拿大新斯科舍省从事重症护理的注册护士。",
       "body": "在 ICU，一个细微的变化，也值得全神贯注。护理塑造了我观察、沟通与承担责任的方式。",
@@ -387,9 +536,24 @@ window.SHAOTING_HOME_CONTENT = {
       "clinical": "目前在 Kentville 的 Valley Regional Hospital ICU 担任全职岗位。毕业于 Toronto Metropolitan University 协作护理项目，获护理学理学士学位，以 Distinction 毕业。"
     },
     "contact": {
-      "eyebrow": "04 / 建立联系",
+      "eyebrow": "03 / 一起合作",
       "title": "带上你的视角，\n一起把想法做出来。",
-      "intro": "欢迎开发者、设计师、支持者与创业社群。我希望找到愿意一起把有用的想法，变成实际作品的人。",
+      "intro": "接下来我想做两件事：为护理和临床工作做工具；继续让健康研究更容易被中英文读者读懂。如果你能在其中任何一件事上帮忙，欢迎来信。每一封我都会回复。",
+      "offer": {
+        "bringTitle": "我能带来什么",
+        "bring": [
+          "一线 ICU 护士的视角：看见工具在哪里让使用者为难",
+          "已发布的桌面软件：自 7 月以来为 Mac 与 Windows 发布 15 个公开版本",
+          "英语与普通话，用在产品里，也用在沟通中"
+        ],
+        "seekTitle": "我在寻找",
+        "seek": [
+          "有问题想解决的护士与临床同行",
+          "一起动手的开发者与设计师",
+          "愿意支持独立工具的人",
+          "有想法、想验证的创业社群"
+        ]
+      },
       "paths": [
         {
           "number": "01",
@@ -413,12 +577,10 @@ window.SHAOTING_HOME_CONTENT = {
           "subject": "Supporting your independent work"
         }
       ],
-      "email": "Locutus1207@outlook.com",
-      "footer": "独立创造，为人而做。"
+      "email": "Locutus1207@outlook.com"
     },
     "footer": {
       "identity": "何少霆 · 注册护士与独立开发者",
-      "note": "认真对待细节，持续保持好奇。",
       "copyright": "© 2026 何少霆。"
     }
   }

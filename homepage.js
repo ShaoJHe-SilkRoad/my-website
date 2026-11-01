@@ -6,7 +6,7 @@
   function lines(value) { return e(value).replace(/\n/g, '<br>'); }
   function arrow() { return '<span aria-hidden="true">↗</span>'; }
   function icon(name) {
-    var paths = {sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>',pause:'<path d="M9 5v14M15 5v14"/>',play:'<path d="m8 5 11 7-11 7Z"/>',github:'<path d="M9 19c-4 1-4-2-6-2m12 5v-3.9c0-1 .1-1.4-.5-2 3.5-.4 7-1.7 7-7.5A5.8 5.8 0 0 0 20 4.5a5.4 5.4 0 0 0-.1-4S18.7.1 16 2a14 14 0 0 0-8 0C5.3.1 4.1.5 4.1.5a5.4 5.4 0 0 0-.1 4A5.8 5.8 0 0 0 2.5 8.6c0 5.8 3.5 7.1 7 7.5-.6.6-.6 1.2-.5 2V22"/>',copy:'<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/>'};
+    var paths = {sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>',pause:'<path d="M9 5v14M15 5v14"/>',play:'<path d="m8 5 11 7-11 7Z"/>',github:'<path d="M9 19c-4 1-4-2-6-2m12 5v-3.9c0-1 .1-1.4-.5-2 3.5-.4 7-1.7 7-7.5A5.8 5.8 0 0 0 20 4.5a5.4 5.4 0 0 0-.1-4S18.7.1 16 2a14 14 0 0 0-8 0C5.3.1 4.1.5 4.1.5a5.4 5.4 0 0 0-.1 4A5.8 5.8 0 0 0 2.5 8.6c0 5.8 3.5 7.1 7 7.5-.6.6-.6 1.2-.5 2V22"/>',copy:'<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/>',bolt:'<path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/>'};
     return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+paths[name]+'</svg>';
   }
   // Decorative platform marks; the adjacent download text is the accessible name.
@@ -18,25 +18,40 @@
   }
   function external(href,label,cls) { return '<a class="'+(cls||'text-link')+'" href="'+e(href)+'" target="_blank" rel="noopener noreferrer">'+e(label)+arrow()+'</a>'; }
   function heading(kicker,title,summary) { return '<div class="section-heading" data-reveal><span class="eyebrow">'+e(kicker)+'</span><h2>'+lines(title)+'</h2>'+(summary?'<p>'+e(summary)+'</p>':'')+'</div>'; }
-  function projectActions(p,zh) {
+  // Snapshot of public GitHub activity; numbers come from content, bars are drawn to scale.
+  function buildLog(l) {
+    var most=Math.max.apply(null,l.weeks), bars=l.weeks.map(function(n,i){var h=Math.max(3,Math.round(n/most*56));return '<rect x="'+(i*14)+'" y="'+(60-h)+'" width="9" height="'+h+'" rx="2"/>';}).join('');
+    return '<aside class="build-log" aria-label="'+e(l.label)+'" data-reveal><div class="build-log-head"><span class="eyebrow">'+e(l.label)+'</span><h3>'+e(l.title)+'</h3><p>'+e(l.note)+'</p></div>'+
+      '<dl class="build-stats">'+l.stats.map(function(s){return '<div><dt>'+e(s[1])+'</dt><dd>'+e(s[0])+'</dd></div>';}).join('')+'</dl>'+
+      '<figure class="build-weeks"><svg viewBox="0 0 '+(l.weeks.length*14-5)+' 60" preserveAspectRatio="none" role="img" aria-label="'+e(l.weeksLabel)+'">'+bars+'</svg><figcaption>'+e(l.weeksLabel)+'</figcaption></figure>'+
+      '<div class="build-languages"><div class="language-bar" aria-hidden="true">'+l.languages.map(function(x){return '<i style="flex:'+x[1]+'"></i>';}).join('')+'</div><ul>'+l.languages.map(function(x){return '<li><span>'+e(x[0])+'</span>'+e(x[1])+'%</li>';}).join('')+'</ul></div>'+
+      '<ol class="build-milestones">'+l.milestones.map(function(m){return '<li><time>'+e(m[0])+'</time><span>'+e(m[1])+'</span></li>';}).join('')+'</ol></aside>';
+  }
+  // What a collaborator gets, and who the work is for.
+  function offer(o) {
+    var list=function(t,items){return '<div><h3>'+e(t)+'</h3><ul>'+items.map(function(x){return '<li>'+e(x)+'</li>';}).join('')+'</ul></div>';};
+    return '<div class="contact-offer" data-reveal>'+list(o.bringTitle,o.bring)+list(o.seekTitle,o.seek)+'</div>';
+  }
+  function projectActions(p,zh,c) {
     if (!p.downloads) return '<div class="project-actions"><a class="button button--small" href="'+e(p.url)+'">'+e(p.primary)+arrow()+'</a>'+(p.secondary?'<a class="text-link" href="'+e(p.secondaryUrl)+'">'+e(p.secondary)+'</a>':'')+'</div>';
-    return '<div class="platform-downloads">'+p.downloads.map(function(d){return '<div class="platform-download">'+'<a class="button button--small" href="'+e(d.url)+'" target="_blank" rel="noopener noreferrer">'+platformIcon(d.platform)+'<span>'+e(d.label)+'</span>'+arrow()+'</a>'+'<p class="download-requirements">'+e(d.description)+'</p></div>';}).join('')+'</div><div class="project-actions"><a class="text-link" href="/auv/install/">'+(zh?'安装指南':'Installation guide')+'</a>'+external(p.releaseUrl,zh?'更新说明':'Release notes')+external(github+'/UMA','GitHub')+'<a class="text-link" href="/threados/">'+(zh?'线程工指南':'ThreadOS guide')+'</a><a class="text-link" href="/sectorium/">'+(zh?'分区工指南':'Sectorium guide')+'</a></div>';
+    return '<div class="desktop-note"><p>'+e(c.ui.desktopOnly)+'</p><button class="text-link share-link js-only" id="share-auv" type="button">'+e(c.ui.shareLink)+arrow()+'</button></div><div class="platform-downloads">'+p.downloads.map(function(d){return '<div class="platform-download" data-platform="'+e(d.platform)+'">'+'<a class="button button--small" href="'+e(d.url)+'" target="_blank" rel="noopener noreferrer">'+platformIcon(d.platform)+'<span>'+e(d.label)+'</span>'+arrow()+'</a>'+'<p class="download-requirements">'+e(d.description)+'</p></div>';}).join('')+'</div>'+
+      '<div class="project-links"><div class="link-group"><span class="link-group-label">'+(zh?'指南':'Guides')+'</span><a class="text-link" href="/auv/install/">'+(zh?'安装':'Installation')+'</a><a class="text-link" href="/threados/">'+'ThreadOS'+'</a><a class="text-link" href="/sectorium/">'+'Sectorium'+'</a></div>'+
+      '<div class="link-group"><span class="link-group-label">'+(zh?'项目':'Project')+'</span>'+external(p.releaseUrl,zh?'更新说明':'Release notes')+external(github+'/UMA','GitHub')+'</div></div>';
   }
   function render(c,lang) {
     var zh=lang==='zh-Hans';
     var nav=c.nav.map(function(n){return '<a href="#'+e(n[0])+'" data-nav="'+e(n[0])+'">'+e(n[1])+'</a>';}).join('');
     var projects=c.projects.map(function(p){
-      var art=p.id==='uma' ? '<figure class="project-art uma-art"><span class="art-label">AUV / macOS</span><a class="uma-preview" href="assets/auv-0151/auv-en.png" target="_blank" rel="noopener" aria-label="'+e(c.ui.projectPreview)+'"><img src="assets/auv-0151/auv-en.png" alt="'+e(p.caption)+'" width="1744" height="1256" loading="lazy" decoding="async"></a><figcaption><span>'+e(p.caption)+'</span><a class="preview-open" href="assets/auv-0151/auv-en.png" target="_blank" rel="noopener">'+e(c.ui.projectPreview)+'<span aria-hidden="true">↗</span></a></figcaption></figure>' : '<figure class="project-art bid-art"><div class="digest-concept"><div class="digest-top"><span>'+e(c.digest.label)+'</span><span>'+e(c.digest.language)+'</span></div><div class="digest-wordmark">'+e(c.digest.title)+'<span>'+e(c.digest.subtitle)+'</span></div><div class="digest-rule" aria-hidden="true"></div><p class="digest-edition">'+e(c.digest.edition)+'</p><div class="digest-topics">'+c.digest.topics.map(function(t,i){return '<span><i aria-hidden="true">0'+(i+1)+'</i>'+e(t)+'</span>';}).join('')+'</div><div class="digest-bottom">'+e(c.digest.bottom)+'</div></div><figcaption>'+e(p.caption)+'</figcaption></figure>';
-      return '<article class="project project--'+e(p.id)+'" id="'+e(p.id)+'" data-reveal><div class="project-copy"><div class="project-meta"><span>'+e(p.kind)+'</span><span class="status-tag"><i aria-hidden="true"></i>'+e(p.status)+'</span></div><div class="project-name"><h3>'+e(p.name)+'</h3><span>'+e(p.subtitle)+'</span></div><h4>'+e(p.headline)+'</h4><p>'+e(p.description)+'</p><ul class="tag-list" aria-label="'+e(p.name)+'">'+p.tags.map(function(t){return '<li>'+e(t)+'</li>';}).join('')+'</ul>'+projectActions(p,zh)+'<details class="project-details"><summary>'+e(c.ui.more)+'<span aria-hidden="true">+</span></summary><dl><div><dt>'+e(p.whyTitle)+'</dt><dd>'+e(p.why)+'</dd></div><div><dt>'+e(p.focusTitle)+'</dt><dd>'+e(p.focus)+'</dd></div><div><dt>'+e(p.inviteTitle)+'</dt><dd>'+e(p.invite)+'</dd></div></dl></details></div>'+art+'</article>';
+      var art=p.id==='uma' ? '<figure class="project-art uma-art"><span class="art-label">AUV / macOS</span><a class="uma-preview" href="/assets/auv-0183/auv-en.png" target="_blank" rel="noopener" aria-label="'+e(c.ui.projectPreview)+'"><img src="/assets/auv-0183/auv-en.png" alt="'+e(p.caption)+'" width="1524" height="1112" loading="lazy" decoding="async"></a><figcaption><span>'+e(p.caption)+'</span><a class="preview-open" href="/assets/auv-0183/auv-en.png" target="_blank" rel="noopener">'+e(c.ui.projectPreview)+'<span aria-hidden="true">↗</span></a></figcaption></figure>' : '<figure class="project-art bid-art"><div class="digest-concept"><div class="digest-top"><span>'+e(c.digest.label)+'</span><span>'+e(c.digest.language)+'</span></div><div class="digest-wordmark">'+e(c.digest.title)+'<span>'+e(c.digest.subtitle)+'</span></div><div class="digest-rule" aria-hidden="true"></div><p class="digest-edition">'+e(c.digest.edition)+'</p><div class="digest-topics">'+c.digest.topics.map(function(t,i){return '<span><i aria-hidden="true">0'+(i+1)+'</i>'+e(t)+'</span>';}).join('')+'</div><div class="digest-bottom">'+e(c.digest.bottom)+'</div></div><figcaption>'+e(p.caption)+'</figcaption></figure>';
+      return '<article class="project project--'+e(p.id)+'" id="'+e(p.id)+'" data-reveal><div class="project-copy"><div class="project-meta"><span>'+e(p.kind)+'</span><span class="status-tag"><i aria-hidden="true"></i>'+e(p.status)+'</span></div><div class="project-name"><h3>'+e(p.name)+'</h3><span>'+e(p.subtitle)+'</span></div><h4>'+e(p.headline)+'</h4><p>'+e(p.description)+'</p>'+(p.trust?'<p class="project-trust">'+e(p.trust)+'</p>':'')+'<ul class="tag-list" aria-label="'+e(p.name)+'">'+p.tags.map(function(t){return '<li>'+e(t)+'</li>';}).join('')+'</ul><div class="project-get">'+projectActions(p,zh,c)+'</div><details class="project-details"><summary>'+e(c.ui.more)+'<span aria-hidden="true">+</span></summary><dl><div><dt>'+e(p.whyTitle)+'</dt><dd>'+e(p.why)+'</dd></div><div><dt>'+e(p.focusTitle)+'</dt><dd>'+e(p.focus)+'</dd></div><div><dt>'+e(p.inviteTitle)+'</dt><dd>'+e(p.invite)+'</dd></div></dl></details></div>'+art+'</article>'+(p.log?buildLog(p.log):'');
     }).join('');
     return '<a class="skip-link" href="#main-content">'+e(c.ui.skip)+'</a>'+
-      '<header class="site-header"><div class="container header-row"><a class="brand" href="#top" aria-label="Shaoting He"><span class="brand-mark brand-mark--heritage" aria-hidden="true"></span><span class="brand-name">SHAOTING HE<span>RN & BUILDER</span></span></a><nav class="desktop-nav" aria-label="'+e(c.ui.menu)+'">'+nav+'</nav><div class="header-tools">'+external(github,c.ui.github,'github-header')+'<button class="code-blue js-only" id="code-blue-toggle" type="button" aria-pressed="false" title="'+e(c.ui.codeBlueOn)+'"><span class="code-blue-dot" aria-hidden="true"></span>'+e(c.ui.codeBlue)+'</button><button class="icon-button js-only" id="motion-toggle" type="button" aria-label="'+e(c.ui.motion)+'" title="'+e(c.ui.motion)+'">'+icon('pause')+'</button><button class="icon-button js-only" id="theme-toggle" type="button" aria-label="'+e(c.ui.light)+'" title="'+e(c.ui.light)+'">'+icon('sun')+'</button><div class="language-control js-only" role="group" aria-label="'+e(c.ui.language)+'"><button type="button" data-language="en" aria-pressed="'+(!zh)+'">EN</button><button type="button" data-language="zh-Hans" aria-pressed="'+zh+'">中</button></div></div></div></header>'+
-      '<main id="main-content" tabindex="-1"><section class="hero container" id="top"><div class="hero-copy"><div class="eyebrow hero-eyebrow"><span class="signal-dot" aria-hidden="true"></span>'+e(c.hero.eyebrow)+'</div><h1><span>'+e(c.hero.line1)+'</span><span class="gradient-text">'+e(c.hero.line2)+'</span></h1><p class="hero-statement">'+lines(c.hero.statement).replace(/<br>/g,'<br> ')+'</p><p class="hero-intro">'+e(c.hero.intro)+'</p><div class="hero-actions"><a class="button" href="#projects">'+e(c.hero.primary)+'<span aria-hidden="true">↓</span></a>'+external(github,c.hero.secondary,'hero-github')+'</div><ul class="hero-credentials">'+c.hero.credentials.map(function(t){return '<li>'+e(t)+'</li>';}).join('')+'</ul></div><div class="signal-annotation"><span class="signal-index">01 / '+e(c.hero.signalTitle)+'</span><span class="signal-name" id="signal-rhythm" aria-live="polite">'+e(c.hero.rhythmNormal)+'</span><span class="signal-hint">'+e(c.hero.signalHint)+'</span><span class="signal-still">'+e(c.hero.signalStill)+'</span></div><div class="hero-foot"><p>'+e(c.hero.note)+'</p><a href="#focus" class="now-link"><span class="eyebrow">'+e(c.hero.current)+'</span>'+e(c.hero.currentProjects)+'<span aria-hidden="true">↘</span></a></div></section>'+
-      '<section class="section work-section" id="projects"><span class="anchor-alias" id="systems"></span><div class="container"><div class="work-heading">'+heading(c.work.eyebrow,c.work.title,c.work.intro)+external(github,c.work.all)+'</div>'+projects+'</div></section>'+
-      '<section class="section focus-section" id="focus"><div class="container focus-layout">'+heading(c.focus.eyebrow,c.focus.title,c.focus.intro)+'<div class="focus-list">'+c.focus.items.map(function(item){return '<a class="focus-item" href="'+e(item.link)+'" data-reveal><span class="eyebrow">'+e(item.label)+'</span><div><h3>'+e(item.title)+'</h3><p>'+e(item.text)+'</p></div><span class="focus-arrow" aria-hidden="true">↗</span></a>';}).join('')+'</div></div></section>'+
-      '<section class="section about-section" id="about"><span class="anchor-alias" id="timeline"></span><span class="anchor-alias" id="practice"></span><span class="anchor-alias" id="capability"></span><span class="anchor-alias" id="language"></span><div class="container about-layout"><figure class="portrait" data-reveal><div class="portrait-frame"><img src="portrait-side-profile-web.jpg" alt="Shaoting He / 何少霆" width="1600" height="1200" loading="lazy" decoding="async"></div><figcaption>'+e(c.about.caption)+'</figcaption></figure><div class="about-copy">'+heading(c.about.eyebrow,c.about.title)+'<p class="about-intro">'+e(c.about.intro)+'</p><p>'+e(c.about.body)+'</p><p>'+e(c.about.end)+'</p><ul class="about-facts">'+c.about.facts.map(function(f){return '<li>'+e(f)+'</li>';}).join('')+'</ul><details class="clinical-details" id="education"><summary>'+e(c.about.detail)+'<span aria-hidden="true">+</span></summary><p>'+e(c.about.clinical)+'</p></details></div></div></section>'+
-      '<section class="section contact-section" id="contact"><div class="container">'+heading(c.contact.eyebrow,c.contact.title,c.contact.intro)+'<div class="contact-paths">'+c.contact.paths.map(function(p){return '<article class="contact-path" data-reveal><span class="eyebrow">'+e(p.number)+'</span><h3>'+e(p.title)+'</h3><p>'+e(p.text)+'</p><a href="mailto:'+e(c.contact.email)+'?subject='+encodeURIComponent(p.subject)+'">'+e(p.label)+arrow()+'</a></article>';}).join('')+'</div><div class="email-row"><a class="email-link" href="mailto:'+e(c.contact.email)+'">'+e(c.contact.email)+arrow()+'</a><button class="copy-button js-only" id="copy-email" type="button">'+icon('copy')+'<span>'+e(c.ui.copy)+'</span></button></div><p class="contact-footnote">'+e(c.contact.footer)+'</p><p class="sr-only" id="copy-status" role="status" aria-live="polite"></p></div></section></main>'+
-      '<footer class="site-footer"><div class="container footer-row"><div class="footer-identity"><span class="brand-mark brand-mark--heritage" aria-hidden="true"></span><div><p>'+e(c.footer.identity)+'</p><span>'+e(c.footer.note)+'</span></div></div><div class="footer-links">'+external(github,'GitHub')+'<a href="#top">'+e(c.ui.back)+' ↑</a><span>'+e(c.footer.copyright)+'</span></div></div></footer><nav class="mobile-nav" aria-label="'+e(c.ui.menu)+'">'+nav+'</nav>';
+      '<header class="site-header"><div class="container header-row"><a class="brand" href="#top" aria-label="Shaoting He"><span class="brand-mark brand-mark--heritage" aria-hidden="true"></span><span class="brand-name">SHAOTING HE<span>RN & BUILDER</span></span></a><nav class="desktop-nav" aria-label="'+e(c.ui.menu)+'">'+nav+'</nav><div class="header-tools"><button class="code-blue js-only" id="code-blue-toggle" type="button" aria-pressed="false" title="'+e(c.ui.codeBlueOn)+'"><span class="code-blue-dot" aria-hidden="true"></span><span class="code-blue-label">'+e(c.ui.codeBlue)+'</span></button><button class="icon-button js-only" id="theme-toggle" type="button" aria-label="'+e(c.ui.light)+'" title="'+e(c.ui.light)+'">'+icon('sun')+'</button><div class="language-control js-only" role="group" aria-label="'+e(c.ui.language)+'"><button type="button" data-language="en" aria-pressed="'+(!zh)+'">EN</button><button type="button" data-language="zh-Hans" aria-pressed="'+zh+'">中</button></div></div></div></header>'+
+      '<main id="main-content" tabindex="-1"><section class="hero container" id="top"><div class="hero-copy"><div class="eyebrow hero-eyebrow"><span class="signal-dot" aria-hidden="true"></span>'+e(c.hero.eyebrow)+'</div><h1><span>'+e(c.hero.line1)+'</span><span class="gradient-text">'+e(c.hero.line2)+'</span></h1><p class="hero-intro">'+e(c.hero.intro)+'</p><div class="hero-actions"><a class="button" href="#contact">'+e(c.hero.primary)+'<span aria-hidden="true">→</span></a><a class="text-link hero-github" href="#projects">'+e(c.hero.secondary)+'<span aria-hidden="true">↓</span></a></div></div><div class="signal-slot" aria-hidden="true"></div><div class="hero-foot"><p>'+e(c.hero.note)+'</p><button class="signal-pause js-only" id="motion-toggle" type="button" aria-label="'+e(c.ui.motion)+'" title="'+e(c.ui.motion)+'">'+icon('pause')+'<span>'+e(c.ui.motionShort)+'</span></button><a href="#contact" class="now-link"><span class="eyebrow">'+e(c.hero.current)+'</span>'+e(c.hero.currentProjects)+'<span aria-hidden="true">↘</span></a></div></section>'+
+      '<section class="section work-section" id="projects"><span class="anchor-alias" id="systems"></span><span class="anchor-alias" id="focus"></span><div class="container"><div class="work-heading">'+heading(c.work.eyebrow,c.work.title,c.work.intro)+external(github,c.work.all)+'</div>'+projects+'</div></section>'+
+      '<section class="section about-section" id="about"><span class="anchor-alias" id="timeline"></span><span class="anchor-alias" id="practice"></span><span class="anchor-alias" id="capability"></span><span class="anchor-alias" id="language"></span><div class="container about-layout"><figure class="portrait" data-reveal><div class="portrait-frame"><img src="/portrait-ferry-web.jpg" alt="'+(zh?'何少霆的插画肖像：在渡轮上眺望多伦多天际线':'Illustrated portrait of Shaoting He on a ferry, looking out at the Toronto skyline')+'" width="1122" height="1402" loading="lazy" decoding="async"></div><figcaption>'+e(c.about.caption)+'</figcaption></figure><div class="about-copy">'+heading(c.about.eyebrow,c.about.title)+'<p class="about-intro">'+e(c.about.intro)+'</p><p>'+e(c.about.body)+'</p><p>'+e(c.about.end)+'</p><ul class="about-facts">'+c.about.facts.map(function(f){return '<li>'+e(f)+'</li>';}).join('')+'</ul><details class="clinical-details" id="education"><summary>'+e(c.about.detail)+'<span aria-hidden="true">+</span></summary><p>'+e(c.about.clinical)+'</p></details></div></div></section>'+
+      '<section class="section contact-section" id="contact"><div class="container">'+heading(c.contact.eyebrow,c.contact.title,c.contact.intro)+(c.contact.offer?offer(c.contact.offer):'')+'<div class="contact-paths">'+c.contact.paths.map(function(p,i){return '<article class="contact-path'+(i?'':' contact-path--primary')+'" data-reveal><span class="eyebrow">'+e(p.number)+'</span><h3>'+e(p.title)+'</h3><p>'+e(p.text)+'</p><a'+(i?'':' class="button button--small"')+' href="mailto:'+e(c.contact.email)+'?subject='+encodeURIComponent(p.subject)+'">'+e(p.label)+arrow()+'</a></article>';}).join('')+'</div><div class="email-row"><a class="email-link" href="mailto:'+e(c.contact.email)+'">'+e(c.contact.email)+arrow()+'</a><button class="copy-button js-only" id="copy-email" type="button">'+icon('copy')+'<span>'+e(c.ui.copy)+'</span></button></div>'+'<p class="sr-only" id="copy-status" role="status" aria-live="polite"></p></div></section></main>'+
+      '<footer class="site-footer"><div class="container footer-row"><div class="footer-identity"><span class="brand-mark brand-mark--heritage" aria-hidden="true"></span><div><p>'+e(c.footer.identity)+'</p>'+'</div></div><div class="footer-links">'+external(github,'GitHub')+'<a href="#top">'+e(c.ui.back)+' ↑</a><span>'+e(c.footer.copyright)+'</span></div></div></footer><nav class="mobile-nav" aria-label="'+e(c.ui.menu)+'">'+nav+'</nav>';
   }
   // The same renderer generates static English HTML without a browser or dependencies.
   if (typeof module !== 'undefined' && module.exports) { render.platformIcon=platformIcon; module.exports=render; return; }
@@ -49,7 +64,9 @@
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
   function read(key,fallback) { try { return localStorage.getItem(key)||fallback; } catch(error) { return fallback; } }
   function save(key,value) { try { localStorage.setItem(key,value); } catch(error) { /* Preferences remain usable for this page. */ } }
-  lang=read('site:language',/^zh/i.test(navigator.language)?'zh-Hans':'en');
+  // /zh/ always opens in Chinese; at / a saved choice or the browser language picks the language.
+  var pageLang=document.documentElement.lang==='zh-Hans'?'zh-Hans':'en';
+  lang=pageLang==='zh-Hans'?pageLang:read('site:language',/^zh/i.test(navigator.language)?'zh-Hans':'en');
   if (!content[lang]) lang='en';
   manualPause=read('site:motion','on')==='off';
   function applyMotion() {
@@ -57,17 +74,27 @@
     document.documentElement.dataset.motion=paused?'off':'on';
     if (window.SHAOTING_AMBIENT) window.SHAOTING_AMBIENT.setPaused(manualPause);
     var btn=document.getElementById('motion-toggle');
-    if(btn) { var label=reduce.matches?content[lang].ui.reduced:paused?content[lang].ui.resume:content[lang].ui.motion;btn.setAttribute('aria-label',label);btn.innerHTML=icon(paused?'play':'pause');btn.disabled=reduce.matches;btn.title=label; }
+    if(btn) { var label=reduce.matches?content[lang].ui.reduced:paused?content[lang].ui.resume:content[lang].ui.motion;btn.setAttribute('aria-label',label);btn.innerHTML=icon(paused?'play':'pause')+'<span>'+e(reduce.matches?content[lang].ui.reducedShort:paused?content[lang].ui.resumeShort:content[lang].ui.motionShort)+'</span>';btn.disabled=reduce.matches;btn.title=label; }
     if(paused) document.getAnimations().forEach(function(a){a.cancel();});
   }
   function applyRhythm() {
     document.documentElement.dataset.rhythm=rhythm;
     if(window.SHAOTING_AMBIENT && window.SHAOTING_AMBIENT.setRhythm) window.SHAOTING_AMBIENT.setRhythm(rhythm);
     var button=document.getElementById('code-blue-toggle');
-    if(button){button.setAttribute('aria-pressed',String(rhythm==='vf'));button.title=rhythm==='vf'?content[lang].ui.codeBlueOff:content[lang].ui.codeBlueOn;}
-    var label=document.getElementById('signal-rhythm');
-    if(label)label.textContent=rhythm==='vf'?content[lang].hero.rhythmVf:content[lang].hero.rhythmNormal;
+    if(button){button.setAttribute('aria-pressed',String(rhythm==='vf'));button.title=rhythm==='vf'?content[lang].ui.codeBlueOff:content[lang].ui.codeBlueOn;var text=button.querySelector('.code-blue-label');if(text)text.textContent=rhythm==='vf'?content[lang].ui.shock:content[lang].ui.codeBlue;}
     applyTheme();
+  }
+  // Defibrillation: flash, a short jolt, a flat pause in the canvas, then sinus rhythm resumes.
+  function shock() {
+    if(window.SHAOTING_AMBIENT&&window.SHAOTING_AMBIENT.shock)window.SHAOTING_AMBIENT.shock();
+    rhythm='nsr';applyRhythm();
+    if(document.documentElement.dataset.motion!=='off'){
+      var flash=document.createElement('div');flash.className='shock-flash';flash.setAttribute('aria-hidden','true');
+      flash.addEventListener('animationend',function(){flash.remove();});document.body.appendChild(flash);
+      var root=document.documentElement;root.classList.remove('is-shocked');void root.offsetWidth;root.classList.add('is-shocked');
+      setTimeout(function(){root.classList.remove('is-shocked');},500);
+    }
+    try{if(navigator.vibrate)navigator.vibrate(80);}catch(error){/* Vibration is optional. */}
   }
   function applyTheme() {
     var light=document.documentElement.dataset.theme==='light';
@@ -97,15 +124,28 @@
     if(target.matches('details'))target.open=true;
     requestAnimationFrame(function(){target.scrollIntoView({block:'start',behavior:'auto'});updateNav();});
   }
+  // Desktop visitors see their own platform first; phones, tablets and unknown systems keep both equal.
+  function preferPlatform() {
+    var data=navigator.userAgentData, platform=(data&&data.platform)||navigator.platform||'', agent=navigator.userAgent||'';
+    var mobile=(data&&data.mobile)||/iPhone|iPad|iPod|Android/i.test(agent)||(/mac/i.test(platform)&&navigator.maxTouchPoints>1);
+    var preferred=mobile?'':/mac/i.test(platform)?'macos':/win/i.test(platform)?'windows':'';
+    var list=document.querySelector('.platform-downloads');
+    if(!list||!preferred) return;
+    list.dataset.preferred=preferred;
+    list.querySelectorAll('.platform-download').forEach(function(d){d.classList.toggle('is-preferred',d.dataset.platform===preferred);d.classList.toggle('is-alternate',d.dataset.platform!==preferred);});
+  }
   function hydrate() {
     document.documentElement.lang=lang;
     document.title=content[lang].meta.title;
     document.querySelectorAll('meta[name="description"],meta[property="og:description"],meta[name="twitter:description"]').forEach(function(m){m.content=content[lang].meta.description;});
     document.querySelectorAll('meta[property="og:title"],meta[name="twitter:title"]').forEach(function(m){m.content=content[lang].meta.title;});
     document.documentElement.classList.add('js-ready');
-    applyTheme();applyRhythm();applyMotion();reveal();updateNav();
+    // Keep the address in step with the language shown, so shared links open in the same language.
+    var path=window.location&&location.pathname, target=lang==='zh-Hans'?'/zh/':'/';
+    if(window.history&&history.replaceState&&/^\/(zh\/)?(index\.html)?$/.test(path||'')&&path!==target)history.replaceState(null,'',target+location.search+location.hash);
+    applyTheme();applyRhythm();applyMotion();preferPlatform();reveal();updateNav();
   }
-  if(lang!=='en') app.innerHTML=render(content[lang],lang);
+  if(lang!==pageLang) app.innerHTML=render(content[lang],lang);
   hydrate();
   document.addEventListener('click',async function(event){
     var language=event.target.closest('[data-language]');
@@ -122,7 +162,12 @@
       document.querySelector('[data-language="'+lang+'"]').focus({preventScroll:true});
       return;
     }
-    if(event.target.closest('#code-blue-toggle')) {rhythm=rhythm==='nsr'?'vf':'nsr';applyRhythm();return;}
+    if(event.target.closest('#share-auv')) {
+      var share=document.getElementById('share-auv'),url='https://shaotinghe.com/#uma';
+      try{if(navigator.share){await navigator.share({title:'AUV',url:url});}else{await navigator.clipboard.writeText(url);share.firstChild.textContent=content[lang].ui.linkCopied;}}catch(error){/* Sharing was dismissed. */}
+      return;
+    }
+    if(event.target.closest('#code-blue-toggle')) {if(rhythm==='vf')shock();else{rhythm='vf';applyRhythm();}return;}
     if(event.target.closest('#theme-toggle')) {var nextTheme=document.documentElement.dataset.theme==='light'?'dark':'light';document.documentElement.dataset.theme=nextTheme;save('sh-theme',nextTheme);applyTheme();return;}
     if(event.target.closest('#motion-toggle')) {manualPause=!manualPause;save('site:motion',manualPause?'off':'on');applyMotion();return;}
     if(event.target.closest('#copy-email')) {
@@ -132,6 +177,7 @@
     }
     if(event.target.closest('.skip-link')) requestAnimationFrame(function(){document.getElementById('main-content').focus({preventScroll:true});});
   });
+  window.addEventListener('signal:fibrillate',function(){if(rhythm!=='vf'){rhythm='vf';applyRhythm();}});
   var pending=false;
   window.addEventListener('scroll',function(){if(pending)return;pending=true;requestAnimationFrame(function(){pending=false;updateNav();});},{passive:true});
   window.addEventListener('hashchange',alignHash);
