@@ -108,7 +108,7 @@
       var root=document.documentElement;root.classList.remove('is-shocked');void root.offsetWidth;root.classList.add('is-shocked');
       setTimeout(function(){root.classList.remove('is-shocked');},500);
     }
-    try{if(navigator.vibrate)navigator.vibrate(80);}catch(error){/* Vibration is optional. */}
+    try{if(navigator.vibrate&&(!navigator.userActivation||navigator.userActivation.hasBeenActive))navigator.vibrate(80);}catch(error){/* Vibration is optional. */}
   }
   function applyTheme() {
     var light=document.documentElement.dataset.theme==='light';
