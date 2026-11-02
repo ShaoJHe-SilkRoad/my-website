@@ -129,11 +129,21 @@
     });},{rootMargin:'0px 0px -6% 0px'});
     blocks.forEach(function(el){if(el.getBoundingClientRect().top>window.innerHeight){el.classList.add('reveal-wait');observer.observe(el);}});
   }
+  // Section positions are measured on layout changes, so scrolling only compares numbers.
+  var navTops=null,navLine=0,navCurrent=null;
+  function measureNav() {
+    navLine=document.querySelector('header').getBoundingClientRect().bottom+130;
+    navTops=content[lang].nav.map(function(n){var el=document.getElementById(n[0]);return [n[0],el?el.getBoundingClientRect().top+window.scrollY:Infinity];});
+  }
   function updateNav() {
-    var id='', header=document.querySelector('header').getBoundingClientRect().bottom+130;
-    content[lang].nav.forEach(function(n){var el=document.getElementById(n[0]);if(el.getBoundingClientRect().top<=header) id=n[0];});
+    if(!navTops) measureNav();
+    var id='',y=window.scrollY+navLine;
+    navTops.forEach(function(n){if(n[1]<=y) id=n[0];});
+    if(id===navCurrent) return;
+    navCurrent=id;
     document.querySelectorAll('[data-nav]').forEach(function(a){if(a.dataset.nav===id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
   }
+  function remeasureNav() { navTops=null; navCurrent=null; updateNav(); }
   function alignHash() {
     var id;try{id=decodeURIComponent(location.hash.slice(1));}catch(error){return;}
     var target=id&&document.getElementById(id);if(!target)return;
@@ -197,7 +207,7 @@
   var pending=false;
   window.addEventListener('scroll',function(){if(pending)return;pending=true;requestAnimationFrame(function(){pending=false;updateNav();});},{passive:true});
   window.addEventListener('hashchange',alignHash);
-  window.addEventListener('resize',updateNav,{passive:true});
+  window.addEventListener('resize',remeasureNav,{passive:true});if(window.ResizeObserver)new ResizeObserver(function(){remeasureNav();}).observe(document.getElementById('app'));
   if(reduce.addEventListener)reduce.addEventListener('change',applyMotion);
   window.addEventListener('load',alignHash,{once:true});
   if(location.hash)alignHash();

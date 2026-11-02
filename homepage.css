@@ -590,3 +590,18 @@ html{scroll-padding-top:100px}
   @media(max-width:759px){.lab-link{min-height:34px;padding:0 10px;font-size:12px}}
   @media(max-width:420px){:root .code-blue-label{display:none}:root .code-blue{padding-inline:10px}}
 }
+
+/* V8.4 smooth scrolling. The aurora keeps its look and motion on a layer cut to the circle the viewport
+   can ever see (about a third of the old 18-megapixel layer); the grain sits on its own composited layer
+   without blending; the waveform's fade-out moved into its canvas. */
+@media screen{
+  :root{--aurora-box:142vmax}
+  @supports (width:hypot(1px,1px)){:root{--aurora-box:hypot(100vw,100vh)}}
+  body::before{inset:auto;left:50%;top:50%;width:var(--aurora-box);height:var(--aurora-box);margin:calc(var(--aurora-box) / -2) 0 0 calc(var(--aurora-box) / -2);background-size:calc(100vw + 70vmax) calc(100vh + 70vmax);background-position:center;background-repeat:no-repeat}
+  body::after{will-change:transform;transform:translateZ(0)}
+  :root[data-theme=light]:not([data-rhythm=vf]) body::after{mix-blend-mode:normal}
+  .ambient-backdrop{mask-image:none;-webkit-mask-image:none}
+  .ambient-backdrop,:root[data-theme=light] .ambient-backdrop,:root[data-rhythm=vf] .ambient-backdrop{background:none}
+  .ambient-backdrop::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 76% 42%,color-mix(in srgb,var(--violet) 16%,transparent),transparent 62%);mask-image:linear-gradient(#000 0%,#000 78%,transparent 100%);-webkit-mask-image:linear-gradient(#000 0%,#000 78%,transparent 100%)}
+  #ambient-field{display:block}
+}

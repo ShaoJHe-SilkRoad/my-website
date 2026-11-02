@@ -38,6 +38,10 @@
     let styles;
     let gridPath;
     let gridDots = [];
+    // Haze and calibration marks never move: they are painted once per layout into this cached bitmap.
+    let staticLayer = null;
+    let staticReady = false;
+    let fade;
     const resultPoint = new Float64Array(2);
     const lookupSize = 4096;
     const atrialTable = new Float64Array(lookupSize + 1);
@@ -315,6 +319,43 @@
                 else gridDots.push(gx, gy);
             }
         }
+        // The lower edge fades out inside the canvas; a CSS mask would be re-applied to the live layer every frame.
+        fade = context.createLinearGradient(0, height * 0.78, 0, height);
+        fade.addColorStop(0, '#000');
+        fade.addColorStop(1, 'rgba(0,0,0,0)');
+        paintStaticLayer();
+    }
+
+    function paintStatic() {
+        const palette = tone();
+        const presence = mobile ? 0.88 : 1;
+        const { x, y, span } = geometry;
+        context.globalCompositeOperation = light ? 'source-over' : 'screen';
+        context.globalAlpha = presence;
+        glow(x, y - 45, span * 0.65, palette.haze[0], light ? 0.07 : 0.19);
+        glow(x + span * 0.13, y - 115, span * 0.37, palette.haze[1], light ? 0.045 : 0.075);
+        // Quiet calibration marks give the field an instrument-like structure.
+        context.fillStyle = palette.grid;
+        context.globalAlpha = (light ? 0.1 : 0.11) * presence;
+        if (gridPath) context.fill(gridPath);
+        else for (let index = 0; index < gridDots.length; index += 2) context.fillRect(gridDots[index], gridDots[index + 1], 1, 1);
+    }
+
+    function paintStaticLayer() {
+        if (!staticLayer) {
+            try { staticLayer = document.createElement('canvas'); } catch (_) { staticLayer = false; }
+        }
+        const layerContext = staticLayer && staticLayer.getContext && staticLayer.getContext('2d');
+        staticReady = !!layerContext;
+        if (!staticReady) return;
+        if (staticLayer.width !== canvas.width) staticLayer.width = canvas.width;
+        if (staticLayer.height !== canvas.height) staticLayer.height = canvas.height;
+        const drawing = context;
+        context = layerContext;
+        context.setTransform(ratio, 0, 0, ratio, 0, 0);
+        context.clearRect(0, 0, width, height);
+        paintStatic();
+        context = drawing;
     }
 
     const scrollLeft = () => window.scrollX || 0;
@@ -423,20 +464,17 @@
             pulse.phase = age * 17;
             pulse.amplitude = (1 - age) * 32;
         }
+        if (staticReady) {
+            context.setTransform(1, 0, 0, 1, 0, 0);
+            context.drawImage(staticLayer, 0, 0);
+            context.setTransform(ratio, 0, 0, ratio, 0, 0);
+        } else paintStatic();
         context.globalCompositeOperation = light ? 'source-over' : 'screen';
         context.globalAlpha = presence;
         context.lineCap = 'round';
         context.lineJoin = 'round';
 
         const palette = tone();
-        glow(x, y - 45, span * 0.65, palette.haze[0], light ? 0.07 : 0.19);
-        glow(x + span * 0.13, y - 115, span * 0.37, palette.haze[1], light ? 0.045 : 0.075);
-
-        // Quiet calibration marks give the field an instrument-like structure.
-        context.fillStyle = palette.grid;
-        context.globalAlpha = (light ? 0.1 : 0.11) * presence;
-        if (gridPath) context.fill(gridPath);
-        else for (let index = 0; index < gridDots.length; index += 2) context.fillRect(gridDots[index], gridDots[index + 1], 1, 1);
         for (let index = 0; index < strands.length; index += 1) {
             const strand = strands[index];
             // Centre strands sit closer to the viewer: slightly heavier and brighter than the edges.
@@ -510,6 +548,9 @@
             context.stroke();
         }
         context.globalAlpha = 1;
+        context.globalCompositeOperation = 'destination-in';
+        context.fillStyle = fade;
+        context.fillRect(0, height * 0.78, width, height * 0.22);
         context.globalCompositeOperation = 'source-over';
     }
 

@@ -59,12 +59,12 @@ ${structuredData(c,lang,page)}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;family=Instrument+Serif:ital@1&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/homepage.css?v=site-20261102c">
+<link rel="stylesheet" href="/homepage.css?v=site-20261102d">
 <script>(function(){try{var t=localStorage.getItem('sh-theme');document.documentElement.dataset.theme=t==='light'?'light':'dark';}catch(e){}})();</script>
 <script defer src="/content/auv-releases.js?v=auv-0172"></script>
-<script defer src="/content/homepage-content.js?v=site-20261102c"></script>
-<script defer src="/ambient.js?v=site-20261102c"></script>
-<script defer src="/homepage.js?v=site-20261102c"></script>
+<script defer src="/content/homepage-content.js?v=site-20261102d"></script>
+<script defer src="/ambient.js?v=site-20261102d"></script>
+<script defer src="/homepage.js?v=site-20261102d"></script>
 </head>
 <body>
 <div class="ambient-backdrop" aria-hidden="true"><canvas id="ambient-field" aria-hidden="true"></canvas></div>
