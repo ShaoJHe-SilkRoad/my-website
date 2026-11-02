@@ -63,3 +63,5 @@ main.reading{transition:opacity .2s ease}
 .speech-controls button{flex:1 1 6rem}
 @media(max-width:600px){#size-controls{display:none!important}}
 @media(prefers-reduced-motion:reduce){main.reading{transition:none}}
+
+.reading-panel .settings-hint{margin:-.2rem 0 .7rem;font-size:.85rem;line-height:1.45;opacity:.75}

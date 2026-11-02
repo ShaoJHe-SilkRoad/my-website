@@ -311,11 +311,6 @@ html{scroll-padding-top:100px}
   .email-link:hover{background:linear-gradient(100deg,var(--g1),var(--g3));-webkit-background-clip:text;background-clip:text;color:transparent}
   .email-link>span{color:var(--mint)}
 
-  /* Scroll reveals run on the compositor's scroll timeline; no observers or listeners. */
-  @supports (animation-timeline:view()){
-    [data-reveal]{animation:v7-reveal linear both;animation-timeline:view();animation-range:entry 0% cover 22%}
-    @keyframes v7-reveal{from{opacity:0;transform:translateY(56px) scale(.985)}}
-  }
 
   /* Chinese keeps upright glyphs: italic serifs have no CJK forms. */
   :root[lang=zh-Hans] .hero h1{font-size:clamp(60px,8vw,120px);line-height:1.08;letter-spacing:-.03em}
@@ -565,3 +560,25 @@ html{scroll-padding-top:100px}
     .evolution-steps li{border-top:0;padding:0 0 0 20px}.evolution-steps li:before{top:4px;left:-4px}
   }
 }
+
+/* V8.3 content first: blocks reveal once and always end fully visible; the hero ends where its
+   content and the waveform end instead of at a fixed height; sections sit closer together. */
+@media screen{
+  [data-reveal]{transition:opacity .6s ease,transform .6s cubic-bezier(.16,.84,.24,1)}
+  [data-reveal].reveal-wait{opacity:0;transform:translateY(28px)}
+  :root .hero,:root[lang=zh-Hans] .hero{min-height:calc(min(53svh,470px) + 190px)}
+  :root .hero-foot{margin-top:auto;padding-top:16px}
+  :root .hero-actions{margin-bottom:28px}
+  :root .section{padding-block:clamp(48px,6vw,72px)}
+  :root .work-heading{margin-bottom:28px}
+  :root .about-section .container,:root .contact-section .container{row-gap:32px}
+  @media(min-width:1600px){:root .hero,:root[lang=zh-Hans] .hero{min-height:calc(min(53svh,470px) + 210px)}}
+  @media(max-width:759px){
+    :root .hero,:root[lang=zh-Hans] .hero{min-height:0;padding-bottom:20px}
+    :root .hero-actions{margin-bottom:0}
+    :root .signal-slot{height:150px;margin:18px 0 8px}
+    :root .hero-foot{margin-top:8px}
+    :root .section{padding-block:44px}
+  }
+}
+@media(prefers-reduced-motion:reduce){[data-reveal]{transition:none}[data-reveal].reveal-wait{opacity:1;transform:none}}

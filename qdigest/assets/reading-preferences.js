@@ -7,7 +7,7 @@ let storageNote='',fontEpoch=0,fontEvidence={state:'requested'},manifestPromise,
 const read=(where,k)=>{try{return window[where].getItem(k)}catch{return null}};
 const write=(where,k,v)=>{try{if(v===null)window[where].removeItem(k);else window[where].setItem(k,v);return true}catch{return false}};
 const zh=()=>lang()!=='en',words=(a,b)=>zh()?a:b;
-const scriptURL=new URL(document.currentScript.src),base=new URL('.',scriptURL),manifestURL=new URL('fonts/reader-font-manifest.json',base);manifestURL.searchParams.set('v','reader-fonts-2.1.1-s3');
+const scriptURL=new URL(document.currentScript.src),base=new URL('.',scriptURL),manifestURL=new URL('fonts/reader-font-manifest.json',base);manifestURL.searchParams.set('v','reader-fonts-2.1.1-s4');
 const storage=where=>{try{return window[where]}catch{return undefined}};
 const memory=isLab?null:window.QDSettingsStore.create({local:storage('localStorage'),session:storage('sessionStorage'),theme:window.QDTheme?.get()||'system'});
 if(memory){state.profiles=memory.get().current.profiles;window.QDTheme?.set(memory.get().current.theme,false)}
@@ -104,7 +104,7 @@ const rateInput=document.createElement('input');rateInput.type='range';rateInput
 const speech=button(words('从当前段落朗读','Read from here')),pauseButton=button(words('暂停','Pause')),stop=button(words('停止','Stop'));
 const speechControls=document.createElement('div');speechControls.className='speech-controls';speechControls.append(speech,pauseButton,stop);
 const speechStatus=document.createElement('p');speechStatus.className='settings-status';speechStatus.setAttribute('role','status');
-voiceGroup.append(speechControls,labelled(words('语速','Speed'),rateInput,rateOut),labelled(words('声音','Voice'),voiceSelect),labelled(words('使用在线语音（更自然）','Use online voices (more natural)'),onlineBox),speechStatus);
+const onlineRow=labelled(words('使用在线语音（更自然）','Use online voices (more natural)'),onlineBox);voiceGroup.append(speechControls,labelled(words('语速','Speed'),rateInput,rateOut),labelled(words('声音','Voice'),voiceSelect),onlineRow,speechStatus);
 let voices=[],queue=[],queueIndex=0,ticket=0,paused=false;
 const matchesLanguage=v=>lang()==='en'?/^en/i.test(v.lang):lang()==='zh-TW'?/^(zh|cmn|yue)[-_](TW|HK|MO|Hant)/i.test(v.lang):/^(zh|cmn)([-_](CN|SG|Hans))?$/i.test(v.lang)||/^(zh|cmn)[-_](CN|SG|Hans)/i.test(v.lang);
 // Apple's character voices (Eddy, Grandma…) and sound effects sound the most robotic: last, or hidden.
@@ -112,19 +112,19 @@ const novelty=/^(Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Fred|Good News|
 const voiceScore=v=>(character.test(v.name)?-50:0)+(/^(Tingting|Lili|Lilian|Yu-?shu|Meijia|Sinji|Samantha|Daniel|Ava|Allison|Susan|Karen|Moira|Serena|Zoe|Evan|Nathan|Tom|Alex)\b/.test(v.name)?15:0)+(/natural|neural/i.test(v.name)?40:0)+(/premium|enhanced|高品质|增强/i.test(v.name)?30:0)+(/siri/i.test(v.name)?25:0)+(/google/i.test(v.name)?20:0)+(/online/i.test(v.name)?10:0)+(v.default?1:0);
 function refreshVoices(){
  const all=(synth?.getVoices()||[]).filter(v=>matchesLanguage(v)&&!novelty.test(v.name)),hidden=all.filter(v=>!v.localService).length;
- voices=all.filter(v=>onlineBox.checked||v.localService).sort((a,b)=>voiceScore(b)-voiceScore(a));
+ onlineRow.hidden=!hidden;const online=onlineBox.checked&&hidden>0;voices=all.filter(v=>online||v.localService).sort((a,b)=>voiceScore(b)-voiceScore(a));
  voiceSelect.replaceChildren(...voices.map(v=>{const o=document.createElement('option');o.value=v.voiceURI;o.textContent=v.name+(v.localService?'':words('（在线）',' (online)'));return o}));
  if(voices.some(v=>v.voiceURI===speechPrefs.voice))voiceSelect.value=speechPrefs.voice;
  rateOut.value=Number(rateInput.value).toFixed(2)+'×';speech.disabled=!voices.length;pauseButton.disabled=stop.disabled=!queue.length;
  const best=voices.find(v=>v.voiceURI===voiceSelect.value)||voices[0];
  speechStatus.textContent=!synth?words('此浏览器不支持朗读。','This browser cannot read aloud.')
   :!voices.length?(hidden?words('本机没有这个语言的声音；可以打开“使用在线语音”。','No voice for this language on this device; turn on online voices.'):words('此设备没有这个语言的朗读声音。','No voice for this language on this device.'))
-  :(onlineBox.checked?words('在线语音会把朗读的文字发送给浏览器提供商（如微软或 Google）。','Online voices send the text being read to your browser’s provider, such as Microsoft or Google.'):words('本机声音：文字不离开设备。','Local voice: the text stays on this device.')+(hidden?words('打开在线语音还有 '+hidden+' 个更自然的声音。',' Turn on online voices for '+hidden+' more natural voices.'):''))
+  :(online?words('在线语音会把朗读的文字发送给浏览器提供商（如微软或 Google）。','Online voices send the text being read to your browser’s provider, such as Microsoft or Google.'):words('本机声音：文字不离开设备。','Local voice: the text stays on this device.')+(hidden?words('打开在线语音还有 '+hidden+' 个更自然的声音。',' Turn on online voices for '+hidden+' more natural voices.'):''))
    +(best&&best.localService&&voiceScore(best)<25?words(' 提示：在系统的“朗读内容”设置里下载“增强”或“高品质”声音，会自然很多。',' Tip: download an Enhanced or Premium voice in your system’s Spoken Content settings.'):'');
 }
 // Sentence boundaries: Chinese and full stops, but not decimals such as 9.6% or 0.05.
 function sentencesOf(el){const text=el.textContent,out=[];let from=0;for(let i=0;i<text.length;i++){const c=text[i],end=/[。！？!?；]/.test(c)||(c==='.'&&(i+1===text.length||/\s/.test(text[i+1]))&&!/\d/.test(text[i-1]||''));if(!end&&i<text.length-1)continue;let to=i+1;while(to<text.length&&/[”’"')）\s]/.test(text[to]))to++;const piece=text.slice(from,to).trim();if(piece)out.push({el,start:from,end:to,text:piece});from=to;i=to-1}return out}
-function highlight(item){if(!item||!window.CSS?.highlights||typeof Highlight!=='function')return;const range=document.createRange(),walker=document.createTreeWalker(item.el,NodeFilter.SHOW_TEXT);let pos=0,node,started=false;while((node=walker.nextNode())){const len=node.data.length;if(!started&&item.start<pos+len){range.setStart(node,item.start-pos);started=true}if(started&&item.end<=pos+len){range.setEnd(node,item.end-pos);break}pos+=len}CSS.highlights.set('qd-speaking',new Highlight(range));const r=item.el.getBoundingClientRect();if(r.top<innerHeight*.15||r.bottom>innerHeight*.85)item.el.scrollIntoView({block:'center',behavior:'smooth'})}
+function highlight(item){if(!item||!window.CSS?.highlights||typeof Highlight!=='function')return;const range=document.createRange(),walker=document.createTreeWalker(item.el,NodeFilter.SHOW_TEXT);let pos=0,node,started=false,ended=false;while((node=walker.nextNode())){const len=node.data.length;if(!started&&item.start<pos+len){range.setStart(node,item.start-pos);started=true}if(started&&item.end<=pos+len){range.setEnd(node,item.end-pos);ended=true;break}pos+=len}if(started&&ended)CSS.highlights.set('qd-speaking',new Highlight(range));else CSS.highlights.delete('qd-speaking');const r=item.el.getBoundingClientRect();if(r.top<innerHeight*.15||r.bottom>innerHeight*.85)item.el.scrollIntoView({block:'center',behavior:'smooth'})}
 function finishSpeech(){queue=[];queueIndex=0;paused=false;window.CSS?.highlights?.delete('qd-speaking');pauseButton.textContent=words('暂停','Pause');refreshVoices()}
 function speakNext(my){if(my!==ticket||paused)return;const item=queue[queueIndex];if(!item){finishSpeech();return}highlight(item);const voice=voices.find(v=>v.voiceURI===voiceSelect.value)||voices[0];const u=new SpeechSynthesisUtterance(item.text);u.voice=voice;u.lang=voice.lang;u.rate=Number(rateInput.value);u.onend=()=>{if(my===ticket&&!paused){queueIndex++;speakNext(my)}};u.onerror=e=>{if(my===ticket&&!paused&&!['interrupted','canceled'].includes(e.error)){queueIndex++;speakNext(my)}};synth.speak(u)}
 const cancel=()=>{ticket++;synth?.cancel();if(queue.length)finishSpeech()};
@@ -139,8 +139,8 @@ synth?.addEventListener('voiceschanged',refreshVoices);window.addEventListener('
 const labLink=document.createElement('a');labLink.textContent=words('进入阅读实验室','Open Reading Lab');const u=new URL('../reading-lab/',base);u.searchParams.set('return',location.pathname+location.search+location.hash);labLink.href=u;form.append(labLink);
 // Common choices first; everything else folds into groups so the panel stays short.
 {const rowOf=k=>form.querySelector('[data-pref="'+k+'"]')?.closest('.preference-row');const group=t=>{const d=document.createElement('details');d.className='panel-group';const m=document.createElement('summary');m.textContent=t;d.append(m);return d};
- const more=group(words('更多排版','More spacing'));more.append(...['letter','word','paragraph','measure'].map(rowOf).filter(Boolean),resetButton);
- const presets=group(words('设置存档','Saved presets'));presets.append(memoryBox);presets.hidden=isLab;advanced.classList.add('panel-group');
+ const more=group(words('更多排版：字距、段距、宽度','More spacing: letters, paragraphs, width'));more.append(...['letter','word','paragraph','measure'].map(rowOf).filter(Boolean),resetButton);
+ const presets=group(words('保存我的设置（最多 3 套）','Save my settings (up to 3)'));presets.append(memoryBox);presets.hidden=isLab;advanced.querySelector('summary').textContent=words('阅读辅助：重点标记、位置提示','Reading aids: emphasis and place markers');const hint=(k,a,b)=>{const row=rowOf(k),p=document.createElement('p');p.className='settings-hint';p.textContent=words(a,b);row?.after(p)};hint('emphasis','决定正文里哪些字加粗：文章原有的重点句、都不加粗、只加粗术语，或把每个词的开头加粗来引导视线（实验）。','Choose what is bold: the article’s key sentences, nothing, glossary terms only, or the start of each word to guide your eyes (experimental).');hint('guide','在你正在读的段落或那一两行上加标记，读长段时不容易跳行。','Marks the paragraph or lines you are reading so you keep your place in long passages.');hint('progress','在屏幕角落显示你滚动到页面的百分之几。','Shows how far down the page you are, in the corner of the screen.');hint('italic','只在字体自带斜体字形时才显示斜体，不会把正体硬拉斜。','Uses italics only when the font has real italic letters; never slants upright text.');advanced.classList.add('panel-group');
  form.append(...[rowOf('font'),fontStatus,rowOf('size'),rowOf('line'),more,voiceGroup,advanced,presets,labLink].filter(Boolean))}
 // Fade the text while a newly chosen font loads, so the swap does not flash or jump.
 {const load=fonts;let runs=0;fonts=async function(){const fade=runs++>0;if(fade)root.classList.add('qd-font-switching');try{return await load()}finally{if(fade)root.classList.remove('qd-font-switching')}}}

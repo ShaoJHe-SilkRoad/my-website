@@ -117,15 +117,17 @@
     btn.disabled=locked;btn.setAttribute('aria-label',label);btn.title=label;
     document.querySelector('meta[name="theme-color"]').content=locked?'#160407':light?'#edf3f9':'#030d1b';
   }
+  // Blocks below the fold fade in once when they come into view and stay fully visible after.
   function reveal() {
     if(observer) observer.disconnect();
-    if(!('IntersectionObserver' in window)) return;
+    var blocks=document.querySelectorAll('[data-reveal]');
+    if(!('IntersectionObserver' in window) || document.documentElement.dataset.motion==='off'){blocks.forEach(function(el){el.classList.remove('reveal-wait');});return;}
     observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){
       if(!entry.isIntersecting) return;
-      if(document.documentElement.dataset.motion!=='off' && entry.target.animate) entry.target.animate([{opacity:.9},{opacity:1}],{duration:200,easing:'ease-out'});
+      entry.target.classList.remove('reveal-wait');
       observer.unobserve(entry.target);
-    });},{threshold:.1});
-    document.querySelectorAll('[data-reveal]').forEach(function(el){observer.observe(el);});
+    });},{rootMargin:'0px 0px -6% 0px'});
+    blocks.forEach(function(el){if(el.getBoundingClientRect().top>window.innerHeight){el.classList.add('reveal-wait');observer.observe(el);}});
   }
   function updateNav() {
     var id='', header=document.querySelector('header').getBoundingClientRect().bottom+130;
