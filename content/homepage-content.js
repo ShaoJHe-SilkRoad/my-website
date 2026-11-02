@@ -73,7 +73,7 @@ window.SHAOTING_HOME_CONTENT = {
         "status": "macOS 0.18.3 · Windows 0.16.3",
         "kind": "Windows & Mac app",
         "headline": "Know how much AI coding time you have left.",
-        "description": "AUV is a desktop app for Mac and Windows that shows your Codex and Claude usage and limits at a glance, so you can pace your work. It also includes ThreadOS, for preparing instructions for a team of coding agents, and on Mac, Sectorium, for managing a development drive.",
+        "description": "AUV is a desktop app for Mac and Windows that shows your Codex and Claude usage and limits at a glance, so you can pace your work.",
         "tags": [
           "English / 中文"
         ],
@@ -83,11 +83,11 @@ window.SHAOTING_HOME_CONTENT = {
         "secondaryUrl": "/auv/install/",
         "caption": "AUV 0.18.3 on macOS · live Claude and Codex usage",
         "whyTitle": "What it is for",
-        "why": "One app for account usage, team instructions and Mac development volumes.",
+        "why": "Seeing how much Codex and Claude time is left before starting a long piece of work, without opening each account.",
         "focusTitle": "The hardest parts",
         "focus": "Exact Claude usage comes from a signed-in Safari session, so AUV has to keep reading it when Safari is hidden, minimized or on another desktop. The other half of the work is shipping a signed, notarized Universal Mac app alongside a separate Windows version.",
         "inviteTitle": "Where help is needed",
-        "invite": "Windows is the gap: it is still at 0.16.3, ships unsigned, and lacks Sectorium’s storage actions. A developer who knows Windows packaging and code signing would make the biggest difference. Testing and design feedback from people who use Codex or Claude every day is just as welcome.",
+        "invite": "Windows is the gap: it is still at 0.16.3, ships unsigned, and lags the Mac version. A developer who knows Windows packaging and code signing would make the biggest difference. Testing and design feedback from people who use Codex or Claude every day is just as welcome.",
         "log": {
           "label": "AUV · Build log",
           "title": "My first public app, built in the open.",
@@ -166,7 +166,7 @@ window.SHAOTING_HOME_CONTENT = {
             ],
             [
               "3 Oct",
-              "ThreadOS command workbench (0.14.1)"
+              "Added tools for my own agent workflow (0.14.1)"
             ],
             [
               "10 Oct",
@@ -204,13 +204,56 @@ window.SHAOTING_HOME_CONTENT = {
         ],
         "primary": "Read QDigest",
         "url": "/qdigest/",
-        "caption": "Current edition · 16 September 2026",
+        "caption": "Latest edition · 16 September 2026",
         "whyTitle": "The question",
         "why": "How can health research become easier to understand while keeping its evidence and uncertainty visible?",
         "focusTitle": "What I’m working toward",
-        "focus": "One source-linked fact package for concise email briefs and fuller bilingual web explanations.",
+        "focus": "Getting new papers from an automated draft to an explanation I can trust, without rescuing each one by hand, so editions can come out on a regular schedule.",
         "inviteTitle": "Where you can help",
-        "invite": "I’d like to hear from curious readers, editorial thinkers, and people who care about how information is presented."
+        "invite": "I’d like to hear from curious readers, editorial thinkers, and people who care about how information is presented.",
+        "evolution": {
+          "label": "QDigest · How it has changed",
+          "title": "What changed, and what each change cost.",
+          "note": "Decisions from September to October 2026",
+          "steps": [
+            [
+              "Early Sep",
+              "From summaries to a bilingual reader",
+              "Research summaries became web pages in English and Simplified Chinese, with an email brief for each edition.",
+              "Every article is now written and checked twice, once per language."
+            ],
+            [
+              "14 Sep",
+              "First edition: five topics, fifteen articles",
+              "The articles were accepted one by one.",
+              "Correct articles did not add up to a good read. Fifteen pieces across five topics was too much to take in."
+            ],
+            [
+              "16 Sep",
+              "Three topics, nine articles",
+              "Alzheimer’s disease, stroke, and cancer prevention and research.",
+              "Fewer subjects, so each article can go deeper. Earlier editions stay online."
+            ],
+            [
+              "16–17 Sep",
+              "Two depths: Lazy and Full",
+              "Lazy puts a short, plain takeaway for every article on one page. Full explains each paper in depth, explains its terms, and leads on to the next article. Going back returns you to where you were.",
+              "Two texts per paper to keep in step. I dropped the one-sentence rule for Lazy: a short paragraph that reads naturally beats a sentence squeezed to fit."
+            ],
+            [
+              "Sep–Oct",
+              "Automating new papers",
+              "Model-written drafts led with statistics, got facts wrong, and slipped past automated review. I now record what the model wrote first, what it corrected, and what a person changed.",
+              "Slower, and no new edition since 16 September. I won’t hide a weak pipeline by rewriting its drafts myself."
+            ],
+            [
+              "Oct",
+              "Reading settings and Reading Lab",
+              "Saved reading preferences, more English and Chinese fonts (including OpenDyslexic and Traditional Chinese), and a Reading Lab for comparing settings on fictional samples. Focus mode is hidden for now.",
+              "Built, but it ships with the next edition rather than being bolted onto the old one."
+            ]
+          ]
+        }
       },
       {
         "id": "screensnap",
@@ -389,7 +432,7 @@ window.SHAOTING_HOME_CONTENT = {
         "status": "macOS 0.18.3 · Windows 0.16.3",
         "kind": "Windows 与 Mac 应用",
         "headline": "一眼看清 AI 编程还剩多少额度。",
-        "description": "AUV 是一款 Mac 与 Windows 桌面应用，随时显示 Codex 与 Claude 的用量和限额，帮你安排工作节奏。它还包含线程工（ThreadOS），为编码智能体团队准备指令；在 Mac 上还有分区工（Sectorium），用来管理开发盘。",
+        "description": "AUV 是一款 Mac 与 Windows 桌面应用，随时显示 Codex 与 Claude 的用量和限额，帮你安排工作节奏。",
         "tags": [
           "English / 中文"
         ],
@@ -399,11 +442,11 @@ window.SHAOTING_HOME_CONTENT = {
         "secondaryUrl": "/auv/install/",
         "caption": "AUV 0.18.3 · macOS 上的 Claude 与 Codex 实时用量",
         "whyTitle": "用来做什么",
-        "why": "一个应用，查看账户用量、准备团队指令、管理 Mac 开发卷。",
+        "why": "开始一段长时间的工作前，不用逐个打开账户，就能知道 Codex 与 Claude 还剩多少额度。",
         "focusTitle": "最难的部分",
         "focus": "Claude 的精确用量来自已登录的 Safari 会话，所以 Safari 被隐藏、最小化或在另一个桌面时，AUV 也要能继续读取。另一半工作，是在发布签名、公证的 Mac 通用版的同时，维护一个独立的 Windows 版。",
         "inviteTitle": "需要帮手的地方",
-        "invite": "Windows 是短板：它还停在 0.16.3，没有签名，也缺少 Sectorium 的磁盘操作。最能帮上忙的，是一位熟悉 Windows 打包与代码签名的开发者。也同样欢迎每天使用 Codex 或 Claude 的人提供测试和设计反馈。",
+        "invite": "Windows 是短板：它还停在 0.16.3，没有签名，功能也落后于 Mac 版。最能帮上忙的，是一位熟悉 Windows 打包与代码签名的开发者。也同样欢迎每天使用 Codex 或 Claude 的人提供测试和设计反馈。",
         "log": {
           "label": "AUV · 开发日志",
           "title": "我的第一个公开应用，开发过程全部公开。",
@@ -482,7 +525,7 @@ window.SHAOTING_HOME_CONTENT = {
             ],
             [
               "10 月 3 日",
-              "线程工指令工作台（0.14.1）"
+              "加入自用的智能体工作流工具（0.14.1）"
             ],
             [
               "10 月 10 日",
@@ -520,13 +563,56 @@ window.SHAOTING_HOME_CONTENT = {
         ],
         "primary": "阅读 QDigest",
         "url": "/qdigest/",
-        "caption": "本期 · 2026年9月16日",
+        "caption": "最新一期 · 2026年9月16日",
         "whyTitle": "我在思考的问题",
         "why": "怎样让健康研究更容易理解，同时保留证据与不确定性？",
         "focusTitle": "正在努力的方向",
-        "focus": "同一份可追溯事实包，生成简洁邮件与完整双语网页解释。",
+        "focus": "让新论文从自动生成的初稿，变成我信得过的解读，而不必一篇篇手工救稿，这样才能按固定节奏出刊。",
         "inviteTitle": "欢迎你的参与",
-        "invite": "希望听到好奇的读者、关注内容的人，以及对信息呈现有想法的伙伴的反馈。"
+        "invite": "希望听到好奇的读者、关注内容的人，以及对信息呈现有想法的伙伴的反馈。",
+        "evolution": {
+          "label": "QDigest · 演变",
+          "title": "每一次改动，以及它的代价。",
+          "note": "2026 年 9 月至 10 月的决定",
+          "steps": [
+            [
+              "9 月初",
+              "从研究摘要到双语阅读器",
+              "研究摘要变成英文与简体中文网页，每期另有一封邮件简报。",
+              "每篇文章都要用两种语言各写一遍、各核一遍。"
+            ],
+            [
+              "9 月 14 日",
+              "第一期：五个栏目，十五篇",
+              "每篇文章都逐一通过了审核。",
+              "文章都对，整体却不好读：五个栏目十五篇，信息量太大。"
+            ],
+            [
+              "9 月 16 日",
+              "三个栏目，九篇",
+              "阿尔茨海默病、脑卒中、癌症预防与研究进展。",
+              "栏目更少，每篇能讲得更深。往期内容继续保留。"
+            ],
+            [
+              "9 月 16–17 日",
+              "两种深度：Lazy 与 Full",
+              "Lazy 把每篇的简短白话结论放在同一页；Full 深入解释论文和术语，并能接着读下一篇；返回时回到刚才读到的位置。",
+              "每篇论文要维护两份文字。我放弃了 Lazy 必须一句话的规定：自然的短段落，好过硬压成一句。"
+            ],
+            [
+              "9–10 月",
+              "自动处理新论文",
+              "模型初稿会以统计数字为主线、写错事实，还能躲过自动审核。现在我分开记录模型第一次写了什么、自己改了什么、人又改了什么。",
+              "进度变慢，9 月 16 日之后还没有出新一期。我不会靠亲手改稿，掩盖流程本身的不可靠。"
+            ],
+            [
+              "10 月",
+              "阅读设置与阅读实验室",
+              "可保存的阅读偏好，更多中英文字体（包括 OpenDyslexic 和繁体中文），以及一个用虚构材料比较不同设置的阅读实验室。专注模式暂时隐藏。",
+              "功能已经做好，但会随下一期一起上线，而不是硬接到旧的一期上。"
+            ]
+          ]
+        }
       },
       {
         "id": "screensnap",

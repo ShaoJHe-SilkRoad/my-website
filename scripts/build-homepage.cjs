@@ -7,6 +7,20 @@ const escape=s=>s.replace(/&/g,'&amp;').replace(/"/g,'&quot;');
 // English at /, Chinese at /zh/: each language is a complete static page search engines can read.
 const pages={en:{file:'/index.html',url:'https://shaotinghe.com/',locale:'en_CA',imageAlt:'Shaoting He — ICU nurse and independent builder, illustrated on a Toronto ferry'},
   'zh-Hans':{file:'/zh/index.html',url:'https://shaotinghe.com/zh/',locale:'zh_CN',imageAlt:'何少霆 — ICU 护士与独立开发者，在多伦多渡轮上的插画肖像'}};
+// Structured data: who the site is about and what they have published, in the page's language.
+function structuredData(c,lang,page){
+  const site='https://shaotinghe.com/',p=id=>c.projects.find(x=>x.id===id),zh=lang==='zh-Hans';
+  const app=(id,os,extra)=>Object.assign({'@type':'SoftwareApplication',name:p(id).name,description:p(id).description,operatingSystem:os,applicationCategory:'UtilitiesApplication',offers:{'@type':'Offer',price:'0',priceCurrency:'CAD'},author:{'@id':site+'#person'}},extra);
+  const data={'@context':'https://schema.org','@graph':[
+    {'@type':'WebSite','@id':site+'#website',url:page.url,name:'Shaoting He',inLanguage:lang,publisher:{'@id':site+'#person'}},
+    {'@type':'Person','@id':site+'#person',name:'Shaoting He',alternateName:'何少霆',url:site,image:site+'portrait-ferry-web.jpg',
+      jobTitle:zh?'ICU 注册护士，独立开发者':'ICU registered nurse and independent builder',knowsLanguage:['en','zh'],
+      knowsAbout:['Critical care nursing','Health research communication','Software development'],sameAs:['https://github.com/ShaoJHe-SilkRoad']},
+    app('uma','macOS, Windows',{url:site+'#uma',downloadUrl:'https://github.com/ShaoJHe-SilkRoad/UMA/releases',softwareVersion:context.window.AUV_RELEASES.macos.version}),
+    app('screensnap','Windows',{url:site+'screensnap/'}),
+    {'@type':'WebSite',name:'QDigest',url:site+'qdigest/',description:p('bid').description,inLanguage:['en','zh-CN'],author:{'@id':site+'#person'}}]};
+  return '<script type="application/ld+json">'+JSON.stringify(data).replace(/</g,'\\u003c')+'</script>';
+}
 fs.mkdirSync(root+'/zh',{recursive:true});
 for (const [lang,page] of Object.entries(pages)) {
 const c=context.window.SHAOTING_HOME_CONTENT[lang];
@@ -41,15 +55,16 @@ fs.writeFileSync(root+page.file,`<!DOCTYPE html>
 <meta name="theme-color" content="#070c12">
 <meta name="color-scheme" content="dark light">
 <meta name="robots" content="index, follow">
+${structuredData(c,lang,page)}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;family=Instrument+Serif:ital@1&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/homepage.css?v=site-20261031">
+<link rel="stylesheet" href="/homepage.css?v=site-20261101">
 <script>(function(){try{var t=localStorage.getItem('sh-theme');document.documentElement.dataset.theme=t==='light'?'light':'dark';}catch(e){}})();</script>
 <script defer src="/content/auv-releases.js?v=auv-0172"></script>
-<script defer src="/content/homepage-content.js?v=site-20261031"></script>
-<script defer src="/ambient.js?v=site-20261031"></script>
-<script defer src="/homepage.js?v=site-20261031"></script>
+<script defer src="/content/homepage-content.js?v=site-20261101"></script>
+<script defer src="/ambient.js?v=site-20261101"></script>
+<script defer src="/homepage.js?v=site-20261101"></script>
 </head>
 <body>
 <div class="ambient-backdrop" aria-hidden="true"><canvas id="ambient-field" aria-hidden="true"></canvas></div>
