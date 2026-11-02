@@ -7,7 +7,7 @@ let storageNote='',fontEpoch=0,fontEvidence={state:'requested'},manifestPromise,
 const read=(where,k)=>{try{return window[where].getItem(k)}catch{return null}};
 const write=(where,k,v)=>{try{if(v===null)window[where].removeItem(k);else window[where].setItem(k,v);return true}catch{return false}};
 const zh=()=>lang()!=='en',words=(a,b)=>zh()?a:b;
-const scriptURL=new URL(document.currentScript.src),base=new URL('.',scriptURL),manifestURL=new URL('fonts/reader-font-manifest.json',base);manifestURL.searchParams.set('v','reader-fonts-2.1.1-s4');
+const scriptURL=new URL(document.currentScript.src),base=new URL('.',scriptURL),manifestURL=new URL('fonts/reader-font-manifest.json',base);manifestURL.searchParams.set('v','reader-fonts-2.1.1-s5');
 const storage=where=>{try{return window[where]}catch{return undefined}};
 const memory=isLab?null:window.QDSettingsStore.create({local:storage('localStorage'),session:storage('sessionStorage'),theme:window.QDTheme?.get()||'system'});
 if(memory){state.profiles=memory.get().current.profiles;window.QDTheme?.set(memory.get().current.theme,false)}
@@ -20,11 +20,9 @@ function decorate(){const before=plainSignature();undecorate();const mode=p().em
  if(['first','half'].includes(mode)){
  if(typeof Intl.Segmenter!=='function'){emphasisNote.textContent=words('浏览器不支持分词；保留原文。','Word segmentation unavailable; original text retained.');return}
  const segmenter=new Intl.Segmenter(lang(),{granularity:'word'});const nodes=[];const walker=document.createTreeWalker(main,NodeFilter.SHOW_TEXT);
- while(walker.nextNode()){const n=walker.currentNode;if(!n.parentElement.closest('p.narrative,p.takeaway')||n.parentElement.closest('a,strong,em,b,sup,sub,button,code,[data-prefix]'))continue;
- // Skip whole sentences with numbers/units, negation or limiting language; the guard is intentionally conservative, not a semantic proof.
- if(/[\d%<>≤≥−–]|\b(no|not|without|only|neither|unless|may|might|cannot)\b|不|未|无|無|仅|僅|可能|只有|小鼠|患者/i.test(n.textContent))continue;nodes.push(n)}
- for(const n of nodes){const f=document.createDocumentFragment();let count=0;for(const x of segmenter.segment(n.data)){const chars=Array.from(x.segment);if(x.isWordLike&&chars.length>=3&&/^[\p{L}]+$/u.test(x.segment)){const span=document.createElement('span');span.dataset.prefix='';const b=document.createElement('b');const len=mode==='first'?1:Math.ceil(chars.length/2);b.textContent=chars.slice(0,len).join('');span.append(b,document.createTextNode(chars.slice(len).join('')));f.append(span);decorations.push(span);count++}else f.append(document.createTextNode(x.segment))}if(count)n.replaceWith(f)}
- emphasisNote.textContent=words('实验性词内强调：含数字、限制或否定的片段保持原样。','Experimental prefixes; qualified, numerical and negative passages stay unchanged.');
+ while(walker.nextNode()){const n=walker.currentNode;if(!n.parentElement.closest('p,li,dd,blockquote,td')||n.parentElement.closest('strong,b,h1,h2,h3,h4,sup,sub,button,code,[data-prefix],.edition-context,.source-summary,nav'))continue;nodes.push(n)}
+ for(const n of nodes){const f=document.createDocumentFragment();let count=0;for(const x of segmenter.segment(n.data)){const chars=Array.from(x.segment);if(x.isWordLike&&chars.length>=2&&/^[\p{L}]+$/u.test(x.segment)){const span=document.createElement('span');span.dataset.prefix='';const b=document.createElement('b');const len=mode==='first'?1:Math.ceil(chars.length/2);b.textContent=chars.slice(0,len).join('');span.append(b,document.createTextNode(chars.slice(len).join('')));f.append(span);decorations.push(span);count++}else f.append(document.createTextNode(x.segment))}if(count)n.replaceWith(f)}
+ emphasisNote.textContent='';
  }else emphasisNote.textContent=mode==='terms'?words('只突出已有的术语链接。','Only existing glossary links are highlighted.') : '';
  if(before!==plainSignature()){undecorate();root.dataset.emphasis='semantic';emphasisNote.textContent=words('检测到文本差异，已恢复原文。','Integrity mismatch; original text restored.')}
 }
@@ -137,13 +135,21 @@ voiceSelect.addEventListener('change',()=>{speechPrefs.voice=voiceSelect.value;s
 rateInput.addEventListener('input',()=>{speechPrefs.rate=Number(rateInput.value);saveSpeech();rateOut.value=Number(rateInput.value).toFixed(2)+'×'});
 synth?.addEventListener('voiceschanged',refreshVoices);window.addEventListener('pagehide',cancel);document.querySelectorAll('nav a[lang]').forEach(a=>a.addEventListener('click',cancel));refreshVoices();
 const labLink=document.createElement('a');labLink.textContent=words('进入阅读实验室','Open Reading Lab');const u=new URL('../reading-lab/',base);u.searchParams.set('return',location.pathname+location.search+location.hash);labLink.href=u;form.append(labLink);
-// Common choices first; everything else folds into groups so the panel stays short.
-{const rowOf=k=>form.querySelector('[data-pref="'+k+'"]')?.closest('.preference-row');const group=t=>{const d=document.createElement('details');d.className='panel-group';const m=document.createElement('summary');m.textContent=t;d.append(m);return d};
- const more=group(words('更多排版：字距、段距、宽度','More spacing: letters, paragraphs, width'));more.append(...['letter','word','paragraph','measure'].map(rowOf).filter(Boolean),resetButton);
- const presets=group(words('保存我的设置（最多 3 套）','Save my settings (up to 3)'));presets.append(memoryBox);presets.hidden=isLab;advanced.querySelector('summary').textContent=words('阅读辅助：重点标记、位置提示','Reading aids: emphasis and place markers');const hint=(k,a,b)=>{const row=rowOf(k),p=document.createElement('p');p.className='settings-hint';p.textContent=words(a,b);row?.after(p)};hint('emphasis','决定正文里哪些字加粗：文章原有的重点句、都不加粗、只加粗术语，或把每个词的开头加粗来引导视线（实验）。','Choose what is bold: the article’s key sentences, nothing, glossary terms only, or the start of each word to guide your eyes (experimental).');hint('guide','在你正在读的段落或那一两行上加标记，读长段时不容易跳行。','Marks the paragraph or lines you are reading so you keep your place in long passages.');hint('progress','在屏幕角落显示你滚动到页面的百分之几。','Shows how far down the page you are, in the corner of the screen.');hint('italic','只在字体自带斜体字形时才显示斜体，不会把正体硬拉斜。','Uses italics only when the font has real italic letters; never slants upright text.');advanced.classList.add('panel-group');
- form.append(...[rowOf('font'),fontStatus,rowOf('size'),rowOf('line'),more,voiceGroup,advanced,presets,labLink].filter(Boolean))}
+// One flat panel: every control is visible at once; headings only label what follows.
+{const rowOf=k=>form.querySelector('[data-pref="'+k+'"]')?.closest('.preference-row');
+ const hint=text=>{const p=document.createElement('p');p.className='settings-hint';p.textContent=text;return p};
+ const contents=d=>[...d.childNodes].filter(n=>n.nodeName!=='SUMMARY');
+ const section=(title,...nodes)=>{const box=document.createElement('section');box.className='panel-section';const h=document.createElement('h3');h.textContent=title;box.append(h,...nodes.filter(Boolean));return box};
+ memoryTitle.hidden=true;
+ form.replaceChildren(
+  section(words('文字','Text'),rowOf('font'),fontStatus,rowOf('size'),rowOf('line'),rowOf('letter'),rowOf('word'),rowOf('paragraph'),rowOf('measure'),resetButton),
+  section(words('朗读','Read aloud'),...contents(voiceGroup)),
+  section(words('阅读辅助','Reading aids'),rowOf('emphasis'),hint(words('加粗哪些字：原文重点句、不加粗、只加粗术语，或每个词的开头（引导视线）。','What is bold: key sentences, nothing, glossary terms, or the start of every word to guide your eyes.')),emphasisNote,rowOf('guide'),hint(words('标出正在读的段落或行，读长段不易跳行。','Marks the paragraph or lines you are reading.')),rowOf('progress'),rowOf('italic')),
+  isLab?null:section(words('我的设置','My settings'),memoryBox));
+}
 // Fade the text while a newly chosen font loads, so the swap does not flash or jump.
 {const load=fonts;let runs=0;fonts=async function(){const fade=runs++>0;if(fade)root.classList.add('qd-font-switching');try{return await load()}finally{if(fade)root.classList.remove('qd-font-switching')}}}
+if(!isLab){const exit=document.createElement('a');exit.className='reader-exit';exit.href=lang()==='en'?'/':'/zh/';exit.textContent=words('退出','Exit');exit.title=words('保存当前设置并返回网站主页','Save these settings and return to the website');exit.addEventListener('click',()=>persist());(document.querySelector('.toolbar nav.reader-controls')||[...document.querySelectorAll('.toolbar nav')].at(-1))?.append(exit)}
 const storageStatus=document.createElement('p');storageStatus.className='settings-status';storageStatus.setAttribute('role','status');storageStatus.textContent=storageNote;form.append(storageStatus);
 trigger.addEventListener('click',()=>{if(typeof panel.showModal==='function'){panel.showModal();close.focus()}else{storageStatus.textContent=words('浏览器不支持此设置面板。','Settings dialog unsupported.')}});close.addEventListener('click',()=>panel.close());panel.addEventListener('close',()=>trigger.focus({preventScroll:true}));panel.addEventListener('click',e=>{const r=panel.getBoundingClientRect();if(e.target===panel&&(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom))panel.close()});
 const down=document.getElementById('size-down'),up=document.getElementById('size-up');document.getElementById('size-controls')?.removeAttribute('hidden');down?.addEventListener('click',()=>update({size:Math.max(16,p().size-1)}));up?.addEventListener('click',()=>update({size:Math.min(40,p().size+1)}));document.getElementById('size-reset')?.addEventListener('click',()=>update({size:S.defaults(lang()).size}));

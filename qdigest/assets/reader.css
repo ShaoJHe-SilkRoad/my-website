@@ -65,3 +65,13 @@ main.reading{transition:opacity .2s ease}
 @media(prefers-reduced-motion:reduce){main.reading{transition:none}}
 
 .reading-panel .settings-hint{margin:-.2rem 0 .7rem;font-size:.85rem;line-height:1.45;opacity:.75}
+
+/* Flat settings panel; the page stays visible behind it so changes can be judged live. */
+.reading-panel::backdrop{background:transparent}
+.reading-panel .panel-section{border-top:1px solid var(--line);margin-top:.9rem;padding-top:.7rem}
+.reading-panel .panel-section:first-child{border-top:0;margin-top:0;padding-top:0}
+.reading-panel .panel-section>h3{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.7;margin:0 0 .5rem}
+.reading-panel .panel-section .preference-row{margin:.35rem 0}
+.reading-panel .settings-hint{margin:-.1rem 0 .6rem}
+.toolbar .reader-exit{display:inline-flex;align-items:center;min-height:36px;padding:0 .7rem;border:1px solid var(--line);border-radius:.4rem;text-decoration:none;color:inherit;font-weight:600}
+.toolbar .reader-exit:hover{border-color:currentColor}

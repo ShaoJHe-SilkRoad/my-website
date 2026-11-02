@@ -45,7 +45,9 @@ window.SHAOTING_HOME_CONTENT = {
       "shock": "Shock",
       "desktopOnly": "AUV runs on Mac and Windows computers. Open this page on your computer to download it.",
       "shareLink": "Send the link to my computer",
-      "linkCopied": "Link copied"
+      "linkCopied": "Link copied",
+      "readingLab": "Reading Lab",
+      "readingLabTitle": "Open the QDigest Reading Lab"
     },
     "hero": {
       "eyebrow": "SHAOTING HE / REGISTERED NURSE",
@@ -202,7 +204,7 @@ window.SHAOTING_HOME_CONTENT = {
           "Source-conscious",
           "Mobile-friendly"
         ],
-        "primary": "Read QDigest",
+        "primary": "Open the Reading Lab",
         "url": "/qdigest/",
         "caption": "Latest edition · 16 September 2026",
         "whyTitle": "The question",
@@ -404,7 +406,9 @@ window.SHAOTING_HOME_CONTENT = {
       "shock": "除颤",
       "desktopOnly": "AUV 适用于 Mac 与 Windows 电脑。请在电脑上打开本页下载。",
       "shareLink": "把链接发到我的电脑",
-      "linkCopied": "链接已复制"
+      "linkCopied": "链接已复制",
+      "readingLab": "阅读实验室",
+      "readingLabTitle": "打开 QDigest 阅读实验室"
     },
     "hero": {
       "eyebrow": "何少霆 / 注册护士",
@@ -561,7 +565,7 @@ window.SHAOTING_HOME_CONTENT = {
           "重视来源",
           "移动端阅读"
         ],
-        "primary": "阅读 QDigest",
+        "primary": "进入阅读实验室",
         "url": "/qdigest/",
         "caption": "最新一期 · 2026年9月16日",
         "whyTitle": "我在思考的问题",

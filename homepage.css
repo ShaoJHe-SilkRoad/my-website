@@ -582,3 +582,11 @@ html{scroll-padding-top:100px}
   }
 }
 @media(prefers-reduced-motion:reduce){[data-reveal]{transition:none}[data-reveal].reveal-wait{opacity:1;transform:none}}
+
+/* Reading Lab shortcut in the header: the QDigest reader, where display settings apply live. */
+@media screen{
+  .lab-link{display:inline-flex;align-items:center;min-height:38px;padding:0 14px;border:1px solid var(--line);border-radius:999px;color:var(--ink);font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap}
+  .lab-link:hover{border-color:var(--mint);color:var(--mint)}
+  @media(max-width:759px){.lab-link{min-height:34px;padding:0 10px;font-size:12px}}
+  @media(max-width:420px){:root .code-blue-label{display:none}:root .code-blue{padding-inline:10px}}
+}
