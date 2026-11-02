@@ -1,46 +1,42 @@
-/* Local presentation preferences only; no diagnosis, tracking or provider work. */
+/* Route and semantic position controller. Typography has one owner in reading-preferences.js. */
+(()=>{'use strict';const root=document.documentElement,params=new URLSearchParams(location.search);let revision=0,pendingMark=null;
+const read=k=>{try{return localStorage.getItem(k)}catch{return null}};
+const savedLanguage=read('qd-language');if(root.getAttribute('data-language-root')==='true'&&['en','zh-CN'].includes(savedLanguage)&&savedLanguage!==root.lang){const target=[...document.querySelectorAll('nav a[lang]')].find(a=>a.lang===savedLanguage);if(target){location.replace(target.href);return}}
+root.classList.remove('focus');const focus=document.getElementById('focus');if(focus)focus.hidden=true;
+const blocks=()=>[...document.querySelectorAll('[data-reading-anchor]')].filter(x=>x.getClientRects().length);
+function capture(){if(pendingMark)return pendingMark;if(scrollY<2)return {top:true};const y=innerHeight*.35,el=blocks().find(x=>x.getBoundingClientRect().bottom>y)||blocks().at(-1);if(!el)return null;const r=el.getBoundingClientRect();return {id:el.dataset.readingAnchor,fraction:Math.max(0,Math.min(1,(y-r.top)/Math.max(1,r.height))),owner:el.closest('article[data-reading-anchor]')?.dataset.readingAnchor,focus:document.activeElement?.id||null}}
+function restore(mark,ticket=revision){if(ticket!==revision||!mark)return;if(mark.top){scrollTo({top:0,behavior:'instant'});return}if(mark.scope==='fragment'){document.getElementById(mark.id)?.scrollIntoView({block:'start',behavior:'instant'});return}const all=blocks(),el=mark.scope==='article-body'?document.getElementById('full-reading'):all.find(x=>x.dataset.readingAnchor===mark.id)||all.find(x=>x.dataset.readingAnchor===mark.owner);if(el){const r=el.getBoundingClientRect();scrollBy({top:r.top+r.height*mark.fraction-innerHeight*.35,behavior:'instant'})}if(mark.focus)document.getElementById(mark.focus)?.focus({preventScroll:true})}
+function change(fn){const mark=capture(),ticket=++revision;fn();requestAnimationFrame(()=>restore(mark,ticket))}
+window.QDReadingPosition={capture,restore,change,generation:()=>revision};
+const toolbar=document.querySelector('header.toolbar');if(toolbar){const measureToolbar=()=>root.style.setProperty('--qd-toolbar-height',toolbar.getBoundingClientRect().height+'px');measureToolbar();if(typeof ResizeObserver==='function')new ResizeObserver(measureToolbar).observe(toolbar);else window.addEventListener('resize',measureToolbar);}
+for(const type of ['wheel','touchstart','pointerdown','keydown'])document.addEventListener(type,()=>{revision++;pendingMark=null},{passive:true});window.addEventListener('hashchange',()=>{revision++;pendingMark=null});
+const depth=root.dataset.readerPage||'full',lazy=document.getElementById('depth-quick');if(depth==='full'&&['lazy','quick'].includes(params.get('depth'))&&lazy?.tagName==='A'){location.replace(lazy.href);return}root.dataset.depth=depth;
+// Keep an explicit return/section fragment through initial font layout. Font
+// loading may otherwise capture scrollY=0 before the browser's anchor jump.
+if(location.hash){let id;try{id=decodeURIComponent(location.hash.slice(1))}catch{}if(id&&document.getElementById(id)){const mark={scope:'fragment',id},ticket=++revision;pendingMark=mark;const apply=()=>requestAnimationFrame(()=>{restore(mark,ticket);if(ticket===revision)pendingMark=null});if(document.readyState==='complete')apply();else window.addEventListener('pageshow',apply,{once:true})}}
+// Translated paragraph numbers are not semantic correspondences. Transfer only the
+// actual shared article body, or the shared paper card on the edition overview.
+function languageMark(){const mark=capture();if(!mark||mark.top||depth==='lazy'||mark.id==='lead')return mark;const body=document.getElementById('full-reading');if(!body)return {top:true};const r=body.getBoundingClientRect();return {scope:'article-body',id:'full-reading',fraction:Math.max(0,Math.min(1,(innerHeight*.35-r.top)/Math.max(1,r.height))),focus:null}}
+const page=location.pathname.replace(/\/(en|zh-CN)(?=\/|$)/g,'/_language_');for(const a of document.querySelectorAll('nav a[lang]')){const u=new URL(a.href,location.href);u.searchParams.set('depth',depth);u.searchParams.set('mode','STANDARD');if(depth==='lazy'&&location.hash)u.hash=location.hash;a.href=u.href;a.addEventListener('click',()=>{try{localStorage.setItem('qd-language',a.lang);sessionStorage.setItem('qd-reading-position',JSON.stringify({page,mark:languageMark()}))}catch{}})}
+for(const a of document.querySelectorAll('a.full-detail-link')){const u=new URL(a.href,location.href);u.searchParams.set('depth','full');u.searchParams.set('mode','STANDARD');a.href=u.href}
+try{const saved=JSON.parse(sessionStorage.getItem('qd-reading-position')||'null');if(saved?.page===page){sessionStorage.removeItem('qd-reading-position');if(!location.hash){const ticket=++revision;pendingMark=saved.mark;const applyIncoming=()=>requestAnimationFrame(()=>{restore(saved.mark,ticket);if(ticket===revision)pendingMark=null});if(document.readyState==='complete')applyIncoming();else window.addEventListener('pageshow',applyIncoming,{once:true})}}}catch{}
+})();
+
+/* Native inline anchors remain the complete no-JS/failure fallback. */
 (() => {
-  const root=document.documentElement, focus=document.getElementById('focus');
-  let enabled=false, size=null, revision=0;
-  const read=k=>{try{return localStorage.getItem(k)}catch{return null}};
-  const save=(k,v)=>{try{v===null?localStorage.removeItem(k):localStorage.setItem(k,String(v))}catch{}};
-  const params=new URLSearchParams(location.search), requestedMode=params.get('mode');
-  // Focus is paused for new builds; old URL/storage values remain historical data.
-  enabled=false;
-  const settings=document.getElementById('reading-settings');if(settings)settings.hidden=false;
-  const stored=Number(read('qd-text-size'));if(stored>=16&&stored<=28)size=stored;
-  const blocks=()=>[...document.querySelectorAll('[data-reading-anchor]')].filter(x=>x.getClientRects().length);
-  const capture=()=>{if(typeof scrollY==='number'&&scrollY<2)return {top:true};const all=blocks(),y=innerHeight*.35,el=all.find(b=>b.getBoundingClientRect().bottom>y)||all.at(-1),r=el?.getBoundingClientRect();return el?{id:el.dataset.readingAnchor,index:all.indexOf(el),fraction:Math.max(0,Math.min(1,(y-r.top)/r.height)),owner:el.closest?.('article[data-reading-anchor]')?.dataset.readingAnchor}:null};
-  const restore=mark=>{if(!mark)return;if(mark.top){scrollTo({top:0,behavior:'instant'});return}const all=blocks(),el=all.find(b=>b.dataset.readingAnchor===mark.id)||all.find(b=>b.dataset.readingAnchor===mark.owner)||all[mark.index];if(el){const r=el.getBoundingClientRect();scrollBy({top:r.top+r.height*mark.fraction-innerHeight*.35,behavior:'instant'})}};
-  const paint=()=>{root.classList.toggle('focus',enabled);focus?.setAttribute('aria-pressed',String(enabled));root.style.setProperty('--reader-size',(size??(enabled?20.5:18))/16+'rem');const down=document.getElementById('size-down'),up=document.getElementById('size-up');if(down)down.disabled=(size??(enabled?20.5:18))<=16;if(up)up.disabled=(size??(enabled?20.5:18))>=28};
-  const change=fn=>{const mark=capture(),ticket=++revision;fn();paint();requestAnimationFrame(()=>{if(ticket!==revision)return;restore(mark);if(document.fonts?.status==='loading')document.fonts.ready.then(()=>{if(ticket===revision)restore(mark)})})};
-  // A later reader gesture must win over deferred font reflow restoration.
-  document.addEventListener('wheel',()=>revision++,{passive:true});
-  document.addEventListener('touchstart',()=>revision++,{passive:true});
-  if(focus)focus.hidden=true;
-  const controls=document.getElementById('size-controls');
-  if(controls){controls.hidden=false;for(const [id,delta] of [['size-down',-1],['size-up',1]])document.getElementById(id).addEventListener('click',()=>change(()=>{size=Math.max(16,Math.min(28,(size??(enabled?20.5:18))+delta));save('qd-text-size',size)}));document.getElementById('size-reset').addEventListener('click',()=>change(()=>{size=null;save('qd-text-size',null)}))}
-  // Cross-language return to the same semantic block, scoped to this article/edition.
-  const page=location.pathname.replace(/\/(en|zh-CN)(?=\/|$)/g,'/_language_');
-  for(const link of document.querySelectorAll('nav a[lang]'))link.addEventListener('click',()=>{try{sessionStorage.setItem('qd-reading-position',JSON.stringify({page,mark:capture()}))}catch{}});
-  // Depth is a route: one Lazy edition overview, one Full page per article.
-  // Old article Lazy/Quick links return to that article's overview card.
-  // A saved depth preference never hides Full or expands the whole edition.
-  const depth=root.getAttribute('data-reader-page')||'full';
-  const lazyLink=document.getElementById('depth-quick');
-  if(depth==='full' && ['lazy','quick'].includes(params.get('depth')) && lazyLink?.tagName==='A'){
-    location.replace(lazyLink.href);
-    return;
+  if(typeof HTMLDialogElement==='undefined')return;
+  let trigger=null;
+  const dialog=document.createElement('dialog');dialog.className='term-dialog';
+  const title=document.createElement('h2');title.id='term-dialog-title';dialog.setAttribute('aria-labelledby',title.id);
+  const content=document.createElement('div'),close=document.createElement('button');close.type='button';close.textContent=document.documentElement.lang==='zh-CN'?'关闭术语说明':'Close explanation';
+  dialog.append(title,content,close);document.body.append(dialog);
+  const finish=()=>dialog.close();close.addEventListener('click',finish);
+  dialog.addEventListener('close',()=>trigger?.focus({preventScroll:true}));
+  dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)finish()}});
+  for(const link of document.querySelectorAll('a.term-link')){
+    const id=link.hash.slice(1),term=document.getElementById(id),definition=term?.nextElementSibling;
+    if(!term||!definition||definition.tagName!=='DD')continue;
+    link.setAttribute('aria-haspopup','dialog');
+    link.addEventListener('click',event=>{if(event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;event.preventDefault();trigger=link;title.textContent=term.textContent;content.replaceChildren();for(const p of definition.querySelectorAll('p'))content.append(p.cloneNode(true));dialog.showModal();close.focus()});
   }
-  root.setAttribute('data-depth',depth);
-  for(const a of document.querySelectorAll('nav a[lang]')){
-    const u=new URL(a.href,location.href);u.searchParams.set('depth',depth);
-    if(depth==='lazy' && location.hash)u.hash=location.hash;
-    a.href=u.href;
-  }
-  const syncLanguage=()=>{for(const a of document.querySelectorAll('nav a[lang]')){const u=new URL(a.href,location.href);u.searchParams.set('mode',enabled?'ADHD_FOCUS':'STANDARD');a.href=u.href}};
-  const syncLinks=()=>{syncLanguage();for(const a of document.querySelectorAll('a.full-detail-link')){const u=new URL(a.href,location.href);u.searchParams.set('depth','full');u.searchParams.set('mode',enabled?'ADHD_FOCUS':'STANDARD');a.href=u.href}};
-  syncLinks();
-  paint();
-  try{const saved=JSON.parse(sessionStorage.getItem('qd-reading-position')||'null');if(saved?.page===page){sessionStorage.removeItem('qd-reading-position');if(location.hash)return;requestAnimationFrame(()=>{restore(saved.mark);if(document.fonts?.status==='loading')document.fonts.ready.then(()=>restore(saved.mark))})}}catch{}
 })();
