@@ -321,8 +321,8 @@
         }
         // The lower edge fades out inside the canvas; a CSS mask would be re-applied to the live layer every frame.
         fade = context.createLinearGradient(0, height * 0.78, 0, height);
-        fade.addColorStop(0, '#000');
-        fade.addColorStop(1, 'rgba(0,0,0,0)');
+        fade.addColorStop(0, 'rgba(0,0,0,0)');
+        fade.addColorStop(1, '#000');
         paintStaticLayer();
     }
 
@@ -548,7 +548,7 @@
             context.stroke();
         }
         context.globalAlpha = 1;
-        context.globalCompositeOperation = 'destination-in';
+        context.globalCompositeOperation = 'destination-out'; // destination-in would erase everything outside this rectangle
         context.fillStyle = fade;
         context.fillRect(0, height * 0.78, width, height * 0.22);
         context.globalCompositeOperation = 'source-over';

@@ -564,8 +564,9 @@ html{scroll-padding-top:100px}
 /* V8.3 content first: blocks reveal once and always end fully visible; the hero ends where its
    content and the waveform end instead of at a fixed height; sections sit closer together. */
 @media screen{
-  [data-reveal]{transition:opacity .6s ease,transform .6s cubic-bezier(.16,.84,.24,1)}
-  [data-reveal].reveal-wait{opacity:0;transform:translateY(28px)}
+  /* Not quite 0: fully transparent blocks can be skipped when painting ahead, then stall on arrival. */
+  [data-reveal].reveal-wait{opacity:.01;transform:translateY(14px)}
+  [data-reveal].reveal-in{transition:opacity .35s ease-out,transform .35s cubic-bezier(.16,.84,.24,1)}
   :root .hero,:root[lang=zh-Hans] .hero{min-height:calc(min(53svh,470px) + 190px)}
   :root .hero-foot{margin-top:auto;padding-top:16px}
   :root .hero-actions{margin-bottom:28px}
@@ -581,7 +582,7 @@ html{scroll-padding-top:100px}
     :root .section{padding-block:44px}
   }
 }
-@media(prefers-reduced-motion:reduce){[data-reveal]{transition:none}[data-reveal].reveal-wait{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){[data-reveal].reveal-in{transition:none}[data-reveal].reveal-wait{opacity:1;transform:none}}
 
 /* Reading Lab shortcut in the header: the QDigest reader, where display settings apply live. */
 @media screen{
@@ -605,3 +606,6 @@ html{scroll-padding-top:100px}
   .ambient-backdrop::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 76% 42%,color-mix(in srgb,var(--violet) 16%,transparent),transparent 62%);mask-image:linear-gradient(#000 0%,#000 78%,transparent 100%);-webkit-mask-image:linear-gradient(#000 0%,#000 78%,transparent 100%)}
   #ambient-field{display:block}
 }
+
+/* During a fast scroll nothing under the cursor reacts, so cards do not repaint their hover shadows. */
+@media screen{#app.is-fast-scrolling main{pointer-events:none}}

@@ -47,7 +47,8 @@ window.SHAOTING_HOME_CONTENT = {
       "shareLink": "Send the link to my computer",
       "linkCopied": "Link copied",
       "readingLab": "Reading Lab",
-      "readingLabTitle": "Open the QDigest Reading Lab"
+      "readingLabTitle": "Open the QDigest Reading Lab",
+      "readingLabUrl": "/qdigest/"
     },
     "hero": {
       "eyebrow": "SHAOTING HE / REGISTERED NURSE",
@@ -408,7 +409,8 @@ window.SHAOTING_HOME_CONTENT = {
       "shareLink": "把链接发到我的电脑",
       "linkCopied": "链接已复制",
       "readingLab": "阅读实验室",
-      "readingLabTitle": "打开 QDigest 阅读实验室"
+      "readingLabTitle": "打开 QDigest 阅读实验室",
+      "readingLabUrl": "/qdigest/2026-09-16/zh-CN/"
     },
     "hero": {
       "eyebrow": "何少霆 / 注册护士",
@@ -566,7 +568,7 @@ window.SHAOTING_HOME_CONTENT = {
           "移动端阅读"
         ],
         "primary": "进入阅读实验室",
-        "url": "/qdigest/",
+        "url": "/qdigest/2026-09-16/zh-CN/",
         "caption": "最新一期 · 2026年9月16日",
         "whyTitle": "我在思考的问题",
         "why": "怎样让健康研究更容易理解，同时保留证据与不确定性？",
