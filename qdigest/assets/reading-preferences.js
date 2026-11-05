@@ -7,7 +7,7 @@ let storageNote='',fontEpoch=0,fontEvidence={state:'requested'},manifestPromise,
 const read=(where,k)=>{try{return window[where].getItem(k)}catch{return null}};
 const write=(where,k,v)=>{try{if(v===null)window[where].removeItem(k);else window[where].setItem(k,v);return true}catch{return false}};
 const zh=()=>lang()!=='en',words=(a,b)=>zh()?a:b;
-const scriptURL=new URL(document.currentScript.src),base=new URL('.',scriptURL),manifestURL=new URL('fonts/reader-font-manifest.json',base);manifestURL.searchParams.set('v','reader-fonts-2.1.1-s5');
+const scriptURL=new URL(document.currentScript.src),base=new URL('.',scriptURL),manifestURL=new URL('fonts/reader-font-manifest.json',base);manifestURL.searchParams.set('v','reader-fonts-2.1.1-s6');
 const storage=where=>{try{return window[where]}catch{return undefined}};
 const memory=isLab?null:window.QDSettingsStore.create({local:storage('localStorage'),session:storage('sessionStorage'),theme:window.QDTheme?.get()||'system'});
 if(memory){state.profiles=memory.get().current.profiles;window.QDTheme?.set(memory.get().current.theme,false)}
@@ -141,11 +141,20 @@ const labLink=document.createElement('a');labLink.textContent=words('进入阅�
  const contents=d=>[...d.childNodes].filter(n=>n.nodeName!=='SUMMARY');
  const section=(title,...nodes)=>{const box=document.createElement('section');box.className='panel-section';const h=document.createElement('h3');h.textContent=title;box.append(h,...nodes.filter(Boolean));return box};
  memoryTitle.hidden=true;
+ // Settings travel as a validated file: current display settings only, no article text and no saved presets.
+ const transfer=document.createElement('div');transfer.className='settings-transfer';
+ const exportButton=button(words('导出设置','Export settings')),importButton=button(words('导入设置','Import settings')),importFile=document.createElement('input'),transferStatus=document.createElement('p');
+ importFile.type='file';importFile.accept='application/json,.json';importFile.hidden=true;importFile.setAttribute('aria-label',words('选择设置文件','Choose a settings file'));
+ transferStatus.className='settings-status';transferStatus.setAttribute('role','status');
+ exportButton.addEventListener('click',()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(window.QDReaderPreferences.get(),null,2)],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download='QDigest-reading-settings.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);transferStatus.textContent=words('已导出当前显示设置（不含 3 个存档）。','Current display settings exported (saved presets are not included).')});
+ importButton.addEventListener('click',()=>importFile.click());
+ importFile.addEventListener('change',async()=>{const file=importFile.files[0];if(!file)return;try{if(file.size>1500000)throw Error('size');window.QDReaderPreferences.import(await file.text());transferStatus.textContent=words('已导入，设置已生效。','Imported; the settings are now in use.')}catch{transferStatus.textContent=words('这个文件不是有效的设置文件，当前设置没有改变。','That is not a valid settings file; your settings are unchanged.')}importFile.value=''});
+ transfer.append(exportButton,importButton,importFile,transferStatus);
  form.replaceChildren(
   section(words('文字','Text'),rowOf('font'),fontStatus,rowOf('size'),rowOf('line'),rowOf('letter'),rowOf('word'),rowOf('paragraph'),rowOf('measure'),resetButton),
   section(words('朗读','Read aloud'),...contents(voiceGroup)),
   section(words('阅读辅助','Reading aids'),rowOf('emphasis'),hint(words('加粗哪些字：原文重点句、不加粗、只加粗术语，或每个词的开头（引导视线）。','What is bold: key sentences, nothing, glossary terms, or the start of every word to guide your eyes.')),emphasisNote,rowOf('guide'),hint(words('标出正在读的段落或行，读长段不易跳行。','Marks the paragraph or lines you are reading.')),rowOf('progress'),rowOf('italic')),
-  isLab?null:section(words('我的设置','My settings'),memoryBox));
+  isLab?null:section(words('我的设置','My settings'),memoryBox,transfer));
 }
 // Fade the text while a newly chosen font loads, so the swap does not flash or jump.
 {const load=fonts;let runs=0;fonts=async function(){const fade=runs++>0;if(fade)root.classList.add('qd-font-switching');try{return await load()}finally{if(fade)root.classList.remove('qd-font-switching')}}}
