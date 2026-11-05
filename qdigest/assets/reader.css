@@ -75,7 +75,3 @@ main.reading{transition:opacity .2s ease}
 .reading-panel .settings-hint{margin:-.1rem 0 .6rem}
 .toolbar .reader-exit{display:inline-flex;align-items:center;min-height:36px;padding:0 .7rem;border:1px solid var(--line);border-radius:.4rem;text-decoration:none;color:inherit;font-weight:600}
 .toolbar .reader-exit:hover{border-color:currentColor}
-
-.reading-panel .settings-transfer{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:.7rem}
-.reading-panel .settings-transfer .settings-status{grid-column:1/-1;margin:0}
-.reading-panel .settings-transfer .settings-status:empty{display:none}
