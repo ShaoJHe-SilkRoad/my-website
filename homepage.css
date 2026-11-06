@@ -258,7 +258,7 @@ html{scroll-padding-top:100px}
   .now-link{font-family:var(--display)}
 
   /* Load choreography: lines rise in once, then the page stays still. */
-  .js-ready .hero h1>span,.js-ready .hero-intro,.js-ready .hero-actions{animation:v7-rise 1s cubic-bezier(.16,.84,.24,1) both}
+  .js-ready .hero h1>span,.js-ready .hero-intro,.js-ready .hero-actions{animation:v7-rise 1s cubic-bezier(.16,.84,.24,1) backwards}
 
   .js-ready .hero-intro{animation-delay:.3s}.js-ready .hero-actions{animation-delay:.38s}
 
@@ -377,7 +377,7 @@ html{scroll-padding-top:100px}
 @media screen{
   /* Static headline: no sheen, no glow. */
   :root .hero h1 .gradient-text{background-size:100% 100%}
-  .js-ready .hero h1 .gradient-text{animation:v7-rise 1s .1s cubic-bezier(.16,.84,.24,1) both}
+  .js-ready .hero h1 .gradient-text{animation:v7-rise 1s .1s cubic-bezier(.16,.84,.24,1) backwards}
   .hero h1>span:first-child{text-shadow:none}
 
   /* Buttons: solid ivory (graphite in light), no glow. */
@@ -565,8 +565,9 @@ html{scroll-padding-top:100px}
    content and the waveform end instead of at a fixed height; sections sit closer together. */
 @media screen{
   /* Not quite 0: fully transparent blocks can be skipped when painting ahead, then stall on arrival. */
-  [data-reveal].reveal-wait{opacity:.01;transform:translateY(14px)}
-  [data-reveal].reveal-in{transition:opacity .35s ease-out,transform .35s cubic-bezier(.16,.84,.24,1)}
+  [data-reveal].reveal-wait{opacity:.01;transform:translateY(30px);will-change:opacity,transform}
+  [data-reveal].reveal-in{will-change:opacity,transform;transition:opacity .7s ease-out,transform .7s cubic-bezier(.16,.84,.24,1)}
+  [data-reveal].reveal-hold{will-change:opacity,transform}
   :root .hero,:root[lang=zh-Hans] .hero{min-height:calc(min(53svh,470px) + 190px)}
   :root .hero-foot{margin-top:auto;padding-top:16px}
   :root .hero-actions{margin-bottom:28px}
@@ -619,4 +620,11 @@ html{scroll-padding-top:100px}
   :root[lang=zh-Hans] .hero h1 .gradient-text{font-weight:400;margin-top:0;padding:0}
   @media(max-width:1100px){:root[lang=zh-Hans] .hero h1{font-size:clamp(72px,10.6vw,128px)}}
   @media(max-width:759px){:root[lang=zh-Hans] .hero h1{font-size:clamp(44px,16vw,104px)}}
+}
+
+/* V8.5 scrolling. The aurora is a soft gradient, so its layer is held at a third of the size and scaled up:
+   the same picture and motion for a ninth of the pixels where the browser keeps the layout-size bitmap. */
+@media screen{
+  body::before{width:calc(var(--aurora-box) / 3);height:calc(var(--aurora-box) / 3);margin:calc(var(--aurora-box) / -6) 0 0 calc(var(--aurora-box) / -6);background-size:calc((100vw + 70vmax) / 3) calc((100vh + 70vmax) / 3);transform:scale(3);animation-name:v85-aurora}
+  @keyframes v85-aurora{0%{transform:rotate(0) scale(3)}50%{transform:rotate(180deg) scale(3.42)}100%{transform:rotate(360deg) scale(3)}}
 }

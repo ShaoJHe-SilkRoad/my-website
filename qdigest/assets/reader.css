@@ -1,8 +1,8 @@
 /* Q3D text-led reader. Scientific content and accepted font files are unchanged. */
-:root{color-scheme:light dark;--bg:#f3f2ec;--fg:#0f171c;--muted:#4d5a5d;--line:#0f171c1c;--link:#1d7f56;--panel:#fbfaf6;--wash:#e6ebe6;--header:#f3f2ece6;--control:#0f171c3d;--btn:#0f171c;--btn-ink:#f3f2ec;--reader-size:1.125rem}
-html[data-theme=dark]{color-scheme:dark;--bg:#070c12;--fg:#eef2ec;--muted:#a3b1b0;--line:#d6ece41c;--link:#5fd6a0;--panel:#0d151d;--wash:#122029;--header:#070c12d9;--control:#eef2ec3d;--btn:#eef2ec;--btn-ink:#070c12}
+:root{color-scheme:light dark;--bg:#f3ead2;--fg:#0f171c;--muted:#4d5a5d;--line:#0f171c1c;--link:#196b49;--panel:#fbf3df;--control:#0f171c3d;--btn:#0f171c;--btn-ink:#f3f2ec;--reader-size:1.125rem}
+html[data-theme=dark]{color-scheme:dark;--bg:#211710;--fg:#eef2ec;--muted:#a3b1b0;--line:#d6ece41c;--link:#5fd6a0;--panel:#33241a;--control:#eef2ec3d;--btn:#eef2ec;--btn-ink:#070c12}
 html[data-theme=light]{color-scheme:light}
-@media(prefers-color-scheme:dark){html:not([data-theme=light]){--bg:#070c12;--fg:#eef2ec;--muted:#a3b1b0;--line:#d6ece41c;--link:#5fd6a0;--panel:#0d151d;--wash:#122029;--header:#070c12d9;--control:#eef2ec3d;--btn:#eef2ec;--btn-ink:#070c12}}
+@media(prefers-color-scheme:dark){html:not([data-theme=light]){--bg:#211710;--fg:#eef2ec;--muted:#a3b1b0;--line:#d6ece41c;--link:#5fd6a0;--panel:#33241a;--control:#eef2ec3d;--btn:#eef2ec;--btn-ink:#070c12}}
 *{box-sizing:border-box}html{scroll-padding-top:calc(var(--qd-toolbar-height,0px) + 1rem)}body{margin:0;background:var(--bg);color:var(--fg);font:400 var(--reader-size)/1.8 QDSerif,Georgia,serif;font-synthesis:none;overflow-wrap:break-word}
 html[lang=zh-CN] body{font-family:QDHan,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.9;letter-spacing:.02em}
 a{color:var(--link);text-underline-offset:.2em;text-decoration-thickness:1px}a:hover{text-decoration-thickness:2px}button,select{font:inherit;color:var(--fg);background:var(--panel);border:1px solid var(--line);border-radius:.3rem;padding:.4rem .55rem}button{cursor:pointer}button:disabled{opacity:.55;cursor:default}
@@ -82,7 +82,7 @@ main.reading{transition:opacity .2s ease}
 :root{--ui:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;--ui-mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
 :focus-visible{outline:2px solid var(--link);outline-offset:4px}
 ::highlight(qd-speaking){background:color-mix(in srgb,var(--link) 30%,transparent);color:inherit}
-.toolbar{background:var(--header);font:500 13px/1.5 var(--ui);padding-block:.75rem;-webkit-font-smoothing:antialiased}
+.toolbar{background:var(--bg);font:500 13px/1.5 var(--ui);padding-block:.75rem;-webkit-font-smoothing:antialiased}
 .toolbar .brand{gap:.7rem;font:600 1.25rem/1 var(--ui);letter-spacing:-.03em;color:var(--fg)}
 .toolbar .brand::before{content:"";width:28px;height:36px;flex-shrink:0;background:var(--link);-webkit-mask:url("/logo-web.png") center -18px/128px 85px no-repeat;mask:url("/logo-web.png") center -18px/128px 85px no-repeat}
 .toolbar nav{gap:.25rem .4rem}

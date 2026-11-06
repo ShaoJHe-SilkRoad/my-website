@@ -141,10 +141,13 @@
     observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){
       if(!entry.isIntersecting) return;
       var el=entry.target;
-      if(scrollSpeed<900){el.classList.add('reveal-in');setTimeout(function(){el.classList.remove('reveal-in');},450);}
+      // A fast scroll skips the animation; either way the layer stays until the block has settled, then it is released.
+      var settle=scrollSpeed<900?'reveal-in':'reveal-hold';
+      el.classList.add(settle);setTimeout(function(){el.classList.remove(settle);},900);
       el.classList.remove('reveal-wait');
       observer.unobserve(el);
     });},{rootMargin:'0px 0px 8% 0px'});
+    // Waiting blocks hold their layers from the start, so a large one never needs a new layer mid-scroll.
     blocks.forEach(function(el){if(el.getBoundingClientRect().top>window.innerHeight){el.classList.add('reveal-wait');observer.observe(el);}});
   }
   // Section positions are measured on layout changes, so scrolling only compares numbers.

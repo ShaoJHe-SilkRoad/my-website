@@ -554,13 +554,16 @@
         context.globalCompositeOperation = 'source-over';
     }
 
+    let scrollMovedAt = null;
+
     function tick(timestamp) {
         frame = 0;
         if (!canAnimate()) return;
         const delta = lastFrame === null ? 0 : Math.max(0, timestamp - lastFrame);
         lastFrame = timestamp;
         elapsed += delta;
-        const interval = 1000 / 60;
+        // While the page is moving the waveform paints every other frame, leaving the main thread to the scroll.
+        const interval = scrollMovedAt !== null && timestamp - scrollMovedAt < 140 ? 1000 / 30 : 1000 / 60;
         if (lastPaint === null || timestamp - lastPaint >= interval - 0.1) {
             const paintDelta = lastMotionPaint === null ? interval : timestamp - lastMotionPaint;
             lastMotionPaint = timestamp;
@@ -728,6 +731,7 @@
     window.addEventListener('blur', () => { pointer.target = 0; clientPointer.known = false; });
     window.addEventListener('resize', resize, { passive: true });
     window.addEventListener('scroll', () => {
+        scrollMovedAt = lastFrame;
         const wasVisible = visible;
         updateVisibility();
         updatePointerTarget();
