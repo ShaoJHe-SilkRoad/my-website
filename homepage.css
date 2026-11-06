@@ -609,3 +609,12 @@ html{scroll-padding-top:100px}
 
 /* During a fast scroll nothing under the cursor reacts, so cards do not repaint their hover shadows. */
 @media screen{#app.is-fast-scrolling main{pointer-events:none}}
+
+/* Chinese headline follows the English one: same scale and weight contrast, set as one line. */
+@media screen{
+  :root[lang=zh-Hans] .hero h1{font-size:clamp(76px,10.4vw,160px);line-height:1.04;font-weight:760;letter-spacing:-.03em;white-space:nowrap}
+  :root[lang=zh-Hans] .hero h1>span{display:inline-block;white-space:pre}
+  :root[lang=zh-Hans] .hero h1 .gradient-text{font-weight:400;margin-top:0;padding:0}
+  @media(max-width:1100px){:root[lang=zh-Hans] .hero h1{font-size:clamp(72px,10.6vw,128px)}}
+  @media(max-width:759px){:root[lang=zh-Hans] .hero h1{font-size:clamp(44px,16vw,104px)}}
+}

@@ -364,7 +364,7 @@ window.SHAOTING_HOME_CONTENT = {
   },
   "zh-Hans": {
     "meta": {
-      "title": "何少霆 — ICU 护士，也在创造。",
+      "title": "何少霆 | 护理 - 创造",
       "description": "我是何少霆，一名在 ICU 工作的注册护士，也是一名独立开发者。了解 AUV、QDigest，以及合作与支持创作的方式。"
     },
     "nav": [
@@ -414,8 +414,8 @@ window.SHAOTING_HOME_CONTENT = {
     },
     "hero": {
       "eyebrow": "何少霆 / 注册护士",
-      "line1": "我是护士。",
-      "line2": "也在创造。",
+      "line1": "护理 - ",
+      "line2": "创造",
       "intro": "我在 ICU 照护生命，也在工作之外创造软件。接下来想做：护理工具，以及人人读得懂的健康研究。我在寻找一起把它们做出来的人。",
       "primary": "一起合作",
       "secondary": "看看作品",
