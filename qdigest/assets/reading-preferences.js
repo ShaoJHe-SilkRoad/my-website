@@ -7,7 +7,7 @@ let storageNote='',fontEpoch=0,fontEvidence={state:'requested'},manifestPromise,
 const read=(where,k)=>{try{return window[where].getItem(k)}catch{return null}};
 const write=(where,k,v)=>{try{if(v===null)window[where].removeItem(k);else window[where].setItem(k,v);return true}catch{return false}};
 const zh=()=>lang()!=='en',words=(a,b)=>zh()?a:b;
-const scriptURL=new URL(document.currentScript.src),base=new URL('.',scriptURL),manifestURL=new URL('fonts/reader-font-manifest.json',base);manifestURL.searchParams.set('v','reader-fonts-2.1.1-s7');
+const scriptURL=new URL(document.currentScript.src),base=new URL('.',scriptURL),manifestURL=new URL('fonts/reader-font-manifest.json',base);manifestURL.searchParams.set('v','reader-fonts-2.1.1-s9');
 const storage=where=>{try{return window[where]}catch{return undefined}};
 const memory=isLab?null:window.QDSettingsStore.create({local:storage('localStorage'),session:storage('sessionStorage'),theme:window.QDTheme?.get()||'system'});
 if(memory){state.profiles=memory.get().current.profiles;window.QDTheme?.set(memory.get().current.theme,false)}

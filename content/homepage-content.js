@@ -217,9 +217,16 @@ window.SHAOTING_HOME_CONTENT = {
         "evolution": {
           "label": "QDigest · How it has changed",
           "title": "What changed, and what each change cost.",
-          "note": "Decisions from September to October 2026",
+          "note": "Two changes of direction, and the decisions from September to October 2026",
           "steps": [
             [
+            "Direction change 1",
+            "From a daily news roundup to reading papers closely",
+            "QDigest began as a daily health news roundup, then turned to reading the papers themselves.",
+            "Gave up daily breadth for depth on each study.",
+            "turn"
+          ],
+          [
               "Early Sep",
               "From summaries to a bilingual reader",
               "Research summaries became web pages in English and Simplified Chinese, with an email brief for each edition.",
@@ -254,7 +261,14 @@ window.SHAOTING_HOME_CONTENT = {
               "Reading settings and Reading Lab",
               "Saved reading preferences, more English and Chinese fonts (including OpenDyslexic and Traditional Chinese), and a Reading Lab for comparing settings on fictional samples. Focus mode is hidden for now.",
               "Built, but it ships with the next edition rather than being bolted onto the old one."
-            ]
+            ],
+          [
+            "Direction change 2 · Now",
+            "From reading papers to teaching health knowledge",
+            "The focus now is making health knowledge easy to understand. Papers move to a supporting role: they back the explanation instead of being the subject.",
+            "Papers are no longer the main character of each piece, but they remain the evidence.",
+            "turn"
+          ]
           ]
         }
       },
@@ -579,9 +593,16 @@ window.SHAOTING_HOME_CONTENT = {
         "evolution": {
           "label": "QDigest · 演变",
           "title": "每一次改动，以及它的代价。",
-          "note": "2026 年 9 月至 10 月的决定",
+          "note": "两次方向改变，以及 2026 年 9 月至 10 月的决定",
           "steps": [
             [
+            "方向改变 1",
+            "从每日新闻汇总到论文细读",
+            "QDigest 最初汇总每日健康新闻，后来转向细读论文本身。",
+            "放弃每日更新的广度，换来对单篇研究的深度。",
+            "turn"
+          ],
+          [
               "9 月初",
               "从研究摘要到双语阅读器",
               "研究摘要变成英文与简体中文网页，每期另有一封邮件简报。",
@@ -616,7 +637,14 @@ window.SHAOTING_HOME_CONTENT = {
               "阅读设置与阅读实验室",
               "可保存的阅读偏好，更多中英文字体（包括 OpenDyslexic 和繁体中文），以及一个用虚构材料比较不同设置的阅读实验室。专注模式暂时隐藏。",
               "功能已经做好，但会随下一期一起上线，而不是硬接到旧的一期上。"
-            ]
+            ],
+          [
+            "方向改变 2 · 现在",
+            "从论文细读到知识普及",
+            "现在的重心是普及健康知识，论文退到辅助位置：用来支撑解释，不再是内容本身。",
+            "论文不再是每篇内容的主角，但仍然是依据。",
+            "turn"
+          ]
           ]
         }
       },

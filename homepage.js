@@ -39,7 +39,7 @@
   // How a project changed, with what each change gave up.
   function evolution(v,zh) {
     return '<aside class="build-log evolution-log" aria-label="'+e(v.label)+'" data-reveal><div class="build-log-head"><span class="eyebrow">'+e(v.label)+'</span><h3>'+e(v.title)+'</h3><p>'+e(v.note)+'</p></div>'+
-      '<ol class="evolution-steps">'+v.steps.map(function(s){return '<li><time>'+e(s[0])+'</time><h4>'+e(s[1])+'</h4><p>'+e(s[2])+'</p><p class="evolution-cost"><span>'+(zh?'取舍':'Trade-off')+'</span>'+e(s[3])+'</p></li>';}).join('')+'</ol></aside>';
+      '<ol class="evolution-steps">'+v.steps.map(function(s){return '<li'+(s[4]?' class="evolution-turn"':'')+'><time>'+e(s[0])+'</time><h4>'+e(s[1])+'</h4><p>'+e(s[2])+'</p><p class="evolution-cost"><span>'+(zh?'取舍':'Trade-off')+'</span>'+e(s[3])+'</p></li>';}).join('')+'</ol></aside>';
   }
   // What a collaborator gets, and who the work is for.
   function offer(o) {
