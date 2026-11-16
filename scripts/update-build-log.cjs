@@ -70,9 +70,6 @@ function apply(content, data) {
     const target = content[lang].projects.find(p => p.id === 'uma').log;
     Object.assign(target, log[lang], { weeks: data.weeks.map(w => w.total), languages: data.languages });
   }
-  // The contact section quotes the release count too.
-  content.en.contact.offer.bring = content.en.contact.offer.bring.map(s => s.replace(/\d+ public releases/, data.releases + ' public releases'));
-  content['zh-Hans'].contact.offer.bring = content['zh-Hans'].contact.offer.bring.map(s => s.replace(/发布 \d+ 个公开版本/, '发布 ' + data.releases + ' 个公开版本'));
 }
 
 (async () => {

@@ -3,7 +3,7 @@ window.SHAOTING_HOME_CONTENT = {
   "en": {
     "meta": {
       "title": "Shaoting He — ICU Nurse. Independent Builder.",
-      "description": "ICU nurse. Independent builder. Shaoting He brings a nurse’s attention to the software he creates. Explore AUV, QDigest, and ways to collaborate."
+      "description": "ICU nurse. Independent builder. The work of Shaoting He: AUV, QDigest and ScreenSnap."
     },
     "nav": [
       [
@@ -16,7 +16,7 @@ window.SHAOTING_HOME_CONTENT = {
       ],
       [
         "contact",
-        "Collaborate"
+        "Contact"
       ]
     ],
     "ui": {
@@ -54,12 +54,12 @@ window.SHAOTING_HOME_CONTENT = {
       "eyebrow": "SHAOTING HE / REGISTERED NURSE",
       "line1": "Nurse.",
       "line2": "Builder.",
-      "intro": "I work in intensive care and build software beyond it. Next: tools for nursing, and health research anyone can read. I’m looking for people to build them with.",
-      "primary": "Work with me",
-      "secondary": "See the work",
+      "intro": "I work in intensive care and build software beyond it. Here is what I’ve made so far.",
+      "primary": "See the work",
+      "secondary": "Get in touch",
       "note": "ICU practice · Nova Scotia, Canada",
-      "current": "OPEN TO",
-      "currentProjects": "New collaborations"
+      "current": "CONTACT",
+      "currentProjects": "Email"
     },
     "work": {
       "eyebrow": "01 / FROM OBSERVATION TO SOFTWARE",
@@ -89,8 +89,8 @@ window.SHAOTING_HOME_CONTENT = {
         "why": "Seeing how much Codex and Claude time is left before starting a long piece of work, without opening each account.",
         "focusTitle": "The hardest parts",
         "focus": "Exact Claude usage comes from a signed-in Safari session, so AUV has to keep reading it when Safari is hidden, minimized or on another desktop. The other half of the work is shipping a signed, notarized Universal Mac app alongside a separate Windows version.",
-        "inviteTitle": "Where help is needed",
-        "invite": "Windows is the gap: since 0.18.6 it reads Claude through a Chrome or Edge companion, but it still ships unsigned and the companion loads in Developer mode. A developer who knows Windows packaging and code signing would make the biggest difference. Testing and design feedback from people who use Codex or Claude every day is just as welcome.",
+        "inviteTitle": "Where it stands",
+        "invite": "The Mac version is signed and notarized. Windows is the gap: it reads Claude through a Chrome or Edge companion, but it still ships unsigned and the companion loads in Developer mode. Feedback from people who use Codex or Claude every day is welcome.",
         "log": {
           "label": "AUV · Build log",
           "title": "My first public app, built in the open.",
@@ -195,11 +195,11 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "02",
         "name": "QDigest",
         "subtitle": "Research, explained",
-        "status": "Published · 2 editions",
+        "status": "Reading Lab live · new version in progress",
         "trust": "Every explanation cites its original paper (journal, DOI, PubMed ID) and says when it relies on the abstract alone. Educational reading, not medical advice.",
         "kind": "Information tools · Bilingual reading",
         "headline": "Make room for understanding.",
-        "description": "Source-grounded health research, explained in English and Simplified Chinese: concise email briefs with fuller explanations on the web.",
+        "description": "Source-grounded health research, explained in English and Simplified Chinese.",
         "tags": [
           "English + 中文",
           "Source-conscious",
@@ -210,10 +210,10 @@ window.SHAOTING_HOME_CONTENT = {
         "caption": "Latest edition · 16 September 2026",
         "whyTitle": "The question",
         "why": "How can health research become easier to understand while keeping its evidence and uncertainty visible?",
-        "focusTitle": "What I’m working toward",
-        "focus": "Getting new papers from an automated draft to an explanation I can trust, without rescuing each one by hand, so editions can come out on a regular schedule.",
-        "inviteTitle": "Where you can help",
-        "invite": "I’d like to hear from curious readers, editorial thinkers, and people who care about how information is presented.",
+        "focusTitle": "What I’m working on",
+        "focus": "Polishing the articles. It is stuck for now: both the finished articles and the drafts sound too much like AI, and I’m not satisfied with them.",
+        "inviteTitle": "Feedback",
+        "invite": "If something is hard to read or looks wrong, please tell me.",
         "evolution": {
           "label": "QDigest · How it has changed",
           "title": "What changed, and what each change cost.",
@@ -259,7 +259,7 @@ window.SHAOTING_HOME_CONTENT = {
             [
               "Oct",
               "Reading settings and Reading Lab",
-              "Saved reading preferences, more English and Chinese fonts (including OpenDyslexic and Traditional Chinese), and a Reading Lab for comparing settings on fictional samples. Focus mode is hidden for now.",
+              "Saved reading preferences, more English and Chinese fonts (including OpenDyslexic), and a Reading Lab for comparing settings on fictional samples. Focus mode is hidden for now.",
               "Built, but it ships with the next edition rather than being bolted onto the old one."
             ],
           [
@@ -277,7 +277,7 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "03",
         "name": "ScreenSnap",
         "subtitle": "Screenshot lens",
-        "status": "Windows 0.1.0",
+        "status": "Windows 0.2.0",
         "kind": "Windows utility",
         "headline": "One click. Whole screen. On your clipboard.",
         "description": "A small floating lens that copies a screenshot of every monitor to your clipboard. Click it or press Alt+C in any app, then paste.",
@@ -288,11 +288,11 @@ window.SHAOTING_HOME_CONTENT = {
         ],
         "primary": "Get ScreenSnap",
         "url": "/screensnap/",
-        "caption": "ScreenSnap 0.1.0 · the lens floats above your windows",
+        "caption": "ScreenSnap 0.2.0 · the lens floats above your windows",
         "whyTitle": "What it is for",
         "why": "Getting what is on your screen into a message or document in one motion, without saving files.",
         "focusTitle": "How to start",
-        "focus": "Download the ZIP from the ScreenSnap page, unblock it, extract it and open ScreenSnap.vbs. The lens appears near the top-right of your screen.",
+        "focus": "Download ScreenSnap.exe from the ScreenSnap page and double-click it. The lens appears near the top-right of your screen.",
         "inviteTitle": "Good to know",
         "invite": "It uses the built-in Windows PowerShell, never saves or sends your screenshots, and hides itself so it is never in the picture."
       }
@@ -301,7 +301,7 @@ window.SHAOTING_HOME_CONTENT = {
       "label": "HEALTH RESEARCH",
       "title": "QDigest",
       "subtitle": "Research, explained",
-      "edition": "Brief in email. Explained on the web.",
+      "edition": "Explained on the web.",
       "topics": [
         "Heart, metabolism & kidneys",
         "Hearing & cognition",
@@ -325,50 +325,12 @@ window.SHAOTING_HOME_CONTENT = {
       ],
       "caption": "Shaoting He · 何少霆",
       "detail": "Nursing background",
-      "clinical": "Currently in a full-time ICU role at Valley Regional Hospital in Kentville. BScN, Toronto Metropolitan University collaborative nursing program, graduated with Distinction."
+      "clinical": "Currently in a full-time ICU role. BScN, Toronto Metropolitan University collaborative nursing program, graduated with Distinction."
     },
     "contact": {
-      "eyebrow": "03 / COLLABORATE",
-      "title": "Bring your perspective.\nLet’s build something.",
-      "intro": "Next, I want to build tools for nursing and clinical work, and keep making health research easier to read in English and Chinese. If you can help with either, write to me. I reply to every message.",
-      "offer": {
-        "bringTitle": "What I bring",
-        "bring": [
-          "A working ICU nurse’s eye for where tools fail the people using them",
-          "Shipped desktop software: 15 public releases for Mac and Windows since July",
-          "English and Mandarin, in the product and in the conversation"
-        ],
-        "seekTitle": "Who I’m looking for",
-        "seek": [
-          "Nurses and clinicians with a problem worth solving",
-          "Developers and designers to build with",
-          "People who want to support independent tools",
-          "Entrepreneurial communities with ideas worth testing"
-        ]
-      },
-      "paths": [
-        {
-          "number": "01",
-          "title": "Build together",
-          "text": "Have a complementary skill or an idea we should explore?",
-          "label": "Discuss a collaboration",
-          "subject": "Let’s collaborate"
-        },
-        {
-          "number": "02",
-          "title": "Share a perspective",
-          "text": "Try AUV, talk about QDigest, or tell me what could work better.",
-          "label": "Start a conversation",
-          "subject": "A thought about your projects"
-        },
-        {
-          "number": "03",
-          "title": "Support the work",
-          "text": "Interested in backing independent tools and the time it takes to build them?",
-          "label": "Talk about supporting",
-          "subject": "Supporting your independent work"
-        }
-      ],
+      "eyebrow": "03 / CONTACT",
+      "title": "Get in touch.",
+      "intro": "Tried something here, spotted a mistake, or want to build something together? Write to me.",
       "email": "Locutus1207@outlook.com"
     },
     "footer": {
@@ -379,7 +341,7 @@ window.SHAOTING_HOME_CONTENT = {
   "zh-Hans": {
     "meta": {
       "title": "何少霆 | 护理 - 创造",
-      "description": "我是何少霆，一名在 ICU 工作的注册护士，也是一名独立开发者。了解 AUV、QDigest，以及合作与支持创作的方式。"
+      "description": "我是何少霆，一名在 ICU 工作的注册护士，也是一名独立开发者。这里是我的作品：AUV、QDigest 和 ScreenSnap。"
     },
     "nav": [
       [
@@ -392,7 +354,7 @@ window.SHAOTING_HOME_CONTENT = {
       ],
       [
         "contact",
-        "合作"
+        "联系"
       ]
     ],
     "ui": {
@@ -430,12 +392,12 @@ window.SHAOTING_HOME_CONTENT = {
       "eyebrow": "何少霆 / 注册护士",
       "line1": "护理 - ",
       "line2": "创造",
-      "intro": "我在 ICU 照护生命，也在工作之外创造软件。接下来想做：护理工具，以及人人读得懂的健康研究。我在寻找一起把它们做出来的人。",
-      "primary": "一起合作",
-      "secondary": "看看作品",
+      "intro": "我在 ICU 照护生命，也在工作之外创造软件。这里是我目前做出来的东西。",
+      "primary": "看看作品",
+      "secondary": "联系我",
       "note": "重症护理 · 加拿大新斯科舍省",
-      "current": "开放",
-      "currentProjects": "新的合作"
+      "current": "联系",
+      "currentProjects": "发邮件"
     },
     "work": {
       "eyebrow": "01 / 从观察到作品",
@@ -465,8 +427,8 @@ window.SHAOTING_HOME_CONTENT = {
         "why": "开始一段长时间的工作前，不用逐个打开账户，就能知道 Codex 与 Claude 还剩多少额度。",
         "focusTitle": "最难的部分",
         "focus": "Claude 的精确用量来自已登录的 Safari 会话，所以 Safari 被隐藏、最小化或在另一个桌面时，AUV 也要能继续读取。另一半工作，是在发布签名、公证的 Mac 通用版的同时，维护一个独立的 Windows 版。",
-        "inviteTitle": "需要帮手的地方",
-        "invite": "Windows 是短板：0.18.6 已能通过 Chrome 或 Edge 伴侣读取 Claude 用量，但仍未签名，伴侣也只能以开发者模式加载。最能帮上忙的，是一位熟悉 Windows 打包与代码签名的开发者。也同样欢迎每天使用 Codex 或 Claude 的人提供测试和设计反馈。",
+        "inviteTitle": "目前的情况",
+        "invite": "Mac 版已签名并通过公证。Windows 是短板：它通过 Chrome 或 Edge 伴侣读取 Claude 用量，但仍未签名，伴侣也只能以开发者模式加载。欢迎每天使用 Codex 或 Claude 的人提供反馈。",
         "log": {
           "label": "AUV · 开发日志",
           "title": "我的第一个公开应用，开发过程全部公开。",
@@ -571,11 +533,11 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "02",
         "name": "QDigest",
         "subtitle": "读懂研究",
-        "status": "已发布 · 2 期",
+        "status": "阅读实验室已上线 · 新版开发中",
         "trust": "每篇解读都注明原始论文（期刊、DOI、PubMed 编号），并说明是否仅依据摘要。仅供学习阅读，不构成医疗建议。",
         "kind": "信息工具 · 双语阅读",
         "headline": "看见研究，也读懂研究。",
-        "description": "用英文与简体中文解释有据可查的健康研究：邮件简报用于发现，网页提供更完整的研究解释。",
+        "description": "用英文与简体中文解释有据可查的健康研究。",
         "tags": [
           "English + 中文",
           "重视来源",
@@ -586,10 +548,10 @@ window.SHAOTING_HOME_CONTENT = {
         "caption": "最新一期 · 2026年9月16日",
         "whyTitle": "我在思考的问题",
         "why": "怎样让健康研究更容易理解，同时保留证据与不确定性？",
-        "focusTitle": "正在努力的方向",
-        "focus": "让新论文从自动生成的初稿，变成我信得过的解读，而不必一篇篇手工救稿，这样才能按固定节奏出刊。",
-        "inviteTitle": "欢迎你的参与",
-        "invite": "希望听到好奇的读者、关注内容的人，以及对信息呈现有想法的伙伴的反馈。",
+        "focusTitle": "正在做的事",
+        "focus": "润色文章。目前陷入瓶颈：成文和稿子的 AI 味道都太重，我不满意。",
+        "inviteTitle": "欢迎反馈",
+        "invite": "如果哪里难读或者写错了，请告诉我。",
         "evolution": {
           "label": "QDigest · 演变",
           "title": "每一次改动，以及它的代价。",
@@ -635,7 +597,7 @@ window.SHAOTING_HOME_CONTENT = {
             [
               "10 月",
               "阅读设置与阅读实验室",
-              "可保存的阅读偏好，更多中英文字体（包括 OpenDyslexic 和繁体中文），以及一个用虚构材料比较不同设置的阅读实验室。专注模式暂时隐藏。",
+              "可保存的阅读偏好，更多中英文字体（包括 OpenDyslexic），以及一个用虚构材料比较不同设置的阅读实验室。专注模式暂时隐藏。",
               "功能已经做好，但会随下一期一起上线，而不是硬接到旧的一期上。"
             ],
           [
@@ -653,7 +615,7 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "03",
         "name": "ScreenSnap",
         "subtitle": "截屏镜头",
-        "status": "Windows 0.1.0",
+        "status": "Windows 0.2.0",
         "kind": "Windows 小工具",
         "headline": "点一下，整屏截图就进剪贴板。",
         "description": "一枚浮在屏幕上的小镜头，把所有显示器的画面截取到剪贴板。在任何应用中点击它或按 Alt+C，然后粘贴即可。",
@@ -664,11 +626,11 @@ window.SHAOTING_HOME_CONTENT = {
         ],
         "primary": "获取 ScreenSnap",
         "url": "/screensnap/",
-        "caption": "ScreenSnap 0.1.0 · 镜头浮在所有窗口上方",
+        "caption": "ScreenSnap 0.2.0 · 镜头浮在所有窗口上方",
         "whyTitle": "用来做什么",
         "why": "一个动作，把屏幕上的内容放进消息或文档，不用保存文件。",
         "focusTitle": "怎么开始",
-        "focus": "在 ScreenSnap 页面下载 ZIP，解除锁定后解压，打开 ScreenSnap.vbs，镜头会出现在屏幕右上方附近。",
+        "focus": "在 ScreenSnap 页面下载 ScreenSnap.exe，双击运行，镜头会出现在屏幕右上方附近。",
         "inviteTitle": "值得知道",
         "invite": "它使用系统自带的 Windows PowerShell，不保存也不发送截图，截图时会自动隐藏，不会出现在画面里。"
       }
@@ -677,7 +639,7 @@ window.SHAOTING_HOME_CONTENT = {
       "label": "健康研究",
       "title": "QDigest",
       "subtitle": "读懂研究",
-      "edition": "邮件发现，网页理解。",
+      "edition": "网页上读懂研究。",
       "topics": [
         "心脏、代谢与肾脏",
         "听力与认知",
@@ -701,50 +663,12 @@ window.SHAOTING_HOME_CONTENT = {
       ],
       "caption": "何少霆 · Shaoting He",
       "detail": "护理背景",
-      "clinical": "目前在 Kentville 的 Valley Regional Hospital ICU 担任全职岗位。毕业于 Toronto Metropolitan University 协作护理项目，获护理学理学士学位，以 Distinction 毕业。"
+      "clinical": "目前在 ICU 担任全职岗位。毕业于 Toronto Metropolitan University 协作护理项目，获护理学理学士学位，以 Distinction 毕业。"
     },
     "contact": {
-      "eyebrow": "03 / 一起合作",
-      "title": "带上你的视角，\n一起把想法做出来。",
-      "intro": "接下来我想做两件事：为护理和临床工作做工具；继续让健康研究更容易被中英文读者读懂。如果你能在其中任何一件事上帮忙，欢迎来信。每一封我都会回复。",
-      "offer": {
-        "bringTitle": "我能带来什么",
-        "bring": [
-          "一线 ICU 护士的视角：看见工具在哪里让使用者为难",
-          "已发布的桌面软件：自 7 月以来为 Mac 与 Windows 发布 15 个公开版本",
-          "英语与普通话，用在产品里，也用在沟通中"
-        ],
-        "seekTitle": "我在寻找",
-        "seek": [
-          "有问题想解决的护士与临床同行",
-          "一起动手的开发者与设计师",
-          "愿意支持独立工具的人",
-          "有想法、想验证的创业社群"
-        ]
-      },
-      "paths": [
-        {
-          "number": "01",
-          "title": "一起创造",
-          "text": "你有互补的技能，或一个值得共同探索的想法？",
-          "label": "聊聊合作",
-          "subject": "Let’s collaborate"
-        },
-        {
-          "number": "02",
-          "title": "交换视角",
-          "text": "试试 AUV，聊聊 QDigest，或告诉我哪里还能更好。",
-          "label": "开始交流",
-          "subject": "A thought about your projects"
-        },
-        {
-          "number": "03",
-          "title": "支持创作",
-          "text": "愿意支持独立工具，以及把它们做出来所需要的时间？",
-          "label": "聊聊支持方式",
-          "subject": "Supporting your independent work"
-        }
-      ],
+      "eyebrow": "03 / 联系",
+      "title": "联系我。",
+      "intro": "用过这里的东西、发现了错误，或者想一起做点什么，都可以来信。",
       "email": "Locutus1207@outlook.com"
     },
     "footer": {
