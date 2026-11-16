@@ -22,7 +22,7 @@
 <h1>Sectorium</h1>
 <p class="subtitle">Load to work. Unload to pause. Disconnect to unplug.</p>
 <p>Sectorium manages file-based development volumes such as DEV_APFS. Your external drive stays one physical drive; its development volume is shown underneath it. AUV includes Sectorium — no separate app download.</p>
-<p><strong>Mac 0.18.10:</strong> the basic Load → Unload → Load and Disconnect cycle has been confirmed on the developer’s Mac and external DEV_APFS volume, with Load and Unload timed. Load and Unload are faster (Unload about 2 seconds; Load still waits for macOS to attach the image and for your password or Touch ID). If the drive is unplugged without Disconnect, AUV releases the volume and checks it before the next Load. The drive’s IMPORTANT.md now lists each volume’s settings and the exact Terminal commands to load and unload it, and Scan drives registers the volumes a drive records. Windows 0.18.7 has the interface only; its storage actions are unavailable.</p>
+<p><strong>Mac 0.18.11:</strong> the basic Load → Unload → Load and Disconnect cycle has been confirmed on the developer’s Mac and external DEV_APFS volume, with Load and Unload timed. Load and Unload are faster (Unload about 2 seconds; Load still waits for macOS to attach the image and for your password or Touch ID). If the drive is unplugged without Disconnect, AUV releases the volume and checks it before the next Load. Disconnect also ejects disk images stored on the drive first, such as an installer opened from a development volume. The drive’s IMPORTANT.md now lists each volume’s settings and the exact Terminal commands to load and unload it, and Scan drives registers the volumes a drive records. Windows 0.18.7 has the interface only; its storage actions are unavailable.</p>
 <h2>Use an existing development volume</h2>
 <ol>
 <li>Connect the external drive, open <strong>AUV → Sectorium</strong>, and find its card. External drives appear above internal storage.</li>
@@ -46,15 +46,15 @@
 <p>Read the message shown and expand <strong>History and diagnostics</strong> on the volume card. Use the offered retry or return-to-development action after resolving it. If the disk has been unplugged, reconnect it before loading; registering the same image again is not a repair.</p>
 <details><summary>Privacy and validation scope</summary>
 <p>Sectorium observes disk identity, mount state and supported whole-drive I/O statistics. It does not scan project file contents. Unknown statistics stay unknown; they do not mean zero activity.</p>
-<p>The confirmed lifecycle applies to the developer’s current Mac and external volume. It does not establish reliability for every drive, encrypted image, new-volume creation or recovery scenario. Mac 0.18.10 includes Apple silicon and Intel code for macOS 14+, but physical Intel hardware and macOS 14/15 have not been tested. See the <a href="/auv/install/#macos-installation-guide">installation guide</a> for the compatibility checks.</p>
+<p>The confirmed lifecycle applies to the developer’s current Mac and external volume. It does not establish reliability for every drive, encrypted image, new-volume creation or recovery scenario. Mac 0.18.11 includes Apple silicon and Intel code for macOS 14+, but physical Intel hardware and macOS 14/15 have not been tested. See the <a href="/auv/install/#macos-installation-guide">installation guide</a> for the compatibility checks.</p>
 </details>
-<footer><a href="/auv/install/#macos-installation-guide">Install AUV for Mac</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v0.18.10">0.18.10 release notes</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/issues">Report a problem</a></footer>
+<footer><a href="/auv/install/#macos-installation-guide">Install AUV for Mac</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v0.18.11">0.18.11 release notes</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/issues">Report a problem</a></footer>
 </article>
 <article class="guide" data-language="zh-Hans" lang="zh-Hans" hidden>
 <h1>分区工</h1>
 <p class="subtitle">加载后开发，卸载后暂停，安全断开后拔盘。</p>
 <p>分区工管理 DEV_APFS 这类文件型开发卷。外接硬盘仍是一块物理硬盘，开发卷显示在它下面。分区工已包含在 AUV 中，无需另下一个应用。</p>
-<p><strong>Mac 0.18.10：</strong>加载、卸载、重新加载和安全断开流程，已在开发者当前的 Mac 与外接 DEV_APFS 开发卷上确认可用，并实测了加载、卸载用时。加载、卸载更快（卸载约 2 秒；加载仍需等待 macOS 挂接镜像，以及你输入密码或使用 Touch ID）。没点“断开”就拔盘时，AUV 会释放开发卷，并在下次加载前先检查。硬盘的 IMPORTANT.md 现在列出每个开发卷的设置，以及可在“终端”直接运行的装载、卸载命令；“扫描硬盘”可登记硬盘上记录的开发卷。Windows 0.18.7 仅提供界面，磁盘操作尚不可用。</p>
+<p><strong>Mac 0.18.11：</strong>加载、卸载、重新加载和安全断开流程，已在开发者当前的 Mac 与外接 DEV_APFS 开发卷上确认可用，并实测了加载、卸载用时。加载、卸载更快（卸载约 2 秒；加载仍需等待 macOS 挂接镜像，以及你输入密码或使用 Touch ID）。没点“断开”就拔盘时，AUV 会释放开发卷，并在下次加载前先检查。“安全断开”也会先推出存放在硬盘上的磁盘映像，比如从开发卷里打开的安装盘。硬盘的 IMPORTANT.md 现在列出每个开发卷的设置，以及可在“终端”直接运行的装载、卸载命令；“扫描硬盘”可登记硬盘上记录的开发卷。Windows 0.18.7 仅提供界面，磁盘操作尚不可用。</p>
 <h2>使用已有开发卷</h2>
 <ol>
 <li>连接外接硬盘，打开 <strong>AUV → 分区工</strong>，找到对应硬盘卡片。外接硬盘优先于内置盘显示。</li>
@@ -78,9 +78,9 @@
 <p>查看页面提示，并展开开发卷卡片上的<strong>历史与诊断</strong>。解决后再使用界面提供的重试或返回开发操作。硬盘已拔出时，先重新连接再加载；重复登记同一镜像不能修复操作失败。</p>
 <details><summary>隐私与验证范围</summary>
 <p>分区工读取设备身份、挂载状态及可用的整盘 I/O 统计，不扫描项目文件内容。统计不可用时显示未知，不会当作零活动。</p>
-<p>已确认的基础流程仅对应开发者当前的 Mac 和外接开发卷，不代表所有硬盘、加密镜像、新建和故障恢复场景均已验证。Mac 0.18.10 面向 macOS 14+，包含 Apple silicon 和 Intel 代码，但尚未测试实体 Intel Mac 或 macOS 14/15。兼容性检查范围见<a href="/auv/install/#macos-中文安装指南">安装指南</a>。</p>
+<p>已确认的基础流程仅对应开发者当前的 Mac 和外接开发卷，不代表所有硬盘、加密镜像、新建和故障恢复场景均已验证。Mac 0.18.11 面向 macOS 14+，包含 Apple silicon 和 Intel 代码，但尚未测试实体 Intel Mac 或 macOS 14/15。兼容性检查范围见<a href="/auv/install/#macos-中文安装指南">安装指南</a>。</p>
 </details>
-<footer><a href="/auv/install/#macos-中文安装指南">安装 Mac 版 AUV</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v0.18.10">0.18.10 更新说明</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/issues">反馈问题</a></footer>
+<footer><a href="/auv/install/#macos-中文安装指南">安装 Mac 版 AUV</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v0.18.11">0.18.11 更新说明</a> · <a href="https://github.com/ShaoJHe-SilkRoad/UMA/issues">反馈问题</a></footer>
 </article>
 </main>
 </body></html>
