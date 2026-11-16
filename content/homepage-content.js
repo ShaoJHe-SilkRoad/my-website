@@ -94,26 +94,26 @@ window.SHAOTING_HOME_CONTENT = {
         "log": {
           "label": "AUV · Build log",
           "title": "My first public app, built in the open.",
-          "note": "From the public GitHub repository · as of 31 Oct 2026",
+          "note": "From the public GitHub repository · as of 16 Nov 2026",
           "stats": [
             [
-              "235",
+              "327",
               "Commits"
             ],
             [
-              "16",
+              "19",
               "Weeks in a row with commits"
             ],
             [
-              "15",
+              "27",
               "Public releases"
             ],
             [
-              "88%",
+              "83%",
               "Written in Swift"
             ]
           ],
-          "weeksLabel": "Commits per week, July to October 2026",
+          "weeksLabel": "Commits per week, July to November 2026",
           "weeks": [
             13,
             3,
@@ -130,24 +130,27 @@ window.SHAOTING_HOME_CONTENT = {
             18,
             5,
             39,
-            35
+            35,
+            18,
+            30,
+            41
           ],
           "languages": [
             [
               "Swift",
-              88.4
-            ],
-            [
-              "Shell",
-              5
+              82.6
             ],
             [
               "C#",
-              3.1
+              7.4
+            ],
+            [
+              "Shell",
+              4.5
             ],
             [
               "JavaScript",
-              1.8
+              3.5
             ],
             [
               "Python",
@@ -155,7 +158,7 @@ window.SHAOTING_HOME_CONTENT = {
             ],
             [
               "Other",
-              0.4
+              0.6
             ]
           ],
           "milestones": [
@@ -220,13 +223,13 @@ window.SHAOTING_HOME_CONTENT = {
           "note": "Two changes of direction, and the decisions from September to October 2026",
           "steps": [
             [
-            "Direction change 1",
-            "From a daily news roundup to reading papers closely",
-            "QDigest began as a daily health news roundup, then turned to reading the papers themselves.",
-            "Gave up daily breadth for depth on each study.",
-            "turn"
-          ],
-          [
+              "Direction change 1",
+              "From a daily news roundup to reading papers closely",
+              "QDigest began as a daily health news roundup, then turned to reading the papers themselves.",
+              "Gave up daily breadth for depth on each study.",
+              "turn"
+            ],
+            [
               "Early Sep",
               "From summaries to a bilingual reader",
               "Research summaries became web pages in English and Simplified Chinese, with an email brief for each edition.",
@@ -262,13 +265,13 @@ window.SHAOTING_HOME_CONTENT = {
               "Saved reading preferences, more English and Chinese fonts (including OpenDyslexic), and a Reading Lab for comparing settings on fictional samples. Focus mode is hidden for now.",
               "Built, but it ships with the next edition rather than being bolted onto the old one."
             ],
-          [
-            "Direction change 2 · Now",
-            "From reading papers to teaching health knowledge",
-            "The focus now is making health knowledge easy to understand. Papers move to a supporting role: they back the explanation instead of being the subject.",
-            "Papers are no longer the main character of each piece, but they remain the evidence.",
-            "turn"
-          ]
+            [
+              "Direction change 2 · Now",
+              "From reading papers to teaching health knowledge",
+              "The focus now is making health knowledge easy to understand. Papers move to a supporting role: they back the explanation instead of being the subject.",
+              "Papers are no longer the main character of each piece, but they remain the evidence.",
+              "turn"
+            ]
           ]
         }
       },
@@ -432,26 +435,26 @@ window.SHAOTING_HOME_CONTENT = {
         "log": {
           "label": "AUV · 开发日志",
           "title": "我的第一个公开应用，开发过程全部公开。",
-          "note": "数据来自公开的 GitHub 仓库 · 截至 2026 年 10 月 31 日",
+          "note": "数据来自公开的 GitHub 仓库 · 截至 2026 年 11 月 16 日",
           "stats": [
             [
-              "235",
+              "327",
               "次提交"
             ],
             [
-              "16",
+              "19",
               "周连续有提交"
             ],
             [
-              "15",
+              "27",
               "个公开版本"
             ],
             [
-              "88%",
+              "83%",
               "Swift 代码"
             ]
           ],
-          "weeksLabel": "每周提交次数，2026 年 7 月至 10 月",
+          "weeksLabel": "每周提交次数，2026 年 7 月至 11 月",
           "weeks": [
             13,
             3,
@@ -468,24 +471,27 @@ window.SHAOTING_HOME_CONTENT = {
             18,
             5,
             39,
-            35
+            35,
+            18,
+            30,
+            41
           ],
           "languages": [
             [
               "Swift",
-              88.4
-            ],
-            [
-              "Shell",
-              5
+              82.6
             ],
             [
               "C#",
-              3.1
+              7.4
+            ],
+            [
+              "Shell",
+              4.5
             ],
             [
               "JavaScript",
-              1.8
+              3.5
             ],
             [
               "Python",
@@ -493,7 +499,7 @@ window.SHAOTING_HOME_CONTENT = {
             ],
             [
               "Other",
-              0.4
+              0.6
             ]
           ],
           "milestones": [
@@ -558,13 +564,13 @@ window.SHAOTING_HOME_CONTENT = {
           "note": "两次方向改变，以及 2026 年 9 月至 10 月的决定",
           "steps": [
             [
-            "方向改变 1",
-            "从每日新闻汇总到论文细读",
-            "QDigest 最初汇总每日健康新闻，后来转向细读论文本身。",
-            "放弃每日更新的广度，换来对单篇研究的深度。",
-            "turn"
-          ],
-          [
+              "方向改变 1",
+              "从每日新闻汇总到论文细读",
+              "QDigest 最初汇总每日健康新闻，后来转向细读论文本身。",
+              "放弃每日更新的广度，换来对单篇研究的深度。",
+              "turn"
+            ],
+            [
               "9 月初",
               "从研究摘要到双语阅读器",
               "研究摘要变成英文与简体中文网页，每期另有一封邮件简报。",
@@ -600,13 +606,13 @@ window.SHAOTING_HOME_CONTENT = {
               "可保存的阅读偏好，更多中英文字体（包括 OpenDyslexic），以及一个用虚构材料比较不同设置的阅读实验室。专注模式暂时隐藏。",
               "功能已经做好，但会随下一期一起上线，而不是硬接到旧的一期上。"
             ],
-          [
-            "方向改变 2 · 现在",
-            "从论文细读到知识普及",
-            "现在的重心是普及健康知识，论文退到辅助位置：用来支撑解释，不再是内容本身。",
-            "论文不再是每篇内容的主角，但仍然是依据。",
-            "turn"
-          ]
+            [
+              "方向改变 2 · 现在",
+              "从论文细读到知识普及",
+              "现在的重心是普及健康知识，论文退到辅助位置：用来支撑解释，不再是内容本身。",
+              "论文不再是每篇内容的主角，但仍然是依据。",
+              "turn"
+            ]
           ]
         }
       },
