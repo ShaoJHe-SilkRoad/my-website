@@ -220,19 +220,19 @@ window.SHAOTING_HOME_CONTENT = {
         "evolution": {
           "label": "QDigest · How it has changed",
           "title": "What changed, and what each change cost.",
-          "note": "Two changes of direction, and the decisions from September to October 2026",
+          "note": "Two changes of direction, one narrowing, and the decisions along the way",
           "steps": [
             [
               "Direction change 1",
-              "From a daily news roundup to reading papers closely",
-              "QDigest began as a daily health news roundup, then turned to reading the papers themselves.",
-              "Gave up daily breadth for depth on each study.",
+              "From a daily news roundup to medicine",
+              "The roundup was messy and shallow, with little worth reading and no development value left. Strong competitors were everywhere, and I couldn’t go deeper while keeping costs under control. So I decided to focus on medicine.",
+              "The automated daily email and news collection were already working. I changed direction anyway.",
               "turn"
             ],
             [
               "Early Sep",
               "From summaries to a bilingual reader",
-              "Research summaries became web pages in English and Simplified Chinese, with an email brief for each edition.",
+              "Research summaries became web pages in English and Simplified Chinese.",
               "Every article is now written and checked twice, once per language."
             ],
             [
@@ -266,10 +266,17 @@ window.SHAOTING_HOME_CONTENT = {
               "Built, but it ships with the next edition rather than being bolted onto the old one."
             ],
             [
-              "Direction change 2 · Now",
-              "From reading papers to teaching health knowledge",
-              "The focus now is making health knowledge easy to understand. Papers move to a supporting role: they back the explanation instead of being the subject.",
-              "Papers are no longer the main character of each piece, but they remain the evidence.",
+              "Direction change 2",
+              "From daily papers to explaining concepts",
+              "The quality of each day’s papers varied too much to explain them in depth. Content could repeat, and too many papers were repetitive or inconclusive, which made them hard to filter. So I started from knowledge instead: explain a specific concept, go deep, and support it with whatever research I can find.",
+              "Papers are no longer the subject. They support the explanation.",
+              "turn"
+            ],
+            [
+              "Narrowing · Now",
+              "Focusing on cognition",
+              "I then found that what I really want to go deep on is cognition, so I narrowed further. That is the current direction.",
+              "Stuck for now: both the finished articles and the drafts sound too much like AI, and I’m not satisfied with them, so none of them are online yet.",
               "turn"
             ]
           ]
@@ -561,19 +568,19 @@ window.SHAOTING_HOME_CONTENT = {
         "evolution": {
           "label": "QDigest · 演变",
           "title": "每一次改动，以及它的代价。",
-          "note": "两次方向改变，以及 2026 年 9 月至 10 月的决定",
+          "note": "两次方向改变、一次进一步细分，以及其间的决定",
           "steps": [
             [
               "方向改变 1",
-              "从每日新闻汇总到论文细读",
-              "QDigest 最初汇总每日健康新闻，后来转向细读论文本身。",
-              "放弃每日更新的广度，换来对单篇研究的深度。",
+              "从每日新闻汇总到专注医学",
+              "信息杂乱、浅显，没有阅读价值，继续开发的价值也消失了。市场上强大的竞品太多，又无法在控制成本的情况下深入去做。于是决定专注医学。",
+              "每日自动发送邮件和信息收集系统都已就位、正常运作，但还是决定转向。",
               "turn"
             ],
             [
               "9 月初",
               "从研究摘要到双语阅读器",
-              "研究摘要变成英文与简体中文网页，每期另有一封邮件简报。",
+              "研究摘要变成英文与简体中文网页。",
               "每篇文章都要用两种语言各写一遍、各核一遍。"
             ],
             [
@@ -607,10 +614,17 @@ window.SHAOTING_HOME_CONTENT = {
               "功能已经做好，但会随下一期一起上线，而不是硬接到旧的一期上。"
             ],
             [
-              "方向改变 2 · 现在",
-              "从论文细读到知识普及",
-              "现在的重心是普及健康知识，论文退到辅助位置：用来支撑解释，不再是内容本身。",
-              "论文不再是每篇内容的主角，但仍然是依据。",
+              "方向改变 2",
+              "从每日论文到知识科普",
+              "每天找到的论文质量良莠不齐，无法深入讲解；内容可能重复，内容雷同、没有结论的论文又太多，难以筛选。于是改从知识科普出发：讲解特定概念并讲深，用能找到的研究来支撑。",
+              "论文不再是内容本身，只用来支撑解释。",
+              "turn"
+            ],
+            [
+              "进一步细分 · 现在",
+              "专注认知方面",
+              "之后发现，我真正希望深入的是认知方面，于是进一步细分，这就是现在的开发方向。",
+              "陷入瓶颈：成文和稿子的 AI 味道都太重，我不满意，所以都还没有上线。",
               "turn"
             ]
           ]
