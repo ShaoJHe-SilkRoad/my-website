@@ -54,7 +54,6 @@ window.SHAOTING_HOME_CONTENT = {
       "eyebrow": "SHAOTING HE / REGISTERED NURSE",
       "line1": "Nurse.",
       "line2": "Builder.",
-      "intro": "I work in intensive care and build software beyond it. Here is what I’ve made so far.",
       "primary": "See the work",
       "secondary": "Get in touch",
       "note": "ICU practice · Nova Scotia, Canada",
@@ -64,7 +63,7 @@ window.SHAOTING_HOME_CONTENT = {
     "work": {
       "eyebrow": "01 / FROM OBSERVATION TO SOFTWARE",
       "title": "The work speaks.",
-      "intro": "Native AI usage tools for Windows and Mac. A bilingual research digest. A one-click screenshot lens for Windows. Making information easier to use.",
+      "intro": "Native AI usage tools for Windows and Mac. A bilingual research digest. A one-click screenshot lens for Windows.",
       "all": "Explore my GitHub"
     },
     "projects": [
@@ -90,7 +89,7 @@ window.SHAOTING_HOME_CONTENT = {
         "focusTitle": "The hardest parts",
         "focus": "Exact Claude usage comes from a signed-in Safari session, so AUV has to keep reading it when Safari is hidden, minimized or on another desktop. The other half of the work is shipping a signed, notarized Universal Mac app alongside a separate Windows version.",
         "inviteTitle": "Where it stands",
-        "invite": "The Mac version is signed and notarized. Windows is the gap: it reads Claude through a Chrome or Edge companion, but it still ships unsigned and the companion loads in Developer mode. Feedback from people who use Codex or Claude every day is welcome.",
+        "invite": "The Mac version is signed and notarized. Windows is the gap: it reads Claude through a Chrome or Edge companion, but it still ships unsigned and the companion loads in Developer mode.",
         "log": {
           "label": "AUV · Build log",
           "title": "My first public app, built in the open.",
@@ -204,9 +203,7 @@ window.SHAOTING_HOME_CONTENT = {
         "headline": "Make room for understanding.",
         "description": "Source-grounded health research, explained in English and Simplified Chinese.",
         "tags": [
-          "English + 中文",
-          "Source-conscious",
-          "Mobile-friendly"
+          "English + 中文"
         ],
         "primary": "Open the Reading Lab",
         "url": "/qdigest/",
@@ -225,7 +222,7 @@ window.SHAOTING_HOME_CONTENT = {
             [
               "Direction change 1",
               "From a daily news roundup to medicine",
-              "The roundup was messy and shallow, with little worth reading and no development value left. Strong competitors were everywhere, and I couldn’t go deeper while keeping costs under control. So I decided to focus on medicine.",
+              "The roundup was messy and shallow, with little worth reading and no development value left. Strong competitors were everywhere, and I couldn’t go deeper while keeping costs under control.",
               "The automated daily email and news collection were already working. I changed direction anyway.",
               "turn"
             ],
@@ -257,7 +254,7 @@ window.SHAOTING_HOME_CONTENT = {
               "Sep–Oct",
               "Automating new papers",
               "Model-written drafts led with statistics, got facts wrong, and slipped past automated review. I now record what the model wrote first, what it corrected, and what a person changed.",
-              "Slower, and no new edition since 16 September. I won’t hide a weak pipeline by rewriting its drafts myself."
+              "Slower, and no new edition since 16 September."
             ],
             [
               "Oct",
@@ -268,14 +265,14 @@ window.SHAOTING_HOME_CONTENT = {
             [
               "Direction change 2",
               "From daily papers to explaining concepts",
-              "The quality of each day’s papers varied too much to explain them in depth. Content could repeat, and too many papers were repetitive or inconclusive, which made them hard to filter. So I started from knowledge instead: explain a specific concept, go deep, and support it with whatever research I can find.",
+              "Each day’s papers varied too much in quality to explain in depth, and too many were repetitive or inconclusive to filter. So I switched to explaining specific concepts in depth, supported by whatever research I can find.",
               "Papers are no longer the subject. They support the explanation.",
               "turn"
             ],
             [
               "Narrowing · Now",
               "Focusing on cognition",
-              "I then found that what I really want to go deep on is cognition, so I narrowed further. That is the current direction.",
+              "Then I found that what I really want to go deep on is cognition.",
               "Stuck for now: both the finished articles and the drafts sound too much like AI, and I’m not satisfied with them, so none of them are online yet.",
               "turn"
             ]
@@ -326,9 +323,7 @@ window.SHAOTING_HOME_CONTENT = {
       "eyebrow": "02 / NURSING IS THE FOUNDATION",
       "title": "A person behind\nevery signal.",
       "intro": "I’m Shaoting He, a registered nurse working in intensive care in Nova Scotia.",
-      "body": "In the ICU, a small change can deserve your full attention. Nursing has shaped how I observe, communicate, and take responsibility.",
-      "end": "I bring that discipline to building software: understand the problem, make the details count, and keep improving what people use.",
-      "facts": [
+            "facts": [
         "Registered Nurse · NSCN",
         "Nova Scotia, Canada",
         "English / Mandarin"
@@ -340,7 +335,6 @@ window.SHAOTING_HOME_CONTENT = {
     "contact": {
       "eyebrow": "03 / CONTACT",
       "title": "Get in touch.",
-      "intro": "Tried something here, spotted a mistake, or want to build something together? Write to me.",
       "email": "Locutus1207@outlook.com"
     },
     "footer": {
@@ -402,7 +396,6 @@ window.SHAOTING_HOME_CONTENT = {
       "eyebrow": "何少霆 / 注册护士",
       "line1": "护理 - ",
       "line2": "创造",
-      "intro": "我在 ICU 照护生命，也在工作之外创造软件。这里是我目前做出来的东西。",
       "primary": "看看作品",
       "secondary": "联系我",
       "note": "重症护理 · 加拿大新斯科舍省",
@@ -412,7 +405,7 @@ window.SHAOTING_HOME_CONTENT = {
     "work": {
       "eyebrow": "01 / 从观察到作品",
       "title": "让作品说话。",
-      "intro": "Windows 与 Mac 原生 AI 用量工具、双语研究简报，以及一键截屏的 Windows 小镜头。让信息更便于使用。",
+      "intro": "Windows 与 Mac 原生 AI 用量工具、双语研究简报，以及一键截屏的 Windows 小镜头。",
       "all": "探索我的 GitHub"
     },
     "projects": [
@@ -438,7 +431,7 @@ window.SHAOTING_HOME_CONTENT = {
         "focusTitle": "最难的部分",
         "focus": "Claude 的精确用量来自已登录的 Safari 会话，所以 Safari 被隐藏、最小化或在另一个桌面时，AUV 也要能继续读取。另一半工作，是在发布签名、公证的 Mac 通用版的同时，维护一个独立的 Windows 版。",
         "inviteTitle": "目前的情况",
-        "invite": "Mac 版已签名并通过公证。Windows 是短板：它通过 Chrome 或 Edge 伴侣读取 Claude 用量，但仍未签名，伴侣也只能以开发者模式加载。欢迎每天使用 Codex 或 Claude 的人提供反馈。",
+        "invite": "Mac 版已签名并通过公证。Windows 是短板：它通过 Chrome 或 Edge 伴侣读取 Claude 用量，但仍未签名，伴侣也只能以开发者模式加载。",
         "log": {
           "label": "AUV · 开发日志",
           "title": "我的第一个公开应用，开发过程全部公开。",
@@ -552,9 +545,7 @@ window.SHAOTING_HOME_CONTENT = {
         "headline": "看见研究，也读懂研究。",
         "description": "用英文与简体中文解释有据可查的健康研究。",
         "tags": [
-          "English + 中文",
-          "重视来源",
-          "移动端阅读"
+          "English + 中文"
         ],
         "primary": "进入阅读实验室",
         "url": "/qdigest/2026-09-16/zh-CN/",
@@ -573,8 +564,8 @@ window.SHAOTING_HOME_CONTENT = {
             [
               "方向改变 1",
               "从每日新闻汇总到专注医学",
-              "信息杂乱、浅显，没有阅读价值，继续开发的价值也消失了。市场上强大的竞品太多，又无法在控制成本的情况下深入去做。于是决定专注医学。",
-              "每日自动发送邮件和信息收集系统都已就位、正常运作，但还是决定转向。",
+              "信息杂乱、浅显，没有阅读价值，继续开发的价值也消失了。市场上强大的竞品太多，又无法在控制成本的情况下深入去做。",
+              "每日自动邮件和信息收集系统都已在运作，但还是决定转向。",
               "turn"
             ],
             [
@@ -605,7 +596,7 @@ window.SHAOTING_HOME_CONTENT = {
               "9–10 月",
               "自动处理新论文",
               "模型初稿会以统计数字为主线、写错事实，还能躲过自动审核。现在我分开记录模型第一次写了什么、自己改了什么、人又改了什么。",
-              "进度变慢，9 月 16 日之后还没有出新一期。我不会靠亲手改稿，掩盖流程本身的不可靠。"
+              "进度变慢，9 月 16 日之后还没有出新一期。"
             ],
             [
               "10 月",
@@ -616,14 +607,14 @@ window.SHAOTING_HOME_CONTENT = {
             [
               "方向改变 2",
               "从每日论文到知识科普",
-              "每天找到的论文质量良莠不齐，无法深入讲解；内容可能重复，内容雷同、没有结论的论文又太多，难以筛选。于是改从知识科普出发：讲解特定概念并讲深，用能找到的研究来支撑。",
+              "每天找到的论文良莠不齐，无法深入讲解；雷同、没有结论的论文又太多，难以筛选。于是改为讲解特定概念并讲深，用能找到的研究来支撑。",
               "论文不再是内容本身，只用来支撑解释。",
               "turn"
             ],
             [
               "进一步细分 · 现在",
               "专注认知方面",
-              "之后发现，我真正希望深入的是认知方面，于是进一步细分，这就是现在的开发方向。",
+              "之后发现，我真正想深入的是认知方面。",
               "陷入瓶颈：成文和稿子的 AI 味道都太重，我不满意，所以都还没有上线。",
               "turn"
             ]
@@ -674,9 +665,7 @@ window.SHAOTING_HOME_CONTENT = {
       "eyebrow": "02 / 护理，是我的根基",
       "title": "每一个信号背后，\n都是一个人。",
       "intro": "我是何少霆，在加拿大新斯科舍省从事重症护理的注册护士。",
-      "body": "在 ICU，一个细微的变化，也值得全神贯注。护理塑造了我观察、沟通与承担责任的方式。",
-      "end": "创造软件时，我也坚持同样的事：理解问题，认真对待细节，持续改善人们真正会用到的东西。",
-      "facts": [
+            "facts": [
         "注册护士 · NSCN",
         "加拿大 · 新斯科舍省",
         "英语 / 普通话"
@@ -688,7 +677,6 @@ window.SHAOTING_HOME_CONTENT = {
     "contact": {
       "eyebrow": "03 / 联系",
       "title": "联系我。",
-      "intro": "用过这里的东西、发现了错误，或者想一起做点什么，都可以来信。",
       "email": "Locutus1207@outlook.com"
     },
     "footer": {
