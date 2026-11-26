@@ -13,12 +13,12 @@ window.AUV_RELEASES = {
     }
   },
   "macos": {
-    "version": "0.18.11",
-    "build": "2026111601",
-    "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.18.11/AUV_Mac_0.18.11_Universal.dmg",
-    "release": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v0.18.11",
-    "sha256": "1c3dc14959235081b79554795048f25c39cd242bcc70a67219513d0b40a7810e",
-    "bytes": 17590314,
+    "version": "1.0.1",
+    "build": "2026112606",
+    "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v1.0.1/AUV_Mac_1.0.1_Universal.dmg",
+    "release": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/tag/v1.0.1",
+    "sha256": "a73cb885f951e871a571d0eb7211626e2c4c0330091ce79123adf00df34daa28",
+    "bytes": 18837243,
     "requirements": {
       "en": "macOS 14+ · Apple silicon + Intel · DMG · signed and notarized",
       "zh-Hans": "macOS 14+ · Apple silicon 与 Intel · DMG · 已签名、公证"

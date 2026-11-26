@@ -72,18 +72,18 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "macOS 0.18.11 · Windows 0.18.7",
+        "status": "macOS 1.0.1 · Windows 0.18.7",
         "kind": "Windows & Mac app",
         "headline": "Know how much AI coding time you have left.",
-        "description": "AUV is a desktop app for Mac and Windows that shows your Codex and Claude usage and limits at a glance, so you can pace your work.",
+        "description": "AUV is a desktop app for Mac and Windows that shows your Codex and Claude usage and limits at a glance, so you can pace your work. Version 1.0 puts every agent on one usage card and comes in three looks: Standard, Wabi-sabi and Brutalist.",
         "tags": [
           "English / 中文"
         ],
         "primary": "Download AUV",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.18.11/AUV_Mac_0.18.11_Universal.dmg",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v1.0.1/AUV_Mac_1.0.1_Universal.dmg",
         "secondary": "Installation guide",
         "secondaryUrl": "/auv/install/",
-        "caption": "AUV 0.18.4 on macOS · live Claude and Codex usage",
+        "caption": "AUV 1.0.1 on macOS · Claude's usage card, sample data",
         "whyTitle": "What it is for",
         "why": "Seeing how much Codex and Claude time is left before starting a long piece of work, without opening each account.",
         "focusTitle": "The hardest parts",
@@ -93,18 +93,18 @@ window.SHAOTING_HOME_CONTENT = {
         "log": {
           "label": "AUV · Build log",
           "title": "My first public app, built in the open.",
-          "note": "From the public GitHub repository · as of 16 Nov 2026",
+          "note": "From the public GitHub repository · as of 26 Nov 2026",
           "stats": [
             [
-              "327",
+              "350",
               "Commits"
             ],
             [
-              "19",
+              "20",
               "Weeks in a row with commits"
             ],
             [
-              "27",
+              "29",
               "Public releases"
             ],
             [
@@ -132,7 +132,8 @@ window.SHAOTING_HOME_CONTENT = {
             35,
             18,
             30,
-            41
+            41,
+            22
           ],
           "languages": [
             [
@@ -323,7 +324,7 @@ window.SHAOTING_HOME_CONTENT = {
       "eyebrow": "02 / NURSING IS THE FOUNDATION",
       "title": "A person behind\nevery signal.",
       "intro": "I’m Shaoting He, a registered nurse working in intensive care in Nova Scotia.",
-            "facts": [
+      "facts": [
         "Registered Nurse · NSCN",
         "Nova Scotia, Canada",
         "English / Mandarin"
@@ -414,18 +415,18 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "macOS 0.18.11 · Windows 0.18.7",
+        "status": "macOS 1.0.1 · Windows 0.18.7",
         "kind": "Windows 与 Mac 应用",
         "headline": "一眼看清 AI 编程还剩多少额度。",
-        "description": "AUV 是一款 Mac 与 Windows 桌面应用，随时显示 Codex 与 Claude 的用量和限额，帮你安排工作节奏。",
+        "description": "AUV 是一款 Mac 与 Windows 桌面应用，随时显示 Codex 与 Claude 的用量和限额，帮你安排工作节奏。1.0 版用同一张用量卡片显示每个智能体，并提供标准、侘寂、Brutalist 三套外观。",
         "tags": [
           "English / 中文"
         ],
         "primary": "下载 AUV",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v0.18.11/AUV_Mac_0.18.11_Universal.dmg",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v1.0.1/AUV_Mac_1.0.1_Universal.dmg",
         "secondary": "安装指南",
         "secondaryUrl": "/auv/install/",
-        "caption": "AUV 0.18.4 · macOS 上的 Claude 与 Codex 实时用量",
+        "caption": "AUV 1.0.1 · macOS 上 Claude 的用量卡片（示例数据）",
         "whyTitle": "用来做什么",
         "why": "开始一段长时间的工作前，不用逐个打开账户，就能知道 Codex 与 Claude 还剩多少额度。",
         "focusTitle": "最难的部分",
@@ -435,18 +436,18 @@ window.SHAOTING_HOME_CONTENT = {
         "log": {
           "label": "AUV · 开发日志",
           "title": "我的第一个公开应用，开发过程全部公开。",
-          "note": "数据来自公开的 GitHub 仓库 · 截至 2026 年 11 月 16 日",
+          "note": "数据来自公开的 GitHub 仓库 · 截至 2026 年 11 月 26 日",
           "stats": [
             [
-              "327",
+              "350",
               "次提交"
             ],
             [
-              "19",
+              "20",
               "周连续有提交"
             ],
             [
-              "27",
+              "29",
               "个公开版本"
             ],
             [
@@ -474,7 +475,8 @@ window.SHAOTING_HOME_CONTENT = {
             35,
             18,
             30,
-            41
+            41,
+            22
           ],
           "languages": [
             [
@@ -665,7 +667,7 @@ window.SHAOTING_HOME_CONTENT = {
       "eyebrow": "02 / 护理，是我的根基",
       "title": "每一个信号背后，\n都是一个人。",
       "intro": "我是何少霆，在加拿大新斯科舍省从事重症护理的注册护士。",
-            "facts": [
+      "facts": [
         "注册护士 · NSCN",
         "加拿大 · 新斯科舍省",
         "英语 / 普通话"
