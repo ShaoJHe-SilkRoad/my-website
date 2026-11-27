@@ -72,7 +72,7 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "macOS 1.0.1 · Windows 0.18.7",
+        "status": "macOS 1.0.0 · Windows 0.18.7",
         "kind": "Windows & Mac app",
         "headline": "Know how much AI coding time you have left.",
         "description": "AUV is a desktop app for Mac and Windows that shows your Codex and Claude usage and limits at a glance, so you can pace your work. Version 1.0 puts every agent on one usage card and comes in three looks: Standard, Wabi-sabi and Brutalist.",
@@ -80,10 +80,10 @@ window.SHAOTING_HOME_CONTENT = {
           "English / 中文"
         ],
         "primary": "Download AUV",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v1.0.1/AUV_Mac_1.0.1_Universal.dmg",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v1.0.0/AUV_Mac_1.0.0_Universal.dmg",
         "secondary": "Installation guide",
         "secondaryUrl": "/auv/install/",
-        "caption": "AUV 1.0.1 on macOS · Claude's usage card, sample data",
+        "caption": "AUV 1.0.0 on macOS · Claude's usage card, sample data",
         "whyTitle": "What it is for",
         "why": "Seeing how much Codex and Claude time is left before starting a long piece of work, without opening each account.",
         "focusTitle": "The hardest parts",
@@ -96,7 +96,7 @@ window.SHAOTING_HOME_CONTENT = {
           "note": "From the public GitHub repository · as of 26 Nov 2026",
           "stats": [
             [
-              "350",
+              "352",
               "Commits"
             ],
             [
@@ -104,7 +104,7 @@ window.SHAOTING_HOME_CONTENT = {
               "Weeks in a row with commits"
             ],
             [
-              "29",
+              "28",
               "Public releases"
             ],
             [
@@ -133,24 +133,24 @@ window.SHAOTING_HOME_CONTENT = {
             18,
             30,
             41,
-            22
+            24
           ],
           "languages": [
             [
               "Swift",
-              82.6
+              82.9
             ],
             [
               "C#",
-              7.4
+              7.1
             ],
             [
               "Shell",
-              4.5
+              4.3
             ],
             [
               "JavaScript",
-              3.5
+              3.7
             ],
             [
               "Python",
@@ -158,7 +158,7 @@ window.SHAOTING_HOME_CONTENT = {
             ],
             [
               "Other",
-              0.6
+              0.7
             ]
           ],
           "milestones": [
@@ -415,7 +415,7 @@ window.SHAOTING_HOME_CONTENT = {
         "number": "01",
         "name": "AUV",
         "subtitle": "Agent Usage Viewer",
-        "status": "macOS 1.0.1 · Windows 0.18.7",
+        "status": "macOS 1.0.0 · Windows 0.18.7",
         "kind": "Windows 与 Mac 应用",
         "headline": "一眼看清 AI 编程还剩多少额度。",
         "description": "AUV 是一款 Mac 与 Windows 桌面应用，随时显示 Codex 与 Claude 的用量和限额，帮你安排工作节奏。1.0 版用同一张用量卡片显示每个智能体，并提供标准、侘寂、Brutalist 三套外观。",
@@ -423,10 +423,10 @@ window.SHAOTING_HOME_CONTENT = {
           "English / 中文"
         ],
         "primary": "下载 AUV",
-        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v1.0.1/AUV_Mac_1.0.1_Universal.dmg",
+        "url": "https://github.com/ShaoJHe-SilkRoad/UMA/releases/download/v1.0.0/AUV_Mac_1.0.0_Universal.dmg",
         "secondary": "安装指南",
         "secondaryUrl": "/auv/install/",
-        "caption": "AUV 1.0.1 · macOS 上 Claude 的用量卡片（示例数据）",
+        "caption": "AUV 1.0.0 · macOS 上 Claude 的用量卡片（示例数据）",
         "whyTitle": "用来做什么",
         "why": "开始一段长时间的工作前，不用逐个打开账户，就能知道 Codex 与 Claude 还剩多少额度。",
         "focusTitle": "最难的部分",
@@ -439,7 +439,7 @@ window.SHAOTING_HOME_CONTENT = {
           "note": "数据来自公开的 GitHub 仓库 · 截至 2026 年 11 月 26 日",
           "stats": [
             [
-              "350",
+              "352",
               "次提交"
             ],
             [
@@ -447,7 +447,7 @@ window.SHAOTING_HOME_CONTENT = {
               "周连续有提交"
             ],
             [
-              "29",
+              "28",
               "个公开版本"
             ],
             [
@@ -476,24 +476,24 @@ window.SHAOTING_HOME_CONTENT = {
             18,
             30,
             41,
-            22
+            24
           ],
           "languages": [
             [
               "Swift",
-              82.6
+              82.9
             ],
             [
               "C#",
-              7.4
+              7.1
             ],
             [
               "Shell",
-              4.5
+              4.3
             ],
             [
               "JavaScript",
-              3.5
+              3.7
             ],
             [
               "Python",
@@ -501,7 +501,7 @@ window.SHAOTING_HOME_CONTENT = {
             ],
             [
               "Other",
-              0.6
+              0.7
             ]
           ],
           "milestones": [
